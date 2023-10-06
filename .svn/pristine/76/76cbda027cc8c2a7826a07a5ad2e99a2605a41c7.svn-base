@@ -1,0 +1,634 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title></title>
+    <!-- <link href="pages/Topic01/css/T01P91.css" rel="stylesheet" type="text/css"> -->
+    <style>
+        .sectionContent {
+            box-shadow: 0 0 5px #666;
+            height: 395px;
+            margin: 30px 15%;
+            border-radius: 10px;
+            overflow: hidden;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 750px
+        }
+
+        .sectionContent {
+            box-shadow: 0 0 5px #666;
+            height: 395px;
+            margin: 30px 15%;
+            border-radius: 10px;
+            overflow: hidden
+        }
+        a {
+            text-decoration: none;
+        }
+        .tagline {
+            text-align: center;
+            font-size: 14px;
+            color: #3e5769;
+            font-family: OpenSansBold;
+        }
+        .circles {
+            top: 12px;
+            position: relative;
+        }
+        .sectionLeft {
+            width: 27%;
+            background: #d4e4ee;
+            height: 100%;
+            padding: 0 8px;
+            position: relative;
+            float: left
+        }
+
+        .description {
+            background: #d4e4ee
+        }
+
+        .sectionRight {
+            height: 100%;
+            width: 68%;
+            padding: 7px 10px;
+            background: #fff;
+            position: relative;
+            color: #3e5769;
+            float: left;
+            left: 1px;
+            top: 0px;
+        }
+
+        h4 {
+            text-align: center;
+            padding: 0;
+            margin: 0;
+            font-size: 16px;
+            margin-bottom: 2px;            
+        }
+
+        .circle {
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            margin: 15px auto;
+            cursor: pointer
+        }
+
+        .circle1 {
+            background: url(elements/activity/images/hand_large.svg);
+            background-size: cover
+        }
+
+        .circle1:hover,
+        .circle1.active {
+            background: url(elements/activity/images/hand_hover.svg);
+            background-size: cover
+        }
+
+        .circle2 {
+            background: url(elements/activity/images/hammer.svg);
+            background-size: cover
+        }
+
+        .circle2:hover,
+        .circle2.active {
+            background: url(elements/activity/images/hammer_hover.svg);
+            background-size: cover
+        }
+
+        .circle3 {
+            background: url(elements/activity/images/stescope.svg);
+            background-size: cover
+        }
+
+        .circle3:hover,
+        .circle3.active {
+            background: url(elements/activity/images/stescope_hover.svg);
+            background-size: cover
+        }
+
+        .pdfIcon0 {
+            height: 24px;
+            width: 20px;
+            display: inline-block;
+            margin-right:5px;
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+
+        #_clickImg0pdf {
+            display: inline-block;
+            top: -5px;
+            left:-5px;
+            position: relative;
+            font-style: italic;
+            height:22px;
+            width: 214px;
+        }
+
+        #_clickImg0pdf span {
+            border-bottom: 1px solid #000;
+            position: relative;
+            display: block !important;
+            color: #000 !important;
+            top: 0;
+            left: 0;
+            width: 214px;
+            height: inherit;
+            font-weight: normal;
+            font-family: OpenSansRegular;
+            font-size: 15px;            
+        }
+
+        #_clickImg0pdf a {
+            font-style: italic;
+            color: #000;
+            text-decoration: none;
+            font-size: 16px !important;
+        }
+
+        .center {
+            position: absolute;
+            top: 366px
+        }
+
+        .baby_dark {
+            display: none;
+            cursor: pointer;
+        }
+
+        span.hand_circle,
+        span.stescope_circle {
+            background: url(elements/activity/images/circle.png) no-repeat;
+            height: 36px;
+            width: 36px;
+            position: absolute;
+            background-size: 85%;
+            cursor: pointer;
+            display: none
+        }
+
+        span.hand_circle:hover,
+        span.hand_circle.selectedCircle,
+        span.stescope_circle:hover,
+        span.stescope_circle.selectedCircle {
+            background: url(elements/activity/images/circle_selected.png) no-repeat;
+            background-size: 85%;
+        }
+
+        span.hammer_image {
+            background: url(elements/activity/images/hammer_small.png) no-repeat;
+            height: 120px;
+            width: 120px;
+            position: absolute;
+            background-size: 85%;
+            cursor: pointer;
+            display: none;
+            top: 129px;
+            z-index: 999;
+            left: 5px;
+        }
+
+        span {
+            left: inherit;
+        }
+
+        span.hand_circle[data-position="1"] {
+            right: 35px;
+    top: 136px;
+        }
+
+        span.hand_circle[data-position="2"] {
+            right: 160px;
+            top: 150px
+        }
+
+        span.hand_circle[data-position="3"] {
+            right: 165px;
+            top: 70px
+        }
+
+        span.hand_circle[data-position="4"] {
+            right: 155px;
+            top: 206px;
+        }
+
+        span.hand_circle[data-position="5"] {
+            right: 238px;
+            top: 95px
+        }
+
+        span.hand_circle[data-position="6"] {
+            right: 339px;
+            top: 99px;
+        }
+
+        span.hand_circle[data-position="7"] {
+            right: 365px;
+            top: 215px
+        }
+
+        span.hand_circle[data-position="8"] {
+            right:391px;
+            top: 104px
+        }
+
+        span.hand_circle[data-position="9"] {
+            left: 45px;
+    top: 221px;
+        }
+
+        span.stescope_circle[data-position="1"] {
+            right: 35px;
+            top: 136px;
+        }
+
+        span.stescope_circle[data-position="2"] {
+            right: 164px;
+            top: 145px;
+        }
+
+        span.stescope_circle[data-position="3"] {
+            right: 162px;
+            top: 104px;
+        }
+
+        span.stescope_circle[data-position="4"] {
+                    
+            right: 198px;
+            top: 155px;
+
+        }
+
+        span.stescope_circle[data-position="5"] {
+            right: 237px;
+            top: 122px;
+        }
+
+        .description {
+            background: #d4e4ee;
+            height: 58px;
+            padding: 2px 15px;
+            font-size: 14px;
+            text-align: center;
+            display: none;
+            vertical-align: middle;
+            width: 495px;
+            line-height: 17px
+        }
+
+        img.baby,
+        img.baby_dark,
+        .description {
+            border-radius: 5px
+        }
+
+        span.hand_circle .marker {
+            background: url(elements/activity/images/hand_small.png) no-repeat;
+            height: 42px;
+    width: 47px;
+    position: relative;
+    top: -28px;
+    left: -27px;
+        }
+
+        span.stescope_circle .marker {
+            background: url(elements/activity/images/stescope_small.png) no-repeat;
+            height: 42px;
+            width: 46px;
+            position: relative;
+            top: -38px
+        }
+
+        span.stescope_circle[data-position="2"] .marker {
+            top: -24px;
+    left: -28px;
+        }
+        span.stescope_circle[data-position="4"] .marker {
+            top: 0px;
+    left: -38px;
+        }
+        .middle {
+            color: #3a5569;
+            font-family: OpenSansSemiBold;
+            text-align: center;
+            font-size: 14px;
+            font-style: italic;
+        }
+        #pageClsResourcesPopup {
+            position: absolute;
+            z-index: 1070;
+            top: -125px;
+            height: 100vh;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: none;
+            /* opacity: 0.5; */
+        }
+
+        #pageid_ReferencesBG {
+            position: absolute;
+            height: 457px;
+            width: 940px;
+            left: 0px;
+            right: 0px;
+            margin: auto;
+            top: 40px;
+            background-color: #FFFFFF;
+            border-radius: 10px;
+        }
+
+        #pageid_RefTitleBar {
+            font-size: 36px;
+            background-color: #4d667b;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            left: 0px;
+            top: 0px;
+            font-family: OpenSansRegular;
+            /* font-weight: bold; */
+            width: 942px;
+            height: 44px;
+            position: absolute;
+        }
+
+        #pageid_ReftitleText {
+            position: absolute;
+            color: #fff;
+            font-size: 18px;
+            left: 11px;
+            top: 10px;
+        }
+
+        #pageid_RefCloseBtn {
+            position: absolute;
+            width: 29px;
+            height: 29px;
+            top: 7px;
+            left: 900px;
+            cursor: pointer;
+            background: url('media/images/player/common/close.png');
+            /* background-position: -49px 0px; */
+            -webkit-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+            /* background-position: 0px 0px; */
+        }
+
+        /* #pageid_RefCloseBtn:hover {
+
+			background: url('media/images/player/common/close.png');
+
+			background-position: 0px 0px;
+
+		} */
+
+        #pageRefTitleBar_id {
+            font-size: 36px;
+            background-color: #4d667b;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            left: 0px;
+            top: 0px;
+            font-family: OpenSansRegular;
+            /* font-weight: bold; */
+            width: 942px;
+            height: 44px;
+            position: absolute;
+        }
+
+        #pageReftitleText_id {
+            position: absolute;
+            color: #fff;
+            font-size: 18px;
+            left: 11px;
+            top: 10px;
+        }
+
+        .pageclose_txt {
+            position: absolute;
+            width: 135px;
+            height: 44px;
+            top: 48px;
+            left: 800px;
+            background: url('media/images/player/common/pdf_close_inst.png');
+        }
+
+        #pageClsText {
+            position: absolute;
+            width: 115px;
+            height: 29px;
+            top: 15px;
+            left: 16px;
+            font-family: OpenSansRegular;
+            font-size: 16px;
+            font-style: italic;
+            color: #172430;
+        }
+
+        #pageRefCloseBtn_id {
+            position: absolute;
+            width: 29px;
+            height: 29px;
+            top: 7px;
+            left: 900px;
+            cursor: pointer;
+            background: url('media/images/player/common/close.png');
+            /* background-position: -49px 0px; */
+            -webkit-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+
+        #pageid_RefCloseBtn:hover #pageclose_txt {
+            background: url('media/images/player/common/pdf_close_inst.png');
+            /* background-position: 0px 0px; */
+        }
+
+        #pagereferences {
+            margin-left: 0%;
+            margin-top: 45px;
+            color: #333;
+            width: 800px;
+            min-height: 412px;
+            overflow-y: auto;
+            position: absolute;
+            height: 412px;
+        }
+        #_clickImg0pdf span:hover{
+            color:#d7722c  !important
+        }
+        #pageClsResourcesPopup #pageid_ReferencesBG{
+            height: 690px!important;
+        }
+    </style>
+    <script>
+
+        function resetIcon(){
+            $('span[data-desc]').removeClass('selectedCircle');
+            $('span[data-desc]').find('.marker').remove();
+        }
+        $('.circle.circle1').on('click', function () {
+            resetIcon();
+            $('.circle').removeClass('active');
+            $(this).addClass('active');
+            $('.baby_dark, span[data-position]').hide();
+            $('.baby, span.hand_circle[data-position]').show();
+            $('.description').html('<div class="middle">Click on each hotspot to evaluate baby.</div>').css({ 'display': 'table-cell' });
+        })
+        $('.circle.circle2').on('click', function () {
+            resetIcon();
+            $('.circle').removeClass('active');
+            $(this).addClass('active');
+            $('.baby, span[data-position]').hide();
+            $('.baby_dark').show();
+            $('.description').html('<div class="middle">Click on the baby to evaluate.</div>').css({ 'display': 'table-cell' });
+        });
+        $('.circle.circle3').on('click', function () {
+            resetIcon();
+            $('.circle').removeClass('active');
+            $(this).addClass('active');
+            $('.baby_dark, span[data-position]').hide();
+            $('.baby,  span.stescope_circle[data-position]').show();
+            $('.description').html('<div class="middle">Click on each hotspot to evaluate baby.</div>').css({ 'display': 'table-cell' });
+        })
+        $('.baby_dark').on('click', function () {
+            $('.baby, span[data-position]').hide();
+            $('span.hammer_image[data-position]').show();
+            $('.description').html($(this).data('desc')).css({ 'display': 'table-cell' });
+        });
+
+        $('span[data-desc]').on('click', function () {
+
+            if ($(this).hasClass('selectedCircle')) {
+                resetIcon();
+                $('.description').html('<div class="middle">Click on each hotspot to evaluate baby.</div>').css({ 'display': 'table-cell' });
+            } else {
+                resetIcon();
+                $(this).addClass('selectedCircle');
+                $(this).prepend('<div class="marker"></div>');
+                $('.description').html($(this).data('desc')).css({ 'display': 'table-cell' });
+                var join = $(this).data('join');
+                if (typeof join != 'undefined') {
+                    $('span[data-position="' + join + '"]').prepend('<div class="marker"></div>');
+                    $('span[data-position="' + join + '"]').addClass('selectedCircle');
+                }
+            }
+        })
+        // $('.selectedCircle').on('click', function(){
+        //     alert(1)
+        //     $(this).removeClass('selectedCircle');
+        //     $(this).find('.marker').remove();          
+        // })
+        $(".openPDF").on("click", function () {
+            $('.tabContent').hide();
+            console.log("hello")
+            // $('#pageClsResourcesPopup .pdflink').attr('src', 'pages/Topic01/pdf/Page17.pdf');
+            //fnPauseAudio();
+            // $('#pageReftitleText_id').html('Case Presentation - Neonatologist from Sweden');
+            //disabledAllButtons();
+            $("#pageClsResourcesPopup").show();
+
+        });
+
+        $('#pageClsResourcesPopup').hide();
+        $("#pageRefCloseBtn_id").click(function () {
+            $('.tabContent').show();
+            // enabledAllButtons();
+            // fnPlayAudio();
+            //$("#pageClsResourcesPopup").hide();
+            $("#pageClsResourcesPopup").hide();
+            //$("#pageid_RefTitleBar").show()
+        });        
+    </script>
+</head>
+
+<body>
+    <div class="pg-pageContent" UNSELECTABLE="on">
+
+        <div id="TabPopup5" class="">
+
+            <div class="sectionContent">
+                <div class="sectionLeft">
+                    <div class="tagline">Select the hand, reflex hammer, or the stethoscope to evaluate the baby.</div>
+                    <div class="circles">
+                        <div class="circle circle1"></div>
+                        <div class="circle circle2"></div>
+                        <div class="circle circle3"></div>
+
+                    </div>
+                </div>
+                <div class="sectionRight">
+                    <h4>Let's practice doing a physical exam</h4>
+                    <div class="image">
+                        <img class="baby" src="elements/activity/images/baby.png">
+                        <img class="baby_dark" src="elements/activity/images/baby_dark.png"
+                            data-desc="Evaluate neurologic status including alert state and responsiveness to touch. Evaluate tone (hypotonic, hypertonic), symmetry of movement, and reflexes (Moro, hand grasp, suck, gag, deep tendon reflexes).">
+                        <span class="hand_circle" data-position="1"
+                            data-desc="Evaluate if anterior fontanelle is flat, sunken, full, or bulging. If full or bulging, the sutures may also be split. A sunken fontanelle can indicate dehydration."></span>
+                        <span class="hand_circle" data-position="2"
+                            data-desc="Evaluate capillary refill time in upper body. Normal is ≤ 3 seconds."></span>
+                        <span class="hand_circle" data-position="3" data-join="4"
+                            data-desc="Palpate both the right and left brachial pulses. A discrepancy in pulse strength from one side to the other is reportable. Compare brachial to femoral pulses. If brachial pulses are stronger than femoral pulses, this could indicate a ductal dependent heart lesion."></span>
+                        <span class="hand_circle" data-position="4" data-join="3"
+                            data-desc="Palpate both the right and left brachial pulses. A discrepancy in pulse strength from one side to the other is reportable. Compare brachial to femoral pulses. If brachial pulses are stronger than femoral pulses, this could indicate a ductal dependent heart lesion."></span>
+                        <span class="hand_circle" data-position="5"
+                            data-desc="Palpate the liver edge. Normal is ≤ 2 cm below the right costal margin."></span>
+                        <span class="hand_circle" data-position="6"
+                            data-desc="Palpate femoral pulses and compare to the strength of the brachial pulses."></span>
+                        <span class="hand_circle" data-position="7"
+                            data-desc="Evaluate capillary refill time in lower body and compare to upper body. Normal is ≤ 3 seconds, although the lower extremity CRT can be 1 second longer than the upper body CRT."></span>
+                        <span class="hand_circle" data-position="8"
+                            data-desc="Palpate for presence or absence of a posterior tibialis pulse. Absent or weak posterior tibialis pulses are of concern."></span>
+                        <span class="hand_circle" data-position="9"
+                            data-desc="Assess perfusion and temperature of extremities."></span>
+                        <span class="stescope_circle" data-position="1"
+                            data-desc="Auscultate for a bruit, which is commonly heard with an arteriovenous malformation in the brain. "></span>
+                        <span class="stescope_circle" data-position="2"
+                            data-desc="Evaluate heart sounds and rhythm, where the heartbeat is heard the loudest, and for presence of a murmur. If a loud murmur is heard, palpate the chest for a thrill. Presence of a thrill increases the grade of the murmur to a Grade 4."></span>
+                        <span class="stescope_circle" data-position="3"
+                            data-desc="Evaluate for equal aeration versus one side is louder than the other side. Is air entry easily audible or are breath sounds diminished? Inspect the chest to see if one side is rising more than another, which may occur with a pneumothorax. Do you hear grunting, wheezing, or stridor?"></span>
+                        <span class="stescope_circle" data-position="4"
+                            data-desc="Inspect the chest for precordial activity and location of the point of maximal impulse (PMI). A hyperactive precordium or displaced PMI is of concern. The PMI is normally located along the lower left sternal border in the fifth intercostal space. "></span>
+                        <span class="stescope_circle" data-position="5"
+                            data-desc="Listen over the liver for a bruit, which can indicate an arteriovenous malformation in the liver. Listen for bowel sounds. Absent, hypoactive, and hyperactive bowel sounds are abnormal. "></span>
+                        <span class="hammer_image"
+                            data-position="Evaluate neurologic status including alert state and responsiveness to touch. Evaluate tone (hypotonic, hypertonic), symmetry of movement, and reflexes (Moro, hand grasp, suck, gag, deep tendon reflexes)."></span>
+                    </div>
+                    <div class="description"></div>
+                    <div class="center">
+                        <a href="javascript:void(0)" class="openPDF">
+                            <div class="pdfIcon0">
+
+                                <img class="pdf_icon" src="pages/images/Topic01/T01P20/pdf_icon.png" alt="" />
+
+                            </div>
+                            <div class="_link" id="_clickImg0pdf"><span>Physical exam of the newborn</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <script src="pages/Topic01/js/T01P91.js"></script> -->
+    <div id="pageClsResourcesPopup">
+        <div id="pageid_ReferencesBG">
+            <div id="pageRefTitleBar_id">
+                <div id="pageRefTitleBar_id" unselectable="on" style="display: block;">
+                    <div id="pageReftitleText_id" unselectable="on">Physical exam of the newborn</div>
+                    <div id="pageRefCloseBtn_id" title="Close" unselectable="on"></div>
+                    <embed class="pdflink" alt="pdf" src="elements/activity/pdf/Physical exam of the newborn.pdf"
+                        internalinstanceid="70">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

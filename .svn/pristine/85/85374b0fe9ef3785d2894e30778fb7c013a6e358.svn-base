@@ -1,0 +1,1819 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <script>
+    manifest = [{
+      src: 'pages/images/Topic01/T01P22/small_expand.png',
+      id: '1'
+    }, {
+      src: 'pages/images/Topic01/T01P22/small_expand_hover.png',
+      id: '2'
+    }, {
+      src: 'pages/images/Topic01/T01P22/close_expand.png',
+      id: '9'
+    }, {
+      src: 'pages/images/Topic01/T01P22/close_expand_hover.png',
+      id: '10'
+    }];
+  </script>
+
+
+  <style type="text/css">
+    .mainContainer {
+      /* position: absolute; */
+      width: 89%;
+      height: 460px;
+      margin-left: 62px;
+      top: 20px;
+      opacity: 1;
+    }
+
+    @-webkit-keyframes reducetime {
+      0% {
+        width: 0;
+      }
+
+      100% {
+        width: 100%;
+      }
+    }
+
+    @-webkit-keyframes zoomin {
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.2);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    @keyframes zoomin {
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.2);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    /*End of Zoom in Keyframes */
+    /* Zoom out Keyframes */
+
+    @-webkit-keyframes zoomout {
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(0.67);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    @keyframes zoomout {
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(0.67);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    /*End of Zoom out Keyframes */
+
+    .clsPatch {
+      position: absolute;
+      width: 94%;
+      top: 10px;
+    }
+
+    .clsText {
+      font-size: 16px;
+    }
+
+    .ClsTab {
+      position: absolute;
+      width: 100%;
+      height: 20%;
+      z-index: 999;
+    }
+
+    .clsAllTabs {
+      width: 100%;
+      height: 82px;
+    }
+
+    .ClsTabItem {
+      position: relative;
+      cursor: pointer;
+      width: 274px;
+      height: 60px;
+      text-align: center;
+      line-height: 55px;
+      font-size: 18px;
+      font-family: OpenSansRegular;
+      border-radius: 5px;
+      background: #fcfcfc;
+      margin-left: 88px;
+      float: left;
+      top: 10px;
+      left: 0px;
+      cursor: pointer;
+    }
+
+    .ClsTabItem:hover {
+      background: #707070;
+      color: #FFFFFF;
+    }
+
+    #TabItem0 {
+      margin-left: 0;
+    }
+
+    /* #TabItem0,#TabItem1,#TabItem2{
+			display :none;
+		} */
+
+    .ClsImage0 {
+      /* position: absolute; */
+      width: 235px;
+      padding: 25px 18px;
+      /* margin-left:31px; */
+      height: 170px;
+      /* top: 205px; */
+      background: #FFFFFF;
+      border-radius: 10px;
+      /* -webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+      box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75); */
+      border-radius: 5px;
+      /* -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75); */
+      opacity: 0;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -ms-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      display: none;
+    }
+
+    .ClsImage2 .imageDesc, .ClsImage0 .imageDesc {
+      width: 195px;
+    }
+    .ClsImage1 .imageDesc {
+    width: 159px;
+}
+    .mainImage {
+      position: absolute;
+      background: url('pages/images/Topic01/T01P22/img1.png') no-repeat;
+      background-size: 100% 100%;
+      width: 930px;
+      height: 290px;
+      left: 37px;
+      top: 225px;
+      display: none;
+    }
+
+    .subImage {
+      position: absolute;
+      background-size: 100% 100%;
+      top: 100px;
+      display: none;
+    }
+
+    #sub0 {
+      background: url('pages/images/Topic01/T01P22/EV01_02.png') no-repeat;
+      left: 35px;
+      height: 297px;
+    }
+
+    #sub1 {
+      background: url('pages/images/Topic01/T01P22/EV01_01.png') no-repeat;
+      left: 315px;
+      height: 331px;
+    }
+
+    #sub2 {
+      background: url('pages/images/Topic01/T01P22/EV01_03.png') no-repeat;
+      left: 750px;
+      height: 283px;
+    }
+
+    .ClsImage1 .imageDesc,
+    .ClsImage2 .imageDesc,
+    .ClsImage3 .imageDesc {
+      top: -16px;
+    }
+
+    .ClsImage1 {
+      /* position: absolute; */
+      width: 192px;
+      /* height: 230px; */
+      /* top: 205px; */
+      background: #FFFFFF;
+      border-radius: 10px;
+      /* -webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+      box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75); */
+      border-radius: 5px;
+      /* -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75); */
+      /* left: 260px; */
+      opacity: 0;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -ms-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      display: none;
+      margin: 15px 0px 15px 22px;
+      /* margin-left: 60px; */
+    }
+
+    .ClsImage2 {
+      /* position: absolute; */
+      /* position: absolute; */
+      width: 235px;
+      margin-top: 10px;
+      height: 171px;
+      padding: 25px 18px;
+      text-align: center;
+      /* top: 205px; */
+      background: #FFFFFF;
+      border-radius: 10px;
+      /* -webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+      box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75); */
+      border-radius: 5px;
+      /* -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75); */
+      left: 551px;
+      opacity: 0;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -ms-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      display: none;
+    }
+
+    .ClsImage3 {
+      /* position: absolute; */
+      /* width: 215px; */
+      height: 172px;
+      /* top: 205px; */
+      background: #FFFFFF;
+      border-radius: 10px;
+      /* -webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+      box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75); */
+      border-radius: 5px;
+      /* -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75); */
+      /* left: 782px; */
+      opacity: 0;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -ms-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      display: none;
+      margin: 0;
+      background: white;
+      padding: 25px 15px;
+      width: 192px;
+    }
+
+    .clsSubImage {
+      position: relative;
+      /* width: 249px; */
+      height: 150px;
+      /* top: 11px; */
+      /* left: 12px; */
+      margin: 3px;
+      border-radius: 10px;
+    }
+
+    .subFirstImage {
+      position: absolute;
+      width: 100%;
+      border-radius: 4px;
+      height: 150px;
+    }
+
+    .subSecImage {
+      position: absolute;
+      width: 225px;
+      height: 320px;
+      left: 35px;
+      top: 15px;
+    }
+
+
+
+    /* #clsImg0{
+				background: url('pages/images/Topic01/T01P22/img_02_small.png') no-repeat;
+		    top: 185px;
+			} */
+
+    .omphalitis {
+      background: url('pages/images/Topic01/T01P22/Omphalitis.png') no-repeat;
+      background-size: cover;
+      background-position: top;
+      /* margin: 0 auto; */
+      top: 0px;
+      left: 0px;
+    }
+
+    #omphalitis {
+      background: url('pages/images/Topic01/T01P22/largeimg/Omphalitis_large.png') no-repeat;
+      background-size: contain;
+      background-position: top;
+      /* margin: 0 auto; */
+      top: 0px;
+      left: 0px;
+    }
+
+     #case_study_popup[data-image='omphalitis'] .modalContent {
+        width: 678px;
+        height: 395px;
+    } 
+    .bmcr {
+      background: url('pages/images/Topic01/T01P22/Blueberry muffin lesions_thumb.png') no-repeat;
+      background-size: cover;
+      background-position: left;
+      /* margin: 0 auto; */
+      top: 0px;
+      left: 0px;
+    }
+
+    #bmcr {
+      background: url('pages/images/Topic01/T01P22/largeimg/Blueberry muffin lesions_large.png') no-repeat;
+      background-size: contain;
+      background-position: top;
+      /* margin: 0 auto; */
+      top: 0px;
+      left: 0px;
+    }
+
+    #case_study_popup[data-image='bmcr'] .modalContent {
+       width: 700px;
+      height: 306px;
+    }
+
+    #case_study_popup[data-image='bmcr'] .modalTxtImg {
+        height: 270px;
+    }
+    .heppesVesicles {
+      background: url('pages/images/Topic01/T01P22/Herpes vesicles mouth.png') no-repeat;
+      background-size: cover;
+      background-position: top;
+      /* margin: 0 auto; */
+      top: 0px;
+      left: 0px;
+    }
+
+    #heppesVesicles {
+      background: url('pages/images/Topic01/T01P22/largeimg/Herpes vesicles mouth_large.png') no-repeat;
+      background-size: contain;
+      background-position: top;
+      /* margin: 0 auto; */
+      top: 0px;
+      left: 0px;
+      /* height:247px; */
+      height:313px;
+    }
+
+    #case_study_popup[data-image='heppesVesicles'] .modalContent {
+      /* height: 283px;
+      width: 649px; */
+      /* height:405px;
+      width:406px; */
+      height: 349px;
+      width: 820px;
+    }
+
+
+    .bullousImpetigo {
+      background: url('pages/images/Topic01/T01P22/Bullous Impetigo.png') no-repeat;
+      background-size: cover;
+      background-position: top;
+      /* margin: 0 auto; */
+      top: 0px;
+      left: 0px;
+    }
+
+    #bullousImpetigo {
+      background: url('pages/images/Topic01/T01P22/largeimg/Bullous Impetigo_large.png') no-repeat;
+      background-size: contain;
+      background-position: top;
+      /* margin: 0 auto; */
+      top: 0px;
+      left: 0px;
+    }
+
+    #case_study_popup[data-image='bullousImpetigo'] .modalContent {
+      width: 480px;
+      height: 395px;
+    }
+
+    /* #case_study_popup[data-image='bullousImpetigo'] .modalTxtImg  {
+      height: 296px;
+    } */
+    .varicella {
+      background: url('pages/images/Topic01/T01P22/Congenital Varicella infection.png') no-repeat;
+      background-size: cover;
+      background-position: top;
+      /* margin: 0 auto; */
+      top: 0px;
+      left: 0px;
+    }
+
+    #varicella {
+      background: url('pages/images/Topic01/T01P22/largeimg/Congenital Varicella infection_large.png') no-repeat;
+      background-size: contain;
+      background-position: top;
+      /* margin: 0 auto; */
+      top: 0px;
+      left: 0px;
+      height:343px;
+    }
+
+    #case_study_popup[data-image='varicella'] .modalContent {
+      width: 378px;
+      height: 379px;
+    }
+
+    .cellulitis {
+      background: url('pages/images/Topic01/T01P22/cellulitis.png') no-repeat;
+      background-size: cover;
+      background-position: top;
+      /* margin: 0 auto; */
+      top: 0px;
+      left: 0px;
+    }
+
+    #cellulitis {
+      background: url('pages/images/Topic01/T01P22/largeimg/cellulitis_large.png') no-repeat;
+       background-size: contain;
+      background-position: top;
+      /* margin: 0 auto; */
+      top: 0px;
+      left: 0px;
+      /* height:193px; */
+    }
+
+    #case_study_popup[data-image='cellulitis'] .modalContent {
+      width: 396px;
+      height: 397px;
+    }
+
+    .staphSS {
+      background: url('pages/images/Topic01/T01P22/Staph Scalded skin.png') no-repeat;
+      background-size: cover;
+      background-position: top;
+      /* margin: 0 auto; */
+      top: 0px;
+      left: 0px;
+    }
+
+    #staphSS {
+      background: url('pages/images/Topic01/T01P22/largeimg/Staph Scalded skin_large.png') no-repeat;
+      background-size: contain;
+      background-position: top;
+      /* margin: 0 auto; */
+      top: 0px;
+      left: 0px;
+      height:299px;
+    }
+
+     #case_study_popup[data-image='staphSS'] .modalContent {
+      width: 692px;
+      height: 335px;
+    } 
+    .Petechiae {
+      background: url('pages/images/Topic01/T01P22/Petechiae.png') no-repeat;
+      background-size: cover;
+      background-position: top;
+      /* margin: 0 auto; */
+      top: 0px;
+      left: 0px;
+    }
+
+    #Petechiae {
+      background: url('pages/images/Topic01/T01P22/largeimg/Petechiae_large.png') no-repeat;
+      background-size: contain;
+      background-position: top;
+      /* margin: 0 auto; */
+      top: 0px;
+      left: 0px;
+    }
+
+    #case_study_popup[data-image='Petechiae'] .modalContent {
+      width: 541px;
+      height: 397px;
+    }
+
+    /* #clsImg1{
+				background: url('pages/images/Topic01/T01P22/img_03_small.png') no-repeat;
+		    top: 185px;
+			} */
+    /* .mapImg{
+				background: url('pages/images/Topic01/T01P22/small_graph.png') no-repeat;
+				width: 100%;
+			    height: 128px;
+			    position: relative;
+			    top: 14px;
+			} */
+
+    .expandMap {
+      position: relative;
+      top: 8px;
+    }
+
+    .expandMap .clickToEnlarge {
+      top: 2px;
+      left: 123px;
+    }
+
+    .expandMap .small_expand {
+      right: 37px;
+      margin-top: 2px;
+    }
+
+    .open_map_close {
+      top: 301px;
+      right: -38px !important;
+    }
+
+    .closepopup{
+      position: absolute;
+            width: 41px;
+            height: 41px;
+            background: url(pages/images/Topic01/T01P22/close_expand.svg) no-repeat;
+            bottom: 40px;
+            right: 16px;
+            cursor: pointer;
+            z-index: 1000;       
+            opacity: .6;
+            background-position: 0px 0;
+               
+            background-size: cover !important;
+            background-repeat:no-repeat ;
+    }
+    .open_map_close {
+      position: absolute;
+      width: 92px;
+      height: 47px;
+      background: url('pages/images/Topic01/T01P22/close_expand_hover.png') no-repeat;
+      bottom: 31px;
+      right: -50px;
+      cursor: pointer;
+      z-index: 1000;
+      text-decoration: none;
+    }
+    .closepopup:hover{
+      opacity: 1;
+    }
+
+    /*  {
+      background: url('pages/images/Topic01/T01P22/close_expand_hover.png') no-repeat;
+    } */
+
+    .closebutton {
+      position: absolute;
+      width: 92px;
+      height: 47px;
+      background: url('pages/images/Topic01/T01P22/close_expand_hover.png') no-repeat;
+      top: 5px;
+      right: -91.5px;
+      cursor: pointer;
+      z-index: 1000;
+      text-decoration: none;
+    }
+
+    /* .closebutton:hover {
+      background: url('pages/images/Topic01/T01P22/close_expand_hover.png') no-repeat;
+    } */
+
+    #case_study_popup1>.caseStudyContent>.closebutton {
+      position: absolute;
+      width: 55px;
+      height: 56px;
+      background: url('pages/images/Topic01/T01P22/videClose.png') no-repeat;
+      top: 9px;
+      right: -50.5px;
+      cursor: pointer;
+      z-index: 1000;
+      text-decoration: none;
+    }
+
+    #case_study_popup1>.caseStudyContent>.closebutton:hover {
+      background: url('pages/images/Topic01/T01P22/videClose_hover.png') no-repeat;
+    }
+
+    /* #closeId0{
+			  left: 455px;
+			}
+			#closeClass0{
+			  left: 490px;
+			  background: url('pages/images/Topic01/T01P22/enlarge_text_inverted.png') no-repeat;
+			} */
+
+    .clickToClose {
+      width: 156px;
+      height: 42px;
+      top: 332px;
+      left: 456px;
+      position: absolute;
+      z-index: 10000;
+      line-height: 44px;
+      text-align: center;
+      font-size: 14px;
+      color: #4D667B;
+      background: url(pages/images/Topic01/T01P22/enlarge_text.png) no-repeat;
+      font-family: OpenSansRegular;
+      font-style: italic;
+    }
+    .ul-class{
+    margin-left: -5.5%;
+    list-style-image:none;
+    margin-top: 4px;
+  }
+    .videoToClose {
+      width: 160px;
+      height: 46px;
+      top: 10px;
+      left: 495px;
+      position: absolute;
+      z-index: 10000;
+      line-height: 38px;
+      text-align: center;
+      font-size: 14px;
+      background: url('pages/images/Topic01/T01P22/enlarge_text.png') no-repeat;
+      font-family: OpenSansRegular;
+    }
+
+    .small_expand{
+      background: url(pages/images/Topic01/T01P22/small_expand.svg) !important;
+            position: absolute;
+            cursor: pointer;
+            width: 29px;
+            height: 29px;
+            bottom: 3px;
+            right: 5px;
+            background-position: 0px 0;
+            transition: all 0.2s;    
+            background-size: cover !important;
+            background-repeat:no-repeat ;
+            opacity: .6;
+    }
+    .open_map {
+      background: url('pages/images/Topic01/T01P22/small_expand.png');
+      width: 28px;
+      height: 28px;
+      position: absolute;
+      right: 3px;
+      display: none;
+      top: 119px;
+      float: inherit;
+      text-decoration: none;
+      /* border-radius: inherit; */
+      margin-left: 0px;
+      background-color: inherit;
+      padding: 0px;
+      cursor: pointer;
+      opacity: 0;
+    }
+    .small_expand:hover{
+      opacity: 1;
+    }
+
+    /*  {
+      background: url('pages/images/Topic01/T01P22/small_expand_hover.png');
+    } */
+
+    section {
+      /* position: absolute; */
+      width: 100%;
+      height: 100%;
+    }
+
+    .Clsback {
+      position: relative;
+      width: 242px;
+      height: 335px;
+      top: 100px;
+      left: 33px;
+      margin-right: 91px;
+      float: left;
+      background: #FFFFFF;
+      border-radius: 5px;
+      display: none;
+    }
+
+    ._link {
+      position: absolute;
+      top: 440px;
+      height: 17px;
+      left: 35px;
+      font-size: 12px;
+      font-family: OpenSansRegular;
+      width: 456px;
+      display: none;
+      color: #4D667B;
+      font-weight: 700;
+      cursor: pointer;
+      border-bottom: 1px solid #4D667B;
+      font-style: initial;
+    }
+
+    .videolink {
+      position: absolute;
+      top: 465px;
+      left: 35px;
+      width: 480px;
+      font-size: 12px;
+      font-family: OpenSansRegular;
+      color: #4D667B;
+      font-weight: 700;
+      cursor: pointer;
+      font-style: initial;
+      display: none;
+    }
+
+    /* .subSeImage{
+				position: absolute;
+		    width: 161px;
+		    height: 161px;
+		    top: 20px;
+		    left: 38px;
+			} */
+
+    #subImg0 {
+      background: url('pages/images/Topic01/T01P22/EV01_11.png') no-repeat;
+    }
+
+    #subImg1 {
+      background: url('pages/images/Topic01/T01P22/EV01_12.png') no-repeat;
+    }
+
+    #subImg2 {
+      background: url('pages/images/Topic01/T01P22/EV01_13.png') no-repeat;
+    }
+
+    .subText {
+      position: absolute;
+      width: 210px;
+      height: 125px;
+      top: 200px;
+      left: 15px;
+      font-family: OpenSansRegular;
+      font-size: 14px;
+      font-style: initial;
+    }
+
+    .ClsTextTab {
+      position: absolute;
+      width: 68%;
+      height: 374px;
+      top: 0px;
+      left: 320px;
+      float: left;
+      /* background: #FFFFFF; */
+      border-radius: 5px;
+      /* display: none; */
+    }
+
+    .listcnt {
+      position: relative;
+      top: 24px;
+      /* padding-right: 20px; */
+      margin-bottom: 7px;
+      padding-bottom: 6px;
+      font-size: 14px;
+      border: 1px solid transparent;
+      width: 90%;
+      left: 15px;
+      display: none;
+    }
+
+    .arrowHolder {
+      position: absolute;
+      top: 8px;
+      width: 8px;
+      height: 8px;
+      background: #5B5B5B;
+      border-radius: 50%;
+      -moz-border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -khtml-border-radius: 50%;
+    }
+
+    .OptionCLSS {
+      position: relative;
+      left: 15px;
+      font-style: initial;
+      top: 1px;
+    }
+
+    .OptionCLSS>span {
+      font-size: 16px;
+      font-family: OpenSansRegular;
+    }
+
+    /* #one,#two,#three{
+		    transform: scale(0);
+			} */
+    /* .ClsTextTab > ul{
+			  list-style: none;
+		    line-height: 25px;
+			}
+
+			.ClsTextTab > ul >li{
+	      padding-bottom: 10px;
+				list-style-image: url('pages/images/Topic01/T01P22/bullet_point.png');
+		    width: 195px;
+			} */
+
+    #textTab1 {
+      width: 740px;
+      background: #ffffff00;
+      margin-right: 0;
+    }
+
+    .subTirImage {
+      position: relative;
+      top: 0px;
+      left: 17px;
+      width: 225px;
+      height: 225px;
+      margin-right: 22px;
+      float: left;
+      background: #FFFFFF;
+      border-radius: 5px;
+      display: none;
+    }
+
+    #clsTir0 {
+      background: url('pages/images/Topic01/T01P22/img_11_small.png') no-repeat;
+    }
+
+    #clsTir0>.small_expand {
+      top: 190px;
+      right: 5px;
+    }
+
+    #clsTir1 {
+      background: url('pages/images/Topic01/T01P22/img_12_small.png') no-repeat;
+    }
+
+    #clsTir1>.small_expand {
+      top: 190px;
+      right: 5px;
+    }
+
+    #clsTir2 {
+      background: url('pages/images/Topic01/T01P22/img_13_small.png') no-repeat;
+      margin-right: 0;
+    }
+
+    #clsTir2>.small_expand {
+      top: 190px;
+      right: 5px;
+    }
+
+    .clsSubPatch {
+      position: absolute;
+      width: 720px;
+      height: 90px;
+      top: 240px;
+      left: 17px;
+      display: none;
+      background: #FFFFFF;
+      border-radius: 5px;
+      -webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+      box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+      border-radius: 5px;
+      -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+    }
+
+    .clsSubText {
+      font-family: OpenSansRegular;
+      font-size: 14px;
+      font-style: initial;
+      width: 90%;
+      position: absolute;
+      padding: 23px 35px;
+    }
+
+    .clsActive {
+      background: #707070;
+      color: #FFFFFF;
+      pointer-events: none;
+    }
+
+    .CaseStudy {
+      position: absolute;
+      left: -15px;
+      top: 0px;
+      width: 103%;
+      height: 108%;
+      background: rgba(255, 255, 255, 255);
+      /* //IE: ;
+		    //background: rgba(255,255,255,0.98); */
+      transform: scale(1.1);
+      transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+      z-index: 1000;
+      disable: none;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -mz-border-radius: 5px;
+      display: none;
+    }
+
+    .caseStudyContent {
+      position: relative;
+      left: 0px;
+      top: 14px;
+      width: 650px;
+      height: 385px;
+      /* background: rgba(91,91,91, 1); */
+      transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+      z-index: 1000;
+      border-top-left-radius: 5px;
+      -webkit-border-top-left-radius: 5px;
+      -moz-border-top-left-radius: 5px;
+      -mz-border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      -webkit-border-bottom-right-radius: 5px;
+      -moz-border-top-right-radius: 5px;
+      -mz-border-top-right-radius: 5px;
+      margin: 0px auto;
+      /* border: 1px solid rgba(91,91,91, 1); */
+    }
+
+    .ModalTextBottom {
+      position: absolute;
+      bottom: 0px;
+      left: 10px;
+      width: 98%;
+      font-size: 14px;
+      height: 40px;
+      color: #ffffff;
+      font-family: OpenSansBold;
+      background: #5B5B5B;
+      text-align: center;
+      line-height: 42px;
+      display: none;
+    }
+
+    .modalTxtImg {
+      height: 360px;
+    }
+
+    .ModalTxtImg {
+      position: absolute;
+      top: 49px;
+      left: 0px;
+      width: 100%;
+      font-size: 14px;
+      height: 360px;
+      background-size: contain;
+      z-index: 100;
+      border-radius: 5px;
+    }
+
+    .pageclose_txt {
+      position: absolute;
+      width: 135px;
+      height: 44px;
+      top: 48px;
+      left: 800px;
+      background: url('media/images/player/common/pdf_close_inst.png');
+    }
+
+    #pageClsText {
+      position: absolute;
+      width: 115px;
+      height: 29px;
+      top: 15px;
+      left: 16px;
+      font-family: OpenSansRegular;
+      font-size: 16px;
+      font-style: italic;
+      color: #172430;
+    }
+
+    #pageRefCloseBtn_id {
+      position: absolute;
+      width: 29px;
+      height: 29px;
+      top: 7px;
+      left: 900px;
+      cursor: pointer;
+      background: url('media/images/player/common/close.png');
+      /* background-position: -49px 0px; */
+      -webkit-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+    }
+
+    #pageid_RefCloseBtn:hover #pageclose_txt {
+      background: url('media/images/player/common/pdf_close_inst.png');
+      /* background-position: 0px 0px; */
+    }
+
+    #pagereferences {
+      margin-left: 0%;
+      margin-top: 45px;
+      color: #333;
+      width: 800px;
+      min-height: 412px;
+      overflow-y: auto;
+      position: absolute;
+      height: 412px;
+    }
+
+    #pagereferences ul {
+      padding-top: 0%;
+      padding-bottom: 0%;
+      padding-left: 1%;
+      margin: 0px;
+      margin-top: 10px;
+    }
+
+    /* #references ul li a{
+					outline: none;
+					color: #0000ff;
+					font-family: OpenSansRegular;
+					text-decoration: underline;
+					font-size: 18px;
+			}
+			#references ul li a:hover{
+				color: #009cff;
+			}
+			#references ul li a:active {
+				outline: none; */
+    /* } */
+
+    #pagereferences ul li {
+      border: 0 none;
+      margin-left: -4px;
+      margin-right: 5px;
+      vertical-align: bottom;
+      width: 4%;
+    }
+
+    #closeMainDiv .glossaryclosetip {
+      margin-left: 70%;
+      color: #FFFFFF;
+      font-family: OpenSansRegular;
+      font-size: 79.2%;
+    }
+
+    .bullet {
+      position: relative;
+      background-image: url("media/images/player/common/bullet.png");
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      float: left;
+      height: 13px;
+      width: 13px;
+      margin-top: 7.9px;
+      list-style-type: none;
+      border-radius: 10px;
+    }
+
+    .text {
+      color: #172430;
+      list-style-type: none;
+      margin-left: 30px;
+      position: relative;
+    }
+
+    .clsSectionName {
+      margin-top: 17px !important;
+      font-family: SegoeUIBold;
+      color: #1a1f71;
+    }
+
+    .clsResouceLink {
+      margin-left: 1% !important;
+    }
+
+    ._clickLink {
+      position: relative;
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: underline;
+      padding-bottom: 15px;
+    }
+
+    ._clickLink:hover {
+      position: relative;
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: underline;
+      padding-bottom: 15px;
+      color: blue;
+      cursor: pointer;
+    }
+
+    .pdflink {
+      position: absolute;
+      top: 44px;
+      width: 100%;
+      height: 413px;
+      /* z-index: 999; */
+
+      border-radius: 0 0 10px 10px;
+    }
+
+    ._viewed {
+      color: blue;
+    }
+
+    .imageDesc {
+      position: relative;
+      top: -16px;
+      left: 1px;
+      font-size: 16px;
+      text-align: center;
+      margin: 0 auto;
+      color: white;
+      background: #3a5569;
+      padding: 1px;
+      font-size: 14px;
+      border-radius: 12px;
+      padding: 1px 10px;
+      width: 152px;
+      margin: 0 auto;
+      height: 33px;
+      line-height: 15px;
+      vertical-align: middle;
+      display: table-cell;
+      left: 7px;
+    }
+
+    .imageDescFull {
+      position: relative;
+      top: 13px;
+      left: 15px;
+      font-size: 16px;
+      text-align: center;
+      width: 648px;
+      margin: 0 auto;
+      background: #5B5B5B;
+      height: 40px;
+      border: 1px solid #5B5B5B;
+      line-height: 40px;
+      color: #fff;
+      border-radius: 0px 0px 5px 5px;
+    }
+
+    .ClsImage0 {
+      /* margin-left: 29px; */
+    }
+
+    .boxInst {
+      top: 490px !important;
+      left:904px !important;
+    }
+
+    .case_study_popup .modalContent {
+      width: 65%;
+      height: 420px;
+      border-radius: 10px;
+      top:45px;
+    }
+
+    /* 
+    .case_study_popup .modalContent .modalinner {
+      padding: 30px;
+      position: relative
+    }
+
+    #imgPopup0 {
+      background-size: cover;
+      width: 100%;
+      height: 360px
+    }
+
+    .case_study_popup .modalContent .modalinner .modalclose {
+      position: absolute;
+      top: 5px;
+      right: 0px;
+      width: 30px;
+      height: 30px
+    }
+
+    .case_study_popup .modalContent .modalinner .modalclose .modalcloseicon {
+      background: url(pages/images/Topic01/T01P03/close-icon.png) no-repeat;
+      background-size: 24px 24px;
+      width: 24px;
+      height: 24px;
+      cursor: pointer
+    }
+
+    .case_study_popup .modalContent .modalinner .modalclose .modalcloseicon:hover {
+      background: url(pages/images/Topic01/T01P03/close-hover-icon.png) no-repeat;
+      background-size: 24px 24px;
+      width: 24px;
+      height: 24px
+    } */
+
+
+    .textLink {
+      width: 300px;
+      margin: 0 auto;
+      display: block;
+    }
+
+    #idText28 {
+      display: none;
+      opacity: '0';
+    }
+
+    div#section_left {
+      width: 30%;
+      position: relative;
+      float: left;
+      top: 50px;
+    }
+
+    div#section_right {
+      width: 70%;
+      position: relative;
+      float: right;
+      top: 50px;
+    }
+
+    div#section_right_top {
+      background: white;
+      height: 200px;
+      margin-bottom: 10px;
+      padding: 10px 0;
+      /* -webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75); 
+      -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+      box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);*/
+      border-radius: 5px;
+      -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+      display: none;
+    }
+
+    .info {
+      top: 101px;
+      position: relative;
+      font-size: 11px;
+      line-height: 12px;
+      font-family: OpenSansSemiBold;
+      text-align: center;
+    }
+
+    .section_right_top.info {
+      top: 0;
+      left: 10px;
+      text-align: center;
+      display: none;
+    }
+
+    div#section_right_bottom .info {
+      top: 108px;
+    }
+
+    .checked {
+      background: url(pages/images/Topic01/T01P22/tick.png) no-repeat;
+      width: 27px;
+      z-index: 999;
+      position: absolute;
+      height: 27px;
+      top: -14px;
+      right: -6px;
+      /* background-color: white; */
+      border-radius: 49px;
+      display: none;
+      background-size: cover;
+    }
+
+    .completed .checked {
+      display: block;
+    }
+    .ClsImage1 div#clsSubImage1 {
+        margin: 0;
+    }
+    .imageDesc, .subFirstImage{
+      cursor: pointer;
+    }
+    .imageDesc strong {
+      font-weight: normal !important;
+      font-family:'OpenSansBold'
+    }
+    /* #case_study_popup[data-image='heppesVesicles'] .modalContent {
+    top: 20%;
+} */
+
+#case_study_popup[data-image='bmcr'] .modalContent {
+    top: 18%;
+}
+
+#case_study_popup[data-image='staphSS'] .modalContent {
+    top: 15%;
+}
+  </style>
+  <script>
+    var audioPath = "pages/audio/Topic01/T01P22/T01P22";
+    //var gItemAudioPath=["pages/audio/Topic01/T01P17/T01P17"
+    //];
+
+    var currCue = 0;
+    var idd = 0;
+
+    var updateContentArray = [{
+      time: "0",
+      carry: "",
+      event: "",
+      show: "",
+      hide: "",
+      transcript: "When an infant is infected, abnormal skin findings may include:<ul class='ul-class'><li>Redness around the umbilical cord,</li><li>Vesicles or blisters on the skin or mucous membranes,</li><li>Hemorrhagic purpuric eruptions secondary to viral infection,</li><li>Soft tissue swelling and/or redness, which could indicate cellulitis or osteomyelitis,</li><li>Sloughing of the skin, which is seen with staph scalded skin syndrome, and </li> <li>Petechiae or unexplained bruising, which might indicate coagulopathy secondary to a severe infection. </li></ul><div style='margin-top: -10px;''>Click on each abnormal finding to take a closer look.</div>"
+    },
+
+    {
+      time: "0.5",
+      carry: "",
+      event: "",
+      show: "",
+      hide: "",
+      transcript: "",
+      animation: [{
+        target: "#idText28",
+        duration: "0.5",
+        activity: {
+          'opacity': '1',
+          'display': 'block'
+        }
+      }]
+    },
+    {
+      time: "4",
+      carry: "",
+      event: "",
+      show: "",
+      hide: "",
+      transcript: "",
+      animation: [{
+        target: ".ClsImage0",
+        duration: "0.5",
+        activity: {
+          'opacity': '1',
+          'display': 'block'
+        }
+      }]
+    },
+    {
+      time: "7",
+      carry: "",
+      event: "",
+      show: "",
+      hide: "",
+      transcript: "",
+      animation: [{
+        target: "div#section_right_top",
+        duration: "0.5",
+        activity: {
+          'opacity': '1',
+          'display': 'block'
+        }
+      }, {
+        target: ".section_right_top.info",
+        duration: "0.5",
+        activity: {
+          'opacity': '1',
+          'display': 'block'
+        }
+      },
+      {
+        target: ".ClsImage1",
+        duration: "0.5",
+        activity: {
+          'opacity': '1',
+          'display': 'inline-block'
+        }
+      }
+      ]
+    }, {
+      time: "11",
+      carry: "",
+      event: "",
+      show: "",
+      hide: "",
+      transcript: "",
+      animation: [{
+        target: ".ClsImage2",
+        duration: "0.5",
+        activity: {
+          'opacity': '1',
+          'display': 'inline-block'
+        }
+      }]
+    },
+    {
+      time: "15",
+      carry: "",
+      event: "",
+      show: "",
+      hide: "",
+      transcript: "",
+      animation: [{
+        target: ".ClsImage3.one",
+        duration: "0.5",
+        activity: {
+          'opacity': '1',
+          'display': 'inline-block'
+        }
+      }]
+    },
+    {
+      time: "21",
+      carry: "",
+      event: "",
+      show: "",
+      hide: "",
+      transcript: "",
+      animation: [{
+        target: ".ClsImage3.two",
+        duration: "0.5",
+        activity: {
+          'opacity': '1',
+          'display': 'inline-block'
+        }
+      }]
+    },
+    {
+      time: "26",
+      carry: "",
+      event: "",
+      show: "",
+      hide: "",
+      transcript: "",
+      animation: [{
+        target: ".ClsImage3.three",
+        duration: "0.5",
+        activity: {
+          'opacity': '1',
+          'display': 'inline-block'
+        }
+      }]
+    },
+    ];
+
+    function fnAudioFinishItemComp() {
+      fnAudioFinishPageComp();
+      fnUpdatePageCompletionCounter(0);
+      //fnUpdatePageCompletionCounter(7);
+    }
+    var __dataXml;
+    var __clickCount = 0;
+
+    $(document).ready(function () {
+      disableNextBtn();
+      var ele = document.getElementsByTagName('div');
+      for (var i = 0; i < ele.length; i++) {
+        ele[i].setAttribute("unselectable", "on");
+      }
+
+      // $(".clsEnaBackBtn").on("click",function(){
+      // 			console.log('clicked');
+      // 			fnJumpToPageByID("M1L0T1P16_10");
+      // 		});
+      var n = isInArray("M1L0T1P22", gCompPageArr);
+      console.log(n);
+      if (n == true) {
+        enableNextBtn();
+        //    fnGlowNextBtn();
+        fnDesiableNext(false);
+      }
+      $('.small_expand').css('display', 'block');
+
+    });
+
+    function isInArray(value, array) {
+      return array.indexOf(value) > -1;
+    }
+
+    function audioReset() {
+      gAudioId = "";
+      onTimelineEnd();
+    }
+
+    /* function fnPlaySectionAudio(gCurrentIndex){
+      indexAudio = (gCurrentIndex);
+      audioId = "audio_"+gCurrentIndex;
+      fnHideShowAudioPlayer( false );
+      updateContentArray = eval("popupSectionArray"+(gCurrentIndex));
+      initAudioPlayer(gItemAudioPath[gCurrentIndex])
+    } */
+
+    function fnCompletion() {
+      // console.log("end");
+      //if($(".clsVisited").length==gTotalPopups){
+      //enableNextBtn();
+      //fnAudioFinishItemComp();
+      //}
+    }
+    function onlyUnique(value, index, self) {
+      return self.indexOf(value) === index;
+    }
+    var total_popup = $(".small_expand").length;
+    var visited = [];
+    $('.imageDesc, .subFirstImage').on('click', function(){
+      $(this).parents('.clsSubImage').find(".small_expand").trigger('click');
+    })
+    $(".small_expand").on("click", function () {
+      if (!fnPauseAudio()) {
+        console.log(true);
+        fnPauseAudio()
+      } else {
+        playPauseAudio();
+        console.log(false);
+      }
+      $(".modalTxtImg").hide();
+
+      var id = $(this).data("id");
+      $(this).parents('.clsSubImage').addClass('completed');
+      visited.push(id);
+      visited = visited.filter(onlyUnique);
+      console.log(visited.length + '==' + total_popup);
+      if (visited.length == total_popup) {
+        markCompleted();
+      }
+      $("#case_study_popup").attr('data-image', id.replace('#', ''))
+      $("#case_study_popup").find(".modalTextBottom").html($(this).data("title"))
+      
+      $("#case_study_popup").show();
+      $(".imageHere").attr('id', id).show();
+      //$(".sectionTop").addClass("blur");
+      $(".mainContainer").addClass("blur");
+    });
+
+    $(".modalclose").on("click", function () {
+      // audioReset();
+      var __aIndex = $(this).attr("id").slice(8);
+      if (!fnPauseAudio()) {
+        console.log(true);
+        playPauseAudio();
+      }
+
+      $(".modal").removeAttr("style");
+      //$(".sectionTop").removeClass("blur");
+      $(".mainContainer").removeClass("blur");
+    });
+    $(".closepopup").on("click", function () {
+      fnPlayAudio();
+      $(".modal").removeAttr("style");
+      $(".mainContainer").removeClass("blur");
+    });
+    // gCompPageArr.push("M1L0T1P22");
+
+
+    function markCompleted() {
+      enableNextBtn();
+      fnAudioFinishItemComp();
+      $('.small_expand').css('display', 'block');
+      $('.boxInst').css('display', 'block');
+       gCompPageArr.push("M1L0T1P22");
+      audioStop();
+    }
+    function fnOnAudioComplete() {
+      if (gAudioId == "startAudio") {
+        // //enableNextBtn();
+        // fnAudioFinishItemComp();
+        // // $('.small_expand').css('display', 'block').css('opacity', '1');
+        // // $('.boxInst').css('display', 'block');
+        // // gCompPageArr.push("M1L0T1P22");
+        // audioStop();
+      } else {
+        $("#idTick0" + selectedIndex).css({
+          "opacity": "1"
+        });
+        $("#clsTabTxt" + selectedIndex).css({
+          'color': '#80848b'
+        });
+        $(".ClsTab").removeClass("clsDisable");
+        $("#TabImage" + selectedIndex).addClass("clsDisable");
+        fnCompletion();
+        audioStop();
+
+      }
+    }
+
+
+    $('#pageClsResourcesPopup').hide();
+    $("#pageRefCloseBtn_id").click(function () {
+      enabledAllButtons();
+      fnPlayAudio();
+      //$("#pageClsResourcesPopup").hide();
+      $("#pageClsResourcesPopup").hide();
+      //$("#pageid_RefTitleBar").show()
+    });
+    function audioStop() {
+      var audio = document.getElementById("audioplayer");
+      audio.pause();
+      audio.currentTime = 0;
+    }
+    $(".popup").on("click", function () {
+      let target = $(this).data('target');
+      pauseAudio();
+      $(".mainContainer").addClass("blur");
+      $(target).show();
+    });
+    $(".popupclose").on("click", function () {
+
+      playAudio();
+      $(".mainContainer").removeClass("blur");
+      $('.modal').removeAttr("style");
+
+    });
+  </script>
+
+  <!-- <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+<script src="jsfiles/libs/jquery.mCustomScrollbar.concat.min.js"></script> -->
+</head>
+
+<body>
+
+  <div class="pg-pageContent" UNSELECTABLE="on">
+    <div class="mainContainer">
+      <div class="clsPatch" id="idPatchMain25">
+        <div class="clsText tagline" id="idText28">Click on each abnormal finding to take a closer look.</div>
+      </div>
+
+      <section class="ClsSecItem section" id="section0">
+        <div id="section_left">
+          <div class="ClsImage0">
+            <div class="clsSubImage" id="clsSubImage0">
+              <div class="checked"></div>
+              <div class="subFirstImage omphalitis" id="clsSub0"></div>
+              <div class="imageDesc"><strong>Omphalitis</strong></div>
+              <div class="clickToContinue expandImgTxtRight clickToEnlarge">Click to enlarge image</div>
+              <div class="info" unselectable="on">Redness and/or drainage around the umbilical cord</div>
+              <a href="javascript:void(0);" title="Click to enlarge image" class="small_expand zoom_btn"
+                data-id="omphalitis" data-title="Omphalitis">&nbsp;</a>
+            </div>
+
+          </div>
+          <div class="ClsImage2">
+            <div class="clsSubImage" id="clsSubImage2">
+              <div class="checked"></div>
+              <div class="subFirstImage bmcr" id="clsSub2"></div>
+              <div class="imageDesc"><strong>“Blueberry muffin” – Congenital rubella</strong></div>
+              <!-- <div class="subFirstImage" id="clsImg0"></div> -->
+              <div class="clickToContinue expandImgTxtRight clickToEnlarge">Click to enlarge image</div>
+              <div class="info" style="top: 108px; " unselectable="on">Hemorrhagic purpuric eruptions</div>
+              <a href="javascript:void(0);" title="Click to enlarge image" class="small_expand zoom_btn" data-id="bmcr"
+                data-title="“Blueberry muffin” – Congenital rubella">&nbsp;</a>
+            </div>
+
+          </div>
+
+        </div>
+        <div id="section_right">
+          <div id="section_right_top">
+
+            <div class="ClsImage1">
+              <div class="clsSubImage" id="clsSubImage1">
+                <div class="checked"></div>
+
+                <div class="subFirstImage heppesVesicles" id="clsSub1"></div>
+                <div class="imageDesc"><strong>Herpes vesicles</strong></div>
+                <!-- <div class="subFirstImage" id="clsImg0"></div> -->
+                <div class="clickToContinue expandImgTxtRight clickToEnlarge">Click to enlarge image</div>
+                <a href="javascript:void(0);" title="Click to enlarge image" class="small_expand zoom_btn"
+                  data-id="heppesVesicles" data-title="Herpes vesicles">&nbsp;</a>
+              </div>
+
+            </div>
+            <div class="ClsImage1">
+              <div class="clsSubImage" id="clsSubImage1">
+                <div class="checked"></div>
+
+                <div class="subFirstImage bullousImpetigo" id="clsSub1"></div>
+                <div class="imageDesc"><strong>Bullous impetigo</strong></div>
+                <!-- <div class="subFirstImage" id="clsImg0"></div> -->
+                <div class="clickToContinue expandImgTxtRight clickToEnlarge">Click to enlarge image</div>
+                <a href="javascript:void(0);" title="Click to enlarge image" class="small_expand zoom_btn"
+                  data-id="bullousImpetigo" data-title="Bullous impetigo">&nbsp;</a>
+              </div>
+
+            </div>
+            <div class="ClsImage1">
+              <div class="clsSubImage" id="clsSubImage1">
+                <div class="checked"></div>
+
+                <div class="subFirstImage varicella" id="clsSub1"></div>
+                <div class="imageDesc"><strong>Varicella <br>(“Chicken pox”)</strong></div>
+                <!-- <div class="subFirstImage" id="clsImg0"></div> -->
+                <div class="clickToContinue expandImgTxtRight clickToEnlarge">Click to enlarge image</div>
+                <a href="javascript:void(0);" title="Click to enlarge image" class="small_expand zoom_btn"
+                  data-id="varicella" data-title="Varicella (“Chicken pox”)">&nbsp;</a>
+              </div>
+
+            </div>
+            <div class="info section_right_top">Vesicles or blisters on the skin or mucous membranes</div>
+          </div>
+          <div id="section_right_bottom">
+
+            <div class="ClsImage3 one">
+              <div class="clsSubImage" id="clsSubImage3">
+                <div class="checked"></div>
+
+                <div class="subFirstImage cellulitis" id="clsSub3"></div>
+                <div class="imageDesc"><strong>Cellulitis </strong></div>
+                <!-- <div class="subFirstImage" id="clsImg0"></div> -->
+                <div class="clickToContinue expandImgTxtRight clickToEnlarge">Click to enlarge image</div>
+                <div class="info">Soft tissue swelling and/or redness</div>
+
+                <a href="javascript:void(0);" title="Click to enlarge image" class="small_expand zoom_btn"
+                  data-id="cellulitis" data-title="Cellulitis">&nbsp;</a>
+              </div>
+
+            </div>
+            <div class="ClsImage3 two">
+              <div class="clsSubImage" id="clsSubImage3">
+                <div class="checked"></div>
+
+                <div class="subFirstImage staphSS" id="clsSub3"></div>
+                <div class="imageDesc"><strong>Staph scalded skin</strong></div>
+                <!-- <div class="subFirstImage" id="clsImg0"></div> -->
+                <div class="clickToContinue expandImgTxtRight clickToEnlarge">Click to enlarge image</div>
+                <div class="info">Skin sloughing</div>
+                <a href="javascript:void(0);" title="Click to enlarge image" class="small_expand zoom_btn"
+                  data-id="staphSS" data-title="Staph scalded skin">&nbsp;</a>
+              </div>
+
+            </div>
+            <div class="ClsImage3 three">
+              <div class="clsSubImage" id="clsSubImage3">
+                <div class="checked"></div>
+
+                <div class="subFirstImage Petechiae" id="clsSub3"></div>
+                <div class="imageDesc"><strong>Petechiae</strong></div>
+                <!-- <div class="subFirstImage" id="clsImg0"></div> -->
+                <div class="clickToContinue expandImgTxtRight clickToEnlarge">Click to enlarge image</div>
+                <div class="info">Coagulopathy</div>
+
+                <a href="javascript:void(0);" title="Click to enlarge image" class="small_expand zoom_btn"
+                  data-id="Petechiae" data-title="Petechiae">&nbsp;</a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!--- Main Container-->
+
+    <div class="modal case_study_popup" id="case_study_popup">
+      <div class="modalContent" unselectable="on">
+        <div class="modalinner">
+          <div class="modalTxtImg imageHere" unselectable="on" id=""></div>
+
+          <div class="modalTextBottom" unselectable="on"></div>
+          <a class="closepopup zoom_close_btn" href="javascript:void(0)" title="Click to Close"></a>
+          <!-- <div class="clickToContinue expandImgTxtRight clickToClose">Click to Close</div> -->
+          <div class="popover left-arrow">
+            <div class="arrow" style="top: 50%;"></div>
+            <div class="popover-content">Click to close image.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="boxInst">
+      <div class="instNextClick"></div>
+      <div class="next_click"><em> Click Next to continue.</em></div>
+    </div>
+  </div>
+
+</body>
+
+</html>

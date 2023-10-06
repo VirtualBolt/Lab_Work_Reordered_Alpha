@@ -1,0 +1,443 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+
+    <title></title>
+
+    <script>
+        manifest = [{
+                src: 'pages/images/Topic01/T01P15/picture1.png',
+                id: '1'
+            },
+
+            {
+                src: 'pages/images/Topic01/T01P15/picture2.png',
+                id: '2'
+            }
+
+        ];
+    </script>
+    <script>
+        glossaryFuncPageLevel();
+        var audioPath = "pages/audio/Topic01/T01P15/T01P15";
+        var currCue = 0;
+        var idd = 0;
+        var clickTabCount = 0;
+        var clickTabCount1 = 0;
+        var updateContentArray = [
+            {
+                time: "0.0",
+                carry: "",
+                event: "",
+                show: "",
+				hide: "",
+                transcript: "Viral infection may occur anytime during pregnancy or after delivery. But when it occurs during the first trimester, the infection may severely impact fetal growth and organ development.Consequences of early gestation viral infectioninclude symmetric, small for gestational age growth, and visual, hearing, brain, cardiac and/or liver damage. If the mother or a family member has a viral infection at the time of delivery or shortly after,then the infant may present with a fever, diarrhea, and/or vomiting, and in severe cases, organ failure. Click Next to continue.",
+            },
+			 {
+                time: "0",
+                carry: "",
+                event: "",
+                show: "#content_txt1",
+				hide: "",
+                transcript: "Viral infection may occur anytime during pregnancy or shortly after delivery. But when it occurs during the first trimester, the infection may severely impact fetal growth and organ development. Consequences of early gestation viral infection include symmetric small for gestational age growth, and visual, hearing, brain, cardiac and/or liver damage.<br> If the mother or a family member has a viral infection at the time of delivery or shortly after, then the infant may present with a fever, diarrhea, and/or vomiting, and in severe cases, organ failure. <br> Click Next to continue.",
+               
+            },
+			{
+                time: "5",
+                carry: "",
+                event: "",
+                show: "#leftbox, #leftimg1",
+				hide: "",
+                transcript: "Viral infection may occur anytime during pregnancy or shortly after delivery. But when it occurs during the first trimester, the infection may severely impact fetal growth and organ development. Consequences of early gestation viral infection include symmetric small for gestational age growth, and visual, hearing, brain, cardiac and/or liver damage.<br> If the mother or a family member has a viral infection at the time of delivery or shortly after, then the infant may present with a fever, diarrhea, and/or vomiting, and in severe cases, organ failure. <br> Click Next to continue.",
+              
+            },
+            {
+                time: "6",
+                carry: "",
+                event: "",
+                show: "#leftboxinner,#leftheadtxt1",
+				hide: "",
+                transcript: "Viral infection may occur anytime during pregnancy or shortly after delivery. But when it occurs during the first trimester, the infection may severely impact fetal growth and organ development. Consequences of early gestation viral infection include symmetric small for gestational age growth, and visual, hearing, brain, cardiac and/or liver damage.<br> If the mother or a family member has a viral infection at the time of delivery or shortly after, then the infant may present with a fever, diarrhea, and/or vomiting, and in severe cases, organ failure. <br> Click Next to continue.", animation: [{
+                    target: "#leftboxinner,#leftheadtxt1",
+                    duration: "1",
+                    activity: {
+                        // 'top': '215px',
+                        'opacity': '1'
+                    }
+                }]
+               
+            },
+			
+			{
+                time: "6",
+                carry: "",
+                event: "",
+                show: "#leftheadtxt11,#leftdesctxt1",
+				hide: "",
+                transcript: "Viral infection may occur anytime during pregnancy or shortly after delivery. But when it occurs during the first trimester, the infection may severely impact fetal growth and organ development. Consequences of early gestation viral infection include symmetric small for gestational age growth, and visual, hearing, brain, cardiac and/or liver damage.<br> If the mother or a family member has a viral infection at the time of delivery or shortly after, then the infant may present with a fever, diarrhea, and/or vomiting, and in severe cases, organ failure. <br> Click Next to continue.", animation: [{
+                    target: "#leftheadtxt11,#leftdesctxt1",
+                    duration: "1",
+                    activity: {
+                        // 'top': '215px',
+                        'opacity': '1'
+                    }
+                }]
+              
+            },
+			{
+                time: "6.5",
+                carry: "",
+                event: "",
+                show: "",
+				hide: "",
+                transcript: "Viral infection may occur anytime during pregnancy or shortly after delivery. But when it occurs during the first trimester, the infection may severely impact fetal growth and organ development. Consequences of early gestation viral infection include symmetric small for gestational age growth, and visual, hearing, brain, cardiac and/or liver damage.<br> If the mother or a family member has a viral infection at the time of delivery or shortly after, then the infant may present with a fever, diarrhea, and/or vomiting, and in severe cases, organ failure. <br> Click Next to continue.",
+               
+            },
+			{
+                time: "23",
+                carry: "",
+                event: "",
+                show: "#rightbox, #rightimg1",
+				hide: "",
+                transcript: "Viral infection may occur anytime during pregnancy or after delivery. But when it occurs during the first trimester, the infection may severely impact fetal growth and organ development.Consequences of early gestation viral infectioninclude symmetric, small for gestational age growth, and visual, hearing, brain, cardiac and/or liver damage. If the mother or a family member has a viral infection at the time of delivery or shortly after,then the infant may present with a fever, diarrhea, and/or vomiting, and in severe cases, organ failure. Click Next to continue.",
+               
+            },
+			{
+                time: "24",
+                carry: "",
+                event: "",
+                show: "#rightboxinner,#rightheadtxt1",
+				hide: "",
+                transcript: "Viral infection may occur anytime during pregnancy or after delivery. But when it occurs during the first trimester, the infection may severely impact fetal growth and organ development.Consequences of early gestation viral infectioninclude symmetric, small for gestational age growth, and visual, hearing, brain, cardiac and/or liver damage. If the mother or a family member has a viral infection at the time of delivery or shortly after,then the infant may present with a fever, diarrhea, and/or vomiting, and in severe cases, organ failure. Click Next to continue.", animation: [{
+                    target: "#rightboxinner,#rightheadtxt1",
+                    duration: "1",
+                    activity: {
+                        // 'top': '215px',
+                        'opacity': '1'
+                    }
+                }]
+               
+            },
+			
+			{
+                time: "24",
+                carry: "",
+                event: "",
+                show: "#rightheadtxt11,#rightdesctxt1",
+				hide: "",
+                transcript: "Viral infection may occur anytime during pregnancy or after delivery. But when it occurs during the first trimester, the infection may severely impact fetal growth and organ development.Consequences of early gestation viral infectioninclude symmetric, small for gestational age growth, and visual, hearing, brain, cardiac and/or liver damage. If the mother or a family member has a viral infection at the time of delivery or shortly after,then the infant may present with a fever, diarrhea, and/or vomiting, and in severe cases, organ failure. Click Next to continue.", animation: [{
+                    target: "#rightboxinner,#rightheadtxt1",
+                    duration: "1",
+                    activity: {
+                        // 'top': '215px',
+                        'opacity': '1'
+                    }
+                }]
+
+               
+            },
+			{
+                time: "24.5",
+                carry: "",
+                event: "",
+                show: "",
+				hide: "",
+                transcript: "Viral infection may occur anytime during pregnancy or shortly after delivery. But when it occurs during the first trimester, the infection may severely impact fetal growth and organ development. Consequences of early gestation viral infection include symmetric small for gestational age growth, and visual, hearing, brain, cardiac and/or liver damage.<br> If the mother or a family member has a viral infection at the time of delivery or shortly after, then the infant may present with a fever, diarrhea, and/or vomiting, and in severe cases, organ failure. <br> Click Next to continue.",
+               
+            },
+
+        ];
+
+
+
+        function fnAudioFinishItemComp() {
+            console.log("end")
+            fnAudioFinishPageComp();
+            fnUpdatePageCompletionCounter(0);
+            $(".boxInst").show()
+        }
+
+        var __dataXml;
+
+        $(document).ready(function() {
+            disableNextBtn();
+            var ele = document.getElementsByTagName('div');
+            for (var i = 0; i < ele.length; i++) {
+                ele[i].setAttribute("unselectable", "on");
+            }
+
+            var n = isInArray("M1L0T1P15", gCompPageArr);
+            if (n == true) {
+                enableNextBtn();
+                // fnGlowNextBtn();
+                fnDesiableNext(false);
+            }
+        });
+
+        function isInArray(value, array) {
+            return array.indexOf(value) > -1;
+        }
+
+        function audioReset() {
+            gAudioId = "";
+            onTimelineEnd();
+        }
+
+
+
+        function fnPlayItemAudio(gCurrentIndex) {
+            audioindex = (gCurrentIndex);
+            gAudioId = "audio_" + gCurrentIndex;
+            fnHideShowAudioPlayer(false);
+            updateContentArray = eval("popupContentArray" + (gCurrentIndex));
+            console.log(gItemAudioPath[gCurrentIndex])
+            initAudioPlayer(gItemAudioPath[gCurrentIndex])
+        }
+
+
+
+        var gTotalPopups = 2;
+        var temp = "";
+
+
+        var succRefFunc = function fnInitPage(oXML) {
+
+            gPageXMLObj = oXML;
+
+        }
+
+        var errRefFunc = function fnXMLLoadError() {
+            alert("Error loading XML file.");
+        }
+
+
+
+        function fStartPage() {
+            fnLoadXMLFile(gModuleArr[gCurrMod].Lessons[gCurrLess].Topics[gCurrTop].Pages[gCurrPage].attr("XMLSRC"), succRefFunc, errRefFunc);
+            gPageXMLObj.find("question").each(function(index, aQues) {
+                __questionArray.push(aQues);
+            });
+        }
+
+
+        function fnCompletion() {
+            console.log("end");
+            enableNextBtn();
+            fnAudioFinishItemComp();
+            if ($(".clsVisited").length == gTotalPopups) {
+                enableNextBtn();
+                fnAudioFinishItemComp();
+            }
+        }
+
+
+
+        function fnOnAudioComplete() {
+            if (gAudioId == "startAudio") {
+                //fnClick();
+                enableNextBtn();
+                fnAudioFinishItemComp();
+            } else {
+                fnCompletion();
+            }
+
+        }
+
+        function endModule() {
+            var _getCount = clickTabCount;
+            if (_getCount >= 4) {
+                audioReset();
+            }
+        }
+    </script>
+<style>
+/* Sliding entrances */
+@-webkit-keyframes slideInDown {
+  from {
+    -webkit-transform: translate3d(0, -10%, 0);
+    transform: translate3d(0, -10%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInDown {
+  from {
+    -webkit-transform: translate3d(0, -10%, 0);
+    transform: translate3d(0, -10%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__slideInDown {  -webkit-animation-name: slideInDown;  animation-name: slideInDown;}
+@-webkit-keyframes slideInLeft {
+  from {
+    -webkit-transform: translate3d(-30%, 0, 0);
+    transform: translate3d(-30%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInLeft {
+  from {
+    -webkit-transform: translate3d(-30%, 0, 0);
+    transform: translate3d(-30%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__slideInLeft {  -webkit-animation-name: slideInLeft;  animation-name: slideInLeft;}
+@-webkit-keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__slideInRight { -webkit-animation-name: slideInRight;  animation-name: slideInRight;}
+@-webkit-keyframes slideInUp {
+  from {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInUp {
+  from {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__slideInUp {-webkit-animation-name: slideInUp;  animation-name: slideInUp;}
+ @-webkit-keyframes zoomin {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.2);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+@keyframes zoomin {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.2);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+.mainContainer {position: absolute;width: 1000px;height: 460px;left: 40px;top: 20px;opacity: 1;}
+.boxInst {position: absolute;top: 490px;left: 905px;}
+.next_click {position: absolute;font-size: 14px;color: #4D667B;font-family: OpenSansRegular;line-height: 14px;width: 100%;left: 0px;text-align: center;top: 15px;}
+
+.content_txt1{border-radius:5px;box-shadow: 0px 1px 1px 1px #ccc; width:77%; margin:20px 86px 40px; text-align:center;font-size:16px; line-height:20px; padding:20px; background:#fff; color:#000;}
+.content_area{width:80%; margin-left: 94px; margin-top:94px}
+.leftbox{ float:left; width:360px; position:relative}
+.rightbox{ float:right; width:360px; position:relative}
+.boxinnerbox{position:relative; margin-left:40px;}
+.content_area img{ position:absolute; width:120px; left:-10px; top:-50px; z-index:999}
+.headingbox{ background:#3A5569; color:#fff; border-radius:5px 5px 0px 0px; padding:10px 15px 10px 90px; font-size:16px; line-height:20px; font-weight:bold}
+.contextboxtxt_inner{ padding:10px 20px 5px 20px; min-height:190px; border-radius:0px 0px 5px 5px; box-shadow: 0px 0px 1px 1px #ccc; background:#fff;font-size:14px; line-height:22px; color:#000000 !important;}
+#content_txt1, #leftbox, #leftimg1, #leftheadtxt1, #leftdesctxt1, #rightbox, #rightimg1, #rightheadtxt1, #rightdesctxt1,#leftheadtxt11, #rightheadtxt11, #leftboxinner, #rightboxinner{ visibility:hidden; opacity:0}
+</style>
+</head>
+<body>
+
+
+
+
+
+    <div class="pg-pageContent" UNSELECTABLE="on">
+	
+        <div class="mainContainer">
+			<div id="content_txt1" class="content_txt1">Viral infection may occur anytime during pregnancy or shortly after delivery.</div>
+			<div class="content_area">
+				<div id="leftbox" class="leftbox">
+					<img id="leftimg1" src="pages/images/Topic01/T01P15/img1.png">
+					<div  id="leftboxinner" class="boxinnerbox">
+						
+						<div id="leftheadtxt1" class="headingbox"><div id="leftheadtxt11">Viral infection in the first trimester</div></div>
+						<div id="leftdesctxt1" class="contextboxtxt">
+							<div class="contextboxtxt_inner">
+								<p>Viral infection during the first trimester may severely impact fetal growth and organ development.</p>
+								<p>Consequences of early gestation viral infection include symmetric small for gestational age growth and visual, hearing, brain, cardiac and/or liver damage.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="rightbox" class="rightbox">
+					<img id="rightimg1" src="pages/images/Topic01/T01P15/img2.png">
+					<div id="rightboxinner" class="boxinnerbox">
+						<div id="rightheadtxt1" class="headingbox"><div id="rightheadtxt11">Viral infection near time of delivery or shortly after</div></div>
+						<div id="rightdesctxt1" class="contextboxtxt">
+							<div class="contextboxtxt_inner" style="padding-bottom: 11px;">
+								<p>If the mother or a family member has a viral infection at the time of delivery or shortly after, then the infant may present with a fever, diarrhea, and/or vomiting and, in severe cases, organ failure.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div style="clear:both"></div>
+			</div>
+        </div>
+
+        <div class="boxInst">
+            <div class="instNextClick">
+                <div class="next_click"><em> Click Next to continue.</em></div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

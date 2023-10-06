@@ -1,0 +1,660 @@
+<!doctype html>
+<html class="">
+<!--<![endif]-->
+<head>
+<script>
+		manifest = [
+					{src:'pages/images/HomePage/getting_started_icon.png', id:'0'},
+					{src:'pages/images/HomePage/accessing-Candidate_icon.png', id:'1'},
+					{src:'pages/images/HomePage/creating_job.png', id:'2'},
+					{src:'pages/images/HomePage/diversity_icon.png', id:'3'},
+					{src:'pages/images/HomePage/finalising_hire_icon.png', id:'4'},
+					{src:'pages/images/HomePage/inter_candidates.png', id:'5'},
+					{src:'pages/images/HomePage/new_additional_icon.png', id:'6'},
+					{src:'pages/images/HomePage/new_employee_icon.png', id:'7'}
+					];
+</script>
+
+<!-- Player and page level .js files to include -->
+<script language="javascript" type="text/javascript">
+	var audioPath = "pages/audio/Global/dummy_Home";
+					
+		var currCue = 0;
+		var idd=0;	
+
+		var updateContentArray = [
+            
+            {time:"0.1", carry:"", event:"", show:"", hide:"", transcript:"", animation:[{target:"#idTopic1",duration:"0.4",activity:{"opacity":"1","top":"101px"}}]},
+            
+			{time:"0.4", carry:"", event:"", show:"", hide:"", transcript:"",animation:[{target:"#idTopic1",duration:"0.3",activity:{"top":"191px"}}]},
+			
+            {time:"0.7", carry:"", event:"", show:"", hide:"", transcript:"",animation:[{target:"#idTopic1",duration:"0.3",activity:{"top":"171px"}}]},
+            
+            {time:"1.0", carry:"", event:"", show:"", hide:"", transcript:"",animation:[{target:"#idTopic1",duration:"0.3",activity:{"top":"191px"}}]},
+            
+            {time:"0.7", carry:"", event:"", show:"", hide:"", transcript:"", animation:[{target:"#idTopic2",duration:"0.4",activity:{"opacity":"1","top":"101px"}}]},
+            
+			{time:"1.1", carry:"", event:"", show:"", hide:"", transcript:"",animation:[{target:"#idTopic2",duration:"0.3",activity:{"top":"191px"}}]},
+			
+            {time:"1.4", carry:"", event:"", show:"", hide:"", transcript:"",animation:[{target:"#idTopic2",duration:"0.3",activity:{"top":"171px"}}]},
+            
+            {time:"1.7", carry:"", event:"", show:"", hide:"", transcript:"",animation:[{target:"#idTopic2",duration:"0.3",activity:{"top":"191px"}}]},
+            
+            {time:"1.4", carry:"", event:"", show:"", hide:"", transcript:"", animation:[{target:"#idTopic3",duration:"0.4",activity:{"opacity":"1","top":"101px"}}]},
+            
+			{time:"1.8", carry:"", event:"", show:"", hide:"", transcript:"",animation:[{target:"#idTopic3",duration:"0.3",activity:{"top":"191px"}}]},
+			
+            {time:"2.1", carry:"", event:"", show:"", hide:"", transcript:"",animation:[{target:"#idTopic3",duration:"0.3",activity:{"top":"171px"}}]},
+            
+            {time:"2.4", carry:"", event:"", show:"", hide:"", transcript:"",animation:[{target:"#idTopic3",duration:"0.3",activity:{"top":"191px"}}]},
+            
+            {time:"2.1", carry:"", event:"", show:"", hide:"", transcript:"", animation:[{target:"#idTopic4",duration:"0.4",activity:{"opacity":"1","top":"101px"}}]},
+            
+			{time:"2.5", carry:"", event:"", show:"", hide:"", transcript:"",animation:[{target:"#idTopic4",duration:"0.3",activity:{"top":"191px"}}]},
+			
+            {time:"2.8", carry:"", event:"", show:"", hide:"", transcript:"",animation:[{target:"#idTopic4",duration:"0.3",activity:{"top":"171px"}}]},
+            
+            {time:"3.1", carry:"", event:"", show:"", hide:"", transcript:"",animation:[{target:"#idTopic4",duration:"0.3",activity:{"top":"191px"}}]},
+            
+            {time:"2.8", carry:"", event:"", show:"", hide:"", transcript:"", animation:[{target:"#idTopic5",duration:"0.4",activity:{"opacity":"1","top":"101px"}}]},
+            
+			{time:"3.2", carry:"", event:"", show:"", hide:"", transcript:"",animation:[{target:"#idTopic5",duration:"0.3",activity:{"top":"191px"}}]},
+			
+            {time:"3.5", carry:"", event:"", show:"", hide:"", transcript:"",animation:[{target:"#idTopic5",duration:"0.3",activity:{"top":"171px"}}]},
+            
+            {time:"3.8", carry:"", event:"", show:"", hide:"", transcript:"",animation:[{target:"#idTopic5",duration:"0.3",activity:{"top":"191px"}}]},
+            
+            {time:"3.5", carry:"", event:"", show:"", hide:"", transcript:"", animation:[{target:"#idTopic6",duration:"0.4",activity:{"opacity":"1","top":"101px"}}]},
+            
+			{time:"3.9", carry:"", event:"", show:"", hide:"", transcript:"",animation:[{target:"#idTopic6",duration:"0.3",activity:{"top":"191px"}}]},
+			
+            {time:"4.2", carry:"", event:"", show:"", hide:"", transcript:"",animation:[{target:"#idTopic6",duration:"0.3",activity:{"top":"171px"}}]},
+            
+            {time:"4.5", carry:"", event:"", show:"", hide:"", transcript:"",animation:[{target:"#idTopic6",duration:"0.3",activity:{"top":"191px"}}]},
+            
+			/*{time:"0.1", carry:"", event:"", show:"", hide:"", transcript:"", animation:[{target:"#idTopic1",duration:"0.5",activity:{"opacity":"1","top":"101px"}}]},
+            
+			{time:"0.5", carry:"", event:"", show:"", hide:"", transcript:"",animation:[{target:"#idTopic1",duration:"0.3",activity:{"top":"191px"}}]},
+			
+			{time:"0.8", carry:"", event:"", show:"", hide:"", transcript:"", animation:[{target:"#idTopic2",duration:"0.5",activity:{"opacity":"1","top":"101px"}}]},
+            
+			{time:"1.3", carry:"", event:"", show:"", hide:"", transcript:"",animation:[{target:"#idTopic2",duration:"0.3",activity:{"top":"191px"}}]},
+            
+            {time:"1.6", carry:"", event:"", show:"", hide:"", transcript:"", animation:[{target:"#idTopic3",duration:"0.5",activity:{"opacity":"1","top":"101px"}}]},
+            
+			{time:"2.1", carry:"", event:"", show:"", hide:"", transcript:"",animation:[{target:"#idTopic3",duration:"0.3",activity:{"top":"191px"}}]},
+            
+            {time:"2.4", carry:"", event:"", show:"", hide:"", transcript:"", animation:[{target:"#idTopic4",duration:"0.5",activity:{"opacity":"1","top":"101px"}}]},
+            
+			{time:"2.9", carry:"", event:"", show:"", hide:"", transcript:"",animation:[{target:"#idTopic4",duration:"0.3",activity:{"top":"191px"}}]},
+            
+            {time:"3.2", carry:"", event:"", show:"", hide:"", transcript:"", animation:[{target:"#idTopic5",duration:"0.5",activity:{"opacity":"1","top":"101px"}}]},
+            
+			{time:"3.7", carry:"", event:"", show:"", hide:"", transcript:"",animation:[{target:"#idTopic5",duration:"0.3",activity:{"top":"191px"}}]},
+            
+            {time:"4.0", carry:"", event:"", show:"", hide:"", transcript:"", animation:[{target:"#idTopic6",duration:"0.5",activity:{"opacity":"1","top":"101px"}}]},
+            
+			{time:"4.5", carry:"", event:"", show:"", hide:"", transcript:"",animation:[{target:"#idTopic6",duration:"0.3",activity:{"top":"191px"}}]},
+			*/
+			
+			/*{time:"0.8", carry:"", event:"", show:"", hide:"", transcript:"",animation:[{target:"#idBlankTile1,#idBlankTile3",duration:"0.5",activity:{"opacity":"1","transform":"matrix(1,0,0,1,0,0)"}}]},
+			
+			{time:"1.2", carry:"", event:"", show:"", hide:"", transcript:"",animation:[{target:".clsTopicName,.clsIcon,.ClsInsDiv",duration:"0.5",activity:{"opacity":"1"}}]},
+			
+			{time:"1", carry:"", event:"", show:"", hide:"", transcript:"",animation:[{target:"#idBlankTile2,#idBlankTile4,#idBlankTile5",duration:"0.5",activity:{"opacity":"1","transform":"matrix(1,0,0,1,0,0)"}}]},*/
+			
+			
+			{time:"1.5", carry:"", event:"", show:"", hide:"", transcript:""}		
+		];
+		var updateContentArray1 = [
+				{time: "0.0",show: "",hide: "",event: "",transcript: "",animation:[{target:"",duration:"0.0",activity:{'':''}}]}, 
+				
+				{time: "0.3",show: "",hide: "",event: "",transcript: "",animation:[{target:"",duration:"0.0",activity:{'':''}}]}
+			];
+	
+		function fnOnAudioComplete(){
+			if(gAudioId=="startAudio"){
+				$("#idTopic1").removeClass("clsDisable");
+				fnAudioFinishItemComp();
+			}
+				
+			
+		}
+	
+	function fnAudioFinishItemComp(){	
+			fnAudioFinishPageComp();
+			fnUpdatePageCompletionCounter(0);
+		}
+	
+	
+	$(document).ready(function () {
+		//gCurrPageInTopic=1;
+		var ele=document.getElementsByTagName('div');
+			for(var i=0;i<ele.length;i++){
+				ele[i].setAttribute("unselectable","on");
+			}
+		//fnMenuDisable();
+		home_disable();
+		//fnSetCurrSndObj(null);
+		fnStartClick();
+		fnTopicCompletion();
+		//fnHideBtn();
+		/*if(isBookMarkPopupShown){
+				$(".clsTopic").removeClass("clsDisable");
+			}*/
+		/*animateLineExitPopup = function() {
+			console.log("hi");
+			$("#idTopicBlinkLine").animate({"opacity" : "0"}, 500, function(){  
+
+				$("#idTopicBlinkLine").css({"display":"block", "opacity":"1", width: "84px", "left":"115px", "top":"1px"});
+			
+				$("#idTopicBlinkLine").animate({
+					opacity:"0.3", 
+					left: "341px", 
+					top: "2px"
+					//width: "20px", 
+				}, {
+					duration: 800,
+					//easing: "linear",
+					complete: function(){  
+						$("#idTopicBlinkLine").animate({"opacity" : "0"}, 200, function(){  
+							$("#idTopicBlinkLine").animate({"opacity" : "0"}, 1000, function(){ 
+								$("#idTopicBlinkLine").css({display:"block", opacity:"1", width: "84px", left: "341px", top: "222px"}); 
+								$("#idTopicBlinkLine").animate({
+									opacity:"0.3", 
+									left: "-25px", 
+									top: "222px"
+									//width: "20px"
+								}, {
+									duration: 1000,
+									//easing: "linear",
+									complete: function(){  
+										$("#idTopicBlinkLine").animate({"opacity" : "0"}, 200, function(){ 
+											$("#idTopicBlinkLine").css({display:"none", opacity:"0", width: "84px", left: "98px", top: "1px"});  
+										}); 
+									}
+								}); 
+							});  
+						}); 
+					}
+				}); 
+			}); 
+		}
+
+		animateLineExitPopup();*/
+
+		//intervalHandle = setInterval(animateLineExitPopup, 5000);
+		
+	 });
+    
+    function fnClearAnimation(){
+        clearInterval(intervalHandle);
+    }
+    
+	 function fnStartClick(){
+					var selectedId;
+					var selectedIndex;
+					$(".clsTopic").on("click",function(){
+						if(!$(this).hasClass("clsDisable")){
+							//$(".homeCover").css({"display":"none"});
+							selectedId=$(this).attr("id");
+							index = selectedId.replace(/^\D+/g, "");  
+							fnJumpToPageByID("M1L"+index+"T1P1");
+					}						
+					
+				});
+	 }
+	 function fnTopicCompletion(){
+			var topic_completion_array =  gCompLessArr;
+			 var page_compeletion_array = gCompPageArr;
+			
+			if(page_compeletion_array!="" || topic_completion_array !="") { 
+				//appearing tiles at one time
+					$(".clsTopicName,.clsIcon,.clsIns").css("opacity","1");
+					//$(".clsTopic").removeClass("clsDisable");
+					/*$("#idTopic1,#idTopic7").css({"height":"219px"});
+					$("#idTopic3,#idTopic4,#idTopic5,#idTopic6").css({"width":"250px"});
+					$("#idTopic2,#idTopic8").css({"height":"225px"});*/
+					$(".clsBlankTiles").css({"opacity":"1","transform":"matrix(1,0,0,1,0,0)"});
+					gAudioId = "nextAudio";
+					//audioPath = "pages/audio/Global/small_Audio";
+					//updateContentArray = eval("updateContentArray1");
+					
+					
+			}
+			if(topic_completion_array!="") { 
+				 for(i=0; i<=topic_completion_array.length-1;i++) { 
+					var topic_no = topic_completion_array[i].substring(3);
+					//$("#topicTick"+topic_no).css({"display":"block"});
+					$("#tick"+topic_no).css({"display":"block"});
+				}	
+				
+			}
+			/*if(fGetNonCompletedModuleLessons().length == 2){
+				
+				fSetComplete();
+			}*/
+			
+	 }
+    
+    
+    
+	 
+</script>
+<style>
+    .clsTopicBlinkLine{
+        position: absolute;
+        background: url(../media/images/player/animationAssets/star_line.png) no-repeat;
+        background-size: 100% 100%;
+        height: 4px;
+        /*width: 84px;
+        left: 115px;
+        top: 1px;
+        left: 341px;
+        top: 1px;
+        left: 341px;
+        top: 222px;
+        left: -25px;
+        top: 222px;
+        opacity: 0;*/
+    }
+    
+/*.gridContainer{
+	background:url("media/images/GUI_Playbook_2-Section.jpg");
+	
+}*/
+.homeCover{
+	position: absolute;
+	height: 549px;
+	width: 1191px;
+	top: 0px;
+	left: 0px;
+	display: block;
+
+
+}
+.clsHomeWrapper{
+	position: absolute;
+	height: 540px;
+	width: 1025px;
+	top: 0px;
+	left: 0px;
+	display: block;
+}
+.clsTopic{
+    position: absolute;
+    top: 291px; /*191px*/ /*101px*/
+    width: 139px;
+    height: 189px;
+    border-radius: 8px;
+    opacity: 0;
+}
+
+#idTopic1{
+    left: 158px;
+    background-color: #FACB30;
+}
+#idTopic2{
+	left: 320px;
+	background-color: #00b156;
+}
+#idTopic3{
+	left: 481px;
+	background-color: #2081c8;
+}
+#idTopic4{
+	left: 644px;
+	background-color: #ec2127;
+}
+#idTopic5{
+	left: 808px;
+	background-color: #f38524;
+}
+
+#idTopic6{
+	left: 782px;
+    background-color: #8552b9;
+}
+
+.no-touch .clsTopic:hover:not(.clsDisable) {
+		/*background-color:rgba(0,0,0,0.8) !important;*/
+    cursor:pointer;
+}
+.no-touch .clsTopic:hover:not(.clsDisable) .clsTopicName{
+    -webkit-transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+	-ms-transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+	-o-transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+	transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+}
+.no-touch .clsTopic:hover:not(.clsDisable) .clsSheen{
+   height: 40%;
+}
+
+
+.clsBlankTiles{
+	position: absolute;
+	width: 119px;
+	height: 111px;
+    background-color: #f6f6f6;
+	transform:matrix(0,0,0,0,0,0);
+	opacity:0;
+	
+}
+    
+#idBlankTile1{
+	left: 215px;
+	top: 94px;
+}
+#idBlankTile2{
+	left: 471px;
+	top: 93px;
+
+}
+#idBlankTile3{
+	left: 600px;
+	top: 327px;
+	height: 107px;
+}
+#idBlankTile4{
+	left: 854px;
+	top: 327px;
+	height: 107px;
+}
+#idBlankTile5{
+	left: 919px;
+    top: 68px;
+}
+
+
+.clsTopicName{
+    position: absolute;
+    width: 80%;
+    height: 50%;
+    top: 50px;
+    left: 15px;
+    color: #000;
+    text-align: center;
+	opacity: 1;
+    transition: all 0.1s linear;
+}
+    
+/*#topicName1{
+	width: 100px;
+	top: 140px;
+	left: 10px;
+}
+#topicName2{
+	width: 86px;
+	top: 31px;
+	left: 13px;
+}
+#topicName3{
+	width: 116px;
+	top: 28px;
+	left: 22px;
+}
+#topicName4{
+	width: 110px;
+	top: 28px;
+	left: 22px;
+}
+#topicName5{
+	width: 110px;
+	top: 27px;
+	left: 24px;
+}
+#topicName6{
+	width: 110px;
+	top: 31px;
+	left: 8px;
+}*/
+
+    .clsTopicName span:first-child{
+        position: absolute;
+        width: 100%;
+        top: 20px;
+        left: 0px;
+        font-size: 3.6em;
+    }
+    .clsTopicName span:last-child{
+        position: absolute;
+        width: 100%;
+        bottom: 6px;
+        left: 0px;
+        font-size: 1.1em;
+    }
+    #topicName6 span:last-child{
+        bottom: -16px;
+    }
+
+.clsTopicCompleted{
+	position:absolute;
+	
+	display: none;
+	background-color: green;
+}
+#topicTick1,#topicTick2,#topicTick7,#topicTick8{
+	height: 6px;
+	width: 100%;
+}
+#topicTick3,#topicTick4,#topicTick5,#topicTick6{
+	width: 6px;
+	height: 100%;
+}
+
+#homecontentbar{
+	position: absolute;
+    height: 540px;
+    width: 1025px;
+    top: 0px;
+    left: 0px;
+    display: block;
+}
+.clsIcon{
+	position:absolute;
+	-webkit-transition: transform 0.5s;
+	transition: transform 0.5s;
+	opacity:0;
+}
+#idIcon1{
+	background:url("pages/images/HomePage/getting_started_icon.png");
+	height:82px;
+	width:76px;
+	left: 16px;
+    top: 20px;
+	
+}
+#idIcon2{
+	background:url("pages/images/HomePage/creating_job.png");
+	height:77px;
+	width:80px;
+	left: 20px;
+	top: 131px;
+}
+#idIcon3{
+	background:url("pages/images/HomePage/inter_candidates.png");
+	height:76px;
+	width:79px;
+	left: 156px;
+	top: 18px;
+}
+#idIcon4{
+	background:url("pages/images/HomePage/diversity_icon.png");
+	height:80px;
+	width:83px;
+	left: 152px;
+	top: 13px;
+}
+#idIcon5{
+	background:url("pages/images/HomePage/accessing-Candidate_icon.png");
+	height:77px;
+	width:81px;
+	left: 148px;
+    top: 19px;
+}
+#idIcon6{
+	background:url("pages/images/HomePage/finalising_hire_icon.png");
+	height: 77px;
+    width: 84px;
+    left: 150px;
+    top: 19px;
+
+}
+#idIcon7{
+	background:url("pages/images/HomePage/new_employee_icon.png");
+	height:80px;
+	width:83px;
+	left: 17px;
+	top: 131px;
+}
+#idIcon8{
+	background:url("pages/images/HomePage/new_additional_icon.png");
+	height:74px;
+	width:81px;
+	left: 20px;
+	top: 17px;
+}
+.clsIns{
+	position: absolute;
+    top: 440px;
+    left: 0px;
+    right: 0px;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    font-size: 21px;
+	opacity:0;
+}
+.clsSheen{
+	position:absolute;
+	background-color:rgba(255,255,255,0.3);	
+    bottom:0px;
+	left:0px;
+	width:100%;
+	height:0%;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+}
+/*#idSheen1,#idSheen8{
+	bottom:0px;
+	left:0px;
+	width:100%;
+	height:0%;
+
+}
+#idSheen2,#idSheen7{
+	top:0px;
+	left:0px;
+	width:100%;
+	height:0%;
+
+}
+#idSheen3,#idSheen4,#idSheen5,#idSheen6{
+	top:0px;
+	left:0px;
+	width:0%;
+	height:100%;
+
+}*/
+
+.ClsInsDiv {
+	position: absolute;
+	top: 471px;
+	left: 337px;
+	width: 581px;
+	font-size: 18px;
+	height: 23px;
+	color: #ff0406;
+    opacity: 0;
+}
+.ClsInsImg{
+	position: absolute;
+	background: url('pages/images/Global/instruction_icon.png') no-repeat;
+	background-size: 100% 100%;
+	left: 3px;
+	top: 5px;
+	width: 13px;
+	height: 14px;
+ }
+ .ClsInsText{
+	    position: absolute;
+    left: 19px;
+    top: 0px;
+ }
+.clsTabVisitedState
+{
+	position : absolute;
+	background: url('pages/images/Global/Tick.png') no-repeat;
+    background-size: 100% 100%;
+	width: 23px;
+	height: 23px;
+	top: -8px;
+	left: 97px;
+    display: none;
+}
+#tick3,#tick5,#tick6{
+    left: 228px;
+}
+
+
+
+
+
+</style>
+</head>
+<body UNSELECTABLE="on">
+    <div class="clsHomeWrapper" UNSELECTABLE="on">
+        <div id="homecontentbar" UNSELECTABLE="on">
+            <div id="idTopic1" class="clsTopic clsDisable" UNSELECTABLE="on">
+                <div class="clsSheen" id="idSheen1"></div>
+                <div id="topicName1" class="clsTopicName"><span>S</span><span>Sugar</span></div>
+                <div id="topicTick1" class="clsTopicCompleted"></div>
+                <!--<div class="clsIcon" id="idIcon1"></div>-->
+                <div class="clsTabVisitedState" id="tick1"></div>
+            </div>
+            <div id="idTopic2" class="clsTopic clsDisable" UNSELECTABLE="on">
+                <div class="clsSheen" id="idSheen2"></div>
+                <div id="topicName2" class="clsTopicName"><span>T</span><span>Temperature</span></div>
+                <div id="topicTick2" class="clsTopicCompleted"></div>
+                <!--<div class="clsIcon" id="idIcon2"></div>-->
+                <div class="clsTabVisitedState" id="tick2"></div>
+            </div>
+            <div id="idTopic3" class="clsTopic clsDisable" UNSELECTABLE="on">
+                <div class="clsSheen" id="idSheen3"></div>
+                <div id="topicName3" class="clsTopicName"><span>A</span><span>Airway</span></div>
+                <div id="topicTick3" class="clsTopicCompleted"></div>
+                <!--<div class="clsIcon" id="idIcon3"></div>-->
+                <div class="clsTabVisitedState" id="tick3"></div>
+            </div>
+            <div id="idTopic4" class="clsTopic clsDisable" UNSELECTABLE="on">
+                <div class="clsSheen" id="idSheen4"></div>
+                <div id="topicName4" class="clsTopicName"><span>B</span><span>Blood Work</span></div>
+                <div id="topicTick4" class="clsTopicCompleted"></div>
+                <!--<div class="clsIcon" id="idIcon4"></div>-->
+                <div class="clsTabVisitedState" id="tick04"></div>
+            </div>
+            <div id="idTopic5" class="clsTopic clsDisable" UNSELECTABLE="on">
+                <div class="clsSheen" id="idSheen5"></div>
+                <div id="topicName5" class="clsTopicName"><span>L</span><span>Lab Work</span></div>
+                <div id="topicTick5" class="clsTopicCompleted"></div>
+                <!--<div class="clsIcon" id="idIcon5"></div>-->
+                <div class="clsTabVisitedState" id="tick5"></div>
+            </div>
+            <div id="idTopic6" class="clsTopic clsDisable" UNSELECTABLE="on">
+                <div class="clsSheen" id="idSheen6"></div>
+                <div id="topicName6" class="clsTopicName"><span>E</span><span>Emotional Suppot</span></div>
+                <div id="topicTick6" class="clsTopicCompleted"></div>
+                <!--<div class="clsIcon" id="idIcon6"></div>-->
+                <div class="clsTabVisitedState" id="tick6"></div>
+            </div>
+            
+            <div class="clsTopicBlinkLine" id="idTopicBlinkLine"></div>
+            
+            <div class="ClsInsDiv">
+                <div class="ClsInsImg"></div>
+                <div class="ClsInsText">Click a section above to begin learning about the hiring process.</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

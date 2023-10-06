@@ -1,0 +1,1437 @@
+<!doctype html>
+<html class="">
+<!--<![endif]-->
+
+<head>
+    <style type="text/css">
+        /* .popover.left-arrow .arrow{
+            border-left-color: #d4d4d2;
+            right:-9px;
+        } */
+        .HelpPopup {
+            position: absolute;
+            margin-top: 0px;
+            margin-left: 0px;
+            width: 100%;
+            height: 83%;
+            top: 52px !important;
+            left: 0px;
+            background: none !important;
+            z-index: 0;
+        }
+
+        #helpOpacity {
+            position: absolute;
+            width: 1086px;
+            height: 542px;
+        }
+
+        #help_popUp {
+            position: absolute;
+            /* top: 62px; */
+            top: 0px;
+            left: 0%;
+            margin: 0px auto;
+            right: 0%;
+            width: 1086px;
+            /* height: 546px; */
+            background: url("media/images/help/bg.png") no-repeat;
+            height: 547px;
+            background-size: 100% 100%;
+            z-index: 0;
+        }
+
+        ._hideCircle {
+            width: 28px;
+            height: 28px;
+            background: #3A5569;
+            opacity: 1;
+            border-radius: 50%;
+            color: #FFF;
+            display: flex;
+            justify-content: center;
+            line-height: 28px;
+            position: absolute;
+            z-index: 2;
+            cursor: pointer;
+            font-size: 16px;
+            border: 1px solid #4D667B;
+        }
+        ._hideCircle.visited, ._hideCircle.visited:hover{
+            background:#757575;
+            border:1px solid #757575;
+            color:#ffffff;   
+        }
+
+        ._hideCircle:hover{
+            background:#ffffff;
+            border: 1px solid #4D667B;
+            color:#4D667B;
+        }
+
+        #help_popUp #clsMnuBtn {
+            width: 56px;
+            height: 52px;
+            left: 1px;
+            top: 0px;
+            background-position: -1px 1px;
+            background-size: cover;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            cursor: default !important;
+        }
+
+        span {
+            position: relative;
+            width: auto;
+            height: auto;
+            top: auto;
+            left: auto;
+        }
+        span.hdot {
+            position: absolute;
+            width: auto;
+            height: auto;
+            top: auto;
+            left: auto;
+            background:#5a5a5a;
+            width: 6px;
+            height: 6px;
+            border-radius: 5px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+        }
+
+        #help_popUp .no-touch #clsMnuBtn:hover:not(.clsMnuBtnDis) {
+            background-position: -1px 1px !important;
+        }
+
+        #help_popUp .no-touch #clsMnuBtn:hover:not(.clsMnuBtnDis) span {
+            color: #4D667B !important;
+        }
+
+        #clsMnuBtn:hover span {
+            color: #4D667B !important;
+        }
+
+        .bluecolor {
+            color: #4D667B !important;
+        }
+
+        #help_popUp {
+            position: relative;
+        }
+
+        #help_popUp #clsMnuBtn {
+            position: relative;
+            flex: 0%;
+            /* margin-right: 15.9%; */
+        }
+
+        #help_popUp #clsMnuBtn span {
+            position: relative;
+            font-size: 12px !important;
+            padding-top: 2px;
+            padding-left: 2px;
+        }
+
+        /**************************************popup circles******************************************/
+        #clspopUp_00 {
+            left: 172px;
+            top: 105px;
+        }
+
+        #clspopUp_01 {
+            left: 362px;
+            top: 105px;
+        }
+
+        #clspopUp_02 {
+            right: 230px;
+            top: 105px;
+        }
+
+        #clspopUp_03 {
+            right: 180px;
+            top: 105px;
+        }
+
+        #clspopUp_04 {
+            left: 198px;
+            top: 427px;
+        }
+
+        #clspopUp_05 {
+            left: 250px;
+            top: 427px;
+        }
+
+        #clspopUp_06 {
+            left: 304px;
+            top: 427px;
+        }
+
+        #clspopUp_07 {
+            left: 528px;
+            top: 427px;
+        }
+
+        #clspopUp_08 {
+            right: 411px;
+            top: 427px;
+        }
+
+        #clspopUp_09 {
+            right: 292px;
+            top: 427px;
+        }
+
+        #clspopUp_10 {
+            right: 250px;
+            top: 427px;
+        }
+
+        #clspopUp_11 {
+            right: 213px;
+            top: 427px;
+        }
+
+        #clspopUp_12 {
+            right: 175px;
+            top: 427px;
+        }
+
+        /**************************************popup text******************************************/
+        ._boxClass {
+            z-index: 1;
+            /* box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.4); */
+            display: none;
+            color: #000000;
+            font-size: 16px;
+            border:2px solid #5a5a5a;
+        }
+
+        ._boxClass:before {
+            z-index: 1;
+           /*  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.4); */
+        }
+
+        .menuButton {
+            flex: 0 30%;
+            padding: 8px 15px 8px 15px;
+            position: absolute;
+            border-radius: 5px;
+            background: #fff;
+            margin-left: 10px;
+            width: 203px;
+            top: 154px;
+            left: 159px;
+        }
+
+        .menuButton:before {
+            width: 2px;
+    content: "";
+    background: #5a5a5a;
+    height: 59px;
+    position: absolute;
+    left: 6.6%;
+    top: -57%;
+        }
+
+        .menuButton span.hdot{
+            top: -61px;
+            left: 13px;
+        }
+
+        .pageTitle {
+            flex: 0 1 7%;
+            padding: 8px 15px 8px 15px;
+            background-color: #fff;
+            border-radius: 5px;
+            position: absolute;
+            top: 150px;
+            left: 359px;
+        }
+
+        .pageTitle:before {
+            width: 2px;
+    content: "";
+    background: #5a5a5a;
+    height: 60px;
+    position: absolute;
+    left: 6%;
+    top: -60px;
+        }
+
+        .pageTitle span.hdot{
+            top: -62px;
+            left: 14px;
+        }
+
+        .helpButton {
+            flex: 0 1 25%;
+            background-color: #fff;
+            border-radius: 5px;
+            position: absolute;
+            padding: 8px 15px 8px 15px;
+            width: 215px;
+            top: 161px;
+            right: 222px;
+        }
+
+        .helpButton:before {
+            width: 2px;
+            content: "";
+            background: #5a5a5a;
+            height: 60px;
+            position: absolute;
+            right: 20px;
+            top: -76%;
+        }
+
+        .helpButton span.hdot{
+            top: -67px;
+            left: 221px;
+        }
+        
+
+        .exitButton {
+            flex: 0 1 18%;
+            padding: 8px 15px 8px 15px;
+            margin-left: 2.3%;
+            background-color: #fff;
+            border-radius: 5px;
+            position: absolute;
+            top: 159px;
+            right: 172px;
+            width: 238px;
+        }
+
+        .exitButton:before {
+            width: 2px;
+            content: "";
+            background: #5a5a5a;
+            height: 61px;
+            position: absolute;
+            right: 7%;
+            top: -41%;
+            border:0px solid;
+        }
+
+        .exitButton span.hdot{
+            top: -65px;
+            left: 245px;
+        }
+
+        .nextButton {
+            width: 180px;
+    padding: 8px 15px 8px 15px;
+    border-radius: 5px;
+    position: absolute;
+    background: #FFF;
+    top: 299px;
+    right: 219px;
+        }
+
+        .nextButton:after {
+            content: "";
+            background: #5a5a5a;
+            width: 2px;
+            height: 31px;
+            position: absolute;
+            left: 225px;
+            top: 44%;
+            transform: rotate(90deg);
+        }
+        .nextButton:before {
+            content: "";
+            background: #5a5a5a;
+            width: 2px;
+            height: 123px;
+            position: absolute;
+            left: 239.5px;
+            top: 64%;
+        }
+
+        .nextButton span.hdot{
+            top: 169px;
+            left: 238px;
+        }
+
+        .resourceButton {
+            width: 230px;
+            position: absolute;
+            padding: 8px 15px 8px 15px;
+            border-radius: 5px;
+            margin-left: 10px;
+            background: #FFF;
+            top: 228px;
+            left: 193px;
+            z-index: 100000;
+        }
+
+        .resourceButton:after {
+            content: "";
+            background: #5a5a5a;
+            width: 2px;
+            height: 190px;
+            position: absolute;
+            left: -14%;
+            top: 49%;
+        }
+        .resourceButton:before {
+            content: "";
+            background: #5a5a5a;
+            width: 2px;
+            height: 22px;
+            position: absolute;
+            left: -25px;
+            top: 240px;
+            transform: rotate(90deg);
+        }
+        .resourceButton span.flline {
+            content: "";
+            background: #5a5a5a;
+            width: 2px;
+            height: 35px;
+            position: absolute;
+            left: -19px;
+            top: 36%;
+            transform: rotate(90deg);
+        }
+
+        .resourceButton span.hdot{
+            top: 248px;
+            left: -13px;
+        }
+
+        .pageCount {
+            width: 190px;
+            padding: 8px 15px 8px 15px;
+            border-radius: 5px;
+            position: absolute;
+            background: #FFF;
+            top: 299px;
+            right: 177px;
+        }
+
+        .pageCount:after {
+            content: "";
+            background: #5a5a5a;
+            width: 2px;
+            height: 92px;
+            position: absolute;
+            right: 48px;
+            top: 83px;
+        }
+
+        .pageCount span.hdot{
+            top: 170px;
+            left: 168px;
+        }
+
+        .pauseButton {
+            width: 260px;
+    padding: 8px 15px 8px 15px;
+    border-radius: 5px;
+    position: absolute;
+    background: #FFF;
+    top: 333px;
+    left: 246px;
+        }
+
+        .pauseButton:after {
+            content: "";
+            background: #5a5a5a;
+            width: 2px;
+            height: 51px;
+            position: absolute;
+            left: 15px;
+            top: 83px;
+        }
+
+        .pauseButton span.hdot{
+            top: 133px;
+            left: 13px;
+        }
+
+        .progressBar {
+            width: 220px;
+            padding: 8px 15px 8px 15px;
+            border-radius: 5px;
+            margin-left: 70px;
+            position: absolute;
+            background: #FFF;
+            top: 240px;
+            left: 320px;
+        }
+        .progressBar:after {
+            content: "";
+            background: #5a5a5a;
+            width: 2px;
+            height: 68px;
+            position: absolute;
+            left: 60%;
+            top: 149px;
+        }
+        .progressBar span.hdot{
+            top: 215px;
+            left: 148px;
+        }
+
+        .pdfHelp {
+            width: 185px;
+            padding: 8px 15px 8px 15px;
+            border-radius: 5px;
+            margin-left: 0px;
+            position: absolute;
+            background: #FFF;
+            top: 240px;
+            left: 232px;
+            z-index: 10000000;
+        }
+        .pdfHelp:after {
+            content: "";
+            background: #5a5a5a;
+            width: 2px;
+            height: 70px;
+            position: absolute;
+            left: 35px;
+            top: 84px;
+        }
+        .pdfHelp span.hdot{
+            top: 152px;
+            left: 33px;
+        }
+
+        .glossaryHelp {
+            width: 210px;
+            padding: 8px 15px 8px 15px;
+            border-radius: 5px;
+            margin-left: 0px;
+            position: absolute;
+            background: #FFF;
+            top: 240px;
+            left: 175px;
+            z-index: 10000000;
+        }
+        .glossaryHelp:after {
+            content: "";
+            background: #5a5a5a;
+            width: 2px;
+            height: 69px;
+            position: absolute;
+            left: 35px;
+            top: 84px;
+        }
+        .glossaryHelp span.hdot{
+            top: 152px;
+            left: 33px;
+        }
+
+        .videoHelp {
+            width: 200px;
+            padding: 8px 15px 8px 15px;
+            border-radius: 5px;
+            margin-left: 0px;
+            position: absolute;
+            background: #FFF;
+            top: 244px;
+            left: 292px;
+            z-index: 10000000;
+        }
+        .videoHelp:after {
+            content: "";
+            background: #5a5a5a;
+            width: 2px;
+            height: 70px;
+            position: absolute;
+            left:35px;
+            top: 84px;
+        }
+        .videoHelp span.hdot{
+            top: 152px;
+            left: 33px;
+        }
+
+        .activityHelp {
+            width: 220px;
+            padding: 8px 15px 8px 15px;
+            border-radius: 5px;
+            margin-left: 0px;
+            position: absolute;
+            background: #FFF;
+            top: 241px;
+            left: 344px;
+            z-index: 10000000;
+        }
+        .activityHelp:after {
+            content: "";
+            background: #5a5a5a;
+            width: 2px;
+            height: 69px;
+            position: absolute;
+            left: 14%;
+            top: 84px;
+        }
+        .activityHelp span.hdot{
+            top: 152px;
+            left: 33px;
+        }
+
+        .backButton {
+            width: 190px;
+            padding: 8px 15px 8px 15px;
+            border-radius: 5px;
+            position: absolute;
+            background: #FFF;
+            top: 299px;
+            right: 177px;
+        }
+
+        .backButton:after {
+            content: "";
+            background: #5a5a5a;
+            width: 2px;
+            height: 88px;
+            position: absolute;
+            right: 84px;
+            top: 83px;
+        }
+
+        .backButton span.hdot{
+            top: 167px;
+            left: 132px;
+        }
+
+        .replayButton {
+            width: 205px;
+            padding: 8px 15px 8px 15px;
+            border-radius: 5px;
+            margin-left: 70px;
+            position: absolute;
+            background: #FFF;
+            top: 336px;
+            left: 234px;
+        }
+
+        .replayButton:after {
+            content: "";
+            background: #5a5a5a;
+            width: 2px;
+            height: 75px;
+            position: absolute;
+            left: 12px;
+            top: 61px;
+        }
+
+        .replayButton span.hdot{
+            top: 131px;
+            left: 10px;
+        }
+
+        .transcript {
+            right: 186px;
+    width: 220px;
+    padding: 8px 15px 8px 15px;
+    border-radius: 5px;
+    position: absolute;
+    background: #FFF;
+    top: 320px;
+    left: 507px;
+        }
+
+        .transcript:after {
+            right: 18%;
+            content: "";
+            background: #5a5a5a;
+            width: 2px;
+            height: 69px;
+            position: absolute;
+            left: 60%;
+            top: 83px;
+        }
+
+        .transcript span.hdot{
+            top: 150px;
+            left: 148px;    
+        }
+
+        .audioButton {
+            width: 190px;
+            padding: 8px 15px 8px 15px;
+            border-radius: 5px;
+            position: absolute;
+            background: #FFF;
+            top: 326px;
+            right: 207px;
+        }
+
+        .audioButton:after {
+            content: "";
+            background: #5a5a5a;
+            width: 2px;
+            height: 83px;
+            position: absolute;
+            right: 97px;
+            top: 61px;
+        }
+
+        .audioButton span.hdot{
+            top: 141px;
+            left: 119px;
+        }
+
+        #clsRefBtn span {
+            left:-8px;
+        }
+
+        /********************************for footer buttons*************************************/
+        #ToolBtn .clsLinepop {
+            content: "";
+            background: #fff;
+            width: 2px;
+            height: 18px;
+            position: absolute;
+            right: 36px;
+            top: -8px;
+            z-index: 2;
+            display: none;
+        }
+
+        #clsPlayPauseBtn .clsLinepop {
+            content: "";
+            background: #fff;
+            width: 2px;
+            height: 20px;
+            position: absolute;
+            right: 34px;
+            top: -10px;
+            z-index: 2;
+            display: none;
+        }
+
+        #clsReplay .clsLinepop {
+            content: "";
+            background: #fff;
+            width: 2px;
+            height: 20px;
+            position: absolute;
+            right: 35px;
+            top: -10px;
+            z-index: 2;
+            display: none;
+        }
+
+        #clsAudioOnBtn .clsLinepop {
+            content: "";
+            background: #fff;
+            width: 2px;
+            height: 20px;
+            position: absolute;
+            right: 32px;
+            top: -10px;
+            z-index: 2;
+            display: none;
+        }
+
+        #clsAudioOffBtn .clsLinepop {
+            content: "";
+            background: #fff;
+            width: 2px;
+            height: 20px;
+            position: absolute;
+            right: 32px;
+            top: -10px;
+            z-index: 2;
+            display: none;
+        }
+
+        #clsBackBtn .clsLinepop {
+            content: "";
+            background: #fff;
+            width: 2px;
+            height: 20px;
+            position: absolute;
+            right: 25px;
+            top: -10px;
+            z-index: 2;
+            display: none;
+        }
+
+        #clsPageNumber .clsLinepop {
+            content: "";
+            background: #fff;
+            width: 2px;
+            height: 17px;
+            position: absolute;
+            right: 24px;
+            top: -16px;
+            z-index: 2;
+            display: none;
+        }
+
+        #clsNxtBtn .clsLinepop {
+            content: "";
+            background: #fff;
+            width: 2px;
+            height: 20px;
+            position: absolute;
+            right: 26px;
+            top: -10px;
+            z-index: 2;
+            display: none;
+        }
+
+        #id_sliderContainer .clsLinepop {
+            content: "";
+            background: #fff;
+            width: 2px;
+            height: 16px;
+            position: absolute;
+            right: 568px;
+            top: -2px;
+            z-index: 2;
+            display: none;
+        }
+
+        #transcript_line .clsLinepop {
+            content: "";
+            background: #fff;
+            width: 2px;
+            height: 18px;
+            position: absolute;
+            right: 279px;
+            top: -8px;
+            z-index: 2;
+            display: none;
+        }
+
+        .videoInstruction {
+            background: #FFFFFF;
+            width: 757px;
+            height: 503px;
+            position: relative;
+            top: 6px;
+            left: 0px;
+            border-radius: 5px;
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.4);
+            margin: 0px auto;
+            padding: 9px 9px 9px 9px;
+        }
+
+        .imgIcon {
+            background: url("media/images/help/1.png") no-repeat;
+            width: 117px;
+            height: 96px;
+            position: absolute;
+            transform: translate(-50%);
+            top: 35px;
+            left: 50%;
+        }
+
+        .imgTxt {
+            position: absolute;
+            font-size: 15px;
+            font-family: OpenSansRegular;
+            color: #000000;
+            top: 17px;
+            left: 187px;
+            width: auto;
+            font-style: italic;
+        }
+        .popover{
+            box-shadow:0 0 8px 3px rgba(152, 152, 149, 0.50);
+        }
+        .imgTxt_1 {
+            position: absolute;
+            font-size: 18px;
+            font-family: OpenSansRegular;
+            color: #5b5b5b;
+            top: 200px;
+            left: 55px;
+            border-radius: 5px;
+            border: 4px solid #6A486D;
+            padding: 12px 0px;
+            /* font-weight: 500; */
+            font-weight: bold;
+            text-align: center;
+            width: 80%;
+            cursor: pointer;
+        }
+
+        /* #clsPageNumber {
+            border: 0.1px solid #657a8c38;
+        } */
+
+        #clsAudioOffBtn,
+        #clsAudioOnBtn {
+            cursor: pointer;
+        }
+        .left_instruction{
+            width: 760px;
+            height: 44px;
+            position: absolute;
+            top: 0px;
+            border-bottom: 2px solid #757575;
+        }
+        .right_instruction{
+            background: url(media/images/help/bg_help.png) no-repeat;
+            width: 757px;
+            position: absolute;
+            left: 9px;
+            height: 485px;
+            top: 53px;
+            background-size: contain;
+        }
+        .course_heading{
+            color: #4D667B;
+            padding: 17px 0px 12px 0px;
+            text-align: center;
+            margin: 0px;
+            font-weight: bold;
+            font-size: 16px;
+            text-align: left;
+            position: relative;
+            left: 13px;
+        }
+        .course_desc{
+
+        }
+        .closeHelpBtn{
+            /* right: 8px !important; */
+            /* top: 7px !important; */
+            z-index: 1000000;
+            background: url(media/images/help/close_help.png) no-repeat !important;
+            background-size: cover !important;         
+            position: absolute !important;   
+            top: 9px !important;
+            right: 11px !important;
+            width: 30px !important;
+            height: 30px !important;   
+
+        }
+        .no-touch #id_glosCloseBtn:hover, .no-touch .id_glosCloseBtn:hover{
+           background: url(media/images/help/close_help.png) !important; 
+            background-position: -38.4px 0px !important;
+            background-size: cover !important;
+            background-repeat: no-repeat;
+            position: absolute !important;   
+            top: 9px !important;
+            right: 11px !important;
+            width: 30px !important;
+            height: 30px !important;   
+        }
+        .id_transcriptBox_help {
+            position: absolute;
+            height: 61px;
+            width: 566px;
+            left: 253px;
+            top: 596px;
+            font-family: OpenSansRegular;
+            background-color: #FFFFFF;
+            z-index: 1000000;
+            overflow: hidden;
+            display: block !important;
+        }
+        .help_resource_cnt{
+            position: absolute;
+            top: 454px;
+            left: 167px;
+            display: none;
+        }
+        .help_resource_cnt #ToolPop{
+            top: -60px !important;
+            transform: translateY(0%) !important;
+            z-index: 100;
+            position: absolute;
+            height: 63px;
+            bottom: 66px;
+            width: 238px;
+            left: 12px;
+            font-family: ArialRegular;
+            background-color: #fff;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            transition: transform 0.5s;            
+            webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+        }
+        .help_resource_cnt .ClsToolbtnSelected span.ClsToolbtnIcon{
+            
+        }
+        .help_resource_cnt .ClsToolbtn {
+            background: #ffffff;
+            top: 0px !important;
+            z-index: 999;
+            height: 58px !important;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            -webkit-border-bottom-left-radius: 5px;
+            -webkit-border-bottom-right-radius: 5px;
+            webkit-box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.75);
+            width: 70px;
+            height: 63px;
+            left: 12px;
+            top: 2px;
+            position: absolute;
+        }
+    .help_resource_cnt .ClsToolbtn span.ClsToolbtnIcon {
+        position: absolute;
+        height: 31px;
+        width: 30px;
+        top: 10px;
+        left: 20px;
+
+        background-position: 0px 0;
+        transition: all 0.2s;
+        border-radius: 50%;
+        z-index: 1;
+        display: block;
+        background:url("media/images/help/resource_icon.png") no-repeat !important;
+        background-position: 4px 7px !important;
+    }
+.help_resource_cnt span.cIcons {
+    display: block !important;
+}
+    .help_resource_cnt .ClsToolbtnSelected{
+        top: 1px;
+        height: 56px;
+    }
+    
+    .help_resource_cnt .ClsToolbtnSelected span.ClsToolbtnIcon{
+        top:10px !important;
+    }
+    .help_resource_cnt .ClsToolbtnSelected span.tooltip{
+        top: 35px !important;
+    }
+    .help_resource_cnt #clsActivityRefBtn span{
+        top: 37px;
+        height: 16px;
+        overflow: hidden;
+        left: -6px;
+        width: 50px;
+        line-height: 14px;
+    }
+    .help_resource_cnt #clsVideoRefBtn{
+        background:url("media/images/help/video_help.svg") no-repeat !important;
+    }
+    #clsActivityRefBtn{
+        height: 32px;
+        width: 32px;
+        background-size: contain;
+    }
+    #clsGlosBtn{
+        background:url("media/images/help/glossary.svg") no-repeat !important;
+    }
+    .help_resource_cnt #clsRefBtn{
+        background: url(media/images/help/pdf.svg) no-repeat !important;
+        height: 31px;
+        position: absolute;
+        height: 33px;
+        top: 6px;
+        left: 75px;
+        /* background: url(../media/images/player/common/Resources_Normal.png) no-repeat; */
+        transform: matrix(1, 0, 0, 1, 0, 0);
+        -ms-transform: matrix(1, 0, 0, 1, 0, 0);
+        -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+        transition: all 0.2s;
+    }
+
+    .popover{
+        bottom: inherit;
+        right: 51px;
+        top: 6px;
+        z-index: 99;
+        bottom: 485px !important;
+    }
+    .clickview_caseinfo .popover-content{
+    padding: 0 5px;
+}
+
+
+    /* IE11 */
+    @media all and (-ms-high-contrast:none){
+        .menuButton span.hdot, .pageTitle span.hdot { 
+            left:14px 
+        } 
+        .resourceButton:before{
+            top:239px;
+            height:23px;
+        }
+        .nextButton:before{
+            left:240px;
+        }
+        .helpButton span.hdot{
+            left:221.5px;
+        }
+        .imgTxt{
+            left:195px;
+        }
+    }
+    </style>
+ 
+    <!-- Player and page level .js files to include -->
+    <script language="javascript" type="text/javascript">
+
+
+    var _audioHelp = [
+            'element/help/T01P00_0.mp3',
+            'element/help/T01P00_1.mp3',
+            'element/help/T01P00_1.mp3',
+            'element/help/T01P00_3.mp3',
+            'element/help/T01P00_4.mp3',
+            'element/help/T01P00_5.mp3',
+            'element/help/T01P00_6.mp3',
+            'element/help/T01P00_7.mp3',
+            'element/help/T01P00_8.mp3',
+            'element/help/T01P00_9.mp3',
+            'element/help/T01P00_10.mp3',
+            'element/help/T01P00_11.mp3',
+            'element/help/T01P00_12.mp3',
+            'element/help/T01P00_13.mp3',
+            'element/help/T01P00_14.mp3',
+            'element/help/T01P00_15.mp3',
+            'element/help/T01P00_16.mp3',
+        ];
+
+        var _audioTranscript =[
+            "The Menu button displays all topics in a module with your current topic highlighted.",
+            "The title of the page is shown at the top of the screen.",
+            "The Navigation button allows you to return to this overview of the course navigation.",
+            "The Exit Module button closes the current module. You can exit the course at any time. When you return, you will pick up where you left off.",
+            "The Resources button gives you access to the glossary, supplemental S.T.A.B.L.E. information, module videos, and additional learning activities.",
+            "The Play or Pause button allows you to play or pause the current screen.",
+            "The Replay button allows you to replay the current screen.",
+            "The Progress bar displays your progress of the current page. You can use the progress bar to navigate within a page.",
+            "The box in the center displays the audio transcript for each screen.",
+            "The Audio button turns the audio on or off.",
+            "The Back button allows you to navigate to previous screens within a module.",
+            "The Page Count displays your progress in a module by giving you the current page number and the total number of pages in a module.",
+            "The Next button allows you to navigate to the next screen within a module.",                        
+            "The Glossary button displays glossary terms and their definitions.",
+            "The PDF button displays supplemental S.T.A.B.L.E. information.",
+            "The Video button displays supplemental S.T.A.B.L.E. module videos.",
+            "The Activity button displays additional S.T.A.B.L.E. learning activities."
+        ];
+
+        var _audioStartTxt = "Click on each number to review the navigation features of this course.";
+
+        if (iOS) {
+
+            $("#help_popUp").css({
+                // 'background': 'url(media/images/player/Help.png) no-repeat',
+                "background-size": "100% 100%"
+            });
+
+        } else {
+            $("#help_popUp").css({
+                // 'background': 'url(media/images/player/Help.png) no-repeat',
+                // "background-size": "100% 100%"
+            });
+
+        }
+		function checkAudioMuteUnmute(){
+            var xxx = document.getElementById("audioplayer_help");
+            if($("#clsAudioOffBtn").css("display")=="block"){
+                xxx.muted = true;
+            }else{
+                xxx.muted = false;
+            }
+        }        
+        //$("#help_popUp").css('background-size','100% 100%');
+        $(document).ready(function () {
+			checkAudioMuteUnmute();
+            // $("#help_popUp").hide()
+            $("#transcripttext").html(_audioStartTxt);         
+            //$('#id_transcriptBox').attr("style", "display: none !important");
+            $('#transcriptHelp').attr("style", "display: block");
+
+            $(".clsLinepop").hide();
+            $(".pg-pageContent").hide();
+            
+            $("#clsHelpBtn").css({ "pointer-events": "auto" })
+            $("#id_sliderContainer").css({ "pointer-events": "none" });
+            $("#clsPlayPauseBtn").css({ "pointer-events": "none" })
+            $("#clsAudioOffBtn").css({ "pointer-events": "none" })
+            // $("#clsAudioOnBtn").css({ "pointer-events": "none" })
+            /* $("#clsMnuBtn").css({ "pointer-events": "none" })
+            $("#clsExitBtn").css({ "pointer-events": "none" })            
+            $("#ToolBtn").css({ "pointer-events": "none" })
+            $("#clsPlayPauseBtn").css({ "pointer-events": "none" })
+            $("#clsReplay").css({ "pointer-events": "none" })
+            $("#transcriptBtn").css({ "pointer-events": "none" })
+            $("#clsAudioOffBtn").css({ "pointer-events": "none" })
+            $("#clsAudioOnBtn").css({ "pointer-events": "none" })
+            $("#clsBackBtn").css({ "pointer-events": "none" })
+            $("#clsNxtBtn").css({ "pointer-events": "none" })  */
+            $("#contentContainer").css({ "opacity": "0.3" })
+            
+            /* $('body').click(function(e) {
+                if (!$(e.target).closest('._hideCircle').length){
+                    closeCurrentPopup();
+                }else{
+                    $(e.target).addClass("visited");
+                    console.log(e.target.value);
+                    console.log(e.target.id);
+                    //console.log($(this).attr("id"));
+                    //openCurrentPopup();
+                }
+            }); */
+
+            // $("#clsHelpBtn").css({ "pointer-events": "inherit", "opacity": "1", "display": "block", "cursor": "pointer" });
+            $("._hideCircle, ._hideCircle1").off("click").on("click", function () {
+                if($(this).hasClass("closeDiv")){
+                    closeCurrentPopup();
+                    $(this).removeClass("closeDiv").addClass("openDiv");
+                }else{
+                    $("._hideCircle, ._hideCircle1").removeClass("closeDiv").addClass("openDiv");
+                    $(this).removeClass("openDiv").addClass("closeDiv");
+                    $(this).addClass("visited");
+
+                    $("._boxClass").hide();
+                    $(".clsLinepop").hide();
+                    clicked = $(this).attr('acur').split("_")[1];
+                    console.log(clicked);
+                    audNum = $(this).attr('value');
+                    if((audNum==13) || (audNum==14) || (audNum==15) || (audNum==16)){
+                        $(".help_resource_cnt").show();
+                        clicked = audNum;
+                    }else{
+                        $(".help_resource_cnt").hide();
+                    }
+
+                    var _currentAud = "elements/help/T01P00_"+audNum+".mp3";
+                    //console.log(audNum,_currentAud);
+                    $("._boxClass[value='" + clicked + "']").show()
+                    $(".clsLinepop[value='" + clicked + "']").show();
+                    // $(".clsLinepop[value='" + clicked + "']").show()
+                    $('#audioplayer_help').get(0).pause();
+                    $("#audioplayer_help").attr("src","");
+                    $('#audioplayer_help').attr("src",_currentAud);
+                    //$('#audioplayer_help').get(0).pause();
+                    $('#audioplayer_help').load();
+
+                    $("#transcripttext").html(_audioTranscript[audNum]);  
+                    if((audNum==4) || (audNum==13) || (audNum==14) || (audNum==15)){
+                        $(".help_resource_cnt").show();
+                    }
+                    setTimeout(function () {
+                        checkAudioMuteUnmute();
+                    }, 100);
+                                        
+                    /* if(audNum!=4){
+                        $("#clspopUp_04").removeClass("closeDiv").addClass("openDiv");
+                    } */
+                }
+            });
+            // $("._hideCircle").on("click", function () {
+            //     clicked = $(this).attr('acur').split("_")[1];
+            //     // console.log($("._boxClass[value='" + clicked + "']").find('.cIcons').text());
+            //     $('#transcripttext').html($("._boxClass[value='" + clicked + "']").find('.cIcons').text())
+            // });            
+            // $("#ToolBtn").css({ "opacity": "1", "pointer-events": "inherit" })
+            $(".addBlur").css({ "opacity": "1", "pointer-events": "inherit" })
+            $("#clsAudioOffBtn").css({ "opacity": "1", "pointer-events": "inherit" });
+
+            $(".ToolBtnHelp").off("click").on("click", function () {
+                closeCurrentPopup();
+                $("#clspopUp_04").removeClass("closeDiv").addClass("openDiv");
+            });
+
+        });
+        
+        $(".closeHelpBtn").on("click", function () {
+            closeHelpBtnFunc();
+            fnPlayAudio();
+            $('#transcripttext').html(switchTranscriptVariable);
+        });
+        /* $("#ToolBtn").off("click").on("click", function () {
+                console.log("close");
+                
+        }); */
+
+
+        function closeCurrentPopup(){
+            $(".help_resource_cnt").hide();
+            $("._boxClass").hide();
+            $('#audioplayer_help').get(0).pause();
+            $("#audioplayer_help").attr("src","");
+            $('#audioplayer_help').attr("src","");
+            $('#audioplayer_help').load();    
+            $("#transcripttextHelp").html("");
+        }
+    </script>
+
+</head>
+
+<body>
+    <div id="helpOpacity" class="bluropacity bluropacity-ie">
+        &nbsp;
+    </div>
+    <div id="help_popUp">  
+        <div class="help_resource_cnt">
+            <div class="ClsToolbtn activcls ClsToolbtnSelected ToolBtnHelp" id="ToolBtn" title="Resources" unselectable="on" style="pointer-events: all;">
+                <span class="ClsToolbtnIcon cIcons" style="opacity: 1;"></span>
+                <span class="tooltip cIcons">Resources</span>
+            </div>
+            <div class="ClsToolPop helpResources" id="ToolPop" unselectable="on">
+                <div class="clsToolWhitePath" id="" unselectable="on">
+                    <div id="clsRefBtn" value="14" acur="clspopUp_14" title="PDF" class="activcls _hideCircle1" unselectable="on" style="opacity: 1; cursor: pointer;">
+                        <span class="tooltip cIcons">PDF</span>
+                    </div>
+                    <div id="clsGlosBtn" value="13" acur="clspopUp_13" title="Glossary" class="activcls _hideCircle1" unselectable="on" style="opacity: 1; cursor: pointer;">
+                        <span class="tooltip cIcons">Glossary</span></div>
+                    <div id="clsVideoRefBtn" value="15" acur="clspopUp_15" title="Video" class="activcls _hideCircle1" unselectable="on" style="opacity: 1; cursor: pointer;">
+                        <span class="tooltip cIcons">Video</span>
+                    </div>
+                    <div id="clsActivityRefBtn" value="16" acur="clspopUp_16" class="_hideCircle1" title="Activity" unselectable="on">    
+                        <span class="tooltip cIcons">Activity</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="videoInstruction" unselectable="on">
+            <div class="id_glosCloseBtn closeHelpBtn" title="Close"></div>
+            <div class="popover left-arrow btm-adj" unselectable="on">
+                <div class="arrow" style="top: 50%;" unselectable="on"></div>
+                <div class="popover-content" unselectable="on">Click to Close.</div>
+            </div>
+            <!--<span class="imgTxt_1">Click here to exit the help screen.</span>-->
+            <!--<span class="imgIcon"></span>
+            <span class="imgTxt">Click on each number to view the navigation features of this course.</span>
+            <span class="imgTxt_1">Click here to exit the help screen.</span>-->
+            <div class="left_instruction">
+                <div class="course_heading">COURSE NAVIGATION: </div>
+                <div class="course_desc imgTxt">Click on each number to learn more.</div>
+            </div>
+            <div class="right_instruction"></div>
+        </div>
+        <div id="clspopUp_00" acur="clspopUp_00" class="_hideCircle openDiv " value="0" unselectable="on">
+            <span class="cIcons">1</span>
+        </div>
+        <div id="clspopUp_01" acur="clspopUp_01" class="_hideCircle openDiv" value="1" unselectable="on">
+            <span class="cIcons">2</span>
+        </div>
+        <div id="clspopUp_02" acur="clspopUp_02" class="_hideCircle openDiv" value="2" unselectable="on">
+            <span class="cIcons">3</span>
+        </div>
+        <div id="clspopUp_03" acur="clspopUp_03" class="_hideCircle openDiv" value="3" unselectable="on">
+            <span class="cIcons">4</span>
+        </div>
+        <div id="clspopUp_04" acur="clspopUp_04" class="_hideCircle openDiv" value="4" unselectable="on">
+            <span class="cIcons">5</span>
+        </div>
+        <div id="clspopUp_05" acur="clspopUp_05" class="_hideCircle openDiv" value="5" unselectable="on">
+            <span class="cIcons">6</span>
+        </div>
+        <div id="clspopUp_06" acur="clspopUp_06" class="_hideCircle openDiv" value="6" unselectable="on">
+            <span class="cIcons">7</span>
+        </div>
+        <div id="clspopUp_07" acur="clspopUp_07" class="_hideCircle openDiv" value="7" unselectable="on">
+            <span class="cIcons">8</span>
+        </div>
+        <div id="clspopUp_08" acur="clspopUp_08" class="_hideCircle openDiv" value="8" unselectable="on">
+            <span class="cIcons">9</span>
+        </div>
+        <div id="clspopUp_09" acur="clspopUp_09" class="_hideCircle openDiv" value="9" unselectable="on">
+            <span class="cIcons">10</span>
+        </div>
+        <div id="clspopUp_10" acur="clspopUp_10" class="_hideCircle openDiv" value="10" unselectable="on">
+            <span class="cIcons">11</span>
+        </div>
+        <div id="clspopUp_11" acur="clspopUp_11" class="_hideCircle openDiv" value="11" unselectable="on">
+            <span class="cIcons">12</span>
+        </div>
+        <div id="clspopUp_12" acur="clspopUp_12" class="_hideCircle openDiv" value="12" unselectable="on">
+            <span class="cIcons">13</span>
+        </div>
+
+        <div class="menuButton _boxClass" value="00">
+            <span class="hdot">&nbsp;</span>
+            <span class="cIcons"><strong>Menu button</strong><br/> Displays all topics in a module with your current topic highlighted.</span>
+        </div>
+
+        <div class="pageTitle _boxClass" value="01">
+            <span class="hdot">&nbsp;</span>
+            <span class="cIcons"><strong>Page Title</strong><br/>Shown at the top of the screen.</span>
+        </div>
+        <div class="helpButton _boxClass" value="02">
+            <span class="hdot">&nbsp;</span>
+            <span class="cIcons"><strong>Navigation button</strong><br/> Displays this overview of the course navigation.</span>
+        </div>
+        <div class="exitButton _boxClass" value="03">
+            <span class="hdot">&nbsp;</span>
+            <span class="cIcons"><strong>Exit Module button</strong><br/> Closes the current module. <br/><br/>You can exit the course at any time. When you return, you will pick up where you left off.</span>
+        </div>
+        <div class="resourceButton _boxClass" value="04">
+            <span class="hdot">&nbsp;</span>
+            <span class="cIcons"><strong>Resources button</strong><br/> Gives you access to additional learning material. <br/><br/> <i>Click each icon to see more.</i></span>
+            <span class="flline">&nbsp;</span>
+        </div>
+        <div class="pauseButton _boxClass" value="05">
+            <span class="hdot">&nbsp;</span>
+            <span class="cIcons"><strong>Play/Pause button</strong><br/> Plays or pauses the current screen.</span>
+        </div>
+        <div class="replayButton _boxClass" value="06">
+            <span class="hdot">&nbsp;</span>
+            <span class="cIcons"><strong>Replay button</strong><br/> Replays the current screen.</span>
+        </div>
+        <div class="progressBar _boxClass" value="07">
+            <span class="hdot">&nbsp;</span>
+            <span class="cIcons"><strong>Progress Bar</strong><br/> Displays the progress of the current page. <br/><br/> You can use the progress bar to navigate within a page.</span>
+        </div>
+        <div class="transcript _boxClass" value="08">
+            <span class="hdot">&nbsp;</span>
+            <span class="cIcons"><strong>Transcript</strong> <br/>Displays the audio transcript for each screen.</span>
+        </div>
+        <div class="audioButton _boxClass" value="09">
+            <span class="hdot">&nbsp;</span>
+            <span class="cIcons"><strong>Audio button</strong><br/> Turns the audio on or off.</span>
+        </div>
+        <div class="backButton _boxClass" value="10">
+            <span class="hdot">&nbsp;</span>
+            <span class="cIcons"><strong>Back button</strong><br/> Navigates to previous screens within a module.</span>
+        </div>
+        <div class="pageCount _boxClass" value="11">
+            <span class="hdot">&nbsp;</span>
+            <span class="cIcons"><strong>Page Count</strong><br/> Displays your progress in the module.</span>
+        </div>
+        <div class="nextButton _boxClass" value="12">
+            <span class="hdot">&nbsp;</span>
+            <span class="cIcons"><strong>Next button</strong><br/>Navigates to the next screen within a module.</span>
+        </div>
+
+        <div class="pdfHelp _boxClass" value="14">
+            <span class="hdot">&nbsp;</span>
+            <span class="cIcons"><strong>PDF button</strong><br/> Displays supplemental S.T.A.B.L.E. information.</span>
+        </div>
+
+        <div class="glossaryHelp _boxClass" value="13">
+            <span class="hdot">&nbsp;</span>
+            <span class="cIcons"><strong>Glossary button</strong><br/> Displays glossary terms and their definitions.</span>
+        </div>
+        <div class="videoHelp _boxClass" value="15">
+            <span class="hdot">&nbsp;</span>
+            <span class="cIcons"><strong>Video button</strong><br/> Displays supplemental S.T.A.B.L.E. module videos.</span>
+        </div>
+        <div class="activityHelp _boxClass" value="16">
+            <span class="hdot">&nbsp;</span>
+            <span class="cIcons"><strong>Activity button</strong><br/> Displays additional S.T.A.B.L.E learning activities.</span>
+        </div> 
+    </div>
+
+    <div class="audioCnt">
+        <audio id="audioplayer_help" autoplay="autoplay" src="elements/help/T01P00.mp3" type="audio/mpeg"></audio>
+    </div>
+    </div>
+    </div>
+</body>
+</html>

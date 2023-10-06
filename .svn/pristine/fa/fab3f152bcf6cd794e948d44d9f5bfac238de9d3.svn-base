@@ -1,0 +1,831 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        manifest = [{
+            src: 'pages/images/Topic01/T01P02/img1.png',
+            id: '1'
+        }, {
+            src: 'pages/images/Topic01/T01P02/image_01_small.png',
+            id: '2'
+        }, ];
+    </script>
+
+
+    <style type="text/css">
+        
+        #metas_top2,
+#bands_top2,
+#metas_bottom2,
+#bands_bottom2,
+#segs_bottom2,
+#top_sum2,
+#bottom_sum2,
+#final_total2{
+  display:none
+}   
+        
+		@-webkit-keyframes slideInDown {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInDown {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__slideInDown {
+  -webkit-animation-name: slideInDown;
+  animation-name: slideInDown;
+}
+@-webkit-keyframes slideInLeft {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInLeft {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__slideInLeft {
+  -webkit-animation-name: slideInLeft;
+  animation-name: slideInLeft;
+}
+@-webkit-keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(50%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(50%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__slideInRight {
+  -webkit-animation-name: slideInRight;
+  animation-name: slideInRight;
+}
+@-webkit-keyframes slideInUp {
+  from {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInUp {
+  from {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__slideInUp {
+  -webkit-animation-name: slideInUp;
+  animation-name: slideInUp;
+}
+@keyframes in-out {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100vw;
+    /* but starting to "disappear" from left to right, just like the way it appears */
+  }
+}
+		.mainContainer{position:absolute;width:100%;height:545px;left:0;top:0;opacity:1}
+		.sectionTop{position:absolute;top:0;height:30px;width:100%;padding:16px 0}
+		.sectionContent{position:absolute;top:10px;height:522px;width:1084px;left:0px;right:15px}
+		.sectionLeft{height:100%;width:264px;background:#E0F6FB;box-shadow:0 1px 9px -4px rgba(0,0,0,0.75);-webkit-box-shadow:0 1px 9px -4px rgba(0,0,0,0.75);-moz-box-shadow:0 1px 9px -4px rgba(0,0,0,0.75);border-bottom-left-radius:7px;-webkit-border-bottom-left-radius:7px;-moz-border-bottom-left-radius:7px}
+		.sectionRight{width:808px;height:527px;top:0;position:absolute;left:264px}
+		.rightTop{height:42px;left:5px;position:relative}
+		.rightTop a{left:0;top:0;padding:0 65px;background:#fff;margin:0;position:relative;float:left;margin-left:-5px;font-family:OpenSansSemiBold;text-decoration:none;color:#000;height:42px;line-height:42px;border-top-right-radius:5px;-webkit-border-top-right-radius:5px;-moz-border-top-right-radius:5px;font-size:16px;cursor:default}
+		.sectionRight .assessmentShow a{cursor:default}
+		.rightTop a.active{border-top-right-radius:5px;-webkit-border-top-right-radius:5px;-moz-border-top-right-radius:5px;background:#3A5569;margin-right:0;z-index:10;color:#fff}
+		.rightTop a.active.cdefault{cursor:default}
+		.rightTop a.active:after,.rightTop a.active:before,.rightTop a.active:hover:before{top:98%;left:45%;border:solid transparent;content:" ";height:0;width:0;position:absolute;pointer-events:none}
+		.rightTop a.active:after,.rightTop a.active:hover:after{border-top-color:#3A5569;border-width:10px;margin-left:0}
+		.rightTop a.active:before,.rightTop a.active:hover:before{border-top-color:#3A5569;border-width:10px;margin-left:0}
+		.rightTop a.active:nth-child(2),.rightTop a.active:hover:nth-child(2){-webkit-border-top-left-radius:5px;border-top-left-radius:5px;-moz-border-top-left-radius:5px}
+		.rightTop a:nth-child(2){-webkit-border-top-left-radius:5px;border-top-left-radius:5px}
+		.sectionContentArea{background:#fff;height:480px;border-top-right-radius:5px;-webkit-border-top-right-radius:5px;-moz-border-top-right-radius:5px;border-bottom-right-radius:5px;-webkit-bottom-top-right-radius:5px;-moz-border-bottom-right-radius:5px}
+		.blur{-webkit-backface-visibility:hidden;-moz-backface-visibility:hidden;-ms-backface-visibility:hidden;-o-backface-visibility:hidden;-webkit-filter:blur(12px);-moz-filter:blur(12px);-ms-filter:blur(12px);-o-filter:blur(12px);filter:blur(12px)}
+		.sectionContentinner{  position:relative}
+		.lefttxt{ position:absolute; left:-15px; top:35%; background:#fff; width:145px; height:90px; color:#000; font-style:italic; font-size:13px; line-height:18px; padding:10px; border:0px 5px 5px 0px; box-shadow:2px 3px 5px #ccc;}
+		.abs{ position:absolute}
+		
+		.box1{border-radius:5px; box-shadow:2px 3px 5px #ccc; background:#fff;font-size:14px; line-height:18px; color:#000; padding:15px 15px; width:66%; margin:10px auto 14px}
+		.img0{ text-align:center}
+		.img0 img{ height:427px}
+		
+		.content2 .contentinner1{ width:80%; margin:20px auto}
+		.content2 .leftbox1{border-radius:5px; box-shadow:2px 3px 5px #3A5569; background:#3A5569;font-size:14px; line-height:20px; color:white; width:220px; padding:20px 20px 20px 110px}
+		.content2 .leftbox1{ top:34px; left:150px}
+		.content2 .img1{ z-index:9; top:11px;left:50px}
+		.content2 .txt1{ font-weight:normal; padding-bottom:20px}
+		.content2 .leftbox2{border-radius:5px; box-shadow:2px 3px 5px #3A5569; background:#3A5569;font-size:14px; line-height:18px; color:white; width:220px; padding:20px 20px 20px 110px}
+		.content2 .leftbox2{ top:227px; left:150px}
+		.content2 .img2{ z-index:9; top:203px;left:50px}
+		.content2 .txt1{ font-weight:normal; padding-bottom:20px}
+		
+		.content2 .rightbox1{border-radius:5px; box-shadow:2px 3px 5px #3A5569; background:#fff;font-size:14px; line-height:20px; color:black; width:320px; padding:20px 20px 20px 40px}
+		.content2 .rightbox1{ top:4px; right:135px; position: absolute;}
+		.content2 .txt3{ font-weight:normal;}
+		.content2 .rightbox1 .leftside{ width:70%; float:left}
+		.content2 .rightbox1 .rightside{ width:28%; float:right}
+		.content2 .rightbox1 .line{ height:1px; width:100%; background:#000; margin:15px auto}
+		.content2 .img3{ top:140px; left:500px; z-index:6}
+		.content2 .img4{ top:260px; left:500px; z-index:6}
+		.content2 .rightside{font-weight:normal;; position:absolute; right:0; top:35%; font-style:italic}
+		
+		.content2 .contentinner1{ width:80%; margin:0px auto}
+		
+		.content2 .img1{ z-index:9; top:0px;left:50px}
+		.content2 .txt1{ font-weight:normal; padding-bottom:20px}	
+		.content2 .img2{ z-index:9; top:200px;left:50px}
+		.content2 .txt1{ font-weight:normal; padding-bottom:20px}
+		
+		
+		.content2 .txt3{ font-weight:normal;}
+	
+		.content2 .SpecBox{display:none}
+		.content2 .box2{border-radius:5px; box-shadow:2px 3px 5px #ccc; background:#fff;font-size:14px; line-height:18px; color:#000; padding:5px; width:72%; top:378px; left:10%;display: none;}
+		.content2 .img6{ float:left}
+		.content2 .img6 img{}
+		.content2 .box3{ border:solid 1px #F6A87A; padding:10px 10px 10px 60px; width:330px; float:left;font-size:14px; line-height:20px; color:#000; position:relative; border-radius:5px; margin-left:20px; margin-top:20px; font-weight:bold }
+		.content2 .box3 img{ position:absolute; left:10px; top:8px}
+		.content2 .msg1{ position:absolute; background:#F6A87A; padding:10px; width:150px; text-align:center; font-size:14px; line-height:18px; color:#3A5569; right:20px; bottom:15px; border-radius:5px}
+   		.content2 .msg1:before {content: "";width: 0px;height: 0px;position: absolute;border-left: 30px solid transparent;border-right: 10px solid #F6A87A;border-top: 20px solid #F6A87A;border-bottom: 10px solid transparent;left: -29px;top: 31px;}
+		.content2 .content3box{margin-left: -60px;margin-top: -540px; position: relative;width: 1070px;}
+		#content1, #content2, #content2, #msg1{ visibility:hidden; opacity:0}
+		.content2 .contentinner1{position: relative;margin-top: -545px; width:1070px;margin-left: 45px;}
+		.content2 .img4{top: 222px;}
+		.content2 .img3{top: 145px}
+		.content2 .img3{top: 95px;}
+		.content2 .txt1{ font-weight:bold}
+		.content2 .txt1{ font-weight:bold}
+		.content2 .rightside{font-weight: bold; font-style:inherit}
+		.content2 .rightside{font-weight: bold; font-style:inherit}
+		.img7{position: absolute;left: 50px; top: 15px;}
+		.content2 .img6{margin-left: 6px;margin-right: 10px;}
+		.content2 .msg1{right: 12px;top: 25px;}
+    .boxInst {
+            position: absolute;
+            top: 489px;
+            left: 905px;
+        }
+        #topcontent{
+          display: block;
+          top: 33px;
+          position: relative;
+          display:none;
+        }
+        .new-callout{
+          width: 81%;
+        padding-left: 30px;
+        }
+/* New css for calculator*/
+       .calculationBox {
+            background: #ffffff;
+            margin: 8px 16px 16px 8px;
+            padding: 1px 15px;
+            border-radius: 5px;
+            color: black;
+            box-shadow: 0 0 5px #333;
+            width: 407px;
+            opacity: 0;
+            box-shadow: 2px 3px 5px #fff;
+            box-shadow: 2px 3px 5px #3A5569;
+            font-size: 14px;
+            text-align: center;
+            left: 17px;
+            position: relative;
+            top: -5px;
+        }
+
+
+ .calculationBox .section {
+            display: inline-block;
+        }
+
+   .section_top {
+            padding-bottom: 10px;
+            border-bottom: 1px solid #666;
+            margin-bottom: 10px;
+        }
+
+   .inputwrapper {
+            display: inline-block;
+        }
+
+ .section_top {
+            padding-bottom: 10px;
+            border-bottom: 1px solid #666;
+            margin-bottom: 10px;
+        }
+
+        .section_middle {
+            position: relative;
+            top: -56px;
+            display: inline-block;
+        }
+
+        .section .section_bottom span.action {
+            position: relative;
+            top: -29px;
+        }
+
+        .section span {
+            display: inline-block;
+            padding: 2px;
+        }
+
+        .section {
+            text-align: center;
+        } 
+        .rightbox {
+            float: right;
+            width: 50.5%;
+            position: relative;
+            top: 129px;
+left: 36px;
+        }
+        input.numberBox {
+            width: 42px;
+            border: 1px solid #d0d0d0;
+            border-radius: 5px;
+            padding: 7px 10px;
+            
+        }
+        .instuctionBox {
+            background: #E0F6FB;
+            margin: 0px;
+            padding: 8px;
+            border-radius: 5px;
+            line-height: 18px;
+            color: #3A5569;
+            box-shadow: 0 0 5px #3A5569;
+            width: 35%;
+            top: 400px;
+            left:61%;
+            display: none;
+            position: relative;
+        }
+        .instuctionBox span {
+            display: block;
+            float: right;
+        }
+        .instuctionBox strong {
+            font-family: OpenSansBold;
+        }
+        #topcontent #img1 img,  #topcontent #img2 img {
+          max-width: 82%;
+        }
+        #SpecBox td{
+          font-size: 14px;
+        }
+    </style>
+    
+
+</head>
+
+<body>
+
+
+    <div class="pg-pageContent" UNSELECTABLE="on">
+        <div id="TabPopup5" class="clsTabPopup">
+            <div class="sectionContent">
+				
+                <div class="sectionContentinner">
+					<div id="content1" class="content1">
+						<div class="contentinner1">
+							<div id="box1" class="box1">A mathematical calculation called the immature to total ratio (I/T ratio) will reveal what proportion of the circulating neutrophils are the immature forms.</div>
+							<div id="img0" class="img0"><img src="pages/images/Topic01/T01P36/img0.png"></div>
+						</div>
+					</div>
+					<div id="content2" class="content2">
+						<div class="contentinner1">
+              <div id="topcontent">
+							<div id="img1" class="img1 abs"><img src="pages/images/Topic01/T01P36/img1.png"></div>
+							<div id="leftbox1" class="leftbox1 abs">
+								<div class="bold txt1">Immature neutrophils</div>
+								<div class="txt2">Metamyelocytes + Bands</div>
+							</div>
+							<div id="img2" class="img2 abs"><img src="pages/images/Topic01/T01P36/img2.png"></div>
+							<div id="leftbox2" class="leftbox2 abs">
+								<div class="bold txt1">Total neutrophils</div>
+								<div class="txt2">Metamyelocytes + Bands + Mature segmented neutrophils</div>
+							</div>
+							<div id="img3" class="img3 abs"><img src="pages/images/Topic01/T01P36/img4.svg"></div>
+							<div id="img4" class="img4 abs"><img src="pages/images/Topic01/T01P36/img3.svg"></div>
+              <div id="rightbox" class="rightbox">
+							<div id="rightbox1" class="rightbox1 abs">
+								<div class="leftside">
+									<div class="bold txt3">Metamyelocytes + Bands</div>
+									<div class="line"></div>
+									<div class="txt4">Metamyelocytes + Bands + Mature segmented neutrophils</div>
+								</div>
+								<div class="rightside">=&nbsp; I/T Ratio</div>
+								<div style="clear:both"></div>
+							</div>
+              <div class="calculationBox practice">
+                <div class="section">
+                    <div class="section_top">
+                        <div class="inputwrapper">
+                            <label>Metas</label><br>
+                           
+                            <input type="number" id="metas_top2" class="numberBox calculate" disabled  name="metas_top" value="3">
+                            <input type="number" id="metas_top1" class="numberBox calculate" disabled  name="metas_top" value="0">
+                        </div>
+                        <span class="action">+</span>
+                        <div class="inputwrapper">
+                            <label>Bands</label><br>
+                            <input type="number"  id="bands_top2" class="numberBox calculate" disabled name="bands_top" value="15">
+                            <input type="number" id="bands_top1" class="numberBox calculate" disabled name="bands_top" value="0">
+                        </div>
+
+                    </div>
+                    <div class="section_bottom">
+
+                        <div class="inputwrapper">
+                           
+                            <input type="number"  id="metas_bottom2" class="numberBox calculate"  disabled name="metas_bottom"
+                                value="3">
+                                <input type="number" id="metas_bottom1" class="numberBox calculate" disabled name="metas_bottom"
+                                value="0">
+                               
+                            <div><label>Metas</label></div>
+                        </div>
+                        <span class="action">+</span>
+                        <div class="inputwrapper">
+                            
+                          <input type="number" id="bands_bottom2" class="numberBox calculate" disabled name="bands_bottom"
+                          value="15">
+                            <input type="number" id="bands_bottom1" class="numberBox calculate" disabled name="bands_bottom"
+                                value="0">
+                                <div> <label>Bands</label></div>
+                        </div>
+                        <span class="action">+</span>
+                        <div class="inputwrapper">
+                           
+                          <input type="number" id="segs_bottom2" class="numberBox calculate"  disabled name="segs_bottom" value="35">
+                            <input type="number" id="segs_bottom1" class="numberBox calculate" disabled name="segs_bottom" value="0">
+                            <div ><label>Segs</label></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="section_middle">
+                        =
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="section_top">
+                        <div class="inputwrapper">
+                            <label style="visibility: hidden">Metas</label><br>
+                            <input type="number" id="top_sum2" class="numberBox" name="top_sum" disabled value="18">
+                            <input type="number" id="top_sum1" class="numberBox" name="top_sum" disabled value="0">
+                        </div>
+                    </div>
+                    <div class="section_bottom">
+                        <div class="inputwrapper">
+                          <input type="number" id="bottom_sum2" class="numberBox" name="bottom_sum" disabled value="53">
+                            <input type="number" id="bottom_sum1" class="numberBox" name="bottom_sum" disabled value="0"><br>
+                            <label style="visibility: hidden">Segs</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="section_middle">
+                        =
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="section_middle">
+                        <div class="inputwrapper">                           
+                            <input type="number" id="final_total2" class="numberBox" name="final_total" disabled value="0.34">
+                            <input type="number" id="final_total1" class="numberBox" name="final_total" disabled value="0">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+              </div>
+              </div>
+            </div>
+            <div class="instuctionBox" unselectable="on"   id="SpecBox">
+              <table style="width:100%">
+                  <tbody><tr>
+                      <td><strong>White blood cells (WBC):</strong></td>
+                      <td align="right">15,000 (15x10<sup>3</sup>/uL)</td>
+                  </tr>
+                  <tr>
+                      <td><strong>Metamyelocytes:</strong></td>
+                      <td align="right">3 (%)</td>
+                  </tr>
+                  <tr>
+                      <td><strong>Bands:</strong></td>
+                      <td align="right">15 (%)</td>
+                  </tr>
+                  <tr>
+                      <td><strong>Segmented mature neutrophils:</strong></td>
+                      <td align="right">35 (%)</td>
+                  </tr>
+              </tbody></table>
+          </div>
+              <div id="box2" class="box2 abs">
+								<div id="img6" class="img6"><img src="pages/images/Topic01/T01P36/img7.png"> <img src="pages/images/Topic01/T01P36/img8.png" class="img7"></div>
+                <div class="new-callout">An I/T ratio great than 80% correlates with a higher
+                  risk of death from sepsis.</div>
+								<div class="box3"><img src="pages/images/Topic01/T01P36/img5.png"> <div>Suspicion for infection should increase when the I/T ratio is >20%.</div></div>
+								<div id="msg1" class="msg1 abs">Means more than 20% of neutrophils are immature forms</div>
+								<div style="clear:both"></div>
+							</div>
+          </div>
+					</div>
+				
+				</div>
+            </div>
+            
+        </div>
+    </div>
+    <!--- Main Container--->
+    <div class="boxInst">
+        <div class="instNextClick"></div>
+        <div class="next_click"><em> Click Next to continue.</em></div>
+    </div>
+    </div>
+
+</body>
+<script>
+        console.log("Labor" + gCompPageArr);
+
+        var audioPath = "pages/audio/Topic01/T01P36/T01P36";
+       
+        var __audioClick = 0;
+
+        var currCue = 0;
+        var idd = 0;
+
+        clickViewMoreInfo();
+        var __curState = 0;
+
+
+        var clickTabCount = 0;
+        var clickTabCount1 = 0;
+
+        var updateContentArray = [
+			{
+            time: "0.0",     carry: "",  event: "",  show: "#content1",  hide: "",
+            transcript: "A mathematical calculation called the immature to total ratio  or I/T ratio will reveal what proportion of the circulating neutrophils are the immature forms.<br>To calculate the I/T ratio, add together the immature neutrophils, which are the metamyelocytes (metas) and bands. Place that number in the numerator.<br>Next, add the mature, segmented neutrophils together with the metas and bands and place that number in the denominator. Divide the immature by the total neutrophil count and that will yield the immature to total ratio .<br>Suspicion for infection should increase when the I/T ratio is greater than 20%, because this means that more than 20% of the neutrophils are the immature forms.<br> Click Next to continue."
+        	},
+			{
+            time: "11",     carry: "",  event: "",  show: "#content2",  hide: "#content1",
+            transcript: "A mathematical calculation called the immature to total ratio or I/T ratio will reveal what proportion of the circulating neutrophils are the immature forms.<br>To calculate the I/T ratio, add together the immature neutrophils, which are the metamyelocytes (metas) and bands. Place that number in the numerator.<br>Next, add the mature, segmented neutrophils together with the metas and bands and place that number in the denominator. Divide the immature by the total neutrophil count and that will yield the immature to total ratio .<br>Suspicion for infection should increase when the I/T ratio is greater than 20%, because this means that more than 20% of the neutrophils are the immature forms.<br> Click Next to continue.",
+            animation:[{target:"#topcontent",duration:"0.5",activity:{"display":"block"}}]
+            
+        	},
+          {
+            time: "15",     carry: "",  event: "",  show: "",  hide: "",
+            transcript: "A mathematical calculation called the immature to total ratio or I/T ratio will reveal what proportion of the circulating neutrophils are the immature forms.<br>To calculate the I/T ratio, add together the immature neutrophils, which are the metamyelocytes (metas) and bands. Place that number in the numerator.<br>Next, add the mature, segmented neutrophils together with the metas and bands and place that number in the denominator. Divide the immature by the total neutrophil count and that will yield the immature to total ratio .<br>Suspicion for infection should increase when the I/T ratio is greater than 20%, because this means that more than 20% of the neutrophils are the immature forms.<br> Click Next to continue.",
+            animation:[{target:"#rightbox1",activity:{"display":"block","top":"-136px"}},{
+              target:".calculationBox",duration:"0.5",activity:{"opacity":"1"}
+            },
+            {
+              target:"#SpecBox",duration:"0.5",activity:{"display":"block"}
+            }]
+            
+        	},
+          {
+            time: "18",     carry: "",  event: "",  show: "",  hide: "",
+            transcript: "A mathematical calculation called the immature to total ratio or I/T ratio will reveal what proportion of the circulating neutrophils are the immature forms.<br>To calculate the I/T ratio, add together the immature neutrophils, which are the metamyelocytes (metas) and bands. Place that number in the numerator.<br>Next, add the mature, segmented neutrophils together with the metas and bands and place that number in the denominator. Divide the immature by the total neutrophil count and that will yield the immature to total ratio .<br>Suspicion for infection should increase when the I/T ratio is greater than 20%, because this means that more than 20% of the neutrophils are the immature forms.<br> Click Next to continue.",
+            animation:[
+              {
+
+              target:"#metas_top1",activity:{"display":"none"}
+            },{
+              target:"#metas_top2",activity:{"display":"block","border": "2px solid #F6A87A"}
+            }]
+            
+        	},
+         
+			{
+            time: "20",     carry: "",  event: "",  show: "",  hide: "",
+            transcript: "A mathematical calculation called the immature to total ratio or I/T ratio will reveal what proportion of the circulating neutrophils are the immature forms.<br>To calculate the I/T ratio, add together the immature neutrophils, which are the metamyelocytes (metas) and bands. Place that number in the numerator.<br>Next, add the mature, segmented neutrophils together with the metas and bands and place that number in the denominator. Divide the immature by the total neutrophil count and that will yield the immature to total ratio .<br>Suspicion for infection should increase when the I/T ratio is greater than 20%, because this means that more than 20% of the neutrophils are the immature forms.<br> Click Next to continue.",
+            animation:[{
+              target:"#metas_top2",activity:{"display":"block","border": "1px solid #d0d0d0;"}
+            },{
+              target:"#bands_top1",activity:{"display":"none"}
+            },{
+              target:"#bands_top2",activity:{"display":"block","border": "2px solid #F6A87A"}
+            }]
+            
+        	},
+          {
+            time: "22",     carry: "",  event: "",  show: "",  hide: "",
+            transcript: "A mathematical calculation called the immature to total ratio or I/T ratio will reveal what proportion of the circulating neutrophils are the immature forms.<br>To calculate the I/T ratio, add together the immature neutrophils, which are the metamyelocytes (metas) and bands. Place that number in the numerator.<br>Next, add the mature, segmented neutrophils together with the metas and bands and place that number in the denominator. Divide the immature by the total neutrophil count and that will yield the immature to total ratio .<br>Suspicion for infection should increase when the I/T ratio is greater than 20%, because this means that more than 20% of the neutrophils are the immature forms.<br> Click Next to continue.",
+            animation:[{
+              target:"#bands_top2",activity:{"display":"block","border": "1px solid #d0d0d0;"}
+            },{
+              target:"#top_sum1",activity:{"display":"none"}
+            },{
+              target:"#top_sum2",activity:{"display":"block","border": "2px solid #F6A87A"}
+            }]
+            
+        	},
+          {
+            time: "24",     carry: "",  event: "",  show: "",  hide: "",
+            transcript: "A mathematical calculation called the immature to total ratio or I/T ratio will reveal what proportion of the circulating neutrophils are the immature forms.<br>To calculate the I/T ratio, add together the immature neutrophils, which are the metamyelocytes (metas) and bands. Place that number in the numerator.<br>Next, add the mature, segmented neutrophils together with the metas and bands and place that number in the denominator. Divide the immature by the total neutrophil count and that will yield the immature to total ratio .<br>Suspicion for infection should increase when the I/T ratio is greater than 20%, because this means that more than 20% of the neutrophils are the immature forms.<br> Click Next to continue.",
+            animation:[
+            {
+              target:"#top_sum2",activity:{"display":"block","border": "1px solid #d0d0d0;"}
+            },{
+              target:"#metas_bottom1",activity:{"display":"none"}
+            },{
+              target:"#metas_bottom2",activity:{"display":"block","border": "2px solid #F6A87A"}
+            }]
+            
+        	},
+          {
+            time: "26",     carry: "",  event: "",  show: "",  hide: "",
+            transcript: "A mathematical calculation called the immature to total ratio or I/T ratio will reveal what proportion of the circulating neutrophils are the immature forms.<br>To calculate the I/T ratio, add together the immature neutrophils, which are the metamyelocytes (metas) and bands. Place that number in the numerator.<br>Next, add the mature, segmented neutrophils together with the metas and bands and place that number in the denominator. Divide the immature by the total neutrophil count and that will yield the immature to total ratio .<br>Suspicion for infection should increase when the I/T ratio is greater than 20%, because this means that more than 20% of the neutrophils are the immature forms.<br> Click Next to continue.",
+            animation:[  {
+              target:"#metas_bottom2",activity:{"display":"block","border": "1px solid #d0d0d0;"}
+            },{
+              target:"#bands_bottom1",activity:{"display":"none"}
+            },{
+              target:"#bands_bottom2",activity:{"display":"block","border": "2px solid #F6A87A"}
+            }]
+            
+        	},
+          {
+            time: "28",     carry: "",  event: "",  show: "",  hide: "",
+            transcript: "A mathematical calculation called the immature to total ratio or I/T ratio will reveal what proportion of the circulating neutrophils are the immature forms.<br>To calculate the I/T ratio, add together the immature neutrophils, which are the metamyelocytes (metas) and bands. Place that number in the numerator.<br>Next, add the mature, segmented neutrophils together with the metas and bands and place that number in the denominator. Divide the immature by the total neutrophil count and that will yield the immature to total ratio .<br>Suspicion for infection should increase when the I/T ratio is greater than 20%, because this means that more than 20% of the neutrophils are the immature forms.<br> Click Next to continue.",
+            animation:[{
+              target:"#bands_bottom2",activity:{"display":"block","border": "1px solid #d0d0d0;"}
+            },{
+              target:"#segs_bottom1",activity:{"display":"none"}
+            },{
+              target:"#segs_bottom2",activity:{"display":"block","border": "2px solid #F6A87A"}
+            }]
+            
+        	},
+          {
+            time: "30",     carry: "",  event: "",  show: "",  hide: "",
+            transcript: "A mathematical calculation called the immature to total ratio or I/T ratio will reveal what proportion of the circulating neutrophils are the immature forms.<br>To calculate the I/T ratio, add together the immature neutrophils, which are the metamyelocytes (metas) and bands. Place that number in the numerator.<br>Next, add the mature, segmented neutrophils together with the metas and bands and place that number in the denominator. Divide the immature by the total neutrophil count and that will yield the immature to total ratio .<br>Suspicion for infection should increase when the I/T ratio is greater than 20%, because this means that more than 20% of the neutrophils are the immature forms.<br> Click Next to continue.",
+            animation:[{
+              target:"#segs_bottom2",activity:{"display":"block","border": "1px solid #d0d0d0;"}
+            },{
+              target:"#bottom_sum1",activity:{"display":"none"}
+            },{
+              target:"#bottom_sum2",activity:{"display":"inline-block","border": "2px solid #F6A87A"}
+            }]
+            
+        	},
+          {
+            time: "32",     carry: "",  event: "",  show: "",  hide: "",
+            transcript: "A mathematical calculation called the immature to total ratio or I/T ratio will reveal what proportion of the circulating neutrophils are the immature forms.<br>To calculate the I/T ratio, add together the immature neutrophils, which are the metamyelocytes (metas) and bands. Place that number in the numerator.<br>Next, add the mature, segmented neutrophils together with the metas and bands and place that number in the denominator. Divide the immature by the total neutrophil count and that will yield the immature to total ratio .<br>Suspicion for infection should increase when the I/T ratio is greater than 20%, because this means that more than 20% of the neutrophils are the immature forms.<br> Click Next to continue.",
+            animation:[{
+              target:"#bottom_sum2",activity:{"display":"inline-block","border": "1px solid #d0d0d0;"}
+            },{
+              target:"#final_total1",activity:{"display":"none"}
+            },{
+              target:"#final_total2",activity:{"display":"block","border": "2px solid #F6A87A"}
+            }]
+            
+            
+        	},
+			{
+            time: "34",     carry: "",  event: "",  show: "",  hide: "",
+            transcript: "A mathematical calculation called the immature to total ratio or I/T ratio will reveal what proportion of the circulating neutrophils are the immature forms.<br>To calculate the I/T ratio, add together the immature neutrophils, which are the metamyelocytes (metas) and bands. Place that number in the numerator.<br>Next, add the mature, segmented neutrophils together with the metas and bands and place that number in the denominator. Divide the immature by the total neutrophil count and that will yield the immature to total ratio .<br>Suspicion for infection should increase when the I/T ratio is greater than 20%, because this means that more than 20% of the neutrophils are the immature forms.<br> Click Next to continue.",
+            animation:[{
+              target:"#final_total2",activity:{"display":"block","border": "1px solid #d0d0d0;"}
+            }]
+            
+        	},
+			{
+            time: "39",     carry: "",  event: "",  show: "#msg1",  hide: "",
+            transcript: "A mathematical calculation called the immature to total ratio or I/T ratio will reveal what proportion of the circulating neutrophils are the immature forms.<br>To calculate the I/T ratio, add together the immature neutrophils, which are the metamyelocytes (metas) and bands. Place that number in the numerator.<br>Next, add the mature, segmented neutrophils together with the metas and bands and place that number in the denominator. Divide the immature by the total neutrophil count and that will yield the immature to total ratio .<br>Suspicion for infection should increase when the I/T ratio is greater than 20%, because this means that more than 20% of the neutrophils are the immature forms.<br> Click Next to continue.",
+            animation:[{
+              target:"#SpecBox",activity:{"display":"none"}
+            },
+              {
+              target:"#box2",duration:"0.75",activity:{"display":"block"}
+            },{target:"#rightbox1",activity:{"display":"block","top":"9px"}},{
+              target:".calculationBox",activity:{"opacity":"0"}
+            }]
+            
+        	},
+          {
+            time: "41",     carry: "",  event: "",  show: "#msg1",  hide: "",
+            transcript: "A mathematical calculation called the immature to total ratio or I/T ratio will reveal what proportion of the circulating neutrophils are the immature forms.<br>To calculate the I/T ratio, add together the immature neutrophils, which are the metamyelocytes (metas) and bands. Place that number in the numerator.<br>Next, add the mature, segmented neutrophils together with the metas and bands and place that number in the denominator. Divide the immature by the total neutrophil count and that will yield the immature to total ratio .<br>Suspicion for infection should increase when the I/T ratio is greater than 20%, because this means that more than 20% of the neutrophils are the immature forms.<br> Click Next to continue.",
+            animation:[{
+              target:"#msg1",activity:{"display":"block"}},{ target: ".boxInst",activity: {  "display": "block" }
+            }]
+            
+        	}
+			
+		];
+        
+
+        function fnAudioFinishItemComp() {
+            fnAudioFinishPageComp();
+        }
+        var __dataXml;
+
+        $(document).ready(function() {
+          restrictBacknMenuOnAssistment();
+            disableNextBtn();
+            var ele = document.getElementsByTagName('div');
+            for (var i = 0; i < ele.length; i++) {
+                ele[i].setAttribute("unselectable", "on");
+            }
+            var n = isInArray("M1L0T1P36", gCompPageArr);
+            if (n == true) {
+                enableNextBtn();
+                // fnGlowNextBtn();
+                fnDesiableNext(false)
+            }
+        });
+
+        function audioReset() {
+            gAudioId = "";
+            onTimelineEnd();
+        }
+
+        function isInArray(value, array) {
+            return array.indexOf(value) > -1;
+        }
+
+
+
+        function fnPlaySectionAudio(gCurrentIndex) {
+            indexAudio = (gCurrentIndex);
+            audioId = "audio_" + gCurrentIndex;
+            gAudioId = audioId;
+
+            fnHideShowAudioPlayer(false);
+            updateContentArray = eval("updateContentArray" + (gCurrentIndex));
+            initAudioPlayer(gItemAudioPath[gCurrentIndex])
+        }
+
+
+        function fnCompletion() {
+            console.log("end");
+
+            //var _getCount1 = clickTabCount + clickTabCount1;
+            // if (__audioClick == 1) {
+            console.log("start new");
+            enableNextBtn();
+            $('.boxInst').show();
+            fnAudioFinishItemComp();
+            // }
+
+        }
+
+        function fnOnAudioComplete() {
+            if (gAudioId == "startAudio") {
+                console.log("start audio");
+                audioStop();
+				audplayer.pause();
+
+        audplayer.currentTime = 0;
+
+				enableNextBtn();
+				fnDesiableNext(false);
+				$('.boxInst').show();
+            } else {
+				$('.boxInst').show();
+                fnCompletion();
+                enableNextBtn();
+				$('.boxInst').show();
+                gCompPageArr.push("M1L0T1P36");
+                 fnAudioFinishItemComp();
+
+        audplayer.pause();
+
+        audplayer.currentTime = 0;
+            }
+        }
+        
+
+
+        /* highlight */
+        __clickedOpt = [];
+
+        function correctAnswerNotClicked(aCorrectAnswerVal) {
+            for (var i = 0; i < aCorrectAnswerVal.length; i++) {
+                //console.log("highlighted "+aCorrectAnswerVal[i]);
+                //$(".clsPanel .option[curid='"+aCorrectAnswerVal[i]+"']").addClass("cborder");
+                $(".clsPanel .option[curid='" + aCorrectAnswerVal[i] + "']").addClass("cborder");
+            }
+        }
+
+        function areDifferentByIds(clickVal, correctVal) {
+            var newArr = correctVal.slice();
+
+            for (var i = 0; i < clickVal.length; i++) {
+
+
+                var index = newArr.indexOf(clickVal[i]);
+                if (index !== -1) {
+                    newArr.splice(index, 1);
+                }
+
+            }
+
+            return newArr;
+        }
+
+        function highlightBorderPushVal() {
+            __clickedOpt = [];
+            $(".option.clicked").each(function() {
+                console.log($(this).attr("curid"));
+
+                __clickedOpt.push($(this).attr("curid"));
+            });
+        }
+        /* highlight */
+
+        function pauseAudio() {
+            if (!fnPauseAudio()) {
+                console.log(true);
+                fnPauseAudio()
+            } else {
+                playPauseAudio();
+                console.log(false);
+            }
+        }
+
+        function playAudio() {
+            if (!fnPauseAudio()) {
+                console.log(true);
+                playPauseAudio();
+            }
+        }
+
+        function audioStop() {
+            var audio = document.getElementById("audioplayer");
+            audio.pause();
+            audio.currentTime = 0;
+        }
+    </script>
+
+</html>

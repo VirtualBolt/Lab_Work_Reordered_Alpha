@@ -1,0 +1,810 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title></title>
+    <script>
+        manifest = [{
+                src: 'pages/images/Topic01/T01P00/EV01_01.png',
+                id: '1'
+            },
+            {
+                src: 'pages/images/Topic01/T01P59/assessment.png',
+                id: '2'
+            }
+        ];
+    </script>
+
+    <style type="text/css">
+    .mainContainer {
+            position: absolute;
+            width: 1000px;
+            height: 460px;
+            left: 40px;
+            top: 20px;
+            opacity: 1;
+        }
+        
+        .clsCircle1 {
+            position: absolute;
+            -ms-transform: matrix(0, 0, 0, 0, 0, 0);
+            -wbkit-transform: matrix(0, 0, 0, 0, 0, 0);
+            transform: matrix(0, 0, 0, 0, 0, 0);
+        }
+        
+        #idCircle100 {
+            left: 40px;
+            top: 90px;
+            width: 288px;
+            height: 288px;
+            background: url("pages/images/Topic01/T01P00/EV01_01.png") no-repeat;
+            background-size: contain;
+        }
+        
+        #idCircle02 {
+            left: 400px;
+            top: 195px;
+            width: 30px;
+            height: 30px;
+            background: url("pages/images/Topic01/T01P59/T01P59_02.svg") no-repeat;
+            background-size: contain;
+            position: absolute;
+            display: none;
+        }
+        
+        .clsPatch {
+            position: absolute;
+            width: 0px;
+            height: 236px;
+        }
+        
+        #idPatch1 {
+            top: 132px;
+            left: 220px;
+            background-position: left;
+            height: 208px;
+            background: #FFFFFF;
+            border-radius: 10px;
+            display: none;
+            color: #000000;
+            -webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            border-radius: 5px;
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+        }
+        
+        .clsText {
+            position: absolute;
+            font-size: 21px;
+            font-family: OpenSansRegular;
+            opacity: 0;
+        }
+        
+        #idText1 {
+            top: 88px;
+            left: 133px;
+            width: 578px;
+            line-height: 1.5;
+            font-size: 16px;
+        }
+
+        #idText2 {
+            top: 154px;
+            left: 127px;
+            width: 578px;
+            line-height: 25px;
+            font-size: 18px;
+            /* font-family: OpenSansBold; */
+            text-align: center;
+        }        
+        .clsBold {
+            /* font-weight: bold; */
+            font-family: OpenSansSemiBold;
+            color: #f7c42a;
+        }
+        
+        .clsIcon {
+            position: absolute;
+            background: url("pages/images/Topic01/T01P59/Icon01.png");
+            width: 35px;
+            height: 34px;
+            left: 53px;
+            top: 55px;
+            background-size: contain;
+            display: none;
+        }
+        
+        .clsNextText {
+            position: absolute;
+            font-size: 16px;
+            font-family: OpenSansRegular;
+            width: 375px;
+            top: 50px;
+            left: 100px;
+            display: none;
+        }
+        
+        .boxInst {
+            position: absolute;
+            top: 471px;
+            left: 865px;
+            width: 175px;
+            height: 30px;
+            display: none;
+        }
+        
+        .next_click {
+            position: absolute;
+            font-size: 14px;
+            color: #4D667B;
+            font-family: OpenSansRegular;
+            line-height: 14px;
+            width: 92%;
+            left: 0px;
+            text-align: center;
+        }
+        
+        .instNextClick {
+            position: absolute;
+            top: -16px;
+            left: -15px;
+            background: url(pages/images/common/instNext.png) no-repeat;
+            width: 194px;
+            height: 51px;
+        }
+        
+        #_clickImg0pdf1 {
+            color: #000 !important;
+            font-size: 14px;
+            width: auto;
+            border-bottom: 0px solid;
+            height: 40px;
+            top: 437px;
+            left: 98px;
+            width: 393px;
+            padding-left: 1px;
+            text-indent: 1px;
+            position: absolute;
+            cursor: pointer;
+            display: none;
+            opacity: 0;
+        }
+        
+        #_clickImg0pdf1 span {
+            border-bottom: 1px solid #707070;
+            position: relative;
+            top: -2px;
+        }
+        
+        .videolink .video_icon {
+            position: relative;
+            top: 6px;
+            padding-right: 10px;
+        }
+        
+        #_clickImg0pdf1 .pdf_icon {
+            position: relative;
+            top: 6px;
+            padding-right: 10px;
+        }
+        
+        #_clickImg0pdf {
+            color: #000 !important;
+            font-size: 14px;
+            width: auto;
+            border-bottom: 0px solid;
+            height: 26px;
+            top: 414px;
+            left: 100px;
+            width: 186px;
+            /* padding-left: 22px; */
+            /* text-indent: -54px; */
+            position: absolute;
+            cursor: pointer;
+            display: none;
+            opacity: 0;
+        }
+        
+        #_clickImg0pdf span {
+            border-bottom: 1px solid #707070;
+            position: relative;
+        }
+        
+        .videolink .video_icon {
+            position: relative;
+            top: 6px;
+            padding-right: 10px;
+        }
+        
+        #_clickImg0pdf .pdf_icon {
+            position: relative;
+            top: 6px;
+            padding-right: 10px;
+        }
+        
+        #pageClsResourcesPopup {
+            position: absolute;
+            z-index: 1070;
+            top: 0px;
+            height: 99%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            /* opacity: 0.5; */
+        }
+        
+        #pageid_ReferencesBG {
+            position: absolute;
+            height: 457px;
+            width: 940px;
+            left: 0px;
+            right: 0px;
+            margin: auto;
+            top: 40px;
+            background-color: #FFFFFF;
+            border-radius: 10px;
+        }
+        
+        #pageid_RefTitleBar {
+            font-size: 36px;
+            background-color: #4d667b;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            left: 0px;
+            top: 0px;
+            font-family: OpenSansRegular;
+            /* font-weight: bold; */
+            width: 942px;
+            height: 44px;
+            position: absolute;
+        }
+        
+        #pageid_ReftitleText {
+            position: absolute;
+            color: #fff;
+            font-size: 18px;
+            left: 11px;
+            top: 10px;
+        }
+        
+        #pageid_RefCloseBtn {
+            position: absolute;
+            width: 29px;
+            height: 29px;
+            top: 7px;
+            left: 900px;
+            cursor: pointer;
+            background: url('media/images/player/common/close.png');
+            /* background-position: -49px 0px; */
+            -webkit-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+            /* background-position: 0px 0px; */
+        }
+        /* #pageid_RefCloseBtn:hover {
+
+         background: url('media/images/player/common/close.png');
+
+         background-position: 0px 0px;
+
+         } */
+        
+        #pageRefTitleBar_id {
+            font-size: 36px;
+            background-color: #4d667b;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            left: 0px;
+            top: 0px;
+            font-family: OpenSansRegular;
+            /* font-weight: bold; */
+            width: 942px;
+            height: 44px;
+            position: absolute;
+        }
+        
+        #pageReftitleText_id {
+            position: absolute;
+            color: #fff;
+            font-size: 18px;
+            left: 11px;
+            top: 10px;
+        }
+        
+        .pageclose_txt {
+            position: absolute;
+            width: 135px;
+            height: 44px;
+            top: 48px;
+            left: 800px;
+            background: url('media/images/player/common/pdf_close_inst.png');
+        }
+        
+        #pageClsText {
+            position: absolute;
+            width: 115px;
+            height: 29px;
+            top: 15px;
+            left: 16px;
+            font-family: OpenSansRegular;
+            font-size: 16px;
+            font-style: italic;
+            color: #172430;
+        }
+        
+        #pageRefCloseBtn_id {
+            position: absolute;
+            width: 29px;
+            height: 29px;
+            top: 7px;
+            left: 900px;
+            cursor: pointer;
+            background: url('media/images/player/common/close.png');
+            /* background-position: -49px 0px; */
+            -webkit-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+        
+        #pageid_RefCloseBtn:hover #pageclose_txt {
+            background: url('media/images/player/common/pdf_close_inst.png');
+            /* background-position: 0px 0px; */
+        }
+        
+        #pagereferences {
+            margin-left: 0%;
+            margin-top: 45px;
+            color: #333;
+            width: 800px;
+            min-height: 412px;
+            overflow-y: auto;
+            position: absolute;
+            height: 412px;
+        }
+        
+        #pagereferences ul {
+            padding-top: 0%;
+            padding-bottom: 0%;
+            padding-left: 1%;
+            margin: 0px;
+            margin-top: 10px;
+        }
+        /* #references ul li a{
+
+         outline: none;
+
+         color: #0000ff;
+
+         font-family: OpenSansRegular;
+
+         text-decoration: underline;
+
+         font-size: 18px;
+
+         }
+
+         #references ul li a:hover{
+
+         color: #009cff;
+
+         }
+
+         #references ul li a:active {
+
+         outline: none; */
+    }
+    #pagereferences ul li {
+        border: 0 none;
+        margin-left: -4px;
+        margin-right: 5px;
+        vertical-align: bottom;
+        width: 4%;
+    }
+    .pdflink {
+        position: absolute;
+        top: 44px;
+        width: 100%;
+        height: 413px;
+        /* z-index: 999; */
+        
+        border-radius: 0 0 10px 10px
+    }
+    .pdfIcon0 {
+        position: absolute;
+        top: 423px;
+        left: -9px;
+        height: 65px;
+        width: 56px;
+        display: none;
+    }
+    .pdfIcon1 {
+        position: absolute;
+        top: 423px;
+        left: 41px;
+        height: 65px;
+        width: 56px;
+        display: none;
+    }
+    .assessmentImage {
+        background: url("pages/images/Topic01/T01P82/assessment.svg") no-repeat;
+        left: 380px;
+        top: 24px;
+        width: 39px;
+        height: 47px;
+        background-size: 39px 47px;
+        position: absolute;
+        opacity: 0;
+    }
+    .assessmentText{
+        left: 401px;
+        top: 105px;
+        width: 100px;
+        height: 47px;
+        background-size: 39px 47px;
+        position: absolute;
+        line-height: 28px;
+        font-size: 18px;
+        /* font-family: OpenSansBold; */
+        opacity: 0;
+    }
+    </style>
+
+
+
+    <script>
+        var audioPath = "pages/audio/Topic01/T01P59/T01P59";
+
+
+
+        var currCue = 0;
+
+        var idd = 0;
+
+        var audplayer = document.getElementById('audioplayer');
+
+        var updateContentArray = [
+
+            {
+                time: "0.5",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "You will now be presented with 5 questions to test what you have learned in this module. You will be required to obtain an 80% or higher in order to receive completion for this module. <br>Click Next to continue to the assessment section.",
+                animation: [{
+                    target: "#idCircle100",
+                    duration: "1.5",
+                    activity: {
+                        'transform': 'matrix(1,0,0,1,0,0)'
+                    }
+                }]
+            },
+
+            {
+                time: "1.0",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "",
+                animation: [{
+                    target: "#idPatch1",
+                    duration: "0.8",
+                    activity: {
+                        'width': '725px',
+                        'display': 'block'
+                    }
+                }]
+            },
+
+            {
+                time: "1.5",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "",
+                animation: [{
+                    target: "#idCircle02",
+                    duration: "0.5",
+                    activity: {
+                        'display': 'block'
+                    }
+                }]
+            },
+            {
+                time: "1.5",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "",
+                animation: [{
+                    target: "#idText1",
+                    duration: "0.5",
+                    activity: {
+                        'opacity': '1'
+                    }
+                }]
+            },            
+            {
+                time: "1.5",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "",
+                animation: [{
+                    target: ".assessmentImage",
+                    duration: "0.5",
+                    activity: {
+                        'opacity': '1'
+                    }
+                },{
+                    target: ".assessmentText",
+                    duration: "0.5",
+                    activity: {
+                        'opacity': '1'
+                    }
+                }]
+            },
+
+            {
+                time: "8",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "",
+                animation: [
+                {
+                    target: "#idText2",
+                    duration: "0.5",
+                    activity: {
+                        'opacity': '1'
+                    }
+                }]
+            }
+        ];
+
+        function fnAudioFinishItemComp() {
+
+            fnAudioFinishPageComp();
+
+            fnUpdatePageCompletionCounter(0);
+
+            //fnUpdatePageCompletionCounter(7);
+
+        }
+
+        var __dataXml;
+
+        var __clickCount = 0;
+
+
+
+        $(document).ready(function() {
+
+            $('#clsMnuBtn, #clsReplay, #clsBackBtn, #ToolBtn').css({
+                "pointer-events": "all"
+            });
+
+            disableNextBtn();
+
+            var ele = document.getElementsByTagName('div');
+
+            for (var i = 0; i < ele.length; i++) {
+
+                ele[i].setAttribute("unselectable", "on");
+
+            }
+
+
+
+
+
+            var n = isInArray("M1L0T1P59", gCompPageArr);
+
+            console.log(n);
+
+            if (n == true) {
+
+                enableNextBtn();
+
+                //fnGlowNextBtn();
+
+                fnDesiableNext(false);
+
+            }
+
+
+
+            $('#pageClsResourcesPopup').hide();
+
+            $(document).on("click", '._clickLink', function() {
+
+
+
+                var num = $(this).attr('id').slice(10)
+
+
+
+                console.log(referenceArr);
+
+
+
+                $(this).addClass("_viewed");
+
+
+
+                $('.pdflink').attr('src', referenceArr[num])
+
+
+
+                $("#pageid_RefTitleBar").hide();
+
+
+
+                $("#pageRefTitleBar_id").show();
+
+
+
+            });
+
+            $("#pageRefCloseBtn_id").click(function() {
+
+                console.log("sdfsdfds");
+                fnPlayAudio();
+                //$("#pageClsResourcesPopup").hide();
+
+                $("#pageClsResourcesPopup").hide();
+
+
+
+                //$("#pageid_RefTitleBar").show()
+
+
+
+            });
+
+        });
+
+
+
+        function isInArray(value, array) {
+
+            return array.indexOf(value) > -1;
+
+        }
+
+        $("#_clickImg0pdf").on("click", function() {
+
+            fnPauseAudio();
+
+            $("#pageClsResourcesPopup").show();
+
+
+
+        });
+
+        $("#_clickImg0pdf1").on("click", function() {
+
+            fnPauseAudio();
+
+            $("#pageClsResourcesPopup").show();
+
+
+
+        });
+
+        function audioReset() {
+
+            gAudioId = "";
+
+            onTimelineEnd();
+
+        }
+
+
+
+
+
+
+
+        function fnCompletion() {
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+        function fnOnAudioComplete() {
+
+            if (gAudioId == "startAudio") {
+
+                enableNextBtn();
+
+                fnAudioFinishItemComp();
+
+                $('.boxInst').show();
+
+                gCompPageArr.push("M1L0T1P59");
+
+                audplayer.pause();
+
+                audplayer.currentTime = 0;
+
+            } else {
+
+
+
+                fnCompletion();
+
+
+
+            }
+
+        }
+    </script>
+
+</head>
+
+
+
+<body>
+
+    <div class="pg-pageContent" UNSELECTABLE="on">
+
+        <div class="mainContainer">
+
+            <div class="clsPatch" id="idPatch1">
+
+
+                <div class="assessmentImage"></div>
+
+                <div class="clsText" id="idText1">You will now be presented with 5 questions to test what you have learned in this module. You will be required to obtain an 80% or higher in order to receive completion for this module. Click Next to continue to the </br>assessment section.</div>
+            </div>
+
+            <div class="clsCircle1" id="idCircle100"></div>
+
+
+
+            <div class="boxInst">
+
+                <div class="instNextClick"></div>
+
+                <div class="next_click"><em> Click Next to continue.</em></div>
+
+            </div>
+
+        </div>
+
+
+
+        <!--
+
+		<div class="pg-pageContent" UNSELECTABLE = "on">
+
+			<div class="mainContainer">
+
+	      <div class="clsQuoteImg clsQuoteLeft" id="idQuoteLeft01"></div>
+
+	      <div class="clsQuoteImg clsQuoteRight" id="idQuoteRight01"></div>
+
+				<div class="clsCircle1" id="idCircle100"></div>
+
+				<div class="clsText" id="idText1">The "<span class="clsBold">S</span>" in S.T.A.B.L.E. stands for <span class="clsBold">Sugar and Safe Care</span>. Delivery of safe, quality patient care, including the elimination of preventable errors is a top priority of the S.T.A.B.L.E. Program. Whenever possible, methods to provide safe care are emphasized. you'll need to watch for where I use caution bullets in the powerpoint and add a caution bullet to the screens. Whenever possible, methods to provide safe care are emphasized. When applicable, we'll use this caution symbol ! to draw attention to safety concerns and in particular where errors can and do occur so that extra care may be taken.  </div>
+
+			</div>
+
+		</div> -->
+
+</body>
+
+</html>

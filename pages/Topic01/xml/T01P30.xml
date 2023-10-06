@@ -1,0 +1,22 @@
+<Contents id="T04_P6">
+   <totalAttempts><![CDATA[2]]></totalAttempts>
+   <question>
+      <OptionHeader>
+         <QuestionPanel1><![CDATA[Maternal history]]></QuestionPanel1>
+         <QuestionPanel2><![CDATA[Labor / Delivery history]]></QuestionPanel2>
+      </OptionHeader>
+      <instruction><![CDATA[Select the correct answer and click <b>Submit</b>.]]></instruction>
+      <Options>
+         <Option id="1"><![CDATA[Normal]]></Option>
+         <Option id="2"><![CDATA[Metabolic acidosis only]]></Option>
+         <Option id="3"><![CDATA[Respiratory acidosis only]]></Option>
+         <Option id="4"><![CDATA[Mixed metabolic/respiratory acidosis]]></Option>
+         <Option id="5"><![CDATA[Hypoxemia]]></Option>
+         <Option id="6"><![CDATA[Unable to determine oxygenation on a capillary sample ]]></Option>
+      </Options>
+      <correctAnswers>
+         <correctAns><![CDATA[4]]></correctAns>
+         <correctAns><![CDATA[6]]></correctAns>
+      </correctAnswers>
+   </question>   
+</Contents>

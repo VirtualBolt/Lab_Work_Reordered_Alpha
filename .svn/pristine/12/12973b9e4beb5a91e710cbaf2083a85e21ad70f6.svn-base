@@ -1,0 +1,220 @@
+<!DOCTYPE HTML>
+
+<html>
+
+
+
+<head>
+
+    <title></title>
+
+    <link href="pages/Topic01/css/T01P64.css" rel="stylesheet" type="text/css">
+
+</head>
+
+
+
+<body>
+
+
+
+
+
+    <div class="pg-pageContent" UNSELECTABLE="on">
+
+        <!--<div class="mainContainer">
+
+
+
+				</div>-->
+
+        <!--- TabPopup 1 ---->
+
+
+
+        <div id="TabPopup5" class="clsTabPopup">
+
+            <!-- <div class="sectionTop">
+
+				<div class="titleText"><img src="pages/images/Topic01/T01P02/case_icon.svg" alt="case icon" />Case
+
+					Information</strong></div>
+
+			</div> -->
+
+            <div class="sectionContent">
+
+                <div class="sectionLeft">
+
+                    <div class="topImgCnt" id="topImgCnt1">
+
+                        <!-- <div class="clickToContinue expandImgTxtRight clickToEnlarge">Click to enlarge image.</div> -->
+                        <div class="popover left-arrow clickToEnlarge">
+                            <div class="arrow" style="top: 50%;"></div>
+                            <div class="popover-content">Click to enlarge image.</div>
+                        </div>
+
+                        <a href="javascript:void(0);" title="Click to enlarge image" class="small_expand zoom_btn" click_id="1">&nbsp;</a>
+
+                    </div>
+
+                    <div class="leftBottom">
+
+                        <h3>Baby Conrad</h3>
+
+                        <div class="headingBlue">BORN AT</div>
+
+                        <div class="sectiontxt">37 weeks gestation</div>
+
+                        <div class="headingBlue">WEIGHT</div>
+
+                        <div class="sectiontxt">5.2 kg</div>
+
+                    </div>
+
+                    <div class="clickview_caseinfo g-case-info">
+                        <!-- <div class="clickview_text">Click to view case information</div> -->
+                        <div class="popover left-arrow">
+                            <div class="arrow" style="top: 50%;"></div>
+                            <div class="popover-content">Click to view case information</div>
+                        </div>
+                        <a class="clickview_icon" href="javascript:void(0)" aid="2" title="Click to view case information">&nbsp;</a>
+                    </div>
+
+                </div>
+
+                <div class="sectionRight">
+
+                    <div class="firstShow">
+
+                        <div class="rightTop">
+
+
+
+                            <a href="javascript:void(0);" class="tabClick active" title="Postnatal Course" rel="Postnatal">Postnatal Course</a>
+
+                        </div>
+
+                        <div class="sectionContentArea">
+
+                            <section class="QuestionPanel1_2 disabled clsPanel" id="Labor">
+
+                                <div class="leftCnt">
+
+                                    <div class="information">The next blood sugar value 30 minutes after the glucose bolus is 64 mg/dL (3.5 mmol/L). What actions should be taken?<br /><br/>
+
+                                        <em class="instructions">Select all that apply and click Submit.
+
+											</em></div>
+
+                                    <!-- <div class='options'>
+											<div class='option'>Administer a D<sub>10</sub>W  2 mL/kg bolus over 9 minutes</div>
+											<div class='option'>Allow Baby Conrad to breastfeed if he shows interest and he is not showing signs of respiratory distress</div>
+											<div class='option'>Examine Baby Conrad and repeat his vital signs</div>
+											<div class='option'>Increase the D<sub>10</sub>W  IV infusion rate to 120 mL/kg/day</div>
+											<div class='option'>Repeat the blood sugar in 3 hours and notify the medical provider if it is less than 50 mg/dL (2.8 mmol/L)</div>
+										</div>										 -->
+                                    <br/>
+                                    <div class='option' curid="0">
+                                        <input type="checkbox" id="test1">
+                                        <label for="test1">Administer a D<sub>10</sub>W  2 mL/kg bolus over 9 minutes</label>
+                                        <span class="feedback_icon" id="0"></span>
+                                    </div>
+                                    <div class='option' curid="1">
+                                        <input type="checkbox" id="test2">
+                                        <label for="test2">Allow Baby Conrad to breastfeed if he shows interest and does not show signs of respiratory distress</label>
+                                    </div>
+                                    <div class='option' curid="2">
+                                        <input type="checkbox" id="test3">
+                                        <label for="test3">Examine Baby Conrad and reassess his vital signs</label>
+                                    </div>
+                                    <div class='option' curid="3">
+                                        <input type="checkbox" id="test4">
+                                        <label for="test4">Increase the D<sub>10</sub>W  IV infusion rate to 120 mL/kg/day</label>
+                                        <span class="feedback_icon" id="3"></span>
+                                    </div>
+                                    <div class='option' curid="4">
+                                        <input type="checkbox" id="test5">
+                                        <label for="test5">Repeat the blood sugar test in 3 hours and notify the medical provider if it is less than 50 mg/dL (2.8 mmol/L)</label>
+                                    </div>
+
+                                </div>
+
+                            </section>
+
+                            <div class="bottomTxt">
+
+                                <div class="cSubmitBtn">Submit</div>
+
+                            </div>
+
+
+
+
+                            <p class='noteText'><em>*Medical provider is the physician, nurse practitioner, or physician assistant.</em></p>
+
+
+
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+            <!-- <div class="CaseStudy" id="case_study_popup">
+
+				<div class="caseStudyContent" unselectable="on">
+
+					<div class="ModalTextBottom" unselectable="on">Baby Conrad</div>
+
+					<div class="ModalTxtImg" unselectable="on"></div>
+
+					<a class="closepopup" href="javascript:void(0)" title="Click to Close"></a>
+
+					<div class="clickToContinue expandImgTxtRight clickToClose">Click to close image.</div>
+
+				</div>
+
+			</div> -->
+
+            <div class="modal" id="case_study_popup">
+                <div class="modalContent" unselectable="on">
+                    <div class="modalTxtImg" unselectable="on"></div>
+                    <div class="modalTextBottom" unselectable="on">Baby Conrad</div>
+                    <a class="closepopup zoom_close_btn" href="javascript:void(0)" title="Click to Close"></a>
+
+                    <!-- <div class="clickToContinue expandImgTxtRight clickToClose">Click to Close</div> -->
+                    <div class="popover left-arrow">
+                        <div class="arrow" style="top: 50%;"></div>
+                        <div class="popover-content">Click to close image.</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--- Main Container--->
+
+    <div class="boxInst">
+
+        <div class="instNextClick"></div>
+
+        <div class="next_click"><em> Click Next to continue.</em></div>
+
+    </div>
+
+    </div>
+
+    <script src="pages/Topic01/js/T01P64.js"></script>
+
+</body>
+
+
+
+</html>

@@ -1,0 +1,106 @@
+<html>
+<head>
+<script language="javascript">
+
+	gStrLastErrorNum = "0";
+	gStrLastError = "";
+
+	API = new Object()
+
+	API.datamodel = new Array()
+	API.datamodel["cmi.core.student_name"] = "Last Name,First Name"
+	API.datamodel["cmi.core.student_id"] = "000000"	
+	API.datamodel["cmi.core.lesson_status"] = "not attempted"
+	API.datamodel["cmi.core.score.raw"] = ""
+	API.datamodel["cmi.suspend_data"] = ""
+	API.datamodel["cmi.core.lesson_location"] = ""
+	
+	//API.datamodel["cmi.suspend_data"] = "##M1L0#M0,M1,M2#3$1"
+	API.LMSInitialize = function(lStr){
+		frmScormLog.document.getElementById("DataReceived").innerHTML+= "LMSInitialize" + "<br>"
+		fResetError();
+		return "true";
+	}
+	API.LMSSetValue = function(lStr,lVal){
+		frmScormLog.document.getElementById("DataReceived").innerHTML+= "LMSSetValue - " + lStr + " - " + lVal + "<br>"
+
+		if (lStr == "cmi.core.lesson_status"){
+			var lAllowedVoc = new Array();
+			lAllowedVoc[lAllowedVoc.length] = "passed";
+			lAllowedVoc[lAllowedVoc.length] = "completed";
+			lAllowedVoc[lAllowedVoc.length] = "failed";
+			lAllowedVoc[lAllowedVoc.length] = "incomplete";
+			lAllowedVoc[lAllowedVoc.length] = "browsed";
+			lAllowedVoc[lAllowedVoc.length] = "not attempted";
+
+			var bExists = false;
+			for (var i=0;i<lAllowedVoc.length;i++){
+				if (lAllowedVoc[i] == lVal){
+					bExists = true;
+				}
+			}
+
+			if (!bExists){
+				gStrLastErrorNum = "1";
+				gStrLastError = "Out of range"
+				return;
+			}
+		}
+
+		if (lStr == "cmi.suspend_data"){
+			if(typeof(lVal)!="string"){
+				gStrLastErrorNum = "2";
+				gStrLastError = "Data type error"
+				return;
+			}
+		}
+
+		if (lStr == "cmi.core.lesson_location"){
+			if(typeof(lVal)!="string"){
+				gStrLastErrorNum = "2";
+				gStrLastError = "Data type error"
+				return;
+			}
+		}
+
+
+		API.datamodel[lStr] = lVal;
+		fResetError();
+		return "true";
+	}
+	API.LMSGetValue = function(lStr){
+		frmScormLog.document.getElementById("DataReceived").innerHTML+= "LMSGetValue - " + lStr + "<br>"
+		fResetError();
+		return API.datamodel[lStr];
+	}
+	API.LMSCommit = function(lStr){
+		frmScormLog.document.getElementById("DataReceived").innerHTML+= "LMSCommit" + "<br>"
+		fResetError();
+		return "true";
+	}
+	API.LMSFinish = function(lStr){
+		frmScormLog.document.getElementById("DataReceived").innerHTML+= "LMSFinish" + "<br>"
+		fResetError();
+		return "true";
+	}
+	API.LMSGetLastError = function(){
+		frmScormLog.document.getElementById("DataReceived").innerHTML+= "LMSGetLastError" + "<br>"
+		return gStrLastErrorNum;
+	}
+
+	API.LMSGetErrorString = function(){
+		return gStrLastError;
+	}
+
+	function fResetError(){
+		gStrLastErrorNum = "0";
+		gStrLastError = "";
+	}
+
+</script>
+</head>
+<frameset rows="25%,75%">
+	<frame src="ScormTesterFrame.html" id="frmScormLog" name="frmScormLog">
+	<frame src="" id="frmContent" name="frmContent">
+</frameset>
+</html>

@@ -1,0 +1,78 @@
+
+input[type="radio"] {
+    display:none;
+}
+
+span.mcqRadioClss {
+    float: left;
+    height: 32px;
+    width: 32px;
+   	background: url("../pages/assets/images/Global/KnowChk/radio_btn_normal.png")no-repeat;
+	background-size: 100% 100%;
+}
+
+span.mcqRadioNormalClss {
+	cursor: pointer;
+	pointer-events: none;
+}
+span.mcqRadioNormalClss:hover {
+	background: url("../pages/assets/images/Global/KnowChk/radio_btn_normal.png")no-repeat;
+	background-size: 100% 100%;
+}
+
+span.mcqRadioSelectClss {
+	background: url("../pages/assets/images/Global/KnowChk/radio_btn_select.png")no-repeat;
+	background-size: 100% 100%;
+}
+
+span.mcqRadioDisableClss{
+    float: left;
+  height: 32px;
+    width: 32px;
+   	background: url("../pages/assets/images/Global/KnowChk/radio_btn_normal.png")no-repeat;
+	background-size: 100% 100%;
+	cursor: default;
+}
+span.mcqRadioSelDisableClss{
+	background: url("../pages/assets/images/Global/KnowChk/radio_btn_select.png")no-repeat;
+	background-size: 100% 100%;
+}
+
+span.mrqCheckboxClss {
+    /*background: #999;*/
+    height: 28px;
+    width: 28px;
+    display: block;
+    clear: left;
+	float: left;
+	background: url("../pages/assets/images/Global/KnowChk/radio_btn_normal_mrq.png")no-repeat;
+	
+}
+
+span.mrqCheckboxNormalClss {
+	cursor: pointer;
+	/*pointer-events: none;*/
+}
+
+span.mrqCheckboxSelectClss {
+	height: 28px;
+    width: 28px;
+	background-position: -10px -61px;
+	background: url("../pages/assets/images/Global/KnowChk/radio_btn_select_mrq.png")no-repeat;
+}
+ 
+span.mrqCheckboxDisableClss {
+	cursor: default;
+	background: url("../pages/assets/images/Global/KnowChk/radio_btn_normal_mrq.png")no-repeat;
+	background-size: 100% 100%;
+}
+span.mrqCheckboxDisableSelClss {
+	cursor: default;
+	background: url("../pages/assets/images/Global/KnowChk/radio_btn_select_mrq.png")no-repeat;
+}
+
+span.mcqCheckboxDisableSelClss {
+	cursor: default;
+	background: url("../pages/assets/images/Global/KnowChk/radio_btn_select.png")no-repeat;
+	background-size: 100% 100%;
+}

@@ -1,0 +1,1272 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+
+  <title></title>
+
+  <script>
+    manifest = [
+      {
+        src: 'pages/images/Topic01/T01P15/picture1.png',
+        id: '1'
+      },
+      {
+        src: 'pages/images/Topic01/T01P15/picture2.png',
+        id: '2'
+      }
+    ];
+  </script>
+  <script>
+    glossaryFuncPageLevel();
+    var audioPath = "pages/audio/Topic01/T01P42/T01P42";
+    var gItemAudioPath = ["pages/audio/Topic01/T01P42/T01P42_1", "pages/audio/Topic01/T01P42/T01P42_2"];
+
+    var currCue = 0;
+    var idd = 0;
+    var clickTabCount = 0;
+    var clickTabCount1 = 0;
+    var updateContentArray = [
+      {
+        time: "0.0",
+        carry: "",
+        event: "",
+        show: "",
+        hide: "",
+        transcript: "Let’s now practice calculating the absolute neutrophil count. Use the values on the left to fill in the blanks on the right to calculate the ANC. <br>The first step is to identify the immature and mature neutrophils on the CBC. <br>"
+      },
+      {
+        time: "0",
+        carry: "",
+        event: "",
+        show: "#content_txt1",
+        hide: "",
+        transcript: "",
+
+      },
+      {
+        time: "3.5",
+        carry: "",
+        event: "",
+        show: "#content_txt1 .tagline",
+        hide: "",
+        transcript: "",
+      },
+      {
+        time: "3.5",
+        carry: "",
+        event: "",
+        show: ".content_area",
+        hide: "",
+        transcript: "",
+
+      },
+      {
+        time: "4",
+        carry: "",
+        event: "",
+        show: "#leftbox",
+        hide: "",
+        transcript: "",
+
+      },
+      {
+        time: "4",
+        carry: "",
+        event: "",
+        show: "#leftbox  .left_top",
+        hide: "",
+        transcript: "",
+      },
+      {
+        time: "4",
+        carry: "",
+        event: "",
+        show: "#rightbox",
+        hide: "",
+        transcript: "",
+
+      },
+      {
+        time: "4",
+        carry: "",
+        event: "",
+        show: "#rightbox  .right_top",
+        hide: "",
+        transcript: "",
+
+      },
+      {
+        time: "4.5",
+        carry: "",
+        event: "",
+        show: "",
+        hide: "",
+        transcript: "",
+        animation: [{
+          target: '.cSubmitBtn[data-submit="step1calculation"]',
+          activity: {
+            'display': 'block'
+          }
+        }]
+      },
+      {
+        time: "15",
+        carry: "",
+        event: "",
+        show: "",
+        hide: "",
+        transcript: "",
+
+      },
+
+    ];
+    var updateContentArray0 = [{
+      time: "0.0", carry: "", event: "", show: "", hide: "",
+      transcript: "Let’s now practice calculating the absolute neutrophil count. Use the values on the left to fill in the blanks on the right to calculate the ANC. <br>The first step is to identify the immature and mature neutrophils on the CBC. <br>Based on the percentage of neutrophils, we see that 53% of the white blood cells in this scenario are those primarily responsible for phagocytizing and killing bacteria. The remaining 47% of the white blood cells are a combination of lymphocytes, monocytes, eosinophils, and basophils, and they are involved with other hematologic functions. The next step is to multiply the total white blood cell count by the percentage of mature and immature neutrophils. As a point of clarification, sometimes  there are only a few or no bands or metas on the CBC. In that case, just multiply the mature segmented neutrophils by the total white blood cell count to calculate the ANC."
+    },
+    {
+      time: "0",
+      carry: "",
+      event: "",
+      show: "",
+      hide: "",
+      transcript: "",
+      animation: [{
+        target: '.after1Step',
+        activity: {
+          'display': 'block'
+        }
+      }]
+    },
+
+    ];
+    var updateContentArray1 = [{
+      time: "0.0", carry: "", event: "", show: "", hide: "",
+      transcript: "Let’s now practice calculating the absolute neutrophil count. Use the values on the left to fill in the blanks on the right to calculate the ANC. <br>The first step is to identify the immature and mature neutrophils on the CBC. <br>Based on the percentage of neutrophils, we see that 53% of the white blood cells in this scenario are those primarily responsible for phagocytizing and killing bacteria. The remaining 47% of the white blood cells are a combination of lymphocytes, monocytes, eosinophils, and basophils, and they are involved with other hematologic functions. The next step is to multiply the total white blood cell count by the percentage of mature and immature neutrophils. As a point of clarification, sometimes  there are only a few or no bands or metas on the CBC. In that case, just multiply the mature segmented neutrophils by the total white blood cell count to calculate the ANC. <br>The absolute neutrophil count is 7,950."
+    },
+    {
+      time: "0",
+      carry: "",
+      event: "",
+      show: "",
+      hide: "",
+      transcript: "",
+      animation: [{
+        target: '.after1Step',
+        activity: {
+          'display': 'none'
+        }
+      },
+      {
+        target: '.after2Step',
+        activity: {
+          'display': 'block'
+        }
+      }]
+    }
+    ];
+    var updateContentArray2 = [{
+      time: "0.0", carry: "", event: "", show: "", hide: "",
+      transcript: "Let’s now practice calculating the absolute neutrophil count. Use the values on the left to fill in the blanks on the right to calculate the ANC. <br>The first step is to identify the immature and mature neutrophils on the CBC. <br>Based on the percentage of neutrophils, we see that 53% of the white blood cells in this scenario are those primarily responsible for phagocytizing and killing bacteria. The remaining 47% of the white blood cells are a combination of lymphocytes, monocytes, eosinophils, and basophils, and they are involved with other hematologic functions. The next step is to multiply the total white blood cell count by the percentage of mature and immature neutrophils. As a point of clarification, sometimes  there are only a few or no bands or metas on the CBC. In that case, just multiply the mature segmented neutrophils by the total white blood cell count to calculate the ANC. <br>The absolute neutrophil count is 7,950."
+    }];
+
+
+
+    function fnAudioFinishItemComp() {
+      console.log("end")
+      fnAudioFinishPageComp();
+      fnUpdatePageCompletionCounter(0);
+      $(".boxInst").show()
+    }
+
+    var __dataXml;
+
+    $(document).ready(function () {
+      disableNextBtn();
+      var ele = document.getElementsByTagName('div');
+      for (var i = 0; i < ele.length; i++) {
+        ele[i].setAttribute("unselectable", "on");
+      }
+      bindClickableHotspot();
+      var n = isInArray("M1L0T1P42", gCompPageArr);
+      if (n == true) {
+        enableNextBtn();
+        // fnGlowNextBtn();
+        fnDesiableNext(false);
+      }
+    });
+
+    function isInArray(value, array) {
+      return array.indexOf(value) > -1;
+    }
+
+    function audioReset() {
+      gAudioId = "";
+      onTimelineEnd();
+    }
+
+
+
+    function fnPlayItemAudio(gCurrentIndex) {
+      audioindex = (gCurrentIndex);
+      gAudioId = "audio_" + gCurrentIndex;
+      fnHideShowAudioPlayer(false);
+      updateContentArray = eval("popupContentArray" + (gCurrentIndex));
+      console.log(gItemAudioPath[gCurrentIndex])
+      initAudioPlayer(gItemAudioPath[gCurrentIndex])
+    }
+
+
+
+    var gTotalPopups = 2;
+    var temp = "";
+
+
+    var succRefFunc = function fnInitPage(oXML) {
+
+      gPageXMLObj = oXML;
+
+    }
+
+    var errRefFunc = function fnXMLLoadError() {
+      alert("Error loading XML file.");
+    }
+
+
+
+    function fStartPage() {
+      fnLoadXMLFile(gModuleArr[gCurrMod].Lessons[gCurrLess].Topics[gCurrTop].Pages[gCurrPage].attr("XMLSRC"), succRefFunc, errRefFunc);
+      gPageXMLObj.find("question").each(function (index, aQues) {
+        __questionArray.push(aQues);
+      });
+    }
+
+
+    function fnCompletion() {
+      console.log("end");
+      enableNextBtn();
+      fnAudioFinishItemComp();
+      if ($(".clsVisited").length == gTotalPopups) {
+        enableNextBtn();
+        fnAudioFinishItemComp();
+      }
+    }
+
+
+
+    function fnOnAudioComplete() {
+      // if (gAudioId == "startAudio") {
+      //   //fnClick();
+      //   enableNextBtn();
+      //   fnAudioFinishItemComp();
+      // } else {
+      //   fnCompletion();
+      // }
+
+    }
+
+    function endModule() {
+      var _getCount = clickTabCount;
+      if (_getCount >= 4) {
+        audioReset();
+      }
+    }
+    function bindClickableHotspot() {
+      console.log("clicked");
+      $('.option').addClass('aactive'); //.css({ 'cursor': 'pointer' });
+      $('.option').off().on('click', function () {
+        $('.option').removeClass('clicked');
+        $(this).addClass('clicked');
+        if ($('.option.clicked').length >= 1) {
+          $('.cSubmitBtn[data-submit="question"]').addClass('active');
+          $('.cSubmitBtn[data-submit="question"].active').off().on('click', function () {
+            submitClick();
+          });
+        } else {
+          $('.cSubmitBtn[data-submit="question"]').removeClass('active');
+        }
+      });
+    }
+    function completeScreen(){
+          $(".boxInst").show();
+          enableNextBtn();
+          fnDesiableNext(false);
+          gCompPageArr.push("M1L0T1P42");
+      }
+    var correctOptions = [0];
+
+    function submitClick() {
+      tinCanWrapper.sendStatementData("answered", "baby-conrad-postnatal-course", "Baby Conrad - Postnatal Course - Now take a look at Baby Conrad's vital signs shortly after birth. Are they normal or abnormal?");
+      $('.cSubmitBtn[data-submit="question"].active').hide();
+      console.log("clicked");
+      // enableNextBtn();
+      // fnDesiableNext(false);
+      // gCompPageArr.push("M1L0T1P42");
+      var incorrectCount = 0; //, correctCount = 0;
+      $('.option').each(function () {
+        if ($(this).hasClass('clicked') && ($.inArray($(this).index(), correctOptions) == -1)) {
+          $(this).addClass('wrong');
+          incorrectCount++;
+        }
+        $(this).off(); //.removeClass('clicked');
+      });
+
+      $(correctOptions).each(function (i, val) {
+        $('.option').eq(val).addClass('correct');
+      });
+
+      if (incorrectCount == 0) {
+        fnPlaySectionAudio(0);
+      } else {
+        fnPlaySectionAudio(1);
+      }
+      $('.option').off().removeClass('aactive'); //.css({'cursor':'default'});
+      $('.cSubmitBtn[data-submit="question"]').removeClass('active');
+      $('.questionTip').show();
+    }
+
+    function fnPlaySectionAudio(gCurrentIndex) {
+      indexAudio = (gCurrentIndex);
+      audioId = "audio_" + gCurrentIndex;
+      gAudioId = audioId;
+      fnHideShowAudioPlayer(false);
+      updateContentArray = eval("updateContentArray" + (gCurrentIndex));
+      initAudioPlayer(gItemAudioPath[gCurrentIndex])
+    }
+    /**
+    * Step 1 calculation
+    */
+    var step1_2_wrong = false;
+    var step2_2_wrong = false;
+    $('.step1calculation .numberBox.calculate').on('keyup change', function () {
+      var anyZero1 = false;
+      var userValues = {};
+      $('.step1calculation .numberBox.calculate').each(function (i) {
+          var value = $(this).val() ? parseFloat($(this).val()) : 0;
+          userValues[$(this).attr('name')] = value;
+          if (value == 0) {
+          anyZero1 = true;
+          }
+      });
+      var total = userValues['metas'] + userValues['bands'] + userValues['segs'];
+      $('.step1calculation .numberBox[name="final_total"]').val(total + ' (%)'); 
+      if (!anyZero1) {
+        $('.cSubmitBtn[data-submit="step1calculation"]').addClass('active');
+        $('.cSubmitBtn[data-submit="step1calculation"].active').off().on('click', function () {
+          var anyZero1 = false;
+
+          $('.step1calculation .numberBox.calculate').each(function (i) {
+            var value = $(this).val() ? parseFloat($(this).val()) : 0;
+            if (value == 0) {
+              anyZero1 = true;
+            }
+          });
+          if (!anyZero1) {
+            var itration = {
+              'metas': 3,
+              'bands': 15,
+              'segs': 35,
+              'final_total': 53
+            };
+            $('.step1calculation .numberBox.calculate').prop('disabled', true);
+            var anyWrong1 = false;
+            var userValues = {};
+            $('.step1calculation .numberBox.calculate').each(function (i) {
+              var value = parseFloat($(this).val());
+              userValues[$(this).attr('name')] = value;
+              if (value == itration[$(this).attr('name')]) {
+                $(this).parents('.inputwrapper').find('.tickmark').addClass('correct');
+              } else {
+                $(this).parents('.inputwrapper').find('.tickmark').addClass('wrong');
+                anyWrong1 = true;
+              }
+            });
+            var total = userValues['metas'] + userValues['bands'] + userValues['segs'];
+            if (itration['final_total'] == total) {
+              $('.step1calculation .numberBox[name="final_total"]').parents('.inputwrapper').find('.tickmark').addClass('correct');
+            } else {
+              $('.step1calculation .numberBox[name="final_total"]').parents('.inputwrapper').find('.tickmark').addClass('wrong');
+            }
+            step2_2_wrong = step2_2_wrong || anyWrong1;
+            console.log(step2_2_wrong,anyWrong1);
+            $('.step1calculation .numberBox[name="final_total"]').val(total + ' (%)');
+
+            $('#rightbox  .right_bottom').show();
+            $('.left_bottom.leftCnt').css({ 'display': 'inline-block' });
+            $('.cSubmitBtn[data-submit="correctCalculation1"]').hide();
+            fnPlaySectionAudio(0);
+            $('.cSubmitBtn[data-submit="step1calculation"]').hide();
+            $('.cSubmitBtn[data-submit="correctCalculation"]').hide();
+            if(step2_2_wrong){
+              $('.cSubmitBtn[data-submit="correctCalculation1"]').show();
+            }
+            
+          }
+        })
+
+      } else {
+        $('.cSubmitBtn[data-submit="step1calculation"]').removeClass('active');
+      }
+    });
+
+    /**
+    * Step 2 calculation
+    */
+    $('.step2calculation .numberBox.calculate').on('keyup change', function () {
+      var anyZero = false;
+      var userValues = {};
+      $('.step2calculation .numberBox.calculate').each(function (i) {
+          var value = $(this).val() ? parseFloat($(this).val()) : 0;
+          userValues[$(this).attr('name')] = value;
+          if (value == 0) {
+            anyZero = true;
+          }
+      });
+      var total = userValues['wbc'] * 0.53;
+      $('.step2calculation .numberBox[name="anc"]').val(parseFloat(total.toFixed(2)));
+      /*SUBMIT*/  
+      if (!anyZero) {
+        $('.cSubmitBtn[data-submit="step2calculation"]').addClass('active');
+        $('.cSubmitBtn[data-submit="step2calculation"].active').off().on('click', function () {
+          var anyZero = false;
+
+          $('.step1calculation .numberBox.calculate').each(function (i) {
+            var value = $(this).val() ? parseFloat($(this).val()) : 0;
+            if (value == 0) {
+              anyZero = true;
+            }
+          });
+          if (!anyZero) {
+            completeScreen();
+            $('.step2calculation .numberBox[name="anc"]').show();
+            var itration = {
+              'wbc': 15000,
+              'anc': 7950
+            };
+            $('.step2calculation .numberBox.calculate').prop('disabled', true);
+            var anyWrong = false;
+            var userValues = {};
+            $('.step2calculation .numberBox.calculate').each(function (i) {
+              var value = parseFloat($(this).val());
+              userValues[$(this).attr('name')] = value;
+              if (value == itration[$(this).attr('name')]) {
+                $(this).parents('.inputwrapper').find('.tickmark').addClass('correct');
+              } else {
+                $(this).parents('.inputwrapper').find('.tickmark').addClass('wrong');
+                anyWrong = true;
+              }
+            });
+            var total = userValues['wbc'] * 0.53;
+            if (itration['anc'] == total) {
+              $('.step2calculation .numberBox[name="anc"]').parents('.inputwrapper').find('.tickmark').addClass('correct');
+            } else {
+              // step1_2_wrong = true;
+              $('.step2calculation .numberBox[name="anc"]').parents('.inputwrapper').find('.tickmark').addClass('wrong');
+            }
+            step1_2_wrong = step1_2_wrong || anyWrong;
+
+            $('.step2calculation .numberBox[name="anc"]').val(parseFloat(total.toFixed(2)));
+            fnPlaySectionAudio(1);
+            $('.cSubmitBtn[data-submit="step2calculation"]').hide();
+            if(step1_2_wrong){
+              $('.cSubmitBtn[data-submit="correctCalculation"]').show();
+            }
+          }
+        })
+
+      } else {
+        $('.cSubmitBtn[data-submit="step2calculation"]').removeClass('active');
+      }
+    });
+    $('.cSubmitBtn[data-submit="correctCalculation"]').on('click', function(){
+        $('.correctBox').html('')
+        var itration = {
+          'metas': 3,
+          'bands': 15,
+          'segs': 35,
+          'final_total': 53,
+          'wbc': 15000,
+          'anc': 7950
+        };        
+        $('.correctBox').attr("id","correctBox1").show();
+        /*show poup*/
+        $('.correctBox').html($('.calculationBox.step2calculation').clone());
+        $('.correctBox .calculationBox.step2calculation').before('<div class="close" id="0"></div>');
+        //$('.correctBox .calculationBox.step1calculation').after($('.calculationBox.step2calculation').clone());
+        $('.tickmark').hide();
+        var objKeys = Object.keys(itration);
+        $.each(objKeys, function(i, val){
+            var iVal = itration[val];
+            if( val == 'final_total' ){
+              iVal = iVal + ' (%)';
+            }
+            $('.correctBox').find('.numberBox[name="'+val+'"]').val(iVal);
+        });
+        $('.cSubmitBtn[data-submit="correctCalculation"]').hide();
+    });  
+    $('.cSubmitBtn[data-submit="correctCalculation1"]').on('click', function()
+    {
+        $('.correctBox').html('')
+        var itration = {
+          'metas': 3,
+          'bands': 15,
+          'segs': 35,
+          'final_total': 53,
+          'wbc': 15000,
+          'anc': 7950
+        };        
+        $('.correctBox').removeAttr("id").show();
+        /*show poup*/
+        $('.correctBox').html($('.calculationBox.step1calculation').clone());
+        $('.correctBox .calculationBox.step1calculation').before('<div class="close" id="1"></div>');
+        //$('.correctBox .calculationBox.step1calculation').after($('.calculationBox.step1calculation').clone());
+        $('.tickmark').hide();
+        var objKeys = Object.keys(itration);
+        $.each(objKeys, function(i, val){
+            var iVal = itration[val];
+            if( val == 'final_total' ){
+              iVal = iVal + ' (%)';
+            }
+            $('.correctBox').find('.numberBox[name="'+val+'"]').val(iVal);
+        });
+        $('.cSubmitBtn[data-submit="correctCalculation1"]').hide();
+    });  
+    $(document).on('click', '.correctBox .close', function(){
+        $('.tickmark').show();
+        $('.correctBox .calculationBox.step1calculation').remove();
+        $('.correctBox .calculationBox.step2calculation').remove();
+        $('.correctBox').hide();
+        console.log($(this).attr("id"))
+        if($(this).attr("id")==0){
+          $('.cSubmitBtn[data-submit="correctCalculation"]').show();
+        }else if($(this).attr("id")==1){
+          $('.cSubmitBtn[data-submit="correctCalculation1"]').show();
+        }
+        //$('.cSubmitBtn[data-submit="correctCalculation"]').show();
+    })
+  </script>
+  <style>
+    /* Sliding entrances */
+    @-webkit-keyframes slideInDown {
+      from {
+        -webkit-transform: translate3d(0, -10%, 0);
+        transform: translate3d(0, -10%, 0);
+        visibility: visible;
+      }
+
+      to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    @keyframes slideInDown {
+      from {
+        -webkit-transform: translate3d(0, -10%, 0);
+        transform: translate3d(0, -10%, 0);
+        visibility: visible;
+      }
+
+      to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    .animate__slideInDown {
+      -webkit-animation-name: slideInDown;
+      animation-name: slideInDown;
+    }
+
+    @-webkit-keyframes slideInLeft {
+      from {
+        -webkit-transform: translate3d(-30%, 0, 0);
+        transform: translate3d(-30%, 0, 0);
+        visibility: visible;
+      }
+
+      to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    @keyframes slideInLeft {
+      from {
+        -webkit-transform: translate3d(-30%, 0, 0);
+        transform: translate3d(-30%, 0, 0);
+        visibility: visible;
+      }
+
+      to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    .animate__slideInLeft {
+      -webkit-animation-name: slideInLeft;
+      animation-name: slideInLeft;
+    }
+
+    @-webkit-keyframes slideInRight {
+      from {
+        -webkit-transform: translate3d(100%, 0, 0);
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+      }
+
+      to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    @keyframes slideInRight {
+      from {
+        -webkit-transform: translate3d(100%, 0, 0);
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+      }
+
+      to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    .animate__slideInRight {
+      -webkit-animation-name: slideInRight;
+      animation-name: slideInRight;
+    }
+
+    @-webkit-keyframes slideInUp {
+      from {
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+        visibility: visible;
+      }
+
+      to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    @keyframes slideInUp {
+      from {
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+        visibility: visible;
+      }
+
+      to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    .animate__slideInUp {
+      -webkit-animation-name: slideInUp;
+      animation-name: slideInUp;
+    }
+
+    @-webkit-keyframes zoomin {
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.2);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    @keyframes zoomin {
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.2);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    .mainContainer {
+      position: absolute;
+      width: 1050px;
+      height: 460px;
+      left: 18px;
+      top: 10px;
+      opacity: 1;
+      font-size: 16px;
+    }
+
+    .boxInst {
+      position: absolute;
+      top: 504px;
+      left: 900px;
+    }
+
+    .next_click {
+      position: absolute;
+      font-size: 14px;
+      color: #4D667B;
+      font-family: OpenSansRegular;
+      line-height: 14px;
+      width: 100%;
+      left: 0px;
+      text-align: center;
+      top: 15px;
+    }
+
+    .content_txt1{
+      border-radius: 5px;
+      box-shadow: 0px 1px 1px 1px #ccc;
+      font-size: 16px;
+      padding: 16px;
+      background: #fff;
+      color: #000;
+    }
+
+    .content_area{
+      width: 100%;
+      margin: 0 auto;
+      margin-top: 7px;
+      background: rgba(255, 255, 255, 1);
+      height: 410px;
+      border-radius: 5px;
+    }
+
+    .leftbox{
+      float: left;
+      width: 50%;
+      position: relative
+    }
+
+    .rightbox{
+      float: right;
+      width: 49%;
+      position: relative
+    }
+
+    .boxinnerbox {
+      position: relative;
+      margin-left: 40px;
+    }
+
+    /* .content_area img{ position:absolute; width:120px; left:-10px; top:-50px; z-index:999} */
+    .headingbox {
+      background: #3A5569;
+      color: #fff;
+      border-radius: 5px 5px 0px 0px;
+      padding: 10px 15px 10px 90px;
+      font-size: 16px;
+      line-height: 20px;
+      font-weight: bold
+    }
+
+    .contextboxtxt_inner {
+      padding: 10px 20px 5px 20px;
+      min-height: 190px;
+      border-radius: 0px 0px 5px 5px;
+      box-shadow: 0px 0px 1px 1px #ccc;
+      background: #fff;
+      font-size: 14px;
+      line-height: 22px;
+    }
+
+    #content_txt1,
+    #content_txt1 .tagline,
+    .content_area,
+    #leftbox,
+    #rightbox {
+      visibility: hidden;
+      opacity: 0
+    }
+
+    .instuctionBox {
+      background: #3A5569;
+      margin: 16px;
+      padding: 18px;
+      border-radius: 5px;
+      line-height: 26px;
+      color: white;
+      box-shadow: 0 0 5px #3A5569;
+    }
+
+    .instuctionBox span {
+      display: block;
+      float: right;
+    }
+
+    .calculationBox {
+      background: #ffffff;
+      margin: 8px 16px 16px 8px;
+      padding: 5px 10px 10px 10px;
+      border-radius: 5px;
+      color: black;
+      box-shadow: 0 0 5px #333;
+    }
+
+    .calculationBox.correctAnswer,
+    .left_bottom,
+    .bottomTxt {
+      display: none;
+    }
+
+    #leftbox {
+      border-right: 1px solid #3a5569;
+    }
+
+    #leftbox,
+    #rightbox {
+      top: 10px;
+      height: 380px;
+    }
+
+    h4 {
+      padding: 0 16px 0 6px;
+      margin: 0 10px 10px 0;
+      font-family: OpenSansSemiBold;
+    }
+
+    .calculationBox .section {
+      display: inline-block;
+    }
+
+    input.numberBox {
+      width: 80px;
+      border: 1px solid #d0d0d0;
+      border-radius: 5px;
+      padding: 10px;
+    }
+
+    .inputwrapper .wrong {
+      background: url('pages/images/Topic01/T01P42/wrong.png') no-repeat;
+    }
+
+    .inputwrapper .correct {
+      background: url('pages/images/Topic01/T01P42/correct.png') no-repeat;
+    }
+
+    .section_top {
+      padding-bottom: 10px;
+      border-bottom: 1px solid #666;
+      margin-bottom: 10px;
+    }
+
+    .section_middle {
+      top: 0px;
+      position: relative;
+    }
+
+    .section .section_bottom span.action {
+      position: relative;
+      top: -30px;
+    }
+
+    .section span {
+      display: inline-block;
+      padding: 2px;
+    }
+
+    .section {
+      text-align: center;
+    }
+
+    .inputwrapper {
+      display: inline-block;
+    }
+
+    .options-radio {
+      padding: 12px;
+    }
+
+    .cSubmitBtn {
+      background: #ACACAC;
+      font-family: OpenSansRegular;
+      font-size: 18px;
+      padding: 5px 15px;
+      text-transform: lowercase;
+      color: #fff;
+      border-radius: 5px;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      text-transform: capitalize;
+      line-height: 21px;
+      float: right;
+      border: 2px solid transparent;
+    }
+
+    .cSubmitBtn.enable:hover {
+      border: 2px solid #707070;
+      background: transparent;
+      color: #5B5B5B
+    }
+
+    .cSubmitBtn.active {
+      background: #5B5B5B;
+      color: #fff;
+      cursor: pointer
+    }
+
+    .cSubmitBtn.active:hover {
+      border: 2px solid #707070;
+      background: #fff;
+      color: #000
+    }
+
+    .left_bottom.leftCnt {
+      display: none;
+      width: 100%;
+      margin: 0 16px;
+      border-radius: 5px;
+      background: white;
+      width: 460px;
+      padding: 16px;
+      box-shadow: 0 0 5px #d0d0d0;
+    }
+
+    .after1Step,
+    .after2Step {
+      display: none;
+    }
+
+    .inputwrapper label {
+      font-size: 14px;
+    }
+
+    span.tickmark {
+      display: block;
+      width: 28px;
+      height: 26px;
+      position: absolute;
+      margin-left: 86px;
+      margin-top: 12px;
+    }
+    .calculationBox.step2calculation span.tickmark {
+        margin-left: 128px;
+    }
+    .questionTip {
+      display: none;
+      ;
+    }
+
+    .bottomTxt {
+      padding: 10px 16px;
+      width: 468px;
+    }
+
+    .heading {
+      font-family: OpenSansSemiBold;
+      padding: 5px 0;
+    }
+
+    input:disabled {
+      background: #f1f1f1;
+    }
+
+    .cSubmitBtn[data-submit="step1calculation"],
+    .cSubmitBtn[data-submit="step2calculation"] {
+      margin-right: 16px;
+    }
+
+    .instuctionBox strong {
+      font-family: OpenSansBold;
+    }
+
+    .right_bottom {
+      display: none;
+      clear: both;
+    }
+
+    .right_bottom input.numberBox {
+      width: 122px;
+    }
+    .cSubmitBtn[data-submit="correctCalculation"]{
+      text-align: center;
+      right: 15px;
+      display: none;
+      position: relative;
+    }
+    .cSubmitBtn[data-submit="correctCalculation1"]{
+      text-align: center;
+      right: 15px;
+      display: none;
+      position: relative;
+    }
+    .correctBox .calculationBox.practice{position:relative;top:-170px;z-index:999}
+        .correctBox,.correctBox .calculationBox.practice .tickmark{display:none}
+        /* .correctBox .close{position:absolute;right:0;padding:7px;font-size:25px;background:#d7722c;border-radius:35px;padding-top:1px;right:10px;top:7px;color:#fff;border:1px solid #d0d0d0;cursor:pointer}
+        .correctBox .close:hover{background:#fff;color:#d7722c} */
+        .correctBox .close{position:absolute;right:0;padding:0;font-size:25px;background:#d7722c;border-radius:35px;padding-top:1px;right:4px;top:4px;cursor:pointer;background:url(media/images/new/closebtn.png);width:28px;background-position:-5px;height:28px;-webkit-transition:all .3s;-o-transition:all .3s;transition:all .3s;z-index:999;}
+        .correctBox .close:hover{background-position:33px}   
+
+        .correctBox{
+          display:block;position:absolute;top:1px;background:#fff;border-radius:5px;padding:30px 0;width:506px;box-shadow:0 0 5px #d0d0d0;display:none
+        }
+        #correctBox1{
+          top:171px;
+        }
+        .correctBox .calculationBox.step1calculation,
+        .correctBox .calculationBox.step2calculation {
+            width: initial;
+        }
+        .right_bottom .correctBox input.numberBox {
+            width: 78px;
+        }
+
+        .right_bottom .correctBox .calculationBox.step2calculation  input.numberBox {
+            width: 118px;
+        }
+  </style>
+</head>
+
+<body>
+
+
+
+
+
+  <div class="pg-pageContent" UNSELECTABLE="on">
+
+    <div class="mainContainer">
+      <div id="content_txt1" class="content_txt1">
+        Let’s now practice calculating the absolute neutrophil count (ANC).
+        <div class="tagline">Use the values on the left to fill in the blanks on the right to calculate the ANC.</div>
+      </div>
+      <div class="content_area">
+        <div id="leftbox" class="leftbox">
+          <div class="left_top">
+            <h4 style="margin-left: 10px;">Example values</h4>
+
+            <div class="instuctionBox">
+              <table style="width:100%">
+                  <tr>
+                      <td><strong>White blood cells (WBC):</strong></td>
+                      <td align="right">15,000 (15x10<sup>3</sup>/uL)</td>
+                  </tr>
+                  <tr>
+                      <td><strong>Metamyelocytes:</strong></td>
+                      <td align="right">3 (%)</td>
+                  </tr>
+                  <tr>
+                      <td><strong>Bands:</strong></td>
+                      <td align="right">15 (%)</td>
+                  </tr>
+                  <tr>
+                      <td><strong>Segmented mature neutrophils:</strong></td>
+                      <td align="right">35 (%)</td>
+                  </tr>
+              </table>
+            </div>
+          </div>
+          <div class="left_bottom leftCnt ">
+            <span class="after1Step">
+              3 (Metas) + 15 (Bands) + 35 (Segs) = 53% of neutrophils<br>
+              53% of the white blood cells in this scenario are those primarily responsible for
+              phagocytizing and killing
+              bacteria. <br>
+              The remaining 47% of the white blood cells are a combination of lymphocytes, monocytes, eosinophils, and
+              basophils, and they are involved with other hematologic functions.
+            </span>
+            <span class="after2Step">
+              <h4 style="padding: 0;">The absolute neutrophil count is 7,950.</h4>
+              Sometimes there are only a few or no metamyelocytes on the CBC. The same is true for band neutrophils.
+              That is, there may be only a few or no bands on the CBC report.<br><br>
+              15,000 x 0.53 = 7,950
+            </span>
+          </div>
+        </div>
+        <div id="rightbox" class="rightbox">
+          <div class="right_top">
+            <h4>Step 1: Calculating the percentage of neutrophils</h4>
+            <h4 class="tagline" style="margin-top:0px;padding-left: 5px;">Enter the values in the fields
+              provided below.</h4>
+
+            <div class="calculationBox step1calculation">
+              <div class="section">
+                <div class="section_middle">
+                  <div class="inputwrapper">
+                    <span class="tickmark"></span>
+                    <label>Metas</label><br>
+                    <input type="number" class="numberBox calculate" name="metas" value="0">
+                  </div>
+                  <span class="action">+</span>
+                  <div class="inputwrapper">
+                    <span class="tickmark"></span>
+                    <label>Bands</label><br>
+                    <input type="number" class="numberBox calculate" name="bands" value="0">
+                  </div>
+                  <span class="action">+</span>
+                  <div class="inputwrapper">
+                    <span class="tickmark"></span>
+                    <label>Segs</label><br>
+                    <input type="number" class="numberBox calculate" name="segs" value="0">
+                  </div>
+                </div>
+              </div>
+              <div class="section">
+                <div class="section_middle">
+                  =
+                </div>
+              </div>
+              <div class="section">
+                <div class="section_middle">
+                  <div class="inputwrapper">
+                    <span class="tickmark"></span>
+                    <label>&nbsp;</label><br>
+                    <input type="text" class="numberBox" name="final_total" disabled value="0 (%)">
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="cSubmitBtn" data-submit="step1calculation">Submit</div>
+          <!-- <div class="cSubmitBtn active" data-submit="correctCalculation1">Correct Calculations</div> -->
+          <div class="right_bottom">
+            <h4>Step 2: Calculating the ANC</h4>
+            <h4 class="tagline" style="margin-top:0px;padding-left: 5px;">Enter the values in the fields provided
+              below.</h4>
+            <div class="calculationBox step2calculation">
+              <div class="section">
+                <div class="section_middle">
+                  <div class="inputwrapper">
+                      <span class="tickmark"></span>
+                    <label>WBC (mm<sup>3</sup>)</label><br>
+                    <input type="number" class="numberBox calculate" name="wbc" value="0">
+                  </div>
+                  <span>x</span>
+                  <div class="inputwrapper">
+                      <span class="tickmark"></span>
+                    <label>&nbsp;</label><br>
+                    <input type="number" class="numberBox" disabled value="0.53">
+                  </div>
+
+                </div>
+
+              </div>
+              <div class="section">
+                <div class="section_middle">
+                  =
+                </div>
+              </div>
+              <div class="section">
+                <div class="section_middle">
+                  <div class="inputwrapper">
+                    <span class="tickmark"></span>
+                    <label>&nbsp;</label><br>
+                    <input type="number" class="numberBox" name="anc" disabled value="" style="display: inline-block;">
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="cSubmitBtn" data-submit="step2calculation">Submit</div>
+            <div class="cSubmitBtn active" data-submit="correctCalculation">Correct Calculations</div>
+            <div class="correctBox" id ="correctbox">
+              <div class="close" id="0"></div>
+                <div class="calculationBox step1calculation" unselectable="on">
+                  <div class="section" unselectable="on">
+                    <div class="section_middle" unselectable="on">
+                      <div class="inputwrapper" unselectable="on">
+                        <span class="tickmark wrong" style="display: none;"></span>
+                        <label>Metas</label><br>
+                        <input type="number" class="numberBox calculate" name="metas" value="0" disabled="">
+                      </div>
+                      <span class="action">+</span>
+                      <div class="inputwrapper" unselectable="on">
+                        <span class="tickmark wrong" style="display: none;"></span>
+                        <label>Bands</label><br>
+                        <input type="number" class="numberBox calculate" name="bands" value="0" disabled="">
+                      </div>
+                      <span class="action">+</span>
+                      <div class="inputwrapper" unselectable="on">
+                        <span class="tickmark wrong" style="display: none;"></span>
+                        <label>Segs</label><br>
+                        <input type="number" class="numberBox calculate" name="segs" value="0" disabled="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="section" unselectable="on">
+                    <div class="section_middle" unselectable="on">
+                      =
+                    </div>
+                  </div>
+                  <div class="section" unselectable="on">
+                    <div class="section_middle" unselectable="on">
+                      <div class="inputwrapper" unselectable="on">
+                        <span class="tickmark wrong" style="display: none;"></span>
+                        <label>&nbsp;</label><br>
+                        <input type="text" class="numberBox" name="final_total" disabled="" value="0 (%)">
+                      </div>
+                    </div>
+                  </div>
+    
+                </div>
+                
+                <div class="calculationBox step2calculation" unselectable="on">
+                              <div class="section" unselectable="on">
+                                <div class="section_middle" unselectable="on">
+                                  <div class="inputwrapper" unselectable="on">
+                                      <span class="tickmark wrong" style="display: none;"></span>
+                                    <label>WBC (mm<sup>3</sup>)</label><br>
+                                    <input type="number" class="numberBox calculate" name="wbc" value="0" disabled="">
+                                  </div>
+                                  <span>x</span>
+                                  <div class="inputwrapper" unselectable="on">
+                                      <span class="tickmark" style="display: none;"></span>
+                                    <label>&nbsp;</label><br>
+                                    <input type="number" class="numberBox" disabled="" value="0.53">
+                                  </div>
+                
+                                </div>
+                
+                              </div>
+                              <div class="section" unselectable="on">
+                                <div class="section_middle" unselectable="on">
+                                  =
+                                </div>
+                              </div>
+                              <div class="section" unselectable="on">
+                                <div class="section_middle" unselectable="on">
+                                  <div class="inputwrapper" unselectable="on">
+                                    <span class="tickmark wrong" style="display: none;"></span>
+                                    <label>&nbsp;</label><br>
+                                    <input type="number" class="numberBox" name="anc" disabled="" value="" style="display: inline-block;">
+                                  </div>
+                                </div>
+                              </div>
+                
+                            </div>
+
+
+            </div>
+
+        </div>
+        <div style="clear:both"></div>
+      </div>
+    </div>
+
+    <div class="boxInst">
+      <div class="instNextClick">
+        <div class="next_click"><em> Click Next to continue.</em></div>
+      </div>
+    </div>
+
+  </div>
+</body>
+
+</html>

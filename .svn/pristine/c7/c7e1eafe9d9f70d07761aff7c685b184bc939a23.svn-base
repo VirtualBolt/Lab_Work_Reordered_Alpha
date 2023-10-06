@@ -1,0 +1,578 @@
+<!doctype html>
+<html class="">
+<!--<![endif]-->
+
+<head>
+    <!--<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Expires" content="-1" />-->
+    <title>Resources</title>
+    <!-- Player and page level .js files to include -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var media = $("#cVideosRef").get(0);
+            var referencesURL;
+            var referenceArr1 = []
+            $.ajax({
+                type: "GET",
+                url: 'elements/videoreferences.xml',
+                dataType: ($.browser.msie) ? "text" : "xml",
+                success: function(data) {
+                    parseReferencesXml(data);
+                }
+            });
+
+
+            function parseReferencesXml(data) {
+                var xml;
+                if (typeof data == "string") {
+                    xml = new ActiveXObject("Microsoft.XMLDOM");
+                    xml.async = false;
+                    xml.loadXML(data);
+                } else {
+                    xml = data;
+                }
+                referencesXmlObject = $(xml);
+                $('#references').html('')
+                var referencesTitle = referencesXmlObject.find('resourceTitle').text();
+                var closeTitle = referencesXmlObject.find('closeTitle').text();
+                var referencesList = $('<ul class="clsResouceLink"></ul>');
+                $("#RefTitleBar_id").hide();
+                referencesXmlObject.find('Resources').find('Resource').each(function(index, el) {
+                    var str = "";
+                    var referencesURL = $(this).attr('URL');
+                    referenceArr1.push(referencesURL)
+                    var isSectionTitle = $(this).attr('isSectionTitle');
+                    var isPageID = $(this).attr('isPageID');
+                    //console.log(referencesURL);
+                    //var resourceRtype=$(this).attr('Rtype');
+                    var referencesIcon = $(this).attr('Icon');
+                    var referencesLabel = $(this).text();
+                    //var li=$('<li><a target="_blank" href="'+referencesURL+'"><img src="'+referencesIcon+'"/>'+referencesLabel+'</a></li>');
+                    if (isSectionTitle == "true") {
+                        //below code for Section title
+                        str += '<ul class="clsSectionName">' + referencesLabel + '</ul>';
+                    } else if (isPageID == "true") {
+                        //below code for call page by ID
+                        str += '<li class="bullet"></li><li class="text"><a target="_self" href="#" onclick="fnJumpToPage(' + '\'' + referencesURL + '\'' + ')">' + referencesLabel + '</a></li></ul>';
+                    } else {
+                        //below code for normal link
+                        str += '<li class="bullet"></li><li class="text"><div class="_clickLinkVideo" id="_clickLink' + index + '">' + referencesLabel + '</div></li></ul>';
+                    }
+
+
+                    //str+='<hr>';
+
+
+                    referencesList.append(str);
+                });
+
+
+                $('#references').append(referencesList);
+                //$(".clsSectionName").addClass("clsSectionName");
+            }
+
+
+            $("#id_RefCloseBtn").click(function() {
+                disableHelpPopup();
+            });
+
+
+            $(document).on("click", '._clickLinkVideo', function() {
+                var num1 = $(this).attr('id').slice(10);
+                //   $('.clsVideoCnt').append("<embed class='_link' id='cVideosRef' alt='video'>");
+                $(this).addClass("_viewed");
+
+
+                $("#id_RefTitleBar").hide();
+                $("#RefTitleBar_id").show();
+                $(".videoCurTxt .wrapTxt").html($(this).html());
+                $("._link").show();
+
+                console.log(referenceArr1[num1])
+                $("#cVideosRef source").attr("src", referenceArr1[num1]);
+                $("#cVideosRef").load();
+                $('#cVideosRef').get(0).play();
+
+
+
+                //  console.log(num1 + " video " + referenceArr1[num1]);
+                //  $('._link').attr('src', referenceArr1[num1])
+                /// $("#id_RefTitleBar").hide();
+                /// $("#RefTitleBar_id").show();
+                //  $(".videoCurTxt").html($(this).html());
+            });
+
+            // $("#pageRefCloseBtn_id").click(function () {
+            // 	console.log("sdfsdfds");
+            // 	//$("#pageClsResourcesPopup").hide();
+            // 	$("#pageClsResourcesPopup").hide();
+
+            // 	//$("#pageid_RefTitleBar").show()
+
+            // });
+
+            $(".RefCloseBtn_id").click(function() {
+                media.pause();
+                media.currentTime = 0;
+                $("#RefTitleBar_id").hide()
+                $("#id_RefTitleBar").show();
+                //$('#cVideosRef').attr("src","");
+                //$('.clsVideoCnt #cVideosRef').remove();
+                //vid.pause();
+                //vid.load();
+                //$('._link').attr('src', referenceArr1[num])
+
+            });
+
+
+            // $('#pageClsResourcesPopup').hide();
+
+        });
+        //function for call page by ID
+        function fnJumpToPage(url) {
+            disableHelpPopup();
+            fnJumpToPageByID(url);
+        }
+
+        $("clsResouceLink").on("click", function() {
+
+            if (!fnPauseAudio()) {
+
+                fnPauseAudio()
+
+            } else {
+
+                playPauseAudio();
+
+            }
+            //console.log();
+            // if ($(this).attr("id") == "clickImg3") {
+            // 	$("#myVideo source").attr("src", "pages/video/hand_iv_insertion_video.mp4");
+            // } else if ($(this).attr("id") == "clickImg4") {
+            // 	$("#myVideo source").attr("src", "pages/video/foot_iv.mp4");
+            // }
+
+            vid = document.getElementById("Resource");
+            vid.load()
+            vid.play()
+
+            // __player = document.querySelector("video");
+
+            // $(".ModalTxtImg").hide();
+
+            // if (__aIndex == 0) {
+
+            // 	console.log(true);
+
+            // 	var i = $(this).attr("id").slice(8);
+
+            // 	console.log(i);
+
+            // 	$("#case_study_popup" + __aIndex).show();
+
+            // 	$("#imgPopup" + i).show();
+
+            // } else {
+
+            // 	console.log(false);
+
+            // 	var j = $(this).attr("id").slice(9);
+
+            // 	console.log(j);
+
+            // 	$("#case_study_popup" + __aIndex).show();
+
+            // 	$("#popUpImg" + j).show();
+
+            // 	$('#id_sliderContainer').hide()
+
+            // 	// $('#clsAudioOffBtn').hide()
+
+            // 	$('#clsAudioOnBtn').hide()
+
+            // 	$("#clsPlayPauseBtn").hide()
+
+            // }
+
+            $("#section" + __aIndex + " .sectionTop").addClass("blur");
+
+            $("#section" + __aIndex + " .sectionContent").addClass("blur");
+
+            // vid.load();
+
+            // __player.currentTime = 0;
+
+            // $("#transcripttext").html("");
+
+        });
+
+        $(".closepopup").on("click", function() {
+
+            // audioReset();
+
+            /* if(!fnPauseAudio()){
+			
+            	console.log(true);
+			
+            	playPauseAudio();
+			
+            } */
+
+
+
+            $("#section" + __aIndex + " .CaseStudy").removeAttr("style");
+
+            $("#section" + __aIndex + " .sectionTop").removeClass("blur");
+
+            $("#section" + __aIndex + " .sectionContent").removeClass("blur");
+
+        });
+
+        $(".closebutton").on("click", function() {
+
+            vid.pause();
+
+            vid.load();
+
+            if (!fnPauseAudio()) {
+
+                console.log(true);
+
+                playPauseAudio();
+
+            }
+
+            $("#transcripttext").html(__transcriptPageTxt);
+
+            $("#section" + __aIndex + " .CaseStudy").removeAttr("style");
+
+            $("#section" + __aIndex + " .sectionTop").removeClass("blur");
+
+            $("#section" + __aIndex + " .sectionContent").removeClass("blur");
+
+            $('#id_sliderContainer').show()
+
+            // $('#clsAudioOffBtn').show()
+
+            $('#clsAudioOnBtn').show()
+
+            $("#clsPlayPauseBtn").show()
+
+        });
+    </script>
+
+    <style>
+        #clsResourcesPopup {
+            position: relative;
+            z-index: 1070;
+            top: 61px;
+            height: 605px;
+            width: 1065px;
+            margin: 0px auto;
+        }
+        
+        #id_ReferencesBG {
+            position: absolute;
+            height: 530px;
+            left: 0px;
+            right: 0px;
+            margin: auto;
+            top: 0px;
+            border-radius: 10px;
+        }
+        
+        #id_RefTitleBar {
+            font-size: 36px;
+            background-color: #5B5B5B;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            left: -1px;
+            top: 0px;
+            font-family: OpenSansRegular;
+            width: 100.1%;
+            height: 67px;
+            position: absolute;
+        }
+        
+        #id_ReftitleText {
+            position: absolute;
+            color: #fff;
+            font-size: 22px;
+            left: 11px;
+            top: 20px;
+            width: 100%;
+            text-align: center;
+            line-height: 23px;
+        }
+        
+        #id_RefCloseBtn {
+            position: absolute;
+            width: 21px;
+            height: 21px;
+            top: 11px !important;
+            right: 18px !important;
+            cursor: pointer;
+            background: url(media/images/new/closebtn.svg);
+            background-position: 0px 0px;
+            -webkit-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        
+        #id_RefCloseBtn:hover {
+            position: absolute;
+           background: url(media/images/new/closebtn-hover.svg); 
+            background-position: -33.5px 0px;
+            top: 11px !important;
+            right: 18px !important;
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 21px;
+            height: 21px;
+        }
+        
+        #RefTitleBar_id {
+            font-size: 36px;
+            background-color: #5B5B5B;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            left: -1px;
+            top: 0px;
+            font-family: OpenSansRegular;
+            width: 100.1%;
+            height: 61px;
+            position: absolute;
+        }
+        
+        #ReftitleText_id {
+            position: absolute;
+            color: #fff;
+            font-size: 22px;
+            left: 11px;
+            top: 3px;
+            width: 100%;
+            text-align: center;
+            line-height: 23px;
+            display: table;
+            height: 54px;
+        }
+        
+        .close_txt {
+            position: absolute;
+            width: 35px;
+            height: 35px;
+            top: 6px;
+            right: 10px;
+        }
+        
+        #clsText {
+            position: absolute;
+            width: auto;
+            height: 100%;
+            top: 0px;
+            left: 0px;
+            font-family: OpenSansRegular;
+            font-size: 12px;
+            color: #fff;
+        }
+        
+        #RefCloseBtn_id {
+            position: absolute;
+            width: 21px;
+            height: 21px;
+            top: 11px;
+            right: 18px;
+            cursor: pointer;
+            background: url(media/images/new/closebtn.svg);
+            -webkit-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+            background-size: cover;
+        }
+        
+        #RefCloseBtn_id:hover {
+            background: url(media/images/new/closebtn-hover.svg);
+            background-position: 0px 0px;
+            background-size: cover;
+            width: 21px;
+            height: 21px;
+            top: 11px;
+            right: 18px;
+            position: absolute;
+        }
+        
+        #references {
+            margin-left: 0%;
+            margin-top: 60px;
+            color: #333;
+            top: 6px;
+            width: 100%;
+            min-height: 475px;
+            overflow-y: auto;
+            position: absolute;
+            height: 412px;
+            min-height: 412px !important;
+            background: #fff;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        
+        #references ul {
+            padding-top: 0%;
+            padding-bottom: 0%;
+            padding-left: 1%;
+            margin: 0px;
+            margin-top: 25px;
+            list-style-image: none;
+        }
+        /* #references ul li a{
+			outline: none;
+			color: #0000ff;
+			font-family: OpenSansRegular;
+			text-decoration: underline;
+			font-size: 18px;
+	}
+	#references ul li a:hover{
+		color: #009cff;
+	}
+	#references ul li a:active {
+		outline: none;
+    } */
+        
+        #references ul li {
+            border: 0 none;
+            margin-left: -4px;
+            margin-right: 5px;
+            vertical-align: bottom;
+        }
+        
+        #closeMainDiv .glossaryclosetip {
+            margin-left: 70%;
+            color: #FFFFFF;
+            font-family: OpenSansRegular;
+            font-size: 79.2%;
+        }
+        
+        .bullet {
+            position: relative;
+            background-image: url("media/images/player/common/bullet.png");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            float: left;
+            height: 8px;
+            width: 24px;
+            margin-top: 7.9px;
+            list-style-type: none;
+            border-radius: 10px;
+        }
+        
+        .text {
+            color: #172430;
+            list-style-type: none;
+            margin-left: 30px;
+            position: relative;
+        }
+        
+        .clsSectionName {
+            margin-top: 17px !important;
+            font-family: SegoeUIBold;
+            color: #1a1f71;
+        }
+        
+        .clsResouceLink {
+            margin-left: 1% !important;
+        }
+        
+        ._clickLinkVideo {
+            position: relative;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: underline;
+            padding-bottom: 15px;
+        }
+        
+        ._clickLinkVideo:hover {
+            position: relative;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: underline;
+            padding-bottom: 15px;
+            color: blue;
+            cursor: pointer;
+        }
+        
+        ._link {
+            position: relative;
+            top: 20px;
+            width: 100%;
+            height: 410px;
+            max-width: 600px;
+            margin: 0px auto;
+			text-align: center;
+        }
+        
+        ._viewed {
+            color: blue;
+        }
+        
+        .clsVideoCnt {
+            background: #fff;
+            position: relative;
+            top: 51px;
+            height: 468px;
+        }
+        
+        #RefTitleBar_id:after,
+        #id_RefTitleBar:after {
+            top: 62px;
+        }
+        
+        .wrapTxt {
+            display: table-cell;
+            vertical-align: middle;
+        }
+		video{ height:400px}
+    </style>
+</head>
+
+<body>
+    <div id="clsResourcesPopup">
+
+        <div id="id_ReferencesBG">
+            <div id="id_RefTitleBar">
+                <div id="id_ReftitleText">Video Resource</div>
+                <div class="close_txt"><span id="clsText">Close</span></div>
+                <div id="id_RefCloseBtn" title="Close"></div>
+            </div>
+            <div id="references">
+                <ul class="clsResouceLink">
+                </ul>
+            </div>
+            <div id="RefTitleBar_id">
+                <div id="ReftitleText_id" class="videoCurTxt">
+                    <div class="wrapTxt">VIDEO</div>
+                </div>
+                <div class="close_txt"><span id="clsText">Close</span></div>
+                <div id="RefCloseBtn_id" class="RefCloseBtn_id" title="Close"></div>
+                <!--<video oncontextmenu="return false;" id="cVideosRef" controls controlsList="nodownload noremoteplayback" disablepictureinpicture class="_link video-js vjs-default-skin" preload="none">
+								<source src="" type="video/mp4">
+							</video>-->
+                <div class="clsVideoCnt">
+                    <div class="_link">
+                        <video oncontextmenu="return false;" controls controlsList="nodownload noremoteplayback" disablepictureinpicture id="cVideosRef" preload="none">
+							<source src="" type="video/mp4">
+						</video>
+
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>

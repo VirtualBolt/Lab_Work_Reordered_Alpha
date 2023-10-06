@@ -1,0 +1,1083 @@
+<!DOCTYPE HTML>
+
+<html>
+
+
+
+<head>
+
+    <title></title>
+
+<style>
+	 /* Sliding entrances */
+@-webkit-keyframes slideInDown {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInDown {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__slideInDown {
+  -webkit-animation-name: slideInDown;
+  animation-name: slideInDown;
+}
+@-webkit-keyframes slideInLeft {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInLeft {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__slideInLeft {
+  -webkit-animation-name: slideInLeft;
+  animation-name: slideInLeft;
+}
+@-webkit-keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(50%, 0, 0);
+    transform: translate3d(50%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(50%, 0, 0);
+    transform: translate3d(50%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__slideInRight {
+  -webkit-animation-name: slideInRight;
+  animation-name: slideInRight;
+}
+@-webkit-keyframes slideInUp {
+  from {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInUp {
+  from {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__slideInUp {
+  -webkit-animation-name: slideInUp;
+  animation-name: slideInUp;
+}
+
+.rightCnt{width:35%;position:absolute;right:0;padding-left:15px;top:116px;display:none;}
+.informationRight{display:block}
+.information span{font-weight:400}
+.marginTop{top:40px}
+.bottomTxt{position:absolute;bottom:5px;right:15px}
+.cSubmitBtn{background:#ACACAC;font-family:OpenSansRegular;font-size:18px;padding:5px 15px;text-transform:lowercase;color:#fff;border-radius:5px;border-radius:5px;-webkit-border-radius:5px;-moz-border-radius:5px;text-transform:capitalize;line-height:21px;border:2px solid transparent}
+.cSubmitBtn.enable:hover{border:2px solid #707070;background:transparent;color:#5B5B5B}
+.cSubmitBtn.active{background:#5B5B5B;color:#fff;cursor:pointer}
+.cSubmitBtn.active:hover{border:2px solid #707070;background:#fff;color:#000}
+/* .QuestionPanel1_2{position:absolute;left:25px;top:80px;width:740px;font-size:16px;opacity:1;font-weight:700} */
+.leftBottom{position:relative;height:252px}
+.leftBottom h3{padding:0;margin:0;position:relative;top:12px;text-align:center;font-family:OpenSansSemiBold;font-size:20px;color:#000;padding-bottom:26px}
+.headingBlue{padding-left:20px;color:#3A5569;font-family:OpenSansSemiBold;font-size:16px;padding-bottom:0;margin-bottom:0}
+.sectiontxt{font-family:OpenSansSemiBold;padding-left:20px;padding-bottom:10px;font-size:18px;color:#000}
+	.mainContainer {position: absolute;width: 100%;height: 545px;left: 0px;top: 0px;opacity: 1;}
+	.clsTabPopup{position:absolute;width:1085px;height:540px;top:0;left:0}
+	.sectionTop{position:absolute;top:0;height:30px;width:100%;padding:16px 0}
+	.sectionContent{position:absolute;top:20px;height:507px;width:1055px;left:15px;right:15px; color:#000}
+	.topImgCnt{position:relative}
+	
+  .open_map{background:url(pages/images/Topic01/T01P49/small_expand.png) no-repeat!important;width:28px;height:28px!important;position:absolute!important;bottom:24px;right:10px;display:none;left:inherit!important;top:inherit!important;float:inherit!important;text-decoration:none!important;border-radius:inherit!important;margin-left:0!important;background-color:inherit!important;padding:0!important}
+	.open_map:hover{background:url(pages/images/Topic01/T01P49/small_expand_hover.png) no-repeat!important}
+	.small_expand1{background:url(pages/images/Topic01/T01P49/small_expand.png) no-repeat!important;width:28px;height:28px!important;position:absolute!important;bottom:7px;right:10px;display:none;left:inherit!important;top:inherit!important;float:inherit!important;text-decoration:none!important;border-radius:inherit!important;margin-left:0!important;background-color:inherit!important;padding:0!important}
+	.small_expand1:hover{background:url(pages/images/Topic01/T01P49/small_expand_hover.png) no-repeat!important}
+	.open_map{right:33px;margin-top:2px}
+	.sectionLeft{height:100%;width:264px;background:#E0F6FB;box-shadow:0 1px 9px -4px rgba(0,0,0,0.75);-webkit-box-shadow:0 1px 9px -4px rgba(0,0,0,0.75);-moz-box-shadow:0 1px 9px -4px rgba(0,0,0,0.75);border-bottom-left-radius:7px;-webkit-border-bottom-left-radius:7px;-moz-border-bottom-left-radius:7px}
+	.sectionRight{width:790px;height:507px;top:0;position:absolute;left:264px}
+	.rightTop{height:42px;left:5px;position:relative}
+	.rightTop a{left:0;top:0;padding:0 65px;background:#fff;margin:0;position:relative;float:left;margin-left:-5px;font-family:OpenSansSemiBold;text-decoration:none;color:#000;height:42px;line-height:42px;border-top-right-radius:5px;-webkit-border-top-right-radius:5px;-moz-border-top-right-radius:5px;font-size:16px;cursor:default}
+	.sectionRight .assessmentShow a{cursor:default}
+	.rightTop a.active{border-top-right-radius:5px;-webkit-border-top-right-radius:5px;-moz-border-top-right-radius:5px;background:#3A5569;margin-right:0;z-index:10;color:#fff}
+	.rightTop a.active.cdefault{cursor:default}
+	.rightTop a.active:after,.rightTop a.active:before,.rightTop a.active:hover:before{top:98%;left:45%;border:solid transparent;content:" ";height:0;width:0;position:absolute;pointer-events:none}
+	.rightTop a.active:after,.rightTop a.active:hover:after{border-top-color:#3A5569;border-width:10px;margin-left:0}
+	.rightTop a.active:before,.rightTop a.active:hover:before{border-top-color:#3A5569;border-width:10px;margin-left:0}
+	.rightTop a.active:nth-child(2),.rightTop a.active:hover:nth-child(2){-webkit-border-top-left-radius:5px;border-top-left-radius:5px;-moz-border-top-left-radius:5px}
+	.rightTop a:nth-child(2){-webkit-border-top-left-radius:5px;border-top-left-radius:5px}
+	.sectionContentArea{background:#fff;height:435px;border-top-right-radius:5px;-webkit-border-top-right-radius:5px;-moz-border-top-right-radius:5px;border-bottom-right-radius:5px;-webkit-bottom-top-right-radius:5px;-moz-border-bottom-right-radius:5px}
+	
+	#topImgCnt1{background: url(pages/images/Topic01/T01P49/Jazmine_small.png) no-repeat top left; background-size:cover; height:255px; width:100%}
+	#imgPopup1 {background: url(pages/images/Topic01/T01P49/Jazmine_large.png) no-repeat; background-size:cover;}
+	
+
+	
+	.sectionContentArea{ padding:15px; line-height:18px;}
+	.information{ margin-top:10px}
+	.information, .qtext, .bullet li, .instructions{font-size:14px !important; line-height:18px;}
+	.instructions{font-size:14px !important;}
+	.options-radio{ margin-top:20px}
+	.iconlist{ margin:0px; padding:0px; list-style:none; width:90%}
+	.iconlist li{ position:relative; margin-bottom:3px; font-size:14px; line-height:22px; display: flex; flex-direction: row; align-items: center; padding-left:20px}
+	.iconlist li:before{ background:url(pages/images/Topic01/T01P49/bullet.png) no-repeat; left:0px; width:13px; height:13px; position:absolute; content:""; top:5px}
+	.iconlist li a{ color:#D7722C; cursor:pointer}
+	.error1{ margin:15px auto 0px; border:solid 2px #F6A87A; border-radius:5px; width:94%; position:relative}
+	.error1 .error1_inner{ position:relative; padding:10px; color:#000; font-size:12px; line-height:18px; font-weight:bold; padding-left:60px;display: flex; flex-direction: row; align-items: center;}
+	.error1 .error1_inner img{ position:absolute; width:35px; height:34px; left:10px; top:10px;}
+	.topImgtxt{ background:rgba(0, 0, 0, 0.1); position:absolute; bottom:0px; padding:10px; color:#000;font-size:14px; line-height:22px;}
+	ul.bullet{ padding:0px; padding-left:15px; margin-top:0px}
+	
+	.txt1{ font-size:16px; line-height:22px; margin:10px 0px}
+	
+	.sectionLeftBox{ position:relative; height:100%; padding:5px;width: 274px;}
+	.topImgboxinner{  border:double 6px #ccc; position:relative; height:100%}
+	.content2 .sectionRight .sectionContentArea{height: 265px; margin-top:100px}
+	.sectionContentAreainner{ width:80%; margin:20px 0px 0px 50px}
+	.sectionContentAreainner .contenttext{font-size:14px; line-height:20px; position:relative}
+	.sectionContentAreainner .contenttext2{ margin-top:30px}
+	#content1{ visibility:visible}
+	#list1, #list2, #list3, #list4, #list5, #error1, #txt1, #listd1,#listd2,#listd3, #listd4, #listd5,#listd6{visibility:hidden; opacity: 0;}
+	/*.small_expand{ display:block}*/
+	.poupdiv .modalContent{width:455px;  height:auto !important; padding:20px 18px; top:17%}
+		.poupdiv  .modalContent .heading{ color:#D7722C; font-size:18px; text-align:center}
+		.poupdiv  .modalContent .linenew{ height:2px; background:#D7722C; margin:5px auto;width:77%}
+	.poupdiv  .modalContent .desc{ color:#000; font-size:14px; text-align:left}
+	.poupdiv  .modalContent .desc ul{ text-align:left; padding:0px}
+	.poupdiv  .modalContent .desc ul li{ margin-bottom:5px}
+	.poupdiv .popupclose{ position: absolute; top:10px; right:10px}
+	.poupdiv .popupclose img{ width:24px; height:24px; cursor:pointer}
+	.poupdiv .modalclose{ position:absolute; top:5px; right:0px; width:30px; height:30px }
+	.poupdiv .modalclose .modalcloseicon{background:url(pages/images/Topic01/T01P49/close-icon.png) no-repeat; background-size:24px 24px; width:24px; height:24px ; cursor:pointer}
+	.poupdiv .modalclose .modalcloseicon:hover{background:url(pages/images/Topic01/T01P49/close-hover-icon.png) no-repeat; background-size:24px 24px; width:24px; height:24px }
+	.link{ position:absolute; bottom:-30px}
+	.link a{font-size:14px; line-height:18px; color:#000; text-decoration:underline}
+	.link a:hover{ color:#D7722C}
+	.option [type="radio"]:checked + label, .option [type="radio"]:not(:checked) + label{font-size:14px;}
+	.table1{ margin:10px 0px}
+	.table1 tr{ height:40px;}
+	.table1 tr th{ padding:2px 5px; text-align: center; width:70px; color:#fff; font-size:14px; font-weight:500; background:#D7722C}
+	.table1 tr td{ padding:2px 5px; text-align: center; width:70px; font-size:14px; font-weight:500; background:#E08F59}
+	
+	/*.popover.clickToEnlarge{ display:block}*/
+	
+        .open_map_close {
+            position: absolute;
+            width: 92px;
+            height: 47px;
+            background: url(pages/images/Topic01/T01P22/close_expand_hover.png) no-repeat;
+            bottom: 30px;
+            right: -47px;
+            cursor: pointer;
+            z-index: 1000;
+            text-decoration: none;
+        }
+       
+        .open_map_close:hover {
+            background: url(pages/images/Topic01/T01P02/close_expand_hover.png) no-repeat;
+        }
+        h4 {
+            margin: 4px;
+            padding: -3px;
+            font-size: 16px;
+        }
+/*NEW CSS*/
+.boxInst {
+  
+  
+  top: 489px;
+  left: 905px;
+  
+}
+        .calculationBox .section{display:inline-block}
+        input.numberBox{width:75px;border:1px solid #d0d0d0;border-radius:5px;padding:7px 10px}
+        .inputwrapper .wrong{background:url(pages/images/Topic01/T01P47/wrong.png) no-repeat}
+        .inputwrapper .correct{background:url(pages/images/Topic01/T01P47/correct.png) no-repeat}
+        .section_top{padding-bottom:10px;border-bottom:1px solid #666;margin-bottom:10px}
+        .section_middle{top:0;position:relative}
+        .section .section_bottom span.action{position:relative;top:-30px}
+        .section span{display:inline-block;padding:2px}
+        .section{text-align:center}
+        .inputwrapper{display:inline-block}
+        .options-radio{padding:12px}
+        .inputwrapper label{font-size:14px}
+        span.tickmark{display:block;width:28px;height:26px;position:absolute;margin-left:78px;margin-top:-8px}
+        input:disabled{background:#f1f1f1}
+        .calculationBox.step1calculation{width:60%;box-shadow:0 0 5px #d0d0d0;border-radius:5px;padding:15px 10px 15px 15px;margin-top:10px;display:inline-block;}
+        .calculationBox.step2calculation{width:60%;box-shadow:0 0 5px #d0d0d0;border-radius:5px;padding:15px 10px 15px 15px;margin-top:8px;display:none;}
+        .cSubmitBtn[data-submit="correctCalculation"]{text-align:center;width:100px;display:none;left:77px;top:15px;position:relative}
+        .cSubmitBtn[data-submit="step1calculation"]{text-align:center;width:100px;display:inline-block;left:77px;top:15px;position:relative}	        
+        .cSubmitBtn[data-submit="step2calculation"]{text-align:center;width:100px;display:none;left:77px;top:15px;position:relative}	        
+        .correctBox .calculationBox.practice{position:relative;top:-170px;z-index:999}
+        .correctBox,.correctBox .calculationBox.practice .tickmark{display:none}
+        /* .correctBox .close{position:absolute;right:0;padding:7px;font-size:25px;background:#d7722c;border-radius:35px;padding-top:1px;right:10px;top:7px;color:#fff;border:1px solid #d0d0d0;cursor:pointer}
+        .correctBox .close:hover{background:#fff;color:#d7722c} */
+        .correctBox .close{position:absolute;right:0;padding:0;font-size:25px;background:#d7722c;border-radius:35px;padding-top:1px;right:4px;top:4px;cursor:pointer;background:url(media/images/new/closebtn.png);width:28px;background-position:-5px;height:28px;-webkit-transition:all .3s;-o-transition:all .3s;transition:all .3s;z-index:999;}
+        .correctBox .close:hover{background-position:33px}   
+
+        .correctBox{display:block;position:relative;top:-250px;background:#fff;border-radius:5px;padding:45px;width:486px;box-shadow:0 0 5px #d0d0d0;display:none}
+        /* .correctBox .calculationBox.step1calculation,
+        .correctBox .calculationBox.step2calculation {
+            width: initial;
+        } */
+        .correctBox .calculationBox.step1calculation {
+            width: 460px;
+        }
+
+        .correctBox .calculationBox.step2calculation {
+            width: 338px;
+        }        
+        #case_study_popup .modalContent {
+          width: 575px;
+          height: 420px;
+        }
+        .sectionBottom{opacity:0;}
+        
+        .cSubmitBtn_custom{display: none;background:#ACACAC;font-family:OpenSansRegular;font-size:18px;padding:5px 15px;text-transform:lowercase;color:#fff;border-radius:5px;border-radius:5px;-webkit-border-radius:5px;-moz-border-radius:5px;text-transform:capitalize;line-height:21px;border:2px solid transparent;
+        background:#5B5B5B;color:#fff;cursor:pointer; width: 170px;
+    float: right;
+    position: relative;
+    top: 61px;
+    left: -40px;}
+        .cSubmitBtn_custom.enable:hover{border:2px solid #707070;background:transparent;color:#5B5B5B}
+        .cSubmitBtn_custom.active{}
+        .cSubmitBtn_custom.active:hover{border:2px solid #707070;background:#fff;color:#000}
+        .correctBox_custom{
+          position: relative;
+    top: -203px;
+    background: #fff;
+    border-radius: 5px;
+    padding:30px 25px;
+    width: 486px;
+    box-shadow: 0 0 5px #d0d0d0;
+    background: #fff;
+          display: none;
+        }
+        .correctBox_custom .close{position:absolute;right:0;padding:0;font-size:25px;background:#d7722c;border-radius:35px;padding-top:1px;right:4px;top:4px;cursor:pointer;background:url(media/images/new/closebtn.png);width:28px;background-position:-5px;height:28px;-webkit-transition:all .3s;-o-transition:all .3s;transition:all .3s;z-index:999;}
+        .correctBox_custom .close:hover{background-position:33px} 
+        .calculationBox {
+    padding: 10px;
+}
+.ansTxt {
+    padding:8px 8px 0 8px;
+    font-size: 12px!important;
+    display: none;
+}
+	</style>
+
+</head>
+
+
+
+<body>
+
+
+    <div class="pg-pageContent" UNSELECTABLE="on">
+        <div id="TabPopup5" class="clsTabPopup">
+            <div class="sectionContent">
+                <div class="sectionLeft">
+                    <div class="topImgCnt" id="topImgCnt1">
+                        <!-- <div class="clickToContinue expandImgTxtRight clickToEnlarge">Click to enlarge image.</div> -->
+                        <div class="popover left-arrow clickToEnlarge">
+                            <div class="arrow" style="top: 50%;"></div>
+                            <div class="popover-content">Click to enlarge image.</div>
+                        </div>
+                        <a href="javascript:void(0);" title="Click to enlarge image" class="small_expand zoom_btn" click_id="1">&nbsp;</a>
+                    </div>
+
+                    <div class="leftBottom">
+                        <h3>Baby Jazmine</h3>
+                        <div class="headingBlue">BORN AT</div>
+                        <div class="sectiontxt">36 weeks gestation</div><br>
+                        <div class="headingBlue">WEIGHT</div>
+                        <div class="sectiontxt">2.8 kg</div>
+                    </div>
+                </div>
+
+                <div class="sectionRight">
+                    <div class="firstShow">
+                        <div class="rightTop">
+                            <a href="javascript:void(0);" class="tabClick active" title="Case Information" rel="Case">Case Information</a>
+                        </div>
+
+                        <div class="sectionContentArea">
+                            <section class="QuestionPanel1_2 clsPanel" id="Labor">
+                                <h4>CBC RESULTS</h4>
+                                <div class="leftCnt">
+                                    <div class="information">
+                                        
+                                      <table class="table1">
+                                        <tr>
+                                          <th>WBC (K/uL) <br>9&ndash;30</th>
+                                          <th>Hgb (g/dL)<br>13.5&ndash;16.5</th>
+                                          <th>Hct (%) <br>42&ndash;51</th>
+                                          <th>Platelet (K/uL) <br>242&ndash;378</th>
+                                          <th>Neutro - phil (%) <br>59</th>
+                                          <th>Bands neutro - phil (%) <br>0</th>
+                                          <th>Metas (%) <br>0</th>
+                                          <th>Lympho - cyte (%) <br>31</th>
+                                          <th>Monos (%) <br>0&ndash;6</th>
+                                          <th>Basos (%) <br>0&ndash;2</th>
+                                          <th>Eos (%) <br>0&ndash;2</th>
+                                        </tr>
+                                        <tr>
+                                          <td>5.6</td>
+                                          <td>14.7</td>
+                                          <td>44</td>
+                                          <td>270</td>
+                                          <td>28</td>
+                                          <td>18</td>
+                                          <td>2</td>
+                                          <td>44</td>
+                                          <td>6</td>
+                                          <td>&mdash;</td>
+                                          <td>2</td>
+                                        </tr>
+                                    </table>
+										<h4>What is the absolute neutrophil count?</h4>
+										<em class="tagline">Enter the values in the fields provided below.</em>
+                                    </div>
+                                    <div class="sectionBottom">
+                                        <!--step1calculation-->
+                                        <div class="calculationBox step1calculation">
+                                            <div class="section">
+                                                <div class="section_middle">
+                                                <div class="inputwrapper">
+                                                    <label>Metas</label><br>
+                                                    <span class="tickmark"></span>
+                                                    <input type="number" class="numberBox calculate" name="metas" value="0">
+                                                </div>
+                                                <span class="action">+</span>
+                                                <div class="inputwrapper">
+                                                    <label>Bands</label><br>
+                                                    <span class="tickmark"></span>
+                                                    <input type="number" class="numberBox calculate" name="bands" value="0">
+                                                </div>
+                                                <span class="action">+</span>
+                                                <div class="inputwrapper">
+                                                    <label>Segs</label><br>
+                                                    <span class="tickmark"></span>
+                                                    <input type="number" class="numberBox calculate" name="segs" value="0">
+                                                </div>
+                                                </div>
+                                            </div>
+                                            <div class="section">
+                                                <div class="section_middle">
+                                                =
+                                                </div>
+                                            </div>
+                                            <div class="section">
+                                                <div class="section_middle">
+                                                <div class="inputwrapper">
+                                                    <label>&nbsp;</label><br>
+                                                    <span class="tickmark"></span>
+                                                    <input type="text" class="numberBox" name="final_total" disabled value="0 (%)">
+                                                </div>
+                                                </div>
+                                            </div>
+                                
+                                        </div>
+                                        <div class="cSubmitBtn" data-submit="step1calculation">Submit</div>
+                                        <br>
+                                        <div class="ansTxt">2 (Metas) + 18 (Bands) + 28 (Segs) = 48% of neutrophils</div>
+                                        <!--step2calculation-->
+                                        <div class="calculationBox step2calculation">
+                                            <div class="section">
+                                                <div class="section_middle">
+                                                <div class="inputwrapper">
+                                                    <label>WBC (mm<sup>3</sup>)</label><br>
+                                                    <span class="tickmark"></span>
+                                                    <input type="number" class="numberBox calculate" name="wbc" value="0">
+                                                </div>
+                                                <span>x</span>
+                                                <div class="inputwrapper">
+                                                    <label>&nbsp;</label><br>
+                                                    <span class="tickmark"></span>
+                                                    <input type="number" class="numberBox" disabled value="0.48">
+                                                </div>
+                                                </div>
+                                            </div>
+                                            <div class="section">
+                                                <div class="section_middle">
+                                                =
+                                                </div>
+                                            </div>
+                                            <div class="section">
+                                                <div class="section_middle">
+                                                    <div class="inputwrapper">
+                                                        <span class="tickmark"></span>
+                                                        <input type="number" class="numberBox" name="anc" disabled value="" style="display: inline-block;">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                
+                                        </div>
+                                        <div class="cSubmitBtn" data-submit="step2calculation">Submit</div>
+
+                                        <div class="cSubmitBtn " data-submit="correctCalculation">Correct Calculationssss</div>
+
+                                        <div class="cSubmitBtn_custom">Correct Calculations</div>
+                                        
+                                        <div class="correctBox">
+                                          
+                                        </div>
+                                        <div class="correctBox_custom">
+                                          <div class="close"></div>
+<div class="calculationBox" unselectable="on">
+                    <div class="section" unselectable="on">
+                        <div class="section_middle" unselectable="on">
+                        <div class="inputwrapper" unselectable="on">
+                            <label>Metas</label><br>
+                            <span class="tickmark wrong" style="display: none;"></span>
+                            <input type="number" class="numberBox calculate" name="metas" value="2" disabled="">
+                        </div>
+                        <span class="action">+</span>
+                        <div class="inputwrapper" unselectable="on">
+                            <label>Bands</label><br>
+                            <span class="tickmark wrong" style="display: none;"></span>
+                            <input type="number" class="numberBox calculate" name="bands" value="18" disabled="">
+                        </div>
+                        <span class="action">+</span>
+                        <div class="inputwrapper" unselectable="on">
+                            <label>Segs</label><br>
+                            <span class="tickmark wrong" style="display: none;"></span>
+                            <input type="number" class="numberBox calculate" name="segs" value="28" disabled="">
+                        </div>
+                        </div>
+                    </div>
+                    <div class="section" unselectable="on">
+                        <div class="section_middle" unselectable="on">
+                        =
+                        </div>
+                    </div>
+                    <div class="section" unselectable="on">
+                        <div class="section_middle" unselectable="on">
+                        <div class="inputwrapper" unselectable="on">
+                            <label>&nbsp;</label><br>
+                            <span class="tickmark wrong" style="display: none;"></span>
+                            <input type="text" class="numberBox" name="final_total" disabled="" value="48 (%)">
+                        </div>
+                        </div>
+                    </div>
+        
+                </div><div class="calculationBox" unselectable="on" style="display: inline-block;">
+                    <div class="section" unselectable="on">
+                        <div class="section_middle" unselectable="on">
+                        <div class="inputwrapper" unselectable="on">
+                            <label>WBC (mm<sup>3</sup>)</label><br>
+                            <span class="tickmark wrong" style="display: none;"></span>
+                            <input type="text" class="numberBox calculate" name="wbc" value="5,600" disabled="">
+                        </div>
+                        <span>x</span>
+                        <div class="inputwrapper" unselectable="on">
+                            <label>&nbsp;</label><br>
+                            <span class="tickmark" style="display: none;"></span>
+                            <input type="number" class="numberBox" disabled="" value="0.48">
+                        </div>
+                        </div>
+                    </div>
+                    <div class="section" unselectable="on">
+                        <div class="section_middle" unselectable="on">
+                        =
+                        </div>
+                    </div>
+                    <div class="section" unselectable="on">
+                        <div class="section_middle" unselectable="on">
+                            <div class="inputwrapper" unselectable="on">
+                                <span class="tickmark wrong" style="display: none;"></span>
+                                <input type="text" class="numberBox" name="anc" disabled="" value="2,688" style="display: inline-block;">
+                            </div>
+                        </div>
+                    </div>
+        
+                </div></div>
+                                    </div>
+                                </div>
+                            </section>
+					
+							
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="modal" id="case_study_popup">
+                <div class="modalContent" unselectable="on">
+                <div class="modalinner">
+                  <div class="modalclose" ><div class="modalcloseicon"></div></div>
+                  <div class="modalTxtImg" unselectable="on"></div>
+                  <div class="modalTextBottom" unselectable="on">Baby Jazmine</div>
+                  <a class="closepopup zoom_close_btn" href="javascript:void(0)" title="Click to Close"></a>
+                  <!-- <div class="clickToContinue expandImgTxtRight clickToClose">Click to Close</div> -->
+                  <div class="popover left-arrow">
+                    <div class="arrow" style="top: 50%;"></div>
+                    <div class="popover-content">Click to close image.</div>
+                  </div>
+                </div>
+                </div>
+            </div>
+
+			
+
+        </div>
+
+    </div>
+
+    <!--- Main Container--->
+
+    <div class="boxInst">
+        <div class="instNextClick"></div>
+        <div class="next_click"><em> Click Next to continue.</em></div>
+    </div>
+    </div>
+
+    <script>
+	manifest = [{
+        src: 'pages/images/Topic01/T01P02/img2.png',
+        id: '1'
+    },
+
+    {
+        src: 'pages/images/Topic01/T01P02/image_02_small.png',
+        id: '2'
+    },
+
+    {
+        src: 'pages/images/Topic01/T01P02/small_graph.png',
+        id: '3'
+    },
+];
+
+
+
+var audioPath = "pages/audio/Topic01/T01P49/T01P49";
+var gItemAudioPath = [ "pages/audio/Topic01/T01P49/T01P49_incorrect", "pages/audio/Topic01/T01P49/T01P49_correct", "pages/audio/Topic01/T01P49/T01P49_tryagain"];
+clickViewMoreInfo();
+var currCue = 0;
+var idd = 0;
+var __curState = 0;
+var clickTabCount = 0;
+var clickTabCount1 = 0;
+
+var updateContentArray = [
+
+    { time: "0.0", carry: "", event: "", show: "", hide: "", transcript: "Based on this CBC, calculate the absolute neutrophil count." },
+    {
+        time: "0.0", carry: "", event: "",   show: "",  hide: "",    
+		transcript: "",
+        animation: [{ target: ".topImgCnt", duration: "0.5", activity: { 'opacity': '1', 'display': 'block' } }]
+    },
+    {
+        time: "0.0",   carry: "", event: "",   show: "",  hide: "",
+        transcript: "",
+        animation: [{ target: ".rightCnt", duration: "0.5", activity: { 'opacity': '1', 'display': 'block' } }]
+    },
+    {
+        time: "3",   carry: "", event: "",   show: "",  hide: "",
+        transcript: "",
+        animation: [
+            { target: ".sectionBottom", duration: "0.5", activity: { 'opacity': '1'  } }
+        ]
+        
+    }    
+];
+
+  var updateContentArray2 = [{
+      time: "0",
+      carry: "",
+      event: "",
+      show: "",
+      hide: "",
+      transcript: "Please try again."
+  }];
+  var updateContentArray0 = [{
+      time: "0",
+      carry: "",
+      event: "",
+      show: "",
+      hide: "",
+      transcript: "Here is some feedback on your response. The absolute neutrophil count is 2,688. <br>Click Next to continue."
+  }, {
+      time: "6",
+      carry: "",
+      event: "",
+      show: "",
+      hide: "",
+      transcript: "",
+      animation: [{
+          target: ".boxInst",
+          duration: "0.5",
+          activity: {
+              'display': 'block'
+          }
+      }]
+  }];
+  var updateContentArray1 = [{
+      time: "0.0",
+      carry: "",
+      event: "",
+      show: "",
+      hide: "",
+      transcript: "That is correct. </br>Click Next to continue."
+      // transcript: "Thank you for stabilizing Baby Jazmine. You will be providing care for her later in this module. Let’s now return to the Lab Work module."
+  }, {
+      time: "2.0",
+      carry: "",
+      event: "",
+      show: "",
+      hide: "",
+      transcript: "",
+      animation: [{
+          target: ".boxInst",
+          duration: "0.5",
+          activity: {
+              'display': 'block'
+          }
+      }]
+  }];
+function fnAudioFinishItemComp() {
+    fnAudioFinishPageComp();
+    
+}
+
+var __dataXml;
+
+var audplayer = document.getElementById('audioplayer');
+
+$(document).ready(function() {
+
+
+    // bindClickableHotspot();
+    disableNextBtn();
+    var ele = document.getElementsByTagName('div');
+    for (var i = 0; i < ele.length; i++) {
+        ele[i].setAttribute("unselectable", "on");
+    }
+    var n = isInArray("M1L0T1P49", gCompPageArr);
+    if (n == true) {
+        enableNextBtn();
+        fnDesiableNext(false)
+    }
+});
+
+function audioReset() {
+    gAudioId = "";
+    onTimelineEnd();
+}
+
+function isInArray(value, array) {
+    return array.indexOf(value) > -1;
+}
+
+
+function fnPlaySectionAudio(gCurrentIndex) {
+    indexAudio = (gCurrentIndex);
+    audioId = "audio_" + gCurrentIndex;
+    gAudioId = audioId;
+    fnHideShowAudioPlayer(false);
+    updateContentArray = eval("updateContentArray" + (gCurrentIndex));
+    initAudioPlayer(gItemAudioPath[gCurrentIndex])
+}
+
+function fnCompletion() {
+    console.log("end");
+    var _getCount1 = clickTabCount + clickTabCount1;
+    console.log("start new");
+    enableNextBtn();
+     $('.boxInst').show()
+    fnAudioFinishItemComp();
+
+}
+
+function fnOnAudioComplete() {
+    if (gAudioId == "startAudio") {
+        console.log("start audio");
+        audplayer.pause();
+        audplayer.currentTime = 0;
+        $(".clickToEnlarge").show();
+        $(".small_expand").show();
+        $(".small_expand1").show();
+    } else {
+        fnCompletion();
+        enableNextBtn();
+        $('.boxInst').show();
+        $(".clickToEnlarge").show();
+        $(".small_expand").show();
+        $(".small_expand1").show();
+        gCompPageArr.push("M1L0T1P49");
+        fnAudioFinishItemComp();
+        audplayer.pause();
+        audplayer.currentTime = 0;
+    }
+   
+}
+
+var correctOptions = [1];
+
+// function bindClickableHotspot() {
+//     console.log("clicked");
+//     $('.option').addClass('aactive'); //.css({ 'cursor': 'pointer' });
+//     $('.option').off().on('click', function() {
+// 		$('.option').removeClass('clicked');
+// 		$(this).addClass('clicked');
+// 		if ($('.option.clicked').length >= 1) {
+// 			$('.cSubmitBtn').addClass('active');
+// 			$('.cSubmitBtn.active').off().on('click', function() {
+// 				submitClick();
+// 			});
+// 		} else {
+// 			$('.cSubmitBtn').removeClass('active');
+// 		}
+//     });
+// }
+
+$('#topImgCnt2').hide();
+// function submitClick() {
+//     tinCanWrapper.sendStatementData("answered", "baby-conrad-postnatal-course", "Baby Conrad - Postnatal Course - Now take a look at Baby Conrad's vital signs shortly after birth. Are they normal or abnormal?");
+//     $('.cSubmitBtn.active').hide();
+//     console.log("clicked");
+//     enableNextBtn();
+//     fnDesiableNext(false);
+//     gCompPageArr.push("M1L0T1P49");
+//     var incorrectCount = 0; //, correctCount = 0;
+//     $('.option').each(function() {
+//         if ($(this).hasClass('clicked') && ($.inArray($(this).index(), correctOptions) == -1)) {
+//             $(this).addClass('wrong');
+//             incorrectCount++;
+//         }
+//         $(this).off(); //.removeClass('clicked');
+//     });
+
+//     $(correctOptions).each(function(i, val) {
+//         $('.option').eq(val).addClass('correct');
+//     });
+
+//     if (incorrectCount == 0) {
+//         fnPlaySectionAudio(0);
+//     } else {
+//         fnPlaySectionAudio(1);
+//     }
+//     $('.option').off().removeClass('aactive'); //.css({'cursor':'default'});
+//     $('.cSubmitBtn').removeClass('active');
+//     $('.informationRight').show();
+// }
+
+$(".small_expand").off().on("click", function() {
+    pauseAudio();
+    $("#TabPopup5 #case_study_popup.modal").show();
+    $("#TabPopup5 .sectionTop").addClass("blur");
+    $("#TabPopup5 .sectionContent").addClass("blur");
+    $(".modalTxtImg").attr('id', 'imgPopup' + $(this).attr('click_id'));
+    //$('.modalTextBottom').hide();
+   // $('#ModalTextBottom' + $(this).attr('click_id')).show();
+    //$('.modalContent').addClass('maxBot0');
+    //$('.modalContent').removeClass('maxBot');
+});
+
+$(".small_expand1").off().on("click", function() {
+    pauseAudio();
+    $("#TabPopup5 #case_study_popup.modal").show();
+    $("#TabPopup5 .sectionTop").addClass("blur");
+    $("#TabPopup5 .sectionContent").addClass("blur");
+    $('.boxInst').addClass("blur");
+    $(".modalTxtImg").attr('id', 'imgPopup' + $(this).attr('click_id'));
+    $('.modalTextBottom').hide();
+    $('#ModalTextBottom' + $(this).attr('click_id')).show();
+    $('.modalContent').addClass('maxBot');
+    $('.modalContent').removeClass('maxBot0');
+});
+
+$(".closepopup, .modalclose").off().on("click", function() {
+    playAudio();
+    $("#TabPopup5 .modal").removeAttr("style");
+    $("#TabPopup5 .sectionTop").removeClass("blur");
+    $("#TabPopup5 .sectionContent").removeClass("blur");
+    $('.boxInst').removeClass("blur");
+});
+
+$(".popup").on("click", function() {
+	pauseAudio();
+	$("#TabPopup5 #popup").show();
+	$("#TabPopup5 .sectionTop").addClass("blur");
+	$("#TabPopup5 .sectionContent").addClass("blur");
+});
+$(".popupclose").on("click", function() {
+	playAudio();
+	$("#TabPopup5 #popup").removeAttr("style");
+	$("#TabPopup5 .sectionTop").removeClass("blur");
+	$("#TabPopup5 .sectionContent").removeClass("blur");
+});
+function pauseAudio() {
+    if (!fnPauseAudio()) {
+        console.log(true);
+        fnPauseAudio()
+    } else {
+        playPauseAudio();
+        console.log(false);
+    }
+}
+
+function playAudio() {
+    if (!fnPauseAudio()) {
+        console.log(true);
+        playPauseAudio();
+    }
+}
+ /**
+    * Step 1 calculation
+    */
+   var step1_2_wrong = false;
+    $('.step1calculation .numberBox.calculate').on('keyup change', function () {
+        var anyZero = false;
+        var userValues = {};
+        $('.step1calculation .numberBox.calculate').each(function (i) {
+            var value = $(this).val() ? parseFloat($(this).val()) : 0;
+            userValues[$(this).attr('name')] = value;
+            if (value == 0) {
+            anyZero = true;
+            }
+        });
+        var total = userValues['metas'] + userValues['bands'] + userValues['segs'];
+        $('.step1calculation .numberBox[name="final_total"]').val(total + ' (%)');      
+        /*SUBMIT*/      
+        if (!anyZero) {
+            $('.cSubmitBtn[data-submit="step1calculation"]').addClass('active');
+            $('.cSubmitBtn[data-submit="step1calculation"].active').off().on('click', function () {
+            var anyZero = false;
+
+            $('.step1calculation .numberBox.calculate').each(function (i) {
+                var value = $(this).val() ? parseFloat($(this).val()) : 0;
+                if (value == 0) {
+                anyZero = true;
+                }
+            });
+            if (!anyZero) {
+                var itration = {
+                'metas': 2,
+                'bands': 18,
+                'segs': 28,
+                'final_total': 48
+                };
+                $('.step1calculation .numberBox.calculate').prop('disabled', true);
+                var anyWrong = false;
+                var userValues = {};
+                $('.step1calculation .numberBox.calculate').each(function (i) {
+                    var value = parseFloat($(this).val());
+                    userValues[$(this).attr('name')] = value;
+                    if (value == itration[$(this).attr('name')]) {
+                        $(this).parents('.inputwrapper').find('.tickmark').addClass('correct');
+                    } else {
+                        $(this).parents('.inputwrapper').find('.tickmark').addClass('wrong');
+                        anyWrong = true;
+                    }
+                });
+                var total = userValues['metas'] + userValues['bands'] + userValues['segs'];
+                if (itration['final_total'] == total) {
+                  $('.step1calculation .numberBox[name="final_total"]').parents('.inputwrapper').find('.tickmark').addClass('correct');
+                } else {
+                  $('.step1calculation .numberBox[name="final_total"]').parents('.inputwrapper').find('.tickmark').addClass('wrong');
+                  $(".ansTxt").show();
+                }
+                step1_2_wrong = anyWrong;
+                $('.step1calculation .numberBox[name="final_total"]').val(total + ' (%)');
+                //fnPlaySectionAudio(0);
+                $('.cSubmitBtn[data-submit="step1calculation"]').hide();
+                $('.cSubmitBtn[data-submit="step2calculation"]').css({ 'display': 'inline-block' });
+                $('.calculationBox.step2calculation').css({ 'display': 'inline-block' });
+            }
+            })
+
+      } else {
+        $('.cSubmitBtn[data-submit="step1calculation"]').removeClass('active');
+      }
+    });
+
+    /**
+    * Step 2 calculation
+    */
+    $('.step2calculation .numberBox.calculate').on('keyup change', function () {
+        var anyZero = false;
+        var userValues = {};
+        $('.step2calculation .numberBox.calculate').each(function (i) {
+            var value = $(this).val() ? parseFloat($(this).val()) : 0;
+            userValues[$(this).attr('name')] = value;
+            if (value == 0) {
+                anyZero = true;
+            }
+        });
+        var total = userValues['wbc'] * 0.48;
+        $('.step2calculation .numberBox[name="anc"]').val(parseFloat(total.toFixed(2)));
+        /*SUBMIT*/      
+      if (!anyZero) {        
+        $('.cSubmitBtn[data-submit="step2calculation"]').addClass('active');
+        $('.cSubmitBtn[data-submit="step2calculation"].active').off().on('click', function () {
+          var anyZero = false;
+
+          $('.step1calculation .numberBox.calculate').each(function (i) {
+            var value = $(this).val() ? parseFloat($(this).val()) : 0;
+            if (value == 0) {
+              anyZero = true;
+            }
+          });
+          if (!anyZero) {
+            enableNextBtn();
+            // $('.boxInst').show();
+            fnDesiableNext(false);
+            gCompPageArr.push("M1L0T1P49");
+            $('.step2calculation .numberBox[name="anc"]').show();
+            var itration = {
+              'wbc': 5600,
+              'anc': 2688
+            };
+            $('.step2calculation .numberBox.calculate').prop('disabled', true);
+            var anyWrong = false;
+            var userValues = {};
+            $('.step2calculation .numberBox.calculate').each(function (i) {
+              var value = parseFloat($(this).val());
+              userValues[$(this).attr('name')] = value;
+              if (value == itration[$(this).attr('name')]) {
+                $(this).parents('.inputwrapper').find('.tickmark').addClass('correct');
+              } else {
+                $(this).parents('.inputwrapper').find('.tickmark').addClass('wrong');
+                anyWrong = true;
+              }
+            });
+            var total = userValues['wbc'] * 0.48;
+            if (itration['anc'] == total) {
+              $('.step2calculation .numberBox[name="anc"]').parents('.inputwrapper').find('.tickmark').addClass('correct');
+            } else {
+              $('.step2calculation .numberBox[name="anc"]').parents('.inputwrapper').find('.tickmark').addClass('wrong');
+            }
+
+            step1_2_wrong = step1_2_wrong || anyWrong;
+
+            $('.step2calculation .numberBox[name="anc"]').val(parseFloat(total.toFixed(2)));
+            //fnPlaySectionAudio(1);
+            $('.cSubmitBtn[data-submit="step2calculation"]').hide();
+            if(step1_2_wrong){
+            // $('.cSubmitBtn[data-submit="correctCalculation"]').css({ 'display': 'inline-block' }).addClass('active');
+             $('.cSubmitBtn[data-submit="correctCalculation"]').trigger('click');
+              fnPlaySectionAudio(0);
+            }else{
+              fnPlaySectionAudio(1);
+            }
+          }
+        })
+
+      } else {
+        $('.cSubmitBtn[data-submit="step2calculation"]').removeClass('active');
+      }
+    });
+
+    $('.cSubmitBtn[data-submit="correctCalculation"]').on('click', function(){
+      $('.step1calculation .numberBox.calculate').prop('disabled', true);
+      $('.step2calculation .numberBox.calculate').prop('disabled', true);
+
+        $('.correctBox').html('')
+        var itration = {
+          'metas': 2,
+          'bands': 18,
+          'segs': 28,
+          'final_total': 48,
+          'wbc': 5600,
+          'anc': 2688
+        };        
+     // ('.correctBox').show();
+
+        /*show poup*/
+        $('.correctBox').html($('.calculationBox.step1calculation').clone());
+        $('.correctBox .calculationBox.step1calculation').before('<div class="close"></div>');
+        $('.correctBox .calculationBox.step1calculation').after($('.calculationBox.step2calculation').clone());
+        $('.tickmark').show();
+        var objKeys = Object.keys(itration);
+        $.each(objKeys, function(i, val){
+            var iVal = itration[val];
+            if( val == 'final_total' ){
+              iVal = iVal + ' (%)';
+            }
+            $('.correctBox').find('.numberBox[name="'+val+'"]').val(iVal);
+        });
+        $('.cSubmitBtn[data-submit="correctCalculation"]').hide();
+        
+        $('.cSubmitBtn_custom').show();
+
+    });
+    $('.cSubmitBtn_custom').on("click", function(){
+      $('.correctBox').hide();
+      $(".correctBox_custom").show();
+      //$('.cSubmitBtn[data-submit="correctCalculation"]').trigger('click');
+      $('.tickmark').hide();
+      $(this).hide();
+    });
+    $(document).on('click', '.correctBox_custom .close', function(){
+      $('.correctBox').hide();
+      $(".correctBox_custom").hide();
+      $(".step2calculation").show();
+      $('.cSubmitBtn[data-submit="step1calculation"]').hide();
+      $('.cSubmitBtn_custom').show();
+      return;
+      
+    })
+
+</script>
+
+</body>
+
+
+
+</html>

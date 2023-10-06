@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title></title>
+    <link href="pages/Topic01/css/T01P39.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="pg-pageContent" UNSELECTABLE="on">
+        <div class="mainContainer">
+            <div class="clsPatch" id="idPatchMain">
+                <div class="cls_Text">
+                    <p id="idText1">You may recall Baby Conrad from the S.T.A.B.L.E. hospital. He is a macrosomic infant.</p>
+                </div>
+            </div>
+
+
+
+
+            <div class="bullet_Text">
+
+                <p>
+                    <ul class="textBullets">
+                        <li>
+                            <div>Increased risk of shoulder dystocia, which occurs because of excessive fat deposition in the upper chest area. </div>
+                        </li><br>
+                        <li>
+                            <div>Injuries associated&nbsp;with shoulder dystocia include:</div>
+                        </li>
+                        <ul>
+                            <li>perinatal asphyxia</li>
+                            <li>
+                                <div>brachial plexus injury</div>
+                            </li>
+                            <li>
+                                <div>paralysis of the diaphragm</div>
+                            </li>
+                            <li>
+                                <div>injury to the recurrent laryngeal nerve.&nbsp;&#8203;</div>
+                            </li>
+                        </ul><br>
+                        <li>Other injuries include :</li>
+                        <ul>
+                            <li>fractures of the arm or clavicles</li>
+
+
+                            <li>injury to the liver</li>
+                        </ul>
+                    </ul>
+                </p>
+            </div>
+            <div id="idPatch1">
+                <div class="clsImage" id="image1"></div>
+                <div class="clsIconImgExpand" id="icon00">
+                    <div class="expText">Click to enlarge image.</div>
+                </div>
+                <div class="clsIconImg zoom_btn" id="icon01"></div>
+            </div>
+            <div class="CaseStudy" id="case_study_popup">
+                <div class="caseStudyContent">
+                    <div class="ModalTxtImg"></div>
+                    <div class="closepopup zoom_close_btn"></div>
+                    <div class="clickToContinue expandImgTxtRight clickToClose" unselectable="on">Click to close image.</div>
+                </div>
+            </div>
+
+
+        </div>
+        <script src="pages/Topic01/js/T01P39.js"></script>
+</body>
+
+</html>

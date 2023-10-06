@@ -1,0 +1,48 @@
+div.bgplayerui{ /* Audio player UI DIV */
+background: black;
+padding: 3px;
+padding-top:4px;
+width: 220px;
+color: white;
+}
+
+div.bgplayerui .play, div.bgplayerui .rewind{ /* Audio player UI buttons style */
+cursor: pointer;
+}
+
+
+div.bgplayerui div.volume{ /* Volume control container */
+display: inline-block;
+height: 18px;
+overflow: hidden;
+}
+
+div.bgplayerui div.volume div{ /* Individual volume bars within Volume container */
+float: left;
+width: 5px;
+height: 100%;
+line-height: 100%;
+margin-right: 2px;
+border: 1px solid black;
+background: white;
+cursor: pointer;
+-moz-box-shadow: inset 1px 1px 2px gray;
+}
+
+div.bgplayerui div.volume div.on{ /* Style of volume bar when it's on */
+background: red;
+}
+
+input[type=button]{
+-moz-transition: all 0.3s ease-in-out;
+ background:#f6dca3;
+ color:black;
+ border:double;
+ border-radius:0.5em;
+ box-shadow:0 0.2em 0.5em black;
+}
+
+input[type=button]:focus{
+border-color: darkred;
+background:#f5ca6e;
+}

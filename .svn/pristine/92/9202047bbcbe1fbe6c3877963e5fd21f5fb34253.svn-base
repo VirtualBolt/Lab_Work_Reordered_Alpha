@@ -1,0 +1,442 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<script>
+		manifest = [
+			/*{src:'media/images/player/temp0/Gui-bg.png', id:'0'}*/
+		];
+	</script>
+	<style type="text/css">
+		.mainContainer {
+			position: absolute;
+			width: 990px;
+			height: 600px;
+			left: 50px;
+			top: 25px;
+		}
+
+		.player-container {
+			background-image: none;
+			overflow: hidden;
+		}
+
+		#myVideoIntro {
+			position: absolute;
+			height: 658px;
+			width: 1085px;
+			outline: none;
+			z-index: -1;
+
+		}
+
+		#VideoContainer {
+			position: absolute;
+			background: url('media/images/player/landing_page/BG.png');
+			top: 0%;
+			left: 0%;
+			height: 658px;
+			width: 1085px;
+			outline: none;
+		}
+
+		.CLSSSKIPBTN {
+			position: absolute;
+			cursor: pointer;
+			font-size: 22px;
+			top: 260px;
+			right: 21px;
+			height: 98px;
+			width: 95px;
+			background: url('media/images/player/common/intro_Start_Sprite.png');
+			background-position: 0 0;
+			z-index: 1;
+			transition: all 0.2s;
+			border-radius: 50%
+		}
+
+		.DISABLESKIPBTN {
+			position: absolute;
+			font-size: 22px;
+			bottom: 35px;
+			right: 21px;
+			height: 98px;
+			width: 95px;
+			background-position: 0 0;
+			z-index: 1;
+			transition: all 0.2s;
+			border-radius: 50%
+		}
+
+		.CLSSSKIPBTNText {
+			position: absolute;
+			background: url('media/images/player/landing_page/continue.png');
+			background-size: 100% 100%;
+			width: 200px;
+			height: 45px;
+			top: 285px;
+			right: 120px;
+		}
+
+		.CLSSTEXT {
+			position: absolute;
+			top: 10px;
+			left: 37px;
+			font-size: 18px;
+			font-family: OpenSansRegular;
+		}
+
+		.CLSSSKIPBTN p {
+			margin-top: 3.1%;
+			color: #fff;
+
+		}
+
+		.CLSSSKIPBTN:hover {
+			cursor: pointer;
+			background: url('media/images/player/common/intro_Start_Sprite.png');
+			background-position: -95px 0;
+		}
+
+		#Skip {
+			display: block;
+		}
+
+		/*#Start{
+		visibility:visible;
+	}*/
+		.bodyClick {
+			background: url('media/images/play_btn.png') no-repeat;
+			background-size: 100% 100%;
+			display: none;
+			position: absolute;
+			left: 44%;
+			top: 40%;
+			width: 165px;
+			height: 148px;
+
+		}
+	</style>
+
+	<script>
+
+		$(document).ready(function () {
+			var ele = document.getElementsByTagName('div');
+			for (var i = 0; i < ele.length; i++) {
+				ele[i].setAttribute("unselectable", "on");
+			}
+
+			$(".CLSSSKIPBTN").on("click", function () {
+
+				fnHideIntro();
+				//fShowCourse();
+				fLoadCourse()
+				var vid = document.getElementById("myVideoIntro");
+				vid = null;
+				//$("#id_transcriptBox").show();
+				//vid.pause();
+				//vid.currentTime = 0;
+
+			});
+
+		});
+		function fShowStart() {
+			$(".CLSSSKIPBTN").css("display", "none");
+			//$(".CLSSSKIPBTN").trigger("click");
+		}
+		function fLoadCourse() {
+			$("body").css("");
+			fnHideIntro()
+			$('.gridContainer').css("visibility", "visible");
+
+			fnJumpToPageByID("M1L0T1P0");
+
+		}
+
+	</script>
+	<style type="text/css">
+		.menuWrap {
+			display: block;
+			width: 100%;
+			height: 100%;
+			position: relative;
+			background: #fff;
+			margin: 0px auto;
+			padding: 10px;
+			display: none;
+			z-index: 999;
+		}
+
+		.introPreloader {
+			position: absolute;
+			top: 0%;
+			left: 0%;
+			background-color: rgba(255, 255, 255, 1);
+			width: 100%;
+			height: 100%;
+			z-index: 99999;
+			display: block;
+			background-image: url(media/images/player/pre_loder_01.gif);
+			background-repeat: no-repeat;
+			/*background-size: 100% 100%;*/
+			background-position: center center;
+			display: none;
+		}
+
+		.subMenuWrap {
+			/*background: lightgray;*/
+			width: 49%;
+			margin: 0px auto;
+		}
+
+		.buttons {
+			/* border: 1px solid; */
+			width: 32%;
+			padding: 2% 0%;
+			text-align: center;
+			margin: 10px 0px 0px 26px;
+			background: lightsalmon;
+			color: blue;
+			cursor: pointer;
+		}
+
+		.clsTxt {
+			position: absolute;
+			top: 13px;
+			left: 55px;
+			line-height: 45px;
+			color: #000000;
+			font-size: 18px;
+			font-family: OpenSansRegular;
+		}
+
+		#sugar1 {
+			position: absolute;
+			left: 25px;
+		}
+
+		#stbTxt {
+			position: absolute;
+			background: url("media/images/player/landing_page/normal.png");
+			width: 275px;
+			height: 48px;
+			top: 15px;
+			left: 70px;
+		}
+
+		#tem1 {
+			position: absolute;
+			left: 25px;
+			color: #FFFFFF;
+		}
+
+		#temTxt {
+			position: absolute;
+			background: url("media/images/player/landing_page/temperature.png");
+			width: 275px;
+			height: 48px;
+			top: 15px;
+			left: 70px;
+		}
+
+		#air1 {
+			position: absolute;
+			left: 25px;
+		}
+
+		#airTxt {
+			position: absolute;
+			background: url("media/images/player/landing_page/normal.png");
+			width: 275px;
+			height: 48px;
+			top: 15px;
+			left: 70px;
+		}
+
+		#bp1 {
+			position: absolute;
+			left: 25px;
+		}
+
+		#bpTxt {
+			position: absolute;
+			background: url("media/images/player/landing_page/normal.png");
+			width: 275px;
+			height: 48px;
+			top: 15px;
+			left: 70px;
+		}
+
+		#lab1 {
+			position: absolute;
+			left: 25px;
+		}
+
+		#labTxt {
+			position: absolute;
+			background: url("media/images/player/landing_page/normal.png");
+			width: 275px;
+			height: 48px;
+			top: 15px;
+			left: 70px;
+		}
+
+		#emo1 {
+			position: absolute;
+			left: 25px;
+		}
+
+		#emoTxt {
+			position: absolute;
+			background: url("media/images/player/landing_page/normal.png");
+			width: 275px;
+			height: 48px;
+			top: 15px;
+			left: 70px;
+		}
+
+		.tabClass:hover {
+			transition: .5s width ease-in-out;
+			-webkit-transition: .5s width ease-in-out;
+			cursor: pointer;
+		}
+
+		.sugar {
+			position: absolute;
+			width: 345px;
+			height: 80px;
+			top: 15px;
+			left: 20px;
+		}
+
+		#sugar {
+			position: absolute;
+			background: url("media/images/player/landing_page/img00.png");
+			width: 83px;
+			height: 83px;
+			z-index: 2;
+		}
+
+		.temperature {
+			position: absolute;
+			width: 345px;
+			height: 80px;
+			top: 115px;
+			left: 20px;
+		}
+
+		#temperature {
+			position: absolute;
+			background: url("media/images/player/landing_page/img01.png");
+			width: 83px;
+			height: 83px;
+			z-index: 2;
+		}
+
+		.airway {
+			position: absolute;
+			width: 345px;
+			height: 80px;
+			top: 215px;
+			left: 20px;
+		}
+
+		#airway {
+			position: absolute;
+			background: url("media/images/player/landing_page/img02.png");
+			width: 83px;
+			height: 83px;
+			z-index: 2;
+		}
+
+		.bloodpressure {
+			position: absolute;
+			width: 345px;
+			height: 80px;
+			top: 315px;
+			left: 20px;
+		}
+
+		#bloodpressure {
+			position: absolute;
+			background: url("media/images/player/landing_page/img03.png");
+			width: 83px;
+			height: 83px;
+			z-index: 2;
+		}
+
+		.labwork {
+			position: absolute;
+			width: 345px;
+			height: 80px;
+			top: 415px;
+			left: 20px;
+		}
+
+		#labwork {
+			position: absolute;
+			background: url("media/images/player/landing_page/img04.png");
+			width: 83px;
+			height: 83px;
+			z-index: 2;
+		}
+
+		.emotionalsupport {
+			position: absolute;
+			width: 345px;
+			height: 80px;
+			top: 515px;
+			left: 20px;
+		}
+
+		#emotionalsupport {
+			position: absolute;
+			background: url("media/images/player/landing_page/img05.png");
+			width: 83px;
+			height: 83px;
+			z-index: 2;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="VideoContainer">
+		<div class="mainContainer">
+			<div class="sugar" id="tabClass00">
+				<div class="_stb" id="sugar"></div>
+				<div class="clsTxt " id="stbTxt"><span id="sugar1"><b>Sugar and Safe Care</b></span></div>
+			</div>
+			<div class="temperature" id="tabClass01">
+				<div class="_tem" id="temperature"></div>
+				<div class="clsTxt " id="temTxt"><span id="tem1"><b>Temperature</b></span></div>
+			</div>
+			<div class="airway" id="tabClass02">
+				<div class="_air" id="airway"></div>
+				<div class="clsTxt " id="airTxt"><span id="air1"><b>Airway</b></span></div>
+			</div>
+			<div class="bloodpressure" id="tabClass03">
+				<div class="_bp" id="bloodpressure"></div>
+				<div class="clsTxt " id="bpTxt"><span id="bp1"><b>Blood Pressure</b></span></div>
+			</div>
+			<div class="labwork" id="tabClass04">
+				<div class="_lab" id="labwork"></div>
+				<div class="clsTxt " id="labTxt"><span id="lab1"><b>Lab Work</b></span></div>
+			</div>
+			<div class="emotionalsupport" id="tabClass05">
+				<div class="_emo" id="emotionalsupport"></div>
+				<div class="clsTxt " id="emoTxt"><span id="emo1"><b>Emotional Support</b></span></div>
+			</div>
+			<div class="CLSSSKIPBTNText" id="">
+				<div class="CLSSTEXT"><em>Click to Enter</em></div>
+			</div>
+			<div class="CLSSSKIPBTN" id="Skip">
+			</div>
+			<div class="DISABLESKIPBTN" id="">
+			</div>
+			<div class="introPreloader"></div>
+			<div class="bodyClick"></div>
+		</div>
+	</div>
+</body>
+
+</html>

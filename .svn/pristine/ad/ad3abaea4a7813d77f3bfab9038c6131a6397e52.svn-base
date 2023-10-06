@@ -1,0 +1,570 @@
+@-webkit-keyframes reducetime {
+
+
+  0% {
+
+
+    width: 0;
+
+
+  }
+
+
+  100% {
+
+
+    width: 100%;
+
+
+  }
+
+
+}
+
+
+@-webkit-keyframes zoomin {
+
+
+  0% {transform: scale(1);}
+
+
+  50% {transform: scale(1.2);}
+
+
+  100% {transform: scale(1);}
+
+
+}
+
+
+@keyframes zoomin {
+
+
+  0% {transform: scale(1);}
+
+
+  50% {transform: scale(1.2);}
+
+
+  100% {transform: scale(1);}
+
+
+} /*End of Zoom in Keyframes */
+
+
+
+
+
+/* Zoom out Keyframes */
+
+
+@-webkit-keyframes zoomout {
+
+
+  0% {transform: scale(1);}
+
+
+  50% {transform: scale(0.67);}
+
+
+  100% {transform: scale(1);}
+
+
+}
+
+
+@keyframes zoomout {
+
+
+    0% {transform: scale(1);}
+
+
+  50% {transform: scale(0.67);}
+
+
+  100% {transform: scale(1);}
+
+
+}/*End of Zoom out Keyframes */
+
+.mainContainer {
+			position: absolute;
+			width: 1000px;
+			height: 460px;
+			left: 40px;
+			top: 20px;
+			opacity: 1;
+}
+#idPatchMain{
+	top: 22px;
+    left: 2px;
+    background-position: left;
+    height: 64px;
+    background: #FFFFFF;
+    border-radius: 6px;
+    width: 960px;
+		-webkit-box-shadow: 0px 1px 4px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 1px 4px -1px rgba(0,0,0,0.75);
+    box-shadow: 0px 1px 4px -1px rgba(0,0,0,0.75);
+    border-radius: 5px;
+    -moz-box-shadow: 0px 1px 4px -1px rgba(0,0,0,0.75);
+	padding:10px 20px;
+}
+.clsText{
+	position: relative;
+	font-size: 16px;
+	font-family: OpenSansRegular;
+	line-height: 25px;
+	color: #000000;
+	opacity: 0;
+}
+#idText1{
+	top:3px;
+	left: 0px;
+	width: 100%;
+	text-align: left;
+	font-family: OpenSansRegular;
+	font-size:16px;
+	opacity:1;
+}
+#idText2{
+	top: 12px;
+    left: 0px;
+    width: 100%;
+    opacity: 1;
+    display: none;
+    font-style: italic;
+	color:#4D667B;
+}
+.ClsTabInside {
+	position: absolute;
+	width: 110px;
+	height: 110px;
+	top: 9px;
+	border-radius: 50%;
+	background-size: contain;
+	opacity: 0;
+}
+.clsAllTabs{
+    position: absolute;
+    height:406px;
+    width: 997px;
+    top: 103px;
+    right:20px;
+	left:2px;
+	box-shadow: 0px 1px 4px -1px rgba(0,0,0,0.75);
+	border-radius:5px;
+	background-color:white;
+	background-position: left;
+	opacity:0;
+	display:none;
+}
+.clsAllTabsImage{
+	position: absolute;
+	left: 125px;
+	top: 9px;
+	/* height: 300px; */
+}
+.clickBlocker {
+    position: absolute;
+    height:406px;
+    width: 997px;
+    top: 103px;
+    right:20px;
+	left:2px;
+}
+.paraText{
+	position: absolute;
+    top: 300px;
+	width: 256px;
+    left: 186px;
+    font-size: 16px;
+    font-family: OpenSansRegular;
+
+}
+.paraText2{
+	position: absolute;
+	width: 305px;
+	top: 295px;
+	left:519px;
+	font-size:16px;
+	font-family: OpenSansRegular;
+	display:none;
+}
+/* .boxInst{
+	position: absolute;
+	top: 500px;
+	left: 897px;
+	width: 175px;
+	height: 30px;
+	display:none;
+} */
+.next_click{
+	position: absolute;
+			font-size: 14px;
+			color: #4D667B;
+			font-family: OpenSansRegular;
+			line-height: 14px;
+			width: 100%;
+			left: 0px;
+			text-align: center;
+}
+.instNextClick{
+	position: absolute;
+    top: -16px;
+    left: -15px;
+    background: url(../../../pages/images/common/instNext.png) no-repeat;
+    width: 194px;
+    height: 51px;
+}
+
+.livr {
+position: absolute;
+display: none;
+    top: 128px;
+    left: 434px;
+}
+.livrShown {
+display: none;
+position: absolute;
+    top: 128px;
+    left: 432px;
+}
+.livercorrect {
+display: none;
+position: absolute;
+    top: 128px;
+    left: 432px;
+}
+.bicep {
+position: absolute;
+left: 326px;
+top: 65px;
+display: none;
+
+}
+.bicepShown {
+position: absolute;
+left: 326px;
+top: 65px;
+display: none;
+
+}
+.leftArmcorrect {
+position: absolute;
+left: 326px;
+top: 65px;
+display: none;
+
+}
+.bicep1 {
+position: absolute;
+left: 308px;
+top: 249px;
+display: none;
+
+}
+.rightArmShoown {
+position: absolute;
+left: 308px;
+top: 249px;
+display: none;
+
+}
+.rightArmcorrect {
+position: absolute;
+left: 308px;
+top: 249px;
+display: none;
+
+}
+.bicepShown1 {
+position: absolute;
+left: 308px;
+top: 249px;
+display: none;
+}
+.bicep2 {
+position: absolute;
+left: 584px;
+top: 13px;
+display: none;
+}
+.leftThighcorrect {
+position: absolute;
+left: 584px;
+top: 13px;
+display: none;
+}
+.bicepShown2 {
+position: absolute;
+left: 584px;
+top: 13px;
+display: none;
+}
+.bicep3 {
+position: absolute;
+position: absolute;
+left: 611px;
+top: 168px;
+display: none;
+transform: rotate(-6deg);
+}
+.rightThighcorrect {
+position: absolute;
+position: absolute;
+left: 611px;
+top: 168px;
+display: none;
+transform: rotate(-6deg);
+}
+.bicepShown3 {
+position: absolute;
+left: 611px;
+top: 168px;
+display: none;
+transform: rotate(-6deg);
+}
+.brain {
+position: absolute;
+left: 135px;
+    top: 85px;
+display: none;
+
+}
+.braincorrect {
+position: absolute;
+left: 135px;
+    top: 85px;
+display: none;
+
+}
+.brainShown {
+position: absolute;
+left: 135px;
+    top: 85px;
+display: none;
+}
+.heart {
+    position: absolute;
+    left: 333px;
+    top: 119px;
+    display: none;
+
+}
+.heartcorrect {
+    position: absolute;
+    left: 333px;
+    top: 119px;
+    display: none;
+
+}
+.heartShown {
+    position: absolute;
+    left: 333px;
+    top: 119px;
+    display: none;
+}
+.lungs {
+    position: absolute;
+	left: 369px;
+    top: 89px;
+    display: none;
+}
+.lungs1 {
+    position: absolute;
+    left: 343px;
+    top: 144px;
+    display: none;
+}
+.lungsShown {
+    position: absolute;
+	left: 369px;
+    top: 86px;
+    display: none;
+}
+.lungsShown1 {
+    position: absolute;
+    left: 343px;
+    top: 144px;
+    display: none;
+}
+.leftLungcorrect {
+    position: absolute;
+	left: 369px;
+    top: 86px;
+    display: none;
+}
+.rightLungcorrect {
+    position: absolute;
+    left: 343px;
+    top: 144px;
+    display: none;
+}
+#lungs1 {
+    position: absolute;
+    top: 101px;
+    left: 385px;
+	display: none;
+}
+#lungs2 {
+    position: absolute;
+    top: 101px;
+    left: 385px;
+	display: none;
+}
+
+.kidney {
+	position: absolute;
+    left: 488px;
+    top: 134px;
+    display: none;
+    height: 103px;
+    width: 124px;
+}
+.kidneyShown {
+    position: absolute;
+    left: 496px;
+    top: 132px;
+    display: none;
+}
+.kidneycorrect {
+    position: absolute;
+    left: 496px;
+    top: 132px;
+    display: none;
+}
+.thigh {
+    position: absolute;
+    top: 47px;
+    left: 570px;
+    display: none;
+    left: 125px;
+    top: 9px;
+}
+.thighShown {
+    position: absolute;
+    top: 47px;
+    left: 570px;
+    display: none;
+    left: 125px;
+    top: 9px;
+}
+#lungsshown {
+cursor: pointer;
+}
+#lungsshown1 {
+cursor: pointer;
+}
+#brainshown, #livr, #bicepshown, #bicepshown1, #heartshown, #kidneyshown, #kidneyshown1, #thighshown, #thighshown1, .brainShown, .livrShown, .bicepShown, .heartShown, .lungsShown, .kidneyShown, .thighShown {
+cursor: pointer;
+}
+
+
+.brainShown, .livrShown, .bicepShown, .lungsShown, .heartShown, .kidneyShown, .thighShown, #livershownval {
+pointer-events: none;
+}
+
+.feedbackBox1 {
+	position: absolute;
+    top: 256px;
+    left: 250px;
+    width: 178px;
+    height: 126px;
+    background: url(../../../pages/images/Topic01/T01P22/feedback1.png) no-repeat;
+    background-position: center;
+    background-size: 178px 126px;
+	display: none;
+}
+.feedbackBox2 {
+	position: absolute;
+    top: 142px;
+    left: 400px;
+    width: 272px;
+    height: 235px;
+    background: url(../../../pages/images/Topic01/T01P22/feedback2.png) no-repeat;
+    background-position: center;
+    background-size: 272px 235px;
+	display: none;	
+}
+.text1 {
+	position: absolute;
+    top: 80px;
+    left: 23px;
+    font-size: 13px;
+}
+
+.text2 {
+    position: absolute;
+    top: 12px;
+    left: 178px;
+    font-size: 13px;
+    width: 80px;
+    height: 40px;
+    text-align: center;
+    line-height: 19px;
+}
+
+.organShowed {
+display: block;
+}
+
+.bottomTxt {
+    position: absolute;
+    top: 460px;
+    left: 920px;
+}
+
+.cSubmitBtn {
+    background: #959594;
+    font-family: OpenSansRegular;
+    font-size: 18px;
+    padding: 5px 15px;
+    text-transform: lowercase;
+    color: #ffffff;
+    border-radius: 5px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    text-transform: capitalize;
+    line-height: 21px;
+    border: 2px solid transparent;
+	display: none;
+}
+
+.cSubmitBtn.enable:hover {
+    border: 2px solid #707070;
+    background: transparent;
+    color: #5B5B5B;
+}
+
+.cSubmitBtn.active {
+    background: #5B5B5B;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.cSubmitBtn.active:hover {
+    border: 2px solid #707070;
+    background: #ffffff;
+    color: #000000;
+}
+
+.kidneyShown, .livrShown, .heartShown, .lungsShown1, .lungsShown, .bicepShown3, .bicepShown2, .bicepShown1, .bicepShown, .brainShown {
+pointer-events: none;
+}
+
+.clsAllTabs1{
+    position: absolute;
+    height:406px;
+    width: 997px;
+    top: 103px;
+    right:20px;
+	left:2px;
+	box-shadow: 0px 1px 4px -1px rgba(0,0,0,0.75);
+	border-radius:5px;
+	background-color:white;
+	background-position: left;
+
+	display:none;
+}

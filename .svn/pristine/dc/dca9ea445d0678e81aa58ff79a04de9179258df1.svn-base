@@ -1,0 +1,877 @@
+<!DOCTYPE HTML>
+
+<html>
+
+
+
+<head>
+
+    <title></title>
+
+	<style>
+	 /* Sliding entrances */
+@-webkit-keyframes slideInDown {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInDown {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__slideInDown {
+  -webkit-animation-name: slideInDown;
+  animation-name: slideInDown;
+}
+@-webkit-keyframes slideInLeft {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInLeft {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__slideInLeft {
+  -webkit-animation-name: slideInLeft;
+  animation-name: slideInLeft;
+}
+@-webkit-keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(50%, 0, 0);
+    transform: translate3d(50%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(50%, 0, 0);
+    transform: translate3d(50%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__slideInRight {
+  -webkit-animation-name: slideInRight;
+  animation-name: slideInRight;
+}
+@-webkit-keyframes slideInUp {
+  from {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInUp {
+  from {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__slideInUp {
+  -webkit-animation-name: slideInUp;
+  animation-name: slideInUp;
+}
+	.mainContainer {position: absolute;width: 100%;height: 545px;left: 0px;top: 0px;opacity: 1;}
+	.clsTabPopup{position:absolute;width:1085px;height:540px;top:0;left:0}
+	.sectionTop{position:absolute;top:0;height:30px;width:100%;padding:16px 0}
+	.sectionContent{position:absolute;top:20px;height:491px;width:1055px;left:15px;right:15px; color:#000}
+	.topImgCnt{position:relative}
+	.small_expand{
+    background: url(pages/images/Topic01/T01P22/small_expand.svg) !important;
+            position: absolute;
+            cursor: pointer;
+            width: 29px;
+            height: 29px;
+            bottom: 10px;
+    right: 10px;
+            background-position: 0px 0;
+            transition: all 0.2s;    
+            background-size: cover !important;
+            background-repeat:no-repeat ;
+            display:none;
+            opacity: .6;
+  }
+  .small_expand:hover{
+    opacity: 1;
+  }
+  .open_map{background:url(pages/images/Topic01/T01P23/small_expand.png) no-repeat!important;width:28px;height:28px!important;position:absolute!important;bottom:24px;right:10px;display:none;left:inherit!important;top:inherit!important;float:inherit!important;text-decoration:none!important;border-radius:inherit!important;margin-left:0!important;background-color:inherit!important;padding:0!important}
+	/* , */
+  .open_map:hover{background:url(pages/images/Topic01/T01P23/small_expand_hover.png) no-repeat!important}
+	.small_expand1{background:url(pages/images/Topic01/T01P23/small_expand.png) no-repeat!important;width:28px;height:28px!important;position:absolute!important;bottom:7px;right:10px;display:none;left:inherit!important;top:inherit!important;float:inherit!important;text-decoration:none!important;border-radius:inherit!important;margin-left:0!important;background-color:inherit!important;padding:0!important}
+	.small_expand1:hover{background:url(pages/images/Topic01/T01P23/small_expand_hover.png) no-repeat!important}
+	.open_map{right:33px;margin-top:2px}
+	.sectionLeft{height:100%;width:264px;background:#E0F6FB;box-shadow:0 1px 9px -4px rgba(0,0,0,0.75);-webkit-box-shadow:0 1px 9px -4px rgba(0,0,0,0.75);-moz-box-shadow:0 1px 9px -4px rgba(0,0,0,0.75);border-bottom-left-radius:7px;-webkit-border-bottom-left-radius:7px;-moz-border-bottom-left-radius:7px}
+	.sectionRight{width:790px;height:507px;top:0;position:absolute;left:264px}
+	.rightTop{height:42px;left:5px;position:relative}
+	.rightTop a{left:0;top:0;padding:0 65px;background:#fff;margin:0;position:relative;float:left;margin-left:-5px;font-family:OpenSansSemiBold;text-decoration:none;color:#000;height:42px;line-height:42px;border-top-right-radius:5px;-webkit-border-top-right-radius:5px;-moz-border-top-right-radius:5px;font-size:16px;cursor:default}
+	.sectionRight .assessmentShow a{cursor:default}
+	.rightTop a.active{border-top-right-radius:5px;-webkit-border-top-right-radius:5px;-moz-border-top-right-radius:5px;background:#3A5569;margin-right:0;z-index:10;color:#fff}
+	.rightTop a.active.cdefault{cursor:default}
+	.rightTop a.active:after,.rightTop a.active:before,.rightTop a.active:hover:before{top:98%;left:45%;border:solid transparent;content:" ";height:0;width:0;position:absolute;pointer-events:none}
+	.rightTop a.active:after,.rightTop a.active:hover:after{border-top-color:#3A5569;border-width:10px;margin-left:0}
+	.rightTop a.active:before,.rightTop a.active:hover:before{border-top-color:#3A5569;border-width:10px;margin-left:0}
+	.rightTop a.active:nth-child(2),.rightTop a.active:hover:nth-child(2){-webkit-border-top-left-radius:5px;border-top-left-radius:5px;-moz-border-top-left-radius:5px}
+	.rightTop a:nth-child(2){-webkit-border-top-left-radius:5px;border-top-left-radius:5px}
+	.sectionContentArea{background:#fff;height:465px;border-top-right-radius:5px;-webkit-border-top-right-radius:5px;-moz-border-top-right-radius:5px;border-bottom-right-radius:5px;-webkit-bottom-top-right-radius:5px;-moz-border-bottom-right-radius:5px}
+	#topImgCnt1{background: url(pages/images/Topic01/T01P23/leftimg.png) no-repeat top center; background-size:cover; height:100%; width:100%; border-radius:5px 0px 0px 5px}
+	#imgPopup1 {background: url(pages/images/Topic01/T01P23/popupimg.png) no-repeat; background-size:contain;}
+	/*#case_study_popup .modalContent {width:65%; height:420px; border-radius:10px}
+	#case_study_popup .modalContent .modalinner{ padding:30px; position:relative}
+	#imgPopup0{ background-size:100% 100%; width:100%; height:360px}
+	#case_study_popup .modalContent .modalinner .modalclose{ position:absolute; top:5px; right:0px; width:30px; height:30px }
+	#case_study_popup .modalContent .modalinner .modalclose .modalcloseicon{background:url(pages/images/Topic01/T01P23/close-icon.png) no-repeat; background-size:24px 24px; width:24px; height:24px ; cursor:pointer}
+	#case_study_popup .modalContent .modalinner .modalclose .modalcloseicon:hover{background:url(pages/images/Topic01/T01P23/close-hover-icon.png) no-repeat; background-size:24px 24px; width:24px; height:24px }
+	#case_study_popup .closepopup{ display:none} 
+	#case_study_popup .modalTextBottom{ display:none}
+	#case_study_popup .popover.left-arrow{ display:none}*/
+	.sectionLeft{width: 384px; background:#fff}
+	.sectionRight{width: 670px;left: 384px;}
+	.sectionContentArea{ padding:30px;height:431px}
+	.iconlist{ margin:0px; padding:0px; list-style:none; width:90%}
+	.iconlist li{ position:relative; margin-bottom:3px; font-size:14px; line-height:22px; display: flex; flex-direction: row; align-items: center; padding-left:17px}
+	/*.iconlist li:before{ background:url(pages/images/Topic01/T01P23/bullet.png) no-repeat; left:0px; width:13px; height:13px; position:absolute; content:""; top:5px}*/
+	.iconlist li:before{content: ''; background: #000000; border-radius: 50%; width: 8px; height: 8px; position: absolute; top: 6px; left:0px}
+	.iconlist li a{ color:#D7722C; cursor:pointer}
+	.error1{ margin:15px auto 0px; border:solid 1px #F6A87A; border-radius:5px; width:94%; position:relative}
+	.error1 .error1_inner{ position:relative; padding:8px 10px 12px; color:#000; font-size:14px; line-height:18px; font-weight:bold; padding-left:60px;display: flex; flex-direction: row; align-items: center;}
+	.error1 .error1_inner img{ position:absolute; width:35px; height:34px; left:10px; top:10px;}
+	.topImgtxt{ background:rgba(0, 0, 0, 0.1); position:absolute; bottom:0px; padding:10px; color:#000;font-size:14px; line-height:22px;}
+	
+	.txt1{ font-size:16px; line-height:22px; margin:10px 0px}
+	
+	.sectionLeftBox{ position:relative; height:100%; padding:5px;width: 274px;}
+	.topImgboxinner{  border:double 6px #ccc; position:relative; height:100%}
+	.content2 .sectionRight .sectionContentArea{height: 265px; margin-top:100px}
+	.sectionContentAreainner{ width:80%; margin:20px 0px 0px 50px}
+	.sectionContentAreainner .contenttext{font-size:14px; line-height:20px; position:relative}
+	.sectionContentAreainner .contenttext2{ margin-top:30px}
+	#content1{ visibility:visible}
+	#list1, #list2, #list3, #list4, #list5, #error1, #txt1, #listd1,#listd2,#listd3, #listd4, #listd5,#listd6{visibility:hidden; opacity: 0;}
+	/*.small_expand{ display:block}*/
+	.poupdiv .modalContent{width:455px;  height:auto !important; padding:20px 18px; top:30%}
+		.poupdiv  .modalContent .heading{ color:#D7722C; font-size:18px; text-align:center}
+		.poupdiv  .modalContent .linenew{ height:2px; background:#D7722C; margin:5px auto;width:77%}
+	.poupdiv  .modalContent .desc{ color:#000; font-size:14px; text-align:left}
+	.poupdiv .popupclose{ position: absolute; top:10px; right:10px}
+	.poupdiv .popupclose img{ width:24px; height:24px; cursor:pointer}
+	.poupdiv .modalclose{ position:absolute; top:5px; right:0px; width:30px; height:30px }
+	.poupdiv .modalclose .modalcloseicon{background:url(pages/images/Topic01/T01P23/close-icon.png) no-repeat; background-size:24px 24px; width:24px; height:24px ; cursor:pointer}
+	.poupdiv .modalclose .modalcloseicon:hover{background:url(pages/images/Topic01/T01P23/close-hover-icon.png) no-repeat; background-size:24px 24px; width:24px; height:24px }
+	.popover.clickToEnlarge{ display:none}
+	        .listitem2 li span {
+            top: 0px;
+            position: relative;
+            left: -8px;
+            border: 2px solid #5B5B5B;
+            background: #fff;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+		.listitem2 li{ padding-left:30px}
+		.listitem2 li:before{ display:none}
+		.closepopup{
+      position: absolute;
+            width: 41px;
+            height: 41px;
+            background: url(pages/images/Topic01/T01P22/close_expand.svg) no-repeat;
+            bottom: 9px;
+            right: 16px;
+            cursor: pointer;
+            z-index: 1000;       
+            opacity: .6;
+            background-position: 0px 0;
+            transition: all 0.2s;    
+            background-size: cover !important;
+            background-repeat:no-repeat ;
+    }
+        .open_map_close {
+            position: absolute;
+            width: 92px;
+            height: 47px;
+            background: url(pages/images/Topic01/T01P22/close_expand_hover.png) no-repeat;
+            bottom: 30px;
+            right: -47px;
+            cursor: pointer;
+            z-index: 1000;
+            text-decoration: none;
+        }
+        .closepopup:hover{
+          opacity: 1;
+        }
+        
+        /* , */
+        .open_map_close:hover {
+            background: url(pages/images/Topic01/T01P02/close_expand_hover.png) no-repeat;
+        }
+		.modalContent{box-shadow:initial !important; background:transparent !important;width: 671px;height: auto;}
+		.txt1 {
+            margin-bottom: 10px;
+            margin-top: 20px;
+        }
+		.modalTxtImg{ height:382px}
+		/* .modal .closepopup{bottom: 0px;} */
+	.modal .popover{bottom: 15px;}
+
+    .boxInst {
+  position: absolute;
+  top: 484px;
+  left: 860px;
+  top: 488px;
+  left: 903px;
+  width: 175px;
+  height: 30px;
+  display: none;
+  z-index: 99999;
+}
+
+.ul-class{
+    margin-left: -5.5%;
+    list-style-image:none;
+    margin-top: 4px;
+  }
+  .bottom_11{
+    bottom: 11px!important;
+    right: 49px!important;
+  }
+	</style>
+
+</head>
+
+
+
+<body>
+
+    <div class="pg-pageContent" UNSELECTABLE="on">
+        <div id="TabPopup5" class="clsTabPopup">
+			<div id="content1" >
+				<div class="sectionContent">
+					<div class="sectionLeft">
+						<div class="topImgCnt" id="topImgCnt1">
+							<div class="popover left-arrow clickToEnlarge bottom_11">
+								<div class="arrow" style="top: 50%;"></div>
+								<div class="popover-content">Click to enlarge image.</div>
+							</div>
+							<a href="javascript:void(0);" title="Click to enlarge image" class="small_expand zoom_btn" click_id="1">&nbsp;</a>
+						</div>
+					</div>
+					<div class="sectionRight">
+						<div class="firstShow">
+							
+							<div class="sectionContentArea">
+								<ul class="iconlist">
+									<li id="list1">Prematurity and low birth weight</li>
+									<li id="list2">Preterm labor</li>
+									<li id="list3">Preterm rupture of membranes</li>
+									<li id="list4">Rupture of membranes longer than 18 hours</li>
+									<li id="list5">Intraamniotic infection which is also referred to as chorioamnionitis</li>
+                                    <li id="listd1"><span></span> Recent maternal infection or illness</li>
+									<li id="listd2"><span></span> Maternal genitourinary tract infection,
+                                        including urinary tract infection and sexually transmitted disease</li>
+									<li id="listd3"><span></span> Intrapartum fetal distress</li>
+								</ul>
+						
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="modal" id="case_study_popup">
+                <div class="modalContent" unselectable="on">
+					<div class="modalinner">
+						<div class="modalTxtImg" unselectable="on"></div>
+						<a class="closepopup zoom_close_btn" href="javascript:void(0)" title="Click to Close"></a>
+						<!-- <div class="clickToContinue expandImgTxtRight clickToClose">Click to Close</div> -->
+						<div class="popover left-arrow">
+							<div class="arrow" style="top: 50%;"></div>
+						<div class="popover-content">Click to close image.</div>
+						</div>
+					</div>
+                </div>
+            </div>
+			
+			<div class="modal poupdiv" id="popup">
+				<div class="modalContent" unselectable="on">
+					<div class="popupclose modalclose" ><div class="modalcloseicon"></div></div>
+					<div class="heading">Purulent</div>
+					<div class="linenew"></div>
+					<!-- <div class="desc">Refers to the presence of pus or drainage of pus. Pus is a thick yellow or green discharge that is composed of dead white blood cells, bacteria, tissue debris, and serum. Pus is produced by infected tissue.</div> -->
+				</div>
+			</div>
+			
+        </div>
+    </div>
+    <!--- Main Container--->
+    <div class="boxInst">
+        <div class="instNextClick"></div>
+        <div class="next_click"><em> Click Next to continue.</em></div>
+    </div>
+
+    <script>
+	manifest = [{
+        src: 'pages/images/Topic01/T01P02/img2.png',
+        id: '1'
+    },
+    {
+        src: 'pages/images/Topic01/T01P02/image_02_small.png',
+        id: '2'
+    },
+    {
+        src: 'pages/images/Topic01/T01P02/small_graph.png',
+        id: '3'
+    },
+
+];
+
+
+var audioPath = "pages/audio/Topic01/T01P23/T01P23";
+clickViewMoreInfo();
+var currCue = 0;
+var idd = 0;
+var __curState = 0;
+var clickTabCount = 0;
+var clickTabCount1 = 0;
+
+var updateContentArray = [
+    { 
+		time: "0", carry: "", event: "", show: "", hide: "", 
+		transcript: "Perinatal risk factors for neonatal infection include the following:<ul class='ul-class'><li> Prematurity and low birth weight,</li><li> Preterm labor,</li><li> Preterm rupture of membranes,</li><li> Rupture of membranes longer than 18 hours</li><li> Intraamniotic infection which is also referred to as chorioamnionitis</li><li> Recent maternal infection or illness</li><li> Maternal genitourinary tract infection, including urinary tract infection and sexually transmitted disease</li><li> Intrapartum fetal distress</li></ul> </p><div style='margin-top: -10px;'>Click Next to continue.</div>" 
+	},
+	{ 
+		time: "3", carry: "", event: "", show: "#list1", hide: "", 
+		transcript: "" 
+	},
+	{ 
+		time: "6", carry: "", event: "", show: "#list2", hide: "", 
+		transcript: "" 
+	},
+	{ 
+		time: "8", carry: "", event: "", show: "#list3", hide: "", 
+		transcript: "" 
+	},
+	{ 
+		time: "9.5", carry: "", event: "", show: "#list4", hide: "", 
+		transcript: "" 
+	},
+	{ 
+		time: "14", carry: "", event: "", show: "#list5", hide: "", 
+		transcript: "" 
+	},
+	{ 
+		time: "23", carry: "", event: "", show: "#txt1", hide: "", 
+		transcript: "" 
+	},
+	{ 
+		time: "26", carry: "", event: "", show: "#listd1", hide: "", 
+		transcript: "" 
+	},
+	{ 
+		time: "29", carry: "", event: "", show: "#listd2", hide: "", 
+		transcript: "" 
+	},
+	{ 
+		time: "33", carry: "", event: "", show: "#listd3", hide: "", 
+		transcript: "" 
+	},
+	{ 
+		time: "37", carry: "", event: "", show: "#listd4", hide: "", 
+		transcript: "" 
+	},
+	{ 
+		time: "40", carry: "", event: "", show: "#listd5", hide: "", 
+		transcript: "" 
+	},
+	{ 
+		time: "44", carry: "", event: "", show: "#listd6", hide: "", 
+		transcript: "" 
+	},
+	{ 
+		time: "47", carry: "", event: "", show: "#error1", hide: "", 
+		transcript: "" 
+	},
+];
+
+
+
+function fnAudioFinishItemComp() {
+
+    fnAudioFinishPageComp();
+
+}
+
+var __dataXml;
+
+var audplayer = document.getElementById('audioplayer');
+
+$(document).ready(function() {
+restrictBacknMenuOnAssistment();
+//$(".clickToEnlarge").show();
+       // $(".small_expand").show();
+       // $(".small_expand1").show();
+    bindClickableHotspot();
+    disableNextBtn();
+	//$(".clickToEnlarge").show();
+       // $(".small_expand").show();
+        //$(".small_expand1").show();
+
+    var ele = document.getElementsByTagName('div');
+
+    for (var i = 0; i < ele.length; i++) {
+
+        ele[i].setAttribute("unselectable", "on");
+
+    }
+
+    var n = isInArray("M1L0T1P23", gCompPageArr);
+
+    if (n == true) {
+
+        enableNextBtn();
+
+        // fnGlowNextBtn();
+
+        fnDesiableNext(false)
+
+    }
+
+});
+
+
+
+function audioReset() {
+
+    gAudioId = "";
+
+    onTimelineEnd();
+
+}
+
+
+
+function isInArray(value, array) {
+
+    return array.indexOf(value) > -1;
+
+}
+
+
+
+
+
+
+
+function fnPlaySectionAudio(gCurrentIndex) {
+
+    indexAudio = (gCurrentIndex);
+
+    audioId = "audio_" + gCurrentIndex;
+
+    gAudioId = audioId;
+
+    fnHideShowAudioPlayer(false);
+
+    updateContentArray = eval("updateContentArray" + (gCurrentIndex));
+
+    initAudioPlayer(gItemAudioPath[gCurrentIndex])
+    
+
+}
+
+
+
+
+
+function fnCompletion() {
+
+    console.log("end");
+
+    gCompPageArr.push("M1L0T1P23");
+
+    var _getCount1 = clickTabCount + clickTabCount1;
+
+    // if (_getCount1 >= 2) {
+
+    console.log("start new");
+
+    enableNextBtn();
+
+    $('.boxInst').show()
+
+    fnAudioFinishItemComp();
+
+    // }
+
+
+
+}
+
+
+
+function fnOnAudioComplete() {
+
+    if (gAudioId == "startAudio") {
+
+        console.log("start audio");
+
+        //   enableNextBtn();
+
+        //  fnAudioFinishItemComp();
+
+        // we need to replace this
+
+        //fnClick();
+
+
+        audplayer.pause();
+
+        audplayer.currentTime = 0;
+
+        $(".clickToEnlarge").show();
+        $(".small_expand").show();
+        $(".small_expand1").show();
+        fnCompletion();
+        $('.boxInst').show();
+       
+    } else {
+      
+        fnCompletion();
+
+        enableNextBtn();
+
+        $('.boxInst').show();
+        $(".clickToEnlarge").show();
+        $(".small_expand").show();
+        $(".small_expand1").show();
+
+        gCompPageArr.push("M1L0T1P23");
+
+        fnAudioFinishItemComp();
+
+        audplayer.pause();
+
+        audplayer.currentTime = 0;
+
+
+
+    }
+
+}
+
+var correctOptions = [0];
+
+
+
+function bindClickableHotspot() {
+
+    console.log("clicked");
+
+
+    $('.option').addClass('aactive'); //.css({ 'cursor': 'pointer' });
+
+    $('.option').off().on('click', function() {
+
+        $('.option').removeClass('clicked');
+
+        $(this).addClass('clicked');
+
+        if ($('.option.clicked').length >= 1) {
+
+            $('.cSubmitBtn').addClass('active');
+
+            $('.cSubmitBtn.active').off().on('click', function() {
+
+                submitClick();
+
+
+            });
+
+        } else {
+
+            $('.cSubmitBtn').removeClass('active');
+
+        }
+
+    });
+
+
+
+}
+
+
+
+function submitClick() {
+    tinCanWrapper.sendStatementData("answered", "baby-conrad-postnatal-course", "Baby Conrad - Postnatal Course - Now take a look at Baby Conrad's vital signs shortly after birth. Are they normal or abnormal?");
+
+    $('.cSubmitBtn.active').hide();
+
+    console.log("clicked");
+
+    // fnCompletion()
+
+    enableNextBtn();
+    fnDesiableNext(false);
+    gCompPageArr.push("M1L0T1P23");
+    // $(".leftCnt span.addcolor").addClass("yellowclr");
+
+    //	var selected = $('.clicked').length;
+
+
+
+    var incorrectCount = 0; //, correctCount = 0;
+
+    $('.option').each(function() {
+
+
+
+        if ($(this).hasClass('clicked') && ($.inArray($(this).index(), correctOptions) == -1)) {
+
+            $(this).addClass('wrong');
+
+            incorrectCount++;
+
+        }
+
+        //else if($(this).hasClass('clicked') && ($.inArray($(this).index(), correctOptions) != -1)){
+
+        //	correctCount++;
+
+        //}
+
+
+
+        $(this).off(); //.removeClass('clicked');
+
+    });
+
+
+
+    $(correctOptions).each(function(i, val) {
+
+        $('.option').eq(val).addClass('correct');
+
+    });
+
+    // if (incorrectCount == 0 && correctCount== correctOptions.length) {
+
+    //     fnPlaySectionAudio(1);
+
+    // //    $('.downloadText').show();
+
+    // } else {
+
+    //     fnPlaySectionAudio(0);
+
+    // }
+
+
+
+    if (incorrectCount == 0) {
+
+        fnPlaySectionAudio(0);
+
+        // $('.downloadText').show();
+
+    } else {
+
+        fnPlaySectionAudio(1);
+
+    }
+
+    $('.option').off().removeClass('aactive'); //.css({'cursor':'default'});
+
+    $('.cSubmitBtn').removeClass('active');
+
+    $('.informationRight').show();
+
+}
+
+$(".glossarytag").on("click", function() {
+glossaryFuncPageLevel();
+});
+
+$(".small_expand").off().on("click", function() {
+
+    pauseAudio();
+
+    //audioReset();
+    $("#TabPopup5 #case_study_popup.modal").show();
+
+    $("#TabPopup5 .sectionTop").addClass("blur");
+
+    $("#TabPopup5 .sectionContent").addClass("blur");
+
+    $(".modalTxtImg").attr('id', 'imgPopup' + $(this).attr('click_id'));
+
+    
+
+
+
+
+});
+
+$(".small_expand1").off().on("click", function() {
+
+    pauseAudio();
+
+    //audioReset();
+
+    $("#TabPopup5 .modal").show();
+
+    $("#TabPopup5 .sectionTop").addClass("blur");
+
+    $("#TabPopup5 .sectionContent").addClass("blur");
+    $('.boxInst').addClass("blur");
+
+    $(".modalTxtImg").attr('id', 'imgPopup' + $(this).attr('click_id'));
+
+    $('.modalTextBottom').hide();
+
+    $('#ModalTextBottom' + $(this).attr('click_id')).show();
+
+
+
+    $('.modalContent').addClass('maxBot');
+
+    $('.modalContent').removeClass('maxBot0');
+
+
+
+});
+
+$(".closepopup, .modalclose").off().on("click", function() {
+
+    playAudio();
+
+    //audioReset();
+
+    $("#TabPopup5 .modal").removeAttr("style");
+
+    $("#TabPopup5 .sectionTop").removeClass("blur");
+
+    $("#TabPopup5 .sectionContent").removeClass("blur");
+    $('.boxInst').removeClass("blur");
+
+});
+
+$(".popup").on("click", function() {
+
+                pauseAudio();
+
+                $("#TabPopup5 #popup").show();
+
+                $("#TabPopup5 .sectionTop").addClass("blur");
+
+                $("#TabPopup5 .sectionContent").addClass("blur");
+
+            });
+			$(".popupclose").on("click", function() {
+
+                playAudio();
+
+                $("#TabPopup5 #popup").removeAttr("style");
+
+                $("#TabPopup5 .sectionTop").removeClass("blur");
+
+                $("#TabPopup5 .sectionContent").removeClass("blur");
+
+            });
+function pauseAudio() {
+
+    if (!fnPauseAudio()) {
+
+        console.log(true);
+
+        fnPauseAudio()
+
+    } else {
+
+        playPauseAudio();
+
+        console.log(false);
+
+    }
+
+}
+
+function playAudio() {
+
+    if (!fnPauseAudio()) {
+
+        console.log(true);
+
+        playPauseAudio();
+
+    }
+
+}
+	</script>
+<!-- <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css"> -->
+
+    <!-- <script src="jsfiles/libs/jquery.mCustomScrollbar.concat.min.js"></script>
+</body>
+
+
+
+</html>
+	</script>
+<link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+
+    <script src="jsfiles/libs/jquery.mCustomScrollbar.concat.min.js"></script>
+</body> -->
+
+
+
+</html>

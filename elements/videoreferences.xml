@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root>
+	<resourceTitle><![CDATA[Video]]></resourceTitle>
+	<closeTitle><![CDATA[Close]]></closeTitle>
+	<Resources>
+		 <!-- Section 01 -->
+		 <!-- <Resource URL="" isSectionTitle="true" isPageID="false"><![CDATA[Getting Started]]></Resource> -->		 
+		  <!-- <Resource isSectionTitle="false" isPageID="false" URL="https://www.youtube.com/watch?v=fou0jucRUIA"><![CDATA[S T A B L E Model of Care ARAR Behaviors 2013]]></Resource>		  -->
+		 <!-- <Resource isSectionTitle="false" isPageID="false" URL="pages/video/foot_iv.mp4"><![CDATA[Foot IV insertion]]></Resource>
+		 <Resource isSectionTitle="false" isPageID="false" URL="pages/video/T01P24/Fetal.mp4"><![CDATA[Glycogen Stores: After Birth]]></Resource>	
+		 <Resource isSectionTitle="false" isPageID="false" URL="pages/video/hand_iv_insertion_video.mp4"><![CDATA[Hand IV insertion]]></Resource>				
+		 <Resource isSectionTitle="false" isPageID="false" URL="pages/video/T01P27/blood_stream02.mp4"><![CDATA[Inadequate Glycogen Stores: Preterm Infants]]></Resource>		  -->
+		 <Resource isSectionTitle="false" isPageID="false" URL="pages/video/blood_culture.mp4"><![CDATA[Blood Culture]]></Resource>
+	</Resources>
+</Root>

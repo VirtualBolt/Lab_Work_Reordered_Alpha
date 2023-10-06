@@ -1,0 +1,154 @@
+/*-----------------------Common CSS-----------------------*/
+body {
+	-webkit-user-select: none;
+	-ms-user-select:none;
+	-moz-user-select: none;
+	overflow:auto;
+}
+@font-face {
+	font-family: "HelveticaNeue-Bold";
+	font-style: normal;
+	font-weight: 400;
+	src: local('HelveticaNeue-Bold'), local('HelveticaNeue-Bold'), url('../fonts/HelveticaNeue-Bold.otf') format('truetype');
+}
+@font-face {
+	font-family: "HelveticaNeue-Light";
+	font-style: normal;
+	font-weight: 400;
+	src: local('HelveticaNeue-Light'), local('HelveticaNeue-Light'), url('../fonts/HelveticaNeue-Light.otf') format('truetype');
+}
+
+.mainContainer{
+	width:1024px;
+	height:768px;
+	margin: 0 auto;
+	overflow:hidden;
+}
+.hospitalContainer{
+	position: relative;
+    width: 1065px;
+    height: 605px;
+    top: 59px;
+    background: none;
+    background-repeat: no-repeat;
+    left: 10px;
+    overflow: hidden;
+}
+.gwrapper{
+	position: absolute;
+    width: 1064px;
+    height: 533px;
+    z-index: 2000;
+    background-color: #ffffff;
+    top: 0px;
+	border-radius:5px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+}
+.content{
+	position: absolute;
+    width: 1064px;
+    height: 478px;
+    top: 50px;
+    left: 0px;
+    background-repeat: no-repeat;
+    background: #fff;
+	border-bottom-right-radius:5px;
+	border-bottom-left-radius:5px;
+}
+.wordsList{
+	 position: absolute;
+    width: 1065px;
+    height: 50px;
+    top: 44px;
+    left: 0px;
+    line-height: 16px;
+}
+table{
+	position:absolute;
+	top:-2px;
+	left:2px;
+	border-spacing:19px;
+}
+td{
+	color:#5B5B5B;
+	text-align:center;
+	margin-left:50px;
+	font-size:20px;
+	cursor:pointer;
+}
+
+.gloassaryContainer{
+	position: relative;
+    width: 1065px;
+    height: 605px;
+    top: 59px;
+    background: none;
+    background-repeat: no-repeat;
+    left: 10px;
+    overflow: hidden;
+}
+#helptopbar{
+    position: absolute;
+    background-color: #5B5B5B;
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+    font-family: OpenSansRegular;
+    font-size: 36px;
+    left: -1px;
+    top: 0px;
+    width: 100%;
+    height: 50px;
+}
+img, object, embed, video{
+	width:100%;
+	height:100%;
+}
+
+#id_glosTitleText
+{
+	position: absolute;
+    color: #fff;
+    font-size: 22px;
+    left: 10px;
+    top: 10px;
+    width: 94%;
+    TEXT-ALIGN: CENTER;
+}
+.close_txt {
+	position: absolute;
+    width: 30px;
+    height: 23px;
+    top: 29px;
+    right: 11px;
+}
+#clsText {
+	position: absolute;
+    width: auto;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    font-family: OpenSansRegular;
+    font-size: 12px;
+    font-style: italic;
+    color: #fff;
+}
+#id_GlossaryContent
+{
+    position: absolute;
+    float: left;
+    height: 93%;
+    width: 100%;
+    top: 7.4%;
+}
+img.caseinfo{
+	width: 36px;
+    height: 31px;
+    position: relative;
+    right: 11px;
+}
+#id_glosTitleText span{
+	position: relative;
+    top:-8px;
+	left:10px;
+}

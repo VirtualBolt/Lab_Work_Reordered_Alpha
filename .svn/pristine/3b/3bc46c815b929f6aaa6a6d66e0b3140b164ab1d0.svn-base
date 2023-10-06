@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html class="">
+
+<head>
+
+<script language="javascript" type="text/javascript">
+	
+	
+	$(document).ready(function () {	
+	
+	/* $("#clsLinksClose").click(function(){			
+			disableHelpPopup();  
+	   }); 		*/
+        
+        // Below lines are added for 508 accessibility.
+        var arrTabIndexUpdate = ['#id_whiteSheenDiv'];
+        updateTabIndex(arrTabIndexUpdate, '', true, "#id_whiteSheenDiv");  
+		fnClickLink();
+	 });
+	  var popUpOpen = false;
+	
+	 function fnClickLink(){
+			$(".clsLink").removeClass("clsDisable");
+			$(".clsLink").off().not(".clsDisable").on("click",function(){
+					popUpOpen = true;
+				var url = $(this).attr("data-url");
+				var isLink = $(this).attr("isLink");
+				if(isLink=="true"){
+					window.open(url,"_blank");
+				}
+			});
+			fnCloseLinkPopup();
+		}
+	 function fnCloseLinkPopup(){
+			$("#id_whiteSheenDiv,.clsLinksClose").off("click").on("click", closePopup);
+		}
+		function closePopup(){
+				
+				
+			if(!popUpOpen){
+				$("#id_whiteSheenDiv").css({"display":"none"});
+				disableHelpPopup(); 
+				fnPlayAudio();
+				
+				
+			}
+			
+			popUpOpen = false;
+			
+		}
+	 
+	 
+</script>
+
+<style>
+.clsLinksClose{
+	position:absolute;
+	background: url('pages/images/Global/close.gif') no-repeat;
+	width: 25px;
+	height: 25px;
+	top: 26px;
+	right: 3px;
+	background-size: 100% 100%;
+
+}	
+.clsLinksClose:hover{
+	background: url('pages/images/Global/close_hover.png') no-repeat;
+	cursor:pointer;
+    background-size: 100% 100%;
+}
+.clsLinkPopupSheen{
+	position: absolute;
+	top: 102px;
+	left: 0px;
+	width: 1280px;
+	height: 555px;
+	background-color: rgba(255,255,255,0.8);
+	z-index:1;
+}
+.clsLinks {
+    position: absolute;
+    top: 38px;
+    width: 176px;
+    height: 25px;
+    right: 7px;
+    padding: 2px 6px;
+    background: #fff;
+	border:1px solid #669DD4;
+    color: #333;
+    font-size: 18px;
+    text-align: center;
+    z-index: 2;
+	opacity:0;
+}
+    .clsLinks:hover{
+	border:1px solid #f7bb26;
+	cursor:pointer;
+}
+.clsLinksVisited
+{
+    background: #f9f5fa !important;
+	border:1px solid #f7bb26 !important;
+	cursor:default !important;
+}
+.clslinkContainer{
+	display:none;
+	z-index:1;
+}
+#linkpopup{
+	position:absolute;
+	background: url('media/images/player/common/info_pop.png') no-repeat;
+	width: 447px;
+	height: 159px;
+	left: 784px;
+	top: 53px;
+	display: block;
+}
+.LinkPopText{
+	position: absolute;
+	top: 47px;
+	left: 30px;
+}
+#idLinkPopText2{
+	top: 84px;
+}
+.clsLink{
+	color: #0000ff;
+    text-decoration: underline;
+}
+.clsLink:hover:not(.clsDisable){
+	cursor: pointer;
+	color: #009cff;
+}
+</style>
+
+</head>
+<body >
+	<div id="id_whiteSheenDiv">
+		<div class="clsLinkPopupSheen"></div>
+			<div class="clslinkContainer" id="linkpopup">
+				<div class="clsLinksClose"></div>
+				<div class="LinkPopText">Need more information or assistance? </div>
+				<div class="LinkPopText" id="idLinkPopText2">Click <span islink="true" class="clsLink" data-url="https://visaasknow.service-now.com/askhr?id=hri_sc_cat_item&sys_id=af227bccdb24cb8070a6540adc9619e8">here</span> to submit any questions you may have about the information in this e-learning path.</div>
+				
+			</div>	
+	</div>
+</body>
+</html>
+
+

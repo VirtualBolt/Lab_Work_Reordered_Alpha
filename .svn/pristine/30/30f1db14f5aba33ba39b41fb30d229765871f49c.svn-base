@@ -1,0 +1,14 @@
+<html>
+	<script language="javascript">
+		function openWin() {
+			window.open('index.html','','width=1024,height=768,status=yes,resizable=yes')
+		}
+
+		//parent.frmContent.location.replace('start.htm')
+	</script>
+	<body>
+		<!-- <input type="button" value="Refresh Content" onClick="openWin();"> -->
+		<input type="button" value="Refresh Content" onclick="parent.frmContent.location.replace('index.html')">
+		<div id="DataReceived"></div>
+	</body>
+</html>

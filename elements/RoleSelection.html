@@ -1,0 +1,478 @@
+<!doctype html>
+<html class="">
+<!--<![endif]-->
+<head>
+<script>
+		manifest = [
+					{src:'media/images/player/RoleSelection/fail.png', id:'0'},
+					{src:'media/images/player/RoleSelection/home_small.png', id:'1'},
+					{src:'media/images/player/RoleSelection/Line01.png', id:'2'},
+					{src:'media/images/player/RoleSelection/Line02.png', id:'3'},
+					{src:'media/images/player/RoleSelection/MCQ_Hover.png', id:'4'},
+					{src:'media/images/player/RoleSelection/MCQ_Normal.png', id:'5'},
+					{src:'media/images/player/RoleSelection/MCQ_Selected.png', id:'6'},
+					{src:'media/images/player/RoleSelection/pop.png', id:'7'},
+					{src:'media/images/player/RoleSelection/Q.png', id:'8'},
+					{src:'media/images/player/RoleSelection/Thumbs_up.png', id:'9'}
+					];
+</script>
+
+<!-- Player and page level .js files to include -->
+<script language="javascript" type="text/javascript">
+	var audioPath = "media/audio/RoleSelection/RoleSelection";
+					
+		var currCue = 0;
+		var idd=0;	
+
+		var updateContentArray = [
+			{time:"0.1", carry:"", event:"", show:"", hide:"", transcript:"Read the instructions carefully and then click Submit.",animation:[{target:".clsQBgImage",duration:"0.5",activity:{"opacity":"1"}}]},
+			
+			{time:"0.5", carry:"", event:"", show:"", hide:"", transcript:"",animation:[{target:".clsRadioBtn,.clsRadioText,.clsSubmit",duration:"0.5",activity:{"opacity":"1"}}]},
+			
+			{time:"1", carry:"", event:"", show:"", hide:"", transcript:"",animation:[{target:".clsLine1",duration:"0.5",activity:{"width":"189px"}},{target:".clsLine2",duration:"0.5",activity:{"width":"177px"}}]},
+			
+			{time:"1.5", carry:"", event:"", show:"", hide:"", transcript:"",animation:[{target:".clsPatch",duration:"0.5",activity:{"height":"336px","opacity":"1"}}]},
+			
+			{time:"2", carry:"", event:"", show:"", hide:"", transcript:"",animation:[{target:".clsPatchText,.clsPatchImg",duration:"0.5",activity:{"opacity":"1"}}]},
+			
+			{time:"3.7", carry:"", event:"", show:"", hide:"", transcript:""}		
+		];
+		var updateContentArray1 = [
+				{time: "0.0",show: "",hide: "",event: "",transcript: "",animation:[{target:"",duration:"0.0",activity:{'':''}}]}, 
+				
+				{time: "0.3",show: "",hide: "",event: "",transcript: "",animation:[{target:"",duration:"0.0",activity:{'':''}}]}
+			];
+	
+		function fnOnAudioComplete(){
+			if(gAudioId=="startAudio"){
+				fnClickRadioBtn();
+				fnAudioFinishItemComp();
+				fnDesiableNext(true);
+			}
+				
+			
+		}
+	
+	function fnAudioFinishItemComp(){	
+			fnAudioFinishPageComp();
+			fnUpdatePageCompletionCounter(0);
+		}
+	
+	
+	$(document).ready(function () {
+		//gCurrPageInTopic=1;
+		var ele=document.getElementsByTagName('div');
+			for(var i=0;i<ele.length;i++){
+				ele[i].setAttribute("unselectable","on");
+			}
+		fnMenuDisable();
+		home_disable();
+		fnHideBtn();
+		//fnSetCurrSndObj(null);
+		//fnStartClick();
+		
+		//fnHideBtn();
+		/*if(isBookMarkPopupShown){
+				$(".clsTopic").removeClass("clsDisable");
+			}*/
+		
+		
+	 });
+	/* function fnStartClick(){
+					var selectedId;
+					var selectedIndex;
+					$(".clsTopic").removeClass("clsDisable");
+					$(".clsTopic").on("click",function(){
+						if(!$(this).hasClass("clsDisable")){
+							if($(this).attr("role")=="fresher"){
+								isFresher=true;
+							}
+							selectedId=$(this).attr("page-id");
+							//index = selectedId.replace(/^\D+/g, "");  
+							fnJumpToPageByID(selectedId);
+					}						
+					
+				});
+				fnSetCoreData();	
+	 }*/
+	 
+	  function fnClickRadioBtn(){
+		$(".clsRadioBtn").removeClass("clsRadioDisable").off().not("clsRadioDisable,clsRadioBtnSelected").on("click",function(){
+				$(".clsRadioBtn").removeClass("clsRadioBtnSelected");
+				$(this).addClass("clsRadioBtnSelected");
+				if($(this).attr("role") == "reFresher"){
+					fnClickSubmit(true);
+				}
+				else{
+					fnClickSubmit(false);
+				}
+				
+				
+		});
+	 }
+	 
+	 function fnClickSubmit(flag){
+	 
+		$(".clsSubmit").removeClass("clsSubmitDisable");
+		$(".clsSubmit").off().not("clsSubmitDisable").on("click",function(){
+				
+				$(".clsPopup").css({"display":"block"});
+				fnClickFinalAns(flag);
+		});
+	 }
+	 function fnClickFinalAns(flag){
+		$(".clsBtn").off().on("click",function(){
+					if($(this).attr("btnState") == "yes"){
+						//flag ? console.log("pre") : console.log("home");
+						$(".clsPopup").css({"display":"none"});
+						if(flag){
+							isFresher=false;
+							fnSetCoreData();	
+							fnJumpToPageByID("M1L1T1P1");
+						}
+						else{
+							isFresher=true;
+							fnSetCoreData();
+							//fnLoadIntro();
+							fnJumpToPageByID("M1L0T1P2");
+							
+							//fnLoadHome();
+						}
+					}
+					else{
+						$(".clsPopup").css({"display":"none"});
+					}
+			});
+	 }
+	 
+	 
+	 
+	 
+</script>
+<style>
+/*.gridContainer{
+	background:url("media/images/player/RoleSelection/Screen03_02.jpg");
+	
+}*/
+#homecontentbar{
+	position: absolute;
+    height: 580px;
+    width: 1191px;
+    top: 0px;
+    left: 0px;
+    display: block;
+}
+.clsQBgImage{
+	position : absolute;
+	background: url('media/images/player/RoleSelection/image01.png') no-repeat;
+	width: 1079px;
+	height: 47px;
+	top: 39px;
+	left: 0px;
+	right: 0px;
+	margin: 0 auto;
+	opacity:0;
+	
+}
+.clsQText{
+	position: absolute;
+	width: 1077px;
+	height: 27px;
+	top: 11px;
+	left: 0px;
+	text-align: center;
+	font-size: 20px;
+	color: #fff;
+}
+.clsRadioText{
+	position: absolute;
+	top: 99px;
+	font-size: 28px;
+	opacity:0;
+}
+#idRadioBtnText1{
+	left: 520px;
+}
+#idRadioBtnText2{
+	left: 671px;
+}
+
+
+
+.clsRadioBtn{
+	position : absolute;
+	background: url('media/images/player/RoleSelection/MCQ_Normal.png') no-repeat;
+	width: 22px;
+	height: 22px;
+	top: 101px;
+    display: block;
+	opacity:0;
+}
+.clsRadioBtn:hover:not(.clsRadioDisable){
+	background: url('media/images/player/RoleSelection/MCQ_Hover.png') no-repeat;
+	cursor:pointer;
+}
+.clsRadioBtnSelected{
+	background: url('media/images/player/RoleSelection/MCQ_Selected.png') no-repeat;
+}
+
+#idRadioBtn1{
+	left: 485px;	
+}
+#idRadioBtn2{
+	left: 635px;
+}
+
+.clsSubmit{
+	position: absolute;
+	background-color: #649FD5;
+	width: 103px;
+	height: 41px;
+	top: 149px;
+	left: 544px;
+	display: block;
+	opacity:0;
+}
+.clsSubmitDisable{
+	background-color: #BFBEBE;
+}
+.clsSubmit:hover:not(.clsSubmitDisable){
+	background-color: #F7B600;
+	cursor:pointer;
+}
+.clsSubmitText{
+	position: absolute;
+	top: 8px;
+	left: 19px;
+	font-size: 20px;
+	color: #fff;
+}
+.clsLine1{
+	position : absolute;
+	background: url('media/images/player/RoleSelection/Line01.png') no-repeat;
+	height: 116px;
+	top: 91px;
+	right: 721px;
+	background-position: top right;
+}
+.clsLine2{
+	position : absolute;
+	background: url('media/images/player/RoleSelection/Line02.png') no-repeat;
+	width: 0px;
+	height: 166px;
+    top: 91px;
+    left: 721px;
+}
+.clsPatch{
+	position: absolute;
+	background-color: #EFEDEE;
+	border-top: 4px solid #F7B600;
+	width: 554px;
+	height: 0px;
+	top: 204px;
+	left: 15px;
+	opacity:0;
+	
+}
+#idPatch2{
+		left:613px;
+}
+
+
+.clsPatchImg{
+	position:absolute;
+	opacity:0;
+}
+#idPatchImg1{
+	background: url('media/images/player/RoleSelection/Q.png') no-repeat;
+	width: 33px;
+    height: 37px;
+    top: 102px;
+    left: 34px;
+}
+#idPatchImg1_1{
+	background: url('media/images/player/RoleSelection/calender.png') no-repeat;
+	width: 33px;
+    height: 35px;
+    top: 46px;
+    left: 34px;
+}
+
+
+#idPatchImg2{
+	background: url('media/images/player/RoleSelection/Thumbs_up.png') no-repeat;
+	width: 30px;
+	height: 28px;
+	top: 163px;
+	left: 36px;
+}
+#idPatchImg3{
+	background: url('media/images/player/RoleSelection/fail.png') no-repeat;
+	width: 33px;
+	height: 37px;
+	top: 239px;
+	left: 34px;
+}
+#idPatchImg4{
+	background: url('media/images/player/RoleSelection/home_small.png') no-repeat;
+	width: 339px;
+	height: 153px;
+	top: 51px;
+	left: 101px;
+}
+#idPatchImg5{
+	background: url('media/images/player/RoleSelection/Q.png') no-repeat;
+	width: 33px;
+	height: 37px;
+	top: 284px;
+	left: 22px;
+}
+.clsPatchText{
+    position: absolute;
+    width: 458px;
+ left: 80px;
+	opacity:0;
+}
+
+#idPatchText1{
+	top: 13px;
+	left: 197px;
+}
+#idPatchText1_1{
+	top: 40px;
+}
+
+#idPatchText2{
+	top: 100px;
+}
+#idPatchText3{
+	top: 156px;
+}
+#idPatchText4{
+	top: 215px;
+}
+#idPatchText5{
+	top: 13px;
+	left: 201px;
+}
+
+#idPatchText6{
+	top: 223px;
+    left: 75px;
+}
+#idPatchText7{
+	top: 264px;
+    left: 75px;
+}
+.clsPopup{
+	position:absolute;
+	background: url('media/images/player/RoleSelection/pop.png') no-repeat;
+	background-size:100% 100%;
+	width: 434px;
+	height: 158px;
+	top: 38px;
+	left: 381px;
+	display:none;
+}
+.clsPopupText{
+	position: absolute;
+	top: 31px;
+	left: 113px;
+	font-size: 20px;
+}
+
+
+.clsBtn{
+    position: absolute;
+    background-color: #649FD5;
+    width: 103px;
+    height: 41px;
+    top: 85px;
+    left: 88px;
+    display: block;
+}
+.clsBtnDisable{
+	background-color: #BFBEBE;
+}
+.clsBtn:hover:not(.clsBtnDisable){
+	background-color: #F7B600;
+	cursor:pointer;
+}
+.clsBtnText{
+	position: absolute;
+    width: 100%;
+    top: 10px;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+}
+#idNo{
+	left: 248px;
+}
+
+
+
+
+
+
+</style>
+</head>
+<body UNSELECTABLE="on">
+<div class="pg-pageContent" UNSELECTABLE = "on">
+	
+		<div id="homecontentbar" UNSELECTABLE="on">
+			<!-- <div id="idTopic1" class="clsTopic clsDisable" page-id="M1L0T1P2" role="fresher">
+				<div id="topicName1" class="clsTopicName">Fresher</div>
+			</div>	
+			<div id="idTopic2" class="clsTopic clsDisable" page-id="M1L1T1P1" role="reFresher">
+				<div id="topicName2" class="clsTopicName">Refresher</div>
+			</div> 
+			<div class="ClsInsDiv">
+				<div class="ClsInsImg"></div>
+			<div class="ClsInsText">Select role.</div>-->
+			<div class="clsQBgImage"><div class="clsQText">Are you an experienced Manager, an Interviewer, or currently going through the hiring process for an open position?</div></div>	
+			<div class="clsRadioBtn clsRadioDisable" role="reFresher" id="idRadioBtn1"></div>	
+			<div class="clsRadioBtn clsRadioDisable" role="fresher"id="idRadioBtn2"></div>	
+			<div class="clsRadioText" id="idRadioBtnText1">Yes</div>	
+			<div class="clsRadioText" id="idRadioBtnText2">No</div>	
+			<div class="clsSubmit clsSubmitDisable"><div class="clsSubmitText">Submit</div></div>	
+			<div class="clsLine1"></div>
+			<div class="clsLine2"></div>
+			<div class="clsPatch" id="idPatch1">
+				<div class="clsPatchImg" id="idPatchImg1"></div>
+				<div class="clsPatchImg" id="idPatchImg1_1"></div>
+				<div class="clsPatchImg" id="idPatchImg2"></div>
+				<div class="clsPatchImg" id="idPatchImg3"></div>
+				<div class="clsPatchText" id="idPatchText1">If you select <span class="clsFontBold">Yes:</span></div>
+				<div class="clsPatchText" id="idPatchText1_1">You are confirming that you have a minimum of 3 years' experience with interviewing and/or hiring. </div>
+				<div class="clsPatchText" id="idPatchText2">Next, you will be presented with <span class="clsFontBold">scored</span> pre-assessment questions. </div>
+				<div class="clsPatchText" id="idPatchText3">If you score 100% in the pre-assessment, this course will be marked as completed. </div>
+				<div class="clsPatchText" id="idPatchText4">If you do not score 100% in the pre-assessment, then depending upon the pre-assessment score, you will be required to take mandatory modules. After you complete <span class="clsFontBold">all the mandatory</span> modules, you need to pass the <span class="clsFontBold">scored course assessment</span> to successfully complete this course.</div>
+			
+			</div>
+			<div class="clsPatch" id="idPatch2">
+				<div class="clsPatchImg" id="idPatchImg4"></div>
+				<div class="clsPatchImg" id="idPatchImg5"></div>
+				<div class="clsPatchText" id="idPatchText5">If you select <span class="clsFontBold">No:</span></div>
+				<div class="clsPatchText" id="idPatchText6">You will need to complete all the 7 modules. </div>
+				<div class="clsPatchText" id="idPatchText7">After you complete all the 7 modules, you need to pass the <span class="clsFontBold">scored course assessment</span> to successfully complete this course. </div>
+				
+			</div>
+			
+			<div class="clsPopup">
+				<div class="clsPopupText">Do you wish to proceed?</div>
+				<div class="clsBtn" btnState="yes" id="idYes"><div class="clsBtnText">Yes</div></div>
+				<div class="clsBtn" btnState="no" id="idNo"><div class="clsBtnText">No</div></div>
+				
+			</div>
+			
+			
+
+			
+		</div>
+		
+</div>
+
+
+</body>
+</html>

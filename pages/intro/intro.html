@@ -1,0 +1,548 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<script>
+			manifest = [
+						{src:'media/images/player/temp0/Gui-bg.png', id:'1'},
+						{src:'media/images/player/common/top_bar_sugar.png', id:'2'},
+						{src:'media/images/player/common/top_bar.png', id:'3'}
+						];
+		</script>
+		<style type="text/css">
+		.mainContainer {
+			position: absolute;
+					background: url('media/images/player/landing_page/landing-page-BG/Group 116.png');
+					background-position-x: 0%;
+					background-position-y: 0%;
+					background-repeat: repeat;
+					background-size: auto;
+					top: -25%;
+					left: -54%;
+					height: 1002px;
+					width: 1724px;
+					outline: none;
+					background-position: center;
+					background-repeat: no-repeat;
+					background-size: cover;
+		}
+		.player-container
+		{
+			background-image:none;
+			overflow:hidden;
+		}
+		 #myVideoIntro{
+			position: absolute;
+			height: 640px;
+			width: 1085px;
+			outline: none;
+			z-index: -1;
+
+		}
+
+		#VideoContainer{
+			position: absolute;
+			top: 0%;
+			left: 0%;
+			height: 658px;
+			width: 1085px;
+			outline: none;
+		}
+		.bgpatch {
+			position: absolute;
+			background:url('media/images/player/landing_page/bgpatch.png');
+			width: 172px;
+	    height: 172px;
+	    left: 860px;
+	    top: 250px;
+		}
+	  .CLSSSKIPBTNText{
+			position: absolute;
+			background:url('media/images/player/landing_page/continue.png');
+			background-size: 100% 100%;
+			width: 144px;
+	    height: 75px;
+	    top: 238px;
+	    right: 70px;
+		}
+
+		.CLSSTEXT{
+			position: absolute;
+			top: 17px;
+			left: 16px;
+			font-size: 14px;
+			font-family: OpenSansRegular;
+			width: 80%;
+			text-align: center;
+			color: #4D667B;
+		}
+		.CLSSSKIPBTN p {
+			margin-top: 3.1%;
+			color: #fff;
+
+		}
+		.landingPageICON{
+			position: absolute;
+			top: 190px;
+			right: 30px;
+			height: 126px;
+			width: 350px;
+			background: url('media/images/player/landing_page/landing-page-Icon.png');			
+			background-position: 0px 0px;
+			z-index: 1;			
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		.CLSSSKIPBTN {
+			position: absolute;
+			font-size: 22px;
+			top: 619px;
+			right: 50px;
+			height: 155px;
+			width: 180px;
+			background: url('media/images/player/landing_page/nextBtn1.png');		
+			background-position: 0px 0px;
+			z-index: 1;			
+			transition: all 0.3s ease;			
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		.CLSSSKIPBTN:hover
+		{
+			cursor: pointer;
+			background:url('media/images/player/landing_page/nextBtn-hover1.png');
+			background-position: 0px 0px;
+			z-index: 1;		
+			
+			background-repeat: no-repeat;
+			background-size: cover;
+			position: absolute;
+			font-size: 22px;
+			top: 619px;
+			right: 50px;
+			height: 155px;
+			width: 200px;
+			
+		}
+		#Skip{
+			display:block;
+		}
+		/*#Start{
+			visibility:visible;
+		}*/
+	.bodyClick
+	{
+		background: url('media/images/play_btn.png') no-repeat;
+		background-size: 100% 100%;
+		display: none;
+		position: absolute;
+		left: 44%;
+		top: 40%;
+	  width: 165px;
+	  height: 148px;
+
+	}
+	</style>
+
+	<script>
+		var audioPath = "";
+		var currCue = 0;	
+		var updateContentArray = [];	
+
+	$(document).ready(function(){		
+			$(".CLSSSKIPBTN").on("click",function(){
+					fnHideIntro();
+					fLoadCourse();		
+
+			});
+
+
+
+	});
+	
+	function fShowStart()
+	{
+		$(".CLSSSKIPBTN").css("display","none");
+		
+	}
+	function fLoadCourse()
+	{
+		$("body").css("");
+		fnHideIntro()
+		$('.gridContainer').css("visibility","visible");		
+		fnJumpToPageByID("M1L0T1P0");
+	}
+		function fnAudioFinishItemComp()
+		{
+			fnAudioFinishPageComp();
+			fnCheckAndMarkItemCompleted();
+
+		}
+
+		function fnCheckAndMarkItemCompleted() {		
+			$('.mainContainer').css("opacity","1");
+		}
+
+
+  function onClickiPad(){
+
+		videoObject.play();
+	}
+
+		</script>
+        <style type="text/css">
+				.menuWrap {
+				    display: block;
+				    width: 100%;
+				    height: 100%;
+				    position: relative;
+				    background: #fff;
+				    margin: 0px auto;
+				    padding: 10px;
+				    display: none;
+				    z-index: 999;
+				}
+				.introPreloader{
+					position: absolute;
+					top: 0%;
+					left: 0%;
+					background-color:rgba(255,255,255,1);
+					width:100%;
+					height:100%;
+					z-index:99999;
+					display:block;
+				  background-image: url(media/images/player/pre_loder_01.gif) ;
+				  background-repeat: no-repeat;
+				  /*background-size: 100% 100%;*/
+				  background-position: center center;
+				  display: none;
+				}
+				.subMenuWrap {
+				    /*background: lightgray;*/
+				    width: 49%;
+				    margin: 0px auto;
+				}
+				.buttons {
+				    /* border: 1px solid; */
+				    width: 32%;
+				    padding: 2% 0%;
+				    text-align: center;
+				    margin: 10px 0px 0px 26px;
+				    background: lightsalmon;
+				    color: blue;
+				    cursor: pointer;
+				}
+				.clsTxt{
+					position: absolute;
+					top: 13px;
+					left: 55px;
+					line-height: 45px;
+					color: #000000;
+					font-size: 18px;
+					font-family: OpenSansRegular;
+				}
+				#sugar1 {
+					position: absolute;
+					left: 25px;
+				}
+				#stbTxt {
+					position: absolute;
+					background: url("media/images/player/landing_page/txt00.png");
+					width: 323px;
+					height: 48px;
+					top: 15px;
+					left: 70px;
+				}
+				/* #tem1 {
+					position: absolute;
+					left: 25px;
+					color: #FFFFFF;
+				} */
+				#temTxt {
+					position: absolute;
+					background: url("media/images/player/landing_page/txt01.png");
+					width: 324px;
+					height: 48px;
+					top: 15px;
+					left: 70px;
+				}
+				#air1 {
+					position: absolute;
+					left: 25px;
+				}
+				#airTxt {
+					position: absolute;
+					background: url("media/images/player/landing_page/txt02.png");
+					width: 324px;
+					height: 48px;
+					top: 15px;
+					left: 70px;
+				}
+				#bp1 {
+					position: absolute;
+					left: 25px;
+				}
+				#bpTxt {
+					position: absolute;
+					background: url("media/images/player/landing_page/txt03.png");
+					width: 324px;
+					height: 48px;
+					top: 15px;
+					left: 70px;
+				}
+				#lab1 {
+					position: absolute;
+					left: 25px;
+				}
+				#labTxt {
+					position: absolute;
+					background: url("media/images/player/landing_page/txt04.png");
+					width: 324px;
+					height: 48px;
+					top: 15px;
+					left: 70px;
+				}
+				#emo1 {
+					position: absolute;
+					left: 25px;
+				}
+				#emoTxt {
+					position: absolute;
+					background: url("media/images/player/landing_page/txt05.png");
+					width: 324px;
+					height: 48px;
+					top: 15px;
+					left: 70px;
+				}
+				.tabClass:hover{
+					transition: .5s width ease-in-out;
+				  -webkit-transition: .5s width ease-in-out;
+					cursor: pointer;
+				}			
+				#sugar{
+					position: absolute;
+					background: url("media/images/player/landing_page/Sugar.png");					
+					top: 180px;
+					right: 721px;
+					height: 101px;
+					width: 396px;
+					background-position: 0px 0px;
+					z-index: 1;
+					transition: all 0.2s ease-in;		
+					background-repeat: no-repeat;
+					background-size: cover;
+				}
+				/* #sugar:hover{
+					position: absolute;
+					background: url("media/images/player/landing_page/Sugar-hover.png");					
+					top: 170px;
+					right: 721px;
+					height: 101px;
+					width: 396px;
+					background-position: 0px 0px;
+					z-index: 1;							
+					background-repeat: no-repeat;
+					background-size: cover;
+				} */
+			
+				#temperature{
+					position: absolute;
+					background: url("media/images/player/landing_page/TemperatureMenu.png");
+					background-position-x: 0%;
+					background-position-y: 0%;
+					background-repeat: repeat;
+					background-size: auto;
+					top: 286px;
+					right: 721px;
+					height: 101px;
+					width: 396px;
+					background-position: 0px 0px;
+					z-index: 1;
+					transition: all 0.2s ease-in;		
+					background-repeat: no-repeat;
+					background-size: cover;
+				}
+				/* #temperature:hover{
+					position: absolute;
+					background: url("media/images/player/landing_page/Temparature-hover.png");					
+					top: 282px;
+					right: 721px;
+					height: 101px;
+					width: 396px;					
+					background-position: 0px 0px;
+					z-index: 1;										
+					background-repeat: no-repeat;
+					background-size: cover;
+				} */
+
+				
+				#airway{
+					position: absolute;
+					background: url("media/images/player/landing_page/Airway.png");					
+					top: 392px;
+					right: 721px;
+					height: 101px;
+					width: 396px;					
+					background-position: 0px 0px;
+					z-index: 1;			
+					transition: all 0.2s;			
+					background-repeat: no-repeat;
+					background-size: cover;
+						}
+						/* #airway:hover{
+					position: absolute;
+					background: url("media/images/player/landing_page/Airway-hover.png");					
+					top: 393px;
+					right: 721px;
+					height: 101px;
+					width: 396px;					
+					background-position: 0px 0px;
+					z-index: 1;			
+					transition: all 0.2s;			
+					background-repeat: no-repeat;
+					background-size: cover;
+						} */
+
+				
+				#bloodpressure{
+					position: absolute;
+					background: url("media/images/player/landing_page/BloodPressure.png");					
+					top: 500px;
+					right: 721px;
+					height: 101px;
+					width: 396px;				
+					background-position: 0px 0px;
+					z-index: 1;			
+					transition: all 0.2s;			
+					background-repeat: no-repeat;
+					background-size: cover;
+				}
+
+				/* #bloodpressure:hover{
+					position: absolute;
+					background: url("media/images/player/landing_page/BloodPressure-hover.png");					
+					top: 504px;
+					right: 721px;
+					height: 101px;
+					width: 396px;					
+					background-position: 0px 0px;
+					z-index: 1;			
+					transition: all 0.2s;			
+					background-repeat: no-repeat;
+					background-size: cover;
+				} */
+				#labwork{
+					position: absolute;
+					background: url("media/images/player/landing_page/LabWork-hover.png");					
+					top: 607px;
+					right: 721px;
+					height: 101px;
+					width: 396px;					
+					background-position: 0px 0px;
+					z-index: 1;			
+					transition: all 0.2s;			
+					background-repeat: no-repeat;
+					background-size: cover;
+				}
+				/* #labwork:hover{
+					position: absolute;
+					background: url("media/images/player/landing_page/LabWork-hover.png");					
+					top: 615px;
+					right: 721px;
+					height: 101px;
+					width: 396px;					
+					background-position: 0px 0px;
+					z-index: 1;			
+					transition: all 0.2s;			
+					background-repeat: no-repeat;
+					background-size: cover;
+				} */
+				#emotionalsupport{
+					position: absolute;
+					background: url("media/images/player/landing_page/EmotionalSupport.png");					
+					top: 710px;
+					right: 721px;
+					height: 101px;
+					width: 396px;						
+					background-position: 0px 0px;
+					z-index: 1;			
+					transition: all 0.2s;			
+					background-repeat: no-repeat;
+					background-size: cover;
+				}
+				/* #emotionalsupport:hover{
+					position: absolute;
+					background: url("media/images/player/landing_page/EmotionalSupport-hover.png");					
+					top: 725px;
+					right: 721px;
+					height: 101px;
+					width: 396px;					
+					background-position: 0px 0px;
+					z-index: 1;			
+					transition: all 0.2s;			
+					background-repeat: no-repeat;
+					background-size: cover;
+				} */
+.subMenuWrap {
+    /*background: lightgray;*/
+    width: 49%;
+    margin: 0px auto;
+}
+.buttons {
+    /* border: 1px solid; */
+    width: 32%;
+    padding: 2% 0%;
+    text-align: center;
+    margin: 10px 0px 0px 26px;
+    background: lightsalmon;
+    color: blue;
+    cursor: pointer;
+}
+#custom-seekbar
+{
+  cursor: pointer;
+  height: 10px;
+  margin-bottom: 10px;
+  outline: thin solid orange;
+  /* overflow: hidden; */
+  position: relative;
+  width: 400px;
+	opacity: 1;
+}
+#custom-seekbar span
+{
+  background-color: orange;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 10px;
+  width: 0px;
+	opacity: 1;
+}
+
+  </style>
+	</head>
+	<body>			
+			<div class="mainContainer">		
+				<div class="landingPageICON"></div>
+					
+					<div class="_stb" id="sugar"></div>
+					
+				
+					<div class="_tem" id="temperature"></div>				
+				
+					<div class="_air" id="airway"></div>					
+				
+					<div class="_bp" id="bloodpressure"></div>					
+				
+					<div class="_lab" id="labwork"></div>					
+				
+					<div class="_emo" id="emotionalsupport"></div>					
+					<div class="CLSSSKIPBTN" id="Skip">
+					</div>
+				<div class="DISABLESKIPBTN" id="">
+				</div>
+				<div class="introPreloader"></div>
+				<div class="bodyClick"></div>
+			</div>
+	</body>
+</html>

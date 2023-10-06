@@ -1,0 +1,331 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        manifest = [{
+        src: 'pages/images/Topic01/T01P02/img2.png',
+        id: '1'
+    },
+    {
+        src: 'pages/images/Topic01/T01P02/image_02_small.png',
+        id: '2'
+    },
+    {
+        src: 'pages/images/Topic01/T01P02/small_graph.png',
+        id: '3'
+    },
+
+];
+    </script>
+
+
+<style type="text/css">
+.mainContainer {position: absolute;width: 1000px;height: 460px;left: 40px;top: 20px;opacity: 1;}
+.bottomTxt {position: relative;top: 0px;right: 0px;width: 60px; float:right; margin-right:65px;}
+.cSubmitBtn {background: #959594;font-family: OpenSansRegular;font-size: 18px;padding: 5px 15px;text-transform: lowercase;color: #ffffff;border-radius: 5px;border-radius: 5px;-webkit-border-radius: 5px;-moz-border-radius: 5px;text-transform: capitalize;line-height: 21px;border: 2px solid transparent;width: 60px;}
+.cSubmitBtn.enable:hover {border: 2px solid #707070;background: transparent;color: #5B5B5B;}
+.cSubmitBtn.active {background: #5B5B5B;color: #ffffff;cursor: pointer;}
+.cSubmitBtn.active:hover {border: 2px solid #707070;background: #ffffff;color: #000000;}
+.activityArea {background: #FFFFFF;border-radius: 6px;width: 90%;margin:40px auto 0px;-webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);-moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);border-radius: 5px;-moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);padding-bottom:11px}
+.activityArea{font-size:14px; line-height:20px; color:#000 !important} 
+.activityArea .answerChoicestitle{ background:#50697D; color:#fff; font-weight:bold; text-align:center; padding:5px; width:170px; border-radius:5px 0px 5px 0px}
+.activityArea .cont_txt2{ font-weight:bold; color:#000; margin:10px 0px 0px}
+.activityArea .cont_txt3{ font-weight:normal; color:#4D667B; margin:10px 0px 0px; font-style:italic}
+.leftCircle {width: 270px;height: 270px;position: absolute;top: -7px;left: -103px;border-radius: 50%;border: 1px solid black;background: #fff;text-align: center;background-size: 270px 270px;background-position: center; }
+.leftCircle img {top: 50%;transform: translateY(4%);}
+.rightCircle {width: 270px;height: 270px;position: absolute;top: -7px;left: 623px;border-radius: 50%;border: 1px solid black;background: #fff;text-align: center;background-size: 270px 270px;background-position: center;}
+.rightCircle img {top: 50%;transform: translateY(4%);}
+.answerChoices {position: relative;width: 96%;margin:20px auto 0px;}
+.inst {font-family: OpenSansSemiBold;position: absolute;bottom: 10px;right: 145px;font-size: 16px;}
+.boxInst {position: absolute;top: 489px;left: 905px;}
+.listcnt,.disableListcnt {position: relative;top: 0px;padding-right: 20px;margin-bottom: 7px;padding-bottom: 6px;font-size: 14px;border: 1px solid transparent;width: 97%;padding-right: 20px;cursor: pointer;}
+.listcnt.disabled .OptionTxtCLSS {cursor: default;}
+.answerChoices .listcnt:hover {border: 1px solid #999999;border-radius: 5px;-webkit-border-radius: 5px;-moz-border-radius: 5px;}
+.answerChoices .listcnt.disabled:hover {cursor: default;border: 1px solid transparent;border-radius: 0px;-webkit-border-radius: 0px;-moz-border-radius: 0px;}
+.answerChoices .listcnt.disabled .arrowHolder {cursor: default;}
+.OptionCLSS {position: relative;left: 31px;top: 1px;}
+.blur {-webkit-backface-visibility: hidden;-moz-backface-visibility: hidden;-ms-backface-visibility: hidden;-0-backface-visibility: hidden;-webkit-filter: blur(3px);-moz-filter: blur(3px);-ms-filter: blur(3px);-o-filter: blur(3px);filter: blur(3px);}
+.feedbackTxt {position: absolute;top: 446px;left: 256px;font-size: 16px;color: #000;font-family: OpenSansRegular;font-style: italic;width: 600px;text-align: center;display: none;}
+.OptionTxtCLSS {cursor: pointer;}
+.term {position: absolute;top: 225px;left: 114px;font-size: 16px;color: #fff;display: none;}
+.answerChoices .disabled {pointer-events: none;}
+.preterm {position: absolute;top: 225px;left: 101px;font-size: 16px;color: #fff;display: none;}
+.cont_txt1, .cont_txt2, .cont_txt3{ color:#000; padding-left:7px}
+.listcnt [type="checkbox"]:checked + label, .listcnt [type="checkbox"]:not(:checked) + label, .listcnt [type="radio"]:checked + label, .listcnt [type="radio"]:not(:checked) + label{color:#000;}
+.bottomTxt{margin-right: 55px;}
+
+.listcnt.rBtn [type="radio"]:checked + label:before,.listcnt.rBtn [type="radio"]:not(:checked) + label:before{content:'';position:absolute;left:0;top:0;width:15PX;height:15PX;border:2px solid #000;background:#fff;border-radius:50%}
+.listcnt.rBtn.clicked [type="radio"]:checked + label:after,.listcnt.rBtn.clicked [type="radio"]:not(:checked) + label:after{content:'';display:block;position:absolute;top:4px;left:4px;width:11px;height:11px;background:#000;border-radius:50%;border:none}
+.listcnt.rBtn.correctAnswer [type="radio"]:checked + label:after,.listcnt.rBtn.correctAnswer [type="radio"]:not(:checked) + label:after{content:'';display:block;position:absolute;top:4px;left:4px;width:11px;height:11px;border-radius:50%;background:#1b8102;border:none}
+.listcnt.rBtn.correctAnswer [type="radio"]:checked + label:before,.listcnt.rBtn.correctAnswer [type="radio"]:not(:checked) + label:before{border:2px solid #1b8102}
+.listcnt.rBtn.wrongAnswer [type="radio"]:checked + label:after,.listcnt.rBtn.wrongAnswer [type="radio"]:not(:checked) + label:after{content:'';display:block;position:absolute;top:4px;left:4px;width:11px;height:11px;border-radius:50%;background:#f00000}
+.listcnt.wrongAnswer [type="radio"]:checked + label:before,.listcnt.wrongAnswer [type="radio"]:not(:checked) + label:before{border:2px solid #f00000}
+</style>
+    <script>
+        var audioPath = "pages/audio/Topic01/T01P19/T01P19";
+        var gItemAudioPath = ["pages/audio/Topic01/T01P19/T01P19_1", "pages/audio/Topic01/T01P19/T01P19_1", "pages/audio/Topic01/T01P19/T01P19_2"];
+        var qAttempts = 0,
+            isCorrect = false;
+        var currCue = 0;
+        var idd = 0;
+        var __curState = 0;
+        var updateContentArray = [{
+            time: "0",
+            carry: "",
+            event: "",
+            show: "",
+            hide: "",
+            transcript: "Review this case, select the correct option, then click Submit."
+        }];
+
+        var popupSectionArray0 = [{
+            time: "0",
+            carry: "",
+            event: "",
+            show: "",
+            hide: "",
+            transcript: "Please try again."
+        }];
+        var popupSectionArray1 = [{
+            time: "0",
+            carry: "",
+            event: "",
+            show: "",
+            hide: "",
+            transcript: "Here is some feedback on your response. Exposure to HSV at birth increases the risk for disseminated herpes infection including central nervous system involvement. <br>Click Next to continue."
+        }];
+       
+		var popupSectionArray2 = [{
+            time: "0",
+            carry: "",
+            event: "",
+            show: "",
+            hide: "",
+            transcript: "That’s correct. <br>Click Next to continue."
+        }];
+        function fnAudioFinishItemComp() {
+            fnAudioFinishPageComp();
+        }
+
+        $(document).ready(function() {
+            // $(".answerChoices .listcnt").addClass("disabled");
+            disableNextBtn();
+            // $('.feedbackTxt').hide();
+            var ele = document.getElementsByTagName('div');
+            for (var i = 0; i < ele.length; i++) {
+                ele[i].setAttribute("unselectable", "on");
+            }
+            var n = isInArray("M1L0T1P19", gCompPageArr);
+            if (n == true) {
+                enableNextBtn();
+                // fnGlowNextBtn();
+                fnDesiableNext(false);
+            }
+
+        });
+
+        function audioReset() {
+            gAudioId = "";
+            onTimelineEnd();
+        }
+
+        function isInArray(value, array) {
+            return array.indexOf(value) > -1;
+        }
+
+        function fnPlaySectionAudio(gCurrentIndex) {
+            indexAudio = (gCurrentIndex);
+            audioId = "audio_" + gCurrentIndex;
+            gAudioId = audioId;
+            fnHideShowAudioPlayer(false);
+            updateContentArray = eval("popupSectionArray" + (gCurrentIndex));
+            initAudioPlayer(gItemAudioPath[gCurrentIndex])
+        }
+
+        var gTotalPopups = 2;
+        var temp = "";
+
+        function fnClick() {
+            $(".ClsTab").off("click").on("click", function() {
+                audioReset();
+                $(".boxInst").hide();
+                $("answerChoices .OptionCLSS").removeClass("correctAnswer").removeClass("wrongAnswer");
+            });
+        }
+
+        function fnCompletion() {
+            enableNextBtn();
+            fnAudioFinishItemComp();
+            $(".boxInst").show();
+            //gCompPageArr.push("M1L0T1P19");
+            audioStop();
+        }
+
+        function fnOnAudioComplete() {
+
+            if (gAudioId == "startAudio") {
+                fnClick();
+                $(".answerChoices .listcnt").removeClass("disabled");
+            } else {
+                if (qAttempts == 0) {
+                    $(".answerChoices .listcnt").removeClass("disabled");
+                }
+
+                if (qAttempts == 1 && isCorrect == false) {
+                    $(".answerChoices .listcnt").removeClass("disabled");
+                    $('.clicked').removeClass('wrongAnswer');
+                    $('.clicked').removeClass("clicked").removeAttr("clicked");
+                } else {
+                    $(".answerChoices .listcnt").addClass("disabled");
+                    if (qAttempts == 2 || isCorrect == true) {
+                        fnCompletion();
+                    }
+                }
+
+            }
+        }
+
+
+        function interSect(a, b) {
+            return $.grep(a, function(i) {
+                return $.inArray(i, b) > -1;
+            });
+        }
+
+
+
+        function pauseAudio() {
+            if (!fnPauseAudio()) {
+                console.log(true);
+                fnPauseAudio()
+            } else {
+                playPauseAudio();
+                console.log(false);
+            }
+        }
+
+        function playAudio() {
+            if (!fnPauseAudio()) {
+                console.log(true);
+                playPauseAudio();
+            }
+        }
+
+        $(document).off("click").on("click", '.answerChoices .listcnt', function(event) {
+            if (!$(this).hasClass("disabled")) {
+                event.preventDefault();
+                //audioReset();
+                if ($(this).attr("clicked") == "true") {
+                    $(this).removeClass("clicked").removeAttr("clicked");
+                    $(".cSubmitBtn").removeClass("active");
+                    //disableSubmitBtn(".cSubmitBtn");
+                } else {
+                    $('.clicked').removeClass("clicked").removeAttr("clicked");
+                    $(this).addClass("clicked").attr("clicked", "true");
+                    $(".cSubmitBtn").removeClass("active").addClass("active");
+                    // enableSubmitBtn(".cSubmitBtn");
+                }
+            }
+        });
+
+        $(".cSubmitBtn").on("click", function() {
+            if ($(this).hasClass("active")) {
+                // fnCompletion()                
+
+                // fnGlowNextBtn();
+
+                qAttempts++;
+                // $(".answerChoices .listcnt").addClass("disabled");
+                fnPlaySectionAudio(2);
+                if ($('.clicked').attr('curid') == 2) {
+                    tinCanWrapper.sendStatementData("answered", "knowledge-check-question-1", "A mother presents in labor at 37 weeks gestation to a community hospital. The admission history and physical exam reveal a complaint of itching and pain in the vaginal area. Inspection reveals a cluster of lesions suspicious for herpes simplex viral (HSV) infection. The mother delivers precipitously in bed. The infant is born with 3 small vesicles on the scalp but is otherwise doing well. Your thought process about this infant is:");
+                    $('.clicked').addClass('correctAnswer');
+                    $(this).hide();
+                    isCorrect = true;
+                    enableNextBtn();
+                    fnDesiableNext(false);
+                    volumeProgressState(false);
+                    gCompPageArr.push("M1L0T1P19");
+                    $(".answerChoices .listcnt").addClass("disabled");
+
+                } else {
+                    tinCanWrapper.sendStatementData("answered", "knowledge-check-question-1", "A mother presents in labor at 37 weeks gestation to a community hospital. The admission history and physical exam reveal a complaint of itching and pain in the vaginal area. Inspection reveals a cluster of lesions suspicious for herpes simplex viral (HSV) infection. The mother delivers precipitously in bed. The infant is born with 3 small vesicles on the scalp but is otherwise doing well. Your thought process about this infant is:");
+                    $('.clicked').addClass('wrongAnswer');
+                    $('#showList_2').addClass('correctAnswer');
+                    isCorrect = true;
+                    enableNextBtn();
+                    fnDesiableNext(false);
+                    volumeProgressState(false);
+                    gCompPageArr.push("M1L0T1P19");
+
+                    $(this).hide();
+                    fnPlaySectionAudio(1);
+                    $(".answerChoices .listcnt").addClass("disabled");
+
+                }
+
+            } else {
+
+            }
+        });
+        
+    </script>
+
+</head>
+
+<body>
+    <div class="pg-pageContent" UNSELECTABLE="on">
+        
+		<div class="activityArea">
+			<div class="answerChoicestitle">Question</div>
+			<div class="answerChoices">
+				<div class="cont_txt1">A mother presents in labor at 37 weeks gestation to a community hospital. The admission history and physical exam reveal a complaint of itching and pain in the vaginal area. Inspection reveals a cluster of lesions suspicious for herpes simplex viral (HSV) infection. The mother delivers precipitously in bed. The infant is born with 3 small vesicles on the scalp but is otherwise doing well. </div>
+				<div class="cont_txt2">Your thought process about this infant is:</div>
+				<div class="cont_txt3">Select the correct option and click Submit.</div>
+			</div>
+		</div>
+
+        <div class="activityArea">
+            <div class="answerChoicestitle">Answer Options</div>
+            <div class="answerChoices">
+				<div class="answerChoicesinner">
+					<div class="listcnt rBtn vlm" curid="1" id="showList_1">
+						<input type="radio" id="arrow_1">
+						<label for="arrow_1">
+						   A clinically well infant with only skin lesions at birth is a reassuring sign that more serious HSV infection is unlikely.
+						</label>
+					</div>
+					<div class="listcnt rBtn vlm" curid="2" id="showList_2">
+						<input id="arrow_2" type="radio">
+						<label for="arrow_2">Exposure to HSV at birth increases the risk for disseminated herpes infection including CNS involvement.</label>
+					</div>
+					<div class="listcnt rBtn vlm" curid="3" id="showList_3">
+						<input id="arrow_3" type="radio">
+						<label for="arrow_3">Signs of central nervous system and/or disseminated herpes infection typically appear within 72 hours of age, so discharge to home should be delayed until this infant is 4 days old.</label>
+					</div>
+				</div>
+            </div>
+			<div style="clear:both"></div>
+			<div class="bottomTxt">
+				<div class="cSubmitBtn">Submit</div>
+			</div>
+			<div style="clear:both"></div>
+        </div>
+		
+        <div class="feedbackTxt"></div>
+        
+       
+    </div>
+    <!--- Main Container--->
+    <div class="boxInst">
+        <div class="instNextClick"></div>
+        <div class="next_click"><em> Click Next to continue.</em></div>
+    </div>
+    </div>
+
+</body>
+
+</html>

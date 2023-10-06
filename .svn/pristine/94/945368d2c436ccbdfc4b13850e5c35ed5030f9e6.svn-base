@@ -1,0 +1,237 @@
+<!DOCTYPE HTML>
+<html>
+	<!--<![endif]-->
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta charset="utf-8">
+		<!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">		 -->
+
+		<title>Temperature</title>
+		<link href="css/font.css" rel="stylesheet" type="text/css">
+		<link href="css/jquery-ui-1.10.2.custom.css" rel="stylesheet" type="text/css">
+		<link href="css/layoutStyle_V2.css" rel="stylesheet" type="text/css">
+		<link href="css/globalStyle.css" rel="stylesheet" type="text/css">
+		<link href="css/exit.css" rel="stylesheet" type="text/css">
+		<link href="css/page.css" rel="stylesheet" type="text/css">
+		<link href="css/menu.css" rel="stylesheet" type="text/css">
+		<link href="css/templates/component.css" rel="stylesheet" type="text/css">
+		<link href="css/templates/assessment-page.css" rel="stylesheet" type="text/css">
+		<link href="css/detect-Orientation.css" rel="stylesheet" type="text/css">
+
+		<script src="jsfiles/libs/jquery-1.8.1.min.js"></script>
+    <script src="jsfiles/scripts/bgLoading.js"></script>
+    <script src="jsfiles/scripts/tabIndex.js"></script>
+    <script src="jsfiles/scripts/search.js"></script>
+		<script src="jsfiles/scripts/main.js"></script>
+		<script src="jsfiles/scripts/navigation.js"></script>
+		<script src="jsfiles/scripts/slider.js"></script>
+		<script src="jsfiles/scripts/detect-Orientation.js"></script>
+		<!-- <script src="pages/Assessment/CommonAssessment.js"></script>  -->
+
+		<script src="jsfiles/scripts/menu.js"></script>
+		<script src="jsfiles/libs/preloadjs-0.6.2.min.js"></script>
+		<script src="jsfiles/libs/jquery.ui.effect.js"></script>
+		<script src="jsfiles/libs/jquery.ui.effect-slide.js"></script>
+		<script src="jsfiles/libs/jquery.ui.core.js"></script>
+		<script src="jsfiles/libs/jquery.ui.widget.js"></script>
+		<script src="jsfiles/libs/jquery.ui.progressbar.js"></script>
+		<script src="jsfiles/libs/jquery-ui-1.10.2.custom.min.js"></script>
+		<script src="jsfiles/libs/jquery.ui.touch-punch.js"></script>
+		<script src="jsfiles/libs/jquery.touchwipe.js"></script>
+
+
+		<script src="scormjs/BVScorm.js"></script>
+		<!--	Below screipt added for MCQ / MRQ purpose 	-->
+		<script src="jsfiles/scripts/xmltoobj.js"></script>
+		<!-- <script src="jsfiles/scripts/assessment.js"></script> -->
+
+		<!-- Includes all of the following: TweenLite, TweenMax, TimelineLite, TimelineMax, EasePack, CSSPlugin, RoundPropsPlugin, BezierPlugin, AttrPlugin, DirectionalRotationPlugin -->
+		 <script src="jsfiles/minified/TweenMax.min.js"></script>
+		<script src="jsfiles/minified/TweenLite.min.js"></script>
+		<script src="jsfiles/minified/TimelineMax.min.js"></script>
+		<script src="jsfiles/minified/easing/EasePack.min.js"></script>
+		<script src="jsfiles/minified/plugins/CSSPlugin.min.js"></script>
+		<script src="jsfiles/minified/plugins/TextPlugin.min.js"></script>
+		<!-- Used For The Animation purpose  -->
+		<script src="jsfiles/libs/modernizr-latest.js"></script>
+
+
+		<!-- Player and page level .js files to include -->
+		<!--<script src="intro/runtime.js"></script>-->
+
+		<style>
+		.clsMockup{
+			position:absolute;
+			width:100%;
+			height:100%;
+			left:0%;
+			top:0%;
+			background: url("media/images/player/Final_GUI_withResource_details.png") no-repeat;
+			background-size: 100% 100%;
+			z-index:1;
+			opacity:0.5;
+		}
+			.scaleable-wrapper {
+			  padding: 0px;
+			  resize: both;
+			  position: relative;
+			  background: #666;
+			  height: 100%;
+			  width: 100%;
+			}
+			.ui-resizable-handle, .ui-resizable-handle{
+				display: none !important;
+			}
+			body{
+				overflow: hidden;
+			}
+
+			#element {
+			background:#666;
+			border:1px #000 solid;
+			cursor:move;
+			height:80px;
+			width:80px;
+			z-index:999;
+			padding:10px 10px 10px 10px;
+			visibility: hidden;
+		}
+
+		.Mydraggable {
+			position:absolute;
+			width: 90px;
+			height: 80px;
+		}
+		.position{
+			font-size: 18px;
+			color: #FFF;
+		}
+		.HighlightHelp{
+			position: absolute;
+			height: 28.9531px;
+			width: 36.5px;
+			top: 12.42188px;
+			left: 899.578px;
+			border: 2px #e4267b solid;
+			display:none;
+			opacity:0;
+
+		}
+
+		.clsHelp:hover + .HighlightHelp{
+			border: none;
+			}
+
+
+		</style>
+	</head>
+	<body style="" onunload="fUnload();">
+	<div id="scaleable-wrapper" class="scaleable-wrapper">
+
+		<div class="player-container">
+
+			<div class="courseIntro" style="width:100%; height:100%;position: absolute;z-index: 100000;" >
+			</div>
+			<div class="gridContainer clearfix">
+			<!-- <div class="clsMockup"></div> -->
+				<header name="topFrame" id="topFrame">
+					<div id="CourseTitleFrame" unselectable="on"></div>
+					<div id="TopicTitleFrame" UNSELECTABLE="on"></div>
+					<div id="pgTitleFrame"></div>
+					<!-- <div id="TopicImg"></div> -->
+					<!-- <div class="clsExitHighlight"></div> -->
+					<!-- <div id="clsExitBtn" title="Exit"></div> -->
+
+					<div id="clsMnuBtn" class="deactivMenu" title="Menu"></div>
+
+					<!-- <div id="clsHomeBtn" class="clsEnaHomeBtn" title="Home"></div>
+
+					<div id="clsInfo" title="Information/Assistance"></div>
+					 -->
+
+					<!-- <div id="idMapBtn" class="clsMapBtnEnable" title="Course Map"></div> -->
+					<div class="HighlightHelp"></div>
+
+				</header>
+				<div id="contentContainer">
+					<!-- <div id="lockDrag"></div> -->
+					<div id="contentFrame">
+
+				</div>
+				<div id="element" class="Mydraggable ui-widget-content">
+						  <p class="position"></p></div>
+				</div>
+
+
+
+
+				<!-- <div id="id_transcriptBox" class="draggable ui-widget-content"> -->
+				<div id="id_transcriptBox" class="">
+
+					<div id="id_transcriptTextBG">
+						<!-- <div id="id_transcriptTitle"></div>  -->
+						<!-- <div id="id_transcriptClose" title="Close"></div> -->
+						<div id="transcripttext"></div>
+					</div>
+				</div>
+				<!-- <div id="id_sideBar" class=""></div> -->
+
+				<footer name="btmFrame" id="btmFrame">
+					<div id="audioDiv">
+						<audio id="audioplayer" autoplay style="audioPlayer" oncanplay="onAudioCanPlay()" onplay="onAudioStart()" >
+						</audio>
+					</div>
+
+
+					<div id="footerbuttons">
+					    <div id="clsHelpBtn" title="Help" class="clsHelp"></div>
+						<div class="ClsToolbtn" id ="ToolBtn"></div>
+						<div id="transcriptBtn" class="clsTransOnBtn enableTranscript" title="Transcript On/Off"><div class="transcriptHover"></div></div>
+						<div id="clsAudioOffBtn" title="Audio On/Off"></div>
+						<div id="clsAudioOnBtn" title="Audio On/Off"></div>
+						<div id="clsBackBtn" class="clsDisBackBtn" title="Back"></div>
+						<!-- <div id="clsNavPartitionBtn"></div> -->
+						<div id="clsPageNumber"><div id="clsPageNoDisplay"></div></div>
+
+						<div id="clsNxtBtn" class="clsDisNxtBtn" title="Next">
+								<!--<img id="NextGlow" class="animate-flicker" src="media/images/player/common/Next_Glow.png" alt="img"/>-->
+						</div>
+
+						<div id="clsPlayPauseBtn" class="clsPlay" title="Play/Pause"></div>
+						<div id="clsReplay" title="Replay" ></div>
+						<div id="id_sliderContainer" title="Slider"><div id="slider"></div></div>
+
+						<!--<div id="transcriptBtn" class="clsTransOnBtn enableTranscript" title="Transcript On/Off"><div class="transcriptHover"></div></div>		 -->
+						<!-- <div id="searchBtn"></div>
+						<input  type="text" id="searchTextDiv" ></input > -->
+					</div>
+				</footer>
+				<div class="ClsToolPop" id="ToolPop">
+					<!-- <div class="Clsclosetxt" id="TooclsBtn">Close</div>	 -->
+					<div class="clsToolWhitePath" id="">
+						<div id="clsRefBtn" title="PDF Resources"></div>
+						<div id="clsGlosBtn" title="Glossary"></div>
+						<div id="clsVideoRefBtn" title="Video Resources"></div>
+					</div>
+				</div>
+				<!-- <div class="screen_lock"></div>	 -->
+
+
+			<!-- <div class="clsPreloader">
+				<div class="clsPagePreloader">
+
+					<img src="media/images/player/pre_loder_01.gif" class="clsPreloaderImg"/>
+				</div>
+			</div> -->
+
+			<div id="dummyBtn1" style=""><div id="dummyBtnBk1"></div></div>
+			<div class="clsOrientationBox">
+				<div class="mobileImg"></div>
+				<div class="clsOrientationMsg">Please rotate your device.</div>
+			</div>
+		</div>
+
+	</div>
+
+	</body>
+</html>

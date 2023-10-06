@@ -1,0 +1,490 @@
+<!DOCTYPE HTML>
+
+<html>
+
+
+
+<head>
+
+    <title></title>
+
+	<style>
+	 /* Sliding entrances */
+@-webkit-keyframes slideInDown {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInDown {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__slideInDown {
+  -webkit-animation-name: slideInDown;
+  animation-name: slideInDown;
+}
+@-webkit-keyframes slideInLeft {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInLeft {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__slideInLeft {
+  -webkit-animation-name: slideInLeft;
+  animation-name: slideInLeft;
+}
+@-webkit-keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(50%, 0, 0);
+    transform: translate3d(50%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(50%, 0, 0);
+    transform: translate3d(50%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__slideInRight {
+  -webkit-animation-name: slideInRight;
+  animation-name: slideInRight;
+}
+@-webkit-keyframes slideInUp {
+  from {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInUp {
+  from {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__slideInUp {
+  -webkit-animation-name: slideInUp;
+  animation-name: slideInUp;
+}
+	.mainContainer {position: absolute;width: 100%;height: 545px;left: 0px;top: 0px;opacity: 1;}
+	.clsTabPopup{position:absolute;width:1085px;height:540px;top:0;left:0}
+	.sectionTop{position:absolute;top:0;height:30px;width:100%;padding:16px 0}
+	.sectionContent{position:absolute;top:20px;height:507px;width:1055px;left:15px;right:15px; color:#000}
+	.topImgCnt{position:relative}
+	.small_expand,.open_map{background:url(pages/images/Topic01/T01P43/small_expand.png) no-repeat!important;width:28px;height:28px!important;position:absolute!important;bottom:24px;right:10px;display:none;left:inherit!important;top:inherit!important;float:inherit!important;text-decoration:none!important;border-radius:inherit!important;margin-left:0!important;background-color:inherit!important;padding:0!important}
+	.small_expand:hover,.open_map:hover{background:url(pages/images/Topic01/T01P43/small_expand_hover.png) no-repeat!important}
+	.small_expand1{background:url(pages/images/Topic01/T01P43/small_expand.png) no-repeat!important;width:28px;height:28px!important;position:absolute!important;bottom:7px;right:10px;display:none;left:inherit!important;top:inherit!important;float:inherit!important;text-decoration:none!important;border-radius:inherit!important;margin-left:0!important;background-color:inherit!important;padding:0!important}
+	.small_expand1:hover{background:url(pages/images/Topic01/T01P43/small_expand_hover.png) no-repeat!important}
+	.open_map{right:33px;margin-top:2px}
+	.sectionLeft{height:100%;}
+	.sectionRight{width:790px;height:507px;top:0;position:absolute;left:264px}
+	.rightTop{height:42px;left:5px;position:relative}
+	.rightTop a{left:0;top:0;padding:0 65px;background:#fff;margin:0;position:relative;float:left;margin-left:-5px;font-family:OpenSansSemiBold;text-decoration:none;color:#000;height:42px;line-height:42px;border-top-right-radius:5px;-webkit-border-top-right-radius:5px;-moz-border-top-right-radius:5px;font-size:16px;cursor:default}
+	.sectionRight .assessmentShow a{cursor:default}
+	.rightTop a.active{border-top-right-radius:5px;-webkit-border-top-right-radius:5px;-moz-border-top-right-radius:5px;background:#3A5569;margin-right:0;z-index:10;color:#fff}
+	.rightTop a.active.cdefault{cursor:default}
+	.rightTop a.active:after,.rightTop a.active:before,.rightTop a.active:hover:before{top:98%;left:45%;border:solid transparent;content:" ";height:0;width:0;position:absolute;pointer-events:none}
+	.rightTop a.active:after,.rightTop a.active:hover:after{border-top-color:#3A5569;border-width:10px;margin-left:0}
+	.rightTop a.active:before,.rightTop a.active:hover:before{border-top-color:#3A5569;border-width:10px;margin-left:0}
+	.rightTop a.active:nth-child(2),.rightTop a.active:hover:nth-child(2){-webkit-border-top-left-radius:5px;border-top-left-radius:5px;-moz-border-top-left-radius:5px}
+	.rightTop a:nth-child(2){-webkit-border-top-left-radius:5px;border-top-left-radius:5px}
+	.sectionContentArea{background:#fff;height:465px;border-top-right-radius:5px;-webkit-border-top-right-radius:5px;-moz-border-top-right-radius:5px;border-bottom-right-radius:5px;-webkit-bottom-top-right-radius:5px;-moz-border-bottom-right-radius:5px}
+	#topImgCnt1{background: url(pages/images/Topic01/T01P43/img4.png) no-repeat top center; background-size:contain; height:100%; width:100%}
+	#imgPopup1 {background: url(pages/images/Topic01/T01P43/img5.png) no-repeat; background-size:contain;}
+	/*#case_study_popup .modalContent {width:55%; height:420px; border-radius:10px}
+	#case_study_popup .modalContent .modalinner{ padding:30px; position:relative}
+	#imgPopup0{ background-size:100% 100%; width:100%; height:360px}
+	#case_study_popup .modalContent .modalinner .modalclose{ position:absolute; top:5px; right:0px; width:30px; height:30px }
+	#case_study_popup .modalContent .modalinner .modalclose .modalcloseicon{background:url(pages/images/Topic01/T01P43/close-icon.png) no-repeat; background-size:24px 24px; width:24px; height:24px ; cursor:pointer}
+	#case_study_popup .modalContent .modalinner .modalclose .modalcloseicon:hover{background:url(pages/images/Topic01/T01P43/close-hover-icon.png) no-repeat; background-size:24px 24px; width:24px; height:24px }
+	#case_study_popup .closepopup{ display:none} 
+	#case_study_popup .modalTextBottom{ display:none}
+	#case_study_popup .popover.left-arrow{ display:none}*/
+	.sectionContent{ padding:10px; background:#fff; width:95%; border-radius:5px;box-shadow:0 1px 9px -4px rgba(0,0,0,0.75); height:480px; overflow:hidden}
+	.sectionLeft{width: 692px; background:#fff; float:right}
+	.sectionRight{width: 30%;left: 0px;}
+	.sectionContentArea{ padding:30px}
+	.iconlist{ margin:0px; padding:0px; list-style:none; width:90%}
+	.iconlist li{ position:relative; margin-bottom:3px; font-size:14px; line-height:22px; display: flex; flex-direction: row; align-items: center; padding-left:20px}
+	.iconlist li:before{ background:url(pages/images/Topic01/T01P43/bullet.png) no-repeat; left:0px; width:13px; height:13px; position:absolute; content:""; top:5px}
+	.iconlist li a{ color:#D7722C; cursor:pointer}
+	.error1{ margin:15px auto 0px; border:solid 1px #F6A87A; border-radius:5px; width:94%; position:relative}
+	.error1 .error1_inner{ position:relative; padding:10px; color:#000; font-size:12px; line-height:18px; font-weight:bold; padding-left:60px;display: flex; flex-direction: row; align-items: center;}
+	.error1 .error1_inner img{ position:absolute; width:35px; height:34px; left:10px; top:17px;}
+	.topImgtxt{ background:rgba(0, 0, 0, 0.1); position:absolute; bottom:0px; padding:10px; color:#000;font-size:14px; line-height:22px;}
+	
+	.txt1{ font-size:16px; line-height:22px; margin:10px 0px}
+	.
+	.sectionLeftBox{ position:relative; height:100%; padding:5px;width: 274px;}
+	.topImgboxinner{  border:double 6px #ccc; position:relative; height:100%}
+	.content2 .sectionRight .sectionContentArea{height: 265px; margin-top:100px}
+	.sectionContentAreainner{ width:80%; margin:20px 0px 0px 50px}
+	.sectionContentAreainner .contenttext{font-size:14px; line-height:20px; position:relative}
+	.sectionContentAreainner .contenttext2{ margin-top:30px}
+	#content1{ visibility:visible}
+	#list1, #list2, #list3, #error1,#img1{visibility:hidden; opacity: 0;}
+	/*.small_expand{ display:block}*/
+	.poupdiv .modalContent{width:455px;  height:auto !important; padding:20px 18px; top:30%}
+		.poupdiv  .modalContent .heading{ color:#D7722C; font-size:18px; text-align:center}
+		.poupdiv  .modalContent .linenew{ height:2px; background:#D7722C; margin:5px auto;width:77%}
+		.poupdiv  .modalContent .desc{ color:#000; font-size:14px; text-align:left}
+	.poupdiv .popupclose{ position: absolute; top:10px; right:10px}
+	.poupdiv .popupclose img{ width:24px; height:24px; cursor:pointer}
+	.poupdiv .modalclose{ position:absolute; top:5px; right:0px; width:30px; height:30px }
+	.poupdiv .modalclose .modalcloseicon{background:url(pages/images/Topic01/T01P43/close-icon.png) no-repeat; background-size:24px 24px; width:24px; height:24px ; cursor:pointer}
+	.poupdiv .modalclose .modalcloseicon:hover{background:url(pages/images/Topic01/T01P43/close-hover-icon.png) no-repeat; background-size:24px 24px; width:24px; height:24px }
+	/*.popover.clickToEnlarge{ display:block}*/
+	.abs{ position:absolute}
+	.box1{ background:#FBE5D6; font-size:16px; line-height:22px; font-weight: bold;padding: 10px 20px;left: 0px;width: 250px;top:50px}
+	.box2{ background:#F4B183; font-size:16px; line-height:22px; font-weight: bold;padding: 10px 20px;left: 0px;width: 250px; top:120px}
+	.box3{ background:#BD7C4D; background:#D7722C; font-size:16px; line-height:22px; padding: 20px 20px;left: 0px;width: 250px; top:190px; color:#fff}
+	.error1{top:350px;left: 10px; width: 275px;}
+	.error1 .error1_inner{width: 200px;font-size:14px; line-height:18px;}
+	.popover.clickToEnlarge{bottom: 92px;}
+	.small_expand{bottom: 92px;right: 20px;}
+	.popover{ right:65px}
+	.img1{ left:60px; bottom: 78px;}
+	.closepopup,
+        .open_map_close {
+            position: absolute;
+            width: 92px;
+            height: 47px;
+            background: url(pages/images/Topic01/T01P22/close_expand_hover.png) no-repeat;
+            bottom: 30px;
+            right: -47px;
+            cursor: pointer;
+            z-index: 1000;
+            text-decoration: none;
+        }
+        
+        .closepopup:hover,
+        .open_map_close:hover {
+            background: url(pages/images/Topic01/T01P02/close_expand_hover.png) no-repeat;
+        }
+		#case_study_popup  .modalContent{box-shadow:initial !important; background:transparent !important}
+		.modalContent{ width: 620px;height: 470px;top: 10px}
+		#case_study_popup .modalContent{background: #fff !important;}
+		#case_study_popup .popover{ bottom:6px}
+		#case_study_popup .closepopup{bottom: -7px;}
+		#topImgCnt1{height: 83.5%;width: 85%;margin-top: 5%;margin-left: auto;margin-right: auto;}
+		.img1 { left: 61px;bottom: 62px;}
+		.img1 img{width: 94%;}
+		.popover.clickToEnlarge{bottom: -32px;}
+		.small_expand{bottom: -32px;}
+		#topImgCnt1{height: 81.5%;}
+		#imgPopup1{height: 430px;}
+	</style>
+
+</head>
+
+
+
+<body>
+
+    <div class="pg-pageContent" UNSELECTABLE="on">
+        <div id="TabPopup5" class="clsTabPopup">
+			<div id="content1" >
+				<div class="sectionContent">
+					<div class="sectionLeft">
+						<div class="topImgCnt" id="topImgCnt1">
+							<div id="img1" class="img1 abs"></div>
+							<div class="popover left-arrow clickToEnlarge">
+								<div class="arrow" style="top: 50%;"></div>
+								<div class="popover-content">Click to enlarge image.</div>
+							</div>
+							<a href="javascript:void(0);" title="Click to enlarge image" class="small_expand zoom_btn" click_id="1">&nbsp;</a>
+						</div>
+					</div>
+					<div class="sectionRight">
+						<div class="firstShow">
+							<div class="sectionContentArea">
+								<div id="list1" class="box1 abs">ANC = 7,950</div>
+								<div id="list2" class="box2 abs">Age = 5 hours old (term infant)</div>
+								<div id="list3" class="box3 abs">The ANC is normal, which means that at this point in the infant’s life, the infant has an adequate amount of neutrophils available for fighting a bacterial infection.</div>
+								<div id="error1" class="error1 abs">
+									<div class="error1_inner">
+										<img src="pages/images/Topic01/T01P12/warning.svg"> If concerned for infection, it is important to trend the infant’s CBC at a later time.
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="modal" id="case_study_popup">
+                <div class="modalContent" unselectable="on">
+					<div class="modalinner">
+						<div class="modalTxtImg" unselectable="on"></div>
+						<a class="closepopup zoom_close_btn" href="javascript:void(0)" title="Click to Close"></a>
+						<!-- <div class="clickToContinue expandImgTxtRight clickToClose">Click to Close</div> -->
+						<div class="popover left-arrow">
+							<div class="arrow" style="top: 50%;"></div>
+							<div class="popover-content">Click to close image.</div>
+						</div>
+					</div>
+                </div>
+            </div>
+			
+			<div class="modal poupdiv" id="popup">
+				<div class="modalContent" unselectable="on">
+					<div class="popupclose modalclose" ><div class="modalcloseicon"></div></div>
+					<div class="heading">Purulent</div>
+					<div class="linenew"></div>
+					<div class="desc">Refers to the presence of pus or drainage of pus. Pus is a thick yellow or green discharge that is composed of dead white blood cells, bacteria, tissue debris, and serum. Pus is produced by infected tissue.</div>
+				</div>
+			</div>
+			
+        </div>
+    </div>
+    <!--- Main Container--->
+    <div class="boxInst">
+        <div class="instNextClick"></div>
+        <div class="next_click"><em> Click Next to continue.</em></div>
+    </div>
+
+    <script>
+	 manifest = [{
+            src: 'pages/images/Topic01/T01P02/img1.png',
+            id: '1'
+        }, {
+            src: 'pages/images/Topic01/T01P02/image_01_small.png',
+            id: '2'
+        }, ];
+
+var audioPath = "pages/audio/Topic01/T01P43/T01P43";
+clickViewMoreInfo();
+var currCue = 0;
+var idd = 0;
+var __curState = 0;
+var clickTabCount = 0;
+var clickTabCount1 = 0;
+
+var updateContentArray = [
+    { 
+		time: "0", carry: "", event: "", show: "", hide: "", 
+		transcript: "Next plot the number, which in this case is 7,950, on the ANC chart that is appropriate for the infant’s gestational age. You will need to know the age of the baby in hours so that you can select the correct time point on the bottom axis of the graph.<br>As you can see, for this 5-hour-old term infant, the ANC is normal, which means that at this point, the infant has an adequate amount of neutrophils available for fighting a bacterial infection. However, this status can change, so if concerned for infection, it is important to trend the infant&apos;s CBC at a later time.<br>  Click Next to continue." 
+	},
+	{ 
+		time: "2", carry: "", event: "", show: "#list1,#img1", hide: "", 
+		transcript: "Next plot the number, which in this case is 7,950, on the ANC chart that is appropriate for the infant’s gestational age. You will need to know the age of the baby in hours so that you can select the correct time point on the bottom axis of the graph.<br>As you can see, for this 5-hour-old term infant, the ANC is normal, which means that at this point, the infant has an adequate amount of neutrophils available for fighting a bacterial infection. However, this status can change, so if concerned for infection, it is important to trend the infant&apos;s CBC at a later time.<br>  Click Next to continue." 
+	},
+	{ 
+		time: "17", carry: "", event: "", show: "#list2", hide: "", 
+		transcript: "Next plot the number, which in this case is 7,950, on the ANC chart that is appropriate for the infant’s gestational age. You will need to know the age of the baby in hours so that you can select the correct time point on the bottom axis of the graph.<br>As you can see, for this 5-hour-old term infant, the ANC is normal, which means that at this point, the infant has an adequate amount of neutrophils available for fighting a bacterial infection. However, this status can change, so if concerned for infection, it is important to trend the infant&apos;s CBC at a later time.<br>  Click Next to continue." 
+	},
+	{ 
+		time: "19.5", carry: "", event: "", show: "#list3", hide: "", 
+		transcript: "Next plot the number, which in this case is 7,950, on the ANC chart that is appropriate for the infant’s gestational age. You will need to know the age of the baby in hours so that you can select the correct time point on the bottom axis of the graph.<br>As you can see, for this 5-hour-old term infant, the ANC is normal, which means that at this point, the infant has an adequate amount of neutrophils available for fighting a bacterial infection. However, this status can change, so if concerned for infection, it is important to trend the infant&apos;s CBC at a later time.<br>  Click Next to continue." 
+	},
+	{ 
+		time: "28", carry: "", event: "", show: "#error1", hide: "", 
+		transcript: "Next plot the number, which in this case is 7,950, on the ANC chart that is appropriate for the infant’s gestational age. You will need to know the age of the baby in hours so that you can select the correct time point on the bottom axis of the graph.<br>As you can see, for this 5-hour-old term infant, the ANC is normal, which means that at this point, the infant has an adequate amount of neutrophils available for fighting a bacterial infection. However, this status can change, so if concerned for infection, it is important to trend the infant&apos;s CBC at a later time.<br>  Click Next to continue." 
+	},
+];
+
+
+function fnAudioFinishItemComp() {
+    fnAudioFinishPageComp();
+}
+
+var __dataXml;
+
+var audplayer = document.getElementById('audioplayer');
+
+$(document).ready(function() {
+	//$(".clickToEnlarge").show();
+    //$(".small_expand").show();
+   // $(".small_expand1").show();
+    disableNextBtn();
+	$(".clickToEnlarge").show();
+    $(".small_expand").show();
+    $(".small_expand1").show();
+    var ele = document.getElementsByTagName('div');
+    for (var i = 0; i < ele.length; i++) {
+        ele[i].setAttribute("unselectable", "on");
+    }
+    var n = isInArray("M1L0T1P43", gCompPageArr);
+    if (n == true) {
+        enableNextBtn();
+        fnDesiableNext(false)
+    }
+});
+
+
+
+function audioReset() {
+    gAudioId = "";
+    onTimelineEnd();
+}
+
+
+function isInArray(value, array) {
+    return array.indexOf(value) > -1;
+}
+
+function fnPlaySectionAudio(gCurrentIndex) {
+    indexAudio = (gCurrentIndex);
+    audioId = "audio_" + gCurrentIndex;
+    gAudioId = audioId;
+    fnHideShowAudioPlayer(false);
+    updateContentArray = eval("updateContentArray" + (gCurrentIndex));
+    initAudioPlayer(gItemAudioPath[gCurrentIndex])
+}
+
+function fnCompletion() {
+    console.log("end");
+    var _getCount1 = clickTabCount + clickTabCount1;
+    console.log("start new");
+    enableNextBtn();
+    $('.boxInst').show()
+    fnAudioFinishItemComp();
+}
+
+function fnOnAudioComplete() {
+    if (gAudioId == "startAudio") {
+        console.log("start audio");
+        audplayer.pause();
+        audplayer.currentTime = 0;
+        $(".clickToEnlarge").show();
+        $(".small_expand").show();
+        $(".small_expand1").show();
+		enableNextBtn();
+		fnDesiableNext(false);
+        $('.boxInst').show();
+    } else {
+        fnCompletion();
+        enableNextBtn();
+        $('.boxInst').show();
+        $(".clickToEnlarge").show();
+        $(".small_expand").show();
+        $(".small_expand1").show();
+        gCompPageArr.push("M1L0T1P43");
+        fnAudioFinishItemComp();
+        audplayer.pause();
+        audplayer.currentTime = 0;
+    }
+}
+
+
+$(".small_expand").off().on("click", function() {
+    pauseAudio();
+    $("#TabPopup5 #case_study_popup.modal").show();
+    $("#TabPopup5 .sectionTop").addClass("blur");
+    $("#TabPopup5 .sectionContent").addClass("blur");
+    $(".modalTxtImg").attr('id', 'imgPopup' + $(this).attr('click_id'));
+});
+
+$(".small_expand1").off().on("click", function() {
+    pauseAudio();
+    $("#TabPopup5 .modal").show();
+    $("#TabPopup5 .sectionTop").addClass("blur");
+    $("#TabPopup5 .sectionContent").addClass("blur");
+    $('.boxInst').addClass("blur");
+    $(".modalTxtImg").attr('id', 'imgPopup' + $(this).attr('click_id'));
+    $('.modalTextBottom').hide();
+    $('#ModalTextBottom' + $(this).attr('click_id')).show();
+    $('.modalContent').addClass('maxBot');
+    $('.modalContent').removeClass('maxBot0');
+});
+
+$(".closepopup, .modalclose").off().on("click", function() {
+    playAudio();
+    $("#TabPopup5 .modal").removeAttr("style");
+    $("#TabPopup5 .sectionTop").removeClass("blur");
+    $("#TabPopup5 .sectionContent").removeClass("blur");
+    $('.boxInst').removeClass("blur");
+});
+
+$(".popup").on("click", function() {
+	pauseAudio();
+	$("#TabPopup5 #popup").show();
+	$("#TabPopup5 .sectionTop").addClass("blur");
+	$("#TabPopup5 .sectionContent").addClass("blur");
+
+});
+$(".popupclose").on("click", function() {
+	playAudio();
+	$("#TabPopup5 #popup").removeAttr("style");
+	$("#TabPopup5 .sectionTop").removeClass("blur");
+	$("#TabPopup5 .sectionContent").removeClass("blur");
+});
+function pauseAudio() {
+    if (!fnPauseAudio()) {
+        console.log(true);
+        fnPauseAudio()
+    } else {
+        playPauseAudio();
+        console.log(false);
+    }
+}
+
+function playAudio() {
+    if (!fnPauseAudio()) {
+        console.log(true);
+        playPauseAudio();
+    }
+}
+</script>
+
+</body>
+
+
+
+</html>

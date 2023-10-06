@@ -1,0 +1,416 @@
+.mainContainer {
+    position: absolute;
+    width: 1058px;
+    height: 504px;
+    left: 14px;
+    top: 20px;
+    opacity: 1;
+}
+
+@-webkit-keyframes reducetime {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@-webkit-keyframes zoomin {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes zoomin {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/*End of Zoom in Keyframes */
+
+
+/* Zoom out Keyframes */
+
+@-webkit-keyframes zoomout {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.67);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes zoomout {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.67);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/*End of Zoom out Keyframes */
+
+.clsPatch {
+    position: absolute;
+    width: 1057px;
+    height: 75px;
+    background: #ffffff;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+    border-radius: 5px;
+    -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+    padding: 6px 0px;
+    /* right: -43px; */
+    display: none;
+}
+
+.clsText {
+    position: absolute;
+    width: 1016px;
+    height: 50px;
+    left: 20px;
+    top: 19px;
+    font-size: 16px;
+    font-family: OpenSansRegular;
+    font-style: initial;
+    line-height: 24px;
+}
+
+#idText2 {
+    position: absolute;
+    width: 1016px;
+    height: 50px;
+    font-size: 16px;
+}
+
+.ClsTab {
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    z-index: 999;
+}
+
+.clsAllTabs {
+    width: 100%;
+    height: 82px;
+}
+
+.ClsTabItem {
+    position: relative;
+    cursor: pointer;
+    width: 274px;
+    height: 60px;
+    text-align: center;
+    line-height: 55px;
+    font-size: 18px;
+    font-family: OpenSansRegular;
+    border-radius: 5px;
+    background: #fcfcfc;
+    margin-left: 88px;
+    float: left;
+    top: 10px;
+    left: 0px;
+    cursor: pointer;
+}
+
+.ClsTabItem:hover {
+    background: #707070;
+    color: #FFFFFF;
+}
+
+#TabItem0 {
+    margin-left: 0;
+}
+
+
+/* #TabItem0,#TabItem1,#TabItem2{
+
+			display :none;
+
+		} */
+
+.boxInst {
+    position: absolute;
+    top: 506px;
+    left: 895px;
+    width: 175px;
+    height: 30px;
+    display: none;
+}
+
+.next_click {
+    position: absolute;
+    font-size: 14px;
+    color: #4D667B;
+    font-family: OpenSansRegular;
+    line-height: 14px;
+    width: 100%;
+    left: 0px;
+    text-align: center;
+}
+
+.instNextClick {
+    position: absolute;
+    top: -16px;
+    left: -15px;
+    background: url('../../../pages/images/Topic01/T01P00/instNext.png') no-repeat;
+    width: 194px;
+    height: 51px;
+}
+
+section {
+    position: absolute;
+    width: 100%;
+    /* height: 100%; */
+}
+
+.overlay {
+    position: absolute;
+    background: #fff;
+    width: 915px;
+    height: 285px;
+    top: 52px;
+    left: 26px;
+    display: none;
+    padding: 65px 45px;
+    -webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+    border-radius: 5px;
+}
+
+.feedback {
+    /* position: absolute; */
+    /* width: 1089px; */
+    /* height: 547px; */
+    /* background: #fff; */
+    /* top: 138px; */
+    /* left: 111px; */
+    /* border-radius: 5px; */
+    /* -webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75); */
+    -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+    /* box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75); */
+}
+
+.feedhead {
+    position: absolute;
+    top: 52px;
+    left: 75px;
+}
+
+.feedtext {
+    /* position: absolute; */
+    /* top: 60px; */
+    /* left: 124px; */
+    /* width: 74%; */
+    /* font-size: 16px; */
+}
+
+.blur {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    -webkit-filter: blur(12px);
+    -moz-filter: blur(12px);
+    -ms-filter: blur(12px);
+    -o-filter: blur(12px);
+    filter: blur(12px);
+}
+
+.dropRegion {
+    width: 796px;
+    height: 485px;
+    overflow: hidden;
+    float: left;
+    margin-top: -9px;
+    left: 268px;
+    position: absolute;
+    top: 3px;
+}
+
+.dropArea {
+    /* height: 146px; */
+    width: 100%;
+}
+
+.drop {
+    position: relative;
+    width: 237px;
+    height: 121px;
+    float: left;
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0);
+    margin: 11px 14px;
+    border-radius: 5px;
+    margin-bottom: 35px;
+}
+
+.drop.active {
+    background: rgba(228, 186, 78, 0.2);
+    box-shadow: 0 0 0 2px rgba(228, 186, 78, 1);
+}
+
+.drop.dropped:nth-child(1):after,
+.drop.dropped:nth-child(2):after,
+.drop.dropped:nth-child(4):after,
+.drop.dropped:nth-child(5):after,
+.drop.dropped:nth-child(7):after,
+.drop.dropped:nth-child(8):after {
+    /* content: '';
+    background: url('../../images/Topic01/T01P68/right-arrow_1.png') no-repeat;
+    width: 14px;
+    position: absolute;
+    right: -20px;
+    height: 25px;
+    top: 50%;
+    transform: translateY(-50%); */
+}
+
+.dragRegion {
+    width: 262px;
+    height: 472px;
+    overflow: hidden;
+    float: left;
+    /* background: rgba(0, 0, 0, 0.2); */
+    border-radius: 5px;
+    padding-top: 11px;
+    top: -11px;
+    position: absolute;
+    left: 3px;
+}
+
+.drag {
+    width: 230px;
+    height: 121px;
+    float: left;
+    position: relative;
+    background: rgb(255, 255, 255);
+    margin: 6px 16px;
+    border-radius: 5px;
+    /* cursor: pointer; */
+    margin-bottom: 38px;
+}
+
+.dragRegion .drag.incorrect {
+    box-shadow: 0 0 0 1px red;
+}
+
+.dragImage {
+    width: 121px;
+    height: 121px;
+    float: left;
+}
+
+.dragText {
+    height: 121px;
+    width: 109px;
+    float: left;
+    display: table;
+}
+
+.dragText span {
+    display: table-cell;
+    padding: 5px;
+    line-height: 14px;
+    vertical-align: middle;
+}
+
+section#section0 {
+    top: 13px;
+    font-size: 12px;
+}
+
+.drop .drag {
+    margin: 0px;
+    height: 121px;
+    width: 237px;
+    cursor: default;
+}
+
+.dotline1 {
+    position: absolute;
+    width: 520px;
+    height: 41px;
+    top: 122px;
+    left: 399px;
+}
+
+.dotline2 {
+    position: absolute;
+    width: 536px;
+    height: 41px;
+    width: 520px;
+    height: 41px;
+    top: 290px;
+    left: 399px;
+}
+
+.downarrow1 {
+    position: absolute;
+    position: absolute;
+    top: 322px;
+    left: 389px;
+}
+
+.downarrow2 {
+    position: absolute;
+    top: 154px;
+    left: 389px;
+}
+
+.dragRegion .dragText {
+    width: 219px;
+    padding-left: 8px;
+}
+
+.dragRegion .dragText span {
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.dropped .boxNumber {
+    right: -1px;
+    top: -2px;
+    width: 22px;
+    height: 19px;
+    color: white;
+    background: #E4BA4E;
+    opacity: 1;
+    border-bottom-left-radius: 83%;
+    text-align: center;
+    z-index: 1;
+    position: absolute;
+    font-size: 9px;
+    vertical-align: middle;
+    line-height: 18px;
+}
+
+.drop.dropped {
+    box-shadow: rgb(228, 186, 78) 0px 0px 0px 3px;
+}

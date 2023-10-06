@@ -1,0 +1,1006 @@
+<!DOCTYPE HTML>
+<html>
+<!--<![endif]-->
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>Lab Work</title>
+    <link href="css/font.css" rel="stylesheet" type="text/css">
+    <link href="css/jquery-ui-1.10.2.custom.css" rel="stylesheet" type="text/css">
+    <link href="css/layoutStyle_V2.css" rel="stylesheet" type="text/css">
+    <link href="css/globalStyle.css" rel="stylesheet" type="text/css">
+    <link href="css/exit.css" rel="stylesheet" type="text/css">
+    <link href="css/page.css" rel="stylesheet" type="text/css">
+    <link href="css/menu.css" rel="stylesheet" type="text/css">
+    <link href="css/templates/component.css" rel="stylesheet" type="text/css">
+    <link href="css/templates/assessment-page.css" rel="stylesheet" type="text/css">
+    <link href="css/detect-Orientation.css" rel="stylesheet" type="text/css">
+    <link href="css/customStyle.css" rel="stylesheet" type="text/css">
+    <!-- <script src="pages/Assessment/CommonAssessment.js"></script>  -->
+
+
+    <link href="css/newlayoutstyle.css" rel="stylesheet" type="text/css">
+    <!-- <script src="pages/Assessment/CommonAssessment.js"></script>  -->
+
+    <script src="jsfiles/libs/jquery-1.8.1.min.js"></script>
+
+    <script src="jsfiles/scripts/bgLoading.js"></script>
+    <script src="jsfiles/scripts/tabIndex.js"></script>
+    <script src="jsfiles/scripts/search.js"></script>
+    <script src="jsfiles/scripts/main.js"></script>
+    <script src="jsfiles/scripts/navigation.js"></script>
+    <script src="jsfiles/scripts/slider.js"></script>
+    <script src="jsfiles/scripts/detect-Orientation.js"></script>
+    <!-- <script src="pages/Assessment/CommonAssessment.js"></script>  -->
+
+    <script src="jsfiles/scripts/menu.js"></script>
+    <script src="jsfiles/libs/preloadjs-0.6.2.min.js"></script>
+    <script src="jsfiles/libs/jquery.ui.effect.js"></script>
+    <script src="jsfiles/libs/jquery.ui.effect-slide.js"></script>
+    <script src="jsfiles/libs/jquery.ui.core.js"></script>
+    <script src="jsfiles/libs/jquery.ui.widget.js"></script>
+    <script src="jsfiles/libs/jquery.ui.progressbar.js"></script>
+    <script src="jsfiles/libs/jquery-ui-1.10.2.custom.min.js"></script>
+    <script src="jsfiles/libs/jquery.ui.touch-punch.js"></script>
+    <script src="jsfiles/libs/jquery.touchwipe.js"></script>
+
+
+    <script src="scormjs/BVScorm.js"></script>
+    <!--	Below screipt added for MCQ / MRQ purpose 	-->
+    <script src="jsfiles/scripts/xmltoobj.js"></script>
+    <!-- <script src="jsfiles/scripts/assessment.js"></script> -->
+
+    <!-- Includes all of the following: TweenLite, TweenMax, TimelineLite, TimelineMax, EasePack, CSSPlugin, RoundPropsPlugin, BezierPlugin, AttrPlugin, DirectionalRotationPlugin -->
+    <script src="jsfiles/minified/TweenMax.min.js"></script>
+    <script src="jsfiles/minified/TweenLite.min.js"></script>
+    <script src="jsfiles/minified/TimelineMax.min.js"></script>
+    <script src="jsfiles/minified/easing/EasePack.min.js"></script>
+    <script src="jsfiles/minified/plugins/CSSPlugin.min.js"></script>
+    <script src="jsfiles/minified/plugins/TextPlugin.min.js"></script>
+    <!-- Used For The Animation purpose  -->
+    <script src="jsfiles/libs/modernizr-latest.js"></script>
+
+    <script src="jsfiles/scripts/menu.js"></script>
+
+    <!-- assessment page -->
+    <script src="jsfiles/scripts/assessment.js"></script>
+    <link href="css/assessment.css" rel="stylesheet" type="text/css">
+
+    <!-- xAPI -->
+    <script src="jsfiles/xapi/tincan-min.js"></script>
+    <script src="jsfiles/xapi/xapi.js"></script>
+    <!-- xAPI -->
+
+    <link href="css/popupStyle.css" rel="stylesheet" type="text/css">
+    <!-- assessment page -->
+
+    <!-- Player and page level .js files to include -->
+    <!--<script src="intro/runtime.js"></script>-->
+
+    <script language="javascript" type="text/javascript">
+        var oXML;
+        var manifest = new Array();
+        var loader;
+        var transcriptText;
+        var audioPath;
+        var isIE;
+        /*Prabhat Firefox showing launch issue with min size */
+        //self.innerWidth = 1006;
+        //self.innerHeight = 660;
+        /* Shweta K. modified the self.innerWidth and self.innerHeight for firefox*/
+        self.innerWidth = 1085;
+        self.innerHeight = 688;
+
+        var size = [window.width, window.height];
+        (function ($) {
+            /* Detect touch support*/
+            $.support.touch = 'ontouchend' in document;
+            /* Ignore browsers without touch support*/
+            if (!$.support.touch) {
+                return;
+            }
+            var mouseProto = $.ui.mouse.prototype,
+                _mouseInit = mouseProto._mouseInit,
+                touchHandled;
+
+            function simulateMouseEvent(event, simulatedType) { /*use this function to simulate mouse event*/
+                /* Ignore multi-touch events*/
+                if (event.originalEvent.touches.length > 1) {
+                    return;
+                }
+                event.preventDefault(); /*use this to prevent scrolling during ui use*/
+
+                var touch = event.originalEvent.changedTouches[0],
+                    simulatedEvent = document.createEvent('MouseEvents');
+                /* Initialize the simulated mouse event using the touch event's coordinates */
+                simulatedEvent.initMouseEvent(
+                    simulatedType, /* type*/
+                    true, /* bubbles                    */
+                    true, /* cancelable                 */
+                    window, /* view                       */
+                    1, /* detail                     */
+                    touch.screenX, /* screenX                    */
+                    touch.screenY, /* screenY                    */
+                    touch.clientX, /* clientX                    */
+                    touch.clientY, /* clientY                    */
+                    false, /* ctrlKey                    */
+                    false, /* altKey                     */
+                    false, /* shiftKey                   */
+                    false, /* metaKey                    */
+                    0, /* button                     */
+                    null /* relatedTarget              */
+                );
+
+                /* Dispatch the simulated event to the target element*/
+                event.target.dispatchEvent(simulatedEvent);
+            }
+            mouseProto._touchStart = function (event) {
+                var self = this;
+                /* Ignore the event if another widget is already being handled*/
+                if (touchHandled || !self._mouseCapture(event.originalEvent.changedTouches[0])) {
+                    return;
+                }
+                /* Set the flag to prevent other widgets from inheriting the touch event*/
+                touchHandled = true;
+                /* Track movement to determine if interaction was a click*/
+                self._touchMoved = false;
+                /* Simulate the mouseover event*/
+                simulateMouseEvent(event, 'mouseover');
+                /* Simulate the mousemove event*/
+                simulateMouseEvent(event, 'mousemove');
+                /* Simulate the mousedown event*/
+                simulateMouseEvent(event, 'mousedown');
+            };
+
+            mouseProto._touchMove = function (event) {
+                /* Ignore event if not handled*/
+                if (!touchHandled) {
+                    return;
+                }
+                /* Interaction was not a click*/
+                this._touchMoved = true;
+                /* Simulate the mousemove event*/
+                simulateMouseEvent(event, 'mousemove');
+            };
+            mouseProto._touchEnd = function (event) {
+                /* Ignore event if not handled*/
+                if (!touchHandled) {
+                    return;
+                }
+                /* Simulate the mouseup event*/
+                simulateMouseEvent(event, 'mouseup');
+                /* Simulate the mouseout event*/
+                simulateMouseEvent(event, 'mouseout');
+                /* If the touch interaction did not move, it should trigger a click*/
+                if (!this._touchMoved) {
+                    /* Simulate the click event*/
+                    simulateMouseEvent(event, 'click');
+                }
+                /* Unset the flag to allow other widgets to inherit the touch event*/
+                touchHandled = false;
+            };
+            mouseProto._mouseInit = function () {
+                var self = this;
+                /* Delegate the touch handlers to the widget's element*/
+                self.element
+                    .on('touchstart', $.proxy(self, '_touchStart'))
+                    .on('touchmove', $.proxy(self, '_touchMove'))
+                    .on('touchend', $.proxy(self, '_touchEnd'));
+
+                /* Call the original $.ui.mouse init method*/
+                _mouseInit.call(self);
+            };
+
+        })(jQuery);
+
+        $(document).ready(function () {
+            var isAndroid = (/android/i.test(navigator.userAgent.toLowerCase()));
+            //loader = new createjs.PreloadJS(false);
+            transcriptText = $('#id_transcriptBox #id_transcriptTextBG #transcripttext');
+            $('.gridContainer').css("visibility", "hidden");
+            if (IsScrom) {
+                BVScorm_adlOnload();
+            }
+            var screen_ht = $(window).height();
+            var screen_wd = $(window).width();
+
+            var preloader_ht = 32;
+            var preloader_wd = 32;
+            var padding_top = (screen_ht / 2) - preloader_ht;
+            var padding_left = (screen_wd / 2) - preloader_wd;
+            fnhideTranscript();
+            //fnperCacheSound(soundName);
+            isIE = ($.browser.msie) ? true : false;
+
+            $.ajax({
+                type: "GET",
+                url: 'mastercontent.xml',
+                dataType: ($.browser.msie) ? "text" : "xml",
+                success: function (data) {
+                    xmlParser(data);
+                    fnPageAnimation();
+                }
+            });
+
+            loader = new createjs.LoadQueue(true);
+            loader.on("complete", handleComplete);
+            loader.on("fileload", handlePlayerFileLoad);
+            loader.loadManifest(manifest, true);
+
+
+            var fontsize = 18;
+
+            $("body").css("font-size", 18);
+
+            ////Code to maintain ratio
+            //resizeFrame();
+            //jQuery.event.add(window, "load", resizeFrame);
+            //jQuery.event.add(window, "resize", resizeFrame);
+            ////End ratio.
+            //Added for slider functionality
+
+            /**for safari**/
+            if ((navigator.userAgent.indexOf('Mac OS X'))) {
+                var is_safari = navigator.userAgent.indexOf("Safari") > -1;
+                if (is_safari) {
+                    //$('#clsAudioOnBtn,#clsAudioOffBtn,.clsTransOnBtn,.clsTransOffBtn, .clsTransBtnDisable,#clsReplay,.clsPlay,.clsPause,.clsPlayDisable').css('margin-top','0.2%');
+                }
+            }
+
+            if (jQuery.browser.msie && parseInt(jQuery.browser.version, 10) == 11) {
+                $("#btmFrame").css("height", "5.4%")
+            }
+
+            /**for safari till here**/
+            fnProgressBar();
+            fnVolumeControl();
+            enableHotKeys();
+
+            $("#element").draggable({
+                containment: '#contentFrame',
+                scroll: false
+            }).mousemove(function () {
+                var coord = $(this).position();
+                var width = $(this).width();
+                var height = $(this).height();
+                $("p.position").html("Left: " + parseInt(coord.left) + '<br/>' + "Top: " + parseInt(coord.top));
+            }).mouseup(function () {
+                var coord = $(this).position();
+                var width = $(this).width();
+                var height = $(this).height();
+
+            });
+            //add Font css for android device only
+            if (isAndroid) {
+
+                //$('link[rel=stylesheet][href~="css/font.css"]').remove();
+                //$('head').append('<link rel="stylesheet" href="css/font_For_Android.css" type="text/css" />');
+            }
+
+
+
+        });
+
+        function handlePlayerFileLoad(event) {
+            var item = event.item; // A reference to the item that was passed in to the LoadQueue
+            //var type = item.type;
+            var percent
+            if (isNaN(event.id)) {
+                percent = 0;
+            } else {
+                percent = Math.round((Number(event.id) + 1) * 100 / manifest.length)
+            }
+            $(".loadingText").html("Loading Player " + percent + "%")
+        }
+        //function for show loading percentage
+        function ProgressEvent(loaded, total) {
+
+            if (!(isNaN(loaded))) {
+                if (!(loaded > 1)) {
+                    percent = Math.round((Number(loaded)) * 100)
+                    //console.log("percent"+percent)
+                    $(".loadingText").html("Loading " + percent + "%");
+                    /*if(percent==100){
+                    	$(".loadingText").html("")
+                    }*/
+                }
+
+            }
+            this.Event_constructor("progress");
+            this.loaded = loaded;
+            this.total = (total == null) ? 1 : total;
+            this.progress = (total == 0) ? 0 : this.loaded / this.total;
+        };
+
+        function xmlParser(data) {
+            var xml;
+            if (typeof data == "string") {
+                xml = new ActiveXObject("Microsoft.XMLDOM");
+                xml.async = false;
+                xml.loadXML(data);
+            } else {
+                xml = data;
+            }
+            oXML = $(xml);
+            readyflg = 4;
+            initActionToResize();
+            fnXMLLoaded();
+        }
+
+        function fnXMLLoaded() {
+            fnCreateXMLObjArr();
+            fnCreatePreCacheArr();
+            fnAddPlayerEvents();
+            gCurrPageNum = 1;
+            audioPath = "media/audio/dummy"
+            isIntroPage = (oXML.find("SHOWINTROSCREEN").text().toLowerCase() == "true")
+            initializeJplayer(audioPath)
+            //perCacheImagesAudio(); // Calling from IOS
+            //------------------------------------------------------
+            //Resolve for after bookmarking the page is not get load
+            //Commented below line of code & added it in below handleComplete()
+            //fnCheckForBookMark();
+            //------------------------------------------------------
+
+            doOnOrientationChange();
+        }
+
+        function perCacheImagesAudio() {
+
+            if (manifest.length > 0) {
+                loader.loadManifest(manifest);
+            } else {
+                //fnLoadPage(gCurrMod, gCurrLess, gCurrTop, gCurrPage);
+            }
+        }
+
+        function handleComplete() {
+
+            //use to show/hide home/landing page using mastercontent variable
+            SHOWHOMESCREEN = oXML.find("SHOWHOMESCREEN").text().toLowerCase();
+
+            //------------------------------------------------------
+            //Resolve for after bookmarking the page is not get load
+            if (!isBookMarkPopupShown) { // Added to show Bookmarking popup only once on IE8
+                fnCheckForBookMark();
+            }
+            //fnCreateAssessmentXMLObjArr();
+            //------------------------------------------------------
+            //lesson_location = "m1"
+            if (lesson_location != undefined) {
+                fnShowCordinate();
+                if (lesson_location == "") {
+                    if (isIntroPage) {
+                        //$(".courseIntro").load('pages/intro/intro.html');
+
+                        $.get('pages/intro/intro.html', {}, function (data, status, xhr) {
+                            //onClickiPad();
+                            var a = window.location.href;
+                            var b = a.split("?")[0];
+                            var c = b.substr(0, b.lastIndexOf("/"))
+                            var updatedData = data.replace(/pages\/(images|css|js|assets)+/g, c + "/pages/$1");
+                            $(".courseIntro").html(updatedData);
+                            //$(".player-container").css("background","url('media/images/player/common/bgImg.png') no-repeat");
+                            //perCachePageImagesAudio();
+                        });
+                        //fShowCourse()
+                        fnHidePreloader();
+                    } else {
+                        //$(".player-container").css("background","url('media/images/player/common/bgImg.png') no-repeat");
+                        $('.gridContainer').css("visibility", "visible");
+                        if (lesson_location != undefined && lesson_location != "") {
+                            fnJumpToPageByID(lesson_location);
+                        } else {
+                            fnLoadPage(gCurrMod, gCurrLess, gCurrTop, gCurrPage);
+                            //fnLoadHome();
+                        }
+                    }
+                } else {
+                    fnHideIntro()
+
+                    //$(".player-container").css("background","url('media/images/player/common/bgImg.png') no-repeat");
+                    $('.gridContainer').css("visibility", "visible");
+                    if (lesson_location != undefined && lesson_location != "") {
+                        fnJumpToPageByID(lesson_location);
+                    } else {
+                        fnLoadPage(gCurrMod, gCurrLess, gCurrTop, gCurrPage);
+                        //fnLoadHome();
+                    }
+                }
+                //$("body").css("background-color","#333333");
+            } else {
+                console.log("loading");
+
+
+                //$("body").css("background-color","#333333");
+                //fShowCourse()
+                //$(".courseIntro").load('pages/intro/intro.html');
+                fnShowCordinate();
+                if (isIntroPage) {
+                    //alert("2");
+
+
+                    $.get('pages/intro/intro.html', {}, function (data, status, xhr) {
+
+                        var a = window.location.href;
+                        var b = a.split("?")[0];
+                        var c = b.substr(0, b.lastIndexOf("/"))
+                        var updatedData = data.replace(/pages\/(images|css|js|assets)+/g, c + "/pages/$1");
+                        $(".courseIntro").html(updatedData);
+                        //								$(".player-container").css("background","url('media/images/player/common/bgImg.png') no-repeat");
+                        //perCachePageImagesAudio();
+                    });
+                    //$(".courseIntro").load('elements/homepage.html');
+                    fnHidePreloader()
+                } else {
+                    //$(".player-container").css("background","url('media/images/player/common/bgImg.png') no-repeat");
+                    fnHideIntro();
+                    $('.gridContainer').css("visibility", "visible");
+                    if (lesson_location != undefined && lesson_location != "") {
+                        fnJumpToPageByID(lesson_location);
+                    } else {
+                        fnLoadPage(gCurrMod, gCurrLess, gCurrTop, gCurrPage);
+                        //fnLoadHome()
+                    }
+                }
+            }
+        }
+        //*---------------------------------
+        //function for show / hide cordinate box
+        function fnShowCordinate() {
+            SHOWXYCORDINATE = oXML.find("SHOWXYCORDINATE").text().toLowerCase();
+
+            if (SHOWXYCORDINATE == "true") {
+                $("#element").css({
+                    "display": "block"
+                });
+            } else {
+                $("#element").css({
+                    "display": "none"
+                });
+            }
+        }
+
+
+
+        // Added for Skip The Intro
+        function fShowCourse() {
+
+            fnShowCordinate();
+console.log(gCurrMod,gCurrLess,gCurrTop,gCurrPage)
+            fnLoadPage(gCurrMod, gCurrLess, gCurrTop, gCurrPage);
+
+        }
+
+        function fUnload() {
+            if (IsScrom) {
+                BVScorm_adlOnunload();
+            }
+        }
+    </script>
+    <!-- Scaling Logic as below -->
+    <script>
+        var $el
+        var elHeight
+        var elWidth
+        var $wrapper
+        var starterData
+        var scalePercent
+        var strAllowFullScreen;
+
+        function doResize(event, ui) {
+            var scale, origin;
+            scale = Math.min(
+                ui.size.width / elWidth,
+                ui.size.height / elHeight
+            );
+
+            if (oXML)
+                strAllowFullScreen = oXML.find("ALLOWFULLSCREEN").text().toLowerCase();
+            if (strAllowFullScreen != 'true' && scale > 1)
+                scale = 1;
+            $el.css({
+                transform: "translate(-50%, -50%) " + "scale(" + scale + ")"
+            });
+            scalePercent = scale;
+        }
+
+
+        $(document).ready(function () {
+            /*xAPI init */
+            tinCanWrapper.init();
+            /*xAPI init */
+            $(this).keyup(function (e) {
+                e.preventDefault();
+                var evtobj = window.event ? event : e
+                if (e.ctrlKey && e.altKey && e.keyCode == 68) {
+                    if ($(".modeuleCompletion").hasClass("enable")) {
+                        $(".modeuleCompletion").hide().removeClass("enable");
+                    } else {
+                        $(".modeuleCompletion").addClass("enable").show().focus();
+                    }
+                }
+            });
+            $(".modeuleCompletion").off("click").on("click", function () {
+                BVScorm_complete();
+                $(".modeuleCompletion").hide().removeClass("enable");
+                tinCanWrapper.sendStatementData("completed", "completed", "Module Completed using debug");
+            });
+            assessmentObj.init();
+            //var _getQuesval = assessmentObj.checkedAnswerFunc(0, ".listcnt");
+            //console.log(_getQuesval);
+        });
+
+        $('document').ready(function () {
+            $el = $(".player-container");
+            elHeight = $el.outerHeight();
+            elWidth = $el.outerWidth();
+            $wrapper = $("#scaleable-wrapper");
+            $wrapper.resizable({
+                resize: doResize
+            });
+            actionToResize();
+            fnLoadHomePage();
+        })
+
+        function fnPageAnimation() {
+
+            RemovePageAnimation = oXML.find("RemovePageAnimation").text().toLowerCase();
+
+
+
+            if (RemovePageAnimation == "true") {
+                nextBtnClik = false;
+            } else {
+                nextBtnClik = true;
+            }
+        }
+
+        function fnLoadHomePage() {
+
+            $("#clsHomeBtn").off("click");
+            $(".clsHomeBtn").on("click", function () {
+                if (!$(this).hasClass("clsDisHomeBtn")) {
+                    fnLoadHome();
+                }
+            });
+        }
+
+        $(window).resize(function () {
+            actionToResize();
+        })
+
+        function actionToResize() {
+            starterData = {
+                size: {
+                    width: $wrapper.width(),
+                    height: $wrapper.height()
+                }
+            }
+            doResize(null, starterData);
+        }
+
+        function initActionToResize() {
+            actionToResize();
+            $('.scaleable-wrapper').css('opacity', '1');
+        }
+
+        function fullScreen4TouchDevice() {
+            var elem = document.getElementById("scaleable-wrapper");
+            if (elem.requestFullscreen) {
+                elem.requestFullscreen();
+            } else if (elem.msRequestFullscreen) {
+                elem.msRequestFullscreen();
+            } else if (elem.mozRequestFullScreen) {
+                elem.mozRequestFullScreen();
+            } else if (elem.webkitRequestFullscreen) {
+                elem.webkitRequestFullscreen();
+            }
+        }
+    </script>
+    <style>
+        span.tooltip.ntooltip{
+            left:-13px;
+        }
+        .clsMockup {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0%;
+            top: 0%;
+            background: url("media/images/player/Final_GUI_withResource_details.png") no-repeat;
+            background-size: 100% 100%;
+            z-index: 1;
+            opacity: 0.5;
+        }
+
+        .scaleable-wrapper {
+            padding: 0px;
+            resize: both;
+            position: relative;
+            background: #666;
+            height: 100%;
+            width: 100%;
+            opacity: 0.01;
+            overflow: hidden;
+        }
+
+        .ui-resizable-handle,
+        .ui-resizable-handle {
+            display: none !important;
+            background-position: 0px 0px !important;
+            width: 12px !important;
+            height: 12px !important;
+            right: 0px;
+            bottom: 0px;
+        }
+
+        body {
+            overflow: hidden;
+        }
+
+        #element {
+            background: #666;
+            border: 1px #000 solid;
+            cursor: move;
+            height: 80px;
+            width: 80px;
+            z-index: 999;
+            padding: 10px 10px 10px 10px;
+        }
+
+        .Mydraggable {
+            position: absolute;
+            width: 90px;
+            height: 80px;
+        }
+
+        .position {
+            font-size: 18px;
+            color: #FFF;
+        }
+
+        .HighlightHelp {
+            position: absolute;
+            height: 28.9531px;
+            width: 36.5px;
+            top: 12.42188px;
+            left: 899.578px;
+            border: 2px #e4267b solid;
+            display: none;
+            opacity: 0;
+        }
+
+        .clsHelp:hover+.HighlightHelp {
+            border: none;
+        }
+
+        #id_ReferencesBG #clsText {
+            display: block;
+        }
+        /* NEW */
+        .header-inner{
+            height: 100%;
+            display: flex;
+            align-items: center;
+            align-content: center;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .header-left{
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+            align-items: center;
+            width: 65%;
+        }
+        .footer-inner{
+            height: 100%;
+            display: flex;
+            align-items: center;
+            align-content: center;
+            flex-wrap: nowrap;
+            flex-direction: row;
+        }
+        .st0{enable-background:new;}
+        .st1{fill:#1E1E1E;}
+          .st2{fill:#414141;}
+         #HoverNext{opacity: 0;transition: all 0.3s ease;-webkit-transition: all 0.3s ease;}
+         #arrowOneNext{opacity: 0.8;transition: all 0.3s ease;-webkit-transition: all 0.3s ease;}
+          #arrowTwoNext{opacity: 0;transition: all 0.3s ease;-webkit-transition: all 0.3s ease; transform: translateX(5px)}
+
+    .resourceBox{
+        box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.75);
+        color: black;
+        position: absolute;
+        top: 1px;
+        width: 90px;
+        height: 62px;
+        right: 190px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        -webkit-border-bottom-left-radius: 5px;
+        -webkit-border-bottom-right-radius: 5px;
+        webkit-box-shadow:  0px 2px 4px -1px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow:  0px 2px 4px -1px rgba(0, 0, 0, 0.75);
+        box-shadow:  0px 2px 4px -1px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow:  0px 2px 4px -1px rgba(0, 0, 0, 0.75);
+        }
+        .small_expand.zoom_btn,.small_expand1 {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body onunload="fUnload();">
+   
+    <div id="scaleable-wrapper" class="scaleable-wrapper">
+        <div class="player-container">
+            <div class="clsPreloader">
+              
+                <div class="spinner">
+                    <!-- <div class="rect1"></div>
+                    <div class="rect2"></div>
+                    <div class="rect3"></div>
+                    <div class="rect4"></div>
+                    <div class="rect5"></div> -->
+                    <img src="media/images/new/Rolling-1s-200px.gif">
+                </div>
+            </div>
+            <div class="courseIntro" style="width:100%; height:100%;position: absolute;z-index: 100000;">
+            </div>
+            <div class="gridContainer clearfix">
+             
+                <header name="topFrame" id="topFrame" class="headClass topFrame">
+                    <div class="header-inner">
+                    <div class="header-left">
+                        <div id="course-Icon"></div>
+                        <div class="lineClassforheader"></div>
+                        <div id="pgTitleFrame"></div>
+                    
+                        <a class="back-btn" onclick="backBtn();" title="Return to previous page"></a>
+                   </div>
+                    <div class="closeContainer">                      
+                        <div class="ClsToolbtn" id="ToolBtn" title="Resources">
+                        </div>
+                        <div id="clsHelpBtn" title="Navigation" class="clsHelp">
+                            <!-- <span class="tooltip cIcons ntooltip">Navigation</span> -->
+                        </div>
+                        <div id="clsExitBtn" title="Exit Module">                           
+                        </div>
+        
+                    </div>
+                    <div id="clsMnuBtn" class="deactivMenu" title="Menu">   
+                        <span class="tooltip cIcons"></span>                   
+                    </div>
+
+                
+                    <div class="HighlightHelp"></div>
+                </div>
+                </header>
+                <div class="contentContainer" id="contentContainer">
+                  
+                    <div id="contentFrame">
+
+                    </div>
+                    <div id="element" class="Mydraggable ui-widget-content">
+                        <p class="position"></p>
+                    </div>
+
+                </div>
+                <div id="id_transcriptBox" class="">  
+                    <div ></div>                  
+                    <div id="transcripttext"></div>
+                    <div ></div>
+                </div>
+                <div id="id_slider-vertical" title="Slider" class="d-none">
+                    <div id="slidervertical"></div>
+                    <!-- <input id="vol-control" type="range" orient="vertical" value="100" min="0" max="100" step="1" oninput="SetVolume(this.value)" onchange="SetVolume(this.value)"> -->
+                </div>
+
+              
+                <button class="modeuleCompletion">Module Completion</button>
+                <footer name="btmFrame" id="btmFrame">
+                    <div class="footer-inner">
+                    <div id="audioDiv">
+                        <audio id="audioplayer" autoplay  oncanplay="onAudioCanPlay()"
+                            onplay="onAudioStart()">
+                        </audio>
+                    </div>
+                  
+                    <div id="footerbuttons">
+
+                       
+                       
+                        <div id="transcriptBtn" class="clsTransOnBtn enableTranscript" title="Transcript On/Off">
+                            <div class="transcriptHover"></div>
+                        </div>
+                     
+                     
+                       
+                            <!-- /* Added by Seema om 12/11/22  -->
+                            <div class="PlayerRectangle">
+                            <div id="clsPlayPauseBtn" class="clsPlay" title="Play/Pause">
+                            <span class="clsPlayPauseBtnIcon cIcons">&nbsp;</span>
+                            <!-- <span class="tooltip cIcons">PLAY</span> -->
+                        </div>
+                        <div id="id_sliderContainer" title="SeekBar">
+                            <div id="slider"></div>
+                        </div>
+                          <div id="clsReplay" title="Replay">
+                            <div class="replayButtonCenter">
+                                <span class="clsReplayIcon cIcons">
+                                    <svg version="1.1" id="" x="0px" y="0px" viewBox="0 0 46 46" style="enable-background:new 0 0 46 46;" xml:space="preserve">
+                                    <style type="text/css">
+                                        .reloadIconColor{fill:#414141;}
+                                    </style>
+                                    <path id="ReloadIcon" class="reloadIconColor" d="M45.2,22.3c-0.3-0.5-0.8-0.8-1.3-0.8H40c-0.4-3.9-2.1-7.6-4.9-10.3C32,8.1,27.8,6.5,23.4,6.5
+                                        c-4.4,0.1-8.5,1.8-11.6,5c-6.3,6.5-6.2,17,0.3,23.3c3.1,3,7.2,4.7,11.5,4.7c0.1,0,0.2,0,0.2,0c4.4-0.1,8.5-1.8,11.6-5
+                                        c0.6-0.6,0.6-1.5,0-2.1c-0.6-0.6-1.5-0.6-2.1,0c-2.5,2.6-5.9,4-9.5,4.1c-3.6,0-7-1.3-9.6-3.8c-5.3-5.2-5.4-13.7-0.3-19
+                                        c2.5-2.6,5.9-4,9.5-4.1c3.6-0.1,7,1.3,9.6,3.8c2.2,2.2,3.6,5.1,4,8.2h-4.1c-0.6,0-1.1,0.3-1.3,0.8c-0.3,0.5-0.2,1.1,0.2,1.6l5.5,7.1
+                                        c0.3,0.4,0.7,0.6,1.2,0.6s0.9-0.2,1.2-0.6l5.5-7.1C45.4,23.5,45.5,22.9,45.2,22.3z M38.4,27.6L36,24.5h4.9L38.4,27.6z"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <!-- <span class="tooltip cIcons">Replay</span> -->
+                        </div> 
+                        <div id="clsAudioOnBtn" title="Audio On/Off">
+                            <span class="clsAudioOnBtnIcon cIcons"></span>
+                            <!-- <span class="tooltip cIcons">Audio</span> -->
+                        </div>
+                        <div id="clsAudioOffBtn" title="Audio On/Off">
+                            <span class="clsAudioOffBtnIcon cIcons"></span>                          
+                        </div>
+                            </div>
+                          
+
+                            <div id="clsBackBtn" class="clsDisBackBtn" title="Back">
+                                <span class="clsBackBtnIcon cIcons">  <div class="backButtonCenter">
+                                    <!-- <span class="clsBackBtnIcon cIcons">&nbsp;</span> -->
+                                    <!-- <span class="tooltip cIcons">Back</span> -->
+                                    <span class="clsBackBtnIcon cIcons">
+                                        <svg version="1.1" id="Layer_1"x="0px" y="0px" viewBox="0 0 54 64" style="enable-background:new 0 0 54 64;" xml:space="preserve">
+                                        <style type="text/css">
+                                            .st0{enable-background:new;}
+                                            .st1{fill:#1E1E1E;}
+                                            .st2{fill:#414141;}
+                                            #HoverBack{opacity: 0;transition: all 0.3s ease;-webkit-transition: all 0.3s ease;}
+                                            #arrowOne{opacity: 0.8;transition: all 0.3s ease;-webkit-transition: all 0.3s ease; transform: translateX(6px)}
+                                            #arrowTwo{opacity: 0;transition: all 0.3s ease;-webkit-transition: all 0.3s ease; transform: translateX(-6px)}
+                                        </style>
+                                        <g id="HoverBack" class="st0">
+                                            <path class="st1" d="M1.3,59.3v-16c0-0.2,0.1-0.3,0.3-0.3h5.6c3,0,4.5,1.9,4.5,4.2c0,1.7-1,3-2.2,3.5c1.7,0.4,3.2,1.8,3.2,4.2
+                                                c0,2.8-1.9,4.8-5.8,4.8H1.6C1.4,59.6,1.3,59.5,1.3,59.3z M6.6,49.6c1.3,0,2.1-0.5,2.1-1.8S7.9,46,6.6,46H4.6v3.6H6.6z M6.8,56.6
+                                                c1.6,0,2.6-0.6,2.6-2.2c0-1.5-1-2.2-2.6-2.2H4.6v4.4h2.2V56.6z"/>
+                                            <path class="st1" d="M14.6,53.8c0-3.5,2.3-6.2,5.5-6.2c1.7,0,3,0.8,3.8,1.9v-1.3c0-0.2,0.1-0.3,0.3-0.3h2.4c0.2,0,0.3,0.1,0.3,0.3
+                                                v10.9c0,0.2-0.2,0.3-0.4,0.3h-2.3c-0.2,0-0.3-0.1-0.3-0.3v-1.3c-0.8,1.2-2.1,1.9-3.8,1.9C16.8,59.9,14.6,57.2,14.6,53.8z
+                                                M20.7,56.9c1.7,0,2.9-1.2,2.9-3.1c0-1.9-1.2-3.1-2.9-3.1c-1.7,0-3,1.3-3,3.1C17.7,55.6,19,56.9,20.7,56.9z"/>
+                                            <path class="st1" d="M29.1,53.8c0-3.5,2.6-6,6-6c1.9,0,3.6,0.8,4.5,2.1c0.1,0.2,0.1,0.3,0,0.5l-1.4,1.4c-0.2,0.2-0.4,0.2-0.6,0
+                                                c-0.6-0.6-1.3-1-2.3-1c-1.8,0-3,1.3-3,3c0,1.7,1.2,3.1,3.1,3.1c0.9,0,1.6-0.3,2.3-1c0.2-0.2,0.4-0.2,0.6,0l1.4,1.4
+                                                c0.1,0.1,0.2,0.3,0,0.5c-1,1.3-2.6,2.1-4.4,2.1C31.8,59.9,29.1,57.2,29.1,53.8z"/>
+                                            <path class="st1" d="M42.1,59.3V43c0-0.2,0.1-0.3,0.3-0.3H45c0.2,0,0.3,0.1,0.3,0.3v9.7l3.8-4.5c0.1-0.1,0.2-0.2,0.4-0.2h2.9
+                                                c0.3,0,0.4,0.2,0.2,0.4l-4,4.5l4.5,6.3c0.2,0.2,0.1,0.4-0.2,0.4h-2.8c-0.2,0-0.3,0-0.4-0.2l-3.1-4.2l-1.4,1.6v2.5
+                                                c0,0.2-0.1,0.3-0.3,0.3h-2.6C42.2,59.6,42.1,59.5,42.1,59.3z"/>
+                                        </g>
+                                        <g id="arrowGroup">
+                                            <path id="arrowTwo" class="st1" d="M40.6,33.8c-0.4,0-0.8-0.1-1.1-0.4L24.3,18.2c-0.3-0.3-0.4-0.7-0.4-1.1s0.2-0.8,0.4-1.1
+                                                L39.5,0.8c0.6-0.6,1.5-0.6,2.1,0s0.6,1.5,0,2.1L27.5,17l14.1,14.1c0.6,0.6,0.6,1.5,0,2.1C41.4,33.7,41,33.8,40.6,33.8z"/>
+                                            <path id="arrowOne" class="st1" d="M28.6,33.8c-0.4,0-0.8-0.1-1.1-0.4L12.3,18.2c-0.3-0.3-0.4-0.7-0.4-1.1s0.2-0.8,0.4-1.1
+                                                L27.5,0.8c0.6-0.6,1.5-0.6,2.1,0s0.6,1.5,0,2.1L15.5,17l14.1,14.1c0.6,0.6,0.6,1.5,0,2.1C29.4,33.7,29,33.8,28.6,33.8z"/>
+                                        </g>
+                                        <g id="normal">
+                                            <path class="st2" d="M10.4,50.7c1.4-0.5,2.2-1.8,2.2-3.3c0-1.9-1.2-3.8-4.2-3.8H3.8c-0.2,0-0.3,0.1-0.3,0.3v14.8
+                                                c0,0.2,0.1,0.3,0.3,0.3h4.5c3.5,0,5.2-1.8,5.2-4.3C13.5,52.7,12.3,51.1,10.4,50.7z M5.5,45.4h2.7c1.5,0,2.5,0.6,2.5,2.2
+                                                c0,1.6-1,2.4-2.5,2.4H5.5V45.4z M8.3,57.2v-0.1H5.5v-5.5h2.8c2.2,0,3.3,1,3.3,2.8C11.6,56.3,10.4,57.2,8.3,57.2z"/>
+                                            <path class="st2" d="M26.5,48.1h-1.3c-0.2,0-0.3,0.1-0.3,0.3v1.7c-0.8-1.3-2.2-2.2-4-2.2c-3.1,0-5.3,2.5-5.3,5.7
+                                                c0,3.2,2.2,5.7,5.3,5.6c1.9,0,3.2-0.9,4-2.2v1.6c0,0.2,0.1,0.3,0.3,0.3h1.3c0.2,0,0.3-0.1,0.3-0.3V48.4
+                                                C26.8,48.2,26.7,48.1,26.5,48.1z M21.3,57.4c-2.2,0-3.7-1.5-3.7-3.9c0-2.2,1.6-3.8,3.7-3.8c2.1,0,3.6,1.6,3.6,3.9
+                                                C24.9,55.9,23.4,57.4,21.3,57.4z"/>
+                                            <path class="st2" d="M35.1,49.8c1.2,0,2,0.5,2.7,1.2c0.1,0.1,0.3,0.2,0.5,0l0.8-0.7c0.1-0.2,0.1-0.3,0-0.5c-1-1.1-2.4-1.8-4.1-1.8
+                                                c-3.2,0-5.6,2.4-5.6,5.6c0,3.2,2.4,5.7,5.6,5.6c1.7,0,3.2-0.7,4.1-1.8c0.1-0.1,0.1-0.3,0-0.4l-0.8-0.7c-0.1-0.2-0.3-0.2-0.5,0
+                                                c-0.7,0.6-1.4,1.1-2.7,1.1c-2.2,0-3.8-1.6-3.8-3.8C31.3,51.4,32.9,49.8,35.1,49.8z"/>
+                                            <path class="st2" d="M51.2,58.6l-4.5-5.8l3.9-4.2c0.2-0.2,0.1-0.4-0.1-0.4h-1.7c-0.2,0-0.3,0.1-0.4,0.2l-4.6,5.2v-10
+                                                c0-0.2-0.1-0.3-0.3-0.3h-1.4c-0.2,0-0.3,0.1-0.3,0.3v15.1c0,0.2,0.1,0.3,0.3,0.3h1.4c0.2,0,0.3-0.1,0.3-0.3V56l1.7-1.8l3.6,4.6
+                                                c0.1,0.2,0.2,0.2,0.4,0.2H51C51.3,59,51.4,58.8,51.2,58.6z"/>
+                                        </g>
+                                        </svg>
+                                    </span>
+                                </div></span>
+                                <!-- <span class="tooltip cIcons">Back</span> -->
+                            </div>
+                            <!-- <div id="clsNavPartitionBtn"></div> -->
+                            <!--<div class="linegrey">&nbsp;</div>-->
+                            <div id="clsPageNumber">
+                                <div id="clsPageNoDisplay"></div>
+                            </div>
+
+                            <div id="clsNxtBtn" class="clsDisNxtBtn" title="Next">
+                             
+                                <span class="clsNxtBtnIcon cIcons">  <div class="nextButtonCenter">
+                                <svg version="1.1" id="" x="0px" y="0px" viewBox="0 0 52 64.2" style="enable-background:new 0 0 52 64.2;" xml:space="preserve">
+                                    <style type="text/css">
+                                        .st0{enable-background:new;}
+                                        .st1{fill:#1E1E1E;}
+                                        .st2{fill:#414141;}
+                                        #HoverNext{opacity: 0;transition: all 0.3s ease;-webkit-transition: all 0.3s ease;}
+                                        #arrowOneNext{opacity: 0.8;transition: all 0.3s ease;-webkit-transition: all 0.3s ease;}
+                                        #arrowTwoNext{opacity: 0;transition: all 0.3s ease;-webkit-transition: all 0.3s ease; transform: translateX(-12px)}
+                                    </style>
+                                    <g id="HoverNext" class="st0">
+                                        <path class="st1" d="M12.6,59.1L7.1,49v10c0,0.2-0.1,0.3-0.3,0.3H4.3C4.1,59.3,4,59.2,4,59V44.3C4,44.1,4.1,44,4.3,44h2.9
+                                            c0.2,0,0.3,0.1,0.4,0.2l5.5,10.1v-10c0-0.2,0.1-0.3,0.3-0.3h2.5c0.2,0,0.3,0.1,0.3,0.3V59c0,0.2-0.1,0.3-0.3,0.3H13
+                                            C12.8,59.3,12.7,59.3,12.6,59.1z"/>
+                                        <path class="st1" d="M18.5,53.9c0-3.2,2.2-5.6,5.5-5.6s5.2,2.4,5.2,5.1c0,1.1-0.2,1.6-1.2,1.6h-6.6c0.3,1.4,1.5,2.1,3.2,2.1
+                                            c0.8,0,1.6-0.2,2.5-0.7c0.2-0.1,0.3-0.1,0.4,0.1l0.8,1.1c0.1,0.2,0.1,0.3-0.1,0.5c-0.9,0.9-2.3,1.4-3.8,1.4
+                                            C20.9,59.6,18.5,57.2,18.5,53.9z M26.5,53c-0.2-1.4-1.1-2.2-2.4-2.2s-2.4,0.7-2.6,2.2H26.5z"/>
+                                        <path class="st1" d="M30,58.9l3.3-5.1l-3.1-4.9c-0.1-0.2,0-0.4,0.2-0.4H33c0.2,0,0.3,0.1,0.4,0.2l1.7,2.9l1.7-2.9
+                                            c0.1-0.2,0.2-0.2,0.4-0.2h2.6c0.3,0,0.4,0.2,0.2,0.4l-3.1,4.9l3.2,5.1c0.2,0.2,0,0.4-0.2,0.4h-2.6c-0.2,0-0.3-0.1-0.4-0.2L35.1,56
+                                            l-1.9,3.1c-0.1,0.2-0.2,0.2-0.4,0.2h-2.6C30,59.3,29.9,59.2,30,58.9z"/>
+                                        <path class="st1" d="M43,56.3v-5.4h-1.4c-0.2,0-0.3-0.1-0.3-0.3v-1.7c0-0.2,0.1-0.3,0.3-0.3H43V46c0-0.2,0.1-0.3,0.3-0.3h2.4
+                                            c0.2,0,0.3,0.1,0.3,0.3v2.5h1.7c0.2,0,0.3,0.1,0.3,0.3v1.7c0,0.2-0.1,0.3-0.3,0.3H46V56c0,0.6,0.4,0.9,0.9,0.9c0.2,0,0.4,0,0.7,0
+                                            c0.2,0,0.4,0.1,0.4,0.3v1.6c0,0.5-1.1,0.6-1.8,0.6C44.5,59.5,43,58.7,43,56.3z"/>
+                                    </g>
+                                    <g id="arrowGroupNext">
+                                        <path id="arrowTwoNext" class="st1" d="M28.4,33.9c-0.4,0-0.8-0.1-1.1-0.4c-0.6-0.6-0.6-1.5,0-2.1l14.1-14.1L27.4,3.1
+                                            c-0.6-0.6-0.6-1.5,0-2.1s1.5-0.6,2.1,0l15.2,15.2c0.3,0.3,0.4,0.7,0.4,1.1S45,18,44.7,18.3L29.5,33.5
+                                            C29.2,33.8,28.8,33.9,28.4,33.9z"/>
+                                        <path id="arrowOneNext" class="st1" d="M16.4,33.9c-0.4,0-0.8-0.1-1.1-0.4c-0.6-0.6-0.6-1.5,0-2.1l14.1-14.1L15.4,3.1
+                                            c-0.6-0.6-0.6-1.5,0-2.1s1.5-0.6,2.1,0l15.2,15.2c0.3,0.3,0.4,0.7,0.4,1.1S33,18,32.7,18.3L17.5,33.5
+                                            C17.2,33.8,16.8,33.9,16.4,33.9z"/>
+                                    </g>
+                                    <g id="normalNext">
+                                        <path class="st2" d="M13.6,59.1L6.9,47v12c0,0.2-0.1,0.3-0.3,0.3H5.1c-0.2,0-0.3-0.1-0.3-0.3V44.2c0-0.2,0.1-0.3,0.3-0.3h1.8
+                                            c0.2,0,0.3,0.1,0.4,0.2L14,56.2v-12c0-0.2,0.1-0.3,0.3-0.3h1.4c0.2,0,0.3,0.1,0.3,0.3V59c0,0.2-0.1,0.3-0.3,0.3h-1.8
+                                            C13.8,59.3,13.7,59.3,13.6,59.1z"/>
+                                        <path class="st2" d="M18.9,53.9c0-3.2,2.2-5.6,5.5-5.6c3.2,0,5.1,2.4,5.1,5.1c0,0.9-0.2,1.3-0.9,1.3h-7.7c0.2,1.9,1.6,3.3,4,3.3
+                                            c1.2,0,2.1-0.3,2.9-0.9c0.1-0.1,0.3-0.1,0.4,0l0.5,0.7c0.2,0.2,0.1,0.3-0.1,0.5c-0.9,0.9-2.3,1.4-3.9,1.4
+                                            C21.2,59.6,18.9,57.1,18.9,53.9z M27.7,53.2c-0.1-1.9-1.4-3.2-3.3-3.2c-1.9,0-3.3,1.2-3.5,3.2H27.7z"/>
+                                        <path class="st2" d="M30.8,59l3.3-5.1L30.9,49c-0.1-0.2-0.1-0.4,0.2-0.4h1.5c0.2,0,0.3,0.1,0.4,0.2l2.3,3.7l2.3-3.7
+                                            c0.1-0.2,0.2-0.2,0.4-0.2h1.5c0.2,0,0.3,0.2,0.2,0.4l-3.2,4.9l3.3,5.1c0.2,0.2,0.1,0.4-0.2,0.4h-1.5c-0.2,0-0.3-0.1-0.4-0.2
+                                            l-2.4-3.9l-2.4,3.9c-0.1,0.2-0.2,0.2-0.4,0.2H31C30.7,59.3,30.6,59.2,30.8,59z"/>
+                                        <path class="st2" d="M43.2,56.9v-6.8h-1.4c-0.2,0-0.3-0.1-0.3-0.3v-1c0-0.2,0.1-0.3,0.3-0.3h1.4V46c0-0.2,0.1-0.3,0.3-0.3h1.4
+                                            c0.2,0,0.3,0.1,0.3,0.3v2.6H47c0.2,0,0.3,0.1,0.3,0.3v1c0,0.2-0.1,0.3-0.3,0.3h-1.8v6.5c0,0.8,0.4,1.1,1,1.1c0.2,0,0.5,0,0.7,0
+                                            c0.3,0,0.4,0.1,0.4,0.3V59c0,0.4-0.9,0.5-1.5,0.5C44.2,59.5,43.2,58.7,43.2,56.9z"/>
+                                    </g>
+                                    </svg>
+                                <!-- <span class="tooltip cIcons">Next</span> -->
+                                </div>
+                            </span>
+                            </div>
+                      
+                       
+
+                        
+                    </div>
+                    </div>
+                </footer>
+                <div class="ClsToolPop" id="ToolPop">
+                   
+                    <div class="clsToolWhitePath" id="">
+                        <div id="clsRefBtn" title="PDF Resources"><span class="tooltip cIcons">PDF Resources</span>
+                        </div>
+                        <div id="clsGlosBtn" title="Glossary"><span class="tooltip cIcons">Glossary</span></div>
+                        <div id="clsVideoRefBtn" title="Video Resources"><span class="tooltip cIcons">Video
+                                Resources</span></div>
+                        <div id="clsActivityRefBtn" title="Activity"><span class="tooltip cIcons">Activity</span></div>
+                    </div>
+                </div>
+                <div id="dummyBtn1" >
+                    <div id="dummyBtnBk1"></div>
+                </div>
+                <div class="clsOrientationBox">
+                    <div class="mobileImg"></div>
+                    <div class="clsOrientationMsg">Please rotate your device.</div>
+                </div>
+            </div>
+
+        </div>
+
+</body>
+
+</html>

@@ -1,0 +1,565 @@
+<!DOCTYPE HTML>
+
+<html>
+
+
+
+<head>
+
+    <title></title>
+
+    <link href="pages/Topic01/css/T01P12.css" rel="stylesheet" type="text/css">
+	<style>
+	 /* Sliding entrances */
+@-webkit-keyframes slideInDown {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInDown {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__slideInDown {
+  -webkit-animation-name: slideInDown;
+  animation-name: slideInDown;
+}
+@-webkit-keyframes slideInLeft {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInLeft {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__slideInLeft {
+  -webkit-animation-name: slideInLeft;
+  animation-name: slideInLeft;
+}
+@-webkit-keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__slideInRight {
+  -webkit-animation-name: slideInRight;
+  animation-name: slideInRight;
+}
+@-webkit-keyframes slideInUp {
+  from {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInUp {
+  from {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__slideInUp {
+  -webkit-animation-name: slideInUp;
+  animation-name: slideInUp;
+}
+	/*#topImgCnt1{background: url(pages/images/Topic01/T01P12/preterm-septic-infant-small.png) no-repeat top center; background-size:cover; height:100%; width:100%; border-radius:5px 0px 0px 5px}*/
+	#topImgCnt1{
+    /* background: url(pages/images/Topic01/T01P12/preterm-septic-infant-large.png) no-repeat; */
+    background: url(pages/images/Topic01/T01P12/image_01.png) no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px 0px 0px 5px;
+    background-position: 80%;}
+	#imgPopup1 {
+    /* background: url(pages/images/Topic01/T01P12/preterm-septic-infant-large.png) no-repeat;  */
+    background: url(pages/images/Topic01/T01P12/image_01_large.png) no-repeat;
+    background-size:contain;
+    height: 377px;
+  }
+	.modalContent{box-shadow:initial !important; background:transparent !important}	
+	.sectionLeft{width: 384px; background:#fff}
+	.sectionRight{width: 670px;left: 384px;}
+	.sectionContentArea{ padding:30px; height:448px; color:#000 !important;}
+	.iconlist{ margin:0px; padding:0px; list-style:none; width:90%}
+	.iconlist li{ position:relative; margin-bottom:20px;  font-size:16px; line-height:22px; min-height:82px;display: flex; flex-direction: row; align-items: center; height:80px}
+	.iconlist li img{ position:absolute; width:82px; height:82px; left:0px; top:0px;}
+	.error1{ margin:28px 18px 4px; border:solid 1px #F6A87A; border-radius:5px; width:89%; position:relative}
+	.error1 .error1_inner{ position:relative;  color:#000; font-size:14px; line-height:22px; font-weight:bold; display: flex; flex-direction: row; align-items: center;}
+	.error1 .error1_inner img{ width:35px; height:35px; padding: 6px;}
+	.topImgtxt{ background:rgba(0, 0, 0, 0.1); position:absolute; bottom:0px; padding:10px; color:#000;font-size:14px; line-height:22px; font-weight:bold}
+	
+	
+	.content2 .sectionLeft{width: 284px; background:#fff; border-radius:5px;box-shadow: 0px 1px 2px 3px #ccc; overflow:hidden; padding:5px; position:absolute; z-index:999; height:91%; top:3%}
+	.content2 .sectionRight{width: 770px;left: 284px;}
+	#topImgCnt2{background: url(pages/images/Topic01/T01P12/preterm-septic-infant-small.png) no-repeat  center; background-size:cover;  width:100%; height:100%; top:-2px; right:2.5px; display:block;border-radius:5px}
+	#topImgCnt3{background: url(pages/images/Topic01/T01P12/Blood-culture-small.png) no-repeat  center; background-position-y: -25px;background-size:cover; width:100%; right:2.5px;  height:100%;border-radius:5px}
+	.topImgbox1{ position:absolute; top:0px; width:100%; height:222px; top:5px; width:278px}
+	.topImgbox2{ position:absolute; top:0px; width:100%; height:222px; top:235px; width:278px}
+	.sectionLeftBox{ position:relative; height:100%; padding:5px;width: 274px;}
+	#topImgCnt2 .small_expand{ top: auto !important;}
+	#imgPopup2 {
+    background: url(pages/images/Topic01/T01P12/preterm-septic-infant-large.png) no-repeat; 
+    background-size:100% 100%;
+    height: 377px;
+  }
+	#imgPopup3 {background: url(pages/images/Topic01/T01P12/Blood-culture-large.png) no-repeat; background-size:100% 100%;}
+	.topImgboxinner{  border:double 0px #ccc; position:relative; height:100%}
+	.content2 .sectionRight .sectionContentArea{  height: 362px;margin-top: 30px;}
+	.sectionContentAreainner{ width:80%; margin:20px 0px 0px 50px}
+	.sectionContentAreainner .contenttext{font-size:14px; line-height:20px; position:relative}
+	.sectionContentAreainner .contenttext2{ margin-top:30px}
+	#content1{ visibility:visible}
+	#content2{ visibility:hidden}
+	#iconlist_item1, #iconlist_item2, #iconlist_item3, #error1,#topImgbox1, #topImgbox2,#sectionRight2,#contenttext1, #contenttext2,.sectionLeftBox, #error2,#topImgtxt1{visibility:hidden; opacity: 0;}
+	#topImgCnt2 .clickToEnlarge,.clickToEnlarge{ visible:hidden; opacity:0; display:block}
+	.modal.popupimg1 .modalContent{width: 555px; height:auto;top:56px;}
+	.modal.popupimg2 .modalContent{width: 555px; height:auto;top:50px;}
+	.modal.popupimg3 .modalContent{width: 472px; height:auto}
+	.sectionLeftBox .popover{ bottom:8px !important}
+	.small_expand{ bottom:12px}
+	#error2.error1{width:98%}
+	.content2 .sectionContentAreainner{margin: 40px 0px 0px 50px;width: 85%;}
+	/* .modal .closepopup{bottom: 0px;} */
+	.modal .popover{bottom: 15px;}
+
+  .iconlist span
+  {
+    width: 243%;
+text-align: left;
+vertical-align: top;
+display: inline;
+margin-top: 4px;
+  }
+
+  .boxInst {
+  position: absolute;
+  top: 464px;
+  left: 864px;
+  width: 175px;
+  height: 30px;
+  display: none;
+  z-index: 99999;
+}
+.padding-value{
+  padding-left: 93px;
+}
+	</style>
+
+</head>
+
+
+
+<body>
+
+    <div class="pg-pageContent" UNSELECTABLE="on">
+        <div id="TabPopup5" class="clsTabPopup">		
+			<div id="content2" class="content2">
+				<div class="sectionContent">
+					<div class="sectionLeft">
+						<div class="sectionLeftBox">
+							<div id="topImgbox1" class="topImgbox1">
+								<div class="topImgboxinner">
+									<div class="topImgCnt" id="topImgCnt2">
+										<div class="popover left-arrow clickToEnlarge">
+											<div class="arrow" style="top: 50%;"></div>
+											<div class="popover-content">Click to enlarge image.</div>
+										</div>
+										<a href="javascript:void(0);" title="Click to enlarge image" class="small_expand zoom_btn" click_id="2">&nbsp;</a>
+									</div>
+								</div>
+							</div>
+							<div id="topImgbox2" class="topImgbox2">
+								<div class="topImgboxinner">
+									<div class="topImgCnt" id="topImgCnt3">
+										<div class="popover left-arrow clickToEnlarge" style="margin-bottom: 20px;">
+											<div class="arrow" style="top: 50%;"></div>
+											<div class="popover-content">Click to enlarge image.</div>
+										</div>
+										<a style="bottom: 30px;" href="javascript:void(0);" title="Click to enlarge image" class="small_expand zoom_btn" click_id="3">&nbsp;</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="sectionRight2" class="sectionRight">
+						<div class="firstShow">
+							
+                            <div class="sectionContentArea">
+								<ul class="iconlist">
+									<li id="iconlist_item1" class="iconlist_item1"><img src="pages/images/Topic01/T01P12/defense.svg"> <span class="padding-value"> Infected infants often present with nonspecific signs that are commonly seen with noninfectious conditions such as transient tachypnea of the newborn or TTN, respiratory distress syndrome or  RDS, congenital heart disease, or inborn errors of metabolism.</span></li>
+									<li id="iconlist_item2" class="iconlist_item2"><img src="pages/images/Topic01/T01P12/infectious.svg"> <span class="padding-value">Neonatal sepsis is rare, yet, the infant’s presentation may be so similar to other illnesses, that clinicians often err on the side of caution because of the devastating effects of delayed treatment of infection.</span></li>
+									<li id="iconlist_item3" class="iconlist_item2"><img src="pages/images/Topic01/T01P12/immune-system.svg"> <span class="padding-value"> Although reduction in the use of unnecessary antibiotics is a national and international goal, it is  common to start antibiotics when neonates have clinical signs of sepsis, while awaiting laboratory testing and resolution of the clinical signs.</span></li>
+								</ul>
+								<div id="error1" class="error1 ">
+									<div class="error1_inner">
+										<img src="pages/images/Topic01/T01P12/warning.svg"> Reduction in use of unnecessary antibiotics is a national and international goal.</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal" id="case_study_popup">
+                <div class="modalContent" unselectable="on">
+					<div class="modalinner">
+						<div class="modalTxtImg" unselectable="on"></div>
+						<a class="closepopup zoom_close_btn" href="javascript:void(0)" title="Click to Close"></a>
+						<!-- <div class="clickToContinue expandImgTxtRight clickToClose">Click to Close</div> -->
+						<div class="popover left-arrow">
+							<div class="arrow" style="top: 50%;"></div>
+							<div class="popover-content">Click to close image.</div>
+						</div>
+					</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--- Main Container--->
+    <div class="boxInst">
+        <div class="instNextClick"></div>
+        <div class="next_click"><em> Click Next to continue.</em></div>
+    </div>
+
+    <script>
+	manifest = [{
+        src: 'pages/images/Topic01/T01P02/img2.png',
+        id: '1'
+    },
+    {
+        src: 'pages/images/Topic01/T01P02/image_02_small.png',
+        id: '2'
+    },
+    {
+        src: 'pages/images/Topic01/T01P02/small_graph.png',
+        id: '3'
+    },
+
+];
+
+
+var audioPath = "pages/audio/Topic01/T01P12/T01P12";
+var gItemAudioPath = ["pages/audio/Topic01/T01P02/T01P12_correct", "pages/audio/Topic01/T01P02/T01P12_wrong"];
+clickViewMoreInfo();
+var currCue = 0;
+var idd = 0;
+var __curState = 0;
+var clickTabCount = 0;
+var clickTabCount1 = 0;
+
+var updateContentArray = [
+    { 
+		time: "0", carry: "", event: "", show: "#content2", hide: "", 
+		transcript: "Infected infants often present with nonspecific signs that are commonly seen with noninfectious conditions such as transient tachypnea of the newborn or TTN, respiratory distress syndrome or RDS, congenital heart disease, or inborn errors of metabolism. Neonatal sepsis is rare, yet, the infant’s presentation may be so similar to other illnesses, that clinicians often err on the side of caution because of the devestating effects of delayed treatment of infection.Although reduction in the use of unnecessary antibiotics is a natonal and international goal, it is common to start antibiotics when neonates have clinical signs of sepsis, while awaiting laboratory testing and resolution of the clinical signs." 
+	},
+   
+    { 
+		time: "1", carry: "", event: "", show: ".sectionLeftBox,#topImgbox1", hide: "", 
+		transcript: "Infected infants often present with nonspecific signs that are commonly seen with noninfectious conditions such as transient tachypnea of the newborn or TTN, respiratory distress syndrome or RDS, congenital heart disease, or inborn errors of metabolism. Neonatal sepsis is rare, yet, the infant’s presentation may be so similar to other illnesses, that clinicians often err on the side of caution because of the devestating effects of delayed treatment of infection.Although reduction in the use of unnecessary antibiotics is a natonal and international goal, it is common to start antibiotics when neonates have clinical signs of sepsis, while awaiting laboratory testing and resolution of the clinical signs."
+
+	},
+	{ 
+		time: "2", carry: "", event: "", show: "#topImgbox2", hide: "", 
+		transcript: "Infected infants often present with nonspecific signs that are commonly seen with noninfectious conditions such as transient tachypnea of the newborn or TTN, respiratory distress syndrome or RDS, congenital heart disease, or inborn errors of metabolism. Neonatal sepsis is rare, yet, the infant’s presentation may be so similar to other illnesses, that clinicians often err on the side of caution because of the devestating effects of delayed treatment of infection.Although reduction in the use of unnecessary antibiotics is a natonal and international goal, it is common to start antibiotics when neonates have clinical signs of sepsis, while awaiting laboratory testing and resolution of the clinical signs." 
+
+	},
+   
+    { 
+		time: "4", carry: "", event: "", show: "#sectionRight2", hide: "", 
+		transcript: "Infected infants often present with nonspecific signs that are commonly seen with noninfectious conditions such as transient tachypnea of the newborn or TTN, respiratory distress syndrome or RDS, congenital heart disease, or inborn errors of metabolism. Neonatal sepsis is rare, yet, the infant’s presentation may be so similar to other illnesses, that clinicians often err on the side of caution because of the devestating effects of delayed treatment of infection.Although reduction in the use of unnecessary antibiotics is a natonal and international goal, it is common to start antibiotics when neonates have clinical signs of sepsis, while awaiting laboratory testing and resolution of the clinical signs."
+
+	},
+    { 
+		time: "12", carry: "", event: "", show: "#iconlist_item1", hide: "", 
+		transcript: "Infected infants often present with nonspecific signs that are commonly seen with noninfectious conditions such as transient tachypnea of the newborn or TTN, respiratory distress syndrome or RDS, congenital heart disease, or inborn errors of metabolism. Neonatal sepsis is rare, yet, the infant’s presentation may be so similar to other illnesses, that clinicians often err on the side of caution because of the devestating effects of delayed treatment of infection. Although reduction in the use of unnecessary antibiotics is a natonal and international goal, it is common to start antibiotics when neonates have clinical signs of sepsis, while awaiting laboratory testing and resolution of the clinical signs." 
+	},
+	{ 
+		time: "22", carry: "", event: "", show: "#iconlist_item2", hide: "", 
+		transcript: "Infected infants often present with nonspecific signs that are commonly seen with noninfectious conditions such as transient tachypnea of the newborn or TTN, respiratory distress syndrome or RDS, congenital heart disease, or inborn errors of metabolism. Neonatal sepsis is rare, yet, the infant’s presentation may be so similar to other illnesses, that clinicians often err on the side of caution because of the devestating effects of delayed treatment of infection. Although reduction in the use of unnecessary antibiotics is a natonal and international goal, it is common to start antibiotics when neonates have clinical signs of sepsis, while awaiting laboratory testing and resolution of the clinical signs." 
+
+	},
+	{ 
+		time: "30", carry: "", event: "", show: "#iconlist_item3", hide: "", 
+		transcript: "Infected infants often present with nonspecific signs that are commonly seen with noninfectious conditions such as transient tachypnea of the newborn or TTN, respiratory distress syndrome or RDS, congenital heart disease, or inborn errors of metabolism. Neonatal sepsis is rare, yet, the infant’s presentation may be so similar to other illnesses, that clinicians often err on the side of caution because of the devestating effects of delayed treatment of infection. Although reduction in the use of unnecessary antibiotics is a natonal and international goal, it is common to start antibiotics when neonates have clinical signs of sepsis, while awaiting laboratory testing and resolution of the clinical signs."
+
+	},
+	{ 
+		time: "36", carry: "", event: "", show: "#topImgtxt1", hide: "", 
+		transcript: "Infected infants often present with nonspecific signs that are commonly seen with noninfectious conditions such as transient tachypnea of the newborn or TTN, respiratory distress syndrome or RDS, congenital heart disease, or inborn errors of metabolism. Neonatal sepsis is rare, yet, the infant’s presentation may be so similar to other illnesses, that clinicians often err on the side of caution because of the devestating effects of delayed treatment of infection. Although reduction in the use of unnecessary antibiotics is a natonal and international goal, it is common to start antibiotics when neonates have clinical signs of sepsis, while awaiting laboratory testing and resolution of the clinical signs.",
+    animation: [{
+                    target: ".small_expand",
+                    duration: "",
+                    activity: {
+                        'display':'block'
+                        
+                    }
+
+                }] 
+	},
+	{ 
+		time: "40", carry: "", event: "", show: "#error1", hide: "", 
+		transcript: "Infected infants often present with nonspecific signs that are commonly seen with noninfectious conditions such as transient tachypnea of the newborn or TTN, respiratory distress syndrome or RDS, congenital heart disease, or inborn errors of metabolism. Neonatal sepsis is rare, yet, the infant’s presentation may be so similar to other illnesses, that clinicians often err on the side of caution because of the devestating effects of delayed treatment of infection. Although reduction in the use of unnecessary antibiotics is a natonal and international goal, it is common to start antibiotics when neonates have clinical signs of sepsis, while awaiting laboratory testing and resolution of the clinical signs." 
+
+	},
+    
+	{ 
+		time: "45", carry: "", event: "", show: "#topImgCnt2 .clickToEnlarge,.clickToEnlarge", hide: "", 
+		transcript: "The body has a unique system of defense designed to protect against infections and foreign substances. Exposure to an infectious agent activates a complex series of responses to identify,neutralize, and eliminate the invading organism.Neonates have an immature immune system and an impaired ability to effectively eliminate invading organisms. Preterm infants are at an even greater disadvantage than term infants. The younger the gestation, the higher the risk for infection and an adverse outcome.<br> Click Next to continue.",
+    animation: [{
+                    target: ".small_expand",
+                    duration: "",
+                    activity: {
+                        'display':'block'
+                        
+                    }
+
+                }] 
+
+	},
+    
+
+];
+
+
+
+function fnAudioFinishItemComp() {
+
+    fnAudioFinishPageComp();
+
+}
+
+var audplayer = document.getElementById('audioplayer');
+
+$(document).ready(function() {
+  //restrictBacknMenuOnAssistment();
+$(".clickToEnlarge").show();
+        // $(".small_expand").show();   
+    disableNextBtn();
+	$(".clickToEnlarge").show();
+        // $(".small_expand").show();      
+
+    var ele = document.getElementsByTagName('div');
+
+    for (var i = 0; i < ele.length; i++) {
+
+        ele[i].setAttribute("unselectable", "on");
+
+    }
+
+    var n = isInArray("M1L0T1P12", gCompPageArr);
+
+    if (n == true) {
+
+        enableNextBtn();
+
+        // fnGlowNextBtn();
+
+        fnDesiableNext(false)
+
+    }
+
+});
+
+
+
+function audioReset() {
+
+    gAudioId = "";
+
+    onTimelineEnd();
+
+}
+
+function isInArray(value, array) {
+
+    return array.indexOf(value) > -1;
+
+}
+
+function fnCompletion() {
+    var _getCount1 = clickTabCount + clickTabCount1;
+    enableNextBtn();
+    $('.boxInst').show()
+    fnAudioFinishItemComp();
+}
+function fnOnAudioComplete() {
+
+    if (gAudioId == "startAudio") {
+
+          audplayer.pause();
+
+        audplayer.currentTime = 0;
+
+        $(".clickToEnlarge").show();
+        // $(".small_expand").show();
+      
+        
+		enableNextBtn();
+fnDesiableNext(false);
+        $('.boxInst').show();
+
+    } else {
+
+        fnCompletion();
+
+        enableNextBtn();
+
+        $('.boxInst').show();
+        $(".clickToEnlarge").show();
+        // $(".small_expand").show();
+        gCompPageArr.push("M1L0T1P12_1");
+
+        fnAudioFinishItemComp();
+
+        audplayer.pause();
+
+        audplayer.currentTime = 0;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+$(".small_expand").off().on("click", function() {
+
+    pauseAudio();
+
+    //audioReset();
+    $("#TabPopup5 .modal").show();
+
+    $("#TabPopup5 .sectionTop").addClass("blur");
+
+    $("#TabPopup5 .sectionContent").addClass("blur");
+	$('.modal').removeClass('popupimg1');
+	$('.modal').removeClass('popupimg2');
+	$('.modal').removeClass('popupimg3');
+	$(".modal").addClass("popupimg"+ $(this).attr('click_id'));
+
+    $(".modalTxtImg").attr('id', 'imgPopup' + $(this).attr('click_id'));
+});
+
+$(".closepopup, .modalclose").off().on("click", function() {
+
+    playAudio();
+
+    //audioReset();
+
+    $("#TabPopup5 .modal").removeAttr("style");
+
+    $("#TabPopup5 .sectionTop").removeClass("blur");
+
+    $("#TabPopup5 .sectionContent").removeClass("blur");
+    $('.boxInst').removeClass("blur");
+	$('.modal').removeClass('popupimg1');
+	$('.modal').removeClass('popupimg2');
+	$('.modal').removeClass('popupimg3');
+
+});
+
+
+function pauseAudio() {
+
+    if (!fnPauseAudio()) {
+
+        console.log(true);
+
+        fnPauseAudio()
+
+    } else {
+
+        playPauseAudio();
+
+        console.log(false);
+
+    }
+
+}
+
+function playAudio() {
+
+    if (!fnPauseAudio()) {
+
+        console.log(true);
+
+        playPauseAudio();
+
+    }
+
+}
+	</script>
+
+</body>
+
+
+
+</html>

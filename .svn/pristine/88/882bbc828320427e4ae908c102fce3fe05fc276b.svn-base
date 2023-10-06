@@ -1,0 +1,688 @@
+<!DOCTYPE HTML>
+
+<html>
+
+
+
+<head>
+
+    <title></title>
+
+ <link href="pages/Topic01/css/T01P29.css" rel="stylesheet" type="text/css">
+<style>
+	 /* Sliding entrances */
+@-webkit-keyframes slideInDown {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInDown {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__slideInDown {
+  -webkit-animation-name: slideInDown;
+  animation-name: slideInDown;
+}
+@-webkit-keyframes slideInLeft {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInLeft {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__slideInLeft {
+  -webkit-animation-name: slideInLeft;
+  animation-name: slideInLeft;
+}
+@-webkit-keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(50%, 0, 0);
+    transform: translate3d(50%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(50%, 0, 0);
+    transform: translate3d(50%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__slideInRight {
+  -webkit-animation-name: slideInRight;
+  animation-name: slideInRight;
+}
+@-webkit-keyframes slideInUp {
+  from {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInUp {
+  from {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__slideInUp {
+  -webkit-animation-name: slideInUp;
+  animation-name: slideInUp;
+}
+	.mainContainer {position: absolute;width: 100%;height: 545px;left: 0px;top: 0px;opacity: 1;}
+	.clsTabPopup{position:absolute;width:1085px;height:540px;top:0;left:0}
+	.sectionTop{position:absolute;top:0;height:30px;width:100%;padding:16px 0}
+	.sectionContent{position:absolute;top:14px;height:497px;width:1055px;left:15px;right:15px; color:#000}
+	.topImgCnt{position:relative}
+	.small_expand{
+        background: url(pages/images/Topic01/T01P22/small_expand.svg) !important;
+            position: absolute;
+            cursor: pointer;
+            width: 29px;
+            height: 29px;
+            bottom: 23px;
+            right: 17px;
+            background-position: 0px 0;
+            transition: all 0.2s;    
+            background-size: cover !important;
+            background-repeat:no-repeat ;
+            display:none;
+            opacity: .6;
+    }
+    .small_expand1{
+        background: url(pages/images/Topic01/T01P22/small_expand.svg) !important;
+            position: absolute;
+            cursor: pointer;
+            width: 29px;
+            height: 29px;
+            bottom: 23px;
+            right: 17px;
+            background-position: 0px 0;
+            transition: all 0.2s;    
+            background-size: cover !important;
+            background-repeat:no-repeat ;
+            display:none;
+            opacity: .6;
+
+    }
+    .small_expand:hover,.small_expand1:hover{
+        opacity: 1;
+    }
+    .open_map{background:url(pages/images/Topic01/T01P23/small_expand.png) no-repeat!important;width:28px;height:28px!important;position:absolute!important;bottom:24px;right:10px;display:none;left:inherit!important;top:inherit!important;float:inherit!important;text-decoration:none!important;border-radius:inherit!important;margin-left:0!important;background-color:inherit!important;padding:0!important}
+	/*  */
+    .open_map:hover{background:url(pages/images/Topic01/T01P23/small_expand_hover.png) no-repeat!important}
+
+
+	/* .small_expand1{background:url(pages/images/Topic01/T01P23/small_expand.png) no-repeat!important;width:28px;height:28px!important;position:absolute!important;bottom:7px;right:10px;display:none;left:inherit!important;top:inherit!important;float:inherit!important;text-decoration:none!important;border-radius:inherit!important;margin-left:0!important;background-color:inherit!important;padding:0!important} */
+	/* {background:url(pages/images/Topic01/T01P23/small_expand_hover.png) no-repeat!important} */
+	.open_map{right:33px;margin-top:2px}
+	.sectionLeft{height:100%;width:264px;background:#E0F6FB;box-shadow:0 1px 9px -4px rgba(0,0,0,0.75);-webkit-box-shadow:0 1px 9px -4px rgba(0,0,0,0.75);-moz-box-shadow:0 1px 9px -4px rgba(0,0,0,0.75);border-bottom-left-radius:7px;-webkit-border-bottom-left-radius:7px;-moz-border-bottom-left-radius:7px}
+	.sectionRight{width:790px;height:507px;top:0;position:absolute;left:264px}
+	.rightTop{height:42px;left:5px;position:relative}
+	.rightTop a{left:0;top:0;padding:0 65px;background:#fff;margin:0;position:relative;float:left;margin-left:-5px;font-family:OpenSansSemiBold;text-decoration:none;color:#000;height:42px;line-height:42px;border-top-right-radius:5px;-webkit-border-top-right-radius:5px;-moz-border-top-right-radius:5px;font-size:16px;cursor:default}
+	.sectionRight .assessmentShow a{cursor:default}
+	.rightTop a.active{border-top-right-radius:5px;-webkit-border-top-right-radius:5px;-moz-border-top-right-radius:5px;background:#3A5569;margin-right:0;z-index:10;color:#fff}
+	.rightTop a.active.cdefault{cursor:default}
+	.rightTop a.active:after,.rightTop a.active:before,.rightTop a.active:hover:before{top:98%;left:45%;border:solid transparent;content:" ";height:0;width:0;position:absolute;pointer-events:none}
+	.rightTop a.active:after,.rightTop a.active:hover:after{border-top-color:#3A5569;border-width:10px;margin-left:0}
+	.rightTop a.active:before,.rightTop a.active:hover:before{border-top-color:#3A5569;border-width:10px;margin-left:0}
+	.rightTop a.active:nth-child(2),.rightTop a.active:hover:nth-child(2){-webkit-border-top-left-radius:5px;border-top-left-radius:5px;-moz-border-top-left-radius:5px}
+	.rightTop a:nth-child(2){-webkit-border-top-left-radius:5px;border-top-left-radius:5px}
+	.sectionContentArea{background:#fff;height:394px;border-top-right-radius:5px;-webkit-border-top-right-radius:5px;-moz-border-top-right-radius:5px;border-bottom-right-radius:5px;-webkit-bottom-top-right-radius:5px;-moz-border-bottom-right-radius:5px}
+	
+	#topImgCnt1{background: url(pages/images/Topic01/T01P25/Jazmine_small.png) no-repeat top left; background-size:cover; height:255px; width:100%}
+	#imgPopup1 {background: url(pages/images/Topic01/T01P25/img_large.png) no-repeat; background-size:contain;}
+	#topImgCnt2{background:url(pages/images/Topic01/T01P25/img.png) no-repeat;background-size:contain;width:361px;height:124px;display:none;width:95%;position:absolute;right:0;bottom:0px}
+	#imgPopup2{background:url(pages/images/Topic01/T01P25/img.png) no-repeat;background-size:contain;background-position-y: 60px;}
+	
+	/*#case_study_popup .modalContent {width:65%; height:420px; border-radius:10px}
+	#case_study_popup .modalContent .modalinner{ padding:30px; position:relative}
+	#imgPopup0{ background-size:100% 100%; width:100%; height:360px}
+	#case_study_popup .modalContent .modalinner .modalclose{ position:absolute; top:5px; right:0px; width:30px; height:30px }
+	#case_study_popup .modalContent .modalinner .modalclose .modalcloseicon{background:url(pages/images/Topic01/T01P25/close-icon.png) no-repeat; background-size:24px 24px; width:24px; height:24px ; cursor:pointer}
+	#case_study_popup .modalContent .modalinner .modalclose .modalcloseicon:hover{background:url(pages/images/Topic01/T01P25/close-hover-icon.png) no-repeat; background-size:24px 24px; width:24px; height:24px }
+	#case_study_popup .closepopup{ display:none} 
+	#case_study_popup .modalTextBottom{ display:none}
+	#case_study_popup .popover.left-arrow{ display:none}*/
+	
+	.sectionContentArea{ padding:30px; font-size:14px; line-height:18px; height:394px}
+	.information{ margin-top:0px}
+	.information, .qtext, .bullet li, .instructions{font-size:14px !important; line-height:18px;}
+	.instructions{font-size:14px !important; font-weight:normal !important;}
+	.options-radio{ margin-top:20px}
+	.iconlist{ margin:0px; padding:0px; list-style:none; width:90%}
+	.iconlist li{ position:relative; margin-bottom:3px; font-size:14px; line-height:22px; display: flex; flex-direction: row; align-items: center; padding-left:20px}
+	.iconlist li:before{ background:url(pages/images/Topic01/T01P25/bullet.png) no-repeat; left:0px; width:13px; height:13px; position:absolute; content:""; top:5px}
+	.iconlist li a{ color:#D7722C; cursor:pointer}
+	.error1{ margin:15px auto 0px; border:solid 2px #F6A87A; border-radius:5px; width:94%; position:relative}
+	.error1 .error1_inner{ position:relative; padding:10px; color:#000; font-size:12px; line-height:18px; font-weight:bold; padding-left:60px;display: flex; flex-direction: row; align-items: center;}
+	.error1 .error1_inner img{ position:absolute; width:35px; height:34px; left:10px; top:10px;}
+	.topImgtxt{ background:rgba(0, 0, 0, 0.1); position:absolute; bottom:0px; padding:10px; color:#000;font-size:14px; line-height:22px;}
+	
+	.txt1{ font-size:16px; line-height:22px; margin:10px 0px}
+	
+	.sectionLeftBox{ position:relative; height:100%; padding:5px;width: 274px;}
+	.topImgboxinner{  border:double 6px #ccc; position:relative; height:100%}
+	.content2 .sectionRight .sectionContentArea{height: 265px; margin-top:100px}
+	.sectionContentAreainner{ width:80%; margin:20px 0px 0px 50px}
+	.sectionContentAreainner .contenttext{font-size:14px; line-height:20px; position:relative}
+	.sectionContentAreainner .contenttext2{ margin-top:30px}
+	#content1{ visibility:visible}
+	#list1, #list2, #list3, #list4, #list5, #error1, #txt1, #listd1,#listd2,#listd3, #listd4, #listd5,#listd6{visibility:hidden; opacity: 0;}
+	/*.small_expand{ display:block}*/
+	.poupdiv .modalContent{width:455px;  height:auto !important; padding:20px 18px 10px 40px; top:17%; }
+		.poupdiv  .modalContent .heading{ color:#D7722C; font-size:18px; text-align:center}
+		.poupdiv  .modalContent .linenew{ height:2px; background:#D7722C; margin:5px auto;width:77%}
+	.poupdiv  .modalContent .desc{ color:#000; font-size:14px; text-align:left}
+	.poupdiv  .modalContent .desc ul{ text-align:left; padding:0px}
+	.poupdiv  .modalContent .desc ul li{ margin-bottom:5px}
+	.poupdiv .popupclose{ position: absolute; top:10px; right:10px}
+	.poupdiv .popupclose img{ width:24px; height:24px; cursor:pointer}
+	.poupdiv .modalclose{ position:absolute; top:5px; right:0px; width:30px; height:30px }
+	.poupdiv .modalclose .modalcloseicon{background:url(pages/images/Topic01/T01P25/close-icon.png) no-repeat; background-size:24px 24px; width:24px; height:24px ; cursor:pointer}
+	.poupdiv .modalclose .modalcloseicon:hover{background:url(pages/images/Topic01/T01P25/close-hover-icon.png) no-repeat; background-size:24px 24px; width:24px; height:24px }
+	.link{ position:absolute; bottom:-50px}
+	.link a{font-size:14px; line-height:18px; color:#000; text-decoration:underline; font-weight:normal;}
+	.link a:hover{ color:#D7722C}
+	.option [type="radio"]:checked + label, .option [type="radio"]:not(:checked) + label{font-size:14px; color:#000 !important}
+	/*.popover.clickToEnlarge{ display:block}*/
+	.popupview2 .modalContent.maxBot .popover{bottom: 10px;}
+	.popupview2 .maxBot a.closepopup{bottom: 6px;}
+	.clickview_caseinfo{top: -56px;}
+	/*.HelpPopup{ display:none !important}*/
+	.clickview_icon:hover{width: 45px;background-position: -48.1px 0px;}
+	.option [type="radio"]:checked + label:before, .option [type="radio"]:not(:checked) + label:before{border: 2px solid #000;}
+		.option.aactive.clicked [type="radio"]:checked + label:after{background: #000;}
+		#helptopbar img.caseinfoimg {
+    width: 36px;
+    height: 31px;
+    position: ABSOLUTE;
+   margin-left:-40px;margin-top: -5px;
+}
+.titleCase{padding-left:40px}
+.glossaryCntTxt ul.bullet{ width:auto; padding:0px 0px 0px 20px; margin-top:-5px}
+.popupglossasryCnt{width:98% !important;top: 56px;height: 605px; left:auto}
+.glossaryCntTxt{ max-height: 90%;}
+.popupview1 .modalContent{width: 578px;height: 420px;}
+.qtext{margin-top: 15px;}
+.leftCnt{ top:56px}
+.clickview_icon {
+  background-position: 0px 0px;
+  width: 45px;
+  height: 45px;
+  display: block;
+  position: absolute;
+  right: 13px;
+  background-size: cover;
+  top: -2px;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+}
+.clickview_caseinfo .popover {
+  right: 68px;
+  bottom: 11px;
+  font-size: 11px;
+}
+.bottom_43{
+    bottom: 43px;
+    right: 10px;
+}
+.right_62{
+    right: 62px!important;
+    bottom: 47px;
+}
+	</style>
+
+</head>
+
+
+
+<body>
+
+
+    <div class="pg-pageContent" UNSELECTABLE="on">
+        <div id="TabPopup5" class="clsTabPopup">
+            <div class="sectionContent">
+                <div class="sectionLeft">
+                    <div class="topImgCnt" id="topImgCnt1">
+                        <!-- <div class="clickToContinue expandImgTxtRight clickToEnlarge">Click to enlarge image.</div> -->
+                        <div class="popover left-arrow clickToEnlarge">
+                            <div class="arrow" style="top: 50%;"></div>
+                            <div class="popover-content">Click to enlarge image.</div>
+                        </div>
+                        <a href="javascript:void(0);" title="Click to enlarge image" class="small_expand zoom_btn" click_id="1">&nbsp;</a>
+                    </div>
+
+                    <div class="leftBottom">
+                        <h3>Baby Jazmine</h3>
+                        <div class="headingBlue">BORN AT</div>
+                        <div class="sectiontxt">36 weeks gestation</div><br>
+                        <div class="headingBlue">WEIGHT</div>
+                        <div class="sectiontxt">2.8 kg</div>
+                    </div>
+					<div class="clickview_caseinfo">
+                        <!-- <div class="clickview_text">Click to view case information</div> -->
+                        <div class="popover left-arrow">
+                            <div class="arrow" style="top: 50%;" ></div>
+                            <div class="popover-content">Click to view case information</div>
+                        </div>
+                        <a class="clickview_icon " href="javascript:void(0);" aid="1" title="Click to view case information" style="text-indent: -999999px;"><img src="pages/images/Topic01/T01P25/caseinfo.png" class="caseinfoimg" alt="case icon" />Case Information</a>
+                    </div>
+                </div>
+
+                <div class="sectionRight">
+                    <div class="firstShow">
+                        <div class="rightTop">
+                            <a href="javascript:void(0);" class="tabClick active" title="Case Information" rel="Case">Case Information</a>
+                        </div>
+
+                        <div class="sectionContentArea">
+                            <section class="QuestionPanel1_2 clsPanel" id="Labor">
+                                <div class="qtext">At 2 hours of age, Baby Jazmine is brought to the Special Care Nursery because of respiratory distress. </div>
+                                <div class="leftCnt">
+                                    <div class="information">Her vital signs are:<br />
+                                        <ul class="bullet">
+                                            <li>Axillary temperature: <span class="addcolor">36.1°C</span></li>
+                                            <li>Heart rate: <span>172 beats per minute</span></li>
+                                            <li>Respiratory rate: <span class="addcolor">80 breaths per minute</span></li>
+                                            <li>Blood pressure: <span>45/28 (mean 34)</span></li>
+                                        </ul>
+                                        These vital signs are?<br /><br /><em class="instructions">Select the correct option and click the Submit button.</em>
+                                    </div>
+                                    <div class='options-radio'>
+                                        <div class='option'><input type="radio" id="test1"><label for="test1">Normal</label></div>
+                                        <div class='option'><input type="radio" id="test2"><label for="test2">Abnormal</label></div>
+                                    </div>
+									<div class="link" style="display:none"><a href="javascript:void(0);" class="popup">Click here to review the labor/delivery history.</a></div>
+                                </div>
+
+                                <div class="rightCnt">
+                                    <div class="information informationRight">Normal Vital Signs - Neonate
+										 <ul class="bullet">
+                                            <li>Temperature: <span class="addcolor">36.5 to 37.5°C</span></li>
+                                            <li>Heart rate: <span>120 to 160 beats per minute</span></li>
+                                            <li>Respiratory rate: <span class="addcolor">30 to 60 breaths per minute</span></li>
+                                            <li>Blood pressure: <span>Varies with gestational age, postmenstrual age, and birthweight</span></li>
+                                        </ul>
+                                        
+										<div class="topImgCnt" id="topImgCnt2">
+											<div class="popover left-arrow clickToEnlarge" style="bottom: -15px;">
+                            <div class="arrow" style="top: 50%;"></div>
+                            <div class="popover-content">Click to enlarge image.</div>
+                        </div>
+											<a href="javascript:void(0);" title="Click to enlarge image" class="small_expand1 zoom_btn" click_id="2" style="bottom: -15px;">&nbsp;</a>
+										</div>
+                                    </div>
+                                </div>
+                                
+                            </section>
+							
+                            <div class="bottomTxt">
+                                <div class="cSubmitBtn">Submit</div>
+                            </div>
+							
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="modal" id="case_study_popup">
+                <div class="modalContent" unselectable="on">
+					<div class="modalinner">
+						<div class="modalTxtImg" unselectable="on"></div>
+						<div id="ModalTextBottom1" class="modalTextBottom" unselectable="on">Baby Jazmine</div>
+						<a class="closepopup zoom_close_btn bottom_43" href="javascript:void(0)" title="Click to Close"></a>
+						<!-- <div class="clickToContinue expandImgTxtRight clickToClose">Click to Close</div> -->
+						<div class="popover left-arrow right_62">
+							<div class="arrow" style="top: 50%;"></div>
+							<div class="popover-content">Click to close image.</div>
+						</div>
+					</div>
+                </div>
+            </div>
+
+			
+
+        </div>
+
+    </div>
+
+    <!--- Main Container--->
+
+    <div class="boxInst">
+        <div class="instNextClick"></div>
+        <div class="next_click"><em> Click Next to continue.</em></div>
+    </div>
+    </div>
+
+    <script>
+	manifest = [{
+        src: 'pages/images/Topic01/T01P02/img2.png',
+        id: '1'
+    },
+
+    {
+        src: 'pages/images/Topic01/T01P02/image_02_small.png',
+        id: '2'
+    },
+
+    {
+        src: 'pages/images/Topic01/T01P02/small_graph.png',
+        id: '3'
+    },
+];
+
+
+
+var audioPath = "pages/audio/Topic01/T01P25/T01P25";
+var gItemAudioPath = ["pages/audio/Topic01/T01P25/T01P25_02", "pages/audio/Topic01/T01P25/T01P25_01"];
+clickViewMoreInfo();
+var currCue = 0;
+var idd = 0;
+var __curState = 0;
+var clickTabCount = 0;
+var clickTabCount1 = 0;
+
+var updateContentArray = [
+
+    { time: "0.0", carry: "", event: "", show: "", hide: "", transcript: "As you may recall, Baby Jazmine was recently delivered and has remained with her mother. At 2 hours of age she was brought to the Special Care Nursery because of respiratory distress. Review Baby Jazmine’s admission vital signs. Are they normal or abnormal?  Select the correct option, then click Submit." },
+    {
+        time: "0.0", carry: "", event: "",   show: "",  hide: "",    
+		transcript: "",
+        animation: [{ target: ".topImgCnt", duration: "0.5", activity: { 'opacity': '1', 'display': 'block' } }]
+    },
+    {
+        time: "0.0",   carry: "", event: "",   show: "",  hide: "",
+        transcript: "",
+        animation: [{ target: ".rightCnt", duration: "0.5", activity: { 'opacity': '1', 'display': 'none' } }]
+    }
+];
+
+var updateContentArray0 = [{ time: "0.0", carry: "", event: "", show: "", hide: "", transcript: "That is correct. <br>Click Next to continue." }];
+var updateContentArray1 = [{ time: "0.0", carry: "", event: "", show: "", hide: "", transcript: "Here is some feedback on your response. Baby Jazmine’s vital signs are abnormal. Compare her vital signs with the normal neonatal vital signs on the right. <br>Click Next to continue." }];
+
+function fnAudioFinishItemComp() {
+    fnAudioFinishPageComp();
+}
+
+var __dataXml;
+
+var audplayer = document.getElementById('audioplayer');
+
+$(document).ready(function() {
+$(document).on('click', '.clickview_icon', function(e) {
+        e.preventDefault();
+
+        // alert("here...")
+        //if (isActive(this))
+        fnLoadCaseInformation($(this));
+    });
+	$(".glossarytag").on("click", function() {
+			glossaryFuncPageLevel();
+			});
+    bindClickableHotspot();
+    disableNextBtn();
+    var ele = document.getElementsByTagName('div');
+    for (var i = 0; i < ele.length; i++) {
+        ele[i].setAttribute("unselectable", "on");
+    }
+    var n = isInArray("M1L0T1P25", gCompPageArr);
+    if (n == true) {
+        enableNextBtn();
+        fnDesiableNext(false)
+    }
+});
+function fnLoadCaseInformation(aEvent) {
+    if ($("#clsGlosBtn").css("opacity") != 1) {
+        return
+    }
+    var _currentFile = '';
+    fnPauseAudio();
+    $(".HelpPopup").remove();
+    $("<div class='HelpPopup'></div><div class='bgHelpPopup'></div>").insertAfter('.gridContainer');
+    $(".bgHelpPopup").data("state", 0);
+    centerHelpPopup();
+    loadHelpPopup();
+    if (aEvent.attr("aid") == "1") {
+        _currentFile = 'elements/caseinfo/jazmine.html';
+    } else {
+        _currentFile = 'elements/caseinfo/concord.html';
+    }
+    $('.HelpPopup').load(_currentFile);
+	
+}
+function audioReset() {
+    gAudioId = "";
+    onTimelineEnd();
+}
+
+function isInArray(value, array) {
+    return array.indexOf(value) > -1;
+}
+
+
+function fnPlaySectionAudio(gCurrentIndex) {
+    indexAudio = (gCurrentIndex);
+    audioId = "audio_" + gCurrentIndex;
+    gAudioId = audioId;
+    fnHideShowAudioPlayer(false);
+    updateContentArray = eval("updateContentArray" + (gCurrentIndex));
+    initAudioPlayer(gItemAudioPath[gCurrentIndex])
+}
+
+function fnCompletion() {
+    console.log("end");
+    var _getCount1 = clickTabCount + clickTabCount1;
+    console.log("start new");
+    enableNextBtn();
+    $('.boxInst').show()
+    fnAudioFinishItemComp();
+
+}
+
+function fnOnAudioComplete() {
+    if (gAudioId == "startAudio") {
+        console.log("start audio");
+        audplayer.pause();
+        audplayer.currentTime = 0;
+        $(".clickToEnlarge").show();
+        $(".small_expand").show();
+        $(".small_expand1").show();
+    } else {
+        fnCompletion();
+        enableNextBtn();
+        $('.boxInst').show();
+        $(".clickToEnlarge").show();
+        $(".small_expand").show();
+        $(".small_expand1").show();
+        gCompPageArr.push("M1L0T1P25");
+        fnAudioFinishItemComp();
+        audplayer.pause();
+        audplayer.currentTime = 0;
+    }
+
+}
+
+var correctOptions = [1];
+
+function bindClickableHotspot() {
+    console.log("clicked");
+    $('.option').addClass('aactive'); //.css({ 'cursor': 'pointer' });
+    $('.option').off().on('click', function() {
+		$('.option').removeClass('clicked');
+		$(this).addClass('clicked');
+		if ($('.option.clicked').length >= 1) {
+			$('.cSubmitBtn').addClass('active');
+			$('.cSubmitBtn.active').off().on('click', function() {
+				submitClick();
+			});
+		} else {
+			$('.cSubmitBtn').removeClass('active');
+		}
+    });
+}
+
+$('#topImgCnt2').hide();
+function submitClick() {
+    tinCanWrapper.sendStatementData("answered", "baby-jazmine-vital-Signs-assessment", "At 2 hours of age, Baby Jazmine is brought to the Special Care Nursery because of respiratory distress. Her vital signs are: Axillary temperature: 36.1°C, Heart rate: 172 beats per minute, Respiratory rate: 80 breaths per minute, Blood pressure: 45/28 (mean 34). These vital signs are? ");
+    $('.cSubmitBtn.active').hide();
+    console.log("clicked");
+    enableNextBtn();
+    fnDesiableNext(false);
+    gCompPageArr.push("M1L0T1P25");
+    var incorrectCount = 0; //, correctCount = 0;
+    $('.option').each(function() {
+        if ($(this).hasClass('clicked') && ($.inArray($(this).index(), correctOptions) == -1)) {
+            $(this).addClass('wrong');
+            incorrectCount++;
+        }
+        $(this).off(); //.removeClass('clicked');
+    });
+
+    $(correctOptions).each(function(i, val) {
+        $('.option').eq(val).addClass('correct');
+    });
+
+    if (incorrectCount == 0) {
+        fnPlaySectionAudio(0);
+    } else {
+        fnPlaySectionAudio(1);
+    }
+    $('.option').off().removeClass('aactive'); //.css({'cursor':'default'});
+    $('.cSubmitBtn').removeClass('active');
+	$('.rightCnt').show();
+    $('.informationRight').show();
+}
+
+$(".small_expand").off().on("click", function() {
+    pauseAudio();
+    $("#TabPopup5 #case_study_popup.modal").show();
+    $("#TabPopup5 .sectionTop").addClass("blur");
+    $("#TabPopup5 .sectionContent").addClass("blur");
+	$(".modal").removeClass("popupview1");
+	$(".modal").removeClass("popupview2");
+	$(".modal").addClass("popupview" + $(this).attr('click_id'));
+    $(".modalTxtImg").attr('id', 'imgPopup' + $(this).attr('click_id'));
+    $('.modalTextBottom').hide();
+    $('#ModalTextBottom' + $(this).attr('click_id')).show();
+    $('.modalContent').addClass('maxBot0');
+    $('.modalContent').removeClass('maxBot');
+});
+
+$(".small_expand1").off().on("click", function() {
+    pauseAudio();
+    $("#TabPopup5 #case_study_popup.modal").show();
+    $("#TabPopup5 .sectionTop").addClass("blur");
+    $("#TabPopup5 .sectionContent").addClass("blur");
+    $('.boxInst').addClass("blur");
+	$(".modal").removeClass("popupview1");
+	$(".modal").removeClass("popupview2");
+	$(".modal").addClass("popupview" + $(this).attr('click_id'));
+    $(".modalTxtImg").attr('id', 'imgPopup' + $(this).attr('click_id'));
+    $('.modalTextBottom').hide();
+    $('#ModalTextBottom' + $(this).attr('click_id')).show();
+    $('.modalContent').addClass('maxBot');
+    $('.modalContent').removeClass('maxBot0');
+});
+
+$(".closepopup, .modalclose").off().on("click", function() {
+    playAudio();
+    $("#TabPopup5 .modal").removeAttr("style");
+    $("#TabPopup5 .sectionTop").removeClass("blur");
+    $("#TabPopup5 .sectionContent").removeClass("blur");
+    $('.boxInst').removeClass("blur");
+	$(".modal").removeClass("popupview1");
+	$(".modal").removeClass("popupview2");
+});
+
+$(".popup").on("click", function() {
+	pauseAudio();
+	$("#TabPopup5 #popup").show();
+	$("#TabPopup5 .sectionTop").addClass("blur");
+	$("#TabPopup5 .sectionContent").addClass("blur");
+});
+$(".popupclose").on("click", function() {
+	playAudio();
+	$("#TabPopup5 #popup").removeAttr("style");
+	$("#TabPopup5 .sectionTop").removeClass("blur");
+	$("#TabPopup5 .sectionContent").removeClass("blur");
+});
+function pauseAudio() {
+    if (!fnPauseAudio()) {
+        console.log(true);
+        fnPauseAudio()
+    } else {
+        playPauseAudio();
+        console.log(false);
+    }
+}
+
+function playAudio() {
+    if (!fnPauseAudio()) {
+        console.log(true);
+        playPauseAudio();
+    }
+}
+</script>
+
+</body>
+
+
+
+</html>

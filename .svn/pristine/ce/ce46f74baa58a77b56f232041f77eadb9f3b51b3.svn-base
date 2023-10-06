@@ -1,0 +1,53 @@
+@font-face {    
+    font-family: ArialRegular;
+	src: url('../css/fonts/ArialRegular.eot');
+    src: url('../css/fonts/ArialRegular.eot?#iefix') format('embedded-opentype'),
+         url('../css/fonts/ArialRegular.woff2') format('woff2'),
+         url('../css/fonts/ArialRegular.woff') format('woff'),
+         url('../css/fonts/ArialRegular.ttf') format('truetype'),
+         url('../css/fonts/ArialRegular.svg#ArialRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {    
+    font-family: ArialBold;
+	src: url('../css/fonts/ArialBold.eot');
+    src: url('../css/fonts/ArialBold.eot?#iefix') format('embedded-opentype'),
+         url('../css/fonts/ArialBold.woff2') format('woff2'),
+         url('../css/fonts/ArialBold.woff') format('woff'),
+         url('../css/fonts/ArialBold.ttf') format('truetype'),
+         url('../css/fonts/ArialBold.svg#ArialBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {    
+    font-family: OpenSansRegular;
+	src: url('../css/fonts/OpenSansRegular.eot');
+    src: url('../css/fonts/OpenSansRegular.eot?#iefix') format('embedded-opentype'),
+         url('../css/fonts/OpenSans.woff') format('woff'),
+         url('../css/fonts/OpenSansRegular.ttf') format('truetype'),
+         url('../css/fonts/OpenSans.svg#OpenSans') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {    
+    font-family: OpenSansBold;
+	src: url('../css/fonts/OpenSansBold.eot');
+    src: url('../css/fonts/OpenSansBold.eot?#iefix') format('embedded-opentype'),
+         url('../css/fonts/OpenSansBold.woff') format('woff'),
+         url('../css/fonts/OpenSansBold.ttf') format('truetype'),
+         url('../css/fonts/OpenSansBold.svg#OpenSansBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {    
+    font-family: OpenSansSemiBold;
+	src: url('../css/fonts/OpenSansSemibold.eot');
+    src: url('../css/fonts/OpenSansSemibold.eot?#iefix') format('embedded-opentype'),
+         url('../css/fonts/OpenSansSemibold.woff') format('woff'),
+         url('../css/fonts/OpenSansSemibold.ttf') format('truetype'),
+         url('../css/fonts/OpenSansSemibold.svg#OpenSansSemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+

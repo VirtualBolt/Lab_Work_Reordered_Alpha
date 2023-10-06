@@ -1,0 +1,1251 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+
+    <title></title>
+
+    <script>
+        manifest = [{
+            src: 'pages/images/Topic01/T01P28/Jazmine_large.png',
+            id: '1'
+        }, {
+            src: 'pages/images/Topic01/T01P28/Jazmine_small.png',
+            id: '2'
+        }, ];
+    </script>
+    <!--<link href="pages/Topic01/T01P02.css" rel="stylesheet" type="text/css">-->
+    <style type="text/css">
+
+        @-webkit-keyframes pulse {
+            0% {
+                -webkit-transform: scale(1);
+            }
+            50% {
+                -webkit-transform: scale(1.1);
+            }
+            100% {
+                -webkit-transform: scale(1);
+            }
+        }
+        
+        @keyframes pulse {
+            0% {
+                top: 150px;
+                left: 220px;
+                width: 0px;
+                height: 0px;
+                transform: scale(1);
+            }
+            50% {
+                left: 105px;
+                top: 10px;
+                width: 235px;
+                height: 235px;
+                transform: scale(1.1);
+            }
+            100% {
+                left: 105px;
+                top: 10px;
+                width: 228px;
+                height: 228px;
+                transform: scale(1);
+            }
+        }
+        
+        .pulse {
+            -webkit-animation-name: pulse;
+            animation-name: pulse;
+        }
+        @-webkit-keyframes pulse_tab {
+            0% {
+                -webkit-transform: scale(1);
+            }
+            50% {
+                -webkit-transform: scale(1.1);
+            }
+            100% {
+                -webkit-transform: scale(1);
+            }
+        }
+        
+        @keyframes pulse_tab {
+            0% {
+                top: 50px;
+                left: 210px;
+                width: 0px;
+                height: 0px;
+                transform: scale(1);
+            }
+            50% {
+                left: 140px;
+                top: 30px;
+                width: 140px;
+                height: 140px;
+                transform: scale(1.1);
+            }
+            100% {
+                left: 135px;
+                top: 40px;
+                width: 135px;
+                height: 135px;
+                transform: scale(1);
+            }
+        }
+		/* Zoom in Keyframes */
+        
+        @-webkit-keyframes zoomin {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        @keyframes zoomin {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        /*End of Zoom in Keyframes */
+        /* Zoom out Keyframes */
+        
+        @-webkit-keyframes zoomout {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(0.67);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        @keyframes zoomout {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(0.67);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        /*End of Zoom out Keyframes */
+		.mainContainer{position:absolute;width:100%;height:545px;left:0;top:0;opacity:1}
+		.clsPatch{position:absolute;width:0;height:236px}
+		.clsCircle{position:absolute;-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;animation-fill-mode:both}
+		#idCircle01{background:url(pages/images/Topic01/T01P02/nurse.png) no-repeat;background-size:contain;display:none;margin-top:12px}
+		.ClsTab{position:absolute;width:0;height:0;transform:scale(0);-webkit-transform:scale(0)}
+		.ClsTabInside{position:absolute;width:110px;height:110px;top:9px;border-radius:50%;background-size:contain;opacity:0}
+		.ClsTabHover{position:absolute;top:-11px;left:-11px;width:147px;height:147px;border-radius:50%;transform:scale(0);transition:all .3s}
+		.clsTabTxt{position:absolute;width:155px;height:25px;top:100px;left:-6px;font-size:16px;color:#000!important;text-align:center;font-family:OpenSansRegular;opacity:0}
+		.ClsTab{background-position:100% 100%}
+		.ClsTab.clsVisited{cursor:pointer!important}
+		.clsTabPopup{position:absolute;width:1085px;height:540px;top:0;left:0;background:url(media/images/player/common/bg.png) no-repeat}
+		.clsBold{font-family:OpenSansSemiBold}
+		.clsReg{font-family:OpenSansSemiBold}
+		.clsAllTabs{position:absolute;height:170px;width:1085px;top:255px;left:0}
+		.clsTick{position:absolute;width:170px;height:64px;background-size:contain;left:0;opacity:0;cursor:default;display:none}
+		.boxInst{position:absolute;top:489px;left:906px}
+		.clickToClose{width:136px;top:337px;left:630px;position:absolute;z-index:10000;line-height:45px;text-align:center;display:block}
+		.startingCnt{position:absolute;width:100%;height:545px;left:0;top:0}
+		.sectionTop{position:absolute;top:0;height:30px;width:100%;padding:16px 0}
+		.sectionContent{position:absolute;top:63px;height:465px;width:1055px;left:15px;right:15px}
+		.sectionLeft{height:100%;width:264px;background:#E0F6FB;box-shadow:0 1px 9px -4px rgba(0,0,0,0.75);-webkit-box-shadow:0 1px 9px -4px rgba(0,0,0,0.75);-moz-box-shadow:0 1px 9px -4px rgba(0,0,0,0.75);border-bottom-left-radius:7px;-webkit-border-bottom-left-radius:7px;-moz-border-bottom-left-radius:7px}
+		.sectionRight{width:790px;height:465px;top:0;position:absolute;left:264px}
+		.rightTop{height:34px;left:5px;position:relative}
+		.rightTop a{left:0;top:0;padding:0 32px;background:#acacac;margin:0;position:relative;float:left;margin-left:-5px;font-family:OpenSansSemiBold;text-decoration:none;color:#000;height:34px;line-height:32px;border-top-right-radius:5px;-webkit-border-top-right-radius:5px;-moz-border-top-right-radius:5px;font-size:16px}
+		.sectionRight .assessmentShow a{cursor:pointer}
+		.rightTop a.active{border-top-right-radius:5px;-webkit-border-top-right-radius:5px;-moz-border-top-right-radius:5px;background:#3A5569;margin-right:0;z-index:10;color:#fff}
+		.rightTop a.active.cdefault{cursor:default}
+		.rightTop a:hover{color:#fff}
+		.rightTop a.active:after,.rightTop a.active:before,.rightTop a.active:hover:before{top:98%;left:45%;border:solid transparent;content:" ";height:0;width:0;position:absolute;pointer-events:none}
+		.rightTop a.active:after,.rightTop a.active:hover:after{border-top-color:#3A5569;border-width:10px;margin-left:0}
+		.rightTop a.active:before,.rightTop a.active:hover:before{border-top-color:#3A5569;border-width:10px;margin-left:0}
+		.rightTop a.active:nth-child(2),.rightTop a.active:hover:nth-child(2){-webkit-border-top-left-radius:5px;border-top-left-radius:5px;-moz-border-top-left-radius:5px}
+		.rightTop a:nth-child(2){-webkit-border-top-left-radius:5px;border-top-left-radius:5px}
+		.sectionContentArea{background:#fff;height:421px;border-top-right-radius:5px;-webkit-border-top-right-radius:5px;-moz-border-top-right-radius:5px;border-bottom-right-radius:5px;-webkit-bottom-top-right-radius:5px;-moz-border-bottom-right-radius:5px; padding:20px}
+		.topImgCnt{width:264px;height:255px;position:relative}
+		#topImgCnt1{background:url(pages/images/Topic01/T01P28/Jazmine_small.png) no-repeat center left;background-size:cover!important}
+		.small_expand{
+            background: url(pages/images/Topic01/T01P22/small_expand.svg) !important;
+            position: absolute;
+            cursor: pointer;
+            width: 29px;
+            height: 29px;
+            bottom: 23px;
+            right: 17px;
+            background-position: 0px 0;
+           
+            background-size: cover !important;
+            background-repeat:no-repeat ;
+            display: none;
+            opacity: .6;
+        }
+        .small_expand1{
+            background: url(pages/images/Topic01/T01P22/small_expand.svg) !important;
+            position: absolute;
+            cursor: pointer;
+            width: 29px;
+            height: 29px;
+            bottom: 10px;
+    right: 9px;
+            background-position: 0px 0;
+            transition: all 0.2s;    
+            background-size: cover !important;
+            background-repeat:no-repeat ;
+            display: none;
+            opacity: .6;
+        }
+        .small_expand:hover,.small_expand1:hover{
+            opacity: 1;
+        }
+        .open_map{background:url(pages/images/Topic01/T01P28/small_expand.png)!important;width:28px;height:28px!important;position:absolute!important;bottom:24px;right:10px;display:none;left:inherit!important;top:inherit!important;float:inherit!important;text-decoration:none!important;border-radius:inherit!important;margin-left:0!important;background-color:inherit!important;padding:0!important;opacity: 1;}
+		/* , */
+        .open_map:hover{opacity: .6;}
+		.open_map{right:33px;margin-top:2px}
+		.leftBottom{position:relative;height:210px}
+		.leftBottom h3{padding:0;margin:0;position:relative;top:12px;text-align:center;font-family:OpenSansSemiBold;font-size:20px;height:55px;color:#000}
+		.headingBlue{padding-left:20px;color:#3A5569;font-family:OpenSansSemiBold;font-size:16px;padding-bottom:0}
+		.sectiontxt{font-family:OpenSansSemiBold;padding-left:20px;padding-bottom:25px;font-size:16px;color:#000}
+		.listcnt,.disableListcnt{position:relative;top:0;padding-right:20px;margin-bottom:7px;padding-bottom:6px;font-size:14px;border:1px solid transparent;width:335px;padding-right:20px}
+		.listcnt.cborder{border:1px solid #E4BA4E;border-radius:5px;-webkit-border-radius:5px;-moz-border-radius:5px}
+		.assessmentShow .listcnt:hover,.postnatalShow .listcnt:hover{border:1px solid #999;border-radius:5px;-webkit-border-radius:5px;-moz-border-radius:5px}
+		.assessmentShow .listcnt.disabled:hover,.postnatalShow .listcnt.disabled:hover{cursor:default;border:1px solid transparent;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0}
+		.assessmentShow .listcnt.cborder.disabled:hover,.postnatalShow .listcnt.cborderdisabled:hover{cursor:default;border:1px solid #e4ba4d;border-radius:5px;-webkit-border-radius:5px;-moz-border-radius:5px}
+		.leftCnt{width:360px;position:absolute;left:0;line-height:23px}
+		.rightCnt{width:360px;position:absolute;right:0;line-height:19px}
+		.marginTop{top:40px}
+		.firstShow .listcnt{display:none}
+		.OptionPanelConcordMaternal .listcnt,.OptionPanelConcordLabor .listcnt{display:none}
+		.postnatalShow{display:none}
+		.ModalTextBottom{position:absolute;bottom:0;left:10px;width:98%;font-size:16px;height:40px;color:#fff;font-family:OpenSansBold;background:#5B5B5B;text-align:center;line-height:42px}
+		#imgPopup0{background:url(pages/images/Topic01/T01P28/Jazmine_large.png) no-repeat center;background-size:contain!important;margin:0 auto}
+		#imgPopup1{background:url(pages/images/Topic01/T01P28/Jazmine_large.png) no-repeat}
+		#largemap{background:url(pages/images/Topic01/T01P28/map_large.png) no-repeat;width:100%;height:327px;background-size:cover}
+		.caseStudyMap .caseStudyContent{position:absolute;height:415px;width:934px;top:38px;left:70px;left:center;background:#fff;border-radius:5px;-webkit-box-shadow:2px 2px 12px -1px rgba(0,0,0,0.75);-moz-box-shadow:2px 2px 12px -1px rgba(0,0,0,0.75);box-shadow:2px 2px 8px -1px rgba(0,0,0,0.75)}
+		.caseStudyMap .ModalTextBottom{line-height:22px;padding:0 100px;border-bottom-left-radius:5px;height:42px;padding:10px 100px;width:734px;left:0;font-family:OpenSansRegular}
+		.caseStudyMap .clickToClose{top:296px;left:719px}
+		.ModalTxtImg{position:absolute;top:0;left:0;width:100%;font-size:16px;height:385px;background-size:cover;z-index:100}
+		.open_map_close{top:301px;right:-38px!important}
+		.closepopup{
+            position: absolute;
+            width: 41px;
+            height: 41px;
+            background: url(pages/images/Topic01/T01P22/close_expand.svg) no-repeat;           
+            right: 16px;
+            cursor: pointer;
+            z-index: 1000;       
+            /* bottom:40px; */
+            background-position: 0px 0;
+          
+            background-size: cover !important;
+            background-repeat:no-repeat ;
+            opacity: .6;
+        }
+        .closepopup:hover{
+            opacity: 1;
+        }
+        .open_map_close{position:absolute;width:92px;height:47px;background:url(pages/images/Topic01/T01P28/close_expand.png) no-repeat;bottom:30px;right:-47px;cursor:pointer;z-index:1000;text-decoration:none;opacity: .6;}
+		/* , */
+        .open_map_close:hover{opacity: 1;}
+		.assessmentShow .sectionContentArea .clsPanel{top:100px;height:368px;line-height:20px}
+		.bottomTxt{position:absolute;bottom:10px;right:24px}
+		.cSubmitBtn{background:#ACACAC;font-family:OpenSansRegular;font-size:18px;padding:5px 15px;text-transform:lowercase;color:#fff;border-radius:5px;border-radius:5px;-webkit-border-radius:5px;-moz-border-radius:5px;text-transform:capitalize;line-height:21px;border:2px solid transparent}
+		.cSubmitBtn.enable:hover{border:2px solid #707070;background:transparent;color:#5B5B5B}
+		.cSubmitBtn.active{background:#5B5B5B;color:#fff;cursor:pointer}
+		.cSubmitBtn.active:hover{border:2px solid #707070;background:#fff;color:#000}
+		.assementDesc{font-family:OpenSansSemiBold;font-size:16px;color:#000;position:absolute;left:50px;top:45px}
+		.assementDesc span{font-style:italic;font-size:14px;color:#4D667B}
+		.bottomMenu{position:absolute;top:420px;width:380px;height:40px;left:188px;margin:0 auto;display:none}
+		.bottomMenuLeft{position:absolute;left:0;width:195px;height:40px}
+		.bottomMenuRight{position:absolute;right:-22px;width:195px;height:40px;top:2px}
+		.clickToNext,.clickToPrev{display:inline-block;width:30px;height:30px;border:1px solid #ccc;border-radius:50%;margin-left:10px;position:absolute;top:-3px;cursor:pointer;padding:0;background:transparent}
+		.clickToNext:hover,.clickToPrev:hover{background:#5b5b5b;border:1px solid transparent}
+		.clickToNext:hover:after,.clickToPrev:hover:after{border-top:2px solid #fff;border-right:2px solid #fff}
+		.clickToNext.disabled,.clickToPrev.disabled{border:1px solid #e5e5e5;background:transparent;cursor:default}
+		.clickToNext.disabled:hover:after,.clickToPrev.disabled:hover:after{border-right:3px solid #a6a6a6}
+		.clickToPrev{right:0;top:-1px}
+		.cLeft:after{content:'';display:inline-block;margin-top:7px;margin-left:5px;width:11px;height:11px;border-top:3px solid #5B5B5B;border-right:3px solid #5B5B5B;-moz-transform:rotate(45deg);-webkit-transform:rotate(45deg);transform:rotate(45deg)}
+		.cLeft.clickToPrev.disabled:after{border-top:3px solid #a6a6a6;border-right:3px solid #a6a6a6}
+		.cRight.clickToPrev.disabled:after{border-top:3px solid #a6a6a6;border-right:3px solid #a6a6a6}
+		.cRight:after{content:'';display:inline-block;margin-top:7px;margin-left:10px;width:12px;height:12px;border-top:3px solid #5B5B5B;border-right:3px solid #5B5B5B;-moz-transform:rotate(45deg);-webkit-transform:rotate(45deg);transform:rotate(230deg)}
+		.blur{-webkit-backface-visibility:hidden;-moz-backface-visibility:hidden;-ms-backface-visibility:hidden;-webkit-filter:blur(12px);-moz-filter:blur(12px);-ms-filter:blur(12px);-o-filter:blur(12px);filter:blur(12px)}
+		
+		.sectionContent{position:absolute;top:15px;height:495px;width:1055px;left:15px;right:15px; color:#000}
+		.listitem{ margin:0px; padding:30px; list-style:none}
+		.listitem li{ position:relative; font-size:14px; color:#000; margin-bottom:10px; padding-left:17px}
+		/*.listitem li:before{ background:url(pages/images/Topic01/T01P28/bullet.png) no-repeat; left:0px; width:13px; height:13px; position:absolute; content:""; top:5px} */
+		.listitem li:before{content: ''; background: #000000; border-radius: 50%; width: 8px; height: 8px; position: absolute; top: 6px; left:0px}
+		.listitem li a{ color:#F6A87A; cursor:pointer}
+		.poupdiv .modalContent{width:455px;  height:auto !important; padding:20px 18px; top:30%}
+		.poupdiv  .modalContent .heading{ color:#D7722C; font-size:18px; text-align:center}
+		.poupdiv  .modalContent .linenew{ height:2px; background:#D7722C; margin:5px auto;width:77%}
+		.poupdiv  .modalContent .desc{ color:#000; font-size:14px; text-align:left}
+		.poupdiv .popupclose{ position: absolute; top:10px; right:10px}
+		.poupdiv .popupclose img{ width:24px; height:24px; cursor:pointer}
+		.poupdiv .modalclose{ position:absolute; top:5px; right:0px; width:30px; height:30px }
+		.poupdiv .modalclose .modalcloseicon{background:url(pages/images/Topic01/T01P28/close-icon.png) no-repeat; background-size:24px 24px; width:24px; height:24px ; cursor:pointer}
+		.poupdiv .modalclose .modalcloseicon:hover{background:url(pages/images/Topic01/T01P28/close-hover-icon.png) no-repeat; background-size:24px 24px; width:24px; height:24px }
+		/*#case_study_popup .modalContent {width:65%; height:420px; border-radius:10px}
+		#case_study_popup .modalContent .modalinner{ padding:30px; position:relative}
+		#imgPopup0{ background-size:100% 100%; width:100%; height:360px}
+		#case_study_popup .modalContent .modalinner .modalclose{ position:absolute; top:5px; right:0px; width:30px; height:30px }
+		#case_study_popup .modalContent .modalinner .modalclose .modalcloseicon{background:url(pages/images/Topic01/T01P28/close-icon.png) no-repeat; background-size:24px 24px; width:24px; height:24px ; cursor:pointer}
+		#case_study_popup .modalContent .modalinner .modalclose .modalcloseicon:hover{background:url(pages/images/Topic01/T01P28/close-hover-icon.png) no-repeat; background-size:24px 24px; width:24px; height:24px }
+		#case_study_popup .closepopup{ display:none} 
+		#case_study_popup .modalTextBottom{ display:none}
+		#case_study_popup .popover.left-arrow{ display:none}*/
+		#topImgCnt3{background:url(pages/images/Topic01/T01P28/img_small.png) no-repeat center left;background-size:cover!important; height:100%; width:100%; border-radius: 5px;}
+		.sectionContentLeft{ width:59%; height:100%; border-right:solid 1px #ccc; padding-right:1%; float:left}
+		.sectionContentRight{ width:38%; height:100%; padding-left:1%; float:right}
+		#imgPopup2{background:url(pages/images/Topic01/T01P28/img_large.png) no-repeat;background-size:100% 100%;}
+		/* .small_expand1{background:url(pages/images/Topic01/T01P28/small_expand.png) no-repeat!important;width:28px;height:28px!important;position:absolute!important;bottom:7px;right:10px;display:block;left:inherit!important;top:inherit!important;float:inherit!important;text-decoration:none!important;border-radius:inherit!important;margin-left:0!important;background-color:inherit!important;padding:0!important} */
+	/* .small_expand1:hover{background:url(pages/images/Topic01/T01P28/small_expand_hover.png) no-repeat!important} */
+	.modal.middle .modalContent{ width:420px !important; padding-bottom:0px;    height: 438px;
+    top: 23px;border-radius: 11px;}
+	.cont_txt{ font-size:14px; color:#000; line-height:20px; margin-bottom:8px}
+	.cont_txt span{ font-weight:bold}
+	.sectionContentRight .listitem{ padding:0px}
+	#text1, #text2, #text3, #text4,#text5, #text6,#text7,#text8, #text9, #text10{visibility:hidden; opacity: 0;}
+	/*.popover.clickToEnlarge{ display:block}*/
+	.small_expand1{ display:none}
+	#topImgCnt3 .popover.clickToEnlarge{bottom:6px;}
+	  #imgPopup2 .closepopup{bottom:9px}  
+	.modal.middle .modalContent .popover.left-arrow{bottom:15px}
+	#case_study_popup .modalContent{width:578px;}
+	/* #case_study_popup.imgPopup2 .modalContent{box-shadow: none !important;} */
+	.listnum{position:relative; font-size:14px; color:#000; margin-bottom:10px; padding-left:17px}
+
+  
+    </style>
+    
+
+</head>
+
+
+
+<body>
+
+
+
+
+
+    <div class="pg-pageContent" UNSELECTABLE="on">
+
+        <div class="mainContainer"></div>
+
+
+
+        <div id="TabPopup5" class="clsTabPopup">
+
+           
+
+            <div class="sectionContent">
+
+                <div class="sectionLeft">
+                    <div class="topImgCnt" id="topImgCnt1">
+						<div class="popover left-arrow clickToEnlarge">
+							<div class="arrow" style="top: 50%;"></div>
+							<div class="popover-content">Click to enlarge image.</div>
+						</div>
+                        <a href="javascript:void(0);" title="Click to enlarge image" class="small_expand zoom_btn" click_id="0">&nbsp;</a>
+                    </div>
+                    <div class="leftBottom">
+                        <h3>Baby Jazmine</h3>
+                        <div class="headingBlue">BORN AT</div>
+                        <div class="sectiontxt">36 weeks gestation</div>
+                        <div class="headingBlue">WEIGHT</div>
+                        <div class="sectiontxt">2.8 kg</div>
+                    </div>
+                </div>
+
+                <div class="sectionRight">
+                    <div class="assessmentShow">
+                        <div class="rightTop" unselectable="on">
+                            <a href="javascript:void(0);" class="tabClick active" id="first" rel="Case Information">Case Information</a>
+                        </div>
+
+                        <div class="sectionContentArea">
+							<div class="sectionContentLeft">
+								<div class="topImgCnt" id="topImgCnt3">
+									<!-- <div class="popover left-arrow clickToEnlarge">
+										<div class="arrow" style="top: 50%;"></div>
+										<div class="popover-content">Click to enlarge image.</div>
+									</div> -->
+									<a href="javascript:void(0);" title="Click to enlarge image" class="small_expand1 zoom_btn" click_id="2">&nbsp;</a>
+								</div>
+							</div>
+							<div class="sectionContentRight">
+								<div id="text1" class="cont_txt"><span>EXAMINATION:</span> XR Chest</div>
+								<div id="text2" class="cont_txt"><span>Lungs:</span> 10 rib expansion bilaterally with hazy opacities, most prominent in the left upper lobe</div>
+								<div id="text3" class="cont_txt"><span>Heart:</span> Heart size upper limit of normal</div>
+								<div id="text4" class="cont_txt"><span>Pleural space:</span> No pneumothorax or pleural effusion</div>
+								<div id="text5" class="cont_txt"><span>Bones:</span> No abnormalities </div>
+								<div id="text6" class="cont_txt"><span>Medical devices:</span> None </div>
+								<div id="text7" class="cont_txt"><span>Impression:</span></div>
+								<ol class="listnum">
+									<li id="text8">Bilateral hyperexpansion</li>
+									<li id="text9">Left upper lobe opacities, cannot exclude pneumonia or aspiration of meconium</li>
+									<li id="text10">Heart size upper limit of normal</li>
+								</ol>
+							</div>
+							<div style="clear:both"></div>
+
+                           
+
+                        </div>
+
+                        
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+           
+			<div class="modal poupdiv" id="popup">
+				<div class="modalContent" unselectable="on">
+					<div class="popupclose modalclose" ><div class="modalcloseicon"></div></div>
+					<div class="heading">Body Mass Index (VSD)</div>
+					<div class="linenew"></div>
+					<div class="desc">A ratio between weight-to-height that is used to identify weight categories.</div>
+				</div>
+			</div>
+            <div class="modal" id="case_study_popup">
+
+                <div class="modalContent" unselectable="on">
+					<div class="modalinner">
+						<div class="modalTxtImg" unselectable="on" id="imgPopup0"></div>
+						<div id="ModalTextBottom0" class="modalTextBottom" unselectable="on">Baby Jazmine</div>
+						<a class="closepopup zoom_close_btn" href="javascript:void(0)" title="Click to Close"></a>
+						<!-- <div class="clickToContinue expandImgTxtRight clickToClose">Click to Close</div> -->
+						<div class="popover left-arrow">
+							<div class="arrow" style="top: 50%;"></div>
+							<div class="popover-content">Click to close image.</div>
+						</div>
+					</div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!--- Main Container--->
+
+		<div class="boxInst">
+			<div class="instNextClick"></div>
+			<div class="next_click"><em> Click Next to continue.</em></div>
+		</div>
+    </div>
+
+</body>
+<script>
+        var audioPath = "pages/audio/Topic01/T01P28/T01P28";
+        var currCue = 0;
+        var idd = 0;
+        var __curState = 0;
+        var popupSectionArray0 = [];
+        var popupSectionArray1 = [];
+        var clickTabCount = 0;
+        var clickTabCount1 = 0;
+
+        var updateContentArray = [
+            {
+                time: "0",carry: "", event: "", show: "",  hide: "",
+                transcript: "Review Baby Jazmine’s chest x-ray. Her radiology report is shown on the right.  <br>Click Next to continue."
+            },
+			{
+                time: "0.5",carry: "", event: "", show: "#text1",  hide: "",
+                transcript: "Review Baby Jazmine’s chest x-ray. Her radiology report is shown on the right.  <br>Click Next to continue."
+            },
+			{
+                time: "1.0",carry: "", event: "", show: "#text2",  hide: "",
+                transcript: "Review Baby Jazmine’s chest x-ray. Her radiology report is shown on the right.  <br>Click Next to continue."
+            },
+			{
+                time: "1.5",carry: "", event: "", show: "#text3",  hide: "",
+                transcript: "Review Baby Jazmine’s chest x-ray. Her radiology report is shown on the right.  <br>Click Next to continue."
+            },
+			{
+                time: "2.0",carry: "", event: "", show: "#text4",  hide: "",
+                transcript: "Review Baby Jazmine’s chest x-ray. Her radiology report is shown on the right.  <br>Click Next to continue."
+            },
+			{
+                time: "2.5",carry: "", event: "", show: "#text5",  hide: "",
+                transcript: "Review Baby Jazmine’s chest x-ray. Her radiology report is shown on the right.  <br>Click Next to continue."
+            },
+			{
+                time: "3.0",carry: "", event: "", show: "#text6",  hide: "",
+                transcript: "Review Baby Jazmine’s chest x-ray. Her radiology report is shown on the right.  <br>Click Next to continue."
+            },
+			{
+                time: "3.5",carry: "", event: "", show: "#text7",  hide: "",
+                transcript: "Review Baby Jazmine’s chest x-ray. Her radiology report is shown on the right.  <br>Click Next to continue."
+            },
+			{
+                time: "4.0",carry: "", event: "", show: "#text8",  hide: "",
+                transcript: "Review Baby Jazmine’s chest x-ray. Her radiology report is shown on the right.  <br>Click Next to continue."
+            },
+			{
+                time: "4.5",carry: "", event: "", show: "#text9",  hide: "",
+                transcript: "Review Baby Jazmine’s chest x-ray. Her radiology report is shown on the right.  <br>Click Next to continue."
+            },
+			{
+                time: "5.0",carry: "", event: "", show: "#text10",  hide: "",
+                transcript: "Review Baby Jazmine’s chest x-ray. Her radiology report is shown on the right.  <br>Click Next to continue."
+            },
+			
+        ];
+
+
+
+        function fnAudioFinishItemComp() {
+
+            //console.log("end")
+
+            fnAudioFinishPageComp();
+
+            //fnUpdatePageCompletionCounter(0);
+
+            //fnUpdatePageCompletionCounter(7);
+
+        }
+
+        var __dataXml;
+
+
+
+        $(document).ready(function() {
+
+
+            //console.log("done");
+            audioReset();
+            //disableNextBtn();
+            fnClick();
+			//$(".clickToEnlarge").show(); // Venakt
+            //$(".small_expand").show(); // Venakt
+			$(".small_expand1").hide(); 
+            var ele = document.getElementsByTagName('div');
+
+            for (var i = 0; i < ele.length; i++) {
+
+                ele[i].setAttribute("unselectable", "on");
+
+            }
+
+            //$("#idCircle01").css("display","block");
+
+            //setTimeout(function() {
+
+            $("#idCircle01").css("display", "block");
+
+            // }, 4000);
+
+            var n = isInArray("M1L0T1P28", gCompPageArr);
+
+            if (n == true) {
+
+                enableNextBtn();
+
+                // fnGlowNextBtn();
+
+                fnDesiableNext(false);
+
+            }
+
+            fStartPage();
+
+            var __currentCase = '';
+
+        });
+
+
+
+        function audioReset() {
+
+            gAudioId = "";
+
+            onTimelineEnd();
+
+        }
+
+
+        function isInArray(value, array) {
+
+            return array.indexOf(value) > -1;
+
+        }
+
+
+        function fnPlaySectionAudio(gCurrentIndex) {
+
+            indexAudio = (gCurrentIndex);
+
+            audioId = "audio_" + gCurrentIndex;
+
+            fnHideShowAudioPlayer(false);
+
+            updateContentArray = eval("popupSectionArray" + (gCurrentIndex));
+
+            initAudioPlayer(gItemAudioPath[gCurrentIndex])
+
+        }
+
+
+
+        var gTotalPopups = 2;
+
+        var temp = "";
+
+        function fnClick() {
+            $(".small_expand").on("click", function() {
+
+                pauseAudio();
+				//alert($(this).attr('click_id'));
+                $("#TabPopup5 .modal").show();
+$(".modalTxtImg").attr('id', 'imgPopup' + $(this).attr('click_id'));
+                $("#TabPopup5 .sectionTop").addClass("blur");
+				$("#TabPopup5 .modal").addClass("imgPopup" + $(this).attr('click_id'));
+				 $('.modalTextBottom').hide();
+    			$('#ModalTextBottom' + $(this).attr('click_id')).show();
+                $("#TabPopup5 .sectionContent").addClass("blur");
+                $('.modalinner .closepopup').css({'bottom':'40px'})
+
+            });
+
+            $(".closepopup, .modalclose").on("click", function() {
+
+                playAudio();
+
+                $("#TabPopup5 .modal").removeAttr("style");
+
+                $("#TabPopup5 .sectionTop").removeClass("blur");
+		
+                $("#TabPopup5 .sectionContent").removeClass("blur");
+				$("#TabPopup5 #case_study_popup.modal").removeClass("middle");
+				$("#TabPopup5 .modal").removeClass("imgPopup0");
+				$("#TabPopup5 .modal").removeClass("imgPopup2");
+                $(".boxInst ").removeClass("blur");
+
+            });
+
+			$(".popup").on("click", function() {
+
+                pauseAudio();
+
+                $("#TabPopup5 #popup").show();
+
+                $("#TabPopup5 .sectionTop").addClass("blur");
+
+                $("#TabPopup5 .sectionContent").addClass("blur");
+
+            });
+			$(".popupclose").on("click", function() {
+
+                playAudio();
+
+                $("#TabPopup5 #popup").removeAttr("style");
+
+                $("#TabPopup5 .sectionTop").removeClass("blur");
+
+                $("#TabPopup5 .sectionContent").removeClass("blur");
+				$("#TabPopup5 #case_study_popup.modal").removeClass("middle");
+
+            });
+			$(".small_expand1").off().on("click", function() {
+				pauseAudio();
+				$("#TabPopup5 #case_study_popup.modal").addClass("middle");
+				$("#TabPopup5 #case_study_popup.modal").show();
+				$("#TabPopup5 .sectionTop").addClass("blur");
+				$("#TabPopup5 .sectionContent").addClass("blur");
+				$("#TabPopup5 .modal").addClass("imgPopup" + $(this).attr('click_id'));
+				$('.boxInst').addClass("blur");
+				$(".modalTxtImg").attr('id', 'imgPopup' + $(this).attr('click_id'));
+				 $('.modalTextBottom').hide();
+				$('#ModalTextBottom' + $(this).attr('click_id')).show();
+                $('.modalinner .closepopup').css({'bottom':'9px'})
+			});
+        }
+
+
+
+        function fStartPage() {
+
+            loadScreenData(gModuleArr[gCurrMod].Lessons[gCurrLess].Topics[gCurrTop].Pages[gCurrPage].attr("XMLSRC"))
+
+            //fGenerateOptionPanel();
+
+        }
+
+
+
+        /*--------------------------- load screen content -------------------------------*/
+
+        function loadScreenContent(aScreenData) {
+
+
+
+            $(aScreenData).find("question").each(function(index, aQues) {
+
+                //console.log(aQues);
+
+                __questionArray.push(aQues);
+
+                fGenerateOptionPanel();
+
+            });
+
+        }
+
+
+
+        function loadScreenData(aFileVal) {
+
+            $.ajax({
+
+                type: "GET",
+
+                url: aFileVal,
+
+                datatype: "xml",
+
+                success: loadScreenContent
+
+            });
+
+        }
+
+
+
+        /* function fTabClose()
+
+        {
+
+        	$(".clsCloseBtn").on("click",function(){
+
+        		$(".clsTabPopup").css({"display":"none"});
+
+        		fnCompletion();
+
+        	});
+
+        }
+
+         */
+
+
+
+        function fnCompletion() {
+
+
+            //audioReset();
+
+            //console.log("end");
+
+            //if($(".clsVisited").length==gTotalPopups){
+
+            //var _getCount1 = clickTabCount + clickTabCount1;
+
+            //console.log("end"+_getCount1);
+
+            //if(_getCount1>=2){
+
+            //console.log("start new");
+
+            //gCompPageArr.splice($.inArray("M1L0T1P28", gCompPageArr), 1);
+
+            gCompPageArr.push("M1L0T1P28");
+            enableNextBtn();
+            fnAudioFinishItemComp();
+            $(".clickToEnlarge").show();
+            $(".small_expand").show();
+			$(".small_expand1").show(); 
+			$(".boxInst").show();
+            //}
+
+            //enableNextBtn();
+
+            //fnAudioFinishItemComp();
+
+            //}
+
+        }
+
+
+
+        function fnOnAudioComplete() {
+            if (gAudioId == "startAudio") {
+                //console.log("start audio");
+                $(".ClsTab").removeClass("clsDisable");
+                // we need to replace this
+                //enableNextBtn();
+                //fnAudioFinishItemComp();
+                // we need to replace this
+                $(".clickToEnlarge").show();
+                $(".small_expand").show();
+				$(".small_expand1").show(); 
+				$(".boxInst").show();
+                $(".QuestionPanel1_2 .listcnt").removeClass("disabled");
+            } else {
+                fnCompletion();
+            }
+        }
+
+        //Generate user option panel
+
+        var correctAnsArray = [];
+
+        var babyboyemmet = false;
+
+        var __mateolaborCorrerctAns = [];
+
+        var __mateolaborClick = [];
+
+        function fGenerateOptionPanel() {
+
+            var str3 = '';
+            var str3_1 = '';
+            var l = '';
+            __mateolaborCorrerctAns = [];
+
+            $(__questionArray[3]).find("correctAnswers").find("correctAns").each(function(aIndex, aElem) {
+
+                __mateolaborCorrerctAns.push($(aElem).text());
+
+            });
+
+
+            $(__questionArray[3]).find("Options").find("Option").each(function() {
+
+                l++;
+
+                if (l <= 5) {
+
+                    str3 += '<div class="listcnt" curid=' + l + ' id=showList_' + l + '>';
+
+                    str3 += '<input id="arrow_' + l + '" type="checkbox"></input>';
+
+                    //str3 += '<div id="option_' + l + '" curId='+l+' class="OptionCLSS">';
+
+                    str3 += '<label for="arrow_' + l + '" class="">' + $(this).text() + '</label>';
+
+                    //str3 += '</div>';
+
+                    str3 += '</div>';
+
+                } else {
+
+                    str3_1 += '<div class="listcnt" curid=' + l + ' id=showList_' + l + '>';
+
+                    str3_1 += '<input id="arrow_' + l + '" type="checkbox"></input>';
+
+                    //str3_1 += '<div id="option_' + l + '" curId='+l+' class="OptionCLSS">';
+
+                    str3_1 += '<label for="arrow_' + l + '" class="">' + $(this).text() + '</label>';
+
+                    //str3_1 += '</div>';
+
+                    str3_1 += '</div>';
+
+                }
+
+            });
+
+            $(".QuestionPanel1_2 .leftCnt").html(str3);
+            $(".QuestionPanel1_2 .rightCnt").html(str3_1);
+
+        }
+
+
+
+        function interSect(a, b) {
+
+            return $.grep(a, function(i) {
+
+                return $.inArray(i, b) > -1;
+
+            });
+
+        }
+
+        function areDifferentByIds(clickVal, correctVal) {
+            var newArr = correctVal.slice();
+
+            for (var i = 0; i < clickVal.length; i++) {
+
+
+                var index = newArr.indexOf(clickVal[i]);
+                if (index !== -1) {
+                    newArr.splice(index, 1);
+                }
+
+            }
+
+            return newArr;
+
+        }
+
+
+
+        function checkCondition(aTarget, aCurValue, aCorrectAnswer) {
+
+            var _totCount = 0;
+
+            var _submitEnabale = false;
+
+            //console.log("first"+aTarget+":::"+aCurValue+"::"+aCorrectAnswer)
+
+            var _curValue = interSect(aCurValue, aCorrectAnswer);
+
+            //console.log("Match Val"+_curValue);
+
+            $("#" + aTarget + " .listcnt").removeAttr("style").removeClass("clicked");
+
+            for (var i = 0; i < aCurValue.length; i++) {
+
+                $("#" + aTarget + " .listcnt[curid='" + aCurValue[i] + "']").removeClass("correctAnswer").addClass(
+                    "wrongAnswer");
+
+            }
+
+            for (var i = 0; i < _curValue.length; i++) {
+
+                _totCount++;
+
+                $("#" + aTarget + " .listcnt[curid='" + _curValue[i] + "']").removeClass("wrongAnswer").addClass(
+                    "correctAnswer");
+
+            }
+
+            ///console.log("Total click Count"+aCurValue.length+"correct count"+_totCount);
+
+            //console.log(aCurValue.length+":::"+_totCount);
+
+            if (aCurValue.length == aCorrectAnswer.length) {
+
+                if (aCurValue.length == _totCount) {
+
+                    _submitEnabale = true;
+
+                } else {
+
+                    _submitEnabale = true;
+
+                }
+
+            } else {
+
+                _submitEnabale = true;
+
+            }
+
+            return _submitEnabale;
+
+        }
+
+
+
+
+
+        function correctAnwerShow(aTarget, aCorrectAnswer) {
+
+            for (var i = 0; i < aCorrectAnswer.length; i++) {
+
+                //$(".OptionCLSS[curid='"+aCurValue[i]+"']").removeClass("correctAnswer").addClass("wrongAnswer");
+
+                $("#" + aTarget + " .listcnt[curid='" + aCorrectAnswer[i] + "']").addClass("correctAnswer");
+
+            }
+
+        }
+
+        function correctAnswerNotClicked(aTarget, aCorrectAnswerVal) {
+            for (var i = 0; i < aCorrectAnswerVal.length; i++) {
+                $("#" + aTarget + " .listcnt[curid='" + aCorrectAnswerVal[i] + "']").addClass("cborder");
+            }
+        }
+
+
+        var __questionArray = [];
+
+        var __responseOptionsArr = [];
+
+        var __screenCounter = 0;
+
+        var common = [];
+
+        var common1 = [];
+
+        var commonArray = [];
+
+        var commonArray1 = [];
+
+        var commonRemArray = [];
+
+
+
+        var commonArray_2 = [];
+
+        var commonRemArray_2 = [];
+
+        var commonArray1_2 = [];
+
+
+
+        var commonArray_3 = [];
+
+        var commonRemArray_3 = [];
+
+        var commonArray1_3 = [];
+
+
+
+
+
+        function endModule() {
+
+            var _getCount = clickTabCount + clickTabCount1;
+
+
+
+            if (_getCount >= 2) {
+
+                audioReset();
+
+                fnPlaySectionAudio(14);
+
+                //enableNextBtn();				
+
+                //$(".sugar_module_cnt").show();
+
+                $("#idText9").show().css('opacity', '1');
+
+                $("#idText8").css('opacity', '0');
+
+                $(".boxInst").show();
+
+                //$(".sugar_module_cnt .expandImgTxt").show();
+
+                //$(".sugar_module_cnt").hide();
+
+                //$("#TabImage1").removeClass('clsDisable').addClass('clsDisable');
+
+                //$("#TabImage5").removeClass('clsDisable').addClass('clsDisable');
+
+                //console.log("end count"+clickTabCount);				
+
+            } else {
+
+                $(".boxInst").hide();
+
+                //$(".sugar_module_cnt .expandImgTxt").hide();
+
+                //$(".sugar_module_cnt").hide();
+
+                //$(".boxInst").css('opacity','1');
+
+                //console.log("end"+clickTabCount);
+
+            }
+
+        }
+
+
+
+
+
+
+
+
+
+        function pauseAudio() {
+
+            if (!fnPauseAudio()) {
+
+
+
+                fnPauseAudio()
+
+            } else {
+
+                playPauseAudio();
+
+
+
+            }
+
+        }
+
+        function playAudio() {
+
+            if (!fnPauseAudio()) {
+
+
+                playPauseAudio();
+
+            }
+
+        }
+
+
+
+        $(document).off("click").on("click", '.assessmentShow .listcnt, .postnatalShow .listcnt', function(event) {
+
+            if (!$(this).hasClass("disabled")) {
+
+                event.preventDefault();
+
+                //audioReset();		
+
+                if ($(this).attr("clicked") == "true") {
+
+                    $(this).removeClass("clicked").removeAttr("clicked");
+
+                    var itemtoRemove1 = $(this).attr("curid");
+
+
+
+
+
+                    __mateolaborClick.splice($.inArray(itemtoRemove1, __mateolaborClick), 1);
+
+                    enableSubmitBtn("#TabPopup5 .cSubmitBtn", __mateolaborClick);
+
+
+
+                } else {
+
+                    var _getCurId = $(this).attr("curid");
+
+                    $(this).addClass("clicked").attr("clicked", "true");
+
+
+
+                    __mateolaborClick.push(_getCurId);
+
+                    __mateolaborClick = $.unique(__mateolaborClick.sort());
+
+                    enableSubmitBtn("#TabPopup5 .cSubmitBtn", __mateolaborClick);
+
+
+
+                }
+
+            }
+
+
+
+            //console.log("mateo maternal"+__mateoMaternalCorrerctAns);
+
+            //console.log("Mateo Labor"+__mateolaborCorrerctAns);
+
+
+
+        });
+
+
+
+        $(".cSubmitBtn").on("click", function() {
+            console.log("clicked");
+
+            if ($(this).hasClass("active")) {
+                audioReset();
+                // fnCompletion();
+                enableNextBtn();
+                fnDesiableNext(false);
+                volumeProgressState(false);
+                gCompPageArr.push("M1L0T1P28");
+                tinCanWrapper.sendStatementData("answered", "baby-mateo-initial-assessment-labor-history", "Baby William - Initial Assessment—Labor History - Which of the following are risk factors that could negatively impact Baby William?");
+                //console.log("submit="+selectedIndex+"--"+__curState);
+                var _getCheckMateo1 = '';
+                _getCheckMateo1 = checkCondition("TabPopup5 .assessmentShow #Labor", __mateolaborClick,
+                    __mateolaborCorrerctAns);
+                correctAnwerShow("TabPopup5 #Labor", __mateolaborCorrerctAns);
+                var _checkN = areDifferentByIds(__mateolaborClick, __mateolaborCorrerctAns);
+                correctAnswerNotClicked("TabPopup5 #Labor", _checkN);
+                $("#TabPopup5 .assessmentShow .QuestionPanel1_2 .listcnt").addClass("disabled");
+                //console.log("Labor"+_getCheckMateo1);
+                /* if(_getCheckMateo1==true){
+                	fnPlaySectionAudio(0);
+                }else{
+                	fnPlaySectionAudio(1);
+                } */
+
+
+                if (_getCheckMateo1 == true) {
+
+                    fnPlaySectionAudio(0);
+                } else {
+                    var _countWrong = 0;
+                    var _countCorrect = 0;
+                    var _notselectedcorrect = 0;
+
+                    //$("#TabPopup5 .assessmentShow .listcnt").each(function( index,aElem ) {
+
+                    $(".QuestionPanel1_2 .listcnt").each(function(aIndex, aElem) {
+                        if ($($(this)).attr("class").indexOf("wrongAnswer") > -1) {
+                            _countWrong++;
+                        } else if ($($(this)).attr("class").indexOf("correctAnswer cborder") > -1) {
+                            _notselectedcorrect++;
+                        } else if ($($(this)).attr("class").indexOf("correctAnswer") > -1) {
+                            _countCorrect++;
+                        }
+                    });
+
+                    if (_countWrong >= 1 && __mateolaborCorrerctAns.length == _countCorrect) {
+
+                        fnPlaySectionAudio(1);
+                    } else if (_countWrong == 0 && __mateolaborCorrerctAns.length == (_notselectedcorrect +
+                            _countCorrect)) {
+
+                        fnPlaySectionAudio(2);
+                    } else if (_countWrong >= 1 && _countCorrect >= 1 && _notselectedcorrect >= 1) {
+
+                        fnPlaySectionAudio(3);
+                    } else {
+
+                        fnPlaySectionAudio(3);
+                    }
+
+
+                    /* if(.hasClass("correctAnswer")){
+					
+                    }else if($("#TabPopup5 .assessmentShow .OptionPanel_2 .listcnt").hasClass("wrongAnswer")){
+					
+                    } 
+                    	*/
+                }
+                $(this).hide();
+            } else {}
+
+        });
+
+        function enableSubmitBtn(aTarget, aCurVal) {
+            if (aCurVal.length == 0) {
+                $(aTarget).removeClass("active");
+            } else {
+                $(aTarget).removeClass("active").addClass("active");
+            }
+
+        }
+    </script>
+</html>

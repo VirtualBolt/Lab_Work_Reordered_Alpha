@@ -1,0 +1,11 @@
+<config>
+    <basePath>pages/images/</basePath>
+
+    <pages>
+        <page pageId='M0L1T1P1'>
+            <imgSrc>Topic01/T01P01/sc01_Ev01.jpg</imgSrc>
+           
+        </page>
+       
+    </pages>
+</config>

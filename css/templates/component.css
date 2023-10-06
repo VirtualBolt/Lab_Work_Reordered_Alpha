@@ -1,0 +1,51 @@
+
+input[type="radio"] {
+    /*display:none;*/
+}
+
+span.mcqRadioClss {
+    /*background: #999;*/
+    height: 25px;
+    width: 26px;
+    display: block;
+    clear: left;
+	float: left;
+	background-image: url("../../pages/images/Global/radio.png");
+	padding-top:1%;
+}
+
+span.mcqRadioNormalClss {
+	cursor: pointer;
+	background-position: -9px -5px;
+}
+
+span.mcqRadioSelectClss {
+	 background-position: -9px -36px;
+}
+
+span.mcqRadioDisableClss {
+	cursor: default;
+}
+
+
+span.mrqCheckboxClss {
+    /*background: #999;*/
+    height: 22px;
+    width: 22px;
+    display: block;
+    clear: left;
+	float: left;
+	background-image: url("../../pages/images/Global/checkbox.png");
+}
+
+span.mrqCheckboxNormalClss {
+	cursor: pointer;
+	background-position: -10px -8px;
+}
+
+span.mrqCheckboxSelectClss {
+	background-position: -10px -61px;
+}
+span.mrqCheckboxDisableClss {
+	cursor: default;
+}

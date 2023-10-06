@@ -1,0 +1,632 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+
+    <title></title>
+
+    <script>
+        manifest = [{
+            src: 'pages/images/Topic01/T01P00/EV01_01.png',
+            id: '1'
+        }]
+    </script>
+
+
+
+    <style type="text/css">
+        .yellowBorder:before {
+            content: "";
+            position: absolute;
+            width: 504px;
+            height: 55px;
+            /* border: 2px solid #E4BA4E; */
+            border: 1px solid #D7722C;
+            border-radius: 5px;
+            left: -100px;
+            top: -5px;
+        }
+
+        .mainContainer {
+            position: absolute;
+            width: 1062px;
+            height: 514px;
+            left: 12px;
+            top: 15px;
+            opacity: 1;
+        }
+
+        .clsCircle {
+            position: absolute;
+            /* -ms-transform: matrix(0, 0, 0, 0, 0, 0);
+            -wbkit-transform: matrix(0, 0, 0, 0, 0, 0);
+            transform: matrix(0, 0, 0, 0, 0, 0); */
+        }
+
+        #idCircle01 {
+            left: 20px;
+            top: 0px;
+            width: 300px;
+            height: 290px;
+            background: url("pages/images/Topic01/T01P00/EV01_01.png") no-repeat;
+            background-size: contain;
+        }
+
+        .clsPatch {
+            position: absolute;
+            width: 0px;
+            height: 236px;
+        }
+
+        #idPatch1 {
+            width: 730px;
+            top: 24px;
+            left: 191px;
+            padding-left: 120px;
+            height: 250px;
+            background: #FFFFFF;
+            border-radius: 10px;
+            display: block;
+            color: #000000;
+            -webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            border-radius: 5px;
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+        }
+
+        .clsText {
+            font-size: 12px;
+            font-family: OpenSansRegular;
+        }
+
+        #idText1 {
+            top: 28px;
+            left: 155px;
+            width: 585px;
+            line-height: 1.5;
+        }
+
+        .clsBold {
+            /* font-weight: bold; */
+            font-family: OpenSansSemiBold;
+            color: #D7722C;
+        }
+
+        .clsIcon {
+            position: absolute;
+            background: url("pages/images/Topic01/T01P00/Icon01.png");
+            width: 35px;
+            height: 34px;
+            left: 53px;
+            top: 55px;
+            background-size: contain;
+        }
+
+        .clsNextText {
+            position: absolute;
+            font-size: 16px;
+            font-family: OpenSansRegular;
+            width: 500px;
+            top: 48px;
+            left: 0px;
+			font-weight:500
+        }
+
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+            .custom-width {
+                width: 400px !important;
+            }
+        }
+
+        /* .boxInst {
+            position: absolute;
+            top: 484px;
+            left: 859px;
+            /*display: block;
+            opacity: 1; */
+        } */
+
+        .firstBox {
+            position: relative;
+            top: -5px;
+            width: 100%;
+            height: 200px;
+        }
+
+        .secondBox {
+            position: relative;
+            width: 971px;
+            top: 108px;
+            left: 20px;
+            padding: 10px 25px 15px 25px;
+            height: 145px;
+            background: #FFFFFF;
+            border-radius: 10px;
+            font-size: 11px;
+            display: block;
+            color: #5B5B5B;
+            -webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            border-radius: 5px;
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+        }
+
+
+        .clsPatch ul {
+            padding-top: 0px;
+        }
+
+        .clsPatch ul li {
+            margin-bottom: 10px;
+        }
+
+        .navRemindTxt {
+            left: 0px;
+            top: 0px;
+            background: #3A5569;
+            margin: 0px;
+            position: relative;
+            text-decoration: none;
+            color: #ffffff;
+            border-radius: 4px;
+            width: 219px;
+            height: 36px;
+            z-index: 1000;
+            line-height: 34px;
+            text-align: center;
+            margin: 0px auto;
+            font-size: 18px;
+        }
+
+        .disclaimerTxt {
+            /* width: 130px; */
+            position: relative;
+            top: 0px;
+            font-size: 14px;
+        }
+
+        .OptionTxtCLSS:before,
+        ul.bullet li:before {
+            content: '';
+            background: #5b5b5b;
+            border-radius: 50%;
+            width: 8px;
+            height: 8px;
+            position: absolute;
+            top: 6px;
+            left: -15px;
+        }
+
+        .click_begin {
+            position: relative;
+            width: 430px;
+            height: 36px;
+            background: #5B5B5B;
+            border-radius: 5px;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            color: #ffffff;
+            text-align: center;
+            line-height: 33px;
+            top: 115px;
+            left: 0px;
+            font-family: OpenSansRegular;
+            font-size: 16px;
+            border: 2px solid transparent;
+            margin: 0px auto;
+        }
+
+        .click_begin:hover {
+            cursor: pointer;
+            background: #FFFFFF;
+            border: 2px solid #707070;
+            color: #000000;
+        }
+
+        .navigationCnt {
+            display: none;
+        }
+
+        /* intro content */
+
+        .introCnt {
+            display: none;
+        }
+
+        .introCnt .mainContainer {
+            position: absolute;
+            width: 1000px;
+            height: 460px;
+            left: 40px;
+            top: 20px;
+            opacity: 1;
+        }
+
+        .introCnt #idPatch1 {
+            top: 130px;
+            left: 220px;
+            background-position: left;
+            height: 210px;
+            background: #FFFFFF;
+            border-radius: 10px;
+            display: none;
+            width: 0px;
+            color: #000000;
+            -webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            border-radius: 5px;
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+        }
+
+        .introCnt #idCircle01 {
+            left: 40px;
+            top: 90px;
+            width: 288px;
+            height: 288px;
+            background: url(pages/images/Topic01/T01P60/EV01_01.png) no-repeat;
+            background-size: contain;
+        }
+
+        .introCnt #idText1 {
+            top: 45px;
+            left: 168px;
+            width: 585px;
+            line-height: 1.5;
+            opacity: 0;
+        }
+
+        .introCnt .clsText {
+            position: absolute;
+            font-size: 21px;
+            font-family: OpenSansRegular;
+            opacity: 0;
+			font-weight:bold
+        }
+
+        .introCnt .clsNextText,
+        .introCnt .clsIcon {
+            display: none;
+            opacity: 0;
+        }
+
+        /* intro content */
+
+        .hidePatch {
+            display: none;
+        }
+
+        #id_sliderContainer {
+            display: none;
+        }
+
+        #clsPlayPauseBtn {
+            display: none;
+        }
+    </style>
+
+    <script>
+        var audioPath = "pages/audio/Topic01/T01P60/T01P60";
+        var currCue = 0;
+        var idd = 0;
+        // $("#clsPlayPauseBtn").removeAttr("style");
+        // $("#id_sliderContainer").removeAttr("style");
+        // $(".navigationCnt,.introCnt").removeAttr("style");
+        //$("#clsNxtBtn").css("pointers-events", "none");
+
+        var updateContentArray = [
+
+        {
+                time: "0.0",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "Thank you for completing the Lab Work module. You can access additional information by clicking on the thumbtack icon in the bottom left corner. You can exit this module by clicking the Exit button in the top right corner.",
+                animation: [{
+                    target: "#idCircle01",
+                    duration: "1.5",
+                    activity: {
+                        'transform': 'matrix(1,0,0,1,0,0)'
+                    }
+                }]
+            },
+
+            {
+                time: "1.0",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "",
+                animation: [{
+                    target: "#idPatch1",
+                    duration: "0.8",
+                    activity: {
+                        'width': '620px',
+                        'display': 'block'
+                    }
+                }]
+            },
+
+            {
+                time: "1.5",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "",
+                animation: [{
+                    target: "#idText1",
+                    duration: "0.5",
+                    activity: {
+                        'opacity': '1'
+                    }
+                }]
+            },
+
+            {
+                time: "8.0",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "",
+                animation: [
+
+                    {
+                        target: ".clsIcon",
+                        duration: "0.5",
+                        activity: {
+                            'display': 'block',
+                            'opacity': '1'
+                        }
+                    },
+
+                    {
+                        target: ".clsNextText",
+                        duration: "0.5",
+                        activity: {
+                            'display': 'block',
+                            'opacity': '1'
+                        }
+                    }
+
+                ]
+            },
+
+            {
+                time: "20.9",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "",
+                animation: [{
+                    target: ".boxInst",
+                    duration: "0.5",
+                    activity: {
+                        'display': 'block'
+                    }
+                }]
+            }
+
+        ];
+//Step - audio//
+        var gItemAudioPath = [
+            "pages/audio/Topic01/T01P60/T01P60"
+        ];
+
+        var popupSectionArray0 = [
+
+            {
+                time: "0.0",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "Thank you for completing the Lab Work module. You can access additional information by clicking on the resources button in the bottom left corner. You can exit this module by clicking the Exit button in the top right corner.",
+                animation: [{
+                    target: "#idCircle01",
+                    duration: "0",
+                    activity: {
+                        'transform': 'matrix(1,0,0,1,0,0)'
+                    }
+                }]
+            },
+
+            {
+                time: "0.0",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "",
+                animation: [{
+                    target: "#idPatch1",
+                    duration: "0",
+                    activity: {
+                        'width': '620px',
+                        'display': 'block'
+                    }
+                }]
+            },
+
+            {
+                time: "0",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "",
+                animation: [{
+                    target: "#idText1",
+                    duration: "0",
+                    activity: {
+                        'opacity': '1'
+                    }
+                }]
+            },
+
+            {
+                time: "0",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "",
+                animation: [
+
+                    {
+                        target: ".clsIcon",
+                        duration: "0.5",
+                        activity: {
+                            'display': 'block',
+                            'opacity': '1'
+                        }
+                    },
+
+                    {
+                        target: ".clsNextText",
+                        duration: "0.5",
+                        activity: {
+                            'display': 'block',
+                            'opacity': '1'
+                        }
+                    }
+
+                ]
+            },
+
+            {
+                time: "0",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "",
+                animation: [{
+                    target: ".boxInst",
+                    duration: "0.5",
+                    activity: {
+                        'display': 'none'
+                    }
+                }]
+            }
+
+        ];
+
+        function fnAudioFinishItemComp() {
+            fnAudioFinishPageComp();
+            fnUpdatePageCompletionCounter(0);
+        }
+
+        $(document).ready(function () {
+            //fnOnAudioComplete();
+            disableNextBtn();
+            $(".navigationCnt").hide();
+            clickToBegin();
+            //setTimeout(function(){  $(".click_begin").click();}, 100);
+           
+            // Step - Push ID  //
+            gCompPageArr.push("M1L0T1P60");
+            var ele = document.getElementsByTagName('div');
+            for (var i = 0; i < ele.length; i++) {
+                ele[i].setAttribute("unselectable", "on");
+            }
+            $("#clsNxtBtn").css('pointer-events', 'auto');
+        });
+
+        function fnPlaySectionAudio(gCurrentIndex) {
+
+            indexAudio = (gCurrentIndex);
+
+            audioId = "audio_" + gCurrentIndex;
+
+            fnHideShowAudioPlayer(false);
+
+            updateContentArray = eval("popupSectionArray" + (gCurrentIndex));
+
+            initAudioPlayer(gItemAudioPath[gCurrentIndex])
+
+        }
+
+        function audioReset() {
+
+            gAudioId = "";
+
+            onTimelineEnd();
+
+        }
+
+        function clickToBegin() {
+            //$(".click_begin").on("click", function () {
+                $("#clsPlayPauseBtn").show().removeClass("clsPlayDisable").addClass("clsPause").attr("title", "Pause");
+                $("#id_sliderContainer").show();
+                $(".navigationCnt").fadeOut();
+                $(".introCnt").fadeIn();
+                audioReset();
+                fnPlaySectionAudio(0);
+                enableNextBtn();
+                fnDesiableNext(false);
+                //$("#clsPlayPauseBtn").show().removeClass("clsPlayDisable").addClass("clsPause").attr("Pause");
+                //fnAudioFinishItemComp();
+           // });
+        }
+
+        function audioStop() {
+            var audio = document.getElementById("audioplayer");
+            audio.pause();
+            audio.currentTime = 0;
+        }
+
+        function fnOnAudioComplete() {
+            console.log(gAudioId)
+            //if (gAudioId == "startAudio") {
+            audioStop();
+            enableNextBtn();
+            fnAudioFinishItemComp();
+			$(".boxInst").show()
+            // }
+
+        }
+    </script>
+
+</head>
+
+
+
+<body>
+
+    <div class="pg-pageContent" UNSELECTABLE="on">
+        <div class="hidePatch">&nbsp;</div>
+
+        <div class="introCnt">
+
+            <div class="mainContainer">
+                <div class="clsPatch" id="idPatch1">
+
+                    <div class="clsText" id="idText1">Thank you for completing the Lab Work module.
+					<span class="clsNextText">You can access additional information by clicking on the resources button in the bottom left corner. You can exit this module by clicking the Exit button in the top right corner.</span></div>
+
+                </div>
+
+                <div class="clsCircle" id="idCircle01"></div>
+                <div class="boxInst">
+                    <div class="instNextClick"></div>
+                    <div class="next_click"><em>Click Next to continue.</em></div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+   
+
+</body>
+
+</html>

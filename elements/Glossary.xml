@@ -1,0 +1,45 @@
+<Glossary>
+	<AlphaDivision alpha="A">
+		<ListEntry id="GRA_10101">
+			<Term><![CDATA[Aspiration]]></Term>
+			<Definition><![CDATA[Meconium aspiration syndrome (MAS) also known as neonatal aspiration of meconium is a medical condition affecting newborn infants. It describes the spectrum of disorders and pathophysiology of newborns born in meconium-stained amniotic fluid (MSAF) and have meconium within their lungs.]]></Definition>
+		</ListEntry>
+	</AlphaDivision>
+
+	<AlphaDivision alpha="B"></AlphaDivision>
+	<AlphaDivision alpha="C"></AlphaDivision>
+	<AlphaDivision alpha="D"></AlphaDivision>
+	<AlphaDivision alpha="E"></AlphaDivision>
+	<AlphaDivision alpha="F"></AlphaDivision>
+	<AlphaDivision alpha="G"></AlphaDivision>
+	<AlphaDivision alpha="H">
+		<ListEntry id="GRA_10102">
+			<Term><![CDATA[Hypoxemia]]></Term>
+			<Definition><![CDATA[An abnormally low concentration of oxygen in the blood.]]></Definition>
+		</ListEntry>
+	</AlphaDivision>
+	<AlphaDivision alpha="I"></AlphaDivision>
+	<AlphaDivision alpha="J"></AlphaDivision>
+	<AlphaDivision alpha="K"></AlphaDivision>
+	<AlphaDivision alpha="L"></AlphaDivision>
+	<AlphaDivision alpha="M">
+		<ListEntry id="GRA_10103">
+			<Term><![CDATA[Malrotation]]></Term>
+			<Definition><![CDATA[Intestinal malrotation is a congenital anomaly of rotation of the midgut (embryologically, the gut undergoes a complex rotation outside the abdomen). As a result: the small intestine is found predominantly on the right side of the abdomen.]]></Definition>
+		</ListEntry>
+	</AlphaDivision>
+	<AlphaDivision alpha="N"></AlphaDivision>
+	<AlphaDivision alpha="O"></AlphaDivision>
+	<AlphaDivision alpha="P"></AlphaDivision>
+	<AlphaDivision alpha="Q"></AlphaDivision>
+	<AlphaDivision alpha="R"></AlphaDivision>
+	<AlphaDivision alpha="S"></AlphaDivision>
+	<AlphaDivision alpha="T"></AlphaDivision>
+	<AlphaDivision alpha="U"></AlphaDivision>
+	<AlphaDivision alpha="V"></AlphaDivision>
+	<AlphaDivision alpha="W"></AlphaDivision>
+	<AlphaDivision alpha="X"></AlphaDivision>
+	<AlphaDivision alpha="Y"></AlphaDivision>
+	<AlphaDivision alpha="Z"></AlphaDivision>
+
+</Glossary>

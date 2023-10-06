@@ -1,0 +1,40 @@
+<!Doctype html>
+<html>
+
+<head>
+    <link href="elements/home/css/home.css" type="text/css" rel="stylesheet" />
+    <link rel="icon" href="elements/home/media/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="hospitalContainer">
+        <div class="gwrapper">
+            <div class="spinner" unselectable="on">
+                <div class="rect1" unselectable="on"></div>
+                <div class="rect2" unselectable="on"></div>
+                <div class="rect3" unselectable="on"></div>
+                <div class="rect4" unselectable="on"></div>
+                <div class="rect5" unselectable="on"></div>
+            </div>
+        </div>
+        <div id="helptopbar">
+            <div id="id_glosTitleText"><img src="elements/home/media/caseinfo.png" class="caseinfo" alt="Case Information" /><span>Case Information</span></div>
+            <div class="close_txt"><span id="clsText">Close</span></div>
+            <div id="id_glosCloseBtn" title="Close"></div>
+        </div>
+        <div class="content">
+            <embed alt="pdf" src="elements/home/sugar_hospital_pages.pdf">
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    var __$cWrapper = $(".gwrapper");
+    setTimeout(function() {
+        __$cWrapper.hide();
+    }, 2000);
+    $("#id_glosCloseBtn").click(function() {
+        disableHelpPopup();
+    });
+</script>
+
+</html>

@@ -1,0 +1,76 @@
+<!doctype html>
+<html class="">
+<!--<![endif]-->
+<head>
+	<link href="elements/glossary/css/glossary.css" type="text/css" rel="stylesheet"/>
+	<script src="elements/glossary/scripts/glossary.js" type="text/javascript"></script>
+	<link rel="icon" href="elements/glossary/media/favicon.ico" type="image/x-icon">
+	<link href="jsfiles/libs/jquery.mCustomScrollbar.min.css" rel="stylesheet" type="text/css">
+	<script src="jsfiles/libs/jquery.mCustomScrollbar.concat.min.js"></script>
+</head>
+<body>
+		<div class="gloassaryContainer">
+			<div id="helptopbar">
+				<div id="id_glosTitleText" class="glossaryHeading">Glossary</div>
+				<div class="close_txt"><span id="clsText">Close</span></div>
+				<div id="id_glosCloseBtnGlsr" title="Close"></div>
+			</div>
+			<div class="gwrapper">
+				<div class="spinner" unselectable="on">
+					<div class="rect1" unselectable="on"></div>
+					<div class="rect2" unselectable="on"></div>
+					<div class="rect3" unselectable="on"></div>
+					<div class="rect4" unselectable="on"></div>
+					<div class="rect5" unselectable="on"></div>
+				</div>				
+			</div>
+			<div class="content"> </div>		
+			<div id="tableContainer" class="wordsList"> 
+				<table><tbody><tr id='wordContainer' cellspacing="10"> </tr></tbody></table>
+			</div>
+
+			<div class="searchSelectContainer"> 
+			      <div class="searchfield">
+					<!--<div class="searchText">Search</div>-->
+					<input type="text" name="medicine" class="searchTextBox" id="search" placeholder="Search Here" onblur="this.value = this.value || this.defaultValue; this.style.color = '#d7d7d7';" onfocus="this.value=''; this.style.color = '#000000';">
+					<span class="searchicons">&nbsp;</span>
+				  </div>
+			</div> 
+			<div class="medicineNameContainer"></div>
+			<div class="descriptionContainer">
+				<!--<div class="audioIcon"></div>-->
+				<div class="descMedNameContainer"></div>
+				<!--<div class="chapterText"></div>-->
+				<div class="medDescContainer"></div>
+			</div>
+			<div class="buttonContainer"> 
+				<div class="prevBtn buttons"> </div>
+				<div class="nextBtn buttons"> </div>
+			</div>
+			<div class="copyrightText"><strong><i>Pharmacology Essentials for Allied Health</i></strong> &#169; Paradigm Publishing, Inc.</div>
+		</div>	
+</body>
+<script type="text/javascript">
+		$(document).ready(function(){
+			 
+			var __$cWrapper = $(".gwrapper");
+			setTimeout(function(){__$cWrapper.hide(); }, 900);
+			var __main = new Glossary();
+			//var myParam1 = (location.search.split('name=')[1]).split("&&")[0];
+			//var myParam2 = location.search.split('chapter=')[1];
+			
+			var myParam1 = "none";
+			var myParam2 = "0";
+			var myParam3 = location.pathname.substring( 0, location.pathname.lastIndexOf( "/" ) + 1)+"/media/";
+			//console.log(myParam3);
+			__main.init(myParam2,myParam1,myParam3);
+			//arrTabIndexUpdate = ['#id_glosCloseBtn'];
+		
+		});
+		
+		$("#id_glosCloseBtnGlsr").click(function(){
+		disableHelpPopup();
+		});
+		
+</script>
+</html>

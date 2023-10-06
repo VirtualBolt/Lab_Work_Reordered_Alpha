@@ -1,0 +1,735 @@
+<!DOCTYPE HTML>
+
+<html>
+
+
+
+<head>
+
+    <title></title>
+
+    <link href="pages/Topic01/css/T01P12.css" rel="stylesheet" type="text/css">
+	<style>
+	 /* Sliding entrances */
+@-webkit-keyframes slideInDown {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInDown {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__slideInDown {
+  -webkit-animation-name: slideInDown;
+  animation-name: slideInDown;
+}
+@-webkit-keyframes slideInLeft {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInLeft {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__slideInLeft {
+  -webkit-animation-name: slideInLeft;
+  animation-name: slideInLeft;
+}
+@-webkit-keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__slideInRight {
+  -webkit-animation-name: slideInRight;
+  animation-name: slideInRight;
+}
+@-webkit-keyframes slideInUp {
+  from {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInUp {
+  from {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__slideInUp {
+  -webkit-animation-name: slideInUp;
+  animation-name: slideInUp;
+}
+	
+	#topImgCnt1{    
+    background: url(pages/images/Topic01/T01P12/image_01.png) no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px 0px 0px 5px;
+    background-position: 80%;}
+	#imgPopup1 {
+    /* background: url(pages/images/Topic01/T01P12/preterm-septic-infant-large.png) no-repeat;  */
+    background: url(pages/images/Topic01/T01P12/image_01_large.png) no-repeat;
+    background-size:contain;
+    height: 377px;
+  }
+	.modalContent{box-shadow:initial !important; background:transparent !important}
+	.sectionLeft{width: 385px; background:#fff}
+	.sectionRight{width: 670px;left: 399px;top: 14px;}
+	.sectionContentArea{ padding:26px; height:433px; color:#000 !important;}
+	.iconlist{ margin:0px; padding:0px; list-style:none; width:100%}
+	.iconlist li{ position:relative; margin-bottom:20px;  font-size:16px; line-height:22px; display: flex; flex-direction: row; align-items: center;justify-content: center;}
+	.iconlist li img{  width:82px; height:82px; margin-right: 20px;}
+	.error1{ margin:30px auto 0px; border:solid 1px #F6A87A; border-radius:5px; width:100%; position:relative}
+	.error1 .error1_inner{ position:relative; padding:15px 0px 15px 0px; color:#000; font-size:14px; line-height:22px; font-weight:bold; padding-left:50px;display: flex; flex-direction: row; align-items: center;}
+	.error1 .error1_inner img{ position:absolute; width:35px; height:34px; left:10px; top:8px;}
+	.topImgtxt{ background:rgba(0, 0, 0, 0.1); position:absolute; bottom:0; padding:10px; color:#000;font-size:14px; line-height:22px; font-weight:bold}
+	
+	
+	.content2 .sectionLeft{width: 284px; background:#fff; border-radius:5px;box-shadow: 0px 1px 2px 3px #ccc; overflow:hidden; padding:5px; position:absolute; z-index:999; height:91%; top:3%}
+	.content2 .sectionRight{width: 770px;left: 284px;}
+	#topImgCnt2{background: url(pages/images/Topic01/T01P12/preterm-septic-infant-small.png) no-repeat  center; background-size:cover;  width:100%; height:100%; top:-2px; right:2.5px; display:block}
+	#topImgCnt3{background: url(pages/images/Topic01/T01P12/Blood-culture-small.png) no-repeat  center; background-position-y: -25px;background-size:cover; width:100%; right:2.5px;  height:100%;}
+	.topImgbox1{ position:absolute; top:0px; width:100%; height:222px; top:5px; width:278px}
+	.topImgbox2{ position:absolute; top:0px; width:100%; height:222px; top:235px; width:278px}
+	.sectionLeftBox{ position:relative; height:100%; padding:5px;width: 274px;}
+	#topImgCnt2 .small_expand{ top: auto !important;}
+	#imgPopup2 {
+    background: url(pages/images/Topic01/T01P12/preterm-septic-infant-large.png) no-repeat; 
+    background-size:100% 100%;
+    height: 377px;
+  }
+	#imgPopup3 {background: url(pages/images/Topic01/T01P12/Blood-culture-large.png) no-repeat; background-size:100% 100%;}
+	.topImgboxinner{  border:double 0px #ccc; position:relative; height:100%}
+	.content2 .sectionRight .sectionContentArea{height: 265px; margin-top:100px}
+	.sectionContentAreainner{ width:80%; margin:20px 0px 0px 50px}
+	.sectionContentAreainner .contenttext{font-size:14px; line-height:20px; position:relative}
+	.sectionContentAreainner .contenttext2{ margin-top:30px}
+	#content1{ visibility:visible}
+	#content2{ visibility:hidden}
+	#iconlist_item1, #iconlist_item2, #iconlist_item3, #error1,#topImgbox1, #topImgbox2,#sectionRight2,#contenttext1, #contenttext2, #error2,#topImgtxt1{visibility:hidden; opacity: 0;}
+	.small_expand,#topImgCnt2 .clickToEnlarge,.clickToEnlarge{ visible:hidden; opacity:0; display:block}
+	.modal.popupimg1 .modalContent{width: 555px; height:auto;top:56px;}
+	.modal.popupimg2 .modalContent{width: 555px; height:auto;top:50px;}
+	.modal.popupimg3 .modalContent{width: 472px; height:auto}
+	.sectionLeftBox .popover{ bottom:8px !important}
+	.small_expand{ bottom:18px}
+	#error2.error1{width:98%}
+	.content2 .sectionContentAreainner{margin: 40px 0px 0px 50px;width: 85%;}
+	/* .modal .closepopup{bottom: 0px;} */
+	.modal .popover{bottom: 15px;}
+  .pg-pageContent{height: 97% !important}
+  .ul-class{
+    margin-left: -5.5%;
+    list-style-image:none;
+    margin-top: 4px;
+  }
+  .pic-div-style{
+    margin: 78px 0px 0px 15px;
+    box-shadow:initial !important
+  }
+  .gif-update{
+    margin: 90px 0px 0px 31px;
+    border: 2px solid #E0F6FB;
+    width: 90%;
+  }
+	</style>
+
+</head>
+
+
+
+<body>
+
+    <div class="pg-pageContent" UNSELECTABLE="on">
+        <div id="TabPopup5" class="clsTabPopup">
+			<div id="content1" >
+				<div class="sectionContent">
+					<div class="sectionLeft">
+            <div>
+            <img src="pages/images/Topic01/T01P16/baby-pic.gif" class="gif-update">
+            <div></div>
+              <span style="margin: 24px 0px 0px 80px;font-size: 16px;font-family: inherit;">The green color represents bacteria</span></div>
+            <span style="padding: 12px 14px 16px 14px;height: 21px;width: 338px;background-color: rgba(213, 213, 213, 1);display: inline-block;/*! border-radius: 5px; */position: relative;z-index: 9999;border-bottom-left-radius: 6px;border-bottom-right-radius: 6px;left: 22px;">Fetal Infection – Transplacental Infection</span>
+            </div>
+          </div>
+
+
+					<div class="sectionRight">
+						<div class="firstShow">
+							
+							<div class="sectionContentArea">
+                <div unselectable="on" style="font-size: 16px;font-family: inherit;margin-bottom: 30px;">The most common route for fetal infection is called ascending infection. </div>
+
+								<ul class="iconlist">
+                  <li id="iconlist_item1" class="iconlist_item1"><img src="pages/images/Topic01/T01P12/defense.svg">Bacterial from the vagina and cervix make their way into the intrauterine cavity and eventually through the amnion into the amniotic fluid. Ascending infection can occur even if the membranes are not ruptured. 
+                                    </li>
+                  <li id="iconlist_item2" class="iconlist_item2" ><img src="pages/images/Topic01/T01P12/infectious.svg">Presence of bacteria in the amniotic may lead to infection of the fetus. The lungs may become infected because the amniotic fluid is moved in and out with normal fetal respiration. If the fetus becomes distressed in-utero and begins to gasp, infected fluid can be inhaled deeply into the lung and cause pneumonia.
+                                    </li>
+                  <li id="iconlist_item3" class="iconlist_item2" ><img src="pages/images/Topic01/T01P12/immune-system.svg"><span>Another route of fetal infection is from the mother’s bloodstream to the placenta. An example of transplacental infection is Rubella viral infection in the first trimester. Although rare, fetal infection can also occur if bacteria is accidentally introduced into the amniotic fluid during invasive procedures, such as  <a href="javascript:void(0)" class="glossarytag"
+                    textDesc="">amniocentesis</a>,  <a href="javascript:void(0)" class="glossarytag"
+                    textDesc="">chorionic villus sampling</a>, or percutaneous fetal blood sampling. 
+                  </span></li>
+                </ul>
+
+
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+			<div class="modal" id="case_study_popup">
+                <div class="modalContent" unselectable="on">
+					<div class="modalinner">
+						<div class="modalTxtImg" unselectable="on"></div>
+						<a class="closepopup zoom_close_btn" href="javascript:void(0)" title="Click to Close"></a>
+						<!-- <div class="clickToContinue expandImgTxtRight clickToClose">Click to Close</div> -->
+						<div class="popover left-arrow">
+							<div class="arrow" style="top: 50%;"></div>
+							<div class="popover-content">Click to close image.</div>
+						</div>
+					</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--- Main Container--->
+    <div class="boxInst">
+        <div class="instNextClick"></div>
+        <div class="next_click"><em> Click Next to continue.</em></div>
+    </div>
+
+    <script>
+	manifest = [{
+        src: 'pages/images/Topic01/T01P02/img2.png',
+        id: '1'
+    },
+    {
+        src: 'pages/images/Topic01/T01P02/image_02_small.png',
+        id: '2'
+    },
+    {
+        src: 'pages/images/Topic01/T01P02/small_graph.png',
+        id: '3'
+    },
+
+];
+
+
+var audioPath = "pages/audio/Topic01/T01P12/T01P12-1";
+var gItemAudioPath = ["pages/audio/Topic01/T01P02/T01P12_correct", "pages/audio/Topic01/T01P02/T01P12_wrong"];
+clickViewMoreInfo();
+var currCue = 0;
+var idd = 0;
+var __curState = 0;
+var clickTabCount = 0;
+var clickTabCount1 = 0;
+
+var updateContentArray = [
+    { 
+		time: "0", carry: "", event: "", show: "", hide: "", 
+		transcript: "The most common route for fetal infection is called ascending infection.<ul class='ul-class'><li>Bacterial from the vagina and cervix make their way into the intrauterine cavity and eventually through the amnion into the amniotic fluid. Ascending infection can occur even if the membranes are not ruptured.</li><li>Ascending infection can occur even if the membranes are not ruptured.</li><li>Presence of bacteria in the amniotic may lead to infection of the fetus. The lungs may become infected because the amniotic fluid is moved in and out with normal fetal respiration. If the fetus becomes distressed in-utero and begins to gasp, infected fluid can be inhaled deeply into the lung and cause pneumonia.</li><li>Another route of fetal infection is from the mother’s bloodstream to the placenta. An example of transplacental infection is Rubella viral infection in the first trimester. Although rare, fetal infection can also occur if bacteria is accidentally introduced into the amniotic fluid during invasive procedures, such as amniocentesis, chorionic villus sampling, or percutaneous fetal blood sampling.</li></ul><div style='margin-top: -10px;'>Click Next to continue.</div>" 
+	},
+	{ 
+		time: "0", carry: "", event: "", show: "#iconlist_item1", hide: "", 
+		transcript: "The most common route for fetal infection is called ascending infection.<ul class='ul-class'><li>Bacterial from the vagina and cervix make their way into the intrauterine cavity and eventually through the amnion into the amniotic fluid. Ascending infection can occur even if the membranes are not ruptured.</li><li>Ascending infection can occur even if the membranes are not ruptured.</li><li>Presence of bacteria in the amniotic may lead to infection of the fetus. The lungs may become infected because the amniotic fluid is moved in and out with normal fetal respiration. If the fetus becomes distressed in-utero and begins to gasp, infected fluid can be inhaled deeply into the lung and cause pneumonia.</li><li>Another route of fetal infection is from the mother’s bloodstream to the placenta. An example of transplacental infection is Rubella viral infection in the first trimester. Although rare, fetal infection can also occur if bacteria is accidentally introduced into the amniotic fluid during invasive procedures, such as amniocentesis, chorionic villus sampling, or percutaneous fetal blood sampling.</li></ul><div style='margin-top: -10px;'>Click Next to continue.</div>" 
+	},
+	{ 
+		time: "17", carry: "", event: "", show: "#iconlist_item2", hide: "", 
+		transcript: "The most common route for fetal infection is called ascending infection.<ul class='ul-class'><li>Bacterial from the vagina and cervix make their way into the intrauterine cavity and eventually through the amnion into the amniotic fluid. Ascending infection can occur even if the membranes are not ruptured.</li><li>Ascending infection can occur even if the membranes are not ruptured.</li><li>Presence of bacteria in the amniotic may lead to infection of the fetus. The lungs may become infected because the amniotic fluid is moved in and out with normal fetal respiration. If the fetus becomes distressed in-utero and begins to gasp, infected fluid can be inhaled deeply into the lung and cause pneumonia.</li><li>Another route of fetal infection is from the mother’s bloodstream to the placenta. An example of transplacental infection is Rubella viral infection in the first trimester. Although rare, fetal infection can also occur if bacteria is accidentally introduced into the amniotic fluid during invasive procedures, such as amniocentesis, chorionic villus sampling, or percutaneous fetal blood sampling.</li></ul><div style='margin-top: -10px;'>Click Next to continue.</div>" 
+
+	},
+	{ 
+		time: "29", carry: "", event: "", show: "#iconlist_item3", hide: "", 
+		transcript: "The most common route for fetal infection is called ascending infection.<ul class='ul-class'><li>Bacterial from the vagina and cervix make their way into the intrauterine cavity and eventually through the amnion into the amniotic fluid. Ascending infection can occur even if the membranes are not ruptured.</li><li>Ascending infection can occur even if the membranes are not ruptured.</li><li>Presence of bacteria in the amniotic may lead to infection of the fetus. The lungs may become infected because the amniotic fluid is moved in and out with normal fetal respiration. If the fetus becomes distressed in-utero and begins to gasp, infected fluid can be inhaled deeply into the lung and cause pneumonia.</li><li>Another route of fetal infection is from the mother’s bloodstream to the placenta. An example of transplacental infection is Rubella viral infection in the first trimester. Although rare, fetal infection can also occur if bacteria is accidentally introduced into the amniotic fluid during invasive procedures, such as amniocentesis, chorionic villus sampling, or percutaneous fetal blood sampling.</li></ul><div style='margin-top: -10px;'>Click Next to continue.</div>"
+
+	},
+	{ 
+		time: "27", carry: "", event: "", show: "#topImgtxt1,.small_expand", hide: "", 
+		transcript: "The most common route for fetal infection is called ascending infection.<ul class='ul-class'><li>Bacterial from the vagina and cervix make their way into the intrauterine cavity and eventually through the amnion into the amniotic fluid. Ascending infection can occur even if the membranes are not ruptured.</li><li>Ascending infection can occur even if the membranes are not ruptured.</li><li>Presence of bacteria in the amniotic may lead to infection of the fetus. The lungs may become infected because the amniotic fluid is moved in and out with normal fetal respiration. If the fetus becomes distressed in-utero and begins to gasp, infected fluid can be inhaled deeply into the lung and cause pneumonia.</li><li>Another route of fetal infection is from the mother’s bloodstream to the placenta. An example of transplacental infection is Rubella viral infection in the first trimester. Although rare, fetal infection can also occur if bacteria is accidentally introduced into the amniotic fluid during invasive procedures, such as amniocentesis, chorionic villus sampling, or percutaneous fetal blood sampling.</li></ul><div style='margin-top: -10px;'>Click Next to continue.</div>" 
+	},
+	{ 
+		time: "32", carry: "", event: "", show: "#error1", hide: "", 
+		transcript: "The most common route for fetal infection is called ascending infection.<ul class='ul-class'><li>Bacterial from the vagina and cervix make their way into the intrauterine cavity and eventually through the amnion into the amniotic fluid. Ascending infection can occur even if the membranes are not ruptured.</li><li>Ascending infection can occur even if the membranes are not ruptured.</li><li>Presence of bacteria in the amniotic may lead to infection of the fetus. The lungs may become infected because the amniotic fluid is moved in and out with normal fetal respiration. If the fetus becomes distressed in-utero and begins to gasp, infected fluid can be inhaled deeply into the lung and cause pneumonia.</li><li>Another route of fetal infection is from the mother’s bloodstream to the placenta. An example of transplacental infection is Rubella viral infection in the first trimester. Although rare, fetal infection can also occur if bacteria is accidentally introduced into the amniotic fluid during invasive procedures, such as amniocentesis, chorionic villus sampling, or percutaneous fetal blood sampling.</li></ul><div style='margin-top: -10px;'>Click Next to continue.</div>" 
+
+	},
+];
+
+var updateContentArray0 = [{ time: "0.0", carry: "", event: "", show: "", hide: "", transcript: "That is correct. Baby Conrad’s vital signs are normal. Click Next to continue." }
+
+];
+
+var updateContentArray1 = [{ time: "0.0", carry: "", event: "", show: "", hide: "", transcript: "Here is some feedback on your response. Baby Conrad’s vital signs are normal. Compare his vital signs with the normal vital signs for a neonate on the right and you will notice that Baby Conrad’s vital signs fall within these ranges. <br> Click Next to continue." }
+
+];
+
+
+
+function fnAudioFinishItemComp() {
+
+    fnAudioFinishPageComp();
+
+}
+
+var __dataXml;
+
+var audplayer = document.getElementById('audioplayer');
+
+$(document).ready(function() {
+  //restrictBacknMenuOnAssistment();
+$(".clickToEnlarge").show();
+        $(".small_expand").show();
+        $(".small_expand1").show();
+    bindClickableHotspot();
+    disableNextBtn();
+	$(".clickToEnlarge").show();
+        $(".small_expand").show();
+        $(".small_expand1").show();
+
+    var ele = document.getElementsByTagName('div');
+
+    for (var i = 0; i < ele.length; i++) {
+
+        ele[i].setAttribute("unselectable", "on");
+
+    }
+
+    var n = isInArray("M1L0T1P12", gCompPageArr);
+
+    if (n == true) {
+
+        enableNextBtn();
+
+        // fnGlowNextBtn();
+
+        fnDesiableNext(false)
+
+    }
+
+});
+
+
+
+function audioReset() {
+
+    gAudioId = "";
+
+    onTimelineEnd();
+
+}
+
+
+
+function isInArray(value, array) {
+
+    return array.indexOf(value) > -1;
+
+}
+
+
+
+
+
+
+
+function fnPlaySectionAudio(gCurrentIndex) {
+
+    indexAudio = (gCurrentIndex);
+
+    audioId = "audio_" + gCurrentIndex;
+
+    gAudioId = audioId;
+
+    fnHideShowAudioPlayer(false);
+
+    updateContentArray = eval("updateContentArray" + (gCurrentIndex));
+
+    initAudioPlayer(gItemAudioPath[gCurrentIndex])
+
+}
+
+
+
+
+
+function fnCompletion() {
+
+    console.log("end");
+
+
+
+    var _getCount1 = clickTabCount + clickTabCount1;
+
+    // if (_getCount1 >= 2) {
+
+    console.log("start new");
+
+    enableNextBtn();
+
+    $('.boxInst').show()
+
+    fnAudioFinishItemComp();
+
+    // }
+
+
+
+}
+
+
+
+function fnOnAudioComplete() {
+
+    if (gAudioId == "startAudio") {
+
+        console.log("start audio");
+
+        //   enableNextBtn();
+
+        //  fnAudioFinishItemComp();
+
+        // we need to replace this
+
+        //fnClick();
+
+
+        audplayer.pause();
+
+        audplayer.currentTime = 0;
+
+        $(".clickToEnlarge").show();
+        $(".small_expand").show();
+        $(".small_expand1").show();
+		enableNextBtn();
+fnDesiableNext(false);
+        $('.boxInst').show();
+
+    } else {
+
+        fnCompletion();
+
+        enableNextBtn();
+
+        $('.boxInst').show();
+        $(".clickToEnlarge").show();
+        $(".small_expand").show();
+        $(".small_expand1").show();
+
+        gCompPageArr.push("M1L0T1P12");
+
+        fnAudioFinishItemComp();
+
+        audplayer.pause();
+
+        audplayer.currentTime = 0;
+
+
+
+    }
+
+}
+
+var correctOptions = [0];
+
+
+
+function bindClickableHotspot() {
+
+    console.log("clicked");
+
+
+    $('.option').addClass('aactive'); //.css({ 'cursor': 'pointer' });
+
+    $('.option').off().on('click', function() {
+
+        $('.option').removeClass('clicked');
+
+        $(this).addClass('clicked');
+
+        if ($('.option.clicked').length >= 1) {
+
+            $('.cSubmitBtn').addClass('active');
+
+            $('.cSubmitBtn.active').off().on('click', function() {
+
+                submitClick();
+
+
+            });
+
+        } else {
+
+            $('.cSubmitBtn').removeClass('active');
+
+        }
+
+    });
+
+
+
+}
+
+
+
+function submitClick() {
+    tinCanWrapper.sendStatementData("answered", "baby-conrad-postnatal-course", "Baby Conrad - Postnatal Course - Now take a look at Baby Conrad's vital signs shortly after birth. Are they normal or abnormal?");
+
+    $('.cSubmitBtn.active').hide();
+
+    console.log("clicked");
+
+    // fnCompletion()
+
+    enableNextBtn();
+    fnDesiableNext(false);
+    gCompPageArr.push("M1L0T1P12");
+    // $(".leftCnt span.addcolor").addClass("yellowclr");
+
+    //	var selected = $('.clicked').length;
+
+
+
+    var incorrectCount = 0; //, correctCount = 0;
+
+    $('.option').each(function() {
+
+
+
+        if ($(this).hasClass('clicked') && ($.inArray($(this).index(), correctOptions) == -1)) {
+
+            $(this).addClass('wrong');
+
+            incorrectCount++;
+
+        }
+
+        //else if($(this).hasClass('clicked') && ($.inArray($(this).index(), correctOptions) != -1)){
+
+        //	correctCount++;
+
+        //}
+
+
+
+        $(this).off(); //.removeClass('clicked');
+
+    });
+
+
+
+    $(correctOptions).each(function(i, val) {
+
+        $('.option').eq(val).addClass('correct');
+
+    });
+
+    // if (incorrectCount == 0 && correctCount== correctOptions.length) {
+
+    //     fnPlaySectionAudio(1);
+
+    // //    $('.downloadText').show();
+
+    // } else {
+
+    //     fnPlaySectionAudio(0);
+
+    // }
+
+
+
+    if (incorrectCount == 0) {
+
+        fnPlaySectionAudio(0);
+
+        // $('.downloadText').show();
+
+    } else {
+
+        fnPlaySectionAudio(1);
+
+    }
+
+    $('.option').off().removeClass('aactive'); //.css({'cursor':'default'});
+
+    $('.cSubmitBtn').removeClass('active');
+
+    $('.informationRight').show();
+
+}
+
+
+
+$(".small_expand").off().on("click", function() {
+
+    pauseAudio();
+
+    //audioReset();
+    $("#TabPopup5 .modal").show();
+
+    $("#TabPopup5 .sectionTop").addClass("blur");
+
+    $("#TabPopup5 .sectionContent").addClass("blur");
+	$('.modal').removeClass('popupimg1');
+	$('.modal').removeClass('popupimg2');
+	$('.modal').removeClass('popupimg3');
+	$(".modal").addClass("popupimg"+ $(this).attr('click_id'));
+
+    $(".modalTxtImg").attr('id', 'imgPopup' + $(this).attr('click_id'));
+
+    
+
+
+
+
+});
+
+$(".small_expand1").off().on("click", function() {
+
+    pauseAudio();
+
+    //audioReset();
+
+    $("#TabPopup5 .modal").show();
+
+    $("#TabPopup5 .sectionTop").addClass("blur");
+
+    $("#TabPopup5 .sectionContent").addClass("blur");
+    $('.boxInst').addClass("blur");
+
+    $(".modalTxtImg").attr('id', 'imgPopup' + $(this).attr('click_id'));
+
+    $('.modalTextBottom').hide();
+
+    $('#ModalTextBottom' + $(this).attr('click_id')).show();
+
+
+
+    $('.modalContent').addClass('maxBot');
+
+    $('.modalContent').removeClass('maxBot0');
+
+
+
+});
+
+$(".closepopup, .modalclose").off().on("click", function() {
+
+    playAudio();
+
+    //audioReset();
+
+    $("#TabPopup5 .modal").removeAttr("style");
+
+    $("#TabPopup5 .sectionTop").removeClass("blur");
+
+    $("#TabPopup5 .sectionContent").removeClass("blur");
+    $('.boxInst').removeClass("blur");
+	$('.modal').removeClass('popupimg1');
+	$('.modal').removeClass('popupimg2');
+	$('.modal').removeClass('popupimg3');
+
+});
+
+
+function pauseAudio() {
+
+    if (!fnPauseAudio()) {
+
+        console.log(true);
+
+        fnPauseAudio()
+
+    } else {
+
+        playPauseAudio();
+
+        console.log(false);
+
+    }
+
+}
+
+function playAudio() {
+
+    if (!fnPauseAudio()) {
+
+        console.log(true);
+
+        playPauseAudio();
+
+    }
+
+}
+	</script>
+
+</body>
+
+
+
+</html>

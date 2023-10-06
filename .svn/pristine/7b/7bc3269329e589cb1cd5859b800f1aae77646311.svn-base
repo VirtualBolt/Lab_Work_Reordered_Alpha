@@ -1,0 +1,927 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <title></title>
+
+    <script>
+        manifest = [{
+
+                src: 'pages/images/common/instNext.png',
+
+                id: '1'
+
+            }
+
+
+
+        ];
+    </script>
+
+
+
+
+
+    <style type="text/css">
+        .mainContainer {
+            position: absolute;
+            width: 1000px;
+            height: 460px;
+            left: 40px;
+            top: 20px;
+            opacity: 1;
+        }
+        
+        .bottomTxt {
+            position: relative;
+            top: 483px;
+            left: 0px;
+            width: 60px;
+            margin: 0px auto;
+        }
+        
+        .cSubmitBtn {
+            background: #959594;
+            font-family: OpenSansRegular;
+            font-size: 18px;
+            padding: 5px 15px;
+            text-transform: lowercase;
+            color: #ffffff;
+            border-radius: 5px;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            text-transform: capitalize;
+            line-height: 21px;
+            border: 2px solid transparent;
+            width: 60px;
+        }
+        
+        .cSubmitBtn.enable:hover {
+            border: 2px solid #707070;
+            background: transparent;
+            color: #5B5B5B;
+        }
+        
+        .cSubmitBtn.active {
+            background: #5B5B5B;
+            color: #ffffff;
+            cursor: pointer;
+        }
+        
+        .cSubmitBtn.active:hover {
+            border: 2px solid #707070;
+            background: #ffffff;
+            color: #000000;
+        }
+        
+        .activityArea {
+            position: absolute;
+            background: #FFFFFF;
+            border-radius: 6px;
+            width: 934px;
+            height: 170px;
+            -webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            border-radius: 5px;
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            top: 290px;
+            left: 50px;
+            padding: 10px 20px;
+        }
+        
+        .answerChoices {
+            position: absolute;
+            /* background: #0000ff24; */
+            width: 934px;
+            height: 171px;
+            top: 22px;
+            left: 21px;
+            font-size: 16px;
+        }
+        
+        .inst {
+            font-family: OpenSansSemiBold;
+            position: absolute;
+            bottom: 10px;
+            right: 145px;
+            font-size: 16px;
+        }
+        
+        #idPatchMain23 {
+            top: 0px;
+            left: 11px;
+            background-position: left;
+            height: 230px;
+            background: #FFFFFF;
+            border-radius: 6px;
+            width: 933px;
+            -webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            border-radius: 5px;
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            padding: 10px 20px;
+        }
+        
+        .clsText {
+            position: relative;
+            font-size: 16px;
+            font-family: OpenSansRegular;
+            line-height: 25px;
+            color: #000000;
+            opacity: 0;
+        }
+        .boxInst {
+            position: absolute;
+            top: 489px;
+            left: 905px;
+            width: 175px;
+            height: 30px;
+            display: none;
+        }
+
+        #idText24 {
+            top: 40px;
+            left: 7px;
+            width: 100%;
+            text-align: left;
+            font-family: OpenSansRegular;
+            font-size: 16px;
+            opacity: 1;
+        }
+        
+        #idText25 {
+            top: 12px;
+            left: 0px;
+            width: 100%;
+            opacity: 1;
+            font-style: italic;
+            font-family: OpenSansSemiBold;
+        }
+        
+        .ClsTabInside {
+            position: absolute;
+            width: 110px;
+            height: 110px;
+            top: 9px;
+            border-radius: 50%;
+            background-size: contain;
+            opacity: 0;
+        }
+        
+        .clsAllTabs {
+            position: absolute;
+            height: 406px;
+            width: 997px;
+            top: 103px;
+            right: 20px;
+            left: 2px;
+            box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            border-radius: 5px;
+            background-color: white;
+            background-position: left;
+            opacity: 0;
+            display: none;
+        }
+        
+        .clsAllTabsImage {
+            position: absolute;
+            left: 222px;
+            top: 48px;
+            height: 300px;
+        }
+        
+        .clickBlocker {
+            position: absolute;
+            height: 406px;
+            width: 997px;
+            top: 103px;
+            right: 20px;
+            left: 2px;
+        }
+        
+        .paraText {
+            position: absolute;
+            top: 300px;
+            width: 256px;
+            left: 186px;
+            font-size: 16px;
+            font-family: OpenSansRegular;
+        }
+        
+        .paraText2 {
+            position: absolute;
+            width: 305px;
+            top: 295px;
+            left: 519px;
+            font-size: 16px;
+            font-family: OpenSansRegular;
+            display: none;
+        }
+        
+       
+        .next_click {
+            position: absolute;
+            font-size: 14px;
+            color: #4D667B;
+            font-family: OpenSansRegular;
+            line-height: 14px;
+            width: 100%;
+            left: 0px;
+            text-align: center;
+        }
+        
+        .instNextClick {
+            position: absolute;
+            top: -16px;
+            left: -15px;
+            background: url(pages/images/common/instNext.png) no-repeat;
+            width: 194px;
+            height: 51px;
+        }
+        
+        .clsPatch {
+            position: absolute;
+            width: 0px;
+            height: 236px;
+        }
+        
+        .listcnt,
+        .disableListcnt {
+            position: relative;
+            top: 0px;
+            padding-right: 20px;
+            margin-bottom: 7px;
+            padding-bottom: 6px;
+            font-size: 16px;
+            border: 1px solid transparent;
+            width: 895px;
+            padding-right: 32px;
+            cursor: pointer;
+        }
+        
+        .listcnt.disabled .OptionTxtCLSS {
+            cursor: default;
+        }
+        
+        .answerChoices .listcnt:hover {
+            border: 1px solid #999999;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+        }
+        
+        .answerChoices .listcnt.disabled:hover {
+            cursor: default;
+            border: 1px solid transparent;
+            border-radius: 0px;
+            -webkit-border-radius: 0px;
+            -moz-border-radius: 0px;
+        }
+        
+        .arrowHolder {
+            position: absolute;
+            top: 5px;
+            width: 13px;
+            height: 15px;
+            background: #5B5B5B;
+            -khtml-border-radius: 50%;
+            background: url('pages/images/Topic01/T01P86/bullet.png') no-repeat;
+        }
+        
+        .answerChoices .arrowHolder {
+            position: absolute;
+            top: 1px;
+            width: 26px;
+            height: 26px;
+            background: url('pages/images/common/checkbox_normal.png') no-repeat;
+            cursor: pointer;
+        }
+        
+        .answerChoices .listcnt.clicked .arrowHolder {
+            background: url('pages/images/common/checkbox_click.png') no-repeat;
+        }
+        
+        .answerChoices .listcnt.wrongAnswer .arrowHolder {
+            background: url('pages/images/common/checkbox_wrong.png') no-repeat;
+            cursor: default;
+        }
+        
+        .answerChoices .listcnt.correctAnswer .arrowHolder {
+            background: url('pages/images/common/checkbox_correct.png') no-repeat;
+            cursor: default;
+        }
+        
+        .answerChoices .listcnt.disabled .arrowHolder {
+            cursor: default;
+        }
+        
+        .OptionCLSS {
+            position: relative;
+            left: 40px;
+            top: 1px;
+        }
+        
+        .informationInstruction {
+            background: url('pages/images/Topic01/T01P86/enlarge_text.png') no-repeat;
+            position: absolute;
+            top: 137px;
+            left: 79px;
+            background-size: contain;
+            /* background-position: left center; */
+            width: 412px;
+            height: 37px;
+            line-height: 35px;
+            font-style: italic;
+            font-family: OpenSansSemiBold;
+            padding-left: 29px;
+            font-size: 14px;
+        }
+        
+        .blur {
+            -webkit-backface-visibility: hidden;
+            -moz-backface-visibility: hidden;
+            -ms-backface-visibility: hidden;
+            /* -0-backface-visibility: hidden; */
+            -webkit-filter: blur(3px);
+            -moz-filter: blur(3px);
+            -ms-filter: blur(3px);
+            -o-filter: blur(3px);
+            filter: blur(3px);
+        }
+        
+        .feedbackTxt1 {
+            position: absolute;
+            top: 413px;
+            left: 256px;
+            font-size: 16px;
+            color: #000000;
+            font-family: OpenSansRegular;
+            font-style: italic;
+            width: 600px;
+            text-align: center;
+            display: none;
+        }
+        
+        .disabled [type="radio"]:not(:checked)+label,
+        .disabled [type="radio"]:checked+label {
+            cursor: default;
+        }
+        
+        .OptionTxtCLSS {
+            cursor: pointer;
+        }
+        
+        .term {
+            position: absolute;
+            top: 225px;
+            left: 114px;
+            font-size: 16px;
+            color: #fff;
+        }
+        
+        .preterm {
+            position: absolute;
+            top: 225px;
+            left: 101px;
+            font-size: 16px;
+            color: #fff;
+        }
+        
+        .clsPatch2 {
+            position: absolute;
+            width: 973px;
+            height: 40px;
+            background-color: #5B5B5B;
+            top: 0px;
+            left: 11px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            z-index: 1;
+        }
+        
+        .questionHeader {
+            text-align: center;
+            line-height: 40px;
+            /* font-weight: bold; */
+            color: #fff;
+            font-size: 16px;
+        }
+        
+        .correctSuggested,
+        .answerChoices .listcnt.correctSuggested:hover {
+            border: 1px solid #E4BA4E;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+        }
+        .contentContainer {
+            height:541px;
+        }
+     
+        .reviewScreenTextCnt {  
+  top: 460px;
+}
+.reviewScreenCnt { 
+  top: 420px;
+}
+    </style>
+
+    <script>
+        $("#id_sliderContainer").hide();
+        $("#clsAudioOnBtn").hide();
+        $("#clsAudioOffBtn").hide();
+
+        $("#transcripttext").text("");
+
+        var audioPath = "";
+        //var audioPath = "pages/audio/Topic01/T01P83/T01P83";
+
+        var qAttempts = 0,
+            isCorrect = false;
+
+        var _clicked;
+
+        var updateContentArray = [{
+
+            time: "0.0",
+
+            carry: "",
+
+            event: "",
+
+            show: "",
+
+            hide: "",
+
+            // transcript: "A term infant weighing 1,650 grams (3 pounds, 10 ounces) is born to an underweight mother.  A point-of-care glucose test at 30 minutes of life is 10 mg/dL (0.6 mmol/L). The infant does not have any apparent signs of hypoglycemia at the time the lab test is drawn. Which of the following orders is the most appropriate therapy for this infant?"
+            transcript: ""
+        }];
+
+
+        function fnAudioFinishItemComp() {
+
+            fnAudioFinishPageComp();
+
+        }
+
+
+
+        $(document).ready(function() {
+
+            if ($(".listcnt").hasClass('clicked')) {
+                $(".cSubmitBtn").addClass("active");
+            }
+
+            /* 
+            $('#clsMnuBtn, #clsReplay, #clsBackBtn, #ToolBtn').css({
+                "pointer-events": "none"
+            }); */
+
+            backBtnDisableEnableForReview();
+
+            $(".answerChoices .listcnt").addClass("disabled");
+            $("#clsPlayPauseBtn").hide();
+
+            disableNextBtn();
+
+            $('.information').on("click", function() {
+
+                // $("").css("display", "block");
+
+                $('.mainContainer').addClass('blur');
+
+                $('.activityArea').addClass('blur');
+
+                $('.informationInstruction').addClass('blur');
+
+                $('.cSubmitBtn').addClass('blur');
+
+                //debugger;
+
+                $(".informationOveryplay").fadeIn(300, function() {
+
+                    $(".informationPopup").fadeIn(200);
+
+                });
+
+
+
+
+
+            });
+
+            $(".informationOveryplay").on("click", function() {
+
+                //  $(".informationOveryplay").css("display", "none");
+
+                // $(".informationPopup").css("display", "none");
+
+                $(".informationPopup").fadeOut(200);
+
+                $(".informationOveryplay").fadeOut(300, function() {
+
+                    $('.mainContainer').removeClass('blur');
+
+                    $('.activityArea').removeClass('blur');
+
+                    $('.informationInstruction').removeClass('blur');
+
+                    $('.cSubmitBtn').removeClass('blur');
+
+                });
+
+            });
+
+            $(".headingIcon").on("click", function() {
+
+
+
+                $(".informationPopup").fadeOut(200);
+
+                $(".informationOveryplay").fadeOut(300, function() {
+
+                    $('.mainContainer').removeClass('blur');
+
+                    $('.activityArea').removeClass('blur');
+
+                    $('.informationInstruction').removeClass('blur');
+
+                    $('.cSubmitBtn').removeClass('blur');
+
+                });
+
+
+
+            });
+
+
+
+            var ele = document.getElementsByTagName('div');
+
+            for (var i = 0; i < ele.length; i++) {
+
+                ele[i].setAttribute("unselectable", "on");
+
+            }
+
+            var n = isInArray("M1L0T1P59_4", gCompPageArr);
+
+            if (n == true) {
+
+                var _getSelectedOpt = assessmentObj.getSelectedOptionId(3);
+                assessmentObj.checkedAnswerFunc(3, ".listcnt[curid='" + _getSelectedOpt + "']");
+                // enableNextBtn();
+                // fnGlowNextBtn();
+                // fnDesiableNext(false);
+
+                if ($('.clicked').attr('curid') == 1) {
+                    //correct_answer--;
+                    // correct_answer++
+                    // correct_answer.push($('.clicked').attr('curid'));
+                    //console.log("85 correct " + _getcorrect);
+
+                    fnCompletion();
+
+                    isCorrect = true;
+                    $(".answerChoices .listcnt").addClass("disabled");
+
+                    $(".cSubmitBtn").removeClass("active");
+
+                } else {
+                    //incorrect_answer--
+
+                    $(".cSubmitBtn").removeClass("active");
+
+                    fnCompletion();
+
+                }
+
+            }
+
+            fnClick();
+
+            $(".answerChoices .listcnt").removeClass("disabled");
+
+
+        });
+
+
+
+        function audioReset() {
+
+            gAudioId = "";
+
+            onTimelineEnd();
+
+        }
+
+
+
+        function isInArray(value, array) {
+
+            return array.indexOf(value) > -1;
+
+        }
+
+
+
+        function fnPlaySectionAudio(gCurrentIndex) {
+
+            indexAudio = (gCurrentIndex);
+
+            audioId = "audio_" + gCurrentIndex;
+
+            gAudioId = audioId;
+
+            fnHideShowAudioPlayer(false);
+
+            updateContentArray = eval("popupSectionArray" + (gCurrentIndex));
+
+            initAudioPlayer(gItemAudioPath[gCurrentIndex])
+
+        }
+
+
+
+        var gTotalPopups = 2;
+
+        var temp = "";
+
+
+
+        function fnClick() {
+
+            $(".ClsTab").off("click").on("click", function() {
+
+                audioReset();
+
+                $(".boxInst").hide();
+
+                $("answerChoices .OptionCLSS").removeClass("correctAnswer").removeClass("wrongAnswer");
+
+
+
+                //}
+
+            });
+
+        }
+
+
+
+        function fnCompletion() {
+
+
+
+            enableNextBtn();
+
+            fnAudioFinishItemComp();
+
+
+
+            $(".boxInst").show();
+
+            gCompPageArr.push("M1L0T1P59_4");
+        }
+
+
+
+
+        function fnOnAudioComplete() {
+
+
+
+            if (gAudioId == "startAudio") {
+
+                $(".ClsTab").removeClass("clsDisable");
+
+                // we need to replace this
+
+                //enableNextBtn();
+
+                //fnAudioFinishItemComp();
+
+                // we need to replace this
+
+
+
+            } else {
+
+                if (qAttempts == 0) {
+                    $(".answerChoices .listcnt").removeClass("disabled");
+                }
+                if (qAttempts == 1 && isCorrect == false) {
+                    $(".answerChoices .listcnt").removeClass("disabled");
+                    $('.clicked').removeClass('wrongAnswer');
+                    $('.clicked').removeClass("clicked").removeAttr("clicked");
+                    //		$('.feedbackTxt1').hide();
+                } else {
+                    $(".answerChoices .listcnt").addClass("disabled");
+                    if (qAttempts == 2 || isCorrect == true) {
+                        fnCompletion();
+                    }
+                }
+            }
+        }
+
+
+        function pauseAudio() {
+
+            if (!fnPauseAudio()) {
+
+                fnPauseAudio()
+
+            } else {
+
+                playPauseAudio();
+
+            }
+
+        }
+
+
+
+        function playAudio() {
+
+            if (!fnPauseAudio()) {
+
+                playPauseAudio();
+
+            }
+
+        }
+
+
+
+        $(document).off("click").on("click", '.answerChoices .listcnt', function(e) {
+
+            if (!$(this).hasClass("disabled")) {
+
+                event.preventDefault();
+
+                //audioReset();
+
+                if ($(this).attr("clicked") == "true") {
+
+                    $(this).removeClass("clicked").removeAttr("clicked");
+
+                    $(".cSubmitBtn").removeClass("active");
+
+                    //disableSubmitBtn(".cSubmitBtn");
+
+
+
+                } else {
+
+                    $('.clicked').removeClass("clicked").removeAttr("clicked");
+
+                    $(this).addClass("clicked").attr("clicked", "true");
+
+                    $(".cSubmitBtn").removeClass("active").addClass("active");
+
+                    // enableSubmitBtn(".cSubmitBtn");
+
+
+
+                }
+
+            }
+
+
+
+        });
+
+
+        $(".cSubmitBtn").on("click", function() {
+            _clicked = $('.clicked').attr('curid')
+                //console.log(clickedQuestionValue)
+            assessmentObj.clickedQuestionValue(_clicked);
+            volumeProgressState(false);
+            // gCompPageArr.push("M1L0T1P59_4");
+
+            if ($(this).hasClass("active")) {
+
+                tinCanWrapper.sendStatementData("answered", "A-laboring-mother-with-poor-prenatal-care-is-found-to-have-severe-hypertension-when-she-is-admitted-to-the-hospital.-Her-infant-is-born-at-39-weeks-gestation-and-has-a-birth-weight-at-the-4th-percentile.-The-mother-breastfeeds-the-infant-shortly-after-birth,-and..", "A laboring mother with poor prenatal care is found to have severe hypertension when she is admitted to the hospital. Her infant is born at 39 weeks gestation and has a birth weight at the 4th percentile. The mother breastfeeds the infant shortly after birth, and 30 minutes after the feeding is completed, the infant's glucose level is 20 mg/dL (1.1 mmol/L). The most plausible explanation for this infant’s hypoglycemia is:");
+
+                $(".answerChoices .listcnt").addClass("disabled");
+
+                if ($('.clicked').attr('curid') == 1) {
+                    assessmentObj.correctAnswerIncrement();
+                    fnCompletion();
+                    isCorrect = true;
+                    $(".answerChoices .listcnt").addClass("disabled");
+                    $(".cSubmitBtn").removeClass("active");
+                } else {
+                    //incorrect_answer++
+                    assessmentObj.wrongAnswerIncrement();
+                    $(".cSubmitBtn").removeClass("active");
+                    fnCompletion();
+                }
+
+                fnJumpToPageByID("M1L0T1P59_5");
+
+            } else {}
+
+        });
+    </script>
+
+
+
+</head>
+
+<body>
+
+    <div id="assistment" class="pg-pageContent" UNSELECTABLE="on">
+
+        <div class="mainContainer">
+
+            <div class="clsPatch2">
+
+                <div class="questionHeader">Question 4</div>
+
+            </div>
+
+            <div class="clsPatch" id="idPatchMain23">
+
+                <div class="clsText" id="idText24">A late-preterm infant is born to a mother with gestational diabetes. Three days prior to delivery, the mother was admitted to the hospital because of a severe kidney infection. She was treated with IV antibiotics. At delivery, the infant appeared pale and floppy. Advanced resuscitation was initiated, but the infant continued to have pallor, tachycardia, decreased pulses, prolonged capillary refill time, and increased work of breathing, which persisted beyond the initial resuscitation. There was meconium-stained amniotic fluid. <br>
+                    Which of the following is the most likely explanation for this infant’s presentation?                    
+                    <p><span class="tagline">Select the correct option and click Submit.</span></p>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+        <div class="activityArea">
+
+            <div class="answerChoices">
+
+                <div class="listcnt rBtn vlm disabled" curid="1" id="showList_1">
+                    <input type="radio" id="test1" name="radio-group">
+                    <label for="test1">Neonatal sepsis complicated by possible meconium aspiration. Maternal pre-treatment with antibiotics does not eliminate the possibility of sepsis.</label>
+                </div>
+
+                <div class="listcnt rBtn vlm disabled" curid="2" id="showList_2">
+                    <input type="radio" id="test2" name="radio-group">
+                    <label for="test2">Respiratory distress secondary to meconium aspiration syndrome. Pre-treatment with antibiotics protected the infant from neonatal sepsis.</label>
+                </div>
+
+                <div class="listcnt rBtn vlm disabled" curid="3" id="showList_3">
+                    <input type="radio" id="test3" name="radio-group">
+                    <label for="test3">Since the mother was pre-treated with antibiotics, these symptoms are related to the infant being late-preterm and hypoglycemic secondary to the mother’s gestational diabetes.</label>
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+        <div class="feedbackTxt1"> You're not quite right. Click Next to continue.</div>
+
+        <div class="bottomTxt">
+
+
+
+            <div class="cSubmitBtn">Submit</div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+    <!--- Main Container--->
+
+    <div class="boxInst">
+
+        <div class="instNextClick"></div>
+
+        <div class="next_click"><em> Click Next to continue.</em></div>
+
+    </div>
+
+    </div>
+
+
+
+</body>
+
+</html>

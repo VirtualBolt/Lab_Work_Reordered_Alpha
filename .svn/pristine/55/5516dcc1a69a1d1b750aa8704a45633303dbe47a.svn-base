@@ -1,0 +1,461 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        manifest = [{
+            src: 'pages/images/Topic01/T01P02/img1.png',
+            id: '1'
+        }, {
+            src: 'pages/images/Topic01/T01P02/image_01_small.png',
+            id: '2'
+        }, ];
+    </script>
+
+
+    <style type="text/css">
+        
+        
+        
+		@-webkit-keyframes slideInDown {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInDown {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__slideInDown {
+  -webkit-animation-name: slideInDown;
+  animation-name: slideInDown;
+}
+@-webkit-keyframes slideInLeft {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInLeft {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__slideInLeft {
+  -webkit-animation-name: slideInLeft;
+  animation-name: slideInLeft;
+}
+@-webkit-keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(50%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(50%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__slideInRight {
+  -webkit-animation-name: slideInRight;
+  animation-name: slideInRight;
+}
+@-webkit-keyframes slideInUp {
+  from {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInUp {
+  from {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__slideInUp {
+  -webkit-animation-name: slideInUp;
+  animation-name: slideInUp;
+}
+@keyframes in-out {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100vw;
+    /* but starting to "disappear" from left to right, just like the way it appears */
+  }
+}
+		.mainContainer{position:absolute;width:100%;height:545px;left:0;top:0;opacity:1}
+		.sectionTop{position:absolute;top:0;height:30px;width:100%;padding:16px 0}
+		.sectionContent{position:absolute;top:10px;height:522px;width:1073px;left:15px;right:15px}
+		.sectionLeft{height:100%;width:264px;background:#E0F6FB;box-shadow:0 1px 9px -4px rgba(0,0,0,0.75);-webkit-box-shadow:0 1px 9px -4px rgba(0,0,0,0.75);-moz-box-shadow:0 1px 9px -4px rgba(0,0,0,0.75);border-bottom-left-radius:7px;-webkit-border-bottom-left-radius:7px;-moz-border-bottom-left-radius:7px}
+		.sectionRight{width:808px;height:527px;top:0;position:absolute;left:264px}
+		.rightTop{height:42px;left:5px;position:relative}
+		.rightTop a{left:0;top:0;padding:0 65px;background:#fff;margin:0;position:relative;float:left;margin-left:-5px;font-family:OpenSansSemiBold;text-decoration:none;color:#000;height:42px;line-height:42px;border-top-right-radius:5px;-webkit-border-top-right-radius:5px;-moz-border-top-right-radius:5px;font-size:16px;cursor:default}
+		.sectionRight .assessmentShow a{cursor:default}
+		.rightTop a.active{border-top-right-radius:5px;-webkit-border-top-right-radius:5px;-moz-border-top-right-radius:5px;background:#3A5569;margin-right:0;z-index:10;color:#fff}
+		.rightTop a.active.cdefault{cursor:default}
+		.rightTop a.active:after,.rightTop a.active:before,.rightTop a.active:hover:before{top:98%;left:45%;border:solid transparent;content:" ";height:0;width:0;position:absolute;pointer-events:none}
+		.rightTop a.active:after,.rightTop a.active:hover:after{border-top-color:#3A5569;border-width:10px;margin-left:0}
+		.rightTop a.active:before,.rightTop a.active:hover:before{border-top-color:#3A5569;border-width:10px;margin-left:0}
+		.rightTop a.active:nth-child(2),.rightTop a.active:hover:nth-child(2){-webkit-border-top-left-radius:5px;border-top-left-radius:5px;-moz-border-top-left-radius:5px}
+		.rightTop a:nth-child(2){-webkit-border-top-left-radius:5px;border-top-left-radius:5px}
+		.sectionContentArea{background:#fff;height:480px;border-top-right-radius:5px;-webkit-border-top-right-radius:5px;-moz-border-top-right-radius:5px;border-bottom-right-radius:5px;-webkit-bottom-top-right-radius:5px;-moz-border-bottom-right-radius:5px}
+		.blur{-webkit-backface-visibility:hidden;-moz-backface-visibility:hidden;-ms-backface-visibility:hidden;-o-backface-visibility:hidden;-webkit-filter:blur(12px);-moz-filter:blur(12px);-ms-filter:blur(12px);-o-filter:blur(12px);filter:blur(12px)}
+		.sectionContentinner{ width:720px; height:540px; margin:-10px 0px 0px 5px; position:relative}
+		.lefttxt{ position:absolute; left:-15px; top:35%; background:#fff; width:145px; height:90px; color:#000; font-style:italic; font-size:13px; line-height:18px; padding:10px; border:0px 5px 5px 0px; box-shadow:2px 3px 5px #ccc;}
+		.abs{ position:absolute}
+		.img1 {background:url('pages/images/Topic01/T01P34/img1.png') no-repeat;position: absolute;z-index: 100;width: 0;height: 60px;top: 42%;left: 40px;}
+		.img01{ bottom:-2px;left:35px;z-index:9;}
+		.img02{ top:38%;left:0px;z-index:9;}
+		.img1_text{ top:18px; left:84px; z-index:9}
+		.img2{ background:url('pages/images/Topic01/T01P34/img2.png') no-repeat;position: absolute;z-index: 100;width: 0;height: 72px;top: 41%;left: 180px;}
+		.img2_text{ top:88px; left:84px; z-index:9}
+		.img2_text img{ height:58px}
+		.img3{ top:29%; left:300px; z-index:9}
+		.img4{ top:34.5%; left:375px; z-index:9}
+		.img5{ top:29%; left:400px; z-index:9}
+		.img6{ top:34.5%; left:475px; z-index:9}
+		.img7{ top:29%; left:495px;z-index:9}
+		.righttxt{ position:absolute; right:27px; top:20%; background:#fff; width:300px; height:275px; color:#000; font-size:18px; line-height:24px; padding:10px; border-radius:0px 5px 5px 0px; box-shadow:2px 3px 5px #ccc;}
+		
+		.listitem{ margin:0px; padding:20px; list-style:none}
+		.listitem li{ position:relative; font-size:16px; line-height:20px; color:#000; margin-bottom:10px; padding-left:20px}
+		/*.listitem li:before{ background:url(pages/images/Topic01/T01P34/bullet.png) no-repeat; left:0px; width:13px; height:13px; position:absolute; content:""; top:5px}*/
+		.listitem li:before{content: ''; background: #000000; border-radius: 50%; width: 8px; height: 8px; position: absolute; top: 6px; left:0px}
+		.listitem li a{ color:#F6A87A; cursor:pointer}
+		
+		#img0,#img01,#img02, #img1,#img1_text, #img2,#img2_text, #lefttxt, #img3, #img4,#img4_text, #img5,#img5_text, #img6,#img6_text, #img7,#img7_text, #img8,#img8_text, #img9,#img9_text,#righttxt,#list2,#list3,#list4{ visibility:hidden; opacity:0}
+		.error1{ margin-top: -18px; border:solid 1px #F6A87A; border-radius:5px; width:98%; position:relative}
+	.error1 .error1_inner{ position:relative; color:#000; font-size:14px; line-height:21px; font-weight:bold; padding-left:50px;display: flex; flex-direction: row; align-items: center;}
+	.error1 .error1_inner img{ position:absolute; width:35px; height:34px; left:10px; top:4px;}
+
+  .boxInst{
+    top: 489px;
+left: 905px;
+  }
+    </style>
+    
+
+</head>
+
+<body>
+
+
+    <div class="pg-pageContent" UNSELECTABLE="on">
+        <div id="TabPopup5" class="clsTabPopup">
+            <div class="sectionContent">
+				
+                <div class="sectionContentinner">
+					<div id="img0" class="img0"><img src="pages/images/Topic01/T01P34/img0.png"></div>
+					<div id="img01" class="img01 abs"><img src="pages/images/Topic01/T01P34/img0-1.png"></div>
+					<div id="img02" class="img02 abs"><img src="pages/images/Topic01/T01P34/img0-2.png"></div>
+					<div id="img1" class="abs img1"></div>
+					<div id="img2" class="abs img2"></div>
+					<div id="img02" class="img02 abs"><img src="pages/images/Topic01/T01P34/img0-2.png"></div>
+					<div id="img3" class="abs img3"><img src="pages/images/Topic01/T01P34/img3.png"></div>
+					<div id="img4" class="abs img4"><img src="pages/images/Topic01/T01P34/img4.png"></div>
+					<div id="img5" class="abs img5"><img src="pages/images/Topic01/T01P34/img5.png"></div>
+					<div id="img6" class="abs img6"><img src="pages/images/Topic01/T01P34/img4.png"></div>
+					<div id="img7" class="abs img7"><img src="pages/images/Topic01/T01P34/img6.png"></div>
+				</div>
+				<div id="righttxt" class="righttxt">
+					<ul class="listitem">
+						<li>Metamyelocytes + band neutrophils + segmented neutrophils = neutrophil
+              storage pool (NSP).</li>
+						<li id="list2">In neonates, the NSP is proportionally smaller than
+              in adults.</li>
+						<li id="list3">When infection is present, the NSP may become
+              depleted. </li>            
+					</ul>
+          <div id="error1" class="error1 ">
+            <div class="error1_inner">
+              <img src="pages/images/Topic01/T01P12/warning.svg"> NSP depletion increases risk of complications and even death.</div>
+          </div>
+				</div>
+            </div>
+            
+        </div>
+    </div>
+    <!--- Main Container--->
+    <div class="boxInst">
+        <div class="instNextClick"></div>
+        <div class="next_click"><em> Click Next to continue.</em></div>
+    </div>
+    </div>
+
+</body>
+<script>
+        console.log("Labor" + gCompPageArr);
+
+        var audioPath = "pages/audio/Topic01/T01P34/T01P34";
+       
+        var __audioClick = 0;
+
+        var currCue = 0;
+        var idd = 0;
+
+        clickViewMoreInfo();
+        var __curState = 0;
+
+
+        var clickTabCount = 0;
+        var clickTabCount1 = 0;
+
+        var updateContentArray = [
+			{
+            time: "0.0",     carry: "",  event: "",  show: "",  hide: "",
+            transcript: "The neutrophil matures in stages: from the myeloblast to the promyelocyte, to the myelocyte, to the metamyelocyte, to the band neutrophil, and finally to the mature, segmented neutrophil. This process of maturation takes approximately 2 weeks. In the bone marrow, the metamyelocytes, band neutrophils, and segmented neutrophils comprise what is called the neutrophil storage pool. In neonates, the neutrophil storage pool is significantly smaller, per kilogram of body weight, than in adults. When there is a serious bacterial infection, the neutrophil storage pool may become depleted because the bone marrow releases neutrophils faster than they can be made. This places the infant at significantly increased risk of complications and even death. <br>Click Next to continue."
+        	},
+			{
+            time: "0.5",     carry: "",  event: "",  show: "#img0,#img01,#img02",  hide: "",
+            transcript: "The neutrophil matures in stages: from the myeloblast to the promyelocyte, to the myelocyte, to the metamyelocyte, to the band neutrophil, and finally to the mature, segmented neutrophil. This process of maturation takes approximately 2 weeks. In the bone marrow, the metamyelocytes, band neutrophils, and segmented neutrophils comprise what is called the neutrophil storage pool. In neonates, the neutrophil storage pool is significantly smaller, per kilogram of body weight, than in adults. When there is a serious bacterial infection, the neutrophil storage pool may become depleted because the bone marrow releases neutrophils faster than they can be made. This places the infant at significantly increased risk of complications and even death. <br>Click Next to continue."
+        	},
+			{
+            time: "3",     carry: "",  event: "",  show: "#img1",  hide: "",
+            transcript: "The neutrophil matures in stages: from the myeloblast to the promyelocyte, to the myelocyte, to the metamyelocyte, to the band neutrophil, and finally to the mature, segmented neutrophil. This process of maturation takes approximately 2 weeks. In the bone marrow, the metamyelocytes, band neutrophils, and segmented neutrophils comprise what is called the neutrophil storage pool. In neonates, the neutrophil storage pool is significantly smaller, per kilogram of body weight, than in adults. When there is a serious bacterial infection, the neutrophil storage pool may become depleted because the bone marrow releases neutrophils faster than they can be made. This places the infant at significantly increased risk of complications and even death. <br>Click Next to continue."
+        	,animation: [{ target: "#img1",activity: { "-webkit-animation": "10s in-out forwards",  "animation": "10s in-out forwards",  "width": "142px" }}]
+			},
+			{
+            time: "4.5",     carry: "",  event: "",  show: "#img2",  hide: "",
+            transcript: "The neutrophil matures in stages: from the myeloblast to the promyelocyte, to the myelocyte, to the metamyelocyte, to the band neutrophil, and finally to the mature, segmented neutrophil. This process of maturation takes approximately 2 weeks. In the bone marrow, the metamyelocytes, band neutrophils, and segmented neutrophils comprise what is called the neutrophil storage pool. In neonates, the neutrophil storage pool is significantly smaller, per kilogram of body weight, than in adults. When there is a serious bacterial infection, the neutrophil storage pool may become depleted because the bone marrow releases neutrophils faster than they can be made. This places the infant at significantly increased risk of complications and even death. <br>Click Next to continue."
+        	,animation: [{ target: "#img2",activity: { "-webkit-animation": "23s in-out forwards",  "animation": "23s in-out forwards",  "width": "442px" }}]
+			},
+			{
+			time: "7.2",     carry: "",  event: "",  show: "#img3",  hide: "",
+            transcript: "The neutrophil matures in stages: from the myeloblast to the promyelocyte, to the myelocyte, to the metamyelocyte, to the band neutrophil, and finally to the mature, segmented neutrophil. This process of maturation takes approximately 2 weeks. In the bone marrow, the metamyelocytes, band neutrophils, and segmented neutrophils comprise what is called the neutrophil storage pool. In neonates, the neutrophil storage pool is significantly smaller, per kilogram of body weight, than in adults. When there is a serious bacterial infection, the neutrophil storage pool may become depleted because the bone marrow releases neutrophils faster than they can be made. This places the infant at significantly increased risk of complications and even death. <br>Click Next to continue."
+			},
+			{
+			time: "7.8",     carry: "",  event: "",  show: "#img4",  hide: "",
+            transcript: "The neutrophil matures in stages: from the myeloblast to the promyelocyte, to the myelocyte, to the metamyelocyte, to the band neutrophil, and finally to the mature, segmented neutrophil. This process of maturation takes approximately 2 weeks. In the bone marrow, the metamyelocytes, band neutrophils, and segmented neutrophils comprise what is called the neutrophil storage pool. In neonates, the neutrophil storage pool is significantly smaller, per kilogram of body weight, than in adults. When there is a serious bacterial infection, the neutrophil storage pool may become depleted because the bone marrow releases neutrophils faster than they can be made. This places the infant at significantly increased risk of complications and even death. <br>Click Next to continue."
+			},
+			{
+			time: "9",     carry: "",  event: "",  show: "#img5",  hide: "",
+            transcript: "The neutrophil matures in stages: from the myeloblast to the promyelocyte, to the myelocyte, to the metamyelocyte, to the band neutrophil, and finally to the mature, segmented neutrophil. This process of maturation takes approximately 2 weeks. In the bone marrow, the metamyelocytes, band neutrophils, and segmented neutrophils comprise what is called the neutrophil storage pool. In neonates, the neutrophil storage pool is significantly smaller, per kilogram of body weight, than in adults. When there is a serious bacterial infection, the neutrophil storage pool may become depleted because the bone marrow releases neutrophils faster than they can be made. This places the infant at significantly increased risk of complications and even death. <br>Click Next to continue."
+			},
+			{
+			time: "9.4",     carry: "",  event: "",  show: "#img6",  hide: "",
+            transcript: "The neutrophil matures in stages: from the myeloblast to the promyelocyte, to the myelocyte, to the metamyelocyte, to the band neutrophil, and finally to the mature, segmented neutrophil. This process of maturation takes approximately 2 weeks. In the bone marrow, the metamyelocytes, band neutrophils, and segmented neutrophils comprise what is called the neutrophil storage pool. In neonates, the neutrophil storage pool is significantly smaller, per kilogram of body weight, than in adults. When there is a serious bacterial infection, the neutrophil storage pool may become depleted because the bone marrow releases neutrophils faster than they can be made. This places the infant at significantly increased risk of complications and even death. <br>Click Next to continue."
+			},
+			{
+			time: "10.8",     carry: "",  event: "",  show: "#img7",  hide: "",
+            transcript: "The neutrophil matures in stages: from the myeloblast to the promyelocyte, to the myelocyte, to the metamyelocyte, to the band neutrophil, and finally to the mature, segmented neutrophil. This process of maturation takes approximately 2 weeks. In the bone marrow, the metamyelocytes, band neutrophils, and segmented neutrophils comprise what is called the neutrophil storage pool. In neonates, the neutrophil storage pool is significantly smaller, per kilogram of body weight, than in adults. When there is a serious bacterial infection, the neutrophil storage pool may become depleted because the bone marrow releases neutrophils faster than they can be made. This places the infant at significantly increased risk of complications and even death. <br>Click Next to continue."
+			},
+			{
+			time: "16",  carry: "",  event: "",  show: "#righttxt",  hide: "",
+            transcript: "The neutrophil matures in stages: from the myeloblast to the promyelocyte, to the myelocyte, to the metamyelocyte, to the band neutrophil, and finally to the mature, segmented neutrophil. This process of maturation takes approximately 2 weeks. In the bone marrow, the metamyelocytes, band neutrophils, and segmented neutrophils comprise what is called the neutrophil storage pool. In neonates, the neutrophil storage pool is significantly smaller, per kilogram of body weight, than in adults. When there is a serious bacterial infection, the neutrophil storage pool may become depleted because the bone marrow releases neutrophils faster than they can be made. This places the infant at significantly increased risk of complications and even death. <br>Click Next to continue."
+			},
+			{
+			time: "21.5",     carry: "",  event: "",  show: "#list2",  hide: "",
+            transcript: "The neutrophil matures in stages: from the myeloblast to the promyelocyte, to the myelocyte, to the metamyelocyte, to the band neutrophil, and finally to the mature, segmented neutrophil. This process of maturation takes approximately 2 weeks. In the bone marrow, the metamyelocytes, band neutrophils, and segmented neutrophils comprise what is called the neutrophil storage pool. In neonates, the neutrophil storage pool is significantly smaller, per kilogram of body weight, than in adults. When there is a serious bacterial infection, the neutrophil storage pool may become depleted because the bone marrow releases neutrophils faster than they can be made. This places the infant at significantly increased risk of complications and even death. <br>Click Next to continue."
+			},
+			{
+			time: "28.5",     carry: "",  event: "",  show: "#list3,#list4",  hide: "",
+            transcript: "The neutrophil matures in stages: from the myeloblast to the promyelocyte, to the myelocyte, to the metamyelocyte, to the band neutrophil, and finally to the mature, segmented neutrophil. This process of maturation takes approximately 2 weeks. In the bone marrow, the metamyelocytes, band neutrophils, and segmented neutrophils comprise what is called the neutrophil storage pool. In neonates, the neutrophil storage pool is significantly smaller, per kilogram of body weight, than in adults. When there is a serious bacterial infection, the neutrophil storage pool may become depleted because the bone marrow releases neutrophils faster than they can be made. This places the infant at significantly increased risk of complications and even death. <br>Click Next to continue."
+      },
+      {
+			time: "40.0",     carry: "",  event: "",  show: ".boxInst",  hide: "",
+            transcript: "The neutrophil matures in stages: from the myeloblast to the promyelocyte, to the myelocyte, to the metamyelocyte, to the band neutrophil, and finally to the mature, segmented neutrophil. This process of maturation takes approximately 2 weeks. In the bone marrow, the metamyelocytes, band neutrophils, and segmented neutrophils comprise what is called the neutrophil storage pool. In neonates, the neutrophil storage pool is significantly smaller, per kilogram of body weight, than in adults. When there is a serious bacterial infection, the neutrophil storage pool may become depleted because the bone marrow releases neutrophils faster than they can be made. This places the infant at significantly increased risk of complications and even death. <br>Click Next to continue."
+			}
+			
+		];
+        
+
+        function fnAudioFinishItemComp() {
+            fnAudioFinishPageComp();
+        }
+        var __dataXml;
+
+        $(document).ready(function() {
+            disableNextBtn();
+            var ele = document.getElementsByTagName('div');
+            for (var i = 0; i < ele.length; i++) {
+                ele[i].setAttribute("unselectable", "on");
+            }
+            var n = isInArray("M1L0T1P34", gCompPageArr);
+            if (n == true) {
+                enableNextBtn();
+                // fnGlowNextBtn();
+                fnDesiableNext(false)
+            }
+        });
+
+        function audioReset() {
+            gAudioId = "";
+            onTimelineEnd();
+        }
+
+        function isInArray(value, array) {
+            return array.indexOf(value) > -1;
+        }
+
+
+
+        function fnPlaySectionAudio(gCurrentIndex) {
+            indexAudio = (gCurrentIndex);
+            audioId = "audio_" + gCurrentIndex;
+            gAudioId = audioId;
+
+            fnHideShowAudioPlayer(false);
+            updateContentArray = eval("updateContentArray" + (gCurrentIndex));
+            initAudioPlayer(gItemAudioPath[gCurrentIndex])
+        }
+
+
+        function fnCompletion() {
+            console.log("end");
+
+            //var _getCount1 = clickTabCount + clickTabCount1;
+            // if (__audioClick == 1) {
+            console.log("start new");
+            enableNextBtn();
+            $('.boxInst').show();
+            fnAudioFinishItemComp();
+            // }
+
+        }
+
+        function fnOnAudioComplete() {
+            if (gAudioId == "startAudio") {
+                console.log("start audio");
+                $('.boxInst').show();
+                audioStop();
+				audplayer.pause();
+
+        audplayer.currentTime = 0;
+
+				enableNextBtn();
+				fnDesiableNext(false);
+				$('.boxInst').show();
+            } else {
+				$('.boxInst').show();
+                fnCompletion();
+                enableNextBtn();
+				$('.boxInst').show();
+                gCompPageArr.push("M1L0T1P34");
+                 fnAudioFinishItemComp();
+
+        audplayer.pause();
+
+        audplayer.currentTime = 0;
+            }
+        }
+        
+
+
+        /* highlight */
+        __clickedOpt = [];
+
+        function correctAnswerNotClicked(aCorrectAnswerVal) {
+            for (var i = 0; i < aCorrectAnswerVal.length; i++) {
+                //console.log("highlighted "+aCorrectAnswerVal[i]);
+                //$(".clsPanel .option[curid='"+aCorrectAnswerVal[i]+"']").addClass("cborder");
+                $(".clsPanel .option[curid='" + aCorrectAnswerVal[i] + "']").addClass("cborder");
+            }
+        }
+
+        function areDifferentByIds(clickVal, correctVal) {
+            var newArr = correctVal.slice();
+
+            for (var i = 0; i < clickVal.length; i++) {
+
+
+                var index = newArr.indexOf(clickVal[i]);
+                if (index !== -1) {
+                    newArr.splice(index, 1);
+                }
+
+            }
+
+            return newArr;
+        }
+
+        function highlightBorderPushVal() {
+            __clickedOpt = [];
+            $(".option.clicked").each(function() {
+                console.log($(this).attr("curid"));
+                __clickedOpt.push($(this).attr("curid"));
+            });
+        }
+        /* highlight */
+
+        function pauseAudio() {
+            if (!fnPauseAudio()) {
+                console.log(true);
+                fnPauseAudio()
+            } else {
+                playPauseAudio();
+                console.log(false);
+            }
+        }
+
+        function playAudio() {
+            if (!fnPauseAudio()) {
+                console.log(true);
+                playPauseAudio();
+            }
+        }
+
+        function audioStop() {
+            var audio = document.getElementById("audioplayer");
+            audio.pause();
+            audio.currentTime = 0;
+        }
+    </script>
+
+</html>

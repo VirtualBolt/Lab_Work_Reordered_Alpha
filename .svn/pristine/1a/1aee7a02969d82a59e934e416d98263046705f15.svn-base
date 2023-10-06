@@ -1,0 +1,1083 @@
+<!doctype html>
+
+<html lang="en" class="no-js">
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Demoreel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link rel="shortcut icon" href="assets/img/favicon.png">
+
+    <!-- Bootstrap 3.3.2 -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/js/rs-plugin/css/settings.css">
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+      <link rel="stylesheet" href="assets/css/customStyles.css">
+
+
+    <script type="text/javascript" src="assets/js/modernizr.custom.32033.js"></script>
+
+ 
+      <script src="assets/js/jquery-1.11.1.min.js"></script>
+      <script src="assets/js/touchpunch.js"></script>
+
+
+
+</head>
+
+<body>
+
+    <div class="pre-loader">
+        <div class="load-con">
+            <img src="assets/img/freeze/logo.png" class="animated fadeInDown" alt="">
+            <div class="spinner">
+              <div class="bounce1"></div>
+              <div class="bounce2"></div>
+              <div class="bounce3"></div>
+            </div>
+        </div>
+    </div>
+<script>
+  $(".pre-loader").show();
+</script>
+
+    <header>
+
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+                <div class="container">
+
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="glyphicon glyphicon-menu-hamburger"></span>
+                        </button>
+                        <a class="navbar-brand" href="">
+                            <img src="assets/img/freeze/logo.png" alt="" class="logo">
+                        </a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#home">Home</a>
+                            </li>
+                            <li><a href="#demo">Videos</a>
+                            </li>
+                            <li><a href="#interactives">Interactives</a>
+                            </li>
+                            <li><a href="#simulations">Simulations</a>
+                            </li>
+                            <li><a href="#courses">Courses</a>
+                            </li>
+                            <li><a href="#tools_platforms">Tools &amp; Platforms</a>
+                            </li>
+                            <li><a href="#clients_affiliations">Clients &amp; Affiliations</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </div>
+                <!-- /.container-->
+        </nav>
+
+
+        <!--RevSlider-->
+        <div class="tp-banner-container" id="home">
+            <div class="tp-banner" >
+                <div class="section1">
+                  <div class="parallelogram1 pllg" id="parallelogram1" data-part="videosAccordian">
+
+                    <div class="accordianContent1">
+                      <div class="row">
+                        <div class="Ctitle">Videos</div>
+                      </div>
+
+                      <div class="row">
+                        <div class="accordianContent" id="videosAccordian">
+                          <div>Walkthrough videos are recorded explanations of how to accomplish a certain task.
+                          They act as visual guides listing the processes and procedures involved in the application of
+                          a concept. They create an impact on  learners by providing them with a visual representation of
+                          the crucial elements of learning; what, how, and in what order.
+                          </div>
+
+                          <div class="gotoBtn">
+                              <ul class="">
+                                <li><a href="#demo"> Launch Videos</a></li>
+                              </ul>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+
+                  </div>
+                  <div class="parallelogram2 pllg" id="parallelogram2" data-part="interactivesAccordian">
+
+
+                    <div class="accordianContent1">
+                      <div class="row">
+                        <div class="Ctitle">Interactives</div>
+                      </div>
+
+                      <div class="row">
+                        <div class="accordianContent" id="interactivesAccordian">
+                          <div>Interactives allow the learner to learn by participating in on-screen activities that help improve
+                          engagement and retention of concepts. Our interactives usually include case-based scenarios.
+                          We integrate real life examples and problems using videos, images, and audio to create an effective
+                          learning experience.
+                          </div>
+                            <div class="gotoBtn">
+                                <ul class="">
+                                  <li><a href="#interactives">Launch Interactives</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="parallelogram3 pllg" id="parallelogram3" data-part="simulationsAccordian">
+
+
+                   <div class="accordianContent1">
+                      <div class="row">
+                        <div class="Ctitle">Simulations</div>
+                      </div>
+
+                      <div class="row">
+                        <div class="accordianContent" id="simulationsAccordian">
+                          <div>Simulations provide learners with a virtual environment to learn, test,
+                          and sharpen their skills. Simulations provide the learner with the unique benefit
+                          of learning through acting in a virtual environment without real-world consequences.
+                          Simulations encourage learners to think logically and creatively.
+                          </div>
+
+                           <div class="gotoBtn">
+                          <ul class="">
+                            <li><a href="#simulations">Launch Simulations</a></li>
+                          </ul>
+                      </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="parallelogram4 pllg" id="parallelogram4" data-part="coursesAccordian">
+
+
+                  <div class="accordianContent1">
+                      <div class="row">
+                         <div class="Ctitle">Courses</div>
+                      </div>
+
+                      <div class="row">
+                        <div class="accordianContent" id="coursesAccordian">
+                          <div>Our courses are designed to create a meaningful learning experience.
+                          The courses are developed using new and emerging technologies, principles of instructional design,
+                          and our knowledge of learner behavior gathered from our decades of experience.
+                          All our courses aim to boost knowledge retention and skill development.
+                          </div>
+
+                          <div class="gotoBtn">
+                            <ul class="">
+                              <li><a href="#courses">Launch Courses</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="demo">
+            <div class="container">
+                <div class="section-heading scrollpoint sp-effect3">
+                    <h1>Videos</h1>
+                    <div class="divider"></div>
+                    <p>Empowering your learning through visual experiences.</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 scrollpoint sp-effect2">
+                        <div class="video-container" >
+                            <iframe src="https://www.youtube.com/embed/-RfJRka_8T8?enablejsapi=1&rel=0" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+
+                    <div class=" leftArrow scrollpoint sp-effect3"></div>
+
+                    <div class="filmStripParent scrollpoint sp-effect3">
+                      <div class="filmStripContainer draggable ui-widget-content" id="filmStripContainer">
+                        <div class="videoImage mashup" data-part="<iframe src='https://www.youtube.com/embed/-RfJRka_8T8?enablejsapi=1&rel=0' frameborder='0' allowfullscreen></iframe>"></div>
+						<div class="videoImage who_we_are" data-part="<iframe src='https://www.youtube.com/embed/WygANeukXfE?enablejsapi=1&rel=0' frameborder='0' allowfullscreen></iframe>"></div>
+						<div class="videoImage loc2" data-part="<iframe src='https://www.youtube.com/embed/dQMexb3xHOg?enablejsapi=1&rel=0' frameborder='0' allowfullscreen></iframe>"></div>
+						<div class="videoImage loc1" data-part="<iframe src='https://www.youtube.com/embed/0fUh6HxsmT0?enablejsapi=1&rel=0' frameborder='0' allowfullscreen></iframe>"></div>
+						<div class="videoImage qami" data-part="<iframe src='https://www.youtube.com/embed/NlZaO5jMDSQ?enablejsapi=1&rel=0' frameborder='0' allowfullscreen></iframe>"></div>
+						<div class="videoImage critical_thinking" data-part="<iframe src='https://www.youtube.com/embed/MtYfuRzQIhQ?enablejsapi=1&rel=0' frameborder='0' allowfullscreen></iframe>"></div>
+						<div class="videoImage uow" data-part="<iframe src='https://www.youtube.com/embed/nCc9t9im_CU?enablejsapi=1&rel=0' frameborder='0' allowfullscreen></iframe>"></div>
+						<div class="videoImage hydrostatic_force" data-part="<iframe src='https://www.youtube.com/embed/EH5Z-m8niq8?enablejsapi=1&rel=0' frameborder='0' allowfullscreen></iframe>"></div>
+						<div class="videoImage flipped_classroom" data-part="<iframe src='https://www.youtube.com/embed/8Tvkj0gLG6Q?enablejsapi=1&rel=0' frameborder='0' allowfullscreen></iframe>"></div>
+                        <div class="videoImage addie" data-part="<iframe src='https://www.youtube.com/embed/35ve3yU-2Dc?enablejsapi=1&rel=0' frameborder='0' allowfullscreen></iframe>"></div>						
+						<div class="videoImage astronomy_coming_soon" data-part="<iframe src='https://www.youtube.com/embed/jMq5GN0PAUU?enablejsapi=1&rel=0' frameborder='0' allowfullscreen></iframe>"></div>
+						<div class="videoImage zooming_stars" data-part="<iframe src='https://www.youtube.com/embed/jFHuvibsFe4?enablejsapi=1&rel=0' frameborder='0' allowfullscreen></iframe>"></div>
+						<div class="videoImage phases_of_moon" data-part="<iframe src='https://www.youtube.com/embed/GQInAxTmnBg?enablejsapi=1&rel=0' frameborder='0' allowfullscreen></iframe>"></div>
+						<div class="videoImage internal_planets" data-part="<iframe src='https://www.youtube.com/embed/4DhGgVAr4Lo?enablejsapi=1&rel=0' frameborder='0' allowfullscreen></iframe>"></div>
+						<div class="videoImage four_planets" data-part="<iframe src='https://www.youtube.com/embed/RmaVGzXnDp0?enablejsapi=1&rel=0' frameborder='0' allowfullscreen></iframe>"></div>                       
+                        <div class="videoImage american_government" data-part="<iframe src='https://www.youtube.com/embed/wV5qnnn2ang?enablejsapi=1&rel=0' frameborder='0' allowfullscreen></iframe>"></div>                       
+                      </div>
+                    </div>
+                    <div class=" rightArrow scrollpoint sp-effect3"></div>
+
+                </div>
+
+            </div>
+    </section>
+      <section id="interactives" class="doublediagonal">
+                <div class="container">
+                    <div class="section-heading scrollpoint sp-effect3">
+                          <h1>Interactives</h1>
+                      <div class="divider"></div>
+                      <p>Engaging learners through interactive content for an effective learning experience.</p>
+                    </div>
+
+                     <div class="row">
+                      <div class="col-md-6 scrollpoint sp-effect3 pad text-center">
+                          <div class="intFraudImg"></div>
+                        </div>
+                        <div class="col-md-6 scrollpoint sp-effect3 text-center">
+                          <div class="inDesc ">
+                            <div class="inTitle">Fraud Triangle</div>
+                              <div class="txt_left">This interactive aims to introduce the concept of Fraud Triangle to learners.
+                                The interactive will provide learners with a description of the three categories of the
+                                Fraud Triangle with relevant scenario’s. The interactive is followed by a scenario/case-based
+                                assessments to test the learner’s understanding of the concept.
+                              </div>
+                             <div class="inLaunchBtn launchBtn" data-title="Fraud Triangle"
+                                  data-iframe="http://demo.ansrsource.com/Interactives/Fraud_Triangle/index.html">
+                                Launch
+                              </div>
+                          </div>
+                        </div>
+
+                    </div>
+
+                    
+                    <div class="row">
+                       <div class="col-md-6 scrollpoint sp-effect3 pad">
+                          <div class="intPiagetImg"></div>
+                        </div>
+                        <div class="col-md-6 scrollpoint sp-effect3 text-center">
+                          <div class="inDesc">
+                            <div class="inTitle">Piaget</div>
+                              <div class="txt_left">This interactive aims to provide a brief overview on Piaget’s Stages of
+                              Cognitive Development. The interactive will provide learners with a description of the four
+                              stages of cognitive development. This is followed by a scenario-based assessment to test the
+                              learner’s understanding of the concept.
+                              </div>
+                              <div class="inLaunchBtn launchBtn" data-title="Piaget"
+                              data-iframe="http://demo.ansrsource.com/Interactives/Piaget/index.html">
+                                Launch
+                              </div>
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-6 scrollpoint sp-effect3 pad text-center">
+                          <div class="intDiceImg"></div>
+                        </div>
+                        <div class="col-md-6 scrollpoint sp-effect3 text-center">
+                          <div class="inDesc">
+                            <div class="inTitle">Dice Game</div>
+                              <div class="txt_left">The dice game aims to simulate the effects of variability and dependency on output. The learners can make predictions on what the output would be at the end of 20 days in various scenarios and test, using this interactive, if their predictions were correct.
+                              </div>
+                              <a class="inLaunchBtn launchBtn" data-title="Dice Game" data-iframe="http://demo.ansrsource.com/Interactives/Dice_Game/index.html">Launch</a>
+                             <!--<div class="inLaunchBtn launchBtn"-->
+                             <!--     data-iframe="Interactives/Fraud_Triangle/index.html">-->
+                             <!--   Launch-->
+                             <!-- </div>-->
+                          </div>
+                        </div>
+
+                    </div>
+					
+					<div class="row">
+                       <div class="col-md-6 scrollpoint sp-effect3 pad">
+                          <div class="intSleepHygieneImg"></div>
+                        </div>
+                        <div class="col-md-6 scrollpoint sp-effect3 text-center">
+                          <div class="inDesc">
+                            <div class="inTitle">Sleep Hygiene</div>
+                              <div class="txt_left">This interactive aims to teach the learners how to identify objects and activities that can negatively impact sleep.  The learner can interact with various objects in a bedroom to see how they would impact sleep.
+                              </div>
+                              <div class="inLaunchBtn launchBtn" data-title="Sleep Hygiene"
+                              data-iframe="http://demo.ansrsource.com/Interactives/Sleep_Hygiene/index.html">
+                                Launch
+                              </div>
+                          </div>
+                        </div>
+                    </div>
+					<div class="row">
+                       <div class="col-md-6 scrollpoint sp-effect3 pad">
+                          <div class="intObesityMapImg"></div>
+                        </div>
+                        <div class="col-md-6 scrollpoint sp-effect3 text-center">
+                          <div class="inDesc">
+                            <div class="inTitle">Obesity Map</div>
+                              <div class="txt_left">This interactive aims to show the learners how prevalent obesity is in their country and across the globe. The countries are color-coded according to the prevalent of obesity and on click, prevalence percentage per gender is displayed. The learners can also see the data from 2002, 2005, and 2010 to understand how prevalent obesity has become in the past few years.
+                              </div>
+                              <div class="inLaunchBtn launchBtn" data-title="Obesity Map"
+                              data-iframe="http://demo.ansrsource.com/Interactives/Obesity_Map/index.html">
+                                Launch
+                              </div>
+                          </div>
+                        </div>
+                    </div>
+					<div class="row">
+                       <div class="col-md-6 scrollpoint sp-effect3 pad">
+                          <div class="intAsteroidDistributionImg"></div>
+                        </div>
+                        <div class="col-md-6 scrollpoint sp-effect3 text-center">
+                          <div class="inDesc">
+                            <div class="inTitle">Kirkwood Gaps</div>
+                              <div class="txt_left">This interactive shows the distribution of asteroids and the primary Kirkwood gaps in the asteroid belt between Mars and Jupiter. In addition to the Kirkwood gaps, the interactive also indicates the position of Mars, Jupiter, and a few of the most massive objects in the asteroid belt.
+                              </div>
+                              <div class="inLaunchBtn launchBtn" data-title="Kirkwood Gaps"
+                              data-iframe="http://demo.ansrsource.com/Interactives/Asteroid_Distribution/index.html">
+                                Launch
+                              </div>
+                          </div>
+                        </div>
+                    </div>
+					<div class="row">
+                       <div class="col-md-6 scrollpoint sp-effect3 pad">
+                          <div class="intPossibleCivilizationImg"></div>
+                        </div>
+                        <div class="col-md-6 scrollpoint sp-effect3 text-center">
+                          <div class="inDesc">
+                            <div class="inTitle">Drake Equation</div>
+                              <div class="txt_left">This interactive aims to explain to learners the Drake equation, a probabilistic argument used to arrive at an estimate of the number of active, communicative extraterrestrial civilizations in the Milky Way galaxy.” The learners can input values and see how they impact the estimate. 
+                              </div>
+                              <div class="inLaunchBtn launchBtn" data-title="Drake Equation"
+                              data-iframe="http://demo.ansrsource.com/Interactives/Possible_Civilization/index.html">
+                                Launch
+                              </div>
+                          </div>
+                        </div>
+                    </div>
+					
+					<div class="row">
+                       <div class="col-md-6 scrollpoint sp-effect3 pad">
+                          <div class="intPlanetLandformImg"></div>
+                        </div>
+                        <div class="col-md-6 scrollpoint sp-effect3 text-center">
+                          <div class="inDesc">
+                            <div class="inTitle">Landforms</div>
+                              <div class="txt_left">This interactive requires the learners to identify the primary cause of various landforms on a hypothetical planet. The learners must click on marked regions of the planet to take a closer look at the landform and identify the primary cause of each landform. 
+                              </div>
+                              <div class="inLaunchBtn launchBtn" data-title="Drake Equation"
+                              data-iframe="http://demo.ansrsource.com/Interactives/Landforms/index.html">
+                                Launch
+                              </div>
+                          </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                      <div class="col-md-6 scrollpoint sp-effect3 pad text-center">
+                          <div class="intSPMImg"></div>
+                        </div>
+                        <div class="col-md-6 scrollpoint sp-effect3 text-center">
+                          <div class="inDesc ">
+                            <div class="inTitle">Shortest Path Method</div>
+                              <div class="txt_left">This interactive presents a brief description of the Shortest Path Problem. The interactive provides learners a refresher on the basic network terminologies. This is followed by an example that describes the shortest path problem, a method used to find the total distance travelled, the total cost of a sequence of activities, and the total time of a sequence of activities. The example problem is followed by an assessment.
+                              </div>
+                              <a class="inLaunchBtn launchBtn" data-title="Shortest Path Method" data-iframe="http://demo.ansrsource.com/Interactives/Shortest_Path/index.html">Launch</a>                            
+                          </div>
+                        </div>
+
+                    </div>
+					
+					 <div class="row">
+                      <div class="col-md-6 scrollpoint sp-effect3 pad text-center">
+                          <div class="intCTImg"></div>
+                        </div>
+                        <div class="col-md-6 scrollpoint sp-effect3 text-center">
+                          <div class="inDesc ">
+                            <div class="inTitle">Critical Thinking Game</div>
+                              <div class="txt_left">This interactive presents a brief description about Critical Thinking and its applications. It also lets you apply your Critical Thinking skills to identify relevant issues and determine the effects of new information when making a decision.</div>
+                              <a class="inLaunchBtn launchBtn" data-title="Critical Thinking Game" data-iframe="http://demo.ansrsource.com/Interactives/CT_Game_Final/index.html">Launch</a>                            
+                          </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    <div class="wrapper" id="simulations">
+        <section id="about">
+            <div class="container">
+
+                <div class="section-heading scrollpoint sp-effect3">
+                    <h1>Simulations</h1>
+                    <div class="divider"></div>
+                    <p>Explore and learn from real world scenarios in our virtual world.</p>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 text-center">
+                        <div class="simSMMImg scrollpoint sp-effect3"></div>
+
+                              <div class="about-item scrollpoint sp-effect2">
+                                  <h3>Social Media Marketing</h3>
+                                  <p class="txt_left">This simulation tests the learner’s ability to market a middle-market product
+                                  (in this case, coffee) using various tools available on different social media platforms.
+                                  The learner is required to achieve any of  the three different objectives in the simulation by selecting the  various available tools.
+                                  The learner is assessed and awarded a certain number of effort points dependent on the selected objective, to spend on the different tools. </p>
+
+                                  <div class="simLaunchBtn launchBtn" data-title="Social Media Marketing"
+                                  data-iframe="http://demo.ansrsource.com/Simulations/SMM/index.html">
+                                    Launch
+                                  </div>
+                              </div>
+                    </div>
+					
+					
+					 <div class="col-md-6 col-sm-6 text-center">
+                        <div class="simPmImg scrollpoint sp-effect3"></div>
+                              <div class="about-item scrollpoint sp-effect2">
+                                  <div><h3>Project Management</h3></div>
+                                  <p class="txt_left">This simulation lets the learner apply and test his or her project management skills in
+                                  creating an interactive test preparation app. The learner is required to complete the project given the specifications.
+                                  The learner is provided with the project team and the required information to understand the project.
+                                  <!--Based on these, the learner needs to make different decisions so as to meet the project objectives.-->
+                                  The learner is evaluated based on his or her performance on the three project constraints—cost, quality, and duration.</p>
+
+                                  <div class="simLaunchBtn launchBtn" data-title="Project Management"
+                                  data-iframe="http://demo.ansrsource.com/Simulations/PM/index.html">
+                                    Launch
+                                  </div>
+                              </div>
+
+                    </div>
+					
+					<!-- <div class="col-md-6 col-sm-6 text-center">
+                        <div class="simPmflashImg scrollpoint sp-effect3"></div>
+                              <div class="about-item scrollpoint sp-effect2">
+                                  <div><h3>Project Management Simulation V1 (Flash)</h3></div>
+                                  <p class="txt_left">This simulation lets the learner apply and test his or her project management skills in
+                                  creating an interactive test preparation app. The learner is required to complete the project given the specifications.
+                                  The learner is provided with the project team and the required information to understand the project. -->
+                                  <!--Based on these, the learner needs to make different decisions so as to meet the project objectives.-->
+                                 <!--  The learner is evaluated based on his or her performance on the three project constraints—cost, quality, and duration.</p>
+
+                                  <div class="simLaunchBtn launchBtn" data-title="Project Management"
+                                  data-iframe="http://demo.ansrsource.com/Simulations/PM_Simulation_flash_version/index.html">
+                                    Launch
+                                  </div>
+                              </div>
+
+                    </div>
+
+                    <div class="col-md-12 col-sm-12 text-center">
+                        <div class="simPmImg scrollpoint sp-effect3"></div>
+                              <div class="about-item scrollpoint sp-effect2">
+                                  <div><h3>Project Management Simulation V2 (HTML)</h3></div>
+                                  <p class="txt_left">This simulation lets the learner apply and test his or her project management skills in
+                                  creating an interactive test preparation app. The learner is required to complete the project given the specifications.
+                                  The learner is provided with the project team and the required information to understand the project. -->
+                                  <!--Based on these, the learner needs to make different decisions so as to meet the project objectives.-->
+                                 <!--  The learner is evaluated based on his or her performance on the three project constraints—cost, quality, and duration.</p>
+
+                                  <div class="simLaunchBtn launchBtn" data-title="Project Management"
+                                  data-iframe="http://demo.ansrsource.com/Simulations/PM_Simulation_html_version/index.html">
+                                    Launch
+                                  </div>
+                              </div>
+
+                    </div>		 -->
+					
+
+                </div>
+            </div>
+        </section>
+    </div>
+        <section id="courses">
+            <div class="container">
+                <div class="section-heading scrollpoint sp-effect3">
+                    <h1>Courses</h1>
+                    <div class="divider"></div>
+                    <p>Structured learning through world-class content, design and technology.</p>
+                </div>
+                <div class="row pad">
+                    <div class="col-md-6 col-sm-6 scrollpoint sp-effect3 text-center">
+                        <div class="about-item ">
+                          <h3>Social Media Marketing</h3>
+                          <p class="txt_left">This Social Media Marketing course aims to help learners manage their corporation’s
+                            professional presence on different social media platforms.
+                            It provides the learner with skills and techniques to manage their online reputation proactively.
+                          </p>
+
+                          <div class="inLaunchBtn launchBtn" data-title="Social Media Marketing"
+                               data-iframe="http://demo.ansrsource.com/Courses/SMM_Course/index.html">Launch </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 scrollpoint sp-effect3" >
+                      <div class="coursesSMMImg scrollpoint sp-effect2"></div>
+                    </div>
+                </div>
+
+                <div class="row pad">
+                    <div class="col-md-6 col-sm-6 scrollpoint sp-effect3 text-center">
+                        <div class="about-item ">
+                          <h3>Specsavers Medicare</h3>
+                          <p class="txt_left">This Specsavers Medicare course aims to help learners understand how Medicare works
+                              with insurance and health care providers. It explains the different codes of Medicare used to
+                              bill optometry services and Socrates.
+                          </p>
+                          <div class="inLaunchBtn launchBtn" data-title="Specsaver Medicare"
+                               data-iframe="http://demo.ansrsource.com/Courses/Specsaver/index.html">Launch </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 scrollpoint sp-effect3" >
+                      <div class="coursesSpecsImg scrollpoint sp-effect3"></div>
+                    </div>
+                </div>
+
+                <div class="row pad">
+                    <div class="col-md-6 col-sm-6 scrollpoint sp-effect3 text-center">
+                        <div class="about-item ">
+                          <h3>Sales</h3>
+                          <p class="txt_left">This Sales Course aims to help good salespeople become great salespeople.
+                            The course will provide the student  various methods to improve their  sales skills.
+                            It will  examine sales strategies, discuss the personal selling process,
+                            customer relationships, and the ethical dilemmas that salespeople might face.
+                          </p>
+
+                          <div class="inLaunchBtn launchBtn" data-title="Sales"
+                               data-iframe="http://demo.ansrsource.com/Courses/Sales/index.html">Launch </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 scrollpoint sp-effect3" >
+                      <div class="coursesSalesImg scrollpoint sp-effect3"></div>
+                    </div>
+                </div>
+				
+				<div class="row pad">
+                    <div class="col-md-6 col-sm-6 scrollpoint sp-effect3 text-center">
+                        <div class="about-item ">
+                          <h3>Critical Thinking in Business</h3>
+                          <p class="txt_left">The Critical Thinking in Business microlesson is aimed at employers and employees and it explains what critical thinking is and why it is crucial to business that succeed.
+                          </p>
+
+                          <div class="inLaunchBtn launchBtn" data-title="Sales"
+                               data-iframe="http://demo.ansrsource.com/Courses/Critical_Thinking_in_Business/index.html">Launch </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 scrollpoint sp-effect3" >
+                      <div class="coursesCriticalThinkingBusinessImg scrollpoint sp-effect3"></div>
+                    </div>
+                </div>
+				
+				
+				<div class="row pad">
+                    <div class="col-md-6 col-sm-6 scrollpoint sp-effect3 text-center">
+                        <div class="about-item ">
+                          <h3>Improving Critical Thinking Skills</h3>
+                          <p class="txt_left">The Improving Critical Thinking Skills microlesson is aimed at employees who want to fine-tune the critical thinking skills that are in demand.
+                          </p>
+
+                          <div class="inLaunchBtn launchBtn" data-title="Sales"
+                               data-iframe="http://demo.ansrsource.com/Courses/Improving_Critical_Thinking_Skills/index.html">Launch </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 scrollpoint sp-effect3" >
+                      <div class="coursesImprovingCriticalThinkingSkillsImg scrollpoint sp-effect3"></div>
+                    </div>
+                </div>
+				
+				
+				<div class="row pad">
+                    <div class="col-md-6 col-sm-6 scrollpoint sp-effect3 text-center">
+                        <div class="about-item ">
+                          <h3>E-Learning and Information Literacy</h3>
+                          <p class="txt_left">Today, an increasing number of people are exploring different methods to improve how they learn and teach online. In this module, we will explore how advances in technology have changed the way we learn. </p>
+						  <p class="txt_left"><b>Steps to access the module: </b><br />
+						  <b>Step 1:</b> Click the <b>Launch</b> button.<br />
+						  <b>Step 2:</b> Enter your login credentials and click Login. <br />
+						  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>USERNAME:</b> demoreel1<br />
+						  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>PASSWORD:</b> P@ssw0rd <br />
+						  <b>Step 3:</b> Under “My Courses” on the right side of the screen click on “E-Learning and Information Literacy.” <br />
+						  <b>Step 4:</b> Click “Module: E-Learning and Information Literacy” below the “E-Learning and Information Literacy” tab on the left of the screen. <br />
+						  <b>Step 5:</b> Start exploring the module. 
+						   </p>
+
+                          <div class="inLaunchBtn launchBtn" data-title="Sales"
+                               data-iframe="https://www.coursesites.com/webapps/portal/frameset.jsp?url=%2Fwebapps%2Fblackboard%2Fexecute%2Flauncher%3Ftype%3DCourse%26id%3D_428565_1%26url%3D">Launch </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 scrollpoint sp-effect3" >
+                      <div class="coursesSNHUImg scrollpoint sp-effect3"></div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section id="tools_platforms">
+          <div class="container">
+            <div class="section-heading">
+              <h1>Tools &amp; Platforms</h1>
+              <div class="divider"></div>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-6 col-lg-2 col-md-3 col-sm-4">
+                <img src="assets/img/tool_platforms/adobe_cc_1.png" width="100px">
+              </div>
+              <div class="col-xs-6 col-lg-2 col-md-3 col-sm-4">
+                <img src="assets/img/tool_platforms/articulate_1.png" width="100px">
+              </div>
+              <div class="col-xs-6 col-lg-2 col-md-3 col-sm-4">
+                <img src="assets/img/tool_platforms/atd_1.png" width="100px">
+              </div>
+              <div class="col-xs-6 col-lg-2 col-md-3 col-sm-4">
+                <img src="assets/img/tool_platforms/audacity_1.png" width="100px">
+              </div>
+              <div class="col-xs-6 col-lg-2 col-md-3 col-sm-4">
+                <img src="assets/img/tool_platforms/autodesk_1.png" width="100px">
+              </div>
+              <div class="col-xs-6 col-lg-2 col-md-3 col-sm-4">
+                <img src="assets/img/tool_platforms/axure_1.png" width="100px">
+              </div>
+            </div>
+            <div class="row"></div>
+            <div class="row">
+              <div class="col-xs-6 col-lg-2 col-md-3 col-sm-4">
+                <img src="assets/img/tool_platforms/bboard_1.png" width="100px">
+              </div>
+              <div class="col-xs-6 col-lg-2 col-md-3 col-sm-4">
+                <img src="assets/img/tool_platforms/django_1.png" width="100px">
+              </div>
+              <div class="col-xs-6 col-lg-2 col-md-3 col-sm-4">
+                <img src="assets/img/tool_platforms/smart_sparrow_1.png" width="100px">
+              </div>
+              <div class="col-xs-6 col-lg-2 col-md-3 col-sm-4">
+                <img src="assets/img/tool_platforms/coursemill_1.png" width="100px">
+              </div>
+              <div class="col-xs-6 col-lg-2 col-md-3 col-sm-4">
+                <img src="assets/img/tool_platforms/coursesites_1.png" width="100px">
+              </div>
+              <div class="col-xs-6 col-lg-2 col-md-3 col-sm-4">
+                <img src="assets/img/tool_platforms/camtasia_1.png" width="100px">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-6 col-lg-2 col-md-3 col-sm-4">
+                <img src="assets/img/tool_platforms/educause_1.png" width="100px">
+              </div>
+              <div class="col-xs-6 col-lg-2 col-md-3 col-sm-4">
+                <img src="assets/img/tool_platforms/elearning_member_1.png" width="100px">
+              </div>
+              <div class="col-xs-6 col-lg-2 col-md-3 col-sm-4">
+                <img src="assets/img/tool_platforms/html_1.png" width="100px">
+              </div>
+              <div class="col-xs-6 col-lg-2 col-md-3 col-sm-4">
+                <img src="assets/img/tool_platforms/inkling_1.png" width="100px">
+              </div>
+              <div class="col-xs-6 col-lg-2 col-md-3 col-sm-4">
+                <img src="assets/img/tool_platforms/jquery_1.png" width="100px">
+              </div>
+              <div class="col-xs-6 col-lg-2 col-md-3 col-sm-4">
+                <img src="assets/img/tool_platforms/lectora_logo_1.png" width="100px">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-6 col-lg-2 col-md-3 col-sm-4">
+                <img src="assets/img/tool_platforms/moodle_1.png" width="100px">
+              </div>
+              <div class="col-xs-6 col-lg-2 col-md-3 col-sm-4">
+                <img src="assets/img/tool_platforms/olc_1.png" width="100px">
+              </div>
+              <div class="col-xs-6 col-lg-2 col-md-3 col-sm-4">
+                <img src="assets/img/tool_platforms/open_edx_1.png" width="100px">
+              </div>
+              <div class="col-xs-6 col-lg-2 col-md-3 col-sm-4">
+                <img src="assets/img/tool_platforms/python_1.png" width="100px">
+              </div>
+              <div class="col-xs-6 col-lg-2 col-md-3 col-sm-4">
+                <img src="assets/img/tool_platforms/captivate_1.png" width="100px">
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="clients_affiliations">
+          <div class="container">
+            <div class="section-heading">
+              <h1>Clients &amp; Affiliations</h1>
+              <div class="divider"></div>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-2">
+                <img src="assets/img/clients_affiliations/Acue.png" width="100px">
+              </div>
+              <div class="col-xs-2">
+                <img src="assets/img/clients_affiliations/Ahima.png" width="100px">
+              </div>
+              <div class="col-xs-2">
+                <img src="assets/img/clients_affiliations/AMA.png" width="100px">
+              </div>
+              <div class="col-xs-2">
+                <img src="assets/img/clients_affiliations/Bridge.png" width="100px">
+              </div>
+              <div class="col-xs-2">
+                <img src="assets/img/clients_affiliations/Capella.png" width="100px">
+              </div>
+              <div class="col-xs-2">
+                <img src="assets/img/clients_affiliations/Cengage.png" width="100px">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-2">
+                <img src="assets/img/clients_affiliations/Flat.png" width="100px">
+              </div>
+              <div class="col-xs-2">
+                <img src="assets/img/clients_affiliations/IIM.png" width="100px">
+              </div>
+              <div class="col-xs-2">
+                <img src="assets/img/clients_affiliations/Jones.png" width="100px">
+              </div>
+              <div class="col-xs-2">
+                <img src="assets/img/clients_affiliations/Macmillan.png" width="100px">
+              </div>
+              <div class="col-xs-2">
+                <img src="assets/img/clients_affiliations/MHE.png" width="100px">
+              </div>
+              <div class="col-xs-2">
+                <img src="assets/img/clients_affiliations/NASM.png" width="100px">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-2">
+                <img src="assets/img/clients_affiliations/open_edx.png" width="100px">
+              </div>
+              <div class="col-xs-2">
+                <img src="assets/img/clients_affiliations/Paradigm.png" width="100px">
+              </div>
+              <div class="col-xs-2">
+                <img src="assets/img/clients_affiliations/PEarson.png" width="100px">
+              </div>
+              <div class="col-xs-2">
+                <img src="assets/img/clients_affiliations/Penn.png" width="100px">
+              </div>
+              <div class="col-xs-2">
+                <img src="assets/img/clients_affiliations/Specsaver.png" width="100px">
+              </div>
+              <div class="col-xs-2">
+                <img src="assets/img/clients_affiliations/UOW.png" width="100px">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-2">
+                <img src="assets/img/clients_affiliations/Wiley.png" width="100px">
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <section id="reviews">
+            <div class="container">
+                <div class="section-heading inverse scrollpoint sp-effect3">
+                    <h1>Testimonials</h1>
+                    <div class="divider"></div>
+                    <p>Read what our clients are saying about us</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-10 col-md-push-1 scrollpoint sp-effect3">
+                        <div class="review-filtering">
+                            <div class="review">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="review-comment">
+                                            <h3>“We always have resources to do follow-up (review) work on what is submitted to us,
+                                            but in ansr’s case we hardly used any of them.”</h3>
+                                            <p>
+                                                - Kathy Kelly, Manager, Content Development, Pearson
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="review rollitin">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="review-comment">
+                                            <h3>“The sets for the course were a huge success! Students loved having the sets
+                                            as a study guide and resource during Intro to Astronomy.
+                                            Huge thanks to the team for their work on that course.”</h3>
+                                            <p>
+                                                - Laura Brown, Cerego
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="review rollitin">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="review-comment">
+                                            <h3>“I have worked with many vendors in the past, and I rarely have the great experience and professionalism
+                                            I get from your team. Your team is like clockwork with the daily updates, the email
+                                            communication is clear, and I don’t have one suggestion to make!”</h3>
+                                            <p>
+                                                - Anne Haws, MHE
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <a href="#" class="scrollpoint sp-effect3">
+                    <img src="assets/img/freeze/logo.png" alt="" class="logo">
+                </a>
+
+                 <div class="social">
+                    <a href="https://www.facebook.com/ANSRsource?fref=ts" target="_blank" class="fb"></a>
+                    <a href="https://twitter.com/ansrsource" target="_blank" class="tw"></a>
+                    <a href="https://www.linkedin.com/company/ansrsource?trk=top_nav_home" target="_blank" class="lki"></a>
+                    <a href="https://www.youtube.com/user/ansrsource" target="_blank" class="yt"></a>
+                </div>
+                <div class="rights">
+                    <p>Copyright &copy; 2015</p>
+                </div>
+            </div>
+        </footer>
+
+	<div class="row">
+		<div class="col-md-12">
+			<div class="modal1 fade animated" id="modal-container-523801" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+								×
+							</button>
+							<h4 class="modal-title bold_title text-center" id="myModalLabel">
+								Modal title
+							</h4>
+                                                        <h4 class="modal-newWindow text-center">
+								Click <a href="#" target="_blank" id="openInBrowser"><u>here</u></a> to open this in a new browser tab.
+							</h4>
+						</div>
+						<div class="modal-body">
+							werPoint Slides
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6">
+		</div>
+	</div>
+
+    <!--<script src="assets/js/jquery-1.11.1.min.js"></script>-->
+    <script src="assets/js/jquery-ui.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/placeholdem.min.js"></script>
+    <script src="assets/js/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
+    <script src="assets/js/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+
+    <script>
+    $(document).ready(function() {
+        //$(".pre-loader").show();
+        //appMaster.preLoader();
+	//----------- Updated by lalit[Starts]-----------------//
+		$("#tools_platforms").find("div").children("div").find("img").addClass("center-block");
+		$("#clients_affiliations").find(".row").children("div").removeClass("col-xs-2").addClass("col-xs-6 col-lg-2 col-md-3 col-sm-4");
+		$("#clients_affiliations").find("div").children("div").find("img").addClass("center-block");
+	
+		var __videosLeftValue = -2392;
+	//----------- Updated by lalit[ends]-----------------//	
+
+        $(".accordianContent").css({"width":(($(".section1").width())*43)/100});
+
+        $(".pllg").hover(function(){
+            if ($(this).hasClass("parallelogram-expand")) {
+                  $(".accordianContent").fadeOut();
+                  //$("#"+$(this).attr("data-part")).hide();
+                  $(".pllg").removeClass("parallelogram-squezzed");
+                  $(this).removeClass("parallelogram-expand");
+            }
+            else{
+                  $(".accordianContent").fadeOut();
+                  $("#"+$(this).attr("data-part")).fadeIn();
+                  $(".pllg").removeClass("parallelogram-expand");
+                  $(".pllg").addClass("parallelogram-squezzed");
+                  $(this).addClass("parallelogram-expand");
+              }
+            });
+
+        $(".accordianContent").hide();
+
+        $(window).resize(function(){
+            $(".accordianContent").css({"width":(($(".section1").width())*43)/100})
+          });
+
+         //  Start Videos
+
+        $(".rightArrow").click(function(){
+            //alert($("#filmStripContainer").css("left"));
+            var leftPos = parseInt($("#filmStripContainer").css("left").split("px")[0]) - 300;
+            if (leftPos < __videosLeftValue) {
+              leftPos = __videosLeftValue;
+            }
+             $("#filmStripContainer").css({"left":leftPos+"px"});
+          });
+
+        $(".leftArrow").click(function(){
+          //alert($("#filmStripContainer").css("left"));
+          var leftPos = parseInt($("#filmStripContainer").css("left").split("px")[0]) + 300;
+          if (leftPos > 0 ) {
+            leftPos = 0;
+          }
+                $("#filmStripContainer").css({"left":leftPos+"px"});
+        });
+
+        $(".videoImage").click(function(){
+         $(".video-container").html($(this).attr("data-part"));
+         });
+
+        $(".filmStripContainer").draggable({
+            axis: "x",
+            start: function(event, ui) {
+                $("#filmStripContainer").css({"left":ui.position.left + "px"});
+            },
+            stop: function(event, ui) {
+
+              if (ui.position.left < __videosLeftValue) {
+                  $("#filmStripContainer").css({"left":__videosLeftValue});
+                }
+              if (ui.position.left >0) {
+                  $("#filmStripContainer").css({"left":"0px"});
+                }
+            }
+        });
+         //  End Videos
+
+        //  Start Modal
+		//----------- Updated by lalit[Starts]-----------------//
+        $(".launchBtn").click(function(aEvent){
+			aEvent.preventDefault(); 			
+			window.open($(aEvent.currentTarget).attr("data-iframe"), '_blank');
+          //$("#modal-container-523801").show();
+          //$("#myModalLabel").html($(this).attr("data-title"));
+         // $("#openInBrowser").attr("href",$(this).attr("data-iframe"));
+
+         // var winHeight = $(window).height()-150;
+          //var winWidth = $(window).width();
+         // var modalWidth = 100;
+
+         // modalWidth = adjustPopUp(winWidth, winHeight, modalWidth );
+          //var iframeSrc = $(this).attr("data-iframe");
+          //adjustIframe(iframeSrc, winHeight, modalWidth);
+
+
+          });
+
+        //$(".close").click(function(){
+          //$(".modal-body").html("");
+         // $("#modal-container-523801").hide();
+        //  });
+         //  End Modal
+		 
+		 //----------- Updated by lalit[ends]-----------------//
+
+         function adjustIframe(iframeSrc, winHeight, modalWidth){
+            $(".modal-body").html("<iframe style='height:"+winHeight+"px; width:" + modalWidth +";' src='" + iframeSrc + "'></iframe");
+           }
+
+        function adjustPopUp(winWidth, winHeight, modalWidth  ){
+              if (winWidth > 1300) {
+               $(".modal-dialog").css({"width":"1000px"});
+              }
+              else if (winWidth > 1000) {
+                $(".modal-dialog").css({"width":((winWidth* 80)/100) + "px"});
+              }
+              else if (winWidth > 500) {
+                $(".modal-dialog").css({"width":((winWidth* 80)/100) + "px"});
+              }
+              modalWidth  = $(".modal-dialog").css("width");
+
+              if (winHeight < winWidth) {
+                  $(".modal-dialog").css({"height":winHeight + "px"});
+                  $(".popUpIframe").css({"height":winHeight + "px"});
+                }
+                return modalWidth;
+        }
+      });
+    </script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-69838107-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+<script language="javascript">
+
+window.onload = function(e){
+  //$("#header1").show();
+    $(".pre-loader").hide();
+}
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<Contents id="T04_P6">
+   <totalAttempts><![CDATA[2]]></totalAttempts>
+   <question>
+      <OptionHeader>
+         <QuestionPanel1><![CDATA[Maternal history]]></QuestionPanel1>
+         <QuestionPanel2><![CDATA[Labor / Delivery history]]></QuestionPanel2>
+      </OptionHeader>
+      <instruction><![CDATA[Select the correct answer and click <b>Submit</b>.]]></instruction>
+      <Options>
+         <Option id="1"><![CDATA[38 years old]]></Option>
+         <Option id="2"><![CDATA[Married]]></Option>
+         <Option id="3"><![CDATA[Initially presented at 36-weeks gestation in active labor]]></Option>
+         <Option id="4"><![CDATA[Gravida 5, Para 3205 (Full term 3, Preterm 2 [30 weeks, 36 weeks], Abortions 0, Live children 5 [includes birth of Baby Jazmine])]]></Option>
+         <Option id="5"><![CDATA[Prior births delivered vaginally]]></Option>
+         <Option id="6"><![CDATA[Obese (pre-pregnancy body mass index was 35)]]></Option>
+      </Options>
+      <correctAnswers>
+         <correctAns><![CDATA[1]]></correctAns>
+         <correctAns><![CDATA[3]]></correctAns>
+         <correctAns><![CDATA[4]]></correctAns>
+         <correctAns><![CDATA[6]]></correctAns>
+      </correctAnswers>
+   </question>
+   <question>
+      <OptionHeader>
+         <QuestionPanel1><![CDATA[Conrad- Postnatal course]]></QuestionPanel1>
+         <QuestionPanel2><![CDATA[Conrad’s vital signs are:]]></QuestionPanel2>
+      </OptionHeader>
+      <instruction><![CDATA[Select the correct answer and click <b>Submit</b>.]]></instruction>
+      <Options>
+         <Option id="1"><![CDATA[Normal]]></Option>
+         <Option id="2"><![CDATA[Abnormal]]></Option>
+      </Options>
+      <correctAnswers>
+         <correctAns><![CDATA[1]]></correctAns>
+      </correctAnswers>
+   </question>
+   <question>
+      <OptionHeader>
+         <QuestionPanel1><![CDATA[Maternal history]]></QuestionPanel1>
+         <QuestionDesc><![CDATA[Which of the following would you consider risk factors that could negatively impact her fetus?<br/>Select all that apply and click the submit button.]]></QuestionDesc>
+      </OptionHeader>
+      <instruction><![CDATA[Select the correct answer and click <b>Submit</b>.]]></instruction>
+      <Options>
+         <Option id="1"><![CDATA[Admitted to the Special Care Nursery.]]></Option>
+         <Option id="2"><![CDATA[He was placed on a nasal cannula after birth, but at 3 hours of age his respiratory distress worsened, and he was placed on nasal CPAP.]]></Option>
+         <Option id="3"><![CDATA[He remains on CPAP, and his cardiorespiratory status is stable.]]></Option>
+      </Options>
+      <correctAnswers>
+         <correctAns><![CDATA[5]]></correctAns>
+         <correctAns><![CDATA[6]]></correctAns>
+         <correctAns><![CDATA[7]]></correctAns>
+         <correctAns><![CDATA[8]]></correctAns>
+         <!-- <correctAns><![CDATA[9]]></correctAns> -->
+         <correctAns><![CDATA[10]]></correctAns>
+         <correctAns><![CDATA[11]]></correctAns>
+      </correctAnswers>
+   </question>
+   <question>
+      <OptionHeader>
+         <QuestionPanel1><![CDATA[Labor/Delivery history]]></QuestionPanel1>
+         <QuestionDesc><![CDATA[Which of the following would you consider risk factors that could negatively impact her fetus?<br/>Select all that apply and click the submit button.]]></QuestionDesc>
+      </OptionHeader>
+      <instruction><![CDATA[Select the correct answer and click <b>Submit</b>.]]></instruction>
+      <Options>
+         <Option id="1"><![CDATA[Two days after admission, maternal symptoms worsen and the mother is diagnosed with HELLP (hemolysis, elevated liver enzymes, and low platelets)]]></Option>
+         <Option id="2"><![CDATA[Antenatal corticosteroid dosing completed before delivery]]></Option>
+         <Option id="3"><![CDATA[Group B streptococcus screening negative]]></Option>
+         <Option id="4"><![CDATA[Cesarean section accomplished for maternal indications]]></Option>
+         <Option id="5"><![CDATA[Artificial rupture of membranes (AROM) at delivery &ndash; fluid clear]]></Option>
+         <Option id="6"><![CDATA[Apgar scores: 3 (at 1 minute), 8 (at 5 minutes)]]></Option>
+         <Option id="7"><![CDATA[Resuscitation: Dried, stimulated, poor respiratory effort so given positive pressure ventilation (PPV) for several minutes in the delivery room, then transitioned to CPAP]]></Option>
+         <Option id="8"><![CDATA[On room air with no CPAP required by 10 minutes of age]]></Option>
+         <Option id="9"><![CDATA[Held skin-to-skin briefly by the mother]]></Option>
+         <Option id="10"><![CDATA[Transferred to the Special Care Nursery at 15 minutes of age]]></Option>
+      </Options>
+      <correctAnswers>
+         <correctAns><![CDATA[1]]></correctAns>
+         <correctAns><![CDATA[4]]></correctAns>
+         <correctAns><![CDATA[6]]></correctAns>
+         <correctAns><![CDATA[7]]></correctAns>
+         <!-- <correctAns><![CDATA[9]]></correctAns> -->
+      </correctAnswers>
+   </question>
+    <question>
+      <OptionHeader>
+         <QuestionPanel1><![CDATA[Labor/Delivery history]]></QuestionPanel1>
+         <QuestionDesc><![CDATA[Which of the following would you consider risk factors that could negatively impact her fetus?<br/>Select all that apply and click the submit button.]]></QuestionDesc>
+      </OptionHeader>
+      <instruction><![CDATA[Select the correct answer and click <b>Submit</b>.]]></instruction>
+      <Options>
+         <Option id="1"><![CDATA[Mother reports leaking of amniotic fluid for the past week.]]></Option>
+         <Option id="2"><![CDATA[Onset of preterm labor 6 hours before admission.]]></Option>
+         <Option id="3"><![CDATA[Fetal heart tracing: Category 1 (normal tracing and normal fetal heart rate and variability).]]></Option>
+         <Option id="4"><![CDATA[Highest intrapartum maternal temperature 37.5°C.]]></Option>
+         <Option id="5"><![CDATA[Amniotic fluid foul-smelling.]]></Option>
+         <Option id="6"><![CDATA[Vaginal delivery 2 hours after admission.]]></Option>
+         <Option id="7"><![CDATA[Apgar scores: 7 (at 1 minute), 9 (at 5 minutes).]]></Option>
+         <Option id="8"><![CDATA[Resuscitation: Neonatal resuscitation steps followed; dried and stimulated.]]></Option>
+         <Option id="9"><![CDATA[Laid on mother’s chest for skin-to-skin holding, then remained with mother and <br>transferred to mother-baby unit.]]></Option>
+      </Options>
+      <correctAnswers>
+         <correctAns><![CDATA[1]]></correctAns>
+         <correctAns><![CDATA[2]]></correctAns>
+         <correctAns><![CDATA[5]]></correctAns>
+      </correctAnswers>
+   </question>
+   
+</Contents>

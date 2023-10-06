@@ -1,0 +1,932 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+
+    <title></title>
+
+    <script>
+        manifest = [{
+                src: 'pages/images/Topic01/T01P01/EV01_01.png',
+                id: '1'
+            },
+
+            {
+                src: 'pages/images/Topic01/T01P01/EV01_02.png',
+                id: '2'
+            },
+
+            {
+                src: 'pages/images/Topic01/T01P01/EV01_03.png',
+                id: '3'
+            },
+
+            {
+                src: 'pages/images/Topic01/T01P01/EV01_04.png',
+                id: '4'
+            },
+
+            {
+                src: 'pages/images/Topic01/T01P01/module_objective_banner.png',
+                id: '6'
+            }
+        ];
+    </script>
+
+
+
+    <!-- <style type="text/css">
+        .mainContainer {
+            position: absolute;
+            width: 100%;
+            height: 460px;
+            left: 0px;
+            top: 0px;
+            opacity: 1;
+        }
+        
+        #box1 {
+            position: absolute;
+            height: 135px;
+            width: 320px;
+            opacity: 0;
+            top: 20px;
+            left: 40px;
+        }
+        
+        #box2 {
+            position: absolute;
+            height: 135px;
+            width: 290px;
+            opacity: 0;
+            top: 20px;
+            left: 403px;
+        }
+    
+        #box3 {
+            position: absolute;
+            height: 135px;
+            width: 310px;
+            opacity: 0;
+            top: 20px;
+            right: 43px;
+        }
+        
+        #box4 {
+            position: absolute;
+            height: 140px;
+            width: 362px;
+            opacity: 0;
+            top: 175px;
+            left: 49px;
+        }
+        
+        #box5 {
+            position: absolute;
+            height: 125px;
+            width: 295px;
+            opacity: 0;
+            top: 175px;
+            right: 365px;
+        }
+        #box6 {
+            position: absolute;
+            height: 135px;
+            width: 290px;
+            opacity: 1;
+            top: 175px;
+            left: 732px;
+        }
+        .clsIcon {
+            position: absolute;
+            opacity: 0;
+        }
+        
+        .icon-container {
+            position: absolute;
+            width: 100%;
+            top: 190px;
+            left: 0px;
+            height: 350px;
+            background: #ffffff;
+        }
+        
+        #idIcon01 {
+            position: relative;
+            width: 58px;
+            height: 60px;
+            left: 0px;
+            top: 0px;
+            background: url(pages/images/Topic01/T01P01/EV01_02.png) no-repeat;
+            margin: 0px auto;
+            background-size: contain;
+        }
+        
+        #idIcon02 {
+            position: relative;
+            width: 58px;
+            height: 60px;
+            margin: 0px auto;
+            left: 0px;
+            top: 0PX;
+            background: url("pages/images/Topic01/T01P01/EV01_02.png") no-repeat;
+            background-size: contain;
+        }
+        
+        #idIcon03 {
+            position: relative;
+            width: 60px;
+            height: 54px;
+            margin: 0px auto;
+            left: 0px;
+            top: 0PX;
+            background: url("pages/images/Topic01/T01P01/EV01_01.png") no-repeat;
+            background-size: contain;
+        }
+        
+        #idIcon04 {
+            position: relative;
+            width: 60px;
+            height: 54px;
+            margin: 0px auto;
+            top: 0px;
+            left: 0px;
+            background: url("pages/images/Topic01/T01P01/EV01_01.png") no-repeat;
+            background-size: contain;
+        }
+        
+        #idIcon05 {
+            position: relative;
+            width: 62px;
+            height: 57px;
+            margin: 0px auto;
+            top: 0px;
+            left: 0px;
+            background: url("pages/images/Topic01/T01P01/EV01_05.png") no-repeat;
+            background-size: contain;
+        }
+        #idIcon06 {
+            position: relative;
+            width: 58px;
+            height: 60px;
+            margin: 0px auto;
+            left: 0px;
+            top: 0PX;
+            background: url("pages/images/Topic01/T01P01/EV01_02.png") no-repeat;
+            background-size: contain;
+        }
+        .clsText {
+            position: absolute;
+            font-size: 16px;
+            font-family: OpenSansRegular;
+            text-align: center;
+            color: #000000;
+            bottom: 86px;
+            /*106px*/
+            opacity: 0;
+        }
+        
+        #idText1 {
+            top: 65PX;
+            left: 0px;
+            width: 97%;
+            height: 95px;
+        }
+        
+        #idText2 {
+            top: 65PX;
+            left: 0px;
+            width: 97%;
+            height: 95px;
+        }
+        
+        #idText3 {
+            top: 65PX;
+            left: 0px;
+            width: 97%;
+            height: 95px;
+        }
+        
+        #idText4 {
+            top: 65PX;
+            left: 0px;
+            width: 97%;
+            height: 95px;
+        }
+        
+        #idText5 {
+            top: 65PX;
+            left: 0px;
+            width: 97%;
+            height: 95px;
+        }
+        #idText6 {
+            top: 65PX;
+            left: 0px;
+            width: 97%;
+            height: 95px;
+        }
+        .boxInst {
+            position: absolute;
+            top: 301px;
+            left: 908px;
+        }
+        
+        .banner-img {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 1085px;
+            height: 190px;
+            background: url('pages/images/Topic01/T01P01/module_objective_banner.png') no-repeat;
+            background-size: cover;
+            background-color: #ffffff;
+        }
+        
+        .headerTopRight {
+            position: absolute;
+            top: 12px;
+            left: 210px;
+            color: #FFFFFF;
+            font-size: 22px;
+            font-family: OpenSansSemiBold;
+        }
+        .boxAlignwrapper{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            row-gap: 60px;
+            column-gap: 80px;
+            margin-top: -10px;
+        }
+        .headerTopRight span {}
+        
+        .headerTopRight img.sugar_and_safe_care {}
+    </style> -->
+
+    <style type="text/css">
+        .mainContainer {
+            position: absolute;
+            width: 100%;
+            height: 460px;
+            left: 0px;
+            top: 0px;
+            opacity: 1;
+        }
+        
+        #box1 {
+            position: absolute;
+            height: 145px;
+            width: 330px;
+            opacity: 0;
+            top: 20px;
+            left: 40px;
+        }
+        
+        #box2 {
+            position: absolute;
+            height: 135px;
+            width: 290px;
+            opacity: 0;
+            top: 20px;
+            right: 43px;
+        }
+        
+        #box3 {
+            position: absolute;
+            height: 135px;
+            width: 310px;
+            opacity: 0;
+            top: 20px;
+            left: 403px;
+        }
+        
+        #box4 {
+            position: absolute;
+            height: 140px;
+            width: 330px;
+            opacity: 0;
+            top: 165px;
+            left: 40px;
+        }
+        
+        #box5 {
+            position: absolute;
+            height: 125px;
+            width: 295px;
+            opacity: 0;
+            top: 165px;
+            right: 170px;
+        }
+        #box6 {
+            position: absolute;
+            height: 135px;
+            width: 290px;
+            opacity: 1;
+            top: 165px;
+            left: 732px;
+        }
+        .clsIcon {
+            position: absolute;
+            opacity: 0;
+        }
+        
+        .icon-container {
+            position: absolute;
+            width: 100%;
+            top: 190px;
+            left: 0px;
+            height: 350px;
+            background: #ffffff;
+        }
+        
+        #idIcon01 {
+            position: relative;
+            width: 58px;
+            height: 60px;
+            left: 0px;
+            top: 0px;
+            background: url(pages/images/Topic01/T01P01/EV01_02.svg) no-repeat;
+            margin: 0px auto;
+            background-size: contain;
+        }
+        
+        #idIcon02 {
+            position: relative;
+            width: 58px;
+            height: 60px;
+            margin: 0px auto;
+            left: 0px;
+            top: 0PX;
+            background: url("pages/images/Topic01/T01P01/EV01_02.svg") no-repeat;
+            background-size: contain;
+        }
+        
+        #idIcon03 {
+            position: relative;
+            width: 74px;
+            height: 58px;
+            margin: 0px auto;
+            left: 0px;
+            top: 0PX;
+            background: url("pages/images/Topic01/T01P01/EV01_01.svg") no-repeat;
+            background-size: contain;
+        }
+        
+        #idIcon04 {
+            position: relative;
+            width: 73px;
+    height: 59px;
+            margin: 0px auto;
+            top: 0px;
+            left: -220px;
+            background: url("pages/images/Topic01/T01P01/EV01_01.svg") no-repeat;
+            background-size: contain;
+        }
+        
+        #idIcon05 {
+            position: relative;
+            width: 72px;
+    height: 60px;
+            margin: 0px auto;
+            top: 0px;
+            left: 11px;
+            background: url("pages/images/Topic01/T01P01/EV01_05.svg") no-repeat;
+            background-size: contain;
+        }
+        #idIcon06 {
+            position: relative;
+            width: 58px;
+            height: 60px;
+            margin: 0px auto;
+            left: -1px;
+            top: 0PX;
+            background: url("pages/images/Topic01/T01P01/EV01_02.svg") no-repeat;
+            background-size: contain;
+        }
+        .clsText {
+            position: absolute;
+            font-size: 14px;
+            line-height: 20px;
+            font-family: OpenSansRegular;
+            text-align: center;
+            color: #000000;
+            bottom: 86px;
+            /*106px*/
+            opacity: 0;
+        }
+        
+        #idText1 {
+            top: 65PX;
+            left: 0px;
+            width: 97%;
+            height: 95px;
+        }
+        
+        #idText2 {
+            top: 65PX;
+            left: 0px;
+            width: 97%;
+            height: 95px;
+        }
+        
+        #idText3 {
+            top: 65PX;
+            left: 0px;
+            width: 97%;
+            height: 95px;
+        }
+        
+        #idText4 {
+            top: 65PX;
+            /* left: -93px; */
+            width: 97%;
+            height: 95px;
+        }
+        
+        #idText5 {
+            top: 65PX;
+            left: -219px;
+            width: 97%;
+            height: 95px;
+        }
+        #idText6 {
+            top: 65PX;
+            left: 0px;
+            width: 97%;
+            height: 95px;
+        }
+        .boxInst {
+            position: absolute;
+            top: 299px;
+            left: 908px;
+        }
+        
+        .banner-img {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 1085px;
+            height: 190px;
+            background: url('pages/images/Topic01/T01P01/module_objective_banner.png') no-repeat;
+            background-size: cover;
+            background-color: #ffffff;
+        }
+        
+        .headerTopRight {
+            position: absolute;
+            top: 12px;
+            left: 210px;
+            color: #FFFFFF;
+            font-size: 22px;
+            font-family: OpenSansSemiBold;
+        }
+        
+        .headerTopRight span {}
+        
+        .headerTopRight img.sugar_and_safe_care {}
+        .pg-pageContent{
+            height: 96%;
+        }
+        .ul-margin{          
+            margin-top: 4px;
+            margin-bottom: 0px;
+            margin-left: -5.4%;
+        }
+    </style>
+
+    <script>
+        var audioPath = "pages/audio/Topic01/T01P01/T01P01";
+
+
+
+        var currCue = 0;
+
+        var idd = 0;
+
+
+
+        var updateContentArray = [
+
+            {
+                time: "0.1",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "By the end of this module, you will be able to:<ul class='ul-margin'><li>Identify why neonates are more vulnerable to infection than older infants and children,</li><li> Describe the clinical signs of infection,</li><li> Identify bacterial and viral organisms that may infect neonates, </li><li>Identify perinatal and postnatal risk factors that predispose infants to infection, </li><li>Explain white blood cell development and how to calculate and interpret the immature-to-total ratio, and lastly,</li><li>Identify the usual antibiotics that are started to treat an infection.</li></ul><div>Click Next to continue.</div>",
+                animation: [{
+                    target: ".clsBG",
+                    duration: "3.0",
+                    activity: {
+                        'width': '1086px',
+                        'left': '0px'
+                    }
+                }]
+            },
+
+            {
+                time: "3.0",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "",
+                animation: [{
+                    target: "#box1",
+                    duration: "0.5",
+                    activity: {
+                        'opacity': '1'
+                    }
+                }, {
+                    target: "#idIcon01",
+                    duration: "0.5",
+                    activity: {
+                        'opacity': '1'
+                    }
+                }, {
+                    target: "#idText1",
+                    duration: "0.5",
+                    activity: {
+                        'opacity': '1'
+                    }
+                }]
+            },
+
+            {
+                time: "12",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "",
+                animation: [{
+                    target: "#box2",
+                    duration: "0.5",
+                    activity: {
+                        'opacity': '1'
+                    }
+                }, {
+                    target: "#idIcon02",
+                    duration: "0.5",
+                    activity: {
+                        'opacity': '1'
+                    }
+                }, {
+                    target: "#idText2",
+                    duration: "0.5",
+                    activity: {
+                        'opacity': '1'
+                    }
+                }]
+            },
+
+
+
+            {
+                time: "7.5",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "",
+                animation: [{
+                    target: "#box3",
+                    duration: "0.5",
+                    activity: {
+                        'opacity': '1'
+                    }
+                }, {
+                    target: "#idIcon03",
+                    duration: "0.5",
+                    activity: {
+                        'opacity': '1'
+                    }
+                }, {
+                    target: "#idText3",
+                    duration: "0.5",
+                    activity: {
+                        'opacity': '1'
+                    }
+                }]
+            },
+
+
+
+            {
+                time: "14.8",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "",
+                animation: [{
+                    target: "#box4",
+                    duration: "0.5",
+                    activity: {
+                        'opacity': '1'
+                    }
+                }, {
+                    target: "#idIcon06",
+                    duration: "0.5",
+                    activity: {
+                        'opacity': '1'
+                    }
+                }, {
+                    target: "#idText4",
+                    duration: "0.5",
+                    activity: {
+                        'opacity': '1'
+                    }
+                }]
+            },
+
+
+
+            {
+                time: "19",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "",
+                animation: [{
+                    target: "#box5",
+                    duration: "0.5",
+                    activity: {
+                        'opacity': '1'
+                    }
+                }, {
+                    target: "#idIcon04",
+                    duration: "0.5",
+                    activity: {
+                        'opacity': '1'
+                    }
+                }, {
+                    target: "#idText5",
+                    duration: "0.5",
+                    activity: {
+                        'opacity': '1'
+                    }
+                }]
+            },
+            {
+                time: "27",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "",
+                animation: [{
+                    target: "#box6",
+                    duration: "0.5",
+                    activity: {
+                        'opacity': '1'
+                    }
+                }, {
+                    target: "#idIcon05",
+                    duration: "0.5",
+                    activity: {
+                        'opacity': '1'
+                    }
+                }, {
+                    target: "#idText6",
+                    duration: "0.5",
+                    activity: {
+                        'opacity': '1'
+                    }
+                }]
+            }
+
+        ];
+
+        function fnAudioFinishItemComp() {
+
+            fnAudioFinishPageComp();
+
+            fnUpdatePageCompletionCounter(0);
+
+        }
+
+
+
+        $(document).ready(function() {
+
+            disableNextBtn();
+
+            console.log(gCompPageArr);
+
+            //var checkVal = isInArray("M1L0T1P1",gCompPageArr);
+
+            //console.log(checkVal);			
+
+            var n = isInArray("M1L0T1P1", gCompPageArr);
+
+            if (n == true) {
+
+                enableNextBtn();
+
+                //fnGlowNextBtn();
+
+                fnDesiableNext(false);
+
+            }
+
+
+
+            var ele = document.getElementsByTagName('div');
+
+            for (var i = 0; i < ele.length; i++) {
+
+                ele[i].setAttribute("unselectable", "on");
+
+            }
+
+            //setTimeout(function(){ fInitClickAndDisplay(); }, 300);
+
+        });
+
+        function fnOnAudioComplete() {
+
+            if (gAudioId == "startAudio") {
+
+                enableNextBtn();
+
+                $(".boxInst").show()
+                fnAudioFinishItemComp();
+                audioStop();
+
+            }
+
+        }
+
+
+
+        function isInArray(value, array) {
+
+            return array.indexOf(value) > -1;
+
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <div class="pg-pageContent" UNSELECTABLE="on">
+
+        <div class="mainContainer">
+
+            <div class="banner-img"></div>
+
+            <div class="clsCircle" id="idCircle01"></div>
+
+            <div class="icon-container">
+                <div class="boxAlignwrapper">
+                <div id="box1">
+
+                    <div class="clsIcon" id="idIcon01"></div>
+
+                    <div class="clsText" id="idText1">Identify why neonates are more vulnerable to infection than older infants and children.</div>
+
+                </div>
+                <div id="box3">
+
+                    <div class="clsIcon" id="idIcon03"></div>
+
+                    <div class="clsText" id="idText3">Describe the clinical signs of infection.</div>
+
+                </div>
+                <div id="box2">
+
+                    <div class="clsIcon" id="idIcon02"></div>
+
+                    <div class="clsText" id="idText2">Identify bacterial and viral organisms that may infect neonates.</div>
+
+                </div>               
+
+                <div id="box4">
+
+                    <div class="clsIcon" id="idIcon06"></div>
+
+                    <div class="clsText" id="idText4">Identify perinatal and postnatal risk factors that predispose infants to infection.</div>
+
+                </div>
+
+
+
+                <div id="box5">
+
+                    <div class="clsIcon" id="idIcon04"></div>
+                    
+                    <div class="clsText" id="idText5">Explain how to interpret a complete blood count and how to calculate and interpret the absolute neutrophil count and immature to total ratio.
+                    </div>
+
+                </div>
+
+                <div id="box6">
+
+                    <div class="clsIcon" id="idIcon05"></div>
+
+                    <div class="clsText" id="idText6">Identify the usual antibiotics that are started to treat an infection.
+                    </div>
+
+                </div>
+
+
+                <div class="boxInst">
+
+                    <div class="instNextClick"></div>
+
+                    <div class="next_click"><em> Click Next to continue.</em></div>
+
+                </div>
+</div>
+            </div>
+
+        </div>
+        <!-- <div class="mainContainer">
+
+            <div class="banner-img"></div>
+
+            <div class="clsCircle" id="idCircle01"></div>
+
+            <div class="icon-container">
+
+                <div id="box1">
+
+                    <div class="clsIcon" id="idIcon01"></div>
+
+                    <div class="clsText" id="idText1">Identify why neonates are more vulnerable to infection than older infants and children.</div>
+
+                </div>
+
+                <div id="box2">
+
+                    <div class="clsIcon" id="idIcon02"></div>
+
+                    <div class="clsText" id="idText2">Identify bacterial and viral organisms that may infect neonates.
+                    </div>
+
+                </div>
+
+
+
+                <div id="box3">
+
+                    <div class="clsIcon" id="idIcon03"></div>
+
+                    <div class="clsText" id="idText3">Describe the clinical signs of infection.</div>
+
+                </div>
+
+                <div id="box4">
+
+                    <div class="clsIcon" id="idIcon06"></div>
+
+                    <div class="clsText" id="idText4">Identify perinatal and postnatal risk factors that predispose infants to infection.</div>
+
+                </div>
+
+
+
+                <div id="box5">
+
+                    <div class="clsIcon" id="idIcon04"></div>
+
+                    <div class="clsText" id="idText5">Explain how to interpret a complete blood count and how to calculate and interpret the absolute neutrophil count and immature to total ratio.
+                    </div>
+
+                </div>
+
+                <div id="box6">
+
+                    <div class="clsIcon" id="idIcon05"></div>
+
+                    <div class="clsText" id="idText6">Identify the usual antibiotics that are started to treat an infection.
+                    </div>
+
+                </div>
+
+                <div class="boxInst">
+
+                    <div class="instNextClick"></div>
+
+                    <div class="next_click"><em> Click Next to continue.</em></div>
+
+                </div>
+
+            </div>
+
+        </div> -->
+
+    </div>
+
+</body>
+
+</html>

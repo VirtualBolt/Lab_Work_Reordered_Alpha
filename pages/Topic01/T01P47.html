@@ -1,0 +1,1021 @@
+<!DOCTYPE HTML>
+
+<html>
+
+
+
+<head>
+
+    <title></title>
+
+<style>
+	 /* Sliding entrances */
+@-webkit-keyframes slideInDown {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInDown {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__slideInDown {
+  -webkit-animation-name: slideInDown;
+  animation-name: slideInDown;
+}
+@-webkit-keyframes slideInLeft {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInLeft {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__slideInLeft {
+  -webkit-animation-name: slideInLeft;
+  animation-name: slideInLeft;
+}
+@-webkit-keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(50%, 0, 0);
+    transform: translate3d(50%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(50%, 0, 0);
+    transform: translate3d(50%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__slideInRight {
+  -webkit-animation-name: slideInRight;
+  animation-name: slideInRight;
+}
+@-webkit-keyframes slideInUp {
+  from {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInUp {
+  from {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__slideInUp {
+  -webkit-animation-name: slideInUp;
+  animation-name: slideInUp;
+}
+
+.rightCnt{width:35%;position:absolute;right:0;padding-left:15px;top:116px;display:none;}
+.informationRight{display:block}
+.information span{font-weight:400}
+.marginTop{top:40px}
+.bottomTxt{position:absolute;bottom:5px;right:15px}
+.cSubmitBtn{background:#ACACAC;font-family:OpenSansRegular;font-size:18px;padding:5px 15px;text-transform:lowercase;color:#fff;border-radius:5px;border-radius:5px;-webkit-border-radius:5px;-moz-border-radius:5px;text-transform:capitalize;line-height:21px;border:2px solid transparent}
+.cSubmitBtn.enable:hover{border:2px solid #707070;background:transparent;color:#5B5B5B}
+.cSubmitBtn.active{background:#5B5B5B;color:#fff;cursor:pointer}
+.cSubmitBtn.active:hover{border:2px solid #707070;background:#fff;color:#000}
+/* .QuestionPanel1_2{position:absolute;left:25px;top:80px;width:740px;font-size:16px;opacity:1;font-weight:700} */
+.leftBottom{position:relative;height:252px}
+.leftBottom h3{padding:0;margin:0;position:relative;top:12px;text-align:center;font-family:OpenSansSemiBold;font-size:20px;color:#000;padding-bottom:26px}
+.headingBlue{padding-left:20px;color:#3A5569;font-family:OpenSansSemiBold;font-size:16px;padding-bottom:0;margin-bottom:0}
+.sectiontxt{font-family:OpenSansSemiBold;padding-left:20px;padding-bottom:10px;font-size:18px;color:#000}
+	.mainContainer {position: absolute;width: 100%;height: 545px;left: 0px;top: 0px;opacity: 1;}
+	.clsTabPopup{position:absolute;width:1085px;height:540px;top:0;left:0}
+	.sectionTop{position:absolute;top:0;height:30px;width:100%;padding:16px 0}
+	.sectionContent{position:absolute;top:14px;height:507px;width:1055px;left:15px;right:15px; color:#000}
+	.topImgCnt{position:relative}
+	.small_expand{	
+        background: url(pages/images/Topic01/T01P22/small_expand.svg) !important;	
+            position: absolute;	
+            cursor: pointer;	
+            width: 29px;	
+            height: 29px;	
+            bottom: 22px;	
+            right:17px;	
+            background-position: 0px 0;	
+          	
+            background-size: cover !important;	
+            background-repeat:no-repeat ;	
+            display:none;
+            opacity: .6;	
+    }
+    .small_expand:hover{
+        opacity: 1;
+    }	
+    .closepopup{	
+    position: absolute;	
+            width: 41px;	
+            height: 41px;	
+            background: url(pages/images/Topic01/T01P22/close_expand.svg) no-repeat;	
+            bottom: 43px;	
+            right: 12px;	
+            cursor: pointer;	
+            z-index: 1000;       	
+           	opacity: .6;
+            background-position: 0px 0;	
+          	
+            background-size: cover !important;	
+            background-repeat:no-repeat ;	
+   }
+   .closepopup:hover{
+    opacity: 1;
+   }
+    .open_map{background:url(pages/images/Topic01/T01P47/small_expand.png) no-repeat!important;width:28px;height:28px!important;position:absolute!important;bottom:24px;right:10px;display:none;left:inherit!important;top:inherit!important;float:inherit!important;text-decoration:none!important;border-radius:inherit!important;margin-left:0!important;background-color:inherit!important;padding:0!important}
+	/* , */
+    .open_map:hover{background:url(pages/images/Topic01/T01P47/small_expand_hover.png) no-repeat!important}
+	.small_expand1{background:url(pages/images/Topic01/T01P47/small_expand.png) no-repeat!important;width:28px;height:28px!important;position:absolute!important;bottom:7px;right:10px;display:none;left:inherit!important;top:inherit!important;float:inherit!important;text-decoration:none!important;border-radius:inherit!important;margin-left:0!important;background-color:inherit!important;padding:0!important}
+	.small_expand1:hover{background:url(pages/images/Topic01/T01P47/small_expand_hover.png) no-repeat!important}
+	.open_map{right:33px;margin-top:2px}
+	.sectionLeft{height:98%;width:264px;background:#E0F6FB;box-shadow:0 1px 9px -4px rgba(0,0,0,0.75);-webkit-box-shadow:0 1px 9px -4px rgba(0,0,0,0.75);-moz-box-shadow:0 1px 9px -4px rgba(0,0,0,0.75);border-bottom-left-radius:7px;-webkit-border-bottom-left-radius:7px;-moz-border-bottom-left-radius:7px;border-top-left-radius: 20px;}
+	.sectionRight{width:790px;height:507px;top:0;position:absolute;left:264px}
+	.rightTop{height:42px;left:5px;position:relative}
+	.rightTop a{left:0;top:0;padding:0 65px;background:#fff;margin:0;position:relative;float:left;margin-left:-5px;font-family:OpenSansSemiBold;text-decoration:none;color:#000;height:42px;line-height:42px;border-top-right-radius:5px;-webkit-border-top-right-radius:5px;-moz-border-top-right-radius:5px;font-size:16px;cursor:default}
+	.sectionRight .assessmentShow a{cursor:default}
+	.rightTop a.active{border-top-right-radius:5px;-webkit-border-top-right-radius:5px;-moz-border-top-right-radius:5px;background:#3A5569;margin-right:0;z-index:10;color:#fff}
+	.rightTop a.active.cdefault{cursor:default}
+	.rightTop a.active:after,.rightTop a.active:before,.rightTop a.active:hover:before{top:98%;left:45%;border:solid transparent;content:" ";height:0;width:0;position:absolute;pointer-events:none}
+	.rightTop a.active:after,.rightTop a.active:hover:after{border-top-color:#3A5569;border-width:10px;margin-left:0}
+	.rightTop a.active:before,.rightTop a.active:hover:before{border-top-color:#3A5569;border-width:10px;margin-left:0}
+	.rightTop a.active:nth-child(2),.rightTop a.active:hover:nth-child(2){-webkit-border-top-left-radius:5px;border-top-left-radius:5px;-moz-border-top-left-radius:5px}
+	.rightTop a:nth-child(2){-webkit-border-top-left-radius:5px;border-top-left-radius:5px}
+	.sectionContentArea{background:#fff;height:426px;border-top-right-radius:5px;-webkit-border-top-right-radius:5px;-moz-border-top-right-radius:5px;border-bottom-right-radius:5px;-webkit-bottom-top-right-radius:5px;-moz-border-bottom-right-radius:5px}
+	
+	#topImgCnt1{background: url(pages/images/Topic01/T01P47/Jazmine_small.png) no-repeat top left; background-size:cover; height:255px; width:100%}
+	#imgPopup1 {background: url(pages/images/Topic01/T01P47/Jazmine_large.png) no-repeat; background-size:cover;}
+	
+	/*#case_study_popup .modalContent {width:65%; height:420px; border-radius:10px}
+	#case_study_popup .modalContent .modalinner{ padding:30px; position:relative}
+	#imgPopup0{ background-size:100% 100%; width:100%; height:360px}
+	#case_study_popup .modalContent .modalinner .modalclose{ position:absolute; top:5px; right:0px; width:30px; height:30px }
+	#case_study_popup .modalContent .modalinner .modalclose .modalcloseicon{background:url(pages/images/Topic01/T01P47/close-icon.png) no-repeat; background-size:24px 24px; width:24px; height:24px ; cursor:pointer}
+	#case_study_popup .modalContent .modalinner .modalclose .modalcloseicon:hover{background:url(pages/images/Topic01/T01P47/close-hover-icon.png) no-repeat; background-size:24px 24px; width:24px; height:24px }
+	#case_study_popup .closepopup{ display:none} 
+	#case_study_popup .modalTextBottom{ display:none}
+	#case_study_popup .popover.left-arrow{ display:none}*/
+	
+	.sectionContentArea{ padding:15px; line-height:18px;}
+	.information{ margin-top:10px}
+	.information, .qtext, .bullet li, .instructions{font-size:14px !important; line-height:18px;}
+	.instructions{font-size:14px !important;}
+	.options-radio{ margin-top:20px}
+	.iconlist{ margin:0px; padding:0px; list-style:none; width:90%}
+	.iconlist li{ position:relative; margin-bottom:3px; font-size:14px; line-height:22px; display: flex; flex-direction: row; align-items: center; padding-left:20px}
+	.iconlist li:before{ background:url(pages/images/Topic01/T01P47/bullet.png) no-repeat; left:0px; width:13px; height:13px; position:absolute; content:""; top:5px}
+	.iconlist li a{ color:#D7722C; cursor:pointer}
+	.error1{ margin:15px auto 0px; border:solid 2px #F6A87A; border-radius:5px; width:94%; position:relative}
+	.error1 .error1_inner{ position:relative; padding:10px; color:#000; font-size:12px; line-height:18px; font-weight:bold; padding-left:60px;display: flex; flex-direction: row; align-items: center;}
+	.error1 .error1_inner img{ position:absolute; width:35px; height:34px; left:10px; top:10px;}
+	.topImgtxt{ background:rgba(0, 0, 0, 0.1); position:absolute; bottom:0px; padding:10px; color:#000;font-size:14px; line-height:22px;}
+	ul.bullet{ padding:0px; padding-left:15px; margin-top:0px}
+	
+	.txt1{ font-size:16px; line-height:22px; margin:10px 0px}
+	
+	.sectionLeftBox{ position:relative; height:100%; padding:5px;width: 274px;}
+	.topImgboxinner{  border:double 6px #ccc; position:relative; height:100%}
+	.content2 .sectionRight .sectionContentArea{height: 265px; margin-top:100px}
+	.sectionContentAreainner{ width:80%; margin:20px 0px 0px 50px}
+	.sectionContentAreainner .contenttext{font-size:14px; line-height:20px; position:relative}
+	.sectionContentAreainner .contenttext2{ margin-top:30px}
+	#content1{ visibility:visible}
+	#list1, #list2, #list3, #list4, #list5, #error1, #txt1, #listd1,#listd2,#listd3, #listd4, #listd5,#listd6{visibility:hidden; opacity: 0;}
+	/*.small_expand{ display:block}*/
+	.poupdiv .modalContent{width:540px;  height:auto !important; padding:20px 18px; top:17%}
+		.poupdiv  .modalContent .heading{ color:#D7722C; font-size:18px; text-align:center}
+		.poupdiv  .modalContent .linenew{ height:2px; background:#D7722C; margin:5px auto;width:77%}
+	.poupdiv  .modalContent .desc{ color:#000; font-size:14px; text-align:left}
+	.poupdiv  .modalContent .desc ul{ text-align:left; padding: 0 20px;}
+	.poupdiv  .modalContent .desc ul li{ margin-bottom:5px}
+	.poupdiv .popupclose{ position: absolute; top:10px; right:10px}
+	.poupdiv .popupclose img{ width:24px; height:24px; cursor:pointer}
+	.poupdiv .modalclose{ position:absolute; top:5px; right:0px; width:30px; height:30px }
+	.poupdiv .modalclose .modalcloseicon{background:url(pages/images/Topic01/T01P47/close-icon.png) no-repeat; background-size:24px 24px; width:24px; height:24px ; cursor:pointer}
+	.poupdiv .modalclose .modalcloseicon:hover{background:url(pages/images/Topic01/T01P47/close-hover-icon.png) no-repeat; background-size:24px 24px; width:24px; height:24px }
+	.link{ position:absolute; bottom:-30px}
+	.link a{font-size:14px; line-height:18px; color:#000; text-decoration:underline}
+	.link a:hover{ color:#D7722C}
+	.option [type="radio"]:checked + label, .option [type="radio"]:not(:checked) + label{font-size:14px;}
+	.table1{ margin:10px 0px}
+	.table1 tr{ height:40px;}
+	.table1 tr th{ padding:2px 5px; text-align: center; width:70px; color:#fff; font-size:14px; font-weight:500; background:#3A5569}
+	.table1 tr td{ padding:2px 5px; text-align: center; width:70px; font-size:12px; font-weight:500; background:#E0F6FB}
+	
+	/*.popover.clickToEnlarge{ display:block}*/
+	 /* .closepopup, */
+        .open_map_close {
+            position: absolute;
+            width: 92px;
+            height: 47px;
+            background: url(pages/images/Topic01/T01P22/close_expand_hover.png) no-repeat;
+            bottom: 30px;
+            right: -47px;
+            cursor: pointer;
+            z-index: 1000;
+            text-decoration: none;
+        }
+        
+        /* .closepopup:hover, */
+        .open_map_close:hover {
+            background: url(pages/images/Topic01/T01P02/close_expand_hover.png) no-repeat;
+        }
+        h4 {
+            margin: 4px;
+            padding: -3px;
+            font-size: 16px;
+        }
+
+        /*NEW CSS*/
+        .calculationBox .section{display:inline-block}
+        input.numberBox{width:51px;border:1px solid #d0d0d0;border-radius:5px;padding:7px 10px}
+        .inputwrapper .wrong{background:url(pages/images/Topic01/T01P47/wrong.png) no-repeat}
+        .inputwrapper .correct{background:url(pages/images/Topic01/T01P47/correct.png) no-repeat}
+        .section_top{padding-bottom:10px;border-bottom:1px solid #666;margin-bottom:10px}
+        .section_middle{top:-54px;position:relative;display: inline-block;}
+        .section .section_bottom span.action{position:relative;top:-30px}
+        .section span{display:inline-block;padding:2px}
+        .section{text-align:center}
+        .inputwrapper{display:inline-block}
+        .options-radio{padding:12px}
+        .inputwrapper label{font-size:14px}
+        span.tickmark{display:block;width:28px;height:26px;position:absolute;margin-left:54px;margin-top:-8px}
+        input:disabled{background:#f1f1f1}
+        .calculationBox.practice{width:60%;box-shadow:0 0 5px #d0d0d0;border-radius:5px;padding:15px 10px 15px 15px;margin-top:10px;display:inline-block;}
+        .cSubmitBtn[data-submit="correctCalculation"]{text-align:center;width:100px;display:none;left:70px;top:15px;position:relative}
+        .cSubmitBtn[data-submit="calculation"]{text-align:center;width:100px;display:inline-block;left:75px;top:15px;position:relative}	
+        
+        .correctBox .calculationBox.practice{position:relative;top:-170px;z-index:999}
+        .correctBox,.correctBox .calculationBox.practice .tickmark{display:none}
+        .correctBox .close{position:absolute;right:0;padding:0;font-size:25px;background:#d7722c;border-radius:35px;padding-top:1px;right:10px;top:7px;cursor:pointer;background:url(media/images/new/closebtn.png);width:28px;background-position:-5px;height:28px;-webkit-transition:all .3s;-o-transition:all .3s;transition:all .3s}
+        .correctBox .close:hover{background-position:33px}
+        /* .correctBox .close{position:absolute;right:0;padding:7px;font-size:25px;background:#d7722c;border-radius:35px;padding-top:1px;right:10px;top:7px;color:#fff;border:1px solid #d0d0d0;cursor:pointer} */
+        /*.correctBox .close:hover{background:#fff;color:#d7722c}*/
+        .openpopup{position:absolute;bottom:10px;border-bottom:1px solid;left:20px;cursor: pointer;}
+        .openpopup:hover{color:#d7722c}
+        .sectionBottom,.tagline{left:5px;position:relative}
+        .clickview_caseinfo{top: -65px;}
+        	.clickview_icon:hover{width: 45px;background-position: -48.5px 0px;}   
+        #case_study_popup .modalContent{width:575px;height:420px}
+        .ModalTextBottom{left:0;width:100%;border-bottom-left-radius:10px;border-bottom-right-radius:10px;text-align:center;padding:5px 10px}
+        .correct_title{font-size:16px;position:relative;font-family:'OpenSansSemiBold';top:-7px}
+        .sectionBottom, .tagline{opacity:0;}
+        .boxInst {
+  
+  
+  top: 489px;
+  left: 905px;
+  
+}
+.right_63{
+    right: 63px;
+}
+        </style>
+
+</head>
+
+
+
+<body>
+
+
+    <div class="pg-pageContent" UNSELECTABLE="on">
+        <div id="TabPopup5" class="clsTabPopup">
+            <div class="sectionContent">
+                <div class="sectionLeft">
+                    <div class="topImgCnt" id="topImgCnt1">
+                        <!-- <div class="clickToContinue expandImgTxtRight clickToEnlarge">Click to enlarge image.</div> -->
+                        <div class="popover left-arrow clickToEnlarge">
+                            <div class="arrow" style="top: 50%;"></div>
+                            <div class="popover-content">Click to enlarge image.</div>
+                        </div>
+                        <a href="javascript:void(0);" title="Click to enlarge image" class="small_expand zoom_btn" click_id="1">&nbsp;</a>
+                    </div>
+
+                    <div class="leftBottom">
+                        <h3>Baby Jazmine</h3>
+                        <div class="headingBlue">BORN AT</div>
+                        <div class="sectiontxt">36 weeks gestation</div><br>
+                        <div class="headingBlue">WEIGHT</div>
+                        <div class="sectiontxt">2.8 kg</div>
+                    </div>
+					<div class="clickview_caseinfo">
+                            <!-- <div class="clickview_text">Click to view case information</div> -->
+                            <div class="popover left-arrow right_63">
+                                <div class="arrow" style="top: 50%;" ></div>
+                                <div class="popover-content">Click to view case information</div>
+                            </div>
+                            <a class="clickview_icon popup" aid="1" href="javascript:void(0);" title="Click to view case information">&nbsp;</a>
+                        </div>                    
+                </div>
+
+                <div class="sectionRight">
+                    <div class="firstShow">
+                        <div class="rightTop">
+                            <a href="javascript:void(0);" class="tabClick active" title="Case Information" rel="Case">Case Information</a>
+                        </div>
+
+                        <div class="sectionContentArea">
+                            <section class="QuestionPanel1_2 clsPanel" id="Labor">
+                                <h4>CBC RESULTS</h4>
+                                <div class="leftCnt">
+                                    <div class="information">
+                                        
+										<table class="table1">
+											<tr>
+												<th>WBC (K/uL) <br>9&ndash;30</th>
+												<th>Hgb (g/dL)<br>13.5&ndash;16.5</th>
+												<th>Hct (%) <br>42&ndash;51</th>
+												<th>Platelet (K/uL) <br>242&ndash;378</th>
+												<th>Neutro - phil (%) <br>59</th>
+												<th>Bands neutro - phil (%) <br>0</th>
+												<th>Metas (%) <br>0</th>
+												<th>Lympho - cyte (%) <br>31</th>
+												<th>Monos (%) <br>0&ndash;6</th>
+												<th>Basos (%) <br>0&ndash;2</th>
+												<th>Eos (%) <br>0&ndash;2</th>
+											</tr>
+											<tr>
+												<td>5.6</td>
+												<td>14.7</td>
+												<td>44</td>
+												<td>270</td>
+												<td>28</td>
+												<td>18</td>
+												<td>2</td>
+												<td>44</td>
+												<td>6</td>
+												<td>&mdash;</td>
+												<td>2</td>
+											</tr>
+										</table>
+										<h4>What is the I/T ratio?</h4>
+										<em class="tagline">Enter the values in the fields provided below and click the Submit button.</em>
+                                    </div>
+                                    <div class="sectionBottom">
+                                        <div class="calculationBox practice">
+                                            <div class="section">
+                                                <div class="section_top">
+                                                    <div class="inputwrapper">
+                                                        <label>Metas</label><br>
+                                                        <span class="tickmark"></span>
+                                                        <input type="number" class="numberBox calculate" name="metas_top" value="0">
+                                                    </div>
+                                                    <span class="action">+</span>
+                                                    <div class="inputwrapper">
+                                                        <label>Bands</label><br>
+                                                        <span class="tickmark"></span>
+                                                        <input type="number" class="numberBox calculate" name="bands_top" value="0">
+                                                    </div>
+                
+                                                </div>
+                                                <div class="section_bottom">
+                
+                                                    <div class="inputwrapper">
+                                                        <span class="tickmark"></span>
+                                                        <input type="number" class="numberBox calculate" name="metas_bottom"
+                                                            value="0"><br>
+                                                        <label>Metas</label>
+                                                    </div>
+                                                    <span class="action">+</span>
+                                                    <div class="inputwrapper">
+                                                        <span class="tickmark"></span>
+                
+                                                        <input type="number" class="numberBox calculate" name="bands_bottom"
+                                                            value="0"><br>
+                                                        <label>Bands</label>
+                                                    </div>
+                                                    <span class="action">+</span>
+                                                    <div class="inputwrapper">
+                                                        <span class="tickmark"></span>
+                
+                                                        <input type="number" class="numberBox calculate" name="segs_bottom"
+                                                            value="0"><br>
+                                                        <label>Segs</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="section">
+                                                <div class="section_middle">
+                                                    =
+                                                </div>
+                                            </div>
+                                            <div class="section">
+                                                <div class="section_top">
+                                                    <div class="inputwrapper">
+                                                        <label style="visibility: hidden">Metas</label><br>
+                                                        <span class="tickmark"></span>
+                                                        <input type="number" class="numberBox" name="top_sum" disabled value="0">
+                                                    </div>
+                                                </div>
+                                                <div class="section_bottom">
+                                                    <div class="inputwrapper">
+                                                        <span class="tickmark"></span>
+                                                        <input type="number" class="numberBox" name="bottom_sum" disabled value="0"><br>
+                                                        <label style="visibility: hidden">Segs</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="section">
+                                                <div class="section_middle">
+                                                    =
+                                                </div>
+                                            </div>
+                                            <div class="section">
+                                                <div class="section_middle">
+                                                    <div class="inputwrapper">
+                                                        <span class="tickmark"></span>
+                                                        <input type="number" class="numberBox" name="final_total" disabled value="0">
+                                                    </div>
+                                                </div>
+                                            </div>
+                
+                                        </div>
+                                        <div class="correctBox"></div>
+                                        <div class="cSubmitBtn" data-submit="correctCalculation">Correct Calculation</div>
+                                        <div class="cSubmitBtn" data-submit="calculation">Submit</div>
+                                    </div>
+                                </div>
+
+                                <!-- <div class="openpopup popup">Click here to review the maternal and labor/delivery history.</div> -->
+                                
+                            </section>
+							
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="modal" id="case_study_popup">
+                <div class="modalContent" unselectable="on">
+					<div class="modalinner">
+						<div class="modalclose" ><div class="modalcloseicon"></div></div>
+						<div class="modalTxtImg" unselectable="on"></div>
+						<div class="modalTextBottom" unselectable="on">Baby Jazmine</div>
+						<a class="closepopup zoom_close_btn" href="javascript:void(0)" title="Click to Close"></a>
+						<!-- <div class="clickToContinue expandImgTxtRight clickToClose">Click to Close</div> -->
+						<div class="popover left-arrow">
+							<div class="arrow" style="top: 50%;"></div>
+							<div class="popover-content">Click to close image.</div>
+						</div>
+					</div>
+                </div>
+            </div>
+
+            <!-- <div class="modal poupdiv" id="popup">
+				<div class="modalContent" unselectable="on">
+					<div class="popupclose modalclose" ><div class="modalcloseicon"></div></div>
+					<div class="desc">
+						<ul>
+							<li>Mother reported leaking of amniotic fluid for the past week and concern for vaginal discharge</li>
+							<li>Onset of labor 6 hours before admission. </li>
+							<li>Fetal heart tracing: Category 1 (normal tracing and normal fetal heart rate and variability)</li>
+							<li>Highest intrapartum maternal temperature 37.5°C</li>
+							<li>No broad spectrum antibiotics given to mother before delivery</li>
+							<li>Spontaneous rupture of membranes at delivery, amniotic fluid foul-smelling</li>
+							<li>Vaginal delivery </li>
+							<li>Apgar scores: 7 (at 1 minute), 9 (at 5 minutes)</li>
+						</ul>
+					</div>
+				</div>
+			</div> -->
+
+        </div>
+
+    </div>
+
+    <!--- Main Container--->
+
+    <div class="boxInst">
+        <div class="instNextClick"></div>
+        <div class="next_click"><em> Click Next to continue.</em></div>
+    </div>
+    </div>
+
+    <script>
+	manifest = [{
+        src: 'pages/images/Topic01/T01P02/img2.png',
+        id: '1'
+    },
+
+    {
+        src: 'pages/images/Topic01/T01P02/image_02_small.png',
+        id: '2'
+    },
+
+    {
+        src: 'pages/images/Topic01/T01P02/small_graph.png',
+        id: '3'
+    },
+];
+
+
+
+var audioPath = "pages/audio/Topic01/T01P47/T01P47";
+var gItemAudioPath = [ "pages/audio/Topic01/T01P47/T01P47_incorrect", "pages/audio/Topic01/T01P47/T01P47_correct", "pages/audio/Topic01/T01P47/T01P47_tryagain"];
+clickViewMoreInfo();
+var currCue = 0;
+var idd = 0;
+var __curState = 0;
+var clickTabCount = 0;
+var clickTabCount1 = 0;
+
+var updateContentArray = [
+
+    { time: "0.0", carry: "", event: "", show: "", hide: "", transcript: "The complete blood count (CBC) obtained when Baby Jazmine was 2 hours old is now available for interpretation. Based on this CBC, you will answer a series of questions to interpret what these results mean for Baby Jazmine. Let’s begin by calculating the immature-to-total (I/T) ratio." },
+    {
+        time: "0.0", carry: "", event: "",   show: "",  hide: "",    
+		transcript: "",
+        animation: [{ target: ".topImgCnt", duration: "0.5", activity: { 'opacity': '1', 'display': 'block' } }]
+    },
+    {
+        time: "0.0",   carry: "", event: "",   show: "",  hide: "",
+        transcript: "",
+        animation: [{ target: ".rightCnt", duration: "0.5", activity: { 'opacity': '1', 'display': 'block' } }]
+    },
+    {
+        time: "4",   carry: "", event: "",   show: "",  hide: "",
+        transcript: "",
+        animation: [
+            { target: ".tagline", duration: "0.5", activity: { 'opacity': '1'  } },
+            { target: ".sectionBottom", duration: "0.5", activity: { 'opacity': '1'  } }
+        ]
+        
+    }
+];
+
+      
+  var updateContentArray2 = [{
+      time: "0",
+      carry: "",
+      event: "",
+      show: "",
+      hide: "",
+      transcript: "Please try again."
+  }];
+  var updateContentArray0 = [{
+      time: "0",
+      carry: "",
+      event: "",
+      show: "",
+      hide: "",
+      transcript: "Here is some feedback on your response. The immature-to-total (I/T) ratio is 0.42. </br>Click Next to continue."
+  }, {
+      time: "7",
+      carry: "",
+      event: "",
+      show: "",
+      hide: "",
+      transcript: "",
+      animation: [{
+          target: ".boxInst",
+          duration: "0.5",
+          activity: {
+              'display': 'block'
+          }
+      }]
+  }];
+  var updateContentArray1 = [{
+      time: "0.0",
+      carry: "",
+      event: "",
+      show: "",
+      hide: "",
+      transcript: "That is correct. </br>Click Next to continue."
+      // transcript: "Thank you for stabilizing Baby Jazmine. You will be providing care for her later in this module. Let’s now return to the Lab Work module."
+  }, {
+      time: "2.0",
+      carry: "",
+      event: "",
+      show: "",
+      hide: "",
+      transcript: "",
+      animation: [{
+          target: ".boxInst",
+          duration: "0.5",
+          activity: {
+              'display': 'block'
+          }
+      }]
+  }];
+    
+function fnAudioFinishItemComp() {
+    fnAudioFinishPageComp();
+}
+
+var __dataXml;
+
+var audplayer = document.getElementById('audioplayer');
+
+$(document).ready(function() {
+    //bindClickableHotspot();
+    disableNextBtn();
+    var ele = document.getElementsByTagName('div');
+    for (var i = 0; i < ele.length; i++) {
+        ele[i].setAttribute("unselectable", "on");
+    }
+    var n = isInArray("M1L0T1P47", gCompPageArr);
+    if (n == true) {
+        enableNextBtn();
+        fnDesiableNext(false)
+    }
+
+
+    $(document).on('click', '.clickview_icon', function(e) {
+        e.preventDefault();
+
+        // alert("here...")
+        //if (isActive(this))
+        fnLoadCaseInformation($(this));
+    });    
+});
+
+function audioReset() {
+    gAudioId = "";
+    onTimelineEnd();
+}
+
+function isInArray(value, array) {
+    return array.indexOf(value) > -1;
+}
+
+
+function fnPlaySectionAudio(gCurrentIndex) {
+    indexAudio = (gCurrentIndex);
+    audioId = "audio_" + gCurrentIndex;
+    gAudioId = audioId;
+    fnHideShowAudioPlayer(false);
+    updateContentArray = eval("updateContentArray" + (gCurrentIndex));
+    initAudioPlayer(gItemAudioPath[gCurrentIndex])
+}
+
+function fnCompletion() {
+    console.log("end");
+    var _getCount1 = clickTabCount + clickTabCount1;
+    console.log("start new");
+    enableNextBtn();
+    $('.boxInst').show()
+    fnAudioFinishItemComp();
+
+}
+
+function fnOnAudioComplete() {
+    if (gAudioId == "startAudio") {
+        console.log("start audio");
+        audplayer.pause();
+        audplayer.currentTime = 0;
+        $(".clickToEnlarge").show();
+        $(".small_expand").show();
+        $(".small_expand1").show();
+    } else {
+        fnCompletion();
+        enableNextBtn();
+        $('.boxInst').show();
+        $(".clickToEnlarge").show();
+        $(".small_expand").show();
+        $(".small_expand1").show();
+        gCompPageArr.push("M1L0T1P47");
+        fnAudioFinishItemComp();
+        audplayer.pause();
+        audplayer.currentTime = 0;
+    }
+
+}
+
+var correctOptions = [1];
+
+// function bindClickableHotspot() {
+//     console.log("clicked");
+//     $('.option').addClass('aactive'); //.css({ 'cursor': 'pointer' });
+//     $('.option').off().on('click', function() {
+// 		$('.option').removeClass('clicked');
+// 		$(this).addClass('clicked');
+// 		if ($('.option.clicked').length >= 1) {
+// 			$('.cSubmitBtn').addClass('active');
+// 			$('.cSubmitBtn.active').off().on('click', function() {
+// 				submitClick();
+// 			});
+// 		} else {
+// 			$('.cSubmitBtn').removeClass('active');
+// 		}
+//     });
+// }
+
+$('#topImgCnt2').hide();
+// function submitClick() {
+//     tinCanWrapper.sendStatementData("answered", "baby-conrad-postnatal-course", "Baby Conrad - Postnatal Course - Now take a look at Baby Conrad's vital signs shortly after birth. Are they normal or abnormal?");
+//     $('.cSubmitBtn.active').hide();
+//     console.log("clicked");
+//     enableNextBtn();
+//     fnDesiableNext(false);
+//     gCompPageArr.push("M1L0T1P47");
+//     var incorrectCount = 0; //, correctCount = 0;
+//     $('.option').each(function() {
+//         if ($(this).hasClass('clicked') && ($.inArray($(this).index(), correctOptions) == -1)) {
+//             $(this).addClass('wrong');
+//             incorrectCount++;
+//         }
+//         $(this).off(); //.removeClass('clicked');
+//     });
+
+//     $(correctOptions).each(function(i, val) {
+//         $('.option').eq(val).addClass('correct');
+//     });
+
+//     if (incorrectCount == 0) {
+//         fnPlaySectionAudio(0);
+//     } else {
+//         fnPlaySectionAudio(1);
+//     }
+//     $('.option').off().removeClass('aactive'); //.css({'cursor':'default'});
+//     $('.cSubmitBtn').removeClass('active');
+//     $('.informationRight').show();
+// }
+
+$(".small_expand").off().on("click", function() {
+    pauseAudio();
+    $("#TabPopup5 #case_study_popup.modal").show();
+    $("#TabPopup5 .sectionTop").addClass("blur");
+    $("#TabPopup5 .sectionContent").addClass("blur");
+    $(".modalTxtImg").attr('id', 'imgPopup' + $(this).attr('click_id'));
+    //$('.modalTextBottom').hide();
+   // $('#ModalTextBottom' + $(this).attr('click_id')).show();
+    //$('.modalContent').addClass('maxBot0');
+    //$('.modalContent').removeClass('maxBot');
+});
+
+$(".small_expand1").off().on("click", function() {
+    pauseAudio();
+    $("#TabPopup5 #case_study_popup.modal").show();
+    $("#TabPopup5 .sectionTop").addClass("blur");
+    $("#TabPopup5 .sectionContent").addClass("blur");
+    $('.boxInst').addClass("blur");
+    $(".modalTxtImg").attr('id', 'imgPopup' + $(this).attr('click_id'));
+    $('.modalTextBottom').hide();
+    $('#ModalTextBottom' + $(this).attr('click_id')).show();
+    $('.modalContent').addClass('maxBot');
+    $('.modalContent').removeClass('maxBot0');
+});
+
+$(".closepopup, .modalclose").off().on("click", function() {
+    playAudio();
+    $("#TabPopup5 .modal").removeAttr("style");
+    $("#TabPopup5 .sectionTop").removeClass("blur");
+    $("#TabPopup5 .sectionContent").removeClass("blur");
+    $('.boxInst').removeClass("blur");
+});
+
+// $(".popup").on("click", function() {
+// 	pauseAudio();
+// 	$("#TabPopup5 #popup").show();
+// 	$("#TabPopup5 .sectionTop").addClass("blur");
+// 	$("#TabPopup5 .sectionContent").addClass("blur");
+// });
+// $(".popupclose").on("click", function() {
+// 	playAudio();
+// 	$("#TabPopup5 #popup").removeAttr("style");
+// 	$("#TabPopup5 .sectionTop").removeClass("blur");
+// 	$("#TabPopup5 .sectionContent").removeClass("blur");
+// });
+function pauseAudio() {
+    if (!fnPauseAudio()) {
+        console.log(true);
+        fnPauseAudio()
+    } else {
+        playPauseAudio();
+        console.log(false);
+    }
+}
+
+function playAudio() {
+    if (!fnPauseAudio()) {
+        console.log(true);
+        playPauseAudio();
+    }
+}
+
+
+$('.numberBox.calculate').on('keyup change', function () {
+    var anyZero = false;
+    var userValues = {};
+    $('.numberBox.calculate').each(function (i) {
+        var value = $(this).val() ? parseFloat($(this).val()) : 0;
+        userValues[$(this).attr('name')] = value;
+        if (value == 0) {
+            anyZero = true;
+        }
+    });
+    var top_total = userValues['metas_top'] + userValues['bands_top'];
+    $('.practice .numberBox[name="top_sum"]').val(top_total);
+
+    /* bottom sum*/
+    var bottom_total = userValues['metas_bottom'] + userValues['bands_bottom'] + userValues['segs_bottom'];
+    $('.practice .numberBox[name="bottom_sum"]').val(bottom_total);
+
+    /* Final sum*/
+    var final_total = (top_total / bottom_total).toFixed(2);
+    $('.practice .numberBox[name="final_total"]').val(parseFloat(final_total));
+    /*SUBMIT*/  
+    if (!anyZero) {
+        $('.cSubmitBtn[data-submit="calculation"]').addClass('active');
+        $('.cSubmitBtn[data-submit="calculation"].active').off().on('click', function () {
+            var anyZero = false;
+
+            $('.numberBox.calculate').each(function (i) {
+                var value = $(this).val() ? parseFloat($(this).val()) : 0;
+                if (value == 0) {
+                    anyZero = true;
+                }
+            });
+            if (!anyZero) {
+                //$('.boxInst').show()
+                enableNextBtn();
+                fnDesiableNext(false);
+                gCompPageArr.push("M1L0T1P47");
+                var itration = {
+                    'metas_top': 2,
+                    'bands_top': 18,
+                    'metas_bottom': 2,
+                    'bands_bottom': 18,
+                    'segs_bottom': 28,
+                    'top_sum': 20,
+                    'bottom_sum': 48,
+                    'final_total': 0.42
+                };
+                $('.numberBox.calculate').prop('disabled', true);
+                var anyWrong = false;
+                var userValues = {};
+                $('.numberBox.calculate').each(function (i) {
+                    var value = parseFloat($(this).val());
+                    userValues[$(this).attr('name')] = value;
+                    if (value == itration[$(this).attr('name')]) {
+                        $(this).parents('.inputwrapper').find('.tickmark').addClass('correct');
+                    } else {
+                        $(this).parents('.inputwrapper').find('.tickmark').addClass('wrong');
+                        anyWrong = true;
+                    }
+                });
+                /*top sum*/
+                var top_total = userValues['metas_top'] + userValues['bands_top'];
+                $('.practice .numberBox[name="top_sum"]').val(top_total);
+                if (top_total == itration['top_sum']) {
+                    $('.practice .numberBox[name="top_sum"]').parents('.inputwrapper').find('.tickmark').addClass('correct');
+                } else {
+                    $('.practice .numberBox[name="top_sum"]').parents('.inputwrapper').find('.tickmark').addClass('wrong');
+                }
+                /* bottom sum*/
+                var bottom_total = userValues['metas_bottom'] + userValues['bands_bottom'] + userValues['segs_bottom'];
+                $('.practice .numberBox[name="bottom_sum"]').val(bottom_total);
+                if (bottom_total == itration['bottom_sum']) {
+                    $('.practice .numberBox[name="bottom_sum"]').parents('.inputwrapper').find('.tickmark').addClass('correct');
+                } else {
+                    $('.practice .numberBox[name="bottom_sum"]').parents('.inputwrapper').find('.tickmark').addClass('wrong');
+                }
+                /* Final sum*/
+                var final_total = (top_total / bottom_total).toFixed(2);
+                $('.practice .numberBox[name="final_total"]').val(parseFloat(final_total));
+                if (final_total == itration['final_total']) {
+                    $('.practice .numberBox[name="final_total"]').parents('.inputwrapper').find('.tickmark').addClass('correct');
+                } else {
+                    $('.practice .numberBox[name="final_total"]').parents('.inputwrapper').find('.tickmark').addClass('wrong');
+                }
+                /*actions*/
+                if (anyWrong) {
+                    $('.calculationBox.correctAnswer').show();
+                    // $('.cSubmitBtn[data-submit="correctCalculation"]').css({ 'display': 'inline-block' }).addClass('active');
+                    $('.cSubmitBtn[data-submit="correctCalculation"]').trigger('click');
+                    fnPlaySectionAudio(0);
+                }else{
+                    fnPlaySectionAudio(1);
+                }
+                $('.left_bottom, .bottomTxt').css({ 'display': 'inline-block' });
+                //fnPlaySectionAudio(2);
+                $('.cSubmitBtn[data-submit="calculation"]').hide();
+            }
+        })
+
+    } else {
+        $('.cSubmitBtn[data-submit="calculation"]').removeClass('active');
+    }
+
+   
+    });
+    $('.cSubmitBtn[data-submit="correctCalculation"]').on('click', function(){
+        $('.correctBox').html('')
+        var itration = {
+            'metas_top': 2,
+            'bands_top': 18,
+            'metas_bottom': 2,
+            'bands_bottom': 18,
+            'segs_bottom': 28,
+            'top_sum': 20,
+            'bottom_sum': 48,
+            'final_total': 0.42
+        };        
+        $('.correctBox').show();
+        /*show poup*/
+        $('.correctBox').html($('.calculationBox.practice').clone());
+        $('.correctBox .calculationBox.practice').prepend('<div class="close"></div>');
+        $('.correctBox .calculationBox.practice').prepend('<div class="correct_title">Here is the correct I/T ratio.</h4>');
+        $('.calculationBox.practice').css({'visibility':'hidden'});
+        $('.correctBox .calculationBox.practice').css({'visibility':'visible'});
+        $('.tickmark').hide();
+        var objKeys = Object.keys(itration);
+        $.each(objKeys, function(i, val){
+            $('.correctBox').find('.numberBox[name="'+val+'"]').val(itration[val]);
+        });
+        $('.cSubmitBtn[data-submit="correctCalculation"]').hide();
+    });
+    $(document).on('click', '.correctBox .close', function(){
+        $('.calculationBox.practice').css({'visibility':'visible'});
+        $('.tickmark').removeClass('wrong');
+        $('.tickmark').removeClass('correct');
+        $('.tickmark').show();
+        $('.cSubmitBtn[data-submit="calculation"]').show();
+        $('.correctBox .calculationBox.practice').remove();
+        $('.correctBox').hide();
+        //$('.cSubmitBtn[data-submit="correctCalculation"]').show();
+        $('.numberBox.calculate').prop('disabled', false);
+    })
+    function fnLoadCaseInformation(aEvent) {
+        if ($("#clsGlosBtn").css("opacity") != 1) {
+            return
+        }
+        var _currentFile = '';
+        fnPauseAudio();
+        $(".HelpPopup").remove();
+        $("<div class='HelpPopup'></div><div class='bgHelpPopup'></div>").insertAfter('.gridContainer');
+        $(".bgHelpPopup").data("state", 0);
+        centerHelpPopup();
+        loadHelpPopup();
+        if (aEvent.attr("aid") == "1") {
+            _currentFile = 'elements/caseinfo/jazmine.html';
+        } else {
+            _currentFile = 'elements/caseinfo/concord.html';
+        }
+        $('.HelpPopup').load(_currentFile);
+        
+    }
+</script>
+
+</body>
+
+
+
+</html>

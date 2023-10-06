@@ -1,0 +1,1790 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link href="css/popupStyle.css" rel="stylesheet" type="text/css">
+    <title></title>
+    <script>
+        manifest = [{
+            src: 'pages/images/Topic01/T01P13/small_expand.png',
+            id: '1'
+        }, {
+            src: 'pages/images/Topic01/T01P13/small_expand_hover.png',
+            id: '2'
+        }, {
+            src: 'pages/images/Topic01/T01P13/T01P13_01.png',
+            id: '3'
+        }, {
+            src: 'pages/images/Topic01/T01P13/T01P13_01_largei.png',
+            id: '4'
+        }, {
+            src: 'pages/images/Topic01/T01P13/T01P13_02.png',
+            id: '5'
+        }, {
+            src: 'pages/images/Topic01/T01P13/T01P13_02_largei.png',
+            id: '6'
+        }, {
+            src: 'pages/images/Topic01/T01P13/T01P13_03.png',
+            id: '7'
+        }, {
+            src: 'pages/images/Topic01/T01P13/T01P13_03_largei.png',
+            id: '8'
+        }, {
+            src: 'pages/images/Topic01/T01P22/close_expand_hover.png',
+            id: '9'
+        }, {
+            src: 'pages/images/Topic01/T01P22/close_expand_hover.png',
+            id: '10'
+        }];
+    </script>
+
+
+    <style type="text/css">
+        .mainContainer {
+            /* position: absolute; */
+            width: 89%;
+            height: 460px;
+            margin-left: 62px;
+            top: 20px;
+            opacity: 1;
+        }
+
+        @-webkit-keyframes reducetime {
+            0% {
+                width: 0;
+            }
+
+            100% {
+                width: 100%;
+            }
+        }
+
+        @-webkit-keyframes zoomin {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.2);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes zoomin {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.2);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /*End of Zoom in Keyframes */
+        /* Zoom out Keyframes */
+
+        @-webkit-keyframes zoomout {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(0.67);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes zoomout {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(0.67);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /*End of Zoom out Keyframes */
+
+        .clsPatch {
+            position: absolute;
+            width: 94%;
+            border-radius: 5px;
+            position: relative;
+            top: 21px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .clsText {
+            position: absolute;
+            width: 95%;
+            left: 20px;
+            top: 16px;
+            font-size: 16px;
+            font-family: OpenSansRegular;
+            font-style: initial;
+        }
+
+        .ClsTab {
+            position: absolute;
+            width: 100%;
+            height: 20%;
+            z-index: 999;
+        }
+
+        .clsAllTabs {
+            width: 100%;
+            height: 82px;
+        }
+
+        .ClsTabItem {
+            position: relative;
+            cursor: pointer;
+            width: 274px;
+            height: 60px;
+            text-align: center;
+            line-height: 55px;
+            font-size: 18px;
+            font-family: OpenSansRegular;
+            border-radius: 5px;
+            background: #fcfcfc;
+            margin-left: 88px;
+            float: left;
+            top: 10px;
+            left: 0px;
+            cursor: pointer;
+        }
+
+        .ClsTabItem:hover {
+            background: #707070;
+            color: #FFFFFF;
+        }
+
+        #TabItem0 {
+            margin-left: 0;
+        }
+
+        /* #TabItem0,#TabItem1,#TabItem2{
+			display :none;
+		} */
+
+        .ClsImage0 {
+            position: absolute;
+            width: 215px;
+            height: 230px;
+            top: 205px;
+            background: #FFFFFF;
+            border-radius: 10px;
+            -webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            border-radius: 5px;
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            opacity: 0;
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            display: none;
+        }
+
+        div#introBox {
+            width: 362px;
+            /* margin: 0 auto; */
+            position: relative;
+            top: 72px;
+            left: 68px;
+            background: #fff;
+            height: 60px;
+            box-shadow: 0 0 5px #aaa;
+            border-radius: 5px;
+            z-index: 9;
+            opacity: 0;
+        }
+
+        div#introBox2 {
+            width: 375px;
+            /* margin: 0 auto; */
+            position: relative;
+            top: 60px;
+            left: 61px;
+            background: #fff;
+            height: 85px;
+            /* border-radius: 5px; */
+            background: url('pages/images/Topic01/T01P13/Group%202578.png') no-repeat;
+            background-size: contain;
+            background-position: top;
+            opacity: 0;
+        }
+
+        .mainImage {
+            position: absolute;
+            background: url('pages/images/Topic01/T01P13/img1.png') no-repeat;
+            background-size: 100% 100%;
+            width: 930px;
+            height: 290px;
+            left: 37px;
+            top: 225px;
+            display: none;
+        }
+
+        .subImage {
+            position: absolute;
+            background-size: 100% 100%;
+            top: 100px;
+            display: none;
+        }
+
+        #sub0 {
+            background: url('pages/images/Topic01/T01P13/EV01_02.png') no-repeat;
+            left: 35px;
+            height: 297px;
+        }
+
+        #sub1 {
+            background: url('pages/images/Topic01/T01P13/EV01_01.png') no-repeat;
+            left: 315px;
+            height: 331px;
+        }
+
+        #sub2 {
+            background: url('pages/images/Topic01/T01P13/EV01_03.png') no-repeat;
+            left: 750px;
+            height: 283px;
+        }
+
+        .ClsImage1 .imageDesc,
+        .ClsImage2 .imageDesc,
+        .ClsImage3 .imageDesc {
+            top: 155px;
+        }
+
+        .ClsImage1 {
+            position: absolute;
+            width: 215px;
+            height: 230px;
+            top: 205px;
+            background: #FFFFFF;
+            border-radius: 10px;
+            -webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            border-radius: 5px;
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            left: 260px;
+            opacity: 0;
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            display: none;
+            margin-left: 60px;
+        }
+
+        .ClsImage2 {
+            position: absolute;
+            width: 215px;
+            height: 212px;
+            top: 205px;
+            background: #FFFFFF;
+            border-radius: 10px;
+            -webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            border-radius: 5px;
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            left: 551px;
+            opacity: 0;
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            display: none;
+        }
+
+        .ClsImage3 {
+            position: absolute;
+            width: 215px;
+            height: 212px;
+            top: 205px;
+            background: #FFFFFF;
+            border-radius: 10px;
+            -webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            border-radius: 5px;
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            left: 782px;
+            opacity: 0;
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            display: none;
+        }
+
+        .clsSubImage {
+            position: relative;
+            /* width: 249px; */
+            height: 150px;
+            /* top: 11px; */
+            /* left: 12px; */
+            margin: 3px;
+            border-radius: 10px;
+        }
+
+        .subFirstImage {
+            position: absolute;
+            width: 100%;
+            border-radius: 4px;
+            height: 150px;
+        }
+
+        .subSecImage {
+            position: absolute;
+            width: 225px;
+            height: 320px;
+            left: 35px;
+            top: 15px;
+        }
+
+        #clsSub0 {
+            background: url('pages/images/Topic01/T01P13/T01P13_01.png') no-repeat;
+            background-size: cover;
+            background-position: top;
+            /* margin: 0 auto; */
+            top: 0px;
+            left: 0px;
+        }
+
+        /* #clsImg0{
+				background: url('pages/images/Topic01/T01P13/img_02_small.png') no-repeat;
+		    top: 185px;
+			} */
+
+        #clsSub1 {
+            background: url('pages/images/Topic01/T01P13/T01P13_02.png') no-repeat;
+            background-size: cover;
+            background-position: top;
+            /* margin: 0 auto; */
+            top: 0px;
+            left: 0px;
+        }
+
+        #clsSub2 {
+            background: url('pages/images/Topic01/T01P13/T01P13_03.png') no-repeat;
+            background-size: cover;
+            background-position: top;
+            /* margin: 0 auto; */
+            top: 0px;
+            left: 0px;
+        }
+
+        #clsSub3 {
+            background: url('pages/images/Topic01/T01P13/T01P13_04.png') no-repeat;
+            background-size: cover;
+            background-position: top;
+            /* margin: 0 auto; */
+            top: 0px;
+            left: 0px;
+        }
+
+        /* #clsImg1{
+				background: url('pages/images/Topic01/T01P13/img_03_small.png') no-repeat;
+		    top: 185px;
+			} */
+        /* .mapImg{
+				background: url('pages/images/Topic01/T01P13/small_graph.png') no-repeat;
+				width: 100%;
+			    height: 128px;
+			    position: relative;
+			    top: 14px;
+			} */
+
+        .expandMap {
+            position: relative;
+            top: 8px;
+        }
+
+        .expandMap .clickToEnlarge {
+            top: 2px;
+            left: 123px;
+        }
+
+        .expandMap .small_expand {
+            right: 37px;
+            margin-top: 2px;
+        }
+
+        .open_map_close {
+            top: 301px;
+            right: -38px !important;
+        }
+
+        .closepopup{
+            position: absolute;
+            width: 41px;
+            height: 41px;
+            background: url(pages/images/Topic01/T01P22/close_expand.svg) no-repeat;
+            bottom: 42px;
+            right: 9px;
+            cursor: pointer;
+            z-index: 1000;       
+            opacity: .6;
+            background-position: 0px 0;          
+            background-size: cover !important;
+            background-repeat:no-repeat ;
+        }
+        .open_map_close {
+            position: absolute;
+            width: 92px;
+            height: 47px;
+            background: url('pages/images/Topic01/T01P22/close_expand_hover.png') no-repeat;
+            bottom: 31px;
+            right: -50px;
+            cursor: pointer;
+            z-index: 1000;
+            text-decoration: none;
+        }
+        .closepopup:hover{
+            opacity: 1;
+        }
+
+        /*  {
+            background: url('pages/images/Topic01/T01P13/close_expand_hover.png') no-repeat;
+        } */
+
+        .closebutton {
+            position: absolute;
+            width: 92px;
+            height: 47px;
+            background: url('pages/images/Topic01/T01P22/close_expand_hover.png') no-repeat;
+            top: 5px;
+            right: -91.5px;
+            cursor: pointer;
+            z-index: 1000;
+            text-decoration: none;
+        }
+
+        .closebutton:hover {
+            background: url('pages/images/Topic01/T01P13/close_expand_hover.png') no-repeat;
+        }
+
+        #case_study_popup1>.caseStudyContent>.closebutton {
+            position: absolute;
+            width: 55px;
+            height: 56px;
+            background: url('pages/images/Topic01/T01P13/videClose.png') no-repeat;
+            top: 9px;
+            right: -50.5px;
+            cursor: pointer;
+            z-index: 1000;
+            text-decoration: none;
+        }
+
+        #case_study_popup1>.caseStudyContent>.closebutton:hover {
+            background: url('pages/images/Topic01/T01P13/videClose_hover.png') no-repeat;
+        }
+
+        /* #closeId0{
+			  left: 455px;
+			}
+			#closeClass0{
+			  left: 490px;
+			  background: url('pages/images/Topic01/T01P13/enlarge_text_inverted.png') no-repeat;
+			} */
+
+        .clickToClose {
+            width: 156px;
+            height: 42px;
+            top: 332px;
+            left: 456px;
+            position: absolute;
+            z-index: 10000;
+            line-height: 44px;
+            text-align: center;
+            font-size: 14px;
+            color: #4D667B;
+            background: url(pages/images/Topic01/T01P13/enlarge_text.png) no-repeat;
+            font-family: OpenSansRegular;
+            font-style: italic;
+        }
+
+        .videoToClose {
+            width: 160px;
+            height: 46px;
+            top: 10px;
+            left: 495px;
+            position: absolute;
+            z-index: 10000;
+            line-height: 38px;
+            text-align: center;
+            font-size: 14px;
+            background: url('pages/images/Topic01/T01P13/enlarge_text.png') no-repeat;
+            font-family: OpenSansRegular;
+        }
+
+        .small_expand{
+            background: url(pages/images/Topic01/T01P22/small_expand.svg) !important;
+            position: absolute;
+            cursor: pointer;
+            width: 29px;
+            height: 29px;
+            bottom: 3px;
+             right: 9px;
+            background-position: 0px 0;
+          
+            background-size: cover !important;
+            background-repeat:no-repeat ;
+            display:none;
+            opacity: .6;
+        }
+        .open_map {
+            background: url('pages/images/Topic01/T01P13/small_expand.png');
+            width: 28px;
+            height: 28px;
+            position: absolute;
+            right: 3px;
+            display: none;
+            top: 119px;
+            float: inherit;
+            text-decoration: none;
+            /* border-radius: inherit; */
+            margin-left: 0px;
+            background-color: inherit;
+            padding: 0px;
+            cursor: pointer;
+            opacity: 0;
+        }
+        .small_expand:hover{
+            opacity: 1;
+        }
+
+        /*  {
+            background: url('pages/images/Topic01/T01P13/small_expand_hover.png');
+        } */
+
+        section {
+            /* position: absolute; */
+            width: 100%;
+            height: 100%;
+        }
+
+        .Clsback {
+            position: relative;
+            width: 242px;
+            height: 335px;
+            top: 100px;
+            left: 33px;
+            margin-right: 91px;
+            float: left;
+            background: #FFFFFF;
+            border-radius: 5px;
+            display: none;
+        }
+
+        ._link {
+            position: absolute;
+            top: 440px;
+            height: 17px;
+            left: 35px;
+            font-size: 12px;
+            font-family: OpenSansRegular;
+            width: 456px;
+            display: none;
+            color: #4D667B;
+            font-weight: 700;
+            cursor: pointer;
+            border-bottom: 1px solid #4D667B;
+            font-style: initial;
+        }
+
+        .videolink {
+            position: absolute;
+            top: 465px;
+            left: 35px;
+            width: 480px;
+            font-size: 12px;
+            font-family: OpenSansRegular;
+            color: #4D667B;
+            font-weight: 700;
+            cursor: pointer;
+            font-style: initial;
+            display: none;
+        }
+
+        /* .subSeImage{
+				position: absolute;
+		    width: 161px;
+		    height: 161px;
+		    top: 20px;
+		    left: 38px;
+			} */
+
+        #subImg0 {
+            background: url('pages/images/Topic01/T01P13/EV01_11.png') no-repeat;
+        }
+
+        #subImg1 {
+            background: url('pages/images/Topic01/T01P13/EV01_12.png') no-repeat;
+        }
+
+        #subImg2 {
+            background: url('pages/images/Topic01/T01P13/EV01_13.png') no-repeat;
+        }
+
+        .subText {
+            position: absolute;
+            width: 210px;
+            height: 125px;
+            top: 200px;
+            left: 15px;
+            font-family: OpenSansRegular;
+            font-size: 14px;
+            font-style: initial;
+        }
+
+        .ClsTextTab {
+            position: absolute;
+            width: 68%;
+            height: 374px;
+            top: 0px;
+            left: 320px;
+            float: left;
+            /* background: #FFFFFF; */
+            border-radius: 5px;
+            /* display: none; */
+        }
+
+        .listcnt {
+            position: relative;
+            top: 24px;
+            /* padding-right: 20px; */
+            margin-bottom: 7px;
+            padding-bottom: 6px;
+            font-size: 14px;
+            border: 1px solid transparent;
+            width: 90%;
+            left: 15px;
+            display: none;
+        }
+
+        .arrowHolder {
+            position: absolute;
+            top: 8px;
+            width: 8px;
+            height: 8px;
+            background: #5B5B5B;
+            border-radius: 50%;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -khtml-border-radius: 50%;
+        }
+
+        .OptionCLSS {
+            position: relative;
+            left: 15px;
+            font-style: initial;
+            top: 1px;
+        }
+
+        .OptionCLSS>span {
+            font-size: 16px;
+            font-family: OpenSansRegular;
+        }
+
+        /* #one,#two,#three{
+		    transform: scale(0);
+			} */
+        /* .ClsTextTab > ul{
+			  list-style: none;
+		    line-height: 25px;
+			}
+
+			.ClsTextTab > ul >li{
+	      padding-bottom: 10px;
+				list-style-image: url('pages/images/Topic01/T01P13/bullet_point.png');
+		    width: 195px;
+			} */
+
+        #textTab1 {
+            width: 740px;
+            background: #ffffff00;
+            margin-right: 0;
+        }
+
+        .subTirImage {
+            position: relative;
+            top: 0px;
+            left: 17px;
+            width: 225px;
+            height: 225px;
+            margin-right: 22px;
+            float: left;
+            background: #FFFFFF;
+            border-radius: 5px;
+            display: none;
+        }
+
+        #clsTir0 {
+            background: url('pages/images/Topic01/T01P13/img_11_small.png') no-repeat;
+        }
+
+        #clsTir0>.small_expand {
+            top: 190px;
+            right: 5px;
+        }
+
+        #clsTir1 {
+            background: url('pages/images/Topic01/T01P13/img_12_small.png') no-repeat;
+        }
+
+        #clsTir1>.small_expand {
+            top: 190px;
+            right: 5px;
+        }
+
+        #clsTir2 {
+            background: url('pages/images/Topic01/T01P13/img_13_small.png') no-repeat;
+            margin-right: 0;
+        }
+
+        #clsTir2>.small_expand {
+            top: 190px;
+            right: 5px;
+        }
+
+        .clsSubPatch {
+            position: absolute;
+            width: 720px;
+            height: 90px;
+            top: 240px;
+            left: 17px;
+            display: none;
+            background: #FFFFFF;
+            border-radius: 5px;
+            -webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            border-radius: 5px;
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+        }
+
+        .clsSubText {
+            font-family: OpenSansRegular;
+            font-size: 14px;
+            font-style: initial;
+            width: 90%;
+            position: absolute;
+            padding: 23px 35px;
+        }
+
+        .clsActive {
+            background: #707070;
+            color: #FFFFFF;
+            pointer-events: none;
+        }
+
+        .CaseStudy {
+            position: absolute;
+            left: -15px;
+            top: 0px;
+            width: 103%;
+            height: 108%;
+            background: rgba(255, 255, 255, 255);
+            /* //IE: ;
+		    //background: rgba(255,255,255,0.98); */
+            transform: scale(1.1);
+            transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+            z-index: 1000;
+            disable: none;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -mz-border-radius: 5px;
+            display: none;
+        }
+
+        .caseStudyContent {
+            position: relative;
+            left: 0px;
+            top: 14px;
+            width: 650px;
+            height: 385px;
+            /* background: rgba(91,91,91, 1); */
+            transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+            z-index: 1000;
+            border-top-left-radius: 5px;
+            -webkit-border-top-left-radius: 5px;
+            -moz-border-top-left-radius: 5px;
+            -mz-border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            -webkit-border-bottom-right-radius: 5px;
+            -moz-border-top-right-radius: 5px;
+            -mz-border-top-right-radius: 5px;
+            margin: 0px auto;
+            /* border: 1px solid rgba(91,91,91, 1); */
+        }
+
+        .ModalTextBottom {
+            position: absolute;
+            bottom: 0px;
+            left: 10px;
+            width: 98%;
+            font-size: 14px;
+            height: 40px;
+            color: #ffffff;
+            font-family: OpenSansBold;
+            background: #5B5B5B;
+            text-align: center;
+            line-height: 42px;
+            display: none;
+            opacity: 0;
+        }
+
+        .modalTxtImg {
+            height: 355px;
+        }
+
+        .ModalTxtImg {
+            position: absolute;
+            top: 49px;
+            left: 0px;
+            width: 100%;
+            font-size: 14px;
+            height: 360px;
+            background-size: contain;
+            z-index: 100;
+            border-radius: 5px;
+        }
+
+        #imgPopup0 {
+            background: url('pages/images/Topic01/T01P13/T01P13_01_largei.png') no-repeat;
+            background-size: cover;
+            /* width: 650px;
+			    left: 15px; */
+        }
+
+        #imgPopup1 {
+            background: url('pages/images/Topic01/T01P13/T01P13_02_largei.png') no-repeat;
+            background-size: cover;
+            /* width: 650px;
+			    left: 15px; */
+        }
+
+        #imgPopup2 {
+            background: url('pages/images/Topic01/T01P13/T01P13_03_largei.png') no-repeat;
+            background-size: cover;
+            /* width: 650px;
+			    left: 15px; */
+        }
+
+        #imgPopup3 {
+            background: url('pages/images/Topic01/T01P13/T01P13_04_largei.png') no-repeat;
+            background-size: cover;
+            /* width: 650px;
+			    left: 15px; */
+        }
+
+        div#case_study_popup0 .modalContent,
+        div#case_study_popup1 .modalContent,
+        div#case_study_popup2 .modalContent,
+        div#case_study_popup3 .modalContent {
+            width: 528px;
+            height: 390px;
+        }
+
+        .pageclose_txt {
+            position: absolute;
+            width: 135px;
+            height: 44px;
+            top: 48px;
+            left: 800px;
+            background: url('media/images/player/common/pdf_close_inst.png');
+        }
+
+        #pageClsText {
+            position: absolute;
+            width: 115px;
+            height: 29px;
+            top: 15px;
+            left: 16px;
+            font-family: OpenSansRegular;
+            font-size: 16px;
+            font-style: italic;
+            color: #172430;
+        }
+
+        #pageRefCloseBtn_id {
+            position: absolute;
+            width: 29px;
+            height: 29px;
+            top: 7px;
+            left: 900px;
+            cursor: pointer;
+            background: url('media/images/player/common/close.png');
+            /* background-position: -49px 0px; */
+            -webkit-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+
+        #pageid_RefCloseBtn:hover #pageclose_txt {
+            background: url('media/images/player/common/pdf_close_inst.png');
+            /* background-position: 0px 0px; */
+        }
+
+        #pagereferences {
+            margin-left: 0%;
+            margin-top: 45px;
+            color: #333;
+            width: 800px;
+            min-height: 412px;
+            overflow-y: auto;
+            position: absolute;
+            height: 412px;
+        }
+
+        #pagereferences ul {
+            padding-top: 0%;
+            padding-bottom: 0%;
+            padding-left: 1%;
+            margin: 0px;
+            margin-top: 10px;
+        }
+
+       
+        #pagereferences ul li {
+            border: 0 none;
+            margin-left: -4px;
+            margin-right: 5px;
+            vertical-align: bottom;
+            width: 4%;
+        }
+
+        #closeMainDiv .glossaryclosetip {
+            margin-left: 70%;
+            color: #FFFFFF;
+            font-family: OpenSansRegular;
+            font-size: 79.2%;
+        }
+
+        .bullet {
+            position: relative;
+            background-image: url("media/images/player/common/bullet.png");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            float: left;
+            height: 13px;
+            width: 13px;
+            margin-top: 7.9px;
+            list-style-type: none;
+            border-radius: 10px;
+        }
+
+        .text {
+            color: #172430;
+            list-style-type: none;
+            margin-left: 30px;
+            position: relative;
+        }
+
+        .clsSectionName {
+            margin-top: 17px !important;
+            font-family: SegoeUIBold;
+            color: #1a1f71;
+        }
+
+        .clsResouceLink {
+            margin-left: 1% !important;
+        }
+
+        ._clickLink {
+            position: relative;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: underline;
+            padding-bottom: 15px;
+        }
+
+        ._clickLink:hover {
+            position: relative;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: underline;
+            padding-bottom: 15px;
+            color: blue;
+            cursor: pointer;
+        }
+
+        .pdflink {
+            position: absolute;
+            top: 44px;
+            width: 100%;
+            height: 413px;
+            /* z-index: 999; */
+
+            border-radius: 0 0 10px 10px;
+        }
+
+        ._viewed {
+            color: blue;
+        }
+
+        .imageDesc {
+            position: absolute;
+            top: 155px;
+            left: 1px;
+            font-size: 16px;
+            text-align: center;
+            width: 208px;
+        }
+
+        .imageDescFull {
+            position: relative;
+            top: 13px;
+            left: 15px;
+            font-size: 16px;
+            text-align: center;
+            width: 648px;
+            margin: 0 auto;
+            background: #5B5B5B;
+            height: 40px;
+            border: 1px solid #5B5B5B;
+            line-height: 40px;
+            color: #fff;
+            border-radius: 0px 0px 5px 5px;
+        }
+
+        .ClsImage0 {
+            margin-left: 29px;
+        }
+
+        .boxInst {
+            top: 490px !important;
+        }
+
+        .bottom_txt {
+            position: relative;
+            top: 205px;
+            background: #f2f2f2;
+            padding: 10px;
+            text-align: center;
+            line-height: 23px;
+            opacity: 0;
+        }
+
+        .textLink {
+            width: 300px;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .pdfIcon0 {
+            position: absolute;
+            top: 488px;
+            height: 39px;
+            width: 33px;
+            left: 36px;
+            display: none;
+        }
+
+        #_clickImg0pdf {
+            top: 488px;
+            left: 74px;
+            position: absolute;
+            cursor: pointer;
+            color: #000 !important;
+            font-size: 16px !important;
+            font-weight: normal !important;
+            font-style: italic !important;
+            display: none;
+            border: none;
+            font-family: OpenSansRegular !important;
+        }
+
+        #_clickImg0pdf span {
+            border-bottom: 1px solid #000000;
+            position: relative;
+        }
+
+        #pageClsResourcesPopup {
+            position: absolute;
+            z-index: 1070;
+            top: 0px;
+            height: 99%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: none;
+            /* opacity: 0.5; */
+        }
+
+        #pageid_ReferencesBG {
+            position: absolute;
+            height: 457px;
+            width: 940px;
+            left: 0px;
+            right: 0px;
+            margin: auto;
+            top: 40px;
+            background-color: #FFFFFF;
+            border-radius: 10px;
+        }
+
+        #pageid_RefTitleBar {
+            font-size: 36px;
+            background-color: #4d667b;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            left: 0px;
+            top: 0px;
+            font-family: OpenSansRegular;
+            /* font-weight: bold; */
+            width: 942px;
+            height: 44px;
+            position: absolute;
+        }
+
+        #pageid_ReftitleText {
+            position: absolute;
+            color: #fff;
+            font-size: 18px;
+            left: 11px;
+            top: 10px;
+        }
+
+        #pageid_RefCloseBtn {
+            position: absolute;
+            width: 29px;
+            height: 29px;
+            top: 7px;
+            left: 900px;
+            cursor: pointer;
+            background: url('media/images/player/common/close.png');
+            /* background-position: -49px 0px; */
+            -webkit-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+            /* background-position: 0px 0px; */
+        }
+
+        /* #pageid_RefCloseBtn:hover {
+
+			background: url('media/images/player/common/close.png');
+
+			background-position: 0px 0px;
+
+		} */
+
+        #pageRefTitleBar_id {
+            font-size: 36px;
+            background-color: #4d667b;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            left: 0px;
+            top: 0px;
+            font-family: OpenSansRegular;
+            /* font-weight: bold; */
+            width: 942px;
+            height: 44px;
+            position: absolute;
+        }
+
+        #pageReftitleText_id {
+            position: absolute;
+            color: #fff;
+            font-size: 18px;
+            left: 11px;
+            top: 10px;
+        }
+
+        .pageclose_txt {
+            position: absolute;
+            width: 135px;
+            height: 44px;
+            top: 48px;
+            left: 800px;
+            background: url('media/images/player/common/pdf_close_inst.png');
+        }
+
+        .pg-pageContent {
+  position: relative;
+  width: 100%;
+  height: 97%;
+  overflow: hidden;
+}
+        a.popup {
+            color: #d7722c;
+        }
+
+        #idText28 {
+            display: none;
+            opacity: '0';
+        }
+        #clsSub3 {
+            background: url('pages/images/Topic01/T01P13/T01P13_04.png') no-repeat;
+            background-size: cover;
+            background-position: top;
+            /* margin: 0 auto; */
+            top: 0px;
+            left: 0px;
+        }
+        .boxInst {
+  position: absolute;
+  top: 484px;
+  left: 860px;
+  top: 469px;
+  left: 904px;
+  width: 175px;
+  height: 30px;
+  display: none;
+  z-index: 99999;
+}
+    </style>
+    <script>
+        var audioPath = "pages/audio/Topic01/T01P13/T01P13";
+        //var gItemAudioPath=["pages/audio/Topic01/T01P17/T01P17"
+        //];
+
+        var currCue = 0;
+        var idd = 0;
+
+        var updateContentArray = [{
+            time: "0",
+            carry: "",
+            event: "",
+            show: "",
+            hide: "",
+            transcript: "Infants may become infected with bacteria, viruses,fungi, or other pathogens. The two most common bacterial organisms that cause early-onset sepsis are Group B Streptococcus, which is a Gram-positive organism, and Escherichia coli, which is a Gram-negative organism.<br> Click Next to continue. "
+        },
+
+        {
+            time: "0.5",
+            carry: "",
+            event: "",
+            show: "",
+            hide: "",
+            transcript: "",
+            animation: [{
+                target: "#idText28",
+                duration: "0.5",
+                activity: {
+                    'opacity': '1',
+                    'display': 'block'
+                }
+            }]
+        },
+        {
+            time: "1.5",
+            carry: "",
+            event: "",
+            show: "",
+            hide: "",
+            transcript: "",
+            animation: [{
+                target: ".ClsImage0",
+                duration: "0.2",
+                activity: {
+                    'opacity': '1',
+                    'display': 'block'
+                }
+            }]
+        }, {
+            time: "2.5",
+            carry: "",
+            event: "",
+            show: "",
+            hide: "",
+            transcript: "",
+            animation: [{
+                target: ".ClsImage1",
+                duration: "0.2",
+                activity: {
+                    'opacity': '1',
+                    'display': 'block'
+                }
+            }]
+        }, {
+            time: "3",
+            carry: "",
+            event: "",
+            show: "",
+            hide: "",
+            transcript: "",
+            animation: [{
+                target: ".ClsImage2",
+                duration: "0.2",
+                activity: {
+                    'opacity': '1',
+                    'display': 'block'
+                }
+            }]
+        },
+        {
+            time: "5",
+            carry: "",
+            event: "",
+            show: "",
+            hide: "",
+            transcript: "",
+            animation: [{
+                target: ".ClsImage3",
+                duration: "0.2",
+                activity: {
+                    'opacity': '1',
+                    'display': 'block'
+                }
+            }]
+        },
+        {
+            time: "7",
+            carry: "",
+            event: "",
+            show: "",
+            hide: "",
+            transcript: "",
+            animation: [{
+                target: "#introBox2",
+                duration: "0.5",
+                activity: {
+                    'opacity': '1',
+                    'display': 'block'
+                }
+            }]
+        },
+        {
+            time: "7",
+            carry: "",
+            event: "",
+            show: "",
+            hide: "",
+            transcript: "",
+            animation: [{
+                target: "#introBox",
+                duration: "0.5",
+                activity: {
+                    'opacity': '1',
+                    'display': 'block'
+                }
+            }]
+        },
+
+        {
+            time: "13",
+            carry: "",
+            event: "",
+            show: "",
+            hide: "",
+            transcript: "",
+            animation: [
+                {
+                    target: ".ClsImage0",
+                    duration: "0",
+                    activity: {
+                        'height': '276px'
+                    }
+                },
+                {
+                    target: ".ClsImage0 .bottom_txt",
+                    duration: "0.5",
+                    activity: {
+                        'opacity': '1',
+                        'display': 'block'
+                    }
+                }]
+        },
+        {
+            time: "18",
+            carry: "",
+            event: "",
+            show: "",
+            hide: "",
+            transcript: "",
+            animation: [
+                {
+                    target: ".ClsImage1",
+                    duration: "0",
+                    activity: {
+                        'height': '276px'
+                    }
+                },
+                {
+                    target: ".ClsImage1 .bottom_txt",
+                    duration: "0.5",
+                    activity: {
+                        'opacity': '1',
+                        'display': 'block'
+                    }
+                }]
+        }, {
+            time: "18",
+            carry: "",
+            event: "",
+            show: "",
+            hide: "",
+            transcript: "",
+            animation: [{
+                target: ".pdfIcon0",
+                duration: "0.5",
+                activity: {
+                    'opacity': '1',
+                    'display': 'block'
+                }
+            }]
+        }, {
+            time: "18",
+            carry: "",
+            event: "",
+            show: "",
+            hide: "",
+            transcript: "",
+            animation: [{
+                target: "#_clickImg0pdf",
+                duration: "0.5",
+                activity: {
+                    'opacity': '1',
+                    'display': 'block'
+                }
+            }]
+        }, {
+            time: "23",
+            carry: "",
+            event: "",
+            show: "",
+            hide: "",
+            transcript: "",
+            animation: [{
+                target: ".boxInst",
+                duration: "0.5",
+                activity: {
+                    'opacity': '1',
+                    'display': 'block'
+                }
+            }]
+        }];
+
+        function fnAudioFinishItemComp() {
+            fnAudioFinishPageComp();
+            fnUpdatePageCompletionCounter(0);
+            //fnUpdatePageCompletionCounter(7);
+        }
+        var __dataXml;
+        var __clickCount = 0;
+
+        $(document).ready(function () {
+            restrictBacknMenuOnAssistment();
+            glossaryFuncPageLevel();
+
+            disableNextBtn();
+            var ele = document.getElementsByTagName('div');
+            for (var i = 0; i < ele.length; i++) {
+                ele[i].setAttribute("unselectable", "on");
+            }
+
+            
+            var n = isInArray("M1L0T1P13", gCompPageArr);
+            console.log(n);
+            if (n == true) {
+                enableNextBtn();
+                //    fnGlowNextBtn();
+                fnDesiableNext(false);
+            }
+        });
+
+        function isInArray(value, array) {
+            return array.indexOf(value) > -1;
+        }
+
+        function audioReset() {
+            gAudioId = "";
+            onTimelineEnd();
+        }
+		
+
+
+      
+        function fnCompletion() {
+          
+        }
+
+        $(".small_expand").on("click", function () {
+
+            if (!fnPauseAudio()) {
+                console.log(true);
+                fnPauseAudio()
+            } else {
+                playPauseAudio();
+                console.log(false);
+            }
+            $(".modalTxtImg").hide();
+
+            var i = $(this).attr("id").slice(8);
+            $("#case_study_popup" + i).show();
+            $("#imgPopup" + i).show();
+            //$(".sectionTop").addClass("blur");
+            $(".mainContainer").addClass("blur");
+        });
+
+        $(".modalclose").on("click", function () {
+            // audioReset();
+            var __aIndex = $(this).attr("id").slice(8);
+            if (!fnPauseAudio()) {
+                console.log(true);
+                playPauseAudio();
+            }
+
+            $(".modal").removeAttr("style");
+            //$(".sectionTop").removeClass("blur");
+            $(".mainContainer").removeClass("blur");
+        });
+        $(".closepopup").on("click", function () {
+            if (!fnPauseAudio()) {
+                console.log(true);
+                playPauseAudio();
+            }
+            $(".modal").removeAttr("style");
+            $(".mainContainer").removeClass("blur");
+        });
+        gCompPageArr.push("M1L0T1P13");
+
+        function fnOnAudioComplete() {
+            if (gAudioId == "startAudio") {
+                enableNextBtn();
+                fnAudioFinishItemComp();
+                $('.small_expand').css('display', 'block');
+                $('.boxInst').css('display', 'block');
+                gCompPageArr.push("M1L0T1P13");
+                audioStop();
+            } else {
+                $("#idTick0" + selectedIndex).css({
+                    "opacity": "1"
+                });
+                $("#clsTabTxt" + selectedIndex).css({
+                    'color': '#80848b'
+                });
+                $(".ClsTab").removeClass("clsDisable");
+                $("#TabImage" + selectedIndex).addClass("clsDisable");
+                fnCompletion();
+                audioStop();
+
+            }
+        }
+        $("#_clickImg0pdf").on("click", function () {
+            console.log("hello")
+            // $('#pageClsResourcesPopup .pdflink').attr('src', 'pages/Topic01/pdf/Page17.pdf');
+            fnPauseAudio();
+            // $('#pageReftitleText_id').html('Case Presentation - Neonatologist from Sweden');
+            disabledAllButtons();
+            $("#pageClsResourcesPopup").show();
+
+        });
+
+        $('#pageClsResourcesPopup').hide();
+        $("#pageRefCloseBtn_id").click(function () {
+            enabledAllButtons();
+            fnPlayAudio();
+            //$("#pageClsResourcesPopup").hide();
+            $("#pageClsResourcesPopup").hide();
+            //$("#pageid_RefTitleBar").show()
+        });
+        function audioStop() {
+            var audio = document.getElementById("audioplayer");
+            audio.pause();
+            audio.currentTime = 0;
+        }
+        
+        $(".popupclose").on("click", function () {
+
+            playAudio();
+            $(".mainContainer").removeClass("blur");
+            $('.modal').removeAttr("style");
+
+        });
+    </script> 
+</head>
+
+<body>
+
+    <div class="pg-pageContent" UNSELECTABLE="on">
+        <div class="mainContainer">
+            <div class="clsPatch" id="idPatchMain25">
+                <div class="clsText" id="idText28">Infants may become infected with
+                    <a href="javascript:void(0)" class="glossarytag"
+                        textDesc="Microscopic, single-celled organisms that do not have a nucleus. Some bacteria are pathologic, meaning they can cause disease; other forms of bacteria have a useful, non-harmful purpose. Bacterial shapes include spheres, rods, and spirals.">bacteria</a>,
+                    <a href="javascript:void(0)" class="glossarytag" glossaryTitle="Virus"
+                        textDesc="A small microorganism that can only replicate (reproduce) inside the cells of another organism. Viruses invade cells to be able to multiply and produce other viruses like themselves.">viruses</a>,
+                    <a href="javascript:void(0)" class="glossarytag"
+                        textDesc="Plural for the word fungus. Fungi are organisms or pathogens that include yeast and mold. Fungal infections may be life threatening for immunocompromised neonates.">fungi</a>,
+                    or other
+                    <a href="javascript:void(0)" class="glossarytag" glossaryTitle="Pathogen"
+                        textDesc="Any agent, including bacteria, viruses, fungi, or other microorganisms that can produce or cause a disease.">pathogens</a>.
+                </div>
+            </div>
+            <div id="introBox">
+                <div class="clsText" style="padding: 9px 11px;left: 0;top: -1px;width: 354px;">Two of the most common bacterial organisms that cause
+                    early-onset neonatal sepsis</div>
+            </div>
+            <div id="introBox2"></div>
+            <section class="ClsSecItem section" id="section0">
+                <div class="ClsImage0">
+                    <div class="clsSubImage" id="clsSubImage0">
+                        <div class="subFirstImage" id="clsSub0"></div>
+                        <div class="imageDesc"><strong>Group B <em>Streptococcus</em><br> (bacteria)</strong></div>
+                        <div class="bottom_txt">
+                            <a href="javascript:void(0)" class="glossarytag" glossaryTitle="Gram-positive organism"
+                            textDesc="Gram staining refers to a bacterial staining procedure developed by a Danish bacteriologist, Hans Christian Gram in 1883. Gram staining is the first step in identifying an organism. The procedure allows differentiation of bacteria into one of two categories – positive or negative. The determination is based on color change. Organisms that stain a blue/purple color (because they retain the stain applied to them) are Gram-positive bacteria. Organisms that stain a pink/reddish color(because they lose their color when the destaining step is performed) are Gram-negative bacteria."> Gram-positive  organism</a>
+                           </div>
+                        <div class="clickToContinue expandImgTxtRight clickToEnlarge">Click to enlarge image</div>
+                        <a href="javascript:void(0);" title="Click to enlarge image" class="small_expand zoom_btn"
+                            id="clickImg0">&nbsp;</a>
+                    </div>
+
+                </div>
+                <div class="ClsImage1">
+                    <div class="clsSubImage" id="clsSubImage1">
+                        <div class="subFirstImage" id="clsSub1"></div>
+                        <div class="imageDesc"><strong><em>Escherichia coli</em> <br>(bacteria)</strong></div>
+                        <div class="bottom_txt">
+                            <a href="javascript:void(0)" class="glossarytag" glossaryTitle="Gram-negative organism"
+                            textDesc="Gram staining refers to a bacterial staining procedure developed by a Danish bacteriologist, Hans Christian Gram in 1883. Gram staining is the first step in identifying an organism. The procedure allows differentiation of bacteria into one of two categories – positive or negative. The determination is based on color change. Organisms that stain a blue/purple color (because they retain the stain applied to them) are Gram-positive bacteria. Organisms that stain a pink/reddish color(because they lose their color when the destaining step is performed) are Gram-negative bacteria."> Gram-negative organism</a>
+                             </div>
+                        <!-- <div class="subFirstImage" id="clsImg0"></div> -->
+                        <div class="clickToContinue expandImgTxtRight clickToEnlarge">Click to enlarge image</div>
+                        <a href="javascript:void(0);" title="Click to enlarge image" class="small_expand zoom_btn"
+                            id="clickImg1">&nbsp;</a>
+                    </div>
+
+                </div>
+                <div class="ClsImage2">
+                    <div class="clsSubImage" id="clsSubImage2">
+                        <div class="subFirstImage" id="clsSub2"></div>
+                        <div class="imageDesc"><strong>Herpes simplex <br>(virus)</strong></div>
+                        <!-- <div class="subFirstImage" id="clsImg0"></div> -->
+                        <div class="clickToContinue expandImgTxtRight clickToEnlarge">Click to enlarge image</div>
+                        <a href="javascript:void(0);" title="Click to enlarge image" class="small_expand zoom_btn"
+                            id="clickImg2">&nbsp;</a>
+                    </div>
+
+                </div>
+                <div class="ClsImage3">
+                    <div class="clsSubImage" id="clsSubImage3">
+                        <div class="subFirstImage" id="clsSub3"></div>
+                        <div class="imageDesc"><strong><em>Candida albicans</em><br> (yeast) </strong></div>
+                        <!-- <div class="subFirstImage" id="clsImg0"></div> -->
+                        <div class="clickToContinue expandImgTxtRight clickToEnlarge">Click to enlarge image</div>
+                        <a href="javascript:void(0);" title="Click to enlarge image" class="small_expand zoom_btn"
+                            id="clickImg3">&nbsp;</a>
+                    </div>
+
+                </div>
+                <!-- <div class="ClsImage3">
+                    <div class="clsSubImage" id="clsSubImage4">
+                        <div class="subFirstImage" id="clsSub4"></div>
+                        <div class="imageDesc"><strong><em>Candida albicans</em><br> (yeast) </strong></div>
+                        <div class="subFirstImage" id="clsImg0"></div>
+                        <div class="clickToContinue expandImgTxtRight clickToEnlarge">Click to enlarge image</div>
+                        <a href="javascript:void(0);" title="Click to enlarge image" class="small_expand zoom_btn"
+                            id="clickImg3">&nbsp;</a>
+                    </div>
+
+                </div> -->
+                <div class="textLink">
+                    
+                    <div class="_link" id="_clickImg0pdf"><div class="pdfIcon0" style="top: -14px;left: -40px;"><img class="pdf_icon" src="pages/images/Topic01/T01P20/pdf_icon.svg" alt=""  style="cursor:pointer" />
+                    </div><span>Neonatal infection</span>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+        <!--- Main Container-->
+
+        <div class="modal case_study_popup" id="case_study_popup0">
+            <div class="modalContent" unselectable="on">
+                <div class="modalinner">
+                    <div class="modalTxtImg" unselectable="on" id="imgPopup0"></div>
+                    <div class="modalTextBottom"><strong>Group B <em>Streptococcus</em> (bacteria)</strong></div>
+                    <a class="closepopup zoom_close_btn" href="javascript:void(0)" title="Click to Close"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal case_study_popup" id="case_study_popup1">
+            <div class="modalContent" unselectable="on">
+                <div class="modalinner">
+                    <div class="modalTxtImg" unselectable="on" id="imgPopup1"></div>
+                    <div class="modalTextBottom"><strong><em>Escherichia coli</em> (bacteria)</strong></div>
+                    <a class="closepopup zoom_close_btn" href="javascript:void(0)" title="Click to Close"></a>
+                </div>
+            </div>
+        </div>
+        <div class="modal case_study_popup" id="case_study_popup2">
+            <div class="modalContent" unselectable="on">
+                <div class="modalinner">
+                    <div class="modalTxtImg" unselectable="on" id="imgPopup2"></div>
+                    <div class="modalTextBottom"><strong>Herpes simplex (virus)</strong></div>
+                    <a class="closepopup zoom_close_btn" href="javascript:void(0)" title="Click to Close"></a>
+                </div>
+            </div>
+        </div>
+        <div class="modal case_study_popup" id="case_study_popup3">
+            <div class="modalContent" unselectable="on">
+                <div class="modalinner">
+                    <div class="modalTxtImg" unselectable="on" id="imgPopup3"></div>
+                    <div class="modalTextBottom"><strong><em>Candida albicans</em> (yeast) </strong></div>
+                    <a class="closepopup zoom_close_btn" href="javascript:void(0)" title="Click to Close"></a>
+                </div>
+            </div>
+        </div>
+        <div class="boxInst">
+            <div class="instNextClick"></div>
+            <div class="next_click"><em> Click Next to continue.</em></div>
+        </div>
+    </div>
+    <div id="pageClsResourcesPopup">
+
+        <div id="pageid_ReferencesBG">
+
+            <div id="pageRefTitleBar_id">
+
+                <div id="pageRefTitleBar_id" unselectable="on" style="display: block;">
+
+                    <div id="pageReftitleText_id" unselectable="on">Neonatal Infection </div>
+
+                    <div class="pageclose_txt" unselectable="on"><span id="pageClsText">Click to Close</span></div>
+
+                    <div id="pageRefCloseBtn_id" title="Close" unselectable="on"></div>
+
+                    <embed class="pdflink" alt="pdf" src="pages/Topic01/pdf/T01P13/Neonatal infection.pdf"
+                        internalinstanceid="70">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>

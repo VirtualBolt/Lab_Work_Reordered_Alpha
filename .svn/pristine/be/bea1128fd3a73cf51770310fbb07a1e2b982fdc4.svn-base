@@ -1,0 +1,45 @@
+<!doctype html>
+<html class="">
+<!--<![endif]-->
+<head>
+<!-- <link href="components/menu/menu.css" rel="stylesheet" type="text/css">
+<script src="components/menu/menu.js"></script> -->
+
+<!-- Player and page level .js files to include -->
+<script language="javascript" type="text/javascript">
+	var oXML;
+	var isPageDisabled=false;
+	var arrTabIndexUpdate;
+    
+	$(document).ready(function() {
+        // Below lines are added for 508 accessibility.
+        arrTabIndexUpdate = ['.MenuPopup'];        
+        
+		$("*").attr("unselectable","on")
+		//$("#menuWrapperID").css("visibility", "hidden");
+		fnCreateMenu();		
+		
+		$("#menuclose").click(function(){
+			disablePopup();  
+		});
+		$(".menuCover").click(function(e){
+			if(isPageDisabled==false){
+                setTimeout(function(){$("#accordion-menu-wrapper").removeClass('open').addClass('close')}, 100);
+				setTimeout(function(){disablePopup()}, 200);  
+			}else{
+				isPageDisabled = false;
+			}
+		});
+        
+        // Below lines are added for 508 accessibility.
+        updateTabIndex(arrTabIndexUpdate, '', true, ".MenuPopup"); 
+	});	
+</script>
+
+</head>
+<body>
+<div class="menuTitle"></div>
+<div id="accordion-menu-wrapper" class="close">
+</div>
+</body>
+</html>

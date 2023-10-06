@@ -1,0 +1,1802 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title></title>
+    <style>
+        /* Sliding entrances */
+        @-webkit-keyframes slideInDown {
+            from {
+                -webkit-transform: translate3d(0, -100%, 0);
+                transform: translate3d(0, -100%, 0);
+                visibility: visible;
+            }
+            to {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+        }
+        @keyframes slideInDown {
+            from {
+                -webkit-transform: translate3d(0, -100%, 0);
+                transform: translate3d(0, -100%, 0);
+                visibility: visible;
+            }
+            to {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+        }
+        .animate__slideInDown {
+            -webkit-animation-name: slideInDown;
+            animation-name: slideInDown;
+        }
+        @-webkit-keyframes slideInLeft {
+            from {
+                -webkit-transform: translate3d(-100%, 0, 0);
+                transform: translate3d(-100%, 0, 0);
+                visibility: visible;
+            }
+            to {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+        }
+        @keyframes slideInLeft {
+            from {
+                -webkit-transform: translate3d(-100%, 0, 0);
+                transform: translate3d(-100%, 0, 0);
+                visibility: visible;
+            }
+            to {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+        }
+        .animate__slideInLeft {
+            -webkit-animation-name: slideInLeft;
+            animation-name: slideInLeft;
+        }
+        @-webkit-keyframes slideInRight {
+            from {
+                -webkit-transform: translate3d(50%, 0, 0);
+                transform: translate3d(50%, 0, 0);
+                visibility: visible;
+            }
+            to {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+        }
+        @keyframes slideInRight {
+            from {
+                -webkit-transform: translate3d(50%, 0, 0);
+                transform: translate3d(50%, 0, 0);
+                visibility: visible;
+            }
+            to {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+        }
+        .animate__slideInRight {
+            -webkit-animation-name: slideInRight;
+            animation-name: slideInRight;
+        }
+        @-webkit-keyframes slideInUp {
+            from {
+                -webkit-transform: translate3d(0, 100%, 0);
+                transform: translate3d(0, 100%, 0);
+                visibility: visible;
+            }
+            to {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+        }
+        @keyframes slideInUp {
+            from {
+                -webkit-transform: translate3d(0, 100%, 0);
+                transform: translate3d(0, 100%, 0);
+                visibility: visible;
+            }
+            to {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+        }
+        .animate__slideInUp {
+            -webkit-animation-name: slideInUp;
+            animation-name: slideInUp;
+        }
+        .leftCnt {
+            width: 48%;
+        }
+        .rightCnt {
+            width: 50%;
+            position: absolute;
+            right: 0;
+            padding-left: 15px;
+            top: 16px;
+            display: none;
+        }
+        .informationRight {
+            display: block
+        }
+        .information span {
+            font-weight: 400
+        }
+        .marginTop {
+            top: 40px
+        }
+        .bottomTxt {
+            position: absolute;
+            bottom: 13px;
+            right: 15px
+        }
+        .cSubmitBtn {
+            background: #ACACAC;
+            font-family: OpenSansRegular;
+            font-size: 18px;
+            padding: 5px 15px;
+            text-transform: lowercase;
+            color: #fff;
+            border-radius: 5px;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            text-transform: capitalize;
+            line-height: 21px;
+            border: 2px solid transparent
+        }
+        .cSubmitBtn.enable:hover {
+            border: 2px solid #707070;
+            background: transparent;
+            color: #5B5B5B
+        }
+        .cSubmitBtn.active {
+            background: #5B5B5B;
+            color: #fff;
+            cursor: pointer
+        }
+        .cSubmitBtn.active:hover {
+            border: 2px solid #707070;
+            background: #fff;
+            color: #000
+        }
+        .QuestionPanel1_2 {
+            position: absolute;
+            left: 25px;
+            top: 80px;
+            width: 740px;
+            font-size: 16px;
+            opacity: 1;
+            font-weight: 700
+        }
+        .leftBottom {
+            position: relative;
+            height: 252px
+        }
+        .leftBottom h3 {
+            padding: 0;
+            margin: 0;
+            position: relative;
+            top: 12px;
+            text-align: center;
+            font-family: OpenSansSemiBold;
+            font-size: 20px;
+            color: #000;
+            padding-bottom: 26px
+        }
+        .headingBlue {
+            padding-left: 20px;
+            color: #3A5569;
+            font-family: OpenSansSemiBold;
+            font-size: 16px;
+            padding-bottom: 0;
+            margin-bottom: 0
+        }
+        .sectiontxt {
+            font-family: OpenSansSemiBold;
+            padding-left: 20px;
+            padding-bottom: 10px;
+            font-size: 18px;
+            color: #000
+        }
+        .mainContainer {
+            position: absolute;
+            width: 100%;
+            height: 545px;
+            left: 0px;
+            top: 0px;
+            opacity: 1;
+        }
+        .clsTabPopup {
+            position: absolute;
+            width: 1085px;
+            height: 540px;
+            top: 0;
+            left: 0
+        }
+        .sectionTop {
+            position: absolute;
+            top: 0;
+            height: 30px;
+            width: 100%;
+            padding: 16px 0
+        }
+        .sectionContent {
+            position: absolute;
+            top: 14px;
+            height: 497px;
+            width: 1055px;
+            left: 15px;
+            right: 15px;
+            color: #000
+        }
+        .topImgCnt {
+            position: relative
+        }
+        .small_expand{
+            background: url(pages/images/Topic01/T01P22/small_expand.svg) !important;
+            position: absolute;
+            cursor: pointer;
+            width: 29px;
+            height: 29px;
+            bottom: 23px;
+            right: 17px;
+            background-position: 0px 0;
+            transition: all 0.2s;    
+            background-size: cover !important;
+            background-repeat:no-repeat ;
+            display:none;
+            opacity: .6;
+        }
+        .small_expand:hover{
+            opacity: 1;
+        }
+        .open_map {
+            background: url(pages/images/Topic01/T01P30/small_expand.png) no-repeat !important;
+            width: 28px;
+            height: 28px !important;
+            position: absolute !important;
+            bottom: 24px;
+            right: 10px;
+            display: none;
+            left: inherit !important;
+            top: inherit !important;
+            float: inherit !important;
+            text-decoration: none !important;
+            border-radius: inherit !important;
+            margin-left: 0 !important;
+            background-color: inherit !important;
+            padding: 0 !important;
+            opacity: .6;
+        }
+        /* , */
+        .open_map:hover {
+            opacity: 1;
+        }
+        .small_expand1 {
+            background: url(pages/images/Topic01/T01P30/small_expand.png) no-repeat !important;
+            width: 28px;
+            height: 28px !important;
+            position: absolute !important;
+            bottom: 7px;
+            right: 10px;
+            display: none;
+            left: inherit !important;
+            top: inherit !important;
+            float: inherit !important;
+            text-decoration: none !important;
+            border-radius: inherit !important;
+            margin-left: 0 !important;
+            background-color: inherit !important;
+            padding: 0 !important;
+            opacity: .6;
+        }
+        .small_expand1:hover{
+            opacity: 1;
+        }
+        /*  {
+            background: url(pages/images/Topic01/T01P30/small_expand_hover.png) no-repeat !important
+        } */
+        .open_map {
+            right: 33px;
+            margin-top: 2px
+        }
+        .sectionLeft {
+            height: 100%;
+            width: 264px;
+            background: #E0F6FB;
+            box-shadow: 0 1px 9px -4px rgba(0, 0, 0, 0.75);
+            -webkit-box-shadow: 0 1px 9px -4px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0 1px 9px -4px rgba(0, 0, 0, 0.75);
+            border-bottom-left-radius: 7px;
+            -webkit-border-bottom-left-radius: 7px;
+            -moz-border-bottom-left-radius: 7px
+        }
+        .sectionRight {
+            width: 790px;
+            height: 507px;
+            top: 0;
+            position: absolute;
+            left: 264px
+        }
+        .rightTop {
+            height: 42px;
+            left: 5px;
+            position: relative
+        }
+        .rightTop a {
+            left: 0;
+            top: 0;
+            padding: 0 65px;
+            background: #fff;
+            margin: 0;
+            position: relative;
+            float: left;
+            margin-left: -5px;
+            font-family: OpenSansSemiBold;
+            text-decoration: none;
+            color: #000;
+            height: 42px;
+            line-height: 42px;
+            border-top-right-radius: 5px;
+            -webkit-border-top-right-radius: 5px;
+            -moz-border-top-right-radius: 5px;
+            font-size: 16px;
+            cursor: default
+        }
+        .sectionRight .assessmentShow a {
+            cursor: default
+        }
+        .rightTop a.active {
+            border-top-right-radius: 5px;
+            -webkit-border-top-right-radius: 5px;
+            -moz-border-top-right-radius: 5px;
+            background: #3A5569;
+            margin-right: 0;
+            z-index: 10;
+            color: #fff
+        }
+        .rightTop a.active.cdefault {
+            cursor: default
+        }
+        .rightTop a.active:after,
+        .rightTop a.active:before,
+        .rightTop a.active:hover:before {
+            top: 98%;
+            left: 45%;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none
+        }
+        .rightTop a.active:after,
+        .rightTop a.active:hover:after {
+            border-top-color: #3A5569;
+            border-width: 10px;
+            margin-left: 0
+        }
+        .rightTop a.active:before,
+        .rightTop a.active:hover:before {
+            border-top-color: #3A5569;
+            border-width: 10px;
+            margin-left: 0
+        }
+        .rightTop a.active:nth-child(2),
+        .rightTop a.active:hover:nth-child(2) {
+            -webkit-border-top-left-radius: 5px;
+            border-top-left-radius: 5px;
+            -moz-border-top-left-radius: 5px
+        }
+        .rightTop a:nth-child(2) {
+            -webkit-border-top-left-radius: 5px;
+            border-top-left-radius: 5px
+        }
+        .sectionContentArea {
+            background: #fff;
+            height: 395px;
+            border-top-right-radius: 5px;
+            -webkit-border-top-right-radius: 5px;
+            -moz-border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            -webkit-bottom-top-right-radius: 5px;
+            -moz-border-bottom-right-radius: 5px
+        }
+        #topImgCnt1 {
+            background: url(pages/images/Topic01/T01P30/img_small.png) no-repeat top left;
+            background-size: cover;
+            height: 252px;
+            width: 100%
+        }
+        #imgPopup1 {
+            background: url(pages/images/Topic01/T01P30/img_large.png) no-repeat;
+            background-size: cover;
+            /* height: 360px */
+        }
+        #case_study_popup .modalContent {
+            width: 575px;
+            height: 420px;
+        }
+        .sectionContentArea {
+            padding: 30px;
+            font-size: 14px;
+            line-height: 18px;
+        }
+        .information {
+            margin-top: 10px
+        }
+        .information,
+        .qtext,
+        .bullet li,
+        .instructions {
+            font-size: 14px !important;
+            line-height: 18px;
+            display:inline-block;
+        }
+        .instructions {
+            font-size: 14px !important;
+            margin-top: 8px;
+        }
+        .options-radio {
+            margin-top: 20px
+        }
+        .iconlist {
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+            width: 90%
+        }
+        .iconlist li {
+            position: relative;
+            margin-bottom: 3px;
+            font-size: 14px;
+            line-height: 22px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding-left: 20px
+        }
+        .iconlist li:before {
+            background: url(pages/images/Topic01/T01P30/bullet.png) no-repeat;
+            left: 0px;
+            width: 13px;
+            height: 13px;
+            position: absolute;
+            content: "";
+            top: 5px
+        }
+        .iconlist li a {
+            color: #F6A87A;
+            cursor: pointer
+        }
+        .error1 {
+            margin: 15px auto 0px;
+            border: solid 2px #F6A87A;
+            border-radius: 5px;
+            width: 94%;
+            position: relative
+        }
+        .error1 .error1_inner {
+            position: relative;
+            padding: 10px;
+            color: #000;
+            font-size: 12px;
+            line-height: 18px;
+            font-weight: bold;
+            padding-left: 60px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .error1 .error1_inner img {
+            position: absolute;
+            width: 35px;
+            height: 34px;
+            left: 10px;
+            top: 10px;
+        }
+        .topImgtxt {
+            background: rgba(0, 0, 0, 0.1);
+            position: absolute;
+            bottom: 0px;
+            padding: 10px;
+            color: #000;
+            font-size: 14px;
+            line-height: 22px;
+        }
+        ul.bullet {
+            padding: 0px;
+            padding-left: 15px;
+            margin-top: 0px;
+            padding-bottom:10px;
+        }
+        .txt1 {
+            font-size: 16px;
+            line-height: 22px;
+            margin: 10px 0px
+        }
+        .sectionLeftBox {
+            position: relative;
+            height: 100%;
+            padding: 5px;
+            width: 274px;
+        }
+        .topImgboxinner {
+            border: double 6px #ccc;
+            position: relative;
+            height: 100%
+        }
+        .content2 .sectionRight .sectionContentArea {
+            height: 265px;
+            margin-top: 100px
+        }
+        .sectionContentAreainner {
+            width: 80%;
+            margin: 20px 0px 0px 50px
+        }
+        .sectionContentAreainner .contenttext {
+            font-size: 14px;
+            line-height: 20px;
+            position: relative
+        }
+        .sectionContentAreainner .contenttext2 {
+            margin-top: 30px
+        }
+        #content1 {
+            visibility: visible
+        }
+        #list1,
+        #list2,
+        #list3,
+        #list4,
+        #list5,
+        #error1,
+        #txt1,
+        #listd1,
+        #listd2,
+        #listd3,
+        #listd4,
+        #listd5,
+        #listd6 {
+            visibility: hidden;
+            opacity: 0;
+        }
+        /* .small_expand {
+            display: block
+        } */
+        .poupdiv .modalContent {
+            width: 50%;
+            height: auto !important;
+            padding: 20px 50px;
+            top: 17%
+        }
+        .poupdiv .modalContent .heading {
+            color: #F6A87A;
+            font-size: 18px;
+            text-align: center
+        }
+        .poupdiv .modalContent .linenew {
+            height: 2px;
+            background: #F6A87A;
+            margin: 5px 0px
+        }
+        .poupdiv .modalContent .desc {
+            color: #000;
+            font-size: 14px;
+            text-align: center
+        }
+        .poupdiv .modalContent .desc ul {
+            text-align: left;
+            padding: 0px
+        }
+        .poupdiv .modalContent .desc ul li {
+            margin-bottom: 5px
+        }
+        .poupdiv .popupclose {
+            position: absolute;
+            top: 10px;
+            right: 10px
+        }
+        .poupdiv .popupclose img {
+            width: 24px;
+            height: 24px;
+            cursor: pointer
+        }
+        .poupdiv .modalclose {
+            position: absolute;
+            top: 5px;
+            right: 0px;
+            width: 30px;
+            height: 30px
+        }
+        .poupdiv .modalclose .modalcloseicon {
+            background: url(pages/images/Topic01/T01P30/close-icon.png) no-repeat;
+            background-size: 24px 24px;
+            width: 24px;
+            height: 24px;
+            cursor: pointer
+        }
+        .poupdiv .modalclose .modalcloseicon:hover {
+            background: url(pages/images/Topic01/T01P30/close-hover-icon.png) no-repeat;
+            background-size: 24px 24px;
+            width: 24px;
+            height: 24px
+        }
+        .link {
+            position: absolute;
+            bottom: -30px
+        }
+        .link a {
+            font-size: 14px;
+            line-height: 18px;
+            color: #000;
+            text-decoration: underline
+        }
+        .link a:hover {
+            color: #F6A87A
+        }
+        .option [type="radio"]:checked+label,
+        .option [type="radio"]:not(:checked)+label {
+            font-size: 14px;
+        }
+        .table1 {
+            background: url(pages/images/Topic01/T01P29/strip1.svg) no-repeat;
+            background-size: 100% 100%;
+            margin: 10px 0px
+        }
+        .table1 tr {
+            height: 40px;
+        }
+        .table1 tr th {
+            padding: 2px 5px;
+            text-align: center;
+            width: 70px;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 700
+        }
+        .table1 tr td {
+            padding: 2px 5px;
+            text-align: center;
+            width: 70px;
+            font-size: 16px;
+            font-weight: 500
+        }
+        .table2 {
+            background: url(pages/images/Topic01/T01P29/strip2.svg) no-repeat;
+            background-size: 100% 100%;
+            margin: 10px 0px
+        }
+        .table2 tr {
+            height: 40px;
+        }
+        .table2 tr th {
+            padding: 2px 5px;
+            text-align: center;
+            width: 80px;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 700
+        }
+        .table2 tr td {
+            padding: 2px 5px;
+            text-align: center;
+            width: 80px;
+            font-size: 16px;
+            font-weight: 500
+        }
+        .popover.clickToEnlarge {
+            display: none;
+        }
+        .rightCnt.question,
+        .leftCnt.question {
+            top: 215px;
+            position: absolute;
+        }
+        .QuestionPanel1 {
+            position: absolute;
+            width: 660px;
+            top: 20px;
+            height: 28px;
+            top: 7px;
+            left: 5px;
+            font-family: OpenSansSemiBold;
+        }
+        .QuestionPanel2 {
+            position: absolute;
+            width: 330px;
+            top: 20px;
+            height: 28px;
+            text-align: center;
+            top: 7px;
+            left: 404px;
+            font-family: OpenSansSemiBold;
+            display: none;
+        }
+        .line {
+            position: absolute;
+            height: 289px;
+            width: 1px;
+            background: #ACACAC;
+            left: 372px;
+            top: 10px;
+            opacity: 0.2;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+            filter: alpha(opacity=20);
+            -moz-opacity: 0;
+            -khtml-opacity: 0;
+        }
+        .OptionPanel {
+            position: absolute;
+            height: auto;
+            left: 25px;
+            float: left;
+            top: 95px;
+            width: 740px;
+            font-size: 16px;
+        }
+        .arrowHolder {
+            position: absolute;
+            top: 5px;
+            width: 13px;
+            height: 15px;
+            background: #5B5B5B;
+            -khtml-border-radius: 50%;
+            background: url(pages/images/Topic01/T01P09/bullet.png) no-repeat;
+        }
+        .assessmentShow .arrowHolder,
+        .postnatalShow .arrowHolder {
+            position: absolute;
+            top: 1px;
+            width: 26px;
+            height: 26px;
+            background: url('pages/images/Topic01/T01P09/checkbox_normal.png') no-repeat;
+            cursor: pointer;
+        }
+        .assessmentShow .listcnt.clicked .arrowHolder,
+        .postnatalShow .listcnt.clicked .arrowHolder {
+            background: url('pages/images/Topic01/T01P09/checkbox_click.png') no-repeat;
+        }
+        .assessmentShow .listcnt.wrongAnswer .arrowHolder,
+        .postnatalShow .listcnt.wrongAnswer .arrowHolder {
+            background: url('pages/images/Topic01/T01P09/checkbox_wrong.png') no-repeat;
+            cursor: default;
+        }
+        .assessmentShow .listcnt.correctAnswer .arrowHolder,
+        .postnatalShow .listcnt.correctAnswer .arrowHolder {
+            background: url('pages/images/Topic01/T01P09/checkbox_correct.png') no-repeat;
+            cursor: default;
+        }
+        .assessmentShow .listcnt.disabled .arrowHolder,
+        .postnatalShow .listcnt.disabled .arrowHolder {
+            cursor: default;
+        }
+        .OptionCLSS {
+            position: relative;
+            left: 15px;
+            top: 1px;
+        }
+        .assessmentShow .OptionCLSS,
+        .postnatalShow .OptionCLSS {
+            left: 26px;
+            top: 2px;
+            width: 325px;
+        }
+        .postnatalShow .OptionCLSS {
+            top: 2px;
+        }
+        .postnatalShow .arrowHolder {
+            top: 1px;
+        }
+        .postnatalShow .listcnt {
+            width: 100px;
+        }
+        .assessmentShow .OptionTxtCLSS,
+        .postnatalShow .OptionTxtCLSS {
+            top: 0px;
+        }
+        .listcnt.cborder {
+            border: 1px solid #F6A87A;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+        }
+        .assessmentShow .listcnt:hover,
+        .postnatalShow .listcnt:hover {
+            border: 1px solid #999999;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+        }
+        .assessmentShow .listcnt.disabled:hover,
+        .postnatalShow .listcnt.disabled:hover {
+            cursor: default;
+            border: 1px solid transparent;
+            border-radius: 0px;
+            -webkit-border-radius: 0px;
+            -moz-border-radius: 0px;
+        }
+        .assessmentShow .listcnt.cborder.disabled:hover,
+        .postnatalShow .listcnt.cborderdisabled:hover {
+            cursor: default;
+            border: 1px solid #e4ba4d;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+        }
+        .listcnt.cborder {
+            border: 1px solid #F6A87A;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+        }
+        .clsIcon {
+            position: absolute;
+            background: url(pages/images/Topic01/T01P00/Icon01.png);
+            width: 35px;
+            height: 34px;
+            left: 25px;
+            top: 44px;
+            background-size: contain;
+        }
+        .pdf-icon {
+            position: absolute;
+            bottom: 45px;
+            width: 300px;
+        }
+        .pdf-icon.two {
+            right: 89px;
+        }
+        @media all and (-ms-high-contrast:none) {
+            *::-ms-backdrop,
+            .pdf-icon {
+                left: 175px;
+            }
+            /* IE11 */
+        }
+        .pdf-icon .clsIcon {
+            position: absolute;
+            background: url(pages/images/Topic01/T01P17/pdficon.png) no-repeat;
+            width: 100px;
+            /* height: 30px; */
+            left: -2px;
+            top: -7px;
+            background-size: contain;
+        }
+        .pdf-icon .text {
+            position: absolute;
+            left: 2px;
+            top: 10px;
+            text-decoration: underline;
+        }
+        .pdf-icon.two .text {
+            top: -10px;
+        }
+        .text {
+            color: #172430;
+            list-style-type: none;
+            margin-left: 30px;
+            position: relative;
+        }
+        .pdfIcon0 {
+            position: absolute;
+            top: 440px;
+            height: 39px;
+            width: 33px;
+            left: 29px;
+            /* display: none; */
+        }
+        ._clickImg0pdf {
+            top: 458px;
+            left: 68px;
+            position: absolute;
+            cursor: pointer;
+            color: #000 !important;
+            font-size: 14px !important;
+            font-weight: normal !important;
+            font-style: italic !important;
+            /* display: none; */
+            border: none;
+            width: 253px;
+            /* font-family: OpenSansSemiBold !important; */
+        }
+        div._clickImg0pdf.two {
+            left: 438px;
+            top: 441px;
+        }
+        ._clickImg0pdf span {
+            border-bottom: 1px solid #000000;
+            position: relative;
+        }
+        #pageClsResourcesPopup, #pageClsResourcesPopup1 {
+            position: absolute;
+            z-index: 1070;
+            top: 0px;
+            height: 99%;
+            width: 100%;
+            background-color: rgba(255, 2555, 255, 0.9);
+            display: none;
+            /* opacity: 0.5; */
+        }
+        #pageClsResourcesPopup1 #pageRefTitleBar_id {
+            background-color: white !important;
+        }
+        #pageClsResourcesPopup1 #pageid_ReferencesBG {
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.34);
+            border-radius: 5px !important;
+            height: 463px!important;
+        }
+        #pageClsResourcesPopup1 #pageReftitleText_id {
+            position: relative !important;
+            color: #F6A87A !important;
+            text-align: center !important;
+            top: 15px !important;
+            left: 0!important;
+        }
+        #pageClsResourcesPopup1 #pageRefTitleBar_id:after {
+            content: "";
+            width:96%;
+            height: 2px;
+            position: absolute;
+            background-color: #F6A87A !important;
+            top: 48px;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+        }        
+        #pageid_ReferencesBG {
+            position: absolute;
+            height: 457px;
+            width: 940px;
+            left: 0px;
+            right: 0px;
+            margin: auto;
+            top: 40px;
+            background-color: #FFFFFF;
+            border-radius: 10px;
+        }
+        #pageid_RefTitleBar {
+            font-size: 36px;
+            background-color: #4d667b;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            left: 0px;
+            top: 0px;
+            font-family: OpenSansRegular;
+            /* font-weight: bold; */
+            width: 942px;
+            height: 44px;
+            position: absolute;
+        }
+        #pageid_ReftitleText {
+            position: absolute;
+            color: #fff;
+            font-size: 18px;
+            left: 11px;
+            top: 10px;
+        }
+        #pageid_RefCloseBtn {
+            position: absolute;
+            width: 29px;
+            height: 29px;
+            top: 7px;
+            left: 900px;
+            cursor: pointer;
+            background: url('media/images/player/common/close.png');
+            /* background-position: -49px 0px; */
+            -webkit-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+            /* background-position: 0px 0px; */
+        }
+        /* #pageid_RefCloseBtn:hover {
+			background: url('media/images/player/common/close.png');
+			background-position: 0px 0px;
+		} */
+        #pageRefTitleBar_id {
+            font-size: 36px;
+            background-color: #4d667b;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            left: 0px;
+            top: 0px;
+            font-family: OpenSansRegular;
+            /* font-weight: bold; */
+            width: 942px;
+            height: 44px;
+            position: absolute;
+        }
+        #pageReftitleText_id {
+            position: absolute;
+            color: #fff;
+            font-size: 18px;
+            left: 11px;
+            top: 10px;
+        }
+        .pageclose_txt {
+            position: absolute;
+            width: 135px;
+            height: 44px;
+            top: 48px;
+            left: 800px;
+            background: url('media/images/player/common/pdf_close_inst.png');
+        }
+        .pageclose_txt {
+            position: absolute;
+            width: 135px;
+            height: 44px;
+            top: 48px;
+            left: 800px;
+            background: url('media/images/player/common/pdf_close_inst.png');
+        }
+        #pageClsText {
+            position: absolute;
+            width: 115px;
+            height: 29px;
+            top: 15px;
+            left: 16px;
+            font-family: OpenSansRegular;
+            font-size: 16px;
+            font-style: italic;
+            color: #172430;
+        }
+        #pageRefCloseBtn_id {
+            position: absolute;
+            width: 29px;
+            height: 29px;
+            top: 7px;
+            left: 900px;
+            cursor: pointer;
+            background: url('media/images/player/common/close.png');
+            /* background-position: -49px 0px; */
+            -webkit-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+        #pageid_RefCloseBtn:hover #pageclose_txt {
+            background: url('media/images/player/common/pdf_close_inst.png');
+            /* background-position: 0px 0px; */
+        }
+        #pagereferences {
+            margin-left: 0%;
+            margin-top: 45px;
+            color: #333;
+            width: 800px;
+            min-height: 412px;
+            overflow-y: auto;
+            position: absolute;
+            height: 412px;
+        }
+        #pagereferences ul {
+            padding-top: 0%;
+            padding-bottom: 0%;
+            padding-left: 1%;
+            margin: 0px;
+            margin-top: 10px;
+        }
+        #pagereferences ul li {
+            border: 0 none;
+            margin-left: -4px;
+            margin-right: 5px;
+            vertical-align: bottom;
+            width: 4%;
+        }
+        .pdfIcon0.two {
+            left: 396px;
+        }
+        .closepopup{
+            position: absolute;
+            width: 41px;
+            height: 41px;
+            background: url(pages/images/Topic01/T01P22/close_expand.svg) no-repeat;
+            bottom: 40px;
+            right: 16px;
+            cursor: pointer;
+            z-index: 1000;       
+            opacity: .6;
+            background-position: 0px 0;
+            transition: all 0.2s;    
+            background-size: cover !important;
+            background-repeat:no-repeat ;
+        } .open_map_close {
+            position: absolute;
+            width: 92px;
+            height: 47px;
+            background: url(pages/images/Topic01/T01P22/close_expand_hover.png) no-repeat;
+            bottom: 30px;
+            right: -47px;
+            cursor: pointer;
+            z-index: 1000;
+            text-decoration: none;
+        }
+        .closepopup:hover{
+            opacity: 1;
+        }
+        .boxInst {
+  
+  
+  top: 489px;
+  left: 905px;
+  
+}
+    </style>
+</head>
+<body>
+    <div class="pg-pageContent" UNSELECTABLE="on">
+        <div id="TabPopup5" class="clsTabPopup">
+            <div class="sectionContent">
+                <div class="sectionLeft">
+                    <div class="topImgCnt" id="topImgCnt1">
+                        <!-- <div class="clickToContinue expandImgTxtRight clickToEnlarge">Click to enlarge image.</div> -->
+                        <div class="popover left-arrow clickToEnlarge">
+                            <div class="arrow" style="top: 50%;"></div>
+                            <div class="popover-content">Click to enlarge image.</div>
+                        </div>
+                        <a href="javascript:void(0);" title="Click to enlarge image" class="small_expand zoom_btn"
+                            click_id="1">&nbsp;</a>
+                    </div>
+                    <div class="leftBottom">
+                        <h3>Baby Jazmine</h3>
+                        <div class="headingBlue">BORN AT</div>
+                        <div class="sectiontxt">36 weeks gestation</div><br>
+                        <div class="headingBlue">WEIGHT</div>
+                        <div class="sectiontxt">2.8 kg</div>
+                    </div>
+                </div>
+                <div class="sectionRight">
+                    <div class="firstShow assessmentShow">
+                        <div class="rightTop">
+                            <a href="javascript:void(0);" class="tabClick active" title="Case Information"
+                                rel="Case">Case Information</a>
+                        </div>
+                        <div class="sectionContentArea">
+                            <section class="QuestionPanel1_2 clsPanel" id="Labor">
+                                <div class="qtext">LAB RESULTS (Obtained at 2 hours of age)</div>
+                                <div class="leftCnt">
+                                    <div class="information">
+                                        <ul class="bullet">
+                                            <li>Blood sugar: <span class="addcolor">32 mg/dL (1.8 mmol/L)</span></li>
+                                            <li>CBC results: <span>Pending</span></li>
+                                            <li>Capillary blood gas:</li>
+                                        </ul>
+                                       
+                                    </div>
+                                </div>
+                                <div class="rightCnt">
+                                    <table class="table1">
+                                        <tr>
+                                            <th>pH</th>
+                                            <th>PCO2</th>
+                                            <th>PO2</th>
+                                            <th>HCO3</th>
+                                            <th>Base</th>
+                                        </tr>
+                                        <tr>
+                                            <td>7.11</td>
+                                            <td>55</td>
+                                            <td>30</td>
+                                            <td>17</td>
+                                            <td>-11</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div>
+                                    Which of the following is Baby Jazmine’s blood gas consistent with?<br/>
+                                    <em class="instructions">Select all that apply and click the Submit button.</em>
+                                </div>
+                                <div class="leftCnt question">
+                                </div>
+                                <div class="rightCnt question">
+                                </div>
+                            </section>
+                            <div class="textLink">
+                                
+                                <div class="_link one _clickImg0pdf"><div class="pdfIcon0 one" style="top: -17px;left: -40px;"><img class="pdf_icon"
+                                        src="pages/images/Topic01/T01P20/pdf_icon.svg" alt="" />
+                                </div><span>Blood gas interpretation chart</span>
+                                </div>
+                            </div>
+                            <div class="textLink">
+                                
+                                <div class="_link two _clickImg0pdf">
+									<div class="pdfIcon0 two" style="top: 2px;left: -40px;"><img class="pdf_icon"
+                                        src="pages/images/Topic01/T01P20/pdf_icon.svg" alt="" />
+                                </div>
+                                    <span>Blood gas interpretation chart (International version kPa)</span>
+                                </div>
+                            </div>
+                            <div class="bottomTxt">
+                                <div class="cSubmitBtn">Submit</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="case_study_popup">
+                <div class="modalContent" unselectable="on">
+                    <div class="modalinner">
+                        <div class="modalTxtImg" unselectable="on" id="imgPopup0"></div>
+                        <div class="modalTextBottom" unselectable="on">Baby Jazmine</div>
+                        <a class="closepopup zoom_close_btn" href="javascript:void(0)" title="Click to Close"></a>
+                        <div class="popover left-arrow">
+                            <div class="arrow" style="top: 50%;"></div>
+                            <div class="popover-content">Click to close image.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal poupdiv" id="popup">
+                <div class="modalContent" unselectable="on">
+                    <div class="popupclose modalclose">
+                        <div class="modalcloseicon"></div>
+                    </div>
+                    <div class="desc">
+                        <ul>
+                            <li>Mother reported leaking of amniotic fluid for the past week and concern for vaginal
+                                discharge</li>
+                            <li>Onset of labor 6 hours before admission. </li>
+                            <li>Fetal heart tracing: Category 1 (normal tracing and normal fetal heart rate and
+                                variability)</li>
+                            <li>Highest intrapartum maternal temperature 37.5°C</li>
+                            <li>No broad spectrum antibiotics given to mother before delivery</li>
+                            <li>Spontaneous rupture of membranes at delivery, amniotic fluid foul-smelling</li>
+                            <li>Vaginal delivery </li>
+                            <li>Apgar scores: 7 (at 1 minute), 9 (at 5 minutes)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--- Main Container--->
+    <div class="boxInst">
+        <div class="instNextClick"></div>
+        <div class="next_click"><em> Click Next to continue.</em></div>
+    </div>
+    <div id="pageClsResourcesPopup">
+        <div id="pageid_ReferencesBG">
+            <div id="pageRefTitleBar_id">
+                <div id="pageRefTitleBar_id" unselectable="on" style="display: block;">
+                    <div id="pageReftitleText_id" unselectable="on"></div>
+                    <!-- <div class="pageclose_txt" unselectable="on"><span id="pageClsText">Click to Close</span></div> -->
+                    <div id="pageRefCloseBtn_id" class="pageRefCloseBtn_id" title="Close" unselectable="on"></div>
+                    <embed class="pdflink" alt="pdf" src="pages/Topic01/pdf/T01P30/Blood gas interpretation chart.pdf" internalinstanceid="70">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="pageClsResourcesPopup1">
+        <div id="pageid_ReferencesBG">
+            <div id="pageRefTitleBar_id">
+                <div id="pageRefTitleBar_id" unselectable="on" style="display: block;">
+                    <div id="pageReftitleText_id" unselectable="on"></div>
+                    <!-- <div class="pageclose_txt" unselectable="on"><span id="pageClsText">Click to Close</span></div> -->
+                    <div id="pageRefCloseBtn_id" class="pageRefCloseBtn_id" title="Close" unselectable="on"></div>
+                    <embed class="pdflink" alt="pdf" src="pages/Topic01/pdf/T01P30/Blood gas interpretation chart International version kPa.pdf" internalinstanceid="70">
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script>
+        manifest = [{
+            src: 'pages/images/Topic01/T01P02/img2.png',
+            id: '1'
+        },
+        {
+            src: 'pages/images/Topic01/T01P02/image_02_small.png',
+            id: '2'
+        },
+        {
+            src: 'pages/images/Topic01/T01P02/small_graph.png',
+            id: '3'
+        },
+        ];
+        var audioPath = "pages/audio/Topic01/T01P30/T01P30";
+        var gItemAudioPath = ["pages/audio/Topic01/T01P30/T01P30_02", "pages/audio/Topic01/T01P30/T01P30_01", "pages/audio/Topic01/T01P30/T01P30_01", "pages/audio/Topic01/T01P30/T01P30_01"];
+        clickViewMoreInfo();
+        var currCue = 0;
+        var idd = 0;
+        var __curState = 0;
+        var clickTabCount = 0;
+        var clickTabCount1 = 0;
+        var updateContentArray = [
+            { time: "0.0", carry: "", event: "", show: "", hide: "", transcript: "Now interpret Baby Jazmine’s capillary blood gas. Select all that apply, then click Submit." },
+            {
+                time: "0.0", carry: "", event: "", show: "", hide: "",
+                transcript: "",
+                animation: [{ target: ".topImgCnt", duration: "0.5", activity: { 'opacity': '1', 'display': 'block' } }]
+            },
+            {
+                time: "0.0", carry: "", event: "", show: "", hide: "",
+                transcript: "",
+                animation: [{ target: ".rightCnt", duration: "0.5", activity: { 'opacity': '1', 'display': 'block' } }]
+            }
+        ];
+        var popupSectionArray0 = [
+            {
+                time: "0",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "That's correct. Click Next to continue."
+            },
+            {
+                time: "0.2",
+                animation: [{
+                    target: ".boxInst",
+                    duration: '0.5',
+                    activity: {
+                        'display': 'block'
+                    }
+                }]
+            }
+        ];
+        var popupSectionArray1 = [{
+            time: "0",
+            carry: "",
+            event: "",
+            show: "",
+            hide: "",
+            transcript: "Here is some feedback on your response. The blood gas values indicate a mixed respiratory and metabolic acidosis. For capillary or venous samples, the PO2 is not reflective of arterial PO2. Use pulse oximetry as an indirect measurement of arterial O2 saturation. </br>Click Next to continue."
+        }, {
+            time: "9",
+            show: "",
+            hide: "",
+            transcript: "",
+            animation: [{
+                target: ".boxInst",
+                duration: '0.5',
+                activity: {
+                    'display': 'block'
+                }
+            }]
+        }];
+        var popupSectionArray2 = [{
+            time: "0",
+            carry: "",
+            event: "",
+            show: "",
+            hide: "",
+            transcript: "Here is some feedback on your response. The blood gas values indicate a mixed respiratory and metabolic acidosis. For capillary or venous samples, the PO2 is not reflective of arterial PO2. Use pulse oximetry as an indirect measurement of arterial O2 saturation. </br>Click Next to continue."
+        }, {
+            time: "9",
+            show: "",
+            hide: "",
+            transcript: "",
+            animation: [{
+                target: ".boxInst",
+                duration: '0.5',
+                activity: {
+                    'display': 'block'
+                }
+            }]
+        }];
+        var popupSectionArray3 = [{
+            time: "0",
+            carry: "",
+            event: "",
+            show: "",
+            hide: "",
+            transcript: "Here is some feedback on your response. The blood gas values indicate a mixed respiratory and metabolic acidosis. For capillary or venous samples, the PO2 is not reflective of arterial PO2. Use pulse oximetry as an indirect measurement of arterial O2 saturation. </br>Click Next to continue."
+        }, {
+            time: "9",
+            show: "",
+            hide: "",
+            transcript: "",
+            animation: [{
+                target: ".boxInst",
+                duration: '0.5',
+                activity: {
+                    'display': 'block'
+                }
+            }]
+        }];
+        function fnAudioFinishItemComp() {
+            fnAudioFinishPageComp();
+        }
+        var __dataXml;
+        __screenCounter = 0;
+        var audplayer = document.getElementById('audioplayer');
+        $(document).ready(function () {
+            
+            bindClickableHotspot();
+            disableNextBtn();
+            var ele = document.getElementsByTagName('div');
+            for (var i = 0; i < ele.length; i++) {
+                ele[i].setAttribute("unselectable", "on");
+            }
+            var n = isInArray("M1L0T1P30", gCompPageArr);
+            if (n == true) {
+                enableNextBtn();
+                fnDesiableNext(false)
+            }
+            fStartPage();
+        });
+        function fStartPage() {
+            loadScreenData(gModuleArr[gCurrMod].Lessons[gCurrLess].Topics[gCurrTop].Pages[gCurrPage].attr("XMLSRC"))
+        }
+        function loadScreenData(aFileVal) {
+            $.ajax({
+                type: "GET",
+                url: aFileVal,
+                datatype: "xml",
+                success: loadScreenContent
+            });
+        }
+        /*--------------------------- load screen content -------------------------------*/
+        var __questionArray = [];
+        var __concordInitialCorrerctAns = [];
+        var __concordInitialClick = [];
+        function loadScreenContent(aScreenData) {
+            console.log(aScreenData)
+            $(aScreenData).find("question").each(function (index, aQues) {
+                //console.log(aQues);
+                __questionArray.push(aQues);
+                fGenerateOptionPanel();
+            });
+            console.log(__questionArray);
+        }
+        function fGenerateOptionPanel() {
+            var i = 0;
+            var str = "";
+            var str_1 = "";
+            var gTotalOptions;
+            // gTotalOptions = gPageXMLObj.find("Options").find("Option").length;
+            gTotalOptions = $(__questionArray[0]).find("Options").find("Option").length;
+            gTotalOptionsArray = []
+            // gPageXMLObj.find("Options").find("Option").each(function(aIndex, aElem){
+            $(__questionArray[0]).find("Options").find("Option").each(function (aIndex, aElem) {
+                gTotalOptionsArray.push($(aElem).attr('id'));
+            });
+            console.log(gTotalOptionsArray);
+            // gPageXMLObj.find("Options").find("Option").each(function () {
+            $(__questionArray[0]).find("Options").find("Option").each(function () {
+                i++;
+                if (i <= 3) {
+                    str += '<div class="listcnt" curid=' + i + ' id=showList_' + i + '>';
+                    str += '<input id="arrow_' + i + '" type="checkbox"></input>';
+                    str += '<label for="arrow_' + i + '" class="">' + $(this).text() + '</label>';
+                    str += '</div>'
+                } else {
+                    str_1 += '<div class="listcnt" curid=' + i + ' id=showList_' + i + '>';
+                    str_1 += '<input id="arrow_' + i + '" type="checkbox"></input>';
+                    str_1 += '<label for="arrow_' + i + '" class="">' + $(this).text() + '</label>';
+                    str_1 += '</div>'
+                }
+            });
+            __concordInitialCorrerctAns = [];
+            $(__questionArray[__screenCounter]).find("correctAnswers").find("correctAns").each(function (aIndex, aElem) {
+                //console.log($(aElem).text())
+                __concordInitialCorrerctAns.push($(aElem).text());
+            });
+            $("#sbmtBtn").addClass("submitBtnRight");
+            $(".question.leftCnt").html(str);
+            $(".question.rightCnt").html(str_1);
+            //$(".OptionPanel_labor").html(str);
+            $('#sbmtBtn').css({
+                'visibility': 'visible',
+                'opacity': '1'
+            });
+        }
+        function interSect(a, b) {
+            return $.grep(a, function (i) {
+                return $.inArray(i, b) > -1;
+            });
+        }
+        function checkCondition(aTarget, aCurValue, aCorrectAnswer) {
+            var _totCount = 0;
+            var _submitEnabale = false;
+            //console.log("first"+aTarget+":::"+aCurValue+"::"+aCorrectAnswer)
+            var _curValue = interSect(aCurValue, aCorrectAnswer);
+            //console.log("Match Val"+_curValue);
+            $(aTarget + " .listcnt").removeAttr("style").removeClass("clicked");
+            for (var i = 0; i < aCurValue.length; i++) {
+                $(aTarget + " .listcnt[curid='" + aCurValue[i] + "']").removeClass("correctAnswer").addClass("wrongAnswer");
+            }
+            for (var i = 0; i < _curValue.length; i++) {
+                _totCount++;
+                //console.log("correct answer"+_curValue[i]);
+                $(aTarget + " .listcnt[curid='" + _curValue[i] + "']").removeClass("wrongAnswer").addClass("correctAnswer");
+            }
+            ///console.log("Total click Count"+aCurValue.length+"correct count"+_totCount);
+            //console.log(aCurValue.length+":::"+_totCount);
+            if (aCurValue.length == aCorrectAnswer.length) {
+                if (aCurValue.length == _totCount) {
+                    _submitEnabale = true;
+                } else {
+                    _submitEnabale = false;
+                }
+            } else {
+                _submitEnabale = false;
+            }
+            return _submitEnabale;
+        }
+        function correctAnwerShow(aTarget, aCorrectAnswer) {
+            for (var i = 0; i < aCorrectAnswer.length; i++) {
+                //$(".OptionCLSS[curid='"+aCurValue[i]+"']").removeClass("correctAnswer").addClass("wrongAnswer");
+                $(aTarget + " .listcnt[curid='" + aCorrectAnswer[i] + "']").addClass("correctAnswer");
+            }
+        }
+        $(document).off("click").on("click", '.assessmentShow .listcnt, .postnatalShow .listcnt', function (event) {
+            if (!$(this).hasClass("disabled")) {
+                event.preventDefault();
+                //audioReset();
+                if ($(this).attr("clicked") == "true") {
+                    $(this).removeClass("clicked").removeAttr("clicked");
+                    var itemtoRemove1 = $(this).attr("curid");
+                    __concordInitialClick.splice($.inArray(itemtoRemove1, __concordInitialClick), 1);
+                    enableSubmitBtn(".cSubmitBtn", __concordInitialClick);
+                } else {
+                    var _getCurId = $(this).attr("curid");
+                    $(this).addClass("clicked").attr("clicked", "true");
+                    __concordInitialClick.push(_getCurId);
+                    __concordInitialClick = $.unique(__concordInitialClick.sort());
+                    enableSubmitBtn(".cSubmitBtn", __concordInitialClick);
+                }
+            }
+        });
+        function areDifferentByIds(clickVal, correctVal) {
+            var newArr = correctVal.slice();
+            for (var i = 0; i < clickVal.length; i++) {
+                var index = newArr.indexOf(clickVal[i]);
+                if (index !== -1) {
+                    newArr.splice(index, 1);
+                }
+            }
+            return newArr;
+        }
+        function correctAnswerNotClicked(aTarget, aCorrectAnswerVal) {
+            for (var i = 0; i < aCorrectAnswerVal.length; i++) {
+                $(aTarget + " .listcnt[curid='" + aCorrectAnswerVal[i] + "']").addClass("cborder");
+            }
+        }
+        $(".cSubmitBtn").on("click", function () {
+            if ($(this).hasClass("active")) {
+                // fnCompletion();
+                enableNextBtn();
+                fnDesiableNext(false);
+                volumeProgressState(false);
+                gCompPageArr.push("M1L0T1P30");
+                tinCanWrapper.sendStatementData("answered", "baby-conrad-initial-assessment", "Baby Conrad - Initial Assessment - Which of the following would you consider risk factors that could negatively impact Baby Conrad?");
+                audioReset();
+                var _getCheckConcord1 = '';
+                _getCheckConcord1 = checkCondition(".assessmentShow", __concordInitialClick, __concordInitialCorrerctAns);
+                correctAnwerShow(".assessmentShow", __concordInitialCorrerctAns);
+                var _checkN = areDifferentByIds(__concordInitialClick, __concordInitialCorrerctAns);
+                correctAnswerNotClicked(".assessmentShow", _checkN);
+                $(".assessmentShow .question .listcnt").addClass("disabled");
+                /* if(_getCheckConcord1==true){
+                	fnPlaySectionAudio(0);
+                }else{
+                	fnPlaySectionAudio(1);
+                }
+                */
+                if (_getCheckConcord1 == true) {
+                    fnPlaySectionAudio(0);
+                } else {
+                    var _countWrong = 0;
+                    var _countCorrect = 0;
+                    var _notselectedcorrect = 0;
+                    //$("#TabPopup5 .assessmentShow .listcnt").each(function( index,aElem ) {
+                    $(".question .listcnt").each(function (aIndex, aElem) {
+                        if ($($(this)).attr("class").indexOf("wrongAnswer") > -1) {
+                            _countWrong++;
+                        } else if ($($(this)).attr("class").indexOf("correctAnswer cborder") > -1) {
+                            _notselectedcorrect++;
+                        } else if ($($(this)).attr("class").indexOf("correctAnswer") > -1) {
+                            _countCorrect++;
+                        }
+                    });
+                    if (_countWrong >= 1 && __concordInitialCorrerctAns.length == _countCorrect) {
+                        console.log("All correct with wrong");
+                        fnPlaySectionAudio(1);
+                    } else if (_countWrong == 0 && __concordInitialCorrerctAns.length == (_notselectedcorrect + _countCorrect)) {
+                        console.log("almost correct");
+                        fnPlaySectionAudio(2);
+                    } else if (_countWrong >= 1 && _countCorrect >= 1 && _notselectedcorrect >= 1) {
+                        console.log("correct and wrong and non selected");
+                        fnPlaySectionAudio(3);
+                    } else {
+                        console.log("correct and wrong and non selected");
+                        fnPlaySectionAudio(3);
+                    }
+                    console.log(_countWrong + ": correct " + _countCorrect + ": non selected " + _notselectedcorrect);
+                    /* if(.hasClass("correctAnswer")){
+							
+                    }else if($("#TabPopup5 .assessmentShow .OptionPanel_2 .listcnt").hasClass("wrongAnswer")){
+							
+                    } 
+                    	*/
+                }
+                $(this).hide();
+            } else {
+                ///console.log("disabled");
+            }
+        });
+        function enableSubmitBtn(aTarget, aCurVal) {
+            if (aCurVal.length == 0) {
+                $(aTarget).removeClass("active");
+            } else {
+                $(aTarget).removeClass("active").addClass("active");
+            }
+        }
+        function audioReset() {
+            gAudioId = "";
+            onTimelineEnd();
+        }
+        function isInArray(value, array) {
+            return array.indexOf(value) > -1;
+        }
+        function fnPlaySectionAudio(gCurrentIndex) {
+            indexAudio = (gCurrentIndex);
+            audioId = "audio_" + gCurrentIndex;
+            gAudioId = audioId;
+            fnHideShowAudioPlayer(false);
+            updateContentArray = eval("popupSectionArray" + (gCurrentIndex));
+            initAudioPlayer(gItemAudioPath[gCurrentIndex])
+        }
+        function fnCompletion() {
+            console.log("end");
+            var _getCount1 = clickTabCount + clickTabCount1;
+            console.log("start new");
+            enableNextBtn();
+            $('.boxInst').show()
+            fnAudioFinishItemComp();
+        }
+        function fnOnAudioComplete() {
+            if (gAudioId == "startAudio") {
+                console.log("start audio");
+                audplayer.pause();
+                audplayer.currentTime = 0;
+                $(".clickToEnlarge").show();
+                $(".small_expand").show();
+                $(".small_expand1").show();
+            } else {
+                fnCompletion();
+                enableNextBtn();
+                $('.boxInst').show();
+                $(".clickToEnlarge").show();
+                $(".small_expand").show();
+                $(".small_expand1").show();
+                gCompPageArr.push("M1L0T1P30");
+                fnAudioFinishItemComp();
+                audplayer.pause();
+                audplayer.currentTime = 0;
+            }
+        }
+        var correctOptions = [0];
+        function bindClickableHotspot() {
+            console.log("clicked");
+            $('.option').addClass('aactive'); //.css({ 'cursor': 'pointer' });
+            $('.option').off().on('click', function () {
+                $('.option').removeClass('clicked');
+                $(this).addClass('clicked');
+                if ($('.option.clicked').length >= 1) {
+                    $('.cSubmitBtn').addClass('active');
+                    $('.cSubmitBtn.active').off().on('click', function () {
+                        submitClick();
+                    });
+                } else {
+                    $('.cSubmitBtn').removeClass('active');
+                }
+            });
+        }
+        $('#topImgCnt2').hide();
+        function submitClick() {
+            tinCanWrapper.sendStatementData("answered", "baby-conrad-postnatal-course", "Baby Conrad - Postnatal Course - Now take a look at Baby Conrad's vital signs shortly after birth. Are they normal or abnormal?");
+            $('.cSubmitBtn.active').hide();
+            console.log("clicked");
+            enableNextBtn();
+            fnDesiableNext(false);
+           
+            gCompPageArr.push("M1L0T1P30");
+            var incorrectCount = 0; //, correctCount = 0;
+            $('.option').each(function () {
+                if ($(this).hasClass('clicked') && ($.inArray($(this).index(), correctOptions) == -1)) {
+                    $(this).addClass('wrong');
+                    incorrectCount++;
+                }
+                $(this).off(); //.removeClass('clicked');
+            });
+            $(correctOptions).each(function (i, val) {
+                $('.option').eq(val).addClass('correct');
+            });
+            if (incorrectCount == 0) {
+                fnPlaySectionAudio(0);
+            } else {
+                fnPlaySectionAudio(1);
+            }
+            $('.option').off().removeClass('aactive'); //.css({'cursor':'default'});
+            $('.cSubmitBtn').removeClass('active');
+            $('.informationRight').show();
+        }
+        $(".small_expand").off().on("click", function () {
+            pauseAudio();
+            $("#TabPopup5 #case_study_popup.modal").show();
+            $("#TabPopup5 .sectionTop").addClass("blur");
+            $("#TabPopup5 .sectionContent").addClass("blur");
+            $(".modalTxtImg").attr('id', 'imgPopup' + $(this).attr('click_id'));
+            // $('.modalTextBottom').hide();
+            $('#ModalTextBottom' + $(this).attr('click_id')).show();
+            $('.modalContent').addClass('maxBot0');
+            $('.modalContent').removeClass('maxBot');
+        });
+        $(".small_expand1").off().on("click", function () {
+            pauseAudio();
+            $("#TabPopup5 #case_study_popup.modal").show();
+            $("#TabPopup5 .sectionTop").addClass("blur");
+            $("#TabPopup5 .sectionContent").addClass("blur");
+            $('.boxInst').addClass("blur");
+            $(".modalTxtImg").attr('id', 'imgPopup' + $(this).attr('click_id'));
+            $('.modalTextBottom').hide();
+            $('#ModalTextBottom' + $(this).attr('click_id')).show();
+            $('.modalContent').addClass('maxBot');
+            $('.modalContent').removeClass('maxBot0');
+        });
+        $(".closepopup, .modalclose").off().on("click", function () {
+            playAudio();
+            $("#TabPopup5 .modal").removeAttr("style");
+            $("#TabPopup5 .sectionTop").removeClass("blur");
+            $("#TabPopup5 .sectionContent").removeClass("blur");
+            $('.boxInst').removeClass("blur");
+        });
+        $(".popup").on("click", function () {
+            pauseAudio();
+            $("#TabPopup5 #popup").show();
+            $("#TabPopup5 .sectionTop").addClass("blur");
+            $("#TabPopup5 .sectionContent").addClass("blur");
+        });
+        $(".popupclose").on("click", function () {
+            playAudio();
+            $("#TabPopup5 #popup").removeAttr("style");
+            $("#TabPopup5 .sectionTop").removeClass("blur");
+            $("#TabPopup5 .sectionContent").removeClass("blur");
+        });
+        function pauseAudio() {
+            if (!fnPauseAudio()) {
+                console.log(true);
+                fnPauseAudio()
+            } else {
+                playPauseAudio();
+                console.log(false);
+            }
+        }
+        function playAudio() {
+            if (!fnPauseAudio()) {
+                console.log(true);
+                playPauseAudio();
+            }
+        }
+        $("._clickImg0pdf.one").on("click", function () {
+            // $('#pageClsResourcesPopup .pdflink').attr('src', $(this).data('pdf'));
+            $('#pageClsResourcesPopup #pageReftitleText_id').html($(this).find('span').html());
+            fnPauseAudio();
+            disabledAllButtons();
+            $("#pageClsResourcesPopup").show();
+        });
+        $('#pageClsResourcesPopup').hide();
+
+        $("._clickImg0pdf.two").on("click", function () {
+            $('#pageClsResourcesPopup1 .pdflink').attr('src', $(this).data('pdf'));
+            $('#pageClsResourcesPopup1 #pageReftitleText_id').html($(this).find('span').html());
+            fnPauseAudio();
+            disabledAllButtons();
+            $("#pageClsResourcesPopup1").show();
+        });
+        $('#pageClsResourcesPopup1').hide();
+        $(".pageRefCloseBtn_id").click(function () {
+            enabledAllButtons();
+            fnPlayAudio();
+            $("#pageClsResourcesPopup").hide();
+            $("#pageClsResourcesPopup1").hide();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+To enable offline viewing of HTML5 course on chrome browser, please follow below steps -
+
+1.	Copy course on ‘D:’ (D - drive)
+2.	Extract course zip file.
+3.	User should not have Chrome browser open while clicking the ‘Launch_Offline.bat’.
+4.	Once the ‘Launch_Offline.bat’ is clicked it will open Chrome browser and will auto launch course in it.

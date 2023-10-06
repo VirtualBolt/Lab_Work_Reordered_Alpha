@@ -1,0 +1,2199 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title></title>
+    <script>
+        manifest = [{
+                src: 'pages/images/Topic01/T01P20/small_expand.png',
+                id: '1'
+            },
+            {
+                src: 'pages/images/Topic01/T01P20/small_expand_hover.png',
+                id: '2'
+            },
+            {
+                src: 'pages/images/Topic01/T01P17/map.png',
+                id: '3'
+            },
+            {
+                src: 'pages/images/Topic01/T01P17/map.png',
+                id: '4'
+            }
+        ];
+    </script>
+
+    <style type="text/css">
+    .mainContainer {
+            position: absolute;
+            width: 1016px;
+            height: 460px;
+            left: 32px;
+            top: 20px;
+            opacity: 1;
+        }
+        
+        @-webkit-keyframes reducetime {
+            0% {
+                width: 0;
+            }
+            100% {
+                width: 100%;
+            }
+        }
+        
+        @-webkit-keyframes zoomin {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        @keyframes zoomin {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        /*End of Zoom in Keyframes */
+        /* Zoom out Keyframes */
+        
+        @-webkit-keyframes zoomout {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(0.67);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        @keyframes zoomout {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(0.67);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        /*End of Zoom out Keyframes */
+        #idPatchMain {display: none;}
+        .clsPatch {
+            position: absolute;
+            width: 100%;
+            height: 60px;
+            background: #ffffff;
+            border-radius: 5px;
+            -webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            border-radius: 5px;
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            padding: 6px 0px;
+        }
+        
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    
+    .clsNextText{
+      font-size: 14px !important;
+    }
+    .clsNextText2{
+        font-size: 14px !important;
+    }
+ }
+        .clsText {
+            position: absolute;
+            width: 98%;
+            left: 16px;
+            top: 10px;
+            font-size: 16px;
+            font-family: OpenSansRegular;
+            font-style: initial;
+            line-height: 26px;
+        }
+        
+        .ClsTab {
+            position: absolute;
+            width: 100%;
+            height: 20%;
+            z-index: 999;
+        }
+        
+        .clsAllTabs {
+            width: 100%;
+            height: 82px;
+        }
+        
+        .ClsTabItem {
+            position: relative;
+            cursor: pointer;
+            width: 274px;
+            height: 60px;
+            text-align: center;
+            line-height: 55px;
+            font-size: 18px;
+            font-family: OpenSansRegular;
+            border-radius: 5px;
+            background: #fcfcfc;
+            margin-left: 88px;
+            float: left;
+            top: 10px;
+            left: 0px;
+            cursor: pointer;
+        }
+        
+        .ClsTabItem:hover {
+            background: #707070;
+            color: #FFFFFF;
+        }
+        
+        #TabItem0 {
+            margin-left: 0;
+        }
+        /* #TabItem0,#TabItem1,#TabItem2{
+
+			display :none;
+
+		} */
+        
+        .boxInst {
+            position: absolute;
+            top: 489px;
+            left: 905px;
+        }
+        
+        .ClsImage0 {
+            position: absolute;
+            width: 100%;
+            height: 374px;
+            top: 104px;
+            
+           
+        }
+        
+        .mainImage {
+            position: absolute;
+            background: url('pages/images/Topic01/T01P20/img1.png') no-repeat;
+            background-size: 100% 100%;
+            width: 930px;
+            height: 290px;
+            left: 37px;
+            top: 225px;
+            display: none;
+        }
+        
+        .subImage {
+            position: absolute;
+            background-size: 100% 100%;
+            top: 100px;
+            display: none;
+        }
+        
+        #sub0 {
+            background: url('pages/images/Topic01/T01P20/EV01_02.png') no-repeat;
+            left: 35px;
+            height: 297px;
+        }
+        
+        #sub1 {
+            background: url('pages/images/Topic01/T01P20/EV01_01.png') no-repeat;
+            left: 315px;
+            height: 331px;
+        }
+        
+        #sub2 {
+            background: url('pages/images/Topic01/T01P20/EV01_03.png') no-repeat;
+            left: 750px;
+            height: 283px;
+        }
+        
+        .ClsImage1 {
+            position: absolute;
+            width: 100%;
+            height: 85%;
+            top: 100px;
+            display: none;
+        }
+        
+        .clsSubImage {
+            position: absolute;
+            width: 447px;
+            height: 398px;
+            top: -14px;
+            right: 99px;
+            border-radius: 10px;
+            animation: fadeInAnimation ease 3s; 
+            animation-iteration-count: 1; 
+            animation-fill-mode: forwards; 
+        }
+        @keyframes fadeInAnimation { 
+            0% { 
+                opacity: 0; 
+            } 
+            100% { 
+                opacity: 1; 
+            } 
+        } 
+
+       .virus ul {
+  position: relative;
+  width: 100%
+}
+
+.virus li {
+  float: left;
+  width: 25%; list-style: none; position: absolute;
+}
+
+.virus img {
+ 
+  width:100%;
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+
+.virus li.virus1  {
+    background: url('pages/images/Topic01/T01P17/virus.png') no-repeat;
+  animation-delay: 2s;position: absolute; top: 194px;
+    left: 132px;
+    animation-name: fadeIn1;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  width:60px; height:60px;
+  opacity: 0;
+  background-size: 100%;
+}
+
+
+
+.virus li.virus2  {
+    background: url('pages/images/Topic01/T01P17/virus.png') no-repeat;
+  animation-delay: 2.5s;position: absolute; top: 246px;
+    left: 137px;
+    animation-name: fadeIn1;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  width:60px; height:60px;
+  opacity: 0;
+  background-size: 100%;
+}
+
+
+
+.virus li.virus3  {
+    background: url('pages/images/Topic01/T01P17/virus.png') no-repeat;
+  animation-delay: 3s;position: absolute; top: 197px;
+    left: 237px;
+    animation-name: fadeIn1;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  width:60px; height:60px;
+  opacity: 0;
+  background-size: 100%;
+}
+
+
+
+.virus li.virus4  {
+    background: url('pages/images/Topic01/T01P17/virus.png') no-repeat;
+  animation-delay: 3.5s;position: absolute; top: 197px;
+    left: 182px;
+    animation-name: fadeIn1;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  width:60px; height: 60px;
+  opacity: 0;
+  background-size: 100%;
+}
+
+
+
+.virus li.virus5  {
+    background: url('pages/images/Topic01/T01P17/virus.png') no-repeat;
+  animation-delay: 4s;position: absolute; top: 267px;
+    left: 178px;
+    animation-name: fadeIn1;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  width:60px; height: 60px;
+  opacity: 0;
+  background-size: 100%;
+}
+
+
+
+.virus li.virus6  {
+    background: url('pages/images/Topic01/T01P17/virus.png') no-repeat;
+  animation-delay: 4.5s;position: absolute;  top: 190px;
+    left: 363px;
+    animation-name: fadeIn1;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  width:60px; height: 60px;
+  opacity: 0;
+  background-size: 100%;
+}
+
+.textLink {
+            width: 300px;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .pdfIcon0 {
+            position: absolute;
+            top: -5px;
+            height: 39px;
+            width: 33px;
+            left: 2px;
+            display: none;
+        }
+
+        #_clickImg0pdf {
+            top:-12px;
+            left: 41px;
+            position: absolute;
+            cursor: pointer;
+            color: #000 !important;
+            font-size: 16px !important;
+            font-weight: normal !important;
+           font-style: italic !important;
+            display: none;
+            border: none;
+            /* font-family: OpenSansSemiBold !important; */
+        }
+
+.virus li.virus7  {
+    background: url('pages/images/Topic01/T01P17/virus.png') no-repeat;
+  animation-delay: 5s;position: absolute;  top: 238px;
+    left: 334px;
+    animation-name: fadeIn1;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  width:60px; height: 60px;
+  opacity: 0;
+  background-size: 100%;
+}
+
+
+.virus li.virus8  {
+    background: url('pages/images/Topic01/T01P17/virus.png') no-repeat;
+  animation-delay: 5.5s;position: absolute;  top: 271px;
+    left: 314px;
+    animation-name: fadeIn1;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  width:60px; height: 60px;
+  opacity: 0;
+  background-size: 100%;
+}
+.virus li.virus9  {
+    background: url('pages/images/Topic01/T01P17/virus.png') no-repeat;
+  animation-delay: 6s;position: absolute;  top: 285px;
+    left: 276px;
+    animation-name: fadeIn1;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  width:60px; height: 60px;
+  opacity: 0;
+  background-size: 100%;
+}
+
+.virus li.virus10  {
+    background: url('pages/images/Topic01/T01P17/virus.png') no-repeat;
+  animation-delay: 6.5s;position: absolute;  top: 290px;
+    left: 224px;
+    animation-name: fadeIn1;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  width:60px; height: 60px;
+  opacity: 0;
+  background-size: 100%;
+}
+
+
+.virus li.virus11  {
+    background: url('pages/images/Topic01/T01P17/virus.png') no-repeat;
+  animation-delay: 7s;position: absolute; top: 235px;
+    left: 199px;
+    animation-name: fadeIn1;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  width:60px; height: 60px;
+  opacity: 0;
+  background-size: 100%;
+}
+
+.virus li.virus12  {
+    background: url('pages/images/Topic01/T01P17/virus.png') no-repeat;
+  animation-delay: 7.5s;position: absolute; top: 242px;
+    left: 250px;
+    animation-name: fadeIn1;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  width:60px; height: 60px;
+  opacity: 0;
+  background-size: 100%;
+}
+
+.virus li.virus13  {
+    background: url('pages/images/Topic01/T01P17/virus.png') no-repeat;
+  animation-delay: 8s;position: absolute; top: 4px;
+    left: 74px;
+    animation-name: fadeIn1;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  width:60px; height: 60px;
+  opacity: 0;
+  background-size: 100%;
+}
+@keyframes fadeIn1 {
+  from {
+    
+    opacity: 0;
+    transform: scale(0);
+  }
+  
+  to {
+    transform: scale(1.2);
+    opacity: 1;
+   
+  }
+}
+
+
+        .subFirstImage {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .subSecImage {
+            position: absolute;
+            width: 225px;
+            height: 320px;
+            left: 35px;
+            top: 15px;
+        }
+        
+        #clsSub0 {
+            background: url('pages/images/Topic01/T01P17/map.png') no-repeat;
+            
+        }
+
+       
+        /* #clsImg0{
+
+				background: url('pages/images/Topic01/T01P20/img_02_small.png') no-repeat;
+
+		    top: 185px;
+
+			} */
+        
+        #clsSub1 {
+            background: url('pages/images/Topic01/T01P20/img_01_small.png') no-repeat;
+        }
+        /* #clsImg1{
+
+				background: url('pages/images/Topic01/T01P20/img_03_small.png') no-repeat;
+
+		    top: 185px;
+
+			} */
+        /* .mapImg{
+
+				background: url('pages/images/Topic01/T01P20/small_graph.png') no-repeat;
+
+				width: 100%;
+
+			    height: 128px;
+
+			    position: relative;
+
+			    top: 14px;
+
+			} */
+        
+        .expandMap {
+            position: relative;
+            top: 8px;
+        }
+        
+        .expandMap .clickToEnlarge {
+            top: 2px;
+            left: 123px;
+        }
+        
+        .expandMap .small_expand {
+            right: 37px;
+            margin-top: 2px;
+        }
+        
+        .open_map_close {
+            top: 301px;
+            right: -38px !important;
+        }
+        
+        .closepopup{
+            position: absolute;
+            width: 41px;
+            height: 41px;
+            background: url(pages/images/Topic01/T01P22/close_expand.svg) no-repeat;
+            bottom: 40px;
+            right: 16px;
+            cursor: pointer;
+            z-index: 1000;       
+           
+            background-position: 0px 0;
+             
+            background-size: cover !important;
+            background-repeat:no-repeat ;
+        }
+        .open_map_close {
+            position: absolute;
+            width: 92px;
+            height: 47px;
+            background: url('pages/images/Topic01/T01P22/close_expand_hover.png') no-repeat;
+            bottom: 0px;
+            right: -47px;
+            cursor: pointer;
+            z-index: 1000;
+            text-decoration: none;
+        }
+        
+        /* .closepopup:hover {
+            background: url('pages/images/Topic01/T01P22/close_expand_hover.png') no-repeat;
+        } */
+        
+        .closebutton {
+            position: absolute;
+            width: 92px;
+            height: 47px;
+            background: url('pages/images/Topic01/T01P22/close_expand_hover.png') no-repeat;
+            top: 5px;
+            right: -91.5px;
+            cursor: pointer;
+            z-index: 1000;
+            text-decoration: none;
+        }
+        
+        .closebutton:hover {
+            background: url('pages/images/Topic01/T01P20/close_expand_hover.png') no-repeat;
+        }
+        
+        #case_study_popup1>.caseStudyContent>.closebutton {
+            position: absolute;
+            width: 55px;
+            height: 56px;
+            background: url('pages/images/Topic01/T01P20/videClose.png') no-repeat;
+            top: 9px;
+            right: -50.5px;
+            cursor: pointer;
+            z-index: 1000;
+            text-decoration: none;
+        }
+        
+        #case_study_popup1>.caseStudyContent>.closebutton:hover {
+            background: url('pages/images/Topic01/T01P20/videClose_hover.png') no-repeat;
+        }
+        /* #closeId0{
+
+			  left: 455px;
+
+			}
+
+			#closeClass0{
+
+			  left: 490px;
+
+			  background: url('pages/images/Topic01/T01P20/enlarge_text_inverted.png') no-repeat;
+
+			} */
+        
+        .clickToClose {
+            width: 160px;
+            height: 46px;
+            top: 383px;
+            left: 149px;
+            position: absolute;
+            z-index: 10000;
+            line-height: 42px;
+            text-align: center;
+            font-size: 14px;
+            color: #4D667B;
+            background: url('pages/images/Topic01/T01P20/enlarge_text.png') no-repeat;
+            font-family: OpenSansRegular;
+        }
+        
+        .clickToClose>i {
+            position: absolute;
+            left: 10px;
+        }
+        
+        .videoToClose {
+            width: 160px;
+            height: 46px;
+            top: 10px;
+            left: 495px;
+            position: absolute;
+            z-index: 10000;
+            line-height: 38px;
+            text-align: center;
+            font-size: 14px;
+            background: url('pages/images/Topic01/T01P20/enlarge_text.png') no-repeat;
+            font-family: OpenSansRegular;
+        }
+        
+        .small_expand{
+            background: url(pages/images/Topic01/T01P22/small_expand.svg) !important;
+            position: absolute;
+            cursor: pointer;
+            width: 29px;
+            height: 29px;
+            bottom: 23px;
+            right: 17px;
+            background-position: 0px 0;          
+            background-size: cover !important;
+            background-repeat:no-repeat ;
+            display:none
+        }
+        .open_map {
+            background: url('pages/images/Topic01/T01P20/small_expand.png');
+            width: 28px;
+            height: 28px;
+            position: absolute;
+            right: 10px;
+            display: none;
+            top: 335px;
+            float: inherit;
+            text-decoration: none;
+            /* border-radius: inherit; */
+            margin-left: 0px;
+            background-color: inherit;
+            padding: 0px;
+            cursor: pointer;
+        }
+        
+        /* .small_expand:hover {
+            background: url('pages/images/Topic01/T01P20/small_expand_hover.png');
+        } */
+        
+        section {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .Clsback {
+            position: relative;
+            width: 242px;
+            height: 335px;
+            top: 100px;
+            left: 33px;
+            margin-right: 91px;
+            float: left;
+            background: #FFFFFF;
+            border-radius: 5px;
+            display: none;
+        }
+        
+        ._link {
+           
+            display: none;
+            color: #4D667B;
+            font-weight: 700;
+            cursor: pointer;
+            border-bottom: 1px solid #4D667B;
+            font-style: initial;
+        }
+        
+        .videolink {
+            position: absolute;
+            top: 465px;
+            left: 35px;
+            width: 480px;
+            font-size: 12px;
+            font-family: OpenSansRegular;
+            color: #4D667B;
+            font-weight: 700;
+            cursor: pointer;
+            font-style: initial;
+            display: none;
+        }
+        /* .subSeImage{
+
+				position: absolute;
+
+		    width: 161px;
+
+		    height: 161px;
+
+		    top: 20px;
+
+		    left: 38px;
+
+			} */
+        
+        #subImg0 {
+            background: url('pages/images/Topic01/T01P20/EV01_11.png') no-repeat;
+        }
+        
+        #subImg1 {
+            background: url('pages/images/Topic01/T01P20/EV01_12.png') no-repeat;
+        }
+        
+        #subImg2 {
+            background: url('pages/images/Topic01/T01P20/EV01_13.png') no-repeat;
+        }
+        
+        .subText {
+            position: absolute;
+            width: 210px;
+            height: 125px;
+            top: 200px;
+            left: 15px;
+            font-family: OpenSansRegular;
+            font-size: 14px;
+            font-style: initial;
+        }
+        
+        .ClsTextTab {
+            position: absolute;
+            width: 40%;
+            height: auto;
+            top: 125px;
+            left: 0px;
+            float: left;
+          
+            border-radius: 5px;
+            /* display: none; */
+        }
+    
+
+        #_clickImg0pdf span {
+            border-bottom: 1px solid #000000;
+            position: relative;
+        }
+        .listcnt {
+            position: relative;
+            top: 24px;
+            /* padding-right: 20px; */
+            margin-bottom: 7px;
+            padding-bottom: 6px;
+            font-size: 14px;
+            border: 1px solid transparent;
+            width: 100%;
+            left: 0px;
+            display: none;
+        }
+        
+        .arrowHolder {
+            position: absolute;
+            top: 8px;
+            width: 8px;
+            height: 8px;
+            background: #5B5B5B;
+            border-radius: 50%;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -khtml-border-radius: 50%;
+        }
+        .OptionTxtCLSS:before, ul.bullet li:before {background:transparent; width: 0;}
+        .OptionCLSS {
+            position: relative;
+            left: -9px;
+            font-style: initial;
+            box-shadow: 2px 2px 8px -1px rgba(0,0,0,0.75);
+           padding :10px;
+           background: #fff;
+           width: 86%;
+          
+           
+        }
+        #pageClsResourcesPopup {
+            position: absolute;
+            z-index: 1070;
+            top: 0px;
+            height: 105%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: none;
+            /* opacity: 0.5; */
+        }
+
+        #pageid_ReferencesBG {
+            position: absolute;
+            height: 457px;
+            width: 940px;
+            left: 0px;
+            right: 0px;
+            margin: auto;
+            top: 40px;
+            background-color: #FFFFFF;
+            border-radius: 10px;
+        }
+
+        #pageid_RefTitleBar {
+            font-size: 36px;
+            background-color: #4d667b;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            left: 0px;
+            top: 0px;
+            font-family: OpenSansRegular;
+            /* font-weight: bold; */
+            width: 942px;
+            height: 44px;
+            position: absolute;
+        }
+
+        #pageid_ReftitleText {
+            position: absolute;
+            color: #fff;
+            font-size: 18px;
+            left: 11px;
+            top: 10px;
+        }
+
+        #pageid_RefCloseBtn {
+            position: absolute;
+            width: 29px;
+            height: 29px;
+            top: 7px;
+            left: 900px;
+            cursor: pointer;
+            background: url('media/images/player/common/close.png');
+            /* background-position: -49px 0px; */
+            -webkit-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+            /* background-position: 0px 0px; */
+        }
+
+        /* #pageid_RefCloseBtn:hover {
+
+			background: url('media/images/player/common/close.png');
+
+			background-position: 0px 0px;
+
+		} */
+
+        #pageRefTitleBar_id {
+            font-size: 36px;
+            background-color: #4d667b;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            left: 0px;
+            top: 0px;
+            font-family: OpenSansRegular;
+            /* font-weight: bold; */
+            width: 942px;
+            height: 44px;
+            position: absolute;
+        }
+
+        #pageReftitleText_id {
+            position: absolute;
+            color: #fff;
+            font-size: 18px;
+            left: 11px;
+            top: 10px;
+        }
+
+        .pageclose_txt {
+            position: absolute;
+            width: 135px;
+            height: 44px;
+            top: 48px;
+            left: 800px;
+            background: url('media/images/player/common/pdf_close_inst.png');
+        }
+
+
+        a.popup {
+            color: #d7722c;
+        }
+        .OptionTxtCLSS2:before, ul.bullet li:before {content: '';
+    background: #000000;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    top: 6px;
+    left: -15px;}
+        .OptionCLSS2 {
+            position: relative;
+            left: -4px;
+            font-style: initial;
+            box-shadow: 2px 2px 8px -1px rgba(0,0,0,0.75);
+           padding :9px;
+           background: #fff;
+           top:-11px;
+           width:100%
+          
+           
+        }
+
+        .OptionTxtCLSS3:before, ul.bullet li:before {content: '';
+    background: #000000;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    top: 6px;
+    left: -15px;}
+        .OptionCLSS3 {
+            position: relative;
+            left: 0px;
+            font-style: initial;
+            box-shadow: 2px 2px 8px -1px rgba(0,0,0,0.75);
+           padding :10px;
+           background: #fff;
+           top:30px
+          
+           
+        }
+        .yellowBorder{
+   
+    /* border: 2px solid #E4BA4E; */
+    border: 1px solid #F6A87A;
+    border-radius: 5px; padding: 10px;
+    background: #FFF;
+           border-radius:5px;
+         height: 92px;
+    
+}
+.yellowBorder2{
+   
+   /* border: 2px solid #E4BA4E; */
+   border: 1px solid #F6A87A;
+   border-radius: 5px; padding: 10px;
+   background: #FFF;
+          border-radius:5px;
+        height:56px;
+   
+}
+.yellowBorder2 .clsIcon{
+    position: absolute;
+    background: url(pages/images/Topic01/T01P12/warning.svg);
+    width: 43px;
+height: 40px;
+background-size: cover;
+background-repeat: no-repeat;
+    left: 15px;
+    top: 25px;
+}
+.clsNextText {
+    position: absolute;
+    font-size: 16px;
+    font-family: OpenSansRegular;
+    width: 74%;
+    top: 22px;
+    left:78px;font-weight: bold;
+}
+.clsNextText1 {
+    position: absolute;
+    font-size: 16px;
+    font-family: OpenSansRegular;
+    width: 100%;
+    top: 22px;
+    left:78px;font-weight: bold;
+}
+.clsNextText2 {
+    position: absolute;
+    font-size: 16px;
+    font-family: OpenSansRegular;
+    width: 100%;
+    top: 48px;
+    left:78px;font-weight: bold;
+}
+    
+       
+    .yellowBorder .clsIcon{position: absolute;
+    background: url(pages/images/Topic01/T01P12/warning.svg);
+    width: 43px;
+height: 40px;
+left: 20px;
+top: 45px;
+background-size: cover;
+background-repeat: no-repeat;}
+
+
+    .pdf-icon {position: absolute;
+    bottom: -10px;
+    width: 50%;
+    left: 0px;
+    height: auto;
+    }
+     @media all and (-ms-high-contrast:none)
+     {
+    
+    /* *::-ms-backdrop, .pdf-icon  { left:188px; }*/ /* IE11 */
+     }
+    .pdf-icon .clsIcon{position: absolute;
+    background: url(pages/images/Topic01/T01P17/pdficon.png) no-repeat; 
+    width: 28px;
+    height: 30px;
+    left:-2px;
+    top: -7px;
+    background-size: contain;}
+
+    .pdf-icon .text {position: absolute; left:2px}
+    .transmission-box {background: #FFF; border-radius: 5PX;box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75); position: absolute; top:-100px; display:none; width:101.9%; left:2px; height:310px;animation:fadeInAnimation ease 1s; 
+            animation-iteration-count: 1; 
+            animation-fill-mode: forwards;}
+    .transmission-box-inner2 {width:500px; position: absolute; text-align: center; left:0; display: none;animation:fadeInAnimation ease 1s; 
+            animation-iteration-count: 1; 
+            animation-fill-mode: forwards;}
+    .transmission-box-inner3 {width:500px; position: absolute; text-align: center;left:485px; display: none;animation:fadeInAnimation ease 1s; 
+            animation-iteration-count: 1; 
+            animation-fill-mode: forwards;}
+    .transmission-box-inner3 h3{ font-size: 16px;margin-top:10px; line-height: 28px;}
+    .transmission-box-inner2 h3{ font-size: 16px;margin-top:10px;line-height: 28px;}
+    .transmission-box-inner3 h4{ font-size: 16px;}
+    .transmission-box-inner2 h4{ font-size: 16px;}
+    .twentypercent {position: absolute; display: none;top: 156px;
+    left: 286px; font-weight: bold; animation: fadeInAnimation ease 2s; 
+            animation-iteration-count: 1; 
+            animation-fill-mode: forwards; 
+        }
+       
+
+    .twopercent {position: absolute;display: none;top: 230px;
+    left: 292px;font-weight: bold;animation: fadeInAnimation ease 2s; 
+            animation-iteration-count: 1; 
+            animation-fill-mode: forwards; }
+    @keyframes fadeInAnimation { 
+            0% { 
+                opacity: 0; 
+            } 
+            100% { 
+                opacity: 1; 
+            } 
+        } 
+        /* #one,#two,#three{
+
+		    transform: scale(0);
+
+			} */
+        /* .ClsTextTab > ul{
+
+			  list-style: none;
+
+		    line-height: 25px;
+
+			}
+
+
+
+			.ClsTextTab > ul >li{
+
+	      padding-bottom: 10px;
+
+				list-style-image: url('pages/images/Topic01/T01P20/bullet_point.png');
+
+		    width: 195px;
+
+			} */
+        
+        #textTab1 {
+            width: 740px;
+            background: #ffffff00;
+            margin-right: 0;
+        }
+        
+        .subTirImage {
+            position: relative;
+            top: 0px;
+            left: 17px;
+            width: 225px;
+            height: 225px;
+            margin-right: 22px;
+            float: left;
+            background: #FFFFFF;
+            border-radius: 5px;
+            display: none;
+        }
+        
+        #clsTir0 {
+            background: url('pages/images/Topic01/T01P20/img_11_small.png') no-repeat;
+        }
+        
+        #clsTir0>.small_expand {
+            top: 190px;
+            right: 5px;
+        }
+        
+        #clsTir1 {
+            background: url('pages/images/Topic01/T01P20/img_12_small.png') no-repeat;
+        }
+        
+        #clsTir1>.small_expand {
+            top: 190px;
+            right: 5px;
+        }
+        
+        #clsTir2 {
+            background: url('pages/images/Topic01/T01P20/img_13_small.png') no-repeat;
+            margin-right: 0;
+        }
+        
+        #clsTir2>.small_expand {
+            top: 190px;
+            right: 5px;
+        }
+        
+        .clsSubPatch {
+            position: absolute;
+            width: 720px;
+            height: 90px;
+            top: 240px;
+            left: 17px;
+            display: none;
+            background: #FFFFFF;
+            border-radius: 5px;
+            -webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            border-radius: 5px;
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+        }
+        
+        .clsSubText {
+            font-family: OpenSansRegular;
+            font-size: 14px;
+            font-style: initial;
+            width: 90%;
+            position: absolute;
+            padding: 23px 35px;
+        }
+        
+        .clsActive {
+            background: #707070;
+            color: #FFFFFF;
+            pointer-events: none;
+        }
+        
+        .CaseStudy {
+            position: absolute;
+            left: 0px;
+            top: 5px;
+            width: 100%;
+            height: 106%;
+            background: rgba(255, 255, 255, 255);
+            /* //IE: ;
+
+		    //background: rgba(255,255,255,0.98); */
+            transform: scale(1.1);
+            transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+            z-index: 1000;
+            disable: none;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -mz-border-radius: 5px;
+            display: none;
+        }
+        
+        .caseStudyContent {
+            position: relative;
+            left: 0px;
+            top: 25px;
+            width: 351px;
+            height: 436px;
+            /* background: rgba(91,91,91, 1); */
+            transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+            z-index: 1000;
+            disable: none;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -mz-border-radius: 5px;
+            margin: 0px auto;
+            /* border: 1px solid rgba(91,91,91, 1); */
+        }
+        
+        .ModalTextBottom {
+            position: absolute;
+            bottom: 0px;
+            left: 10px;
+            width: 98%;
+            font-size: 14px;
+            height: 40px;
+            color: #ffffff;
+            font-family: OpenSansBold;
+            background: #5B5B5B;
+            text-align: center;
+            line-height: 42px;
+        }
+        
+        .ModalTxtImg {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            font-size: 14px;
+            height: 385px;
+            background-size: contain;
+            z-index: 100;
+            border-radius: 5px;
+        }
+        
+        #imgPopup0 {
+            background: url('pages/images/Topic01/T01P17/img02.png') no-repeat;
+            background-size: 100% 100%;
+            background-position: -1px 0px;
+            height: 100%;
+        }
+        
+        .pageclose_txt {
+            position: absolute;
+            width: 135px;
+            height: 44px;
+            top: 48px;
+            left: 800px;
+            background: url('media/images/player/common/pdf_close_inst.png');
+        }
+        
+        #pageClsText {
+            position: absolute;
+            width: 115px;
+            height: 29px;
+            top: 15px;
+            left: 16px;
+            font-family: OpenSansRegular;
+            font-size: 16px;
+            font-style: italic;
+            color: #172430;
+        }
+        
+        #pageRefCloseBtn_id {
+            position: absolute;
+            width: 29px;
+            height: 29px;
+            top: 7px;
+            left: 900px;
+            cursor: pointer;
+            background: url('media/images/player/common/close.png');
+            /* background-position: -49px 0px; */
+            -webkit-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+        
+        #pageid_RefCloseBtn:hover #pageclose_txt {
+            background: url('media/images/player/common/pdf_close_inst.png');
+            /* background-position: 0px 0px; */
+        }
+        
+        #pagereferences {
+            margin-left: 0%;
+            margin-top: 45px;
+            color: #333;
+            width: 800px;
+            min-height: 412px;
+            overflow-y: auto;
+            position: absolute;
+            height: 412px;
+        }
+        
+        #pagereferences ul {
+            padding-top: 0%;
+            padding-bottom: 0%;
+            padding-left: 1%;
+            margin: 0px;
+            margin-top: 10px;
+        }
+        /* #references ul li a{
+
+					outline: none;
+
+					color: #0000ff;
+
+					font-family: OpenSansRegular;
+
+					text-decoration: underline;
+
+					font-size: 18px;
+
+			}
+
+			#references ul li a:hover{
+
+				color: #009cff;
+
+			}
+
+			#references ul li a:active {
+
+				outline: none; */
+    /* } */
+    #pagereferences ul li {
+        border: 0 none;
+        margin-left: -4px;
+        margin-right: 5px;
+        vertical-align: bottom;
+        width: 4%;
+    }
+    #closeMainDiv .glossaryclosetip {
+        margin-left: 70%;
+        color: #FFFFFF;
+        font-family: OpenSansRegular;
+        font-size: 79.2%;
+    }
+    .bullet {
+        position: relative;
+        background-image: url("media/images/player/common/bullet.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        float: left;
+        height: 13px;
+        width: 13px;
+        margin-top: 7.9px;
+        list-style-type: none;
+        border-radius: 10px;
+    }
+    .text {
+        color: #172430;
+        list-style-type: none;
+        margin-left: 30px;
+        position: relative;
+    }
+    .clsSectionName {
+        margin-top: 17px !important;
+        font-family: SegoeUIBold;
+        color: #1a1f71;
+    }
+    .clsResouceLink {
+        margin-left: 1% !important;
+    }
+    ._clickLink {
+        position: relative;
+        font-size: 16px;
+        font-weight: 600;
+        text-decoration: underline;
+        padding-bottom: 15px;
+    }
+    ._clickLink:hover {
+        position: relative;
+        font-size: 16px;
+        font-weight: 600;
+        text-decoration: underline;
+        padding-bottom: 15px;
+        color: blue;
+        cursor: pointer;
+    }
+    .pdflink {
+        position: absolute;
+        top: 44px;
+        width: 100%;
+        height: 431px;
+        /* z-index: 999; */
+        
+        border-radius: 0 0 10px 10px;
+    }
+    ._viewed {
+        color: blue;
+    }
+    .long-arrow  {
+
+    position: relative;
+    top:-11px
+}
+    .long-arrow > div { position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    top: 0px;
+    left: 0;
+    -webkit-animation-name: arrowbar;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-name: arrowbar;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;}
+
+    .long-arrow img {
+    max-width: 15%;
+}
+
+
+
+@keyframes arrowbar {
+    0% {
+        height: 100%;
+    }
+    100% {
+        height: 0%;
+    }
+}
+
+@-webkit-keyframes arrowbar {
+    0% {
+        height: 100%;
+    }
+    100% {
+        height: 0%;
+    }
+}
+
+.long-arrow2  {
+
+position: relative;
+bottom: -132px;
+
+}
+.long-arrow2 > div { position: absolute;
+height: 100%;
+width: 100%;
+background: #fff;
+top: 0px;
+left: 0;
+-webkit-animation-name: arrowbar2;
+-webkit-animation-duration: 5s;
+-webkit-animation-fill-mode: forwards;
+animation-name: arrowbar2;
+animation-duration: 5s;
+animation-fill-mode: forwards;}
+
+.long-arrow2 img {
+max-width: 15%;
+
+
+}
+
+
+
+@keyframes arrowbar2 {
+0% {
+    height: 100%;
+}
+100% {
+    height: 0%;
+}
+}
+
+@-webkit-keyframes arrowbar {
+0% {
+    height: 100%;
+}
+100% {
+    height: 0%;
+}
+}
+.transmission-box-inner3 h4{position: absolute; bottom: -174px; width: 100%;}
+.transmission-box-inner2 h4{position: absolute; bottom: -29px;width: 100%;}
+
+    </style>
+
+    <script>
+        var audioPath = "pages/audio/Topic01/T01P17/T01P17";
+
+        //var gItemAudioPath=["pages/audio/Topic01/T01P17/T01P17"
+
+        //];
+
+
+
+        var currCue = 0;
+
+        var idd = 0;
+
+
+
+        var updateContentArray = [
+
+            {
+                time: "0",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "Because of its potential to be devastating for neonates, we will spend a little time discussing herpes simplex viral (HSV) infection. In the United States, HSV infection affects 1 in 2,000 to 1 in 3,000 live births, with approximately 1,500  new cases diagnosed each year. Herpes simplex virus type 1 or 2 may be present in the maternal genital tract without the mother even knowing she has an infection. A negative history of HSV exposure is not uncommon, since asymptomatic viral shedding is possible. Infants exposed to HSV during delivery may not have signs until 3 to 7 days of age. Most infants with HSV will present with clinical symptoms by 1 month of age, but parents should be taught that HSV can present anytime in the first 6 weeks after birth. If the mother acquires a first episode, or primary genital infection near the time of delivery, the risk of transmitting the infection to the infant is estimated between 25 to 60%. If the mother has recurrent HSV or if she acquired HSV in the first half of her pregnancy and the infection is reactivated, the risk of transmission of HSV to the infant is approximately 2%.<br> Click Next to continue.",
+            },
+            {
+            time: "5",
+            carry: "",
+            event: "",
+            show: "",
+            hide: "",
+            transcript: "",
+            animation: [{
+                target: ".pdfIcon0, #_clickImg0pdf",
+                duration: "0.5",
+                activity: {
+                    'opacity': '1',
+                    'display': 'block'
+                }
+            }]
+         }, 
+       // {
+        //     time: "5",
+        //     carry: "",
+        //     event: "",
+        //     show: "",
+        //     hide: "",
+        //     transcript: "",
+        //     animation: [{
+        //         target: "",
+        //         duration: "0.5",
+        //         activity: {
+        //             'opacity': '1',
+        //             'display': 'block'
+        //         }
+        //     }]
+        // },
+            {
+                time: "9",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+             transcript: "",
+                animation: [{
+                    target: "#showList_0",
+                    duration: "0.5",
+                    activity: {
+                        'display': 'block'
+                    }
+                }]
+            },
+
+            {
+                time: "21",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "",
+                animation: [{
+                    target: "#idPatchMain",
+                    duration: "0.5",
+                    activity: {
+                        'display': 'block'
+                    }
+                }]
+            },
+            {
+                time: "35.0",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "",
+                animation: [{
+                    target: "#idPatchMain",
+                    duration: "0.5",
+                    activity: {
+                        'display': 'none',
+                        
+                        
+                        
+                    }
+                }]
+            },
+
+            
+            {
+                time: "35.0",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "",
+                animation: [{
+                    target: "#showList_0",
+                    duration: "0.5",
+                    activity: {
+                        'display': 'none',
+                       
+                        
+                        
+                    }
+                }]
+            },
+            {
+                time: "35.0",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "",
+                animation: [{
+                    target: "#clsSubImage0",
+                    duration: "0.5",
+                    activity: {
+                        
+                        'transform': 'scale(0)',
+                        'opacity':'0'
+                        
+                        
+                    }
+                }]
+            },
+            {
+                time: "36",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "",
+                animation: [{
+                    target: "#showList_2",
+                    duration: "0.5",
+                    activity: {
+                        'display': 'block',
+                     
+                    }
+                }]
+            },
+            {
+                time: "52.1",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "",
+                animation: [{
+                    target: ".transmission-box",
+                    duration: "0.5",
+                    activity: {
+                        'display': 'block',
+                        'opacity':'1'
+                    }
+                }]
+            },
+            {
+                time: "52.1",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "",
+                animation: [{
+                    target: ".transmission-box-inner2",
+                    duration: "0.5",
+                    activity: {
+                        'display': 'block',
+                        'opacity':'1'
+                    }
+                }]
+            },
+            {
+                time: "61.06",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "",
+                animation: [{
+                    target: ".twentypercent",
+                    duration: "0.5",
+                    activity: {
+                        'display': 'block',
+                         opacity:'1'
+                    }
+                }]
+            },
+
+            {
+                time: "64.00",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "",
+                animation: [{
+                    target: ".transmission-box-inner3",
+                    duration: "0.5",
+                    activity: {
+                        'display': 'block',
+                        'opacity':'1'
+                        
+                    }
+                }]
+            },
+            {
+                time: "74.00",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "",
+                animation: [{
+                    target: ".twopercent",
+                    duration: "0.5",
+                    activity: {
+                        'display': 'block',
+                        'opacity':'1'
+                    }
+                }]
+            },
+
+        ];
+
+
+
+        function fnAudioFinishItemComp() {
+
+            fnAudioFinishPageComp();
+
+            fnUpdatePageCompletionCounter(0);
+
+            //fnUpdatePageCompletionCounter(7);
+
+        }
+
+        var __dataXml;
+
+        var __clickCount = 0;
+
+
+
+        $(document).ready(function() {
+            restrictBacknMenuOnAssistment();
+
+            disableNextBtn();
+
+            var ele = document.getElementsByTagName('div');
+
+            for (var i = 0; i < ele.length; i++) {
+
+                ele[i].setAttribute("unselectable", "on");
+
+            }
+
+
+
+            /* 	$(".clsEnaBackBtn").on("click", function () {
+	
+					console.log('clicked');
+	
+					fnJumpToPageByID("M1L0T1P17");
+	
+				}); */
+
+            var n = isInArray("M1L0T1P17", gCompPageArr);
+
+            console.log(n);
+
+            if (n == true) {
+
+                enableNextBtn();
+
+                // fnGlowNextBtn();
+
+                fnDesiableNext(false);
+
+            }
+
+        });
+
+
+
+        function isInArray(value, array) {
+
+            return array.indexOf(value) > -1;
+
+        }
+
+
+
+        function audioReset() {
+
+            gAudioId = "";
+
+            onTimelineEnd();
+
+        }
+
+
+
+        /* function fnPlaySectionAudio(gCurrentIndex){
+	
+			indexAudio = (gCurrentIndex);
+	
+			audioId = "audio_"+gCurrentIndex;
+	
+			fnHideShowAudioPlayer( false );
+	
+			updateContentArray = eval("popupSectionArray"+(gCurrentIndex));
+	
+			initAudioPlayer(gItemAudioPath[gCurrentIndex])
+	
+		} */
+
+
+
+        function fnCompletion() {
+
+            // console.log("end");
+
+            //if($(".clsVisited").length==gTotalPopups){
+
+            //enableNextBtn();
+
+            //fnAudioFinishItemComp();
+
+            //}
+
+        }
+
+
+
+        $(".small_expand").on("click", function() {
+            pauseAudio()
+                /* if(!fnPauseAudio()){
+	
+				console.log(true);
+	
+				fnPauseAudio()
+	
+			}else {
+	
+				playPauseAudio();
+	
+				console.log(false);
+	
+			} */
+
+            $(".modalTxtImg").hide();
+
+            var i = $(this).attr("id").slice(8);
+
+            $("#case_study_popup" + i).show();
+
+            $("#imgPopup" + i).show();
+
+            $(".mainContainer").addClass("blur");
+
+            //$(".sectionContent").addClass("blur");
+
+        });
+
+
+
+        $(".closepopup").on("click", function() {
+            playAudio()
+                // audioReset();
+
+            var __aIndex = $(this).attr("id").slice(8);
+
+            /* if(!fnPauseAudio()){
+	
+				console.log(true);
+	
+				playPauseAudio();
+	
+			} */
+
+
+
+            $(".modal").removeAttr("style");
+
+            $(".mainContainer").removeClass("blur");
+
+            //$(".sectionContent").removeClass("blur");
+
+        });
+
+        function fnOnAudioComplete() {
+
+            if (gAudioId == "startAudio") {
+
+                enableNextBtn();
+
+                fnAudioFinishItemComp();
+                $('.boxInst').css('display', 'block');
+
+                $('.small_expand').css('display', 'block');
+
+                gCompPageArr.push("M1L0T1P16_16");
+
+            } else {
+
+                $("#idTick0" + selectedIndex).css({
+                    "opacity": "1"
+                });
+
+                $("#clsTabTxt" + selectedIndex).css({
+                    'color': '#80848b'
+                });
+
+                $(".ClsTab").removeClass("clsDisable");
+
+                $("#TabImage" + selectedIndex).addClass("clsDisable");
+
+                fnCompletion();
+
+                if ($(".clsVisited").length === 2) {
+
+
+
+                }
+
+            }
+
+        }
+
+        function pauseAudio() {
+
+            if (!fnPauseAudio()) {
+
+                fnPauseAudio()
+
+            } else {
+
+                playPauseAudio();
+
+            }
+
+        }
+
+        function playAudio() {
+
+            if (!fnPauseAudio()) {
+
+                playPauseAudio();
+
+            }
+
+        }
+
+
+        $("#_clickImg0pdf").on("click", function () {
+            console.log("hello")
+            // $('#pageClsResourcesPopup .pdflink').attr('src', 'pages/Topic01/pdf/Page17.pdf');
+            fnPauseAudio();
+            // $('#pageReftitleText_id').html('Case Presentation - Neonatologist from Sweden');
+            disabledAllButtons();
+            $("#pageClsResourcesPopup").show();
+
+        });
+   
+        $('#pageClsResourcesPopup').hide();
+        $("#pageRefCloseBtn_id").click(function () {
+            enabledAllButtons();
+            fnPlayAudio();
+            //$("#pageClsResourcesPopup").hide();
+            $("#pageClsResourcesPopup").hide();
+            //$("#pageid_RefTitleBar").show()
+        });
+
+    </script>
+
+    <!-- <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+
+<script src="jsfiles/libs/jquery.mCustomScrollbar.concat.min.js"></script> -->
+
+</head>
+
+<body>
+
+
+
+    <div class="pg-pageContent" UNSELECTABLE="on">
+
+        <div class="mainContainer">
+
+          
+            <div class="clsPatch" id="idPatchMain">
+
+                <div class="clsText" id="idText1">Herpes simplex virus type 1 or 2 may be present in the maternal genital tract without the mother even knowing she has an infection. A negative history of HSV exposure is not uncommon since asymptomatic viral shedding is very possible.</div>
+
+            </div>
+            <div class="listcnt" id="showList_2" unselectable="on" >
+            <div id="option_0"  class="OptionCLSS2">
+                <div class="yellowBorder2 ">
+                <span class="clsIcon" style="opacity: 1; display: block;"></span>
+                <span id="opt_0" class="OptionTxtCLSS2 clsNextText1 custom-width">
+                    Infants exposed to HSV during delivery may not have signs until 3 to 7 days of age.
+                    </span>
+                    <span id="opt_1" class="OptionTxtCLSS3 clsNextText2 custom-width">
+                        Most have clinical disease by 1 month of age; however, HSV disease can present anytime in the first 6 weeks after birth.
+                        </span>
+            </div> </div>
+            </div>
+
+            <section class="ClsSecItem section" id="section0">
+
+                <div class="ClsImage0">
+
+                    <div class="clsSubImage" id="clsSubImage0">
+
+                        <div class="subFirstImage" id="clsSub0"></div>
+
+                        <!-- <div class="subFirstImage" id="clsImg0"></div> -->
+
+                      <div class="virus">
+
+                        <ul>
+                            <li class="virus1">&nbsp;</li>
+                            <li class="virus2">&nbsp;</li>
+                            <li class="virus3">&nbsp;</li>
+                            <li class="virus4">&nbsp;</li>
+                            <li class="virus5">&nbsp;</li>
+                            <li class="virus6">&nbsp;</li>
+                            <li class="virus7">&nbsp;</li>
+                            <li class="virus8">&nbsp;</li>
+                            <li class="virus9">&nbsp;</li>
+                            <li class="virus10">&nbsp;</li>
+                            <li class="virus11">&nbsp;</li>
+                            <li class="virus12">&nbsp;</li>
+                            <li class="virus13">&nbsp;</li>
+                          </ul>
+                      </div>
+
+                    </div>
+
+                    <div class="ClsTextTab" id="textTab0">
+                        <div class="listcnt" id="showList_0">
+                            <div id="arrow_0" class="arrowHolder"></div>
+                            <div id="option_0" curid="1" class="OptionCLSS">
+                                <div class="yellowBorder ">
+                                <span class="clsIcon" style="opacity: 1; display: block;"></span>
+                                <span id="opt_0" class="OptionTxtCLSS clsNextText custom-width"> In the United States, HSV infection affects 1 in 2,000 to 1 in 3,000 live births, with approximately 1,500 new cases diagnosed each year.</span>
+                            </div>
+                            </div>
+                        </div>
+
+                    </div>
+                
+                    <div class="transmission-box">
+                    <div class="transmission-box-inner2">
+                        <h3>1<sup>st</sup> episode (primary) genital <br/>infection near the time of delivery</h3>
+                       
+                        <div class="long-arrow"> <div></div>
+                            <img src="pages/images/Topic01/T01P17/first-arrow.svg"/></div>
+                        <h4>Transmission risk</h4>
+
+                        <div class="twentypercent">25-60%</div>
+
+                    </div>
+                    <div class="transmission-box-inner3">
+                        <h3>Recurrent HSV or HSV in 1<sup>st </sup>half of <br/>pregnancy with reactivation</h3>
+                        <div class="long-arrow2"> <div></div>
+                            <img src="pages/images/Topic01/T01P17/secondarrow.svg"/></div>
+                        <h4>Transmission risk</h4>
+                        <div class="twopercent">2%</div>
+                    </div>
+
+                    </div>
+                  
+                </div>
+                
+                   <!--  <a href="pages/Topic01/pdf/Herpes simplex virus.pdf" target="_blank"> 
+                        <span class="clsIcon" style="opacity: 1; display: block;"></span>
+                        <span class="text">
+                        Herpes simplex virus</span>
+                    </a>
+
+                </div>
+                <div class="CaseStudy" id="case_study_popup0">
+
+					<div class="caseStudyContent" unselectable="on">
+
+						<!- <div class="ModalTextBottom" unselectable="on"></div> -
+
+						<div class="ModalTxtImg" unselectable="on" id="imgPopup0"></div>
+
+						<div class="ModalTxtImg" unselectable="on" id="imgPopup1"></div>
+
+						<a class="closepopup" id="closeId0" href="javascript:void(0)" title="Click to Close"></a>
+
+						<div class="clickToContinue expandImgTxtRight clickToClose" id="closeClass0"><i>Click to close
+								image.<i></div>
+
+					</div>
+
+				</div> -->
+
+
+            </section>
+<div class="pdf-icon">
+
+                    <div class="textLink">
+                        
+                        <div class="_link" id="_clickImg0pdf"><div class="pdfIcon0" style="left: -40px;"><img class="pdf_icon" src="pages/images/Topic01/T01P20/pdf_icon.svg" alt="" />
+                        </div> <span> Herpes simplex virus</span>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+        <div id="pageClsResourcesPopup">
+
+            <div id="pageid_ReferencesBG">
+    
+                <div id="pageRefTitleBar_id">
+    
+                    <div id="pageRefTitleBar_id" unselectable="on" style="display: block;">
+    
+                        <div id="pageReftitleText_id" unselectable="on">Herpes simplex virus</div>
+    
+                        <div class="pageclose_txt" unselectable="on"><span id="pageClsText">Click to Close</span></div>
+    
+                        <div id="pageRefCloseBtn_id" title="Close" unselectable="on"></div>
+    
+                        <embed class="pdflink" alt="pdf" src="pages/Topic01/pdf/Herpes simplex virus.pdf"
+                            internalinstanceid="70">
+    
+                    </div>
+    
+                </div>
+    
+            </div>
+    
+        </div>
+        <div class="modal height_100" id="case_study_popup0">
+            <div class="modalContent small" unselectable="on">
+                <div class="modalTxtImg" unselectable="on" id="imgPopup0"></div>
+                <div class="modalTxtImg" unselectable="on" id="imgPopup1"></div>
+                <a class="closepopup zoom_close_btn" id="closeId0" href="javascript:void(0)" title="Click to Close"></a>
+                <!-- <div class="clickToContinue expandImgTxtRight clickToClose">Click to Close</div> -->
+                <div class="popover left-arrow btm-adj">
+                    <div class="arrow" style="top: 50%;"></div>
+                    <div class="popover-content">Click to close image.</div>
+                </div>
+            </div>
+        </div>
+        <!--- Main Container--->
+
+        <div class="boxInst">
+            <div class="instNextClick"></div>
+            <div class="next_click"><em> Click Next to continue.</em></div>
+        </div>
+    </div>
+</body>
+</html>

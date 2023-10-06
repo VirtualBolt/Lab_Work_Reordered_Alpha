@@ -1,0 +1,57 @@
+<!doctype html>
+<html class="">
+<!--<![endif]-->
+<head>
+
+<!-- Player and page level .js files to include -->
+<script language="javascript" type="text/javascript">
+	$(document).ready(function () {
+	 $("#popupClose").click(function(){  
+			disablePopup();  
+	   }); 		
+	
+	 $("#exit_yesBtn").click(function(){ 
+			if(IsScrom)
+			{
+				BVScorm_adlOnunload();
+			}
+			
+			top.close();
+	   }); 		
+	 $("#exit_NoBtn").click(function(){  
+		if(videoObject!=null)
+		{
+			//videoObject.play();
+		}
+			disableExitPopup(); 
+$("#exit_popUpContaier").hide();			
+	   }); 		
+        
+        // Below lines are added for 508 accessibility.
+        var arrTabIndexUpdate = ['#exit_yesBtn', '#exit_NoBtn'];
+        updateTabIndex(arrTabIndexUpdate, '', true, "#exit_NoBtn");        
+	 });
+</script>
+
+</head>
+<body >
+<div id="exit_popUpContaier">
+	<div id="exit_popUp">
+		
+		<div id="exit_text">Are you sure you want to exit?</div> 
+		<div id="exit_des"></div>
+		<!--<div id="exit_yesBtn"><div>Yes</div><div class="clsAlpha">Yes</div></div>
+		<div id="exit_NoBtn"><div>No</div><div class="clsAlpha">No</div></div>-->
+		
+        <div id="exit_yesBtn"><div>Yes</div></div>
+        <div id="exit_NoBtn"><div>No</div></div>
+		
+		<div class="bar top "></div>
+		<div class="bar right delay"></div>
+		<div class="bar bottom delay"></div>
+		<div class="bar left "></div>
+		
+	</div>
+</div>
+</body>
+</html>

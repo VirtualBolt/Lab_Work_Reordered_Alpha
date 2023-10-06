@@ -1,0 +1,42 @@
+#blockCopy
+{
+	
+	-ms-user-select:element;
+	-ms-user-select:none;
+}
+.pg-quizContent #question {
+	font-family: HelvaticaCnsdNormal;
+    font-size: 115%;
+    margin-left: 1%;
+    margin-top: 0.1%;
+    width: 100%;
+	display: none;
+	/*font-size: 110%;*/
+}
+.pg-quizContent #options {
+	font-family: HelvaticaCnsdNormal;
+	float: left;
+	/* padding-left: 13.5%; */
+	display: none;
+	width: 100%;
+	font-size: 115%;
+	margin-left:5.5%;
+}
+
+.pg-quizContent .assessment-title {
+	font-family: HelvaticaCnsdNormal;
+	font-size: 125%;
+	padding-top: 4%;
+	padding-left: 3%;
+	width: 90%;
+}
+
+.pg-quizContent #resultStr {
+	font-family: HelvaticaCnsdNormal;
+	color: #000000;
+	font-size: 100%;
+	padding-top: 5%;
+	padding-left:1.5%;
+	width: 75%;
+	visibility: visible;
+}

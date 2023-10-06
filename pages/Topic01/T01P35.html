@@ -1,0 +1,405 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        manifest = [{
+            src: 'pages/images/Topic01/T01P02/img1.png',
+            id: '1'
+        }, {
+            src: 'pages/images/Topic01/T01P02/image_01_small.png',
+            id: '2'
+        }];
+    </script>
+
+
+    <style type="text/css">
+        
+        
+        
+		@-webkit-keyframes slideInDown {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInDown {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__slideInDown {
+  -webkit-animation-name: slideInDown;
+  animation-name: slideInDown;
+}
+@-webkit-keyframes slideInLeft {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInLeft {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__slideInLeft {
+  -webkit-animation-name: slideInLeft;
+  animation-name: slideInLeft;
+}
+@-webkit-keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(50%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(50%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__slideInRight {
+  -webkit-animation-name: slideInRight;
+  animation-name: slideInRight;
+}
+@-webkit-keyframes slideInUp {
+  from {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInUp {
+  from {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__slideInUp {
+  -webkit-animation-name: slideInUp;
+  animation-name: slideInUp;
+}
+@keyframes in-out {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100vw;
+    /* but starting to "disappear" from left to right, just like the way it appears */
+  }
+}
+		.mainContainer{position:absolute;width:100%;height:545px;left:0;top:0;opacity:1}
+		.sectionTop{position:absolute;top:0;height:30px;width:100%;padding:16px 0}
+		.sectionContent{position:absolute;top:10px;height:522px;width:1084px;left:0px;right:15px}
+		.sectionLeft{height:100%;width:264px;background:#E0F6FB;box-shadow:0 1px 9px -4px rgba(0,0,0,0.75);-webkit-box-shadow:0 1px 9px -4px rgba(0,0,0,0.75);-moz-box-shadow:0 1px 9px -4px rgba(0,0,0,0.75);border-bottom-left-radius:7px;-webkit-border-bottom-left-radius:7px;-moz-border-bottom-left-radius:7px}
+		.sectionRight{width:808px;height:527px;top:0;position:absolute;left:264px}
+		.rightTop{height:42px;left:5px;position:relative}
+		.rightTop a{left:0;top:0;padding:0 65px;background:#fff;margin:0;position:relative;float:left;margin-left:-5px;font-family:OpenSansSemiBold;text-decoration:none;color:#000;height:42px;line-height:42px;border-top-right-radius:5px;-webkit-border-top-right-radius:5px;-moz-border-top-right-radius:5px;font-size:16px;cursor:default}
+		.sectionRight .assessmentShow a{cursor:default}
+		.rightTop a.active{border-top-right-radius:5px;-webkit-border-top-right-radius:5px;-moz-border-top-right-radius:5px;background:#3A5569;margin-right:0;z-index:10;color:#fff}
+		.rightTop a.active.cdefault{cursor:default}
+		.rightTop a.active:after,.rightTop a.active:before,.rightTop a.active:hover:before{top:98%;left:45%;border:solid transparent;content:" ";height:0;width:0;position:absolute;pointer-events:none}
+		.rightTop a.active:after,.rightTop a.active:hover:after{border-top-color:#3A5569;border-width:10px;margin-left:0}
+		.rightTop a.active:before,.rightTop a.active:hover:before{border-top-color:#3A5569;border-width:10px;margin-left:0}
+		.rightTop a.active:nth-child(2),.rightTop a.active:hover:nth-child(2){-webkit-border-top-left-radius:5px;border-top-left-radius:5px;-moz-border-top-left-radius:5px}
+		.rightTop a:nth-child(2){-webkit-border-top-left-radius:5px;border-top-left-radius:5px}
+		.sectionContentArea{background:#fff;height:480px;border-top-right-radius:5px;-webkit-border-top-right-radius:5px;-moz-border-top-right-radius:5px;border-bottom-right-radius:5px;-webkit-bottom-top-right-radius:5px;-moz-border-bottom-right-radius:5px}
+		.blur{-webkit-backface-visibility:hidden;-moz-backface-visibility:hidden;-ms-backface-visibility:hidden;-o-backface-visibility:hidden;-webkit-filter:blur(12px);-moz-filter:blur(12px);-ms-filter:blur(12px);-o-filter:blur(12px);filter:blur(12px)}
+		.sectionContentinner{ width:720px; height:540px; margin:-10px auto 0px; position:relative}
+		.lefttxt{ position:absolute; left:-15px; top:35%; background:#fff; width:145px; height:90px; color:#000; font-style:italic; font-size:13px; line-height:18px; padding:10px; border:0px 5px 5px 0px; box-shadow:2px 3px 5px #ccc;}
+		.abs{ position:absolute}
+		.img1 {top: 42%;left: 40px;}
+		.img3 {top: 42%;left: 40px;}
+		.img01{ bottom:-2px;left:35px;z-index:9;}
+		.img02{ top:38%;left:0px;z-index:9;}
+		.img2{ 
+        background:url('pages/images/Topic01/T01P35/left-shift.png') no-repeat; 
+        position: absolute;
+        z-index: 100;
+        width: 0px;
+        height: 52px;
+        top: 33%;
+        right: 255px;
+        background-size: cover;
+        background-position: right;
+    }
+		
+		#img0,#img01,#img02, #img1,#img1_text, #img2,#img2_text, #lefttxt, #img3, #img4,#img4_text, #img5,#img5_text, #img6,#img6_text, #img7,#img7_text, #img8,#img8_text, #img9,#img9_text,#righttxt,#list2,#list3{ visibility:hidden; opacity:0}
+		.img3 img{width: 98.8%; height:72px}
+		.img1 img{width: 100%; height:72px}
+
+    .boxInst {
+            position: absolute;
+            top: 489px;
+            left: 905px;
+        }
+    </style>
+    
+
+</head>
+
+<body>
+
+
+    <div class="pg-pageContent" UNSELECTABLE="on">
+        <div id="TabPopup5" class="clsTabPopup">
+            <div class="sectionContent">
+				
+                <div class="sectionContentinner">
+					<div id="img0" class="img0"><img src="pages/images/Topic01/T01P35/img0.png"></div>
+					<div id="img01" class="img01 abs"><img src="pages/images/Topic01/T01P35/img0-1.png"></div>
+					<div id="img02" class="img02 abs"><img src="pages/images/Topic01/T01P35/img0-2.png"></div>
+					<div id="img1" class="abs img1"><img src="pages/images/Topic01/T01P35/img1.png"></div>
+					<div id="img3" class="abs img3"><img src="pages/images/Topic01/T01P35/img1_1.png"></div>
+					<div id="img2" class="img2"></div>
+				</div>
+            </div>
+            
+        </div>
+    </div>
+    <!--- Main Container--->
+    <div class="boxInst">
+        <div class="instNextClick"></div>
+        <div class="next_click"><em> Click Next to continue.</em></div>
+    </div>
+    </div>
+
+</body>
+<script>
+        console.log("Labor" + gCompPageArr);
+
+        var audioPath = "pages/audio/Topic01/T01P35/T01P35";
+       
+        var __audioClick = 0;
+
+        var currCue = 0;
+        var idd = 0;
+
+        clickViewMoreInfo();
+        var __curState = 0;
+
+
+        var clickTabCount = 0;
+        var clickTabCount1 = 0;
+
+        var updateContentArray = [
+			{
+            time: "0.0",     carry: "",  event: "",  show: "",  hide: "",
+            transcript: "In the presence of bacterial infection, the bone marrow releases both mature and immature neutrophils into the bloodstream to maximize the number of circulating neutrophils. The term “left shift” refers to the appearance of immature neutrophils in the blood.<div> Click Next to continue.</div>"
+        	},
+			{
+            time: "0.5",     carry: "",  event: "",  show: "#img0,#img01,#img02,#img1",  hide: "",
+            transcript: "In the presence of bacterial infection, the bone marrow releases both mature and immature neutrophils into the bloodstream. The term &quot;left shift&quot; refers to the appearance of immature neutrophils in the blood.<div> Click Next to continue.</div>"
+        	},
+			{
+            time: "7.95",     carry: "",  event: "",  show: "",  hide: "#img1",
+            transcript: "In the presence of bacterial infection, the bone marrow releases both mature and immature neutrophils into the bloodstream. The term &quot;left shift&quot; refers to the appearance of immature neutrophils in the blood.<div> Click Next to continue.</div>"
+        	,animation: [{ target: "#img2",duration: "0.9",activity: {  "width": "142px" }}]
+			},
+			{
+            time: "8",     carry: "",  event: "",  show: "#img2",  hide: "",
+            transcript: "In the presence of bacterial infection, the bone marrow releases both mature and immature neutrophils into the bloodstream. The term &quot;left shift&quot; refers to the appearance of immature neutrophils in the blood.<div> Click Next to continue.</div>",
+			},
+			{
+            time: "13",     carry: "",  event: "",  show: "#img3",  hide: "",
+            transcript: "In the presence of bacterial infection, the bone marrow releases both mature and immature neutrophils into the bloodstream to maximize the number of circulating neutrophils. The term “left shift” refers to the appearance of immature neutrophils in the blood. <div> Click Next to continue.</div>"
+            ,animation: [{ target: ".boxInst",duration: "0.9",activity: {  "display": "block" }}]
+        	},
+			
+		];
+        
+
+        function fnAudioFinishItemComp() {
+            fnAudioFinishPageComp();
+        }
+        var __dataXml;
+
+        $(document).ready(function() {
+            disableNextBtn();
+            var ele = document.getElementsByTagName('div');
+            for (var i = 0; i < ele.length; i++) {
+                ele[i].setAttribute("unselectable", "on");
+            }
+            var n = isInArray("M1L0T1P35", gCompPageArr);
+            if (n == true) {
+                enableNextBtn();
+                // fnGlowNextBtn();
+                fnDesiableNext(false)
+            }
+        });
+
+        function audioReset() {
+            gAudioId = "";
+            onTimelineEnd();
+        }
+
+        function isInArray(value, array) {
+            return array.indexOf(value) > -1;
+        }
+
+
+
+        function fnPlaySectionAudio(gCurrentIndex) {
+            indexAudio = (gCurrentIndex);
+            audioId = "audio_" + gCurrentIndex;
+            gAudioId = audioId;
+
+            fnHideShowAudioPlayer(false);
+            updateContentArray = eval("updateContentArray" + (gCurrentIndex));
+            initAudioPlayer(gItemAudioPath[gCurrentIndex])
+        }
+
+
+        function fnCompletion() {
+            console.log("end");
+
+            //var _getCount1 = clickTabCount + clickTabCount1;
+            // if (__audioClick == 1) {
+            console.log("start new");
+            enableNextBtn();
+            $('.boxInst').show();
+            fnAudioFinishItemComp();
+            // }
+
+        }
+
+        function fnOnAudioComplete() {
+            if (gAudioId == "startAudio") {
+                console.log("start audio");
+                audioStop();
+				audplayer.pause();
+
+        audplayer.currentTime = 0;
+
+				enableNextBtn();
+				fnDesiableNext(false);
+				$('.boxInst').show();
+            } else {
+				$('.boxInst').show();
+                fnCompletion();
+                enableNextBtn();
+				$('.boxInst').show();
+                gCompPageArr.push("M1L0T1P35");
+                 fnAudioFinishItemComp();
+
+        audplayer.pause();
+
+        audplayer.currentTime = 0;
+            }
+        }
+        
+
+
+        /* highlight */
+        __clickedOpt = [];
+
+        function correctAnswerNotClicked(aCorrectAnswerVal) {
+            for (var i = 0; i < aCorrectAnswerVal.length; i++) {
+                //console.log("highlighted "+aCorrectAnswerVal[i]);
+                //$(".clsPanel .option[curid='"+aCorrectAnswerVal[i]+"']").addClass("cborder");
+                $(".clsPanel .option[curid='" + aCorrectAnswerVal[i] + "']").addClass("cborder");
+            }
+        }
+
+        function areDifferentByIds(clickVal, correctVal) {
+            var newArr = correctVal.slice();
+
+            for (var i = 0; i < clickVal.length; i++) {
+
+
+                var index = newArr.indexOf(clickVal[i]);
+                if (index !== -1) {
+                    newArr.splice(index, 1);
+                }
+
+            }
+
+            return newArr;
+        }
+
+        function highlightBorderPushVal() {
+            __clickedOpt = [];
+            $(".option.clicked").each(function() {
+                console.log($(this).attr("curid"));
+                __clickedOpt.push($(this).attr("curid"));
+            });
+        }
+        /* highlight */
+
+        function pauseAudio() {
+            if (!fnPauseAudio()) {
+                console.log(true);
+                fnPauseAudio()
+            } else {
+                playPauseAudio();
+                console.log(false);
+            }
+        }
+
+        function playAudio() {
+            if (!fnPauseAudio()) {
+                console.log(true);
+                playPauseAudio();
+            }
+        }
+
+        function audioStop() {
+            var audio = document.getElementById("audioplayer");
+            audio.pause();
+            audio.currentTime = 0;
+        }
+    </script>
+
+</html>

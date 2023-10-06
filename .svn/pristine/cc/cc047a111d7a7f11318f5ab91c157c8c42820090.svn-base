@@ -1,0 +1,395 @@
+<!DOCTYPE HTML>
+
+
+<html>
+
+
+<head>
+
+
+    <title></title>
+
+    <link href="pages/Topic01/css/T01P96.css" rel="stylesheet" type="text/css">
+    <style>
+        .contentContainer {
+            height:541px;
+        }
+        .boxInst {
+    top: 471px;
+    left: 868px;
+    display: none;
+        }
+    </style>
+    <script>
+        manifest = [{
+                src: 'pages/images/Topic01/T01P90/T01P90_01.png',
+                id: '1'
+            }
+
+        ];
+    </script>
+
+    <script>
+        $("#clsAudioOnBtn").hide();
+        $("#clsAudioOffBtn").hide();
+        $("#id_sliderContainer").hide();
+        $("#clsPlayPauseBtn").hide();
+        var audioPath = "";
+
+        var currCue = 0;
+
+
+        var idd = 0;
+
+
+        var audplayer = document.getElementById('audioplayer');
+
+
+        var updateContentArray = [
+
+
+            {
+                time: "0.0",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "",
+                animation: [{
+                    target: "#idCircle98",
+                    duration: "1.5",
+                    activity: {
+                        'transform': 'matrix(1,0,0,1,0,0)'
+                    }
+                }]
+            }
+        ];
+
+
+        function fnAudioFinishItemComp() {
+
+            fnAudioFinishPageComp();
+
+            fnUpdatePageCompletionCounter(0);
+
+            //fnUpdatePageCompletionCounter(7);
+
+        }
+
+        var __dataXml;
+
+        var __clickCount = 0;
+
+
+
+        $(document).ready(function() {
+
+            setTimeout(function() {
+                //fnDesiableNext(true);
+            }, 200);
+            if (assessmentObj.getUserReviewType() == true) {
+                $(".retryBtn").show();
+                $(".reviewBtn").removeClass("btn_center");
+            } else {
+                //$(".retryBtn").hide();
+                //$(".reviewBtn").addClass("btn_center");
+            }
+
+            disableBackBtn();
+            $('#clsMnuBtn, #clsReplay, #clsBackBtn, #ToolBtn').css({
+                "pointer-events": "none"
+            });
+            var _answer = 6;
+            var _passPercent = 80;
+            var _getWrongCount = assessmentObj.getWrongAnsVal();
+            var _calc = _answer - _getWrongCount
+                //console.log(_calc + " Wrong answer count " + 2);
+            var result = parseInt((_calc * 100) / _answer);
+            var _aStatus = "";
+            // console.log("result score" + result);
+            disableNextBtn();
+            if (parseInt(result) >= 80) {
+                _aStatus = "passed";
+                //console.log("pass")
+                $(".resHeading").hide();
+                $("#resultPass").css("display", "flex");
+                $('.boxInst').show();
+                //$(".btn").hide();
+                if (parseInt(result) == 100) {
+                    $(".btn").show();
+                    //$(".reviewBtn").show().addClass("btn_center");
+                }
+                setTimeout(function() {
+                    //fnDesiableNext(true);
+                    enableNextBtn();
+                    //fnGlowNextBtn();
+                    fnDesiableNext(false);
+                }, 200);
+                //enableNextBtn();
+                //fnGlowNextBtn();
+                BVScorm_score(result);
+                BVScorm_complete();
+            } else {
+                if (assessmentObj.getUserReviewType() == true) {
+                    $(".retryBtn").show();
+                    $(".reviewBtn").removeClass("btn_center");
+                } else {
+                    $(".btn").hide();
+                    $(".reviewBtn").show().addClass("btn_center");
+                }
+
+                _aStatus = "failed";
+                $(".resHeading").hide();
+                $("#resultFail").css("display", "flex");
+
+            }
+            $(".clsScore").append(" " + result + "%")
+            $(".clsPassScore").append(" " + _passPercent + "%" + " or higher")
+
+            if (assessmentObj.getUserReviewType() == false) {
+                //xAPI score update
+                setTimeout(function() {
+                    tinCanWrapper.sendStatementWithScore(_aStatus, true, false, result);
+                }, 500);
+                //xAPI score update
+            }
+
+            //BVScorm_score(result);
+
+            //enableNextBtn();
+
+            var ele = document.getElementsByTagName('div');
+
+            for (var i = 0; i < ele.length; i++) {
+
+                ele[i].setAttribute("unselectable", "on");
+
+            }
+
+
+            $('#pageClsResourcesPopup').hide();
+
+            $(document).on("click", '._clickLink', function() {
+
+
+
+                var num = $(this).attr('id').slice(10)
+
+
+
+                // console.log(referenceArr);
+
+
+
+                $(this).addClass("_viewed");
+
+
+
+                // $('.pdflink').attr('src', referenceArr[num])
+
+
+
+                $("#pageid_RefTitleBar").hide();
+
+
+
+                $("#pageRefTitleBar_id").show();
+
+
+
+            });
+
+            $("#pageRefCloseBtn_id").click(function() {
+
+                fnPlayAudio();
+
+                //$("#pageClsResourcesPopup").hide();
+
+                $("#pageClsResourcesPopup").hide();
+
+
+
+                //$("#pageid_RefTitleBar").show()
+
+
+
+            });
+
+        });
+
+        $(".reviewBtn").on("click", function() {
+            tinCanWrapper.sendStatementData("experienced", "sugar-assessment-review", "Sugar Review Assessment");
+            fnJumpToPageByID("M1L0T1P59_1");
+            assessmentObj.userReviewType();
+        });
+        $(".retryBtn").on("click", function() {
+            tinCanWrapper.sendStatementData("experienced", "sugar-assessment-retake", "Sugar Retake Assessment");
+            assessmentObj.clearPageId();
+            fnJumpToPageByID("M1L0T1P59_1");
+            assessmentObj.retryQuiz();
+        });
+
+        function isInArray(value, array) {
+
+            return array.indexOf(value) > -1;
+
+        }
+
+        $("#_clickImg0pdf").on("click", function() {
+
+
+            fnPauseAudio();
+            $("#pageClsResourcesPopup").show();
+
+
+
+        });
+
+        $("#_clickImg0pdf1").on("click", function() {
+
+
+            fnPauseAudio();
+            $("#pageClsResourcesPopup").show();
+
+
+
+        });
+
+        function audioReset() {
+
+            gAudioId = "";
+
+            onTimelineEnd();
+
+        }
+
+
+        function fnCompletion() {
+
+
+
+        }
+
+
+        function fnOnAudioComplete() {
+
+            if (gAudioId == "startAudio") {
+
+                enableNextBtn();
+
+                fnAudioFinishItemComp();
+
+                $('.boxInst').show();
+
+                gCompPageArr.push("M1L0T1P59_7");
+
+                audplayer.pause();
+
+                audplayer.currentTime = 0;
+
+            } else {
+
+
+
+                fnCompletion();
+
+
+
+            }
+
+        }
+    </script>
+
+
+</head>
+
+
+
+
+
+<body>
+
+
+    <div class="pg-pageContent" UNSELECTABLE="on">
+
+
+        <div class="mainContainer">
+            <div class="result_box">
+                <div class="resHeading" id="resultPass">
+                    <img src="pages/images/Topic01/T01P59/exm_pass.png" alt="exm_pass" />
+                    <div>
+                        Congrats!
+                        <div class="nrml-txt"> You Passed </div>
+                    </div>
+                </div>
+                <div class="resHeading" id="resultFail">
+                    <img src="pages/images/Topic01/T01P59/exm_fail.png" alt="exm_fail" />
+                    <div>
+                        Sorry.
+                        <div class="nrml-txt"> Try again </div>
+                    </div>
+                </div>
+
+
+                <div class="clsCircles" id="idCircle98"></div>
+
+                <div class="clsResult" id="idResult">
+                    <div class="score clsScore">Your Score: </div>
+                    <div class="score clsPassScore">Passing Score: </div>
+                </div>
+
+                <div class="btn-group">
+                    <div class="btn reviewBtn">Review Assessment</div>
+                    <div class="btn retryBtn">Retake Assessment</div>
+                </div>
+
+            </div>
+
+            <div class="boxInst">
+
+
+                <div class="instNextClick"></div>
+
+
+                <div class="next_click"><em> Click Next to continue.</em></div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+
+        <!--
+
+
+		<div class="pg-pageContent" UNSELECTABLE = "on">
+
+
+			<div class="mainContainer">
+
+
+	      <div class="clsQuoteImg clsQuoteLeft" id="idQuoteLeft01"></div>
+
+
+	      <div class="clsQuoteImg clsQuoteRight" id="idQuoteRight01"></div>
+
+
+				<div class="clsCircles" id="idCircle98"></div>
+
+
+				<div class="clsText" id="idText1">The "<span class="clsBold">S</span>" in S.T.A.B.L.E. stands for <span class="clsBold">Sugar and Safe Care</span>. Delivery of safe, quality patient care, including the elimination of preventable errors is a top priority of the S.T.A.B.L.E. Program. Whenever possible, methods to provide safe care are emphasized. you'll need to watch for where I use caution bullets in the powerpoint and add a caution bullet to the screens. Whenever possible, methods to provide safe care are emphasized. When applicable, we'll use this caution symbol ! to draw attention to safety concerns and in particular where errors can and do occur so that extra care may be taken.  </div>
+
+
+			</div>
+
+
+		</div> -->
+
+
+</body>
+
+
+</html>

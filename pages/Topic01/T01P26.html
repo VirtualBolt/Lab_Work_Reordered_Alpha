@@ -1,0 +1,1470 @@
+<!DOCTYPE HTML>
+
+<html>
+
+
+
+<head>
+
+    <title></title>
+
+    <link href="pages/Topic01/css/T01P29.css" rel="stylesheet" type="text/css">
+    <style>
+        /* Sliding entrances */
+        @-webkit-keyframes slideInDown {
+            from {
+                -webkit-transform: translate3d(0, -100%, 0);
+                transform: translate3d(0, -100%, 0);
+                visibility: visible;
+            }
+
+            to {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+        @keyframes slideInDown {
+            from {
+                -webkit-transform: translate3d(0, -100%, 0);
+                transform: translate3d(0, -100%, 0);
+                visibility: visible;
+            }
+
+            to {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+        .animate__slideInDown {
+            -webkit-animation-name: slideInDown;
+            animation-name: slideInDown;
+        }
+
+        @-webkit-keyframes slideInLeft {
+            from {
+                -webkit-transform: translate3d(-100%, 0, 0);
+                transform: translate3d(-100%, 0, 0);
+                visibility: visible;
+            }
+
+            to {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                -webkit-transform: translate3d(-100%, 0, 0);
+                transform: translate3d(-100%, 0, 0);
+                visibility: visible;
+            }
+
+            to {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+        .animate__slideInLeft {
+            -webkit-animation-name: slideInLeft;
+            animation-name: slideInLeft;
+        }
+
+        @-webkit-keyframes slideInRight {
+            from {
+                -webkit-transform: translate3d(50%, 0, 0);
+                transform: translate3d(50%, 0, 0);
+                visibility: visible;
+            }
+
+            to {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                -webkit-transform: translate3d(50%, 0, 0);
+                transform: translate3d(50%, 0, 0);
+                visibility: visible;
+            }
+
+            to {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+        .animate__slideInRight {
+            -webkit-animation-name: slideInRight;
+            animation-name: slideInRight;
+        }
+
+        @-webkit-keyframes slideInUp {
+            from {
+                -webkit-transform: translate3d(0, 100%, 0);
+                transform: translate3d(0, 100%, 0);
+                visibility: visible;
+            }
+
+            to {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                -webkit-transform: translate3d(0, 100%, 0);
+                transform: translate3d(0, 100%, 0);
+                visibility: visible;
+            }
+
+            to {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+        .animate__slideInUp {
+            -webkit-animation-name: slideInUp;
+            animation-name: slideInUp;
+        }
+
+        .mainContainer {
+            position: absolute;
+            width: 100%;
+            height: 545px;
+            left: 0px;
+            top: 0px;
+            opacity: 1;
+        }
+
+        .clsTabPopup {
+            position: absolute;
+            width: 1085px;
+            height: 540px;
+            top: 0;
+            left: 0
+        }
+
+        .sectionTop {
+            position: absolute;
+            top: 0;
+            height: 30px;
+            width: 100%;
+            padding: 16px 0
+        }
+
+        .sectionContent {
+            position: absolute;
+            top: 14px;
+            height: 494px;
+            width: 1055px;
+            left: 15px;
+            right: 15px;
+            color: #000
+        }
+
+        .topImgCnt {
+            position: relative
+        }
+
+        .small_expand{
+            background: url(pages/images/Topic01/T01P22/small_expand.svg) !important;
+            position: absolute;
+            cursor: pointer;
+            width: 29px;
+            height: 29px;
+            bottom: 23px;
+            right: 17px;
+            background-position: 0px 0;
+              
+            background-size: cover !important;
+            background-repeat:no-repeat ;
+            opacity: .6;
+        }
+        .open_map {
+            background: url(pages/images/Topic01/T01P23/small_expand.png) no-repeat !important;
+            width: 28px;
+            height: 28px !important;
+            position: absolute !important;
+            bottom: 24px;
+            right: 10px;
+            display: none;
+            left: inherit !important;
+            top: inherit !important;
+            float: inherit !important;
+            text-decoration: none !important;
+            border-radius: inherit !important;
+            margin-left: 0 !important;
+            background-color: inherit !important;
+            padding: 0 !important
+        }
+        .small_expand:hover{
+            opacity: 1;
+        }
+
+        /* , */
+        .open_map:hover {
+            background: url(pages/images/Topic01/T01P23/small_expand_hover.png) no-repeat !important
+        }
+
+        .small_expand1 {
+            background: url(pages/images/Topic01/T01P23/small_expand.png) no-repeat !important;
+            width: 28px;
+            height: 28px !important;
+            position: absolute !important;
+            bottom: 7px;
+            right: 10px;
+            display: none;
+            left: inherit !important;
+            top: inherit !important;
+            float: inherit !important;
+            text-decoration: none !important;
+            border-radius: inherit !important;
+            margin-left: 0 !important;
+            background-color: inherit !important;
+            padding: 0 !important;
+            opacity: .6;
+        }
+
+        .small_expand1:hover {
+           opacity: 1;
+        }
+
+        .open_map {
+            right: 33px;
+            margin-top: 2px
+        }
+
+        .sectionLeft {
+            height: 101%;
+            width: 264px;
+            background: #E0F6FB;
+            box-shadow: 0 1px 9px -4px rgba(0, 0, 0, 0.75);
+            -webkit-box-shadow: 0 1px 9px -4px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0 1px 9px -4px rgba(0, 0, 0, 0.75);
+            border-bottom-left-radius: 7px;
+            -webkit-border-bottom-left-radius: 7px;
+            -moz-border-bottom-left-radius: 7px
+        }
+
+        .sectionRight {
+            width: 790px;
+            height: 507px;
+            top: 0;
+            position: absolute;
+            left: 264px
+        }
+
+        .rightTop {
+            height: 42px;
+            left: 5px;
+            position: relative
+        }
+
+        .rightTop a {
+            left: 0;
+            top: 0;
+            padding: 0 65px;
+            background: #fff;
+            margin: 0;
+            position: relative;
+            float: left;
+            margin-left: -5px;
+            font-family: OpenSansSemiBold;
+            text-decoration: none;
+            color: #000;
+            height: 42px;
+            line-height: 42px;
+            border-top-right-radius: 5px;
+            -webkit-border-top-right-radius: 5px;
+            -moz-border-top-right-radius: 5px;
+            font-size: 16px;
+            cursor: default
+        }
+
+        .sectionRight .assessmentShow a {
+            cursor: default
+        }
+
+        .rightTop a.active {
+            border-top-right-radius: 5px;
+            -webkit-border-top-right-radius: 5px;
+            -moz-border-top-right-radius: 5px;
+            background: #3A5569;
+            margin-right: 0;
+            z-index: 10;
+            color: #fff
+        }
+
+        .rightTop a.active.cdefault {
+            cursor: default
+        }
+
+        .rightTop a.active:after,
+        .rightTop a.active:before,
+        .rightTop a.active:hover:before {
+            top: 98%;
+            left: 45%;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none
+        }
+
+        .rightTop a.active:after,
+        .rightTop a.active:hover:after {
+            border-top-color: #3A5569;
+            border-width: 10px;
+            margin-left: 0
+        }
+
+        .rightTop a.active:before,
+        .rightTop a.active:hover:before {
+            border-top-color: #3A5569;
+            border-width: 10px;
+            margin-left: 0
+        }
+
+        .rightTop a.active:nth-child(2),
+        .rightTop a.active:hover:nth-child(2) {
+            -webkit-border-top-left-radius: 5px;
+            border-top-left-radius: 5px;
+            -moz-border-top-left-radius: 5px
+        }
+
+        .rightTop a:nth-child(2) {
+            -webkit-border-top-left-radius: 5px;
+            border-top-left-radius: 5px
+        }
+
+        .sectionContentArea {
+            background: #fff;
+            height: 397px;
+            border-top-right-radius: 5px;
+            -webkit-border-top-right-radius: 5px;
+            -moz-border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            -webkit-bottom-top-right-radius: 5px;
+            -moz-border-bottom-right-radius: 5px
+        }
+
+        #topImgCnt1 {
+            background: url(pages/images/Topic01/T01P26/img_small.png) no-repeat top left;
+            background-size: cover;
+            height: 255px;
+            width: 100%
+        }
+
+        #imgPopup1 {
+            background: url(pages/images/Topic01/T01P26/img_large.png) no-repeat center;
+            background-size: contain;
+            /* height: 360px */
+        }
+
+        #topImgCnt2 {
+            background: url(pages/images/Topic01/T01P26/img.png) no-repeat;
+            background-size: contain;
+            width: 361px;
+            height: 124px;
+            display: none;
+            width: 90%;
+            position: absolute;
+            right: 0;
+            bottom: 0px
+        }
+
+        #imgPopup2 {
+            background: url(pages/images/Topic01/T01P26/img.png) no-repeat;
+            background-size: contain;
+            background-position-y: 80px;
+        }
+
+        /*#case_study_popup .modalContent {
+            width: 575px;
+            height: 420px;
+            border-radius: 10px
+        }*/
+/* 
+        #case_study_popup .modalContent .modalinner {
+            padding: 30px;
+            position: relative
+        }
+
+        #imgPopup0 {
+            background-size: 100% 100%;
+            width: 100%;
+            height: 360px
+        }
+
+        #case_study_popup .modalContent .modalinner .modalclose {
+            position: absolute;
+            top: 5px;
+            right: 0px;
+            width: 30px;
+            height: 30px
+        }
+
+        #case_study_popup .modalContent .modalinner .modalclose .modalcloseicon {
+            background: url(pages/images/Topic01/T01P26/close-icon.png) no-repeat;
+            background-size: 24px 24px;
+            width: 24px;
+            height: 24px;
+            cursor: pointer
+        }
+
+        #case_study_popup .modalContent .modalinner .modalclose .modalcloseicon:hover {
+            background: url(pages/images/Topic01/T01P26/close-hover-icon.png) no-repeat;
+            background-size: 24px 24px;
+            width: 24px;
+            height: 24px
+        }
+
+        #case_study_popup .closepopup {
+            display: none
+        }
+
+        #case_study_popup .modalTextBottom {
+            display: none
+        }
+
+        #case_study_popup .popover.left-arrow {
+            display: none
+        } */
+
+        .sectionContentArea {
+            padding: 30px;
+            font-size: 14px;
+            line-height: 18px;
+        }
+
+        .information {
+            margin-top: 20px
+        }
+
+        .information,
+        .qtext,
+        .bullet li,
+        .instructions {
+            font-size: 14px !important;
+            line-height: 18px;
+        }
+
+        .instructions {
+            font-size: 14px !important;
+            font-weight: bold !important;
+        }
+
+        .options-radio {
+            margin-top: 20px
+        }
+
+        .iconlist {
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+            width: 90%
+        }
+
+        .iconlist li {
+            position: relative;
+            margin-bottom: 3px;
+            font-size: 14px;
+            line-height: 22px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding-left: 20px
+        }
+
+        .iconlist li:before {
+            background: url(pages/images/Topic01/T01P26/bullet.png) no-repeat;
+            left: 0px;
+            width: 13px;
+            height: 13px;
+            position: absolute;
+            content: "";
+            top: 5px
+        }
+
+        .iconlist li a {
+            color: #D7722C;
+            cursor: pointer
+        }
+
+        .error1 {
+            margin: 15px auto 0px;
+            border: solid 2px #F6A87A;
+            border-radius: 5px;
+            width: 94%;
+            position: relative
+        }
+
+        .error1 .error1_inner {
+            position: relative;
+            padding: 10px;
+            color: #000;
+            font-size: 12px;
+            line-height: 18px;
+            font-weight: bold;
+            padding-left: 60px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .error1 .error1_inner img {
+            position: absolute;
+            width: 35px;
+            height: 34px;
+            left: 10px;
+            top: 10px;
+        }
+
+        .topImgtxt {
+            background: rgba(0, 0, 0, 0.1);
+            position: absolute;
+            bottom: 0px;
+            padding: 10px;
+            color: #000;
+            font-size: 14px;
+            line-height: 22px;
+        }
+
+        .txt1 {
+            font-size: 16px;
+            line-height: 22px;
+            margin: 10px 0px
+        }
+
+        .sectionLeftBox {
+            position: relative;
+            height: 100%;
+            padding: 5px;
+            width: 274px;
+        }
+
+        .topImgboxinner {
+            border: double 6px #ccc;
+            position: relative;
+            height: 100%
+        }
+
+        .content2 .sectionRight .sectionContentArea {
+            height: 265px;
+            margin-top: 100px
+        }
+
+        .sectionContentAreainner {
+            width: 80%;
+            margin: 20px 0px 0px 50px
+        }
+
+        .sectionContentAreainner .contenttext {
+            font-size: 14px;
+            line-height: 20px;
+            position: relative
+        }
+
+        .sectionContentAreainner .contenttext2 {
+            margin-top: 30px
+        }
+
+        #content1 {
+            visibility: visible
+        }
+
+        #list1,
+        #list2,
+        #list3,
+        #list4,
+        #list5,
+        #error1,
+        #txt1,
+        #listd1,
+        #listd2,
+        #listd3,
+        #listd4,
+        #listd5,
+        #listd6 {
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        .small_expand {
+            display: none
+        }
+
+        .poupdiv .modalContent {
+            width: 50%;
+            height: auto !important;
+            padding: 20px 50px;
+            top: 17%
+        }
+
+        .poupdiv .modalContent .heading {
+            color: #D7722C;
+            font-size: 18px;
+            text-align: center
+        }
+
+        .poupdiv .modalContent .linenew {
+            height: 2px;
+            background: #D7722C;
+            margin: 5px 0px
+        }
+
+        .poupdiv .modalContent .desc {
+            color: #000;
+            font-size: 14px;
+            text-align: center
+        }
+
+        .poupdiv .modalContent .desc ul {
+            text-align: left;
+            padding: 0px
+        }
+
+        .poupdiv .modalContent .desc ul li {
+            margin-bottom: 5px
+        }
+
+        .poupdiv .popupclose {
+            position: absolute;
+            top: 10px;
+            right: 10px
+        }
+
+        .poupdiv .popupclose img {
+            width: 24px;
+            height: 24px;
+            cursor: pointer
+        }
+
+        .poupdiv .modalclose {
+            position: absolute;
+            top: 5px;
+            right: 0px;
+            width: 30px;
+            height: 30px
+        }
+
+        .poupdiv .modalclose .modalcloseicon {
+            background: url(pages/images/Topic01/T01P26/close-icon.png) no-repeat;
+            background-size: 24px 24px;
+            width: 24px;
+            height: 24px;
+            cursor: pointer
+        }
+
+        .poupdiv .modalclose .modalcloseicon:hover {
+            background: url(pages/images/Topic01/T01P26/close-hover-icon.png) no-repeat;
+            background-size: 24px 24px;
+            width: 24px;
+            height: 24px
+        }
+
+        .link {
+            position: absolute;
+            bottom: -50px
+        }
+
+        .link a {
+            font-size: 14px;
+            line-height: 18px;
+            color: #000;
+            text-decoration: underline;
+            font-weight: normal;
+        }
+
+        .link a:hover {
+            color: #D7722C
+        }
+
+        .option [type="radio"]:checked+label,
+        .option [type="radio"]:not(:checked)+label {
+            font-size: 14px;
+        }
+
+        .popover.clickToEnlarge {
+            display: none
+        }
+
+        /* .imageBaby{background:url(pages/images/Topic01/T01P26/baby.png) no-repeat; } */
+        .imageBaby {
+            text-align: center;
+            position: relative;
+            /* padding-top: 45px; */
+        }
+
+        .button_wrapper.head {
+            position: absolute;
+            top: 24px;
+            left: 88px;
+            height: 106px;
+            background: url('pages/images/Topic01/T01P26/arrow/down.png') no-repeat 22px 23px;
+            z-index:999;
+            /* background: url('pages/images/Topic01/T01P26/arrow/down.png') no-repeat -8px -56px; */
+        }
+
+        .imageBaby img {
+            padding-top: 20px;
+        }
+
+        .button_wrapper.abdomen {
+            position: absolute;
+            top: 7px;
+            left: 320px;
+            height: 97px;
+            background: url('pages/images/Topic01/T01P26/arrow/down.png') no-repeat 37px 3px;
+            /* background: url('pages/images/Topic01/T01P26/arrow/down.png') no-repeat 7px -75px; */
+            z-index:999;
+        }
+
+
+        .button_wrapper.skin {
+            position: absolute;
+            right: 33px;
+            top: 40px;
+            background: url(pages/images/Topic01/T01P26/arrow/left.png) no-repeat 0px;
+            /* background: url(pages/images/Topic01/T01P26/arrow/left.png) no-repeat -32px -23px; */
+            width: 160px;
+            text-align: right;
+            z-index:999;
+        }
+
+        .button_wrapper.neurologic {
+            position: absolute;
+            top: 240px;
+            right: -6px;
+        }
+
+        .button_wrapper.spine {
+            position: absolute;
+            right: 169px;
+            top: 264px;
+        }
+
+        .button_wrapper.cardiovascular {
+            position: absolute;
+            left: 345px;
+            top: 260px;
+        }
+
+        .button_wrapper.respiratory {
+            position: absolute;
+            left: 69px;
+            top: 264px;
+        }
+
+        .button_wrapper.genitalia {
+            position: absolute;
+            right: 0;
+            top: 130px;
+            right: 27px;
+            background: url(pages/images/Topic01/T01P26/arrow/left.png) no-repeat 5px;
+            /* url(pages/images/Topic01/T01P26/arrow/left.png) no-repeat -32px -23px; */
+            width: 195px;
+            text-align: right;
+            z-index: 999;
+        }
+
+        .button_wrapper.eyes_ears {
+            position: absolute;
+            left: 0;
+            top: 164px;
+            top: 152px;
+            background: url('pages/images/Topic01/T01P26/arrow/right.png') no-repeat 42px;
+            /* url('pages/images/Topic01/T01P26/arrow/right.png') no-repeat 44px -24px; */
+            width: 200px;
+            text-align: left;
+            z-index:999;
+        }
+
+        .button_wrapper.spine .pointer {
+            /* background: url(pages/images/Topic01/T01P26/arrow/leftangle.png) no-repeat; */
+            background: url(pages/images/Topic01/T01P26/arrow/upleftup.png) no-repeat 18px -2px;
+            position: absolute;
+            height: 144px;
+            width: 154px;
+            top: -126px;
+            left: -121px;
+            z-index: 999;
+        }
+
+        .button_wrapper.cardiovascular .pointer {
+            background: url(pages/images/Topic01/T01P26/arrow/leftupangle.png) no-repeat;
+            /* url(pages/images/Topic01/T01P26/arrow/leftupangle.png) no-repeat; */
+            position: absolute;
+            height: 171px;
+            width: 50px;
+            top: -108px;
+            left: -30px;
+            z-index:99999;
+        }
+        .button_wrapper.neurologic .pointer {
+            /* background: url(pages/images/Topic01/T01P26/arrow/leftupslipy.png) no-repeat; */
+            background: url(pages/images/Topic01/T01P26/arrow/upleftangle.png) no-repeat;
+            position: absolute;
+            height: 121px;
+            width: 124px;
+            top: -31px;
+            left: -68px;
+            z-index: 999;
+        }
+        .button_wrapper.respiratory .pointer {
+            /* background: url(pages/images/Topic01/T01P26/arrow/rightangle.png) no-repeat; */
+            background: url(pages/images/Topic01/T01P26/arrow/rightupright.png) no-repeat;
+            position: absolute;
+            height: 125px;
+            width: 150px;
+            top: -86px;
+            left: 93px;
+            z-index: 999;
+        }
+        .buttonBox {
+            background: #50697d;
+            color: white;
+            border: 0;
+            padding: 3px 10px;
+            border-radius: 6px;
+            font-family: OpenSansSemiBold;
+            cursor: pointer;
+            box-shadow: 0 0 5px;
+            z-index: 999;
+            position: relative;
+            outline:none;
+        }
+
+        .buttonBox:hover {
+            background: #E0F6FB;
+            color: #50697d;
+        }
+
+        .info,
+        .overlay {
+            display: none;
+        }
+
+        .bottom-content {
+            padding: 5px 3px 5px 5px;
+            background: #edf2f6;
+            display: none;          
+            margin-top: -8px;
+            z-index: 200;
+            position: relative;
+        }
+
+        .checked {
+            background: url('pages/images/Topic01/T01P26/tick.png') no-repeat;
+            width: 27px;
+            z-index: 1000;
+            position: absolute;
+            height: 27px;
+            top: -7px;
+            right: -18px;
+            /* background-color: white; */
+            border-radius: 49px;
+            display: none;
+            background-size: cover;
+        }
+
+        .eyes_ears.completed .checked {
+            position: absolute;
+            left: 78px;
+        }
+
+        .button_wrapper.selected button {
+            background: #F6A87A;
+            color:white;
+        }
+        .button_wrapper.selected:hover button {
+            color:white;
+        }
+        .button_wrapper.completed .checked {
+            display: block;
+        }
+        .overlay{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }
+        .tagline {
+            margin-top: 0;
+        }
+        .overlay.genitalia_overlay {
+            background: url('pages/images/Topic01/T01P26/overlay/Genitalia.png') no-repeat;
+            top: 111px;
+            left: 495px;
+        }
+        .overlay.head_overlay {
+            background: url('pages/images/Topic01/T01P26/overlay/Head.png') no-repeat;
+            top: 72px;
+            left: 84px;
+        }
+        .overlay.spine_overlay {
+            background: url('pages/images/Topic01/T01P26/overlay/Spine.png') no-repeat;
+            top: 106px;
+            left: 260px;
+        }
+        .overlay.cardiovascular_overlay {
+            background: url('pages/images/Topic01/T01P26/overlay/Cardiovascular.png') no-repeat;
+            top: 107px;
+            left: 246px;
+        }
+        .overlay.abdomen_overlay {
+            background: url('pages/images/Topic01/T01P26/overlay/Abdomen.png') no-repeat;
+            top: 70px;
+            left: 290px;
+        }
+        .overlay.skin_overlay {
+            background: url('pages/images/Topic01/T01P26/overlay/Skin.png') no-repeat;
+            top: 26px;
+            left: 85px;
+        }
+        .overlay.respiratory_overlay {
+            background: url('pages/images/Topic01/T01P26/overlay/Respiratory.png') no-repeat;
+            top: 76px;
+            left: 260px;
+        }
+        .overlay.eyes_ears_overlay {
+            background: url('pages/images/Topic01/T01P26/overlay/Eyes_ears.png') no-repeat;
+            top: 72px;
+            left: 179px;
+        }
+        .overlay.neurologic_overlay {
+            background: url('pages/images/Topic01/T01P26/overlay/Neurologic.png') no-repeat;
+            top: 45px;
+            left: 230px;
+        }
+        .bottom-content ul {
+            list-style-image: none;
+            /* font-size: 15px; */
+            font-family: OpenSansRegular;
+            margin:5px 0;
+        }
+
+        .bottom-content li {
+            font-family: OpenSansRegular;
+            font-weight: normal;
+        }
+        .modalContent {
+            width: 578px;
+        }
+        .button_wrapper, .overlay{
+            opacity:0;
+        }
+    </style>
+
+</head>
+
+
+
+<body>
+
+
+    <div class="pg-pageContent" UNSELECTABLE="on">
+        <div id="TabPopup5" class="clsTabPopup">
+            <div class="sectionContent">
+                <div class="sectionLeft">
+                    <div class="topImgCnt" id="topImgCnt1">
+                        <!-- <div class="clickToContinue expandImgTxtRight clickToEnlarge">Click to enlarge image.</div> -->
+                        <div class="popover left-arrow clickToEnlarge">
+                            <div class="arrow" style="top: 50%;"></div>
+                            <div class="popover-content">Click to enlarge image.</div>
+                        </div>
+                        <a href="javascript:void(0);" title="Click to enlarge image" class="small_expand zoom_btn"
+                            click_id="1">&nbsp;</a>
+                    </div>
+
+                    <div class="leftBottom">
+                        <h3>Baby Jazmine</h3>
+                        <div class="headingBlue">BORN AT</div>
+                        <div class="sectiontxt">36 weeks gestation</div><br>
+                        <div class="headingBlue">WEIGHT</div>
+                        <div class="sectiontxt">2.8 kg</div>
+                    </div>
+                </div>
+
+                <div class="sectionRight">
+                    <div class="firstShow">
+                        <div class="rightTop">
+                            <a href="javascript:void(0);" class="tabClick active" title="Case Information"
+                                rel="Case">Case Information</a>
+                        </div>
+
+                        <div class="sectionContentArea">
+                            <section class="QuestionPanel1_2 clsPanel" id="Labor">
+                                <div class="tagline">Click on the labels to see the initial physical exam findings.</div>
+                                <div class="imageBaby">
+                                    <img src="pages/images/Topic01/T01P26/baby.png">
+                                    <!--Head-->
+
+                                    <div class="button_wrapper head" data-target="head">
+                                        <div class="checked"></div>
+                                        <button class="buttonBox">Head</button>
+                                    </div>
+                                    <div class="overlay head_overlay"></div>
+                                    <!--Abdomen-->
+
+                                    <div class="button_wrapper abdomen" data-target="abdomen">
+                                        <div class="checked"></div>
+                                        <button class="buttonBox">Abdomen</button>
+                                    </div>
+                                    <div class="overlay abdomen_overlay"></div>
+
+                                    <!--Skin-->
+                                    <div class="button_wrapper skin" data-target="skin">
+                                        <div class="checked"></div>
+                                        <button class="buttonBox">Skin</button>
+                                    </div>
+                                    <div class="overlay skin_overlay"></div>
+                                    <!--Genitalia-->
+
+
+                                    <div class="button_wrapper genitalia" data-target="genitalia">
+                                        <div class="checked"></div>
+                                        <button class="buttonBox">Genitalia</button>
+                                    </div>
+                                    <div class="overlay genitalia_overlay"></div>
+
+                                    <!--Neurologic-->
+
+                                    <div class="button_wrapper neurologic" data-target="neurologic">
+                                        <div class="checked"></div>
+                                        <div class="pointer"></div>
+                                        <button class="buttonBox">Neurologic</button>
+                                    </div>
+                                    <div class="overlay neurologic_overlay"></div>
+
+                                    <!--Spine-->
+
+                                    <div class="button_wrapper spine" data-target="spine">
+                                        <div class="checked"></div>
+                                        <div class="pointer"></div>
+                                        <button class="buttonBox">Spine</button>
+                                    </div>
+                                    <div class="overlay spine_overlay"></div>
+
+                                    <!--Cardiovascular-->
+
+                                    <div class="button_wrapper cardiovascular" data-target="cardiovascular">
+                                        <div class="checked"></div>
+                                        <div class="pointer"></div>
+                                        <button class="buttonBox">Cardiovascular</button>
+                                    </div>
+                                    <div class="overlay cardiovascular_overlay"></div>
+
+                                    <!--Respiratory-->
+
+                                    <div class="button_wrapper respiratory" data-target="respiratory">
+                                        <div class="checked"></div>
+                                        <div class="pointer"></div>
+                                        <button class="buttonBox">Respiratory</button>
+                                    </div>
+                                    <div class="overlay respiratory_overlay"></div>
+                                    <!--Eyes / ears-->
+
+                                    <div class="button_wrapper eyes_ears" data-target="eyes_ears">
+                                        <div class="checked"></div>
+                                        <button class="buttonBox">Eyes / ears</button>
+                                    </div>
+                                    <div class="overlay eyes_ears_overlay"></div>
+
+                                </div>
+                                <div class="bottom-content">
+                                    <div id="respiratory" class="info">
+                                        <div>Respiratory:</div>
+                                        <ul>
+                                            <li>Grunting and intercostal retractions</li>
+                                            <li>Breath sounds equal, without crackles</li>
+                                            <li>Chest rise symmetric </li>
+                                        </ul>
+                                    </div>
+                                    <div id="cardiovascular" class="info">
+                                        <div>Cardiovascular:</div>
+                                        <ul>
+                                            <li>Normal sinus rhythm, no heart murmur</li>
+                                            <li>Pulses equal and easily palpable in all 4 extremities</li>
+                                            <li>Capillary refill time 5 seconds upper and lower</li>
+                                        </ul>
+                                    </div>
+                                    <div id="skin" class="info">
+                                        <div>Skin:</div>
+                                        <ul>
+                                            <li>Diffuse mottling, feet cool to touch, no visible lesions</li>
+                                        </ul>
+                                    </div>
+                                    <div id="abdomen" class="info">
+                                        <div>Abdomen:</div>
+                                        <ul>
+                                            <li>Soft and non-distended, bowel sounds are hypoactive</li>
+                                        </ul>
+                                    </div>
+                                    <div id="genitalia" class="info">
+                                        <div>Genitalia:</div>
+                                        <ul>
+                                            <li>Normal 36-week gestation female, anus patent and normally positioned
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div id="spine" class="info">
+                                        <div>Spine:</div>
+                                        <ul>
+                                            <li>No sacral dimple, spine straight</li>
+                                        </ul>
+                                    </div>
+                                    <div id="neurologic" class="info">
+                                        <div>Neurologic:</div>
+                                        <ul>
+                                            <li>Hypotonic, but responds to touch when examined</li>
+                                            <li>No sucking reflex when mouth examined</li>
+                                        </ul>
+                                    </div>
+                                    <div id="eyes_ears" class="info">
+                                        <div> Eyes and ears:</div>
+                                        <ul>
+                                            <li>Normal red reflex bilaterally, pupils equal, round, reactive to light
+                                            </li>
+                                            <li>Normally formed, not low-set or posteriorly rotated</li>
+                                        </ul>
+                                    </div>
+                                    <div id="head" class="info">
+                                        <div>Head:</div>
+                                        <ul>
+                                            <li>Anterior fontanelle soft, flat, sutures mobile, no scalp masses</li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+
+                            </section>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="modal" id="case_study_popup">
+                    <div class="modalContent" unselectable="on">
+                            <div class="modalinner">
+                                <!-- <div class="modalclose">
+                                    <div class="modalcloseicon"></div>
+                                </div> -->
+                                <div class="modalTxtImg" unselectable="on" id="imgPopup0"></div>
+        
+                                <div class="modalTextBottom" unselectable="on">Baby Jazmine</div>
+                                <a class="closepopup zoom_close_btn" href="javascript:void(0)" title="Click to Close"></a>
+                                <!-- <div class="clickToContinue expandImgTxtRight clickToClose">Click to Close</div> -->
+                                 <div class="popover left-arrow">
+                                    <div class="arrow" style="top: 50%;"></div>
+                                    <div class="popover-content">Click to close image.</div>
+                                </div> 
+                            </div>
+                        </div>
+            </div>
+
+            <div class="modal poupdiv" id="popup">
+                <div class="modalContent" unselectable="on">
+                    <div class="popupclose modalclose">
+                        <div class="modalcloseicon"></div>
+                    </div>
+                    <div class="desc">
+                        <ul>
+                            <li>Mother reported leaking of amniotic fluid for the past week and concern for vaginal
+                                discharge</li>
+                            <li>Onset of labor 6 hours before admission. </li>
+                            <li>Fetal heart tracing: Category 1 (normal tracing and normal fetal heart rate and
+                                variability)</li>
+                            <li>Highest intrapartum maternal temperature 37.5°C</li>
+                            <li>No broad spectrum antibiotics given to mother before delivery</li>
+                            <li>Spontaneous rupture of membranes at delivery, amniotic fluid foul-smelling</li>
+                            <li>Vaginal delivery </li>
+                            <li>Apgar scores: 7 (at 1 minute), 9 (at 5 minutes)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--- Main Container--->
+
+    <div class="boxInst">
+        <div class="instNextClick"></div>
+        <div class="next_click"><em> Click Next to continue.</em></div>
+    </div>
+    </div>
+
+    <script>
+        manifest = [{
+            src: 'pages/images/Topic01/T01P02/img2.png',
+            id: '1'
+        },
+
+        {
+            src: 'pages/images/Topic01/T01P02/image_02_small.png',
+            id: '2'
+        },
+
+        {
+            src: 'pages/images/Topic01/T01P02/small_graph.png',
+            id: '3'
+        },
+        ];
+
+
+
+        var audioPath = "pages/audio/Topic01/T01P26/T01P26";
+        var gItemAudioPath = ["pages/audio/Topic01/T01P26/T01P26_02", "pages/audio/Topic01/T01P26/T01P26_01"];
+        clickViewMoreInfo();
+        var currCue = 0;
+        var idd = 0;
+        var __curState = 0;
+        var clickTabCount = 0;
+        var clickTabCount1 = 0;
+
+        var updateContentArray = [
+
+            { time: "0.0", carry: "", event: "", show: "", hide: "", transcript: "Let’s now examine Baby Jazmine. Click on the labels to see her exam findings." },
+            {
+                time: "0.0", carry: "", event: "", show: "", hide: "",
+                transcript: "",
+                animation: [{ target: ".buttonSee", duration: "0.5", activity: { 'opacity': '1', 'display': 'block' } }]
+            },
+            {
+                time: "0.2", carry: "", event: "", show: "", hide: "",
+                transcript: "",
+                animation: [
+                    { target: ".button_wrapper", duration: "0.5", activity: { 'opacity': '1'} },
+                    { target: ".overlay", duration: "0.5", activity: { 'opacity': '1' } }
+                ]
+            }
+        ];
+
+        function fnAudioFinishItemComp() {
+            fnAudioFinishPageComp();
+        }
+
+        var __dataXml;
+
+        var audplayer = document.getElementById('audioplayer');
+
+        $(document).ready(function () {
+            bindClickableHotspot();
+            disableNextBtn();
+            var ele = document.getElementsByTagName('div');
+            for (var i = 0; i < ele.length; i++) {
+                ele[i].setAttribute("unselectable", "on");
+            }
+            var n = isInArray("M1L0T1P26", gCompPageArr);
+            if (n == true) {
+                enableNextBtn();
+                fnDesiableNext(false)
+            }
+        });
+
+        function audioReset() {
+            gAudioId = "";
+            onTimelineEnd();
+        }
+
+        function isInArray(value, array) {
+            return array.indexOf(value) > -1;
+        }
+
+
+        function fnPlaySectionAudio(gCurrentIndex) {
+            indexAudio = (gCurrentIndex);
+            audioId = "audio_" + gCurrentIndex;
+            gAudioId = audioId;
+            fnHideShowAudioPlayer(false);
+            updateContentArray = eval("updateContentArray" + (gCurrentIndex));
+            initAudioPlayer(gItemAudioPath[gCurrentIndex])
+        }
+
+        function fnCompletion() {
+            console.log("end");
+            var _getCount1 = clickTabCount + clickTabCount1;
+            console.log("start new");
+            enableNextBtn();
+            gCompPageArr.push("M1L0T1P26");
+            $('.boxInst').show()
+            fnAudioFinishItemComp();
+
+        }
+
+        function fnOnAudioComplete() {
+            if (gAudioId == "startAudio") {
+                console.log("start audio");
+                audplayer.pause();
+                audplayer.currentTime = 0;
+                $(".clickToEnlarge").show();
+                $(".small_expand").show();
+                $(".small_expand1").show();
+            } else {
+                $('.boxInst').show();
+                $(".clickToEnlarge").show();
+                $(".small_expand").show();
+                $(".small_expand1").show();
+                gCompPageArr.push("M1L0T1P26");
+                fnAudioFinishItemComp();
+                audplayer.pause();
+                audplayer.currentTime = 0;
+            }
+
+        }
+
+        var correctOptions = [1];
+
+        function bindClickableHotspot() {
+            console.log("clicked");
+            $('.option').addClass('aactive'); //.css({ 'cursor': 'pointer' });
+            $('.option').off().on('click', function () {
+                $('.option').removeClass('clicked');
+                $(this).addClass('clicked');
+                if ($('.option.clicked').length >= 1) {
+                    $('.cSubmitBtn').addClass('active');
+                    $('.cSubmitBtn.active').off().on('click', function () {
+                        submitClick();
+                    });
+                } else {
+                    $('.cSubmitBtn').removeClass('active');
+                }
+            });
+        }
+
+        $('#topImgCnt2').hide();
+        function submitClick() {
+            tinCanWrapper.sendStatementData("answered", "baby-conrad-postnatal-course", "Baby Conrad - Postnatal Course - Now take a look at Baby Conrad's vital signs shortly after birth. Are they normal or abnormal?");
+            $('.cSubmitBtn.active').hide();
+            console.log("clicked");
+            enableNextBtn();
+            fnDesiableNext(false);
+            gCompPageArr.push("M1L0T1P26");
+            var incorrectCount = 0; //, correctCount = 0;
+            $('.option').each(function () {
+                if ($(this).hasClass('clicked') && ($.inArray($(this).index(), correctOptions) == -1)) {
+                    $(this).addClass('wrong');
+                    incorrectCount++;
+                }
+                $(this).off(); //.removeClass('clicked');
+            });
+
+            $(correctOptions).each(function (i, val) {
+                $('.option').eq(val).addClass('correct');
+            });
+
+            if (incorrectCount == 0) {
+                fnPlaySectionAudio(0);
+            } else {
+                fnPlaySectionAudio(1);
+            }
+            $('.option').off().removeClass('aactive'); //.css({'cursor':'default'});
+            $('.cSubmitBtn').removeClass('active');
+            $('.rightCnt').show();
+            $('.informationRight').show();
+        }
+        var visited = [];
+        var total_count = 9;
+        $('.button_wrapper[data-target] .buttonBox').on('click', function () {
+            $('.button_wrapper[data-target]').removeClass('selected');
+            $(this).parents('.button_wrapper').addClass('selected').addClass('completed');
+
+
+            id = $(this).parents('.button_wrapper').data('target');
+            visited.push(id);
+            visited = visited.filter(onlyUnique);
+            if (visited.length == total_count) {
+                fnCompletion();
+                enableNextBtn();
+            }
+            $('.overlay').hide();
+            $('.overlay.'+id+'_overlay').show();
+
+            $('.bottom-content').show();
+            $('.info').hide();
+            $('#' + id).show();
+        });
+        function onlyUnique(value, index, self) {
+            return self.indexOf(value) === index;
+        }
+        $(".small_expand").off().on("click", function () {
+            pauseAudio();
+            $("#TabPopup5 #case_study_popup.modal").show();
+            $("#TabPopup5 .sectionTop").addClass("blur");
+            $("#TabPopup5 .sectionContent").addClass("blur");
+            $(".modalTxtImg").attr('id', 'imgPopup' + $(this).attr('click_id'));
+            // $('.modalTextBottom').hide();
+            $('#ModalTextBottom' + $(this).attr('click_id')).show();
+            $('.modalContent').addClass('maxBot0');
+            $('.modalContent').removeClass('maxBot');
+        });
+
+        $(".small_expand1").off().on("click", function () {
+            pauseAudio();
+            $("#TabPopup5 #case_study_popup.modal").show();
+            $("#TabPopup5 .sectionTop").addClass("blur");
+            $("#TabPopup5 .sectionContent").addClass("blur");
+            $('.boxInst').addClass("blur");
+            $(".modalTxtImg").attr('id', 'imgPopup' + $(this).attr('click_id'));
+            $('.modalTextBottom').hide();
+            $('#ModalTextBottom' + $(this).attr('click_id')).show();
+            $('.modalContent').addClass('maxBot');
+            $('.modalContent').removeClass('maxBot0');
+        });
+
+        $(".closepopup, .modalclose").off().on("click", function () {
+            playAudio();
+            $("#TabPopup5 .modal").removeAttr("style");
+            $("#TabPopup5 .sectionTop").removeClass("blur");
+            $("#TabPopup5 .sectionContent").removeClass("blur");
+            $('.boxInst').removeClass("blur");
+        });
+
+        $(".popup").on("click", function () {
+            pauseAudio();
+            $("#TabPopup5 #popup").show();
+            $("#TabPopup5 .sectionTop").addClass("blur");
+            $("#TabPopup5 .sectionContent").addClass("blur");
+        });
+        $(".popupclose").on("click", function () {
+            playAudio();
+            $("#TabPopup5 #popup").removeAttr("style");
+            $("#TabPopup5 .sectionTop").removeClass("blur");
+            $("#TabPopup5 .sectionContent").removeClass("blur");
+        });
+        function pauseAudio() {
+            if (!fnPauseAudio()) {
+                console.log(true);
+                fnPauseAudio()
+            } else {
+                playPauseAudio();
+                console.log(false);
+            }
+        }
+
+        function playAudio() {
+            if (!fnPauseAudio()) {
+                console.log(true);
+                playPauseAudio();
+            }
+        }
+    </script>
+
+</body>
+
+
+
+</html>

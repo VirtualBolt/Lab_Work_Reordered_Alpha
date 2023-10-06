@@ -1,0 +1,74 @@
+.reviewScreenCnt {
+    position: relative;
+    top: 425px;
+    margin: 0px auto;
+    width: 200px;
+    height: 50px;
+}
+
+.reviewScreenCount {
+    background: #5B5B5B;
+    color: #ffffff;
+    font-family: OpenSansRegular;
+    font-size: 16px;
+    padding: 4px 10px;
+    height: 24px;
+    width: auto;
+    position: relative;
+    float: left;
+    cursor: pointer;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    margin-right: 1px;
+}
+
+.reviewScreenTextCnt {
+    font-family: OpenSansRegular;
+    font-size: 16px;
+    color: #000;
+    position: relative;
+    top: 465px;
+    margin-left: 20px;
+    width: 910px;
+}
+
+
+/* .textReviewCnt{
+    font-family: OpenSansRegular;
+    font-size: 16px;
+    color: #333;
+    position: relative;
+    top: 385px;
+    margin-left: 40px;
+    width: 600px;
+
+} */
+
+
+#assistment div#idPatchMain23 {
+    width: 938px;
+}
+
+#assistment .clsPatch2 {
+    width: 978px;
+}
+
+#assistment .activityArea {
+    width: 938px;
+    left: 53px;
+}
+
+#assistment .mainContainer {
+    left: 42px;
+}
+
+#assistment .bottomTxt {
+    width: 95px;
+}
+.result_box{
+    margin-left:-232px
+}
+#assistment .tagline{
+    margin-top:0px;
+}

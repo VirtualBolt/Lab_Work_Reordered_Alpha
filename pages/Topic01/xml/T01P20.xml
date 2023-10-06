@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Root>
+	<resourceTitle><![CDATA[References]]></resourceTitle>
+	<closeTitle><![CDATA[Close]]></closeTitle>
+	<Resources>
+		 <!-- Section 01 -->
+		 <!-- <Resource URL="" isSectionTitle="true" isPageID="false"><![CDATA[Getting Started]]></Resource> -->
+
+		  <Resource isSectionTitle="false" isPageID="false" URL="pages/Topic01/pdf/pointers_from_intensive_care_nursery_nurses_on_starting_IVs_and_how_to_secure_IVs.pdf"><![CDATA[Pointers from intensive care nursery nurses on starting IVs and how to secure IVs]]></Resource>
+
+	</Resources>
+</Root>

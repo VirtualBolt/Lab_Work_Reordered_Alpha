@@ -1,0 +1,346 @@
+.Notes
+{
+	position: absolute;
+	background: url('../pages/images/Global/Note.png') no-repeat scroll 0% 0% transparent;
+	float: left;
+}
+.NoteHead
+{
+	color: #0C8297;
+	font-weight: bold;
+}
+.Example
+{
+	background: url('../pages/images/Global/Example.png') no-repeat scroll 0% 0% / 100% 100% transparent;
+}
+fieldset {
+
+    padding: 0.5% 0% 1% 2.4%;
+    margin-left: 2.3%;
+    margin-top: 5.7%;
+    border: 1px solid #D2DE6F;
+	border-radius: 8px;
+}
+
+.pg-pageContent{
+	position: relative;
+    width: 100%;
+    height: 94%;
+    /* overflow: hidden; */
+
+}
+.clsToAvoidDrag
+{
+	position: absolute;
+	width:100%;
+	height:100%;
+}
+
+.clsPageTitle
+{
+ 	width: 100%;
+  	margin-left: 5%;
+  	margin-top: 2%;
+  	margin-bottom: 1%;
+
+ }
+
+.clsContent
+{
+	width:57%;
+	margin-top: 2%;
+	margin-left: 5%;
+}
+
+/**********************Bullet CSS Start*********************************/
+
+.clsBulletLevel1 ul{
+		margin: 0px;
+		padding: 0px;
+		/* margin-bottom: 2.6%; */
+		margin-bottom: 4px;
+}
+.clsBulletLevel2 ul{
+		margin: 0px;
+		padding: 0px;
+		/* margin-bottom: 2.6%; */
+		margin-bottom: 4px;
+}
+.clsBulletLevel1 .bulletLevel1 .bullet {
+    position: relative;
+    background-image: url(../pages/images/Global/bullet.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    float: left;
+    height: 8px;
+    width: 24px;
+    margin-top: 6.9px;
+    /* border-radius: 100%; */
+    list-style-type: none;
+}
+
+.clsBulletLevel1 .bulletLevel1 .text {
+    color: #333;
+    list-style-type: none;
+    margin-left: 26px;
+    position: relative;
+    font-size: 16px;
+}
+
+.clsBulletLevel1 .bulletLevel2 .bullet {
+	background-image: url(../pages/images/Global/bullet.png);
+	background-repeat: no-repeat;
+    background-size: 100% 100%;
+	float: left;
+    height: 5px;
+	width: 5px;
+    margin-top:9.4px;
+    list-style-type: none;
+    position: relative;
+    border-radius: 100%;
+    margin-left: 2px;
+}
+.clsBulletLevel1 .bulletLevel2 .text {
+	color: #333;
+    list-style-type: none;
+    margin-left: 17px;
+    position: relative;
+    margin-top:0px;
+    margin-bottom: -8px;
+    font-size: 16px;
+
+}
+.clsBulletLevel1 .bulletLevel3 .bullet {
+	position: relative;
+    background-image: url(../pages/images/Global/bullet.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	float: left;
+	height: 5px;
+	width: 5px;
+	border-radius: 100%;
+	margin-top: 8px;
+	list-style-type: none;
+}
+.clsBulletLevel1 .bulletLevel3 .text {
+	color: #333;
+    list-style-type: none;
+    margin-left: 17px;
+    position: relative;
+    margin-top:9.6px;
+    margin-bottom: -8px;
+    font-size: 16px;
+
+}
+
+.bulletLevel1{
+	 margin-left: 0px !important;
+}
+.bulletLevel2{
+	margin-left: 16px !important;
+	margin-bottom: 13px !important;
+}
+.bulletLevel3{
+	margin-left: 33px !important;
+	margin-bottom: 13px !important;
+}
+
+
+
+/**********************Bullet CSS End*********************************/
+
+
+.defaultTextRegular
+{
+	font-size: 125%;
+	font-family: HelvaticaCnsdNormal;
+
+	color: #000000;
+
+}
+.defaultTextBold
+{
+	font-size: 93.7%;
+	font-family: HelvaticaCnsdNormal;
+	font-weight: bold;
+	color: #000000;
+
+}
+.InstIcon
+{
+	/*margin-left: 2%;
+	margin-top: 2%;	*/
+	color: #F15940;
+}
+.InstIcon ul li
+{
+	list-style-type: none;
+	/*background-image: url("../pages/images/Global/Instruction_Bullet.png");*/
+    background-position: 0 0px;
+    background-repeat: no-repeat;
+    padding-left: 3%;
+	padding-bottom: 3%;
+	padding-top: 0.2%;
+}
+.clsInstruction  /* instruction text eg: Click here to Play the video*/
+{
+ 	color: #F15940;
+    position: absolute;
+    text-align: center;
+    width: 62%;
+}
+.clsHeading
+{
+	display: block;
+	width: 95%;
+	--float: left;
+	padding-top: 1%;
+	padding-bottom: 2%;
+	font-size: 110%;
+	padding-left: 1%;
+	margin-top: 1%;
+	margin-left: 3%;
+	color: rgba(255, 255, 255, 0.97);
+	font-weight: bold;
+}
+.clsContents{
+	padding: 5%;
+}
+.ClsPopUpImgMedium
+{
+	position:absolute;
+	background:url("../pages/images/Topic02/T02P0615.png") no-repeat;
+	background-size: 100% 100%;
+	width: 93.3%;
+	height: 84%;
+	left: 3%;
+	top: 4%;
+	border-radius: 12px;
+}
+.clsHeadingMedium {
+    display: block;
+    width: 95%;
+    padding-top: 1%;
+    padding-bottom: 2%;
+    font-size: 110%;
+    padding-left: 1%;
+    margin-top: 2%;
+    margin-left: 3%;
+    color: rgba(255, 255, 255, 0.97);
+    font-weight: bold;
+}
+.ClsPopUpImg
+{
+	position:absolute;
+	background:url("../pages/images/Topic02/T02P0507.png") no-repeat;
+	background-size: 100% 100%;
+	width: 93.3%;
+	height: 84%;
+	left: 3%;
+	top: 4%;
+	border-radius: 12px;
+}
+.clsTabClose{
+	width: 2.3%;
+	height: 4.2%;
+	margin-top: 2%;
+	background: url('../pages/images/Global/T02P0508.png') no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	float:right;
+	margin-left:96%;
+	cursor: pointer;
+}
+.ImageLabel{
+	/*position: absolute;*/
+	display: block;
+	color: #666666;
+	font-size: 100%;
+	font-weight: bold;
+	text-align: center;
+}
+#InstText
+{
+	position:absolute;
+	top: 365%;
+	left: 6%;
+	width: 100%;
+	opacity:1;
+}
+#alignInstructionTextForPage25
+{
+	top: 435%;
+	left: 5%;
+	width: 42%;
+}
+#tempInformationImgForPage25
+{
+	top: -13%;
+	left: 10.5%;
+	height: 68%;
+	width: 6%;
+}
+#alignInstructionTextForPage18
+{
+	top: 458%;
+	left: 5%;
+	width: 42%;
+}
+#tempInformationImgForPage18
+{
+	top: -5%;
+	left: 4.5%;
+	height: 130%;
+	width: 6%;
+}
+#alignInstructionTextForPage30
+{
+	top: 435%;
+	left: 3%;
+	width: 42%;
+}
+#tempInformationImgForPage30
+{
+	top: -4%;
+	left: 6.5%;
+	height: 101%;
+	width: 6%;
+}
+#alignInstructionTextForPage38
+{
+	top: 435%;
+	left: 3%;
+	width: 42%;
+}
+#tempInformationImgForPage38
+{
+	top: -4%;
+	left: 6.5%;
+	height: 100%;
+	width: 6%;
+}
+
+.clsFontBold{
+	font-family: OpenSansBold;
+}
+.clsFontSemiBold{
+	font-family: OpenSansSemiBold;
+}
+.clsFontRegular{
+    font-family: OpenSansRegular;
+}
+
+sup{
+	font-size: 12px;
+}
+.clsExitHighlight{
+		position: absolute;
+		top: 19px;
+		left: 1232px;
+		height: 25px;
+		width: 29px;
+		opacity: 0;
+		display: none;
+		border: 2px solid red;
+
+}

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root>
+	<resourceTitle><![CDATA[References]]></resourceTitle>
+	<closeTitle><![CDATA[Close]]></closeTitle>
+	<Resources>
+		 <!-- Section 01 -->
+		 <!-- <Resource URL="" isSectionTitle="true" isPageID="false"><![CDATA[Getting Started]]></Resource> -->
+
+		<Resource isSectionTitle="false" isPageID="false" URL="pages/Topic01/pdf/Blood gas interpretation chart.pdf"><![CDATA[Blood gas interpretation chart]]></Resource>
+		<Resource isSectionTitle="false" isPageID="false" URL="pages/Topic01/pdf/Blood gas interpretation chart (International version kPa).pdf"><![CDATA[Blood gas interpretation chart (International version kPa)]]></Resource>
+		<Resource isSectionTitle="false" isPageID="false" URL="pages/Topic01/pdf/Herpes simplex virus.pdf"><![CDATA[Herpes simplex virus]]></Resource>
+		<Resource isSectionTitle="false" isPageID="false" URL="pages/Topic01/pdf/Interpreting the platelet count.pdf"><![CDATA[Interpreting the platelet count]]></Resource>
+		<Resource isSectionTitle="false" isPageID="false" URL="pages/Topic01/pdf/Neonatal infection.pdf"><![CDATA[Neonatal infection]]></Resource>
+		<Resource isSectionTitle="false" isPageID="false" URL="pages/Topic01/pdf/Physical exam of the newborn.pdf"><![CDATA[Physical exam of the newborn]]></Resource>	
+		
+
+	</Resources>
+</Root>

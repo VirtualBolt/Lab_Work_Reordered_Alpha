@@ -1,0 +1,447 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        manifest = [{
+            src: 'pages/images/Topic01/T01P02/img1.png',
+            id: '1'
+        }, {
+            src: 'pages/images/Topic01/T01P02/image_01_small.png',
+            id: '2'
+        }, ];
+    </script>
+
+
+    <style type="text/css">
+        
+        
+        
+		@-webkit-keyframes slideInDown {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInDown {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__slideInDown {
+  -webkit-animation-name: slideInDown;
+  animation-name: slideInDown;
+}
+@-webkit-keyframes slideInLeft {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInLeft {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__slideInLeft {
+  -webkit-animation-name: slideInLeft;
+  animation-name: slideInLeft;
+}
+@-webkit-keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(50%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(50%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__slideInRight {
+  -webkit-animation-name: slideInRight;
+  animation-name: slideInRight;
+}
+@-webkit-keyframes slideInUp {
+  from {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInUp {
+  from {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__slideInUp {
+  -webkit-animation-name: slideInUp;
+  animation-name: slideInUp;
+}
+		.mainContainer{position:absolute;width:100%;height:545px;left:0;top:0;opacity:1}
+		.sectionTop{position:absolute;top:0;height:30px;width:100%;padding:16px 0}
+		.sectionContent{position:absolute;top:10px;height:522px;width:1073px;left:15px;right:15px}
+		.sectionLeft{height:100%;width:264px;background:#E0F6FB;box-shadow:0 1px 9px -4px rgba(0,0,0,0.75);-webkit-box-shadow:0 1px 9px -4px rgba(0,0,0,0.75);-moz-box-shadow:0 1px 9px -4px rgba(0,0,0,0.75);border-bottom-left-radius:7px;-webkit-border-bottom-left-radius:7px;-moz-border-bottom-left-radius:7px}
+		.sectionRight{width:808px;height:527px;top:0;position:absolute;left:264px}
+		.rightTop{height:42px;left:5px;position:relative}
+		.rightTop a{left:0;top:0;padding:0 65px;background:#fff;margin:0;position:relative;float:left;margin-left:-5px;font-family:OpenSansSemiBold;text-decoration:none;color:#000;height:42px;line-height:42px;border-top-right-radius:5px;-webkit-border-top-right-radius:5px;-moz-border-top-right-radius:5px;font-size:16px;cursor:default}
+		.sectionRight .assessmentShow a{cursor:default}
+		.rightTop a.active{border-top-right-radius:5px;-webkit-border-top-right-radius:5px;-moz-border-top-right-radius:5px;background:#3A5569;margin-right:0;z-index:10;color:#fff}
+		.rightTop a.active.cdefault{cursor:default}
+		.rightTop a.active:after,.rightTop a.active:before,.rightTop a.active:hover:before{top:98%;left:45%;border:solid transparent;content:" ";height:0;width:0;position:absolute;pointer-events:none}
+		.rightTop a.active:after,.rightTop a.active:hover:after{border-top-color:#3A5569;border-width:10px;margin-left:0}
+		.rightTop a.active:before,.rightTop a.active:hover:before{border-top-color:#3A5569;border-width:10px;margin-left:0}
+		.rightTop a.active:nth-child(2),.rightTop a.active:hover:nth-child(2){-webkit-border-top-left-radius:5px;border-top-left-radius:5px;-moz-border-top-left-radius:5px}
+		.rightTop a:nth-child(2){-webkit-border-top-left-radius:5px;border-top-left-radius:5px}
+		.sectionContentArea{background:#fff;height:480px;border-top-right-radius:5px;-webkit-border-top-right-radius:5px;-moz-border-top-right-radius:5px;border-bottom-right-radius:5px;-webkit-bottom-top-right-radius:5px;-moz-border-bottom-right-radius:5px}
+		.blur{-webkit-backface-visibility:hidden;-moz-backface-visibility:hidden;-ms-backface-visibility:hidden;-o-backface-visibility:hidden;-webkit-filter:blur(12px);-moz-filter:blur(12px);-ms-filter:blur(12px);-o-filter:blur(12px);filter:blur(12px)}
+		.sectionContentinner{ width:720px; height:540px; margin:-10px auto 0px; position:relative}
+		.lefttxt{ position:absolute; left:-15px; top:35%; background:#fff; width:145px; height:90px; color:#000; font-style:italic; font-size:13px; line-height:18px; padding:10px; border-radius:0px 5px 5px 0px; box-shadow:2px 3px 5px #ccc;}
+    .lefttxt1{ position:absolute; left:-15px; top:35%; background:#fff; width:145px; height:90px; color:#000; font-style:italic; font-size:13px; line-height:18px; padding:10px; border-radius:0px 5px 5px 0px; box-shadow:2px 3px 5px #ccc;}
+    .lefttxt2{ position:absolute; left:-15px; top:35%; background:#fff; width:145px; height:90px; color:#000; font-style:italic; font-size:13px; line-height:18px; padding:10px; border-radius:0px 5px 5px 0px; box-shadow:2px 3px 5px #ccc;}
+		.abs{ position:absolute}
+		.img1{ top:0px}
+		.img01{ bottom:-2px;left:35px;z-index:9;}
+		.img02{ top:38%;left:0px;z-index:9;}
+		.img1_text{ top:18px; left:84px; z-index:9}
+		.img2{ top:0px}
+		.img2_text{ top:88px; left:84px; z-index:9}
+		.img2_text img{ height:58px}
+		.img3{ top:210px;left:84px; z-index:9}
+		.img4{ top:0px}
+		.img4_text{ top:155px; left:233px; z-index:9}
+		.img4_text img{ height:68px}
+		.img5{ top:0px}
+		.img5_text{ top:278px; left:230px; z-index:9}
+		.img5_text img{ height:56px}
+		.img6{ top:0px}
+		.img6_text{ top:210px; left:210px; z-index:9}
+		.img6_text img{ height:70px}
+		.img7{ bottom:-5px}
+		.img7_text{ top:340px; left:84px; z-index:9}
+		.img7_text img{ height:58px}
+		.img8{ top:0px}
+		.img8_text{ top:400px; left:84px; z-index:9}
+		.img8_text img{ height:58px}
+		.img9{ top:0px}
+		.img9_text{ top:210px; left:210px; z-index:9}
+		.img9_text img{ height:71px}
+		
+		#img0,#img01,#img02, #img1,#img1_text, #img2,#img2_text, #lefttxt, #lefttxt1, #lefttxt2, #img3, #img4,#img4_text, #img5,#img5_text, #img6,#img6_text, #img7,#img7_text, #img8,#img8_text, #img9,#img9_text{ visibility:hidden; opacity:0}
+    .boxInst {
+            position: absolute;
+            top: 489px;
+            left: 905px;
+        }
+     
+    </style>
+    
+
+</head>
+
+<body>
+
+
+    <div class="pg-pageContent" UNSELECTABLE="on">
+        <div id="TabPopup5" class="clsTabPopup">
+            <div class="sectionContent">
+				<div id="lefttxt" class="lefttxt">White blood cells (WBCs) are involved in protection against infective organisms and foreign substances.</div>
+        <div id="lefttxt1" class="lefttxt1">On the first day after birth, in noninfected infants, the WBC count ranges between 5,300, the 5th percentile and 28,200, the 95th percentile)/mm3.</div>
+        <div id="lefttxt2" class="lefttxt2">For all gestational ages, a white blood cell count below 5,000 may correlate with neonatal sepsis, especially if the infant is clinically unwell. The lower the number, the more concerning the finding. </div>
+                <div class="sectionContentinner">
+                <div class="sectionContentinner">
+					<div id="img0" class="img0"><img src="pages/images/Topic01/T01P33/img0.png"></div>
+					<div id="img01" class="img01 abs"><img src="pages/images/Topic01/T01P33/img0-1.png"></div>
+					<div id="img02" class="img02 abs"><img src="pages/images/Topic01/T01P33/img0-2.png"></div>
+					<div id="img1" class="abs img1"><img src="pages/images/Topic01/T01P33/img1.png"></div>
+					<div id="img1_text" class="abs img1_text"><img src="pages/images/Topic01/T01P33/img1_text.png"></div>
+					<div id="img2" class="abs img2"><img src="pages/images/Topic01/T01P33/img2.png"></div>
+					<div id="img2_text" class="abs img2_text"><img src="pages/images/Topic01/T01P33/img2_text.png"></div>
+					
+					<div id="img3" class="abs img3"><img src="pages/images/Topic01/T01P33/img3.png"></div>
+					
+					<div id="img4" class="abs img4"><img src="pages/images/Topic01/T01P33/img4.png"></div>
+					<div id="img4_text" class="abs img4_text"><img src="pages/images/Topic01/T01P33/img4_text.png"></div>
+					<div id="img5" class="abs img5"><img src="pages/images/Topic01/T01P33/img5.png"></div>
+					<div id="img5_text" class="abs img5_text"><img src="pages/images/Topic01/T01P33/img5_text.png"></div>
+					<div id="img6" class="abs img6"><img src="pages/images/Topic01/T01P33/img6.png"></div>
+					<div id="img6_text" class="abs img6_text"><img src="pages/images/Topic01/T01P33/img6_text.png"></div>
+					<div id="img7" class="abs img7"><img src="pages/images/Topic01/T01P33/img7.png"></div>
+					<div id="img7_text" class="abs img7_text"><img src="pages/images/Topic01/T01P33/img7_text.png"></div>
+					<div id="img8" class="abs img8"><img src="pages/images/Topic01/T01P33/img8.png"></div>
+					<div id="img8_text" class="abs img8_text"><img src="pages/images/Topic01/T01P33/img8_text.png"></div>
+					<div id="img9" class="abs img9"><img src="pages/images/Topic01/T01P33/img9.png"></div>
+					<div id="img9_text" class="abs img9_text"><img src="pages/images/Topic01/T01P33/img9_text.png"></div>
+				</div>
+            </div>
+            
+        </div>
+    </div>
+    <!--- Main Container--->
+    <div class="boxInst">
+        <div class="instNextClick"></div>
+        <div class="next_click"><em> Click Next to continue.</em></div>
+    </div>
+    </div>
+
+</body>
+<script>
+        console.log("Labor" + gCompPageArr);
+
+        var audioPath = "pages/audio/Topic01/T01P33/T01P33";
+       
+        var __audioClick = 0;
+
+        var currCue = 0;
+        var idd = 0;
+
+        clickViewMoreInfo();
+        var __curState = 0;
+
+
+        var clickTabCount = 0;
+        var clickTabCount1 = 0;
+
+        var updateContentArray = [
+			{
+            time: "0.0",     carry: "",  event: "",  show: "",  hide: "#lefttxt,#lefttxt1,#lefttxt2",
+            transcript: "Red blood cells, platelets, and five types of white blood cells are produced in the bone marrow and then released into the bloodstream. White blood cells protect against infective organisms and foreign substances. On the first day after birth, in noninfected infants, the WBC count ranges between 5,300, the 5th percentile and 28,200, the 95th percentile)/mm3. For all gestational ages, a white blood cell count below 5,000 may correlate with neonatal sepsis, especially if the infant is clinically unwell. The lower the number, the more concerning the finding.However, a WBC count within a normal range for age may be observed even in infants with a positive blood culture. Clinicians should utilize all available laboratory and clinical data and not rely solely on the WBC count as an indicator of sepsis <br>Click Next to continue."
+        	},
+			{
+            time: "0.1",     carry: "",  event: "",  show: "#img0,#img01,#img02",  hide: ""
+        	},
+			{
+            time: "0.3",     carry: "",  event: "",  show: "#img1,#img1_text",  hide: ""
+        	},
+			{
+            time: "1",     carry: "",  event: "",  show: "#img2,#img2_text",  hide: ""
+        	},
+			{
+            time: "7.5",     carry: "",  event: "",  show: "#lefttxt",  hide: ""
+			},
+			{
+            time: "13.5",     carry: "",  event: "",  show: "#img3",  hide: ""
+        	},
+			{
+            time: "17.2",     carry: "",  event: "",  show: "#img4,#img4_text,#lefttxt1",  hide: "#lefttxt",
+            animation: [{ target: "#lefttxt1", duration: "0.5", activity: { 'height': '124px', 'display': 'block' } }]
+        	},
+			{
+            time: "18.4",     carry: "",  event: "",  show: "#img5,#img5_text",  hide: ""
+        	},
+			{
+            time: "19.6",     carry: "",  event: "",  show: "#img6,#img6_text",  hide: ""
+           
+        	},
+			{
+            time: "24",     carry: "",  event: "",  show: "#img7,#img7_text",  hide: ""
+        	},
+			{
+            time: "25",     carry: "",  event: "",  show: "#img8,#img8_text,#lefttxt2",  hide: "#lefttxt1",
+            animation: [{ target: "#lefttxt2", duration: "0.5", activity: { 'height': '159px', 'display': 'block','visibility':'visible' } }]
+        	},
+			{
+            time: "26.3",     carry: "",  event: "",  show: "",  hide: "#img6_text"
+        	},
+			{
+            time: "34",     carry: "",  event: "",  show: "#img6,#img6_text",  hide: "",
+            animation: [{ target: ".boxInst", duration: "0.5", activity: {'display': 'block'} }]
+        	},
+		];
+        
+
+        function fnAudioFinishItemComp() {
+            fnAudioFinishPageComp();
+        }
+        var __dataXml;
+
+        $(document).ready(function() {
+            disableNextBtn();
+            var ele = document.getElementsByTagName('div');
+            for (var i = 0; i < ele.length; i++) {
+                ele[i].setAttribute("unselectable", "on");
+            }
+            var n = isInArray("M1L0T1P33", gCompPageArr);
+            if (n == true) {
+                enableNextBtn();
+                // fnGlowNextBtn();
+                fnDesiableNext(false)
+            }
+        });
+
+        function audioReset() {
+            gAudioId = "";
+            onTimelineEnd();
+        }
+
+        function isInArray(value, array) {
+            return array.indexOf(value) > -1;
+        }
+
+
+
+        function fnPlaySectionAudio(gCurrentIndex) {
+            indexAudio = (gCurrentIndex);
+            audioId = "audio_" + gCurrentIndex;
+            gAudioId = audioId;
+
+            fnHideShowAudioPlayer(false);
+            updateContentArray = eval("updateContentArray" + (gCurrentIndex));
+            initAudioPlayer(gItemAudioPath[gCurrentIndex])
+        }
+
+
+        function fnCompletion() {
+            console.log("end");
+
+            //var _getCount1 = clickTabCount + clickTabCount1;
+            // if (__audioClick == 1) {
+            console.log("start new");
+            enableNextBtn();
+            $('.boxInst').show();
+            fnAudioFinishItemComp();
+            // }
+
+        }
+
+        function fnOnAudioComplete() {
+            if (gAudioId == "startAudio") {
+                console.log("start audio");
+                audioStop();
+				audplayer.pause();
+
+        audplayer.currentTime = 0;
+
+				enableNextBtn();
+				fnDesiableNext(false);
+				$('.boxInst').show();
+            } else {
+				$('.boxInst').show();
+                fnCompletion();
+                enableNextBtn();
+				$('.boxInst').show();
+                gCompPageArr.push("M1L0T1P33");
+                 fnAudioFinishItemComp();
+
+        audplayer.pause();
+
+        audplayer.currentTime = 0;
+            }
+        }
+        
+
+
+        /* highlight */
+        __clickedOpt = [];
+
+        function correctAnswerNotClicked(aCorrectAnswerVal) {
+            for (var i = 0; i < aCorrectAnswerVal.length; i++) {
+                //console.log("highlighted "+aCorrectAnswerVal[i]);
+                //$(".clsPanel .option[curid='"+aCorrectAnswerVal[i]+"']").addClass("cborder");
+                $(".clsPanel .option[curid='" + aCorrectAnswerVal[i] + "']").addClass("cborder");
+            }
+        }
+
+        function areDifferentByIds(clickVal, correctVal) {
+            var newArr = correctVal.slice();
+
+            for (var i = 0; i < clickVal.length; i++) {
+
+
+                var index = newArr.indexOf(clickVal[i]);
+                if (index !== -1) {
+                    newArr.splice(index, 1);
+                }
+
+            }
+
+            return newArr;
+        }
+
+        function highlightBorderPushVal() {
+            __clickedOpt = [];
+            $(".option.clicked").each(function() {
+                console.log($(this).attr("curid"));
+                __clickedOpt.push($(this).attr("curid"));
+            });
+        }
+        /* highlight */
+
+        function pauseAudio() {
+            if (!fnPauseAudio()) {
+                console.log(true);
+                fnPauseAudio()
+            } else {
+                playPauseAudio();
+                console.log(false);
+            }
+        }
+
+        function playAudio() {
+            if (!fnPauseAudio()) {
+                console.log(true);
+                playPauseAudio();
+            }
+        }
+
+        function audioStop() {
+            var audio = document.getElementById("audioplayer");
+            audio.pause();
+            audio.currentTime = 0;
+        }
+    </script>
+
+</html>

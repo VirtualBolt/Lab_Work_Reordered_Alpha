@@ -1,0 +1,131 @@
+<!Doctype html>
+<html>
+
+<head>
+    <link href="elements/caseinfo/css/caseinfo.css" type="text/css" rel="stylesheet" />
+    <script src="elements/caseinfo/scripts/caseinfo.js" type="text/javascript"></script>
+    <link rel="icon" href="elements/caseinfo/media/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="hospitalContainer">
+        <div class="gwrapper">
+            <div class="spinner" unselectable="on">
+                <div class="rect1" unselectable="on"></div>
+                <div class="rect2" unselectable="on"></div>
+                <div class="rect3" unselectable="on"></div>
+                <div class="rect4" unselectable="on"></div>
+                <div class="rect5" unselectable="on"></div>
+            </div>
+        </div>
+        <div id="helptopbar">
+            <div id="id_glosTitleText"><img src="elements/caseinfo/media/caseinfo.svg" alt="case information" class="caseinfoimg" />Case Information</div>
+            <div class="close_txt"><span id="clsText">Close</span></div>
+            <div id="id_glosCloseBtn" class="id_glosCloseBtn" title="Close"></div>
+        </div>
+        <div class="content">
+
+            <div class="tabLoadContent">
+                <div class="sectionLeft" unselectable="on">
+                    <div class="topImgCnt" id="topImgCnt1" unselectable="on">
+                        <!-- <div class="clickToContinue expandImgTxtRight clickToEnlarge" unselectable="on"
+							style="visibility: inherit; opacity: 1; display: block;">Click to enlarge image.</div> -->
+                        <div class="popover left-arrow">
+                            <div class="arrow" style="top: 50%;"></div>
+                            <div class="popover-content">Click to enlarge image.</div>
+                        </div>
+
+                        <a href="javascript:void(0);" title="Click to enlarge image" class="small_expand zoom_btn" style="visibility: inherit;display: block;">&nbsp;</a>
+                    </div>
+                    <div class="leftBottom" unselectable="on">
+                        <div class="headingBlue" unselectable="on">BORN AT</div>
+                        <div class="sectiontxt" unselectable="on">36 weeks gestation</div>
+                        <div class="headingBlue" unselectable="on">WEIGHT</div>
+                        <div class="sectiontxt" unselectable="on">2.8 kg</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tabContent">
+                <h2>Baby Jazmine</h2>
+                <div style="clear:both"></div> 
+                <div id="tab-1" class="tab-content current" >
+                   <ul class="bullet" style="padding-left:50px">
+							<li>Mother reported leaking of amniotic fluid for the past week and concern for vaginal discharge</li>
+							<li>Onset of labor 6 hours before admission </li>
+							<li>Fetal heart tracing: Category 1 (normal tracing and normal fetal heart rate and variability)</li>
+							<li>Highest intrapartum maternal temperature 37.5°C</li>
+							<li>No broad spectrum antibiotics given to mother before delivery</li>
+							<li>Spontaneous rupture of membranes at delivery, amniotic fluid foul-smelling</li>
+							<li>Vaginal delivery </li>
+							<li>Apgar scores: 7 (at 1 minute), 9 (at 5 minutes)</li>
+						</ul>
+						<div style="clear:both"></div> 
+                </div>
+                
+
+            </div>
+        </div>
+
+        <!-- <div class="CaseStudy" id="case_study_popup" unselectable="on">
+							<div class="caseStudyContent" unselectable="on">
+								<div class="ModalTextBottom g-modal-textbotom" unselectable="on">Baby Mateo</div>
+								<div class="ModalTxtImg" unselectable="on" id="imgPopup1"></div>
+								<a class="closepopup" href="javascript:void(0)" title="Click to Close"></a>
+								<div class="clickToContinue expandImgTxtRight clickToClose" unselectable="on">Click to close.</div>
+							</div>
+						</div> -->
+        <div class="modal popupview1" id="case_study_popup">
+            <div class="modalContent" unselectable="on">
+                <div class="modalTxtImg" unselectable="on" id="imgPopup1"></div>
+                <div class="ModalTextBottom" unselectable="on">Baby Jazmine</div>
+                <a class="closepopup zoom_close_btn" href="javascript:void(0)" title="Click to Close"></a>
+                <!-- <div class="clickToContinue expandImgTxtRight clickToClose">Click to Close</div> -->
+                <div class="popover left-arrow">
+                    <div class="arrow" style="top: 50%;"></div>
+                    <div class="popover-content">Click to close image.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    var __$cWrapper = $(".gwrapper");
+    setTimeout(function() {
+        __$cWrapper.hide();
+    }, 100);
+    $(".id_glosCloseBtn").click(function() {
+        disableHelpPopup();
+
+
+    });
+
+    $(".small_expand").on("click", function() {
+
+        pauseAudio();
+
+        //audioReset();
+
+        $(".modal").show();
+
+        $("#helptopbar").addClass("blur");
+
+        $(".content").addClass("blur");
+
+    });
+
+    $(".closepopup").on("click", function() {
+
+        //audioReset();
+
+        $(".modal").removeAttr("style");
+
+        $("#helptopbar").removeClass("blur");
+
+        $(".content").removeClass("blur");
+
+    });
+    //$('.tabLoadContent').load('pages/Topic01/T01P91.html');
+</script>
+
+</html>

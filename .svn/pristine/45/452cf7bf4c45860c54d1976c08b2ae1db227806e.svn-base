@@ -1,0 +1,645 @@
+<!DOCTYPE HTML>
+
+<html>
+
+
+
+<head>
+
+    <title></title>
+
+	<style>
+	 /* Sliding entrances */
+@-webkit-keyframes slideInDown {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInDown {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__slideInDown {
+  -webkit-animation-name: slideInDown;
+  animation-name: slideInDown;
+}
+@-webkit-keyframes slideInLeft {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInLeft {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__slideInLeft {
+  -webkit-animation-name: slideInLeft;
+  animation-name: slideInLeft;
+}
+@-webkit-keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(50%, 0, 0);
+    transform: translate3d(50%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(50%, 0, 0);
+    transform: translate3d(50%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__slideInRight {
+  -webkit-animation-name: slideInRight;
+  animation-name: slideInRight;
+}
+@-webkit-keyframes slideInUp {
+  from {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInUp {
+  from {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__slideInUp {
+  -webkit-animation-name: slideInUp;
+  animation-name: slideInUp;
+}
+	.mainContainer {position: absolute;width: 100%;height: 545px;left: 0px;top: 0px;opacity: 1;}
+	.clsTabPopup{position:absolute;width:1085px;height:540px;top:0;left:0}
+	.sectionTop{position:absolute;top:0;height:30px;width:100%;padding:16px 0}
+	.sectionContent{position:absolute;top:20px;height:507px;width:1055px;left:15px;right:15px; color:#000}
+	.topImgCnt{position:relative}
+	.small_expand,.open_map{background:url(pages/images/Topic01/T01P44/small_expand.png) no-repeat!important;width:28px;height:28px!important;position:absolute!important;bottom:24px;right:10px;display:none;left:inherit!important;top:inherit!important;float:inherit!important;text-decoration:none!important;border-radius:inherit!important;margin-left:0!important;background-color:inherit!important;padding:0!important}
+	.small_expand:hover,.open_map:hover{background:url(pages/images/Topic01/T01P44/small_expand_hover.png) no-repeat!important}
+	.small_expand1{background:url(pages/images/Topic01/T01P44/small_expand.png) no-repeat!important;width:28px;height:28px!important;position:absolute!important;bottom:7px;right:10px;display:none;left:inherit!important;top:inherit!important;float:inherit!important;text-decoration:none!important;border-radius:inherit!important;margin-left:0!important;background-color:inherit!important;padding:0!important}
+	.small_expand1:hover{background:url(pages/images/Topic01/T01P44/small_expand_hover.png) no-repeat!important}
+	.open_map{right:33px;margin-top:2px}
+	.sectionLeft{height:100%;}
+	.sectionRight{width:790px;height:507px;top:0;position:absolute;left:264px}
+	.rightTop{height:42px;left:5px;position:relative}
+	.rightTop a{left:0;top:0;padding:0 65px;background:#fff;margin:0;position:relative;float:left;margin-left:-5px;font-family:OpenSansSemiBold;text-decoration:none;color:#000;height:42px;line-height:42px;border-top-right-radius:5px;-webkit-border-top-right-radius:5px;-moz-border-top-right-radius:5px;font-size:16px;cursor:default}
+	.sectionRight .assessmentShow a{cursor:default}
+	.rightTop a.active{border-top-right-radius:5px;-webkit-border-top-right-radius:5px;-moz-border-top-right-radius:5px;background:#3A5569;margin-right:0;z-index:10;color:#fff}
+	.rightTop a.active.cdefault{cursor:default}
+	.rightTop a.active:after,.rightTop a.active:before,.rightTop a.active:hover:before{top:98%;left:45%;border:solid transparent;content:" ";height:0;width:0;position:absolute;pointer-events:none}
+	.rightTop a.active:after,.rightTop a.active:hover:after{border-top-color:#3A5569;border-width:10px;margin-left:0}
+	.rightTop a.active:before,.rightTop a.active:hover:before{border-top-color:#3A5569;border-width:10px;margin-left:0}
+	.rightTop a.active:nth-child(2),.rightTop a.active:hover:nth-child(2){-webkit-border-top-left-radius:5px;border-top-left-radius:5px;-moz-border-top-left-radius:5px}
+	.rightTop a:nth-child(2){-webkit-border-top-left-radius:5px;border-top-left-radius:5px}
+	.sectionContentArea{background:#fff;height:465px;border-top-right-radius:5px;-webkit-border-top-right-radius:5px;-moz-border-top-right-radius:5px;border-bottom-right-radius:5px;-webkit-bottom-top-right-radius:5px;-moz-border-bottom-right-radius:5px}
+	#topImgCnt1{background: url(pages/images/Topic01/T01P44/img0.png) no-repeat top center; background-size:cover; height:100%; width:100%}
+	#imgPopup1 {background: url(pages/images/Topic01/T01P44/img1.png) no-repeat center; background-size:cover;}
+	/*#case_study_popup .modalContent {width:55%; height:420px; border-radius:10px}
+	#case_study_popup .modalContent .modalinner{ padding:30px; position:relative}
+	#imgPopup0{ background-size:100% 100%; width:100%; height:360px}
+	#case_study_popup .modalContent .modalinner .modalclose{ position:absolute; top:5px; right:0px; width:30px; height:30px }
+	#case_study_popup .modalContent .modalinner .modalclose .modalcloseicon{background:url(pages/images/Topic01/T01P44/close-icon.png) no-repeat; background-size:24px 24px; width:24px; height:24px ; cursor:pointer}
+	#case_study_popup .modalContent .modalinner .modalclose .modalcloseicon:hover{background:url(pages/images/Topic01/T01P44/close-hover-icon.png) no-repeat; background-size:24px 24px; width:24px; height:24px }
+	#case_study_popup .closepopup{ display:none} 
+	#case_study_popup .modalTextBottom{ display:none}
+	#case_study_popup .popover.left-arrow{ display:none}*/
+	.sectionContent{ padding:10px; background:#fff; width:95%; border-radius:5px;box-shadow:0 1px 9px -4px rgba(0,0,0,0.75); height:440px; overflow:hidden}
+	.sectionLeft{width: 384px; background:#fff}
+	.sectionRight{width: 670px;left: 430px;}
+	.sectionContentArea{ padding: 30px 30px 30px 0px;}
+	.iconlist{ margin:0px; padding:0px; list-style:none; width:90%}
+	.iconlist li{ position:relative; margin-bottom:3px; font-size:14px; line-height:22px; display: flex; flex-direction: row; align-items: center; padding-left:25px}
+	.iconlist li:before{ background:url(pages/images/Topic01/T01P44/bullet.png) no-repeat; left:0px; width:13px; height:13px; position:absolute; content:""; top:5px}
+	.iconlist li a{ color:#D7722C; cursor:pointer}
+	.error1{ margin:15px auto 0px; border:solid 2px #F6A87A; border-radius:5px; width:94%; position:relative}
+	.error1 .error1_inner{ position:relative; padding:10px; color:#000; font-size:12px; line-height:18px; font-weight:bold; padding-left:60px;display: flex; flex-direction: row; align-items: center;}
+	.error1 .error1_inner img{ position:absolute; width:35px; height:34px; left:10px; top:25px;}
+	.topImgtxt{ background:rgba(0, 0, 0, 0.1); position:absolute; bottom:0px; padding:10px; color:#000;font-size:14px; line-height:22px;}
+	
+	.txt1{ font-size:16px; line-height:22px; margin:10px 0px}
+	.
+	.sectionLeftBox{ position:relative; height:100%; padding:5px;width: 274px;}
+	.topImgboxinner{  border:double 6px #ccc; position:relative; height:100%}
+	.content2 .sectionRight .sectionContentArea{height: 265px; margin-top:100px}
+	.sectionContentAreainner{ width:80%; margin:20px 0px 0px 50px}
+	.sectionContentAreainner .contenttext{font-size:14px; line-height:20px; position:relative}
+	.sectionContentAreainner .contenttext2{ margin-top:30px}
+	#content1{ visibility:visible}
+	
+	/*.small_expand{ display:block}*/
+	.poupdiv .modalContent{width:455px;  height:auto !important; padding:20px 18px; top:30%}
+		.poupdiv  .modalContent .heading{ color:#D7722C; font-size:18px; text-align:center}
+		.poupdiv  .modalContent .linenew{ height:2px; background:#D7722C; margin:5px auto;width:77%}
+		.poupdiv  .modalContent .desc{ color:#000; font-size:14px; text-align:left}
+	.poupdiv .popupclose{ position: absolute; top:10px; right:10px}
+	.poupdiv .popupclose img{ width:24px; height:24px; cursor:pointer}
+	.poupdiv .modalclose{ position:absolute; top:5px; right:0px; width:30px; height:30px }
+	.poupdiv .modalclose .modalcloseicon{background:url(pages/images/Topic01/T01P44/close-icon.png) no-repeat; background-size:24px 24px; width:24px; height:24px ; cursor:pointer}
+	.poupdiv .modalclose .modalcloseicon:hover{background:url(pages/images/Topic01/T01P44/close-hover-icon.png) no-repeat; background-size:24px 24px; width:24px; height:24px }
+	/*.popover.clickToEnlarge{ display:block}*/
+	.abs{ position:absolute}
+	.box0{ background:#fff; font-size:14px; line-height:22px;padding: 10px 20px; width:81.5%; margin:20px auto 5px; box-shadow:0 1px 9px -4px rgba(0,0,0,0.75);  color:#50697D; border-radius:5px; font-style:italic}
+	.box1{ background:#fff; font-size:16px; line-height:22px;padding: 10px 20px; margin:6px auto 10px; box-shadow:0 1px 9px -4px rgba(0,0,0,0.75); width:81.2%; border-radius:5px; color:#000}
+	.box1 a{ color:#D7722C; cursor:pointer}
+	.box2{ background:#F4B183; font-size:14px; line-height:22px; font-weight: bold;padding: 10px 20px;left: 0px;width: 250px; top:120px}
+	.box3{ background:#BD7C4D; font-size:14px; line-height:18px; padding: 10px 20px;left: 0px;width: 250px; top:190px; color:#fff}
+	.error1{top:300px;left: 10px; width: 275px;}
+	.error1 .error1_inner{width: 200px;font-size:14px; line-height:18px;}
+	.topImgCntbox{box-shadow:0 1px 9px -4px rgba(0,0,0,0.75); width:384px; height:430px; padding:5px}
+	.iconlist2{ margin:0px 0px 10px 30px; padding:0px; list-style:none; width:90%}
+	.iconlist2 li{ position:relative; margin-bottom:3px; font-size:14px; line-height:22px; display: flex; flex-direction: row; align-items: center; padding-left:25px}
+	.iconlist2 li:before{ background:url(pages/images/Topic01/T01P44/bullet.png) no-repeat; left:0px; width:13px; height:13px; position:absolute; content:""; top:5px}
+	.iconlist2 li a{ color:#D7722C; cursor:pointer}
+	.pdflink1{position: absolute;top: 488px !important;left: 20px;padding-left: 40px;}
+	.pdflink1 img{ position: absolute;margin-left: -40px; margin-top: -5px;}
+	.pdflink1 a{font-size:14px; line-height:22px; color:#000; cursor:pointer;font-style: italic !important;border-bottom: solid 1px #000;}
+	.pdflink1 a:hover{color:#D7722C}
+	.listbox{ width:90%; margin:0 auto}
+	.listbox .listboxitem{ width:30.2%; margin:10px 1.5%; float:left}
+	.listbox .listboxitem .listboxitem_desc{ background:#50697D; border-radius:0px 0px 5px 5px; width:94%; margin:-20px auto 0px;position:relative}
+	.listbox .listboxitem .listboxitem_desc .listboxitem_descinner{ padding:10px 30px;  font-size:16px; line-height:22px; font-weight:bold; color:#3A5569; text-align:center}
+	.listbox .listboxitem .listboxitem_desc .listboxitem_descinner1{ padding:10px 30px;  font-size:16px; line-height:22px; font-weight:bold; color:#fff; text-align:center}
+	.listbox .listboxitem .listboxitem_desc.hover{background:#7B6C63;}
+	.listbox .listboxitem .listboxitem_desc.active{background:#F6A87A;}
+	#box1, #box2{ display:none}
+	.closepopup,
+        .open_map_close {
+            position: absolute;
+            width: 92px;
+            height: 47px;
+            background: url(pages/images/Topic01/T01P22/close_expand_hover.png) no-repeat;
+            bottom: 30px;
+            right: -47px;
+            cursor: pointer;
+            z-index: 1000;
+            text-decoration: none;
+        }
+        
+        .closepopup:hover,
+        .open_map_close:hover {
+            background: url(pages/images/Topic01/T01P02/close_expand_hover.png) no-repeat;
+        }
+		#case_study_popup  .modalContent{box-shadow:initial !important; background:transparent !important}
+		
+		.pageclose_txt{position:absolute;width:135px;height:44px;top:48px;left:800px;background:url(media/images/player/common/pdf_close_inst.png)}
+	#pageClsText{position:absolute;width:115px;height:29px;top:15px;left:16px;font-family:OpenSansRegular;font-size:16px;font-style:italic;color:#172430}
+	#pageRefCloseBtn_id{position:absolute;width:29px;height:29px;top:7px;left:900px;cursor:pointer;background:url(media/images/player/common/close.png);-webkit-transition:all .3s;-o-transition:all .3s;transition:all .3s}
+	#pageid_RefCloseBtn:hover #pageclose_txt{background:url(media/images/player/common/pdf_close_inst.png)}
+	#pagereferences{margin-left:0;margin-top:45px;color:#333;width:800px;min-height:412px;overflow-y:auto;position:absolute;height:412px}
+	#pagereferences ul{padding-top:0;padding-bottom:0;padding-left:1%;margin:0;margin-top:10px}
+	#pagereferences ul li{border:0 none;margin-left:-4px;margin-right:5px;vertical-align:bottom;width:4%}
+	#closeMainDiv .glossaryclosetip{margin-left:70%;color:#FFF;font-family:OpenSansRegular;font-size:79.2%}
+	.closepopup,.open_map_close{position:absolute;width:92px;height:47px;background:url(pages/images/Topic01/T01P22/close_expand_hover.png) no-repeat;bottom:30px;right:-47px;cursor:pointer;z-index:1000;text-decoration:none}
+	.closepopup:hover,.open_map_close:hover{background:url(pages/images/Topic01/T01P02/close_expand_hover.png) no-repeat}
+	#case_study_popup .modalContent{box-shadow:initial!important;background:transparent!important}
+	#pageClsResourcesPopup{position:absolute;z-index:1070;top:0;height:99%;width:100%;background-color:rgba(0,0,0,0.8);display:none}
+	#pageid_ReferencesBG{position:absolute;height:457px;width:940px;left:0;right:0;margin:auto;top:40px;background-color:#FFF;border-radius:10px}
+	#pageid_RefTitleBar{font-size:36px;background-color:#4d667b;border-top-left-radius:10px;border-top-right-radius:10px;left:0;top:0;font-family:OpenSansRegular;width:942px;height:44px;position:absolute}
+	#pageid_ReftitleText{position:absolute;color:#fff;font-size:18px;left:11px;top:10px}
+	#pageid_RefCloseBtn{position:absolute;width:29px;height:29px;top:7px;left:900px;cursor:pointer;background:url(media/images/player/common/close.png);-webkit-transition:all .3s;-o-transition:all .3s;transition:all .3s}
+	#pageRefTitleBar_id{font-size:36px;background-color:#4d667b;border-top-left-radius:10px;border-top-right-radius:10px;left:0;top:0;font-family:OpenSansRegular;width:942px;height:44px;position:absolute}
+	#pageReftitleText_id{position:absolute;color:#fff;font-size:18px;left:11px;top:10px}
+	.pageclose_txt{position:absolute;width:135px;height:44px;top:48px;left:800px;background:url(media/images/player/common/pdf_close_inst.png)}
+	.pdflink{position:absolute;top:44px;width:100%;height:413px;border-radius:0 0 10px 10px}
+	._viewed{color:blue}
+	.long-arrow{position:relative;top:-7px}
+	.checked {
+    background: url(pages/images/Topic01/T01P45/tick.png) no-repeat;
+    width: 27px;
+    z-index: 999;
+    position: absolute;
+    height: 27px;
+    top: 0px;
+    right: 0px;
+    /* background-color: white; */
+    border-radius: 49px;
+    display: none;
+    background-size: cover;
+}
+.listboxitem_img{ position:relative}
+	</style>
+
+</head>
+
+
+
+<body>
+
+    <div class="pg-pageContent" UNSELECTABLE="on">
+        <div id="TabPopup5" class="clsTabPopup">
+			<div id="content1" >
+				<div class="box0">Click on the images below to learn more about a low platelet count.</div>
+				<div class="listbox">
+					<input type="hidden" name="tab1" id="tab1" value="">
+					<input type="hidden" name="tab2" id="tab2" value="">
+					<input type="hidden" name="tab3" id="tab3"value="">
+					<a href="javascript:void(0);" class="linklist" link_id="1" style="text-decoration:none">
+					<div id="listboxitem1" class="listboxitem">
+						<div class="listboxitem_img"><div id="checked1" class="checked"></div><img src="pages/images/Topic01/T01P45/img1.png"></div>
+						<div class="listboxitem_desc">
+							<div class="listboxitem_descinner1">Less than 100,000 per microliter</div>
+						</div>
+						
+					</div>
+					</a>
+					<a href="javascript:void(0);" class="linklist" link_id="2"  style="text-decoration:none">
+					<div id="listboxitem2" class="listboxitem">
+						<div class="listboxitem_img"><div id="checked2" class="checked"></div><img src="pages/images/Topic01/T01P45/img2.png"></div>
+						<div class="listboxitem_desc">
+							<div class="listboxitem_descinner1">Less than 50,000 per microliter</div>
+						</div>
+					</div>
+					</a>
+					<a href="javascript:void(0);" class="linklist" link_id="3"  style="text-decoration:none">
+					<div id="listboxitem3" class="listboxitem">
+						<div class="listboxitem_img"><div id="checked3" class="checked"></div><img src="pages/images/Topic01/T01P45/img3.png"></div>
+						<div class="listboxitem_desc">
+							<div class="listboxitem_descinner">Less than 25,000 per microliter</div>
+						</div>
+					</div>
+					</a>
+					<div style="clear:both"></div>
+				</div>
+				<!-- <div id="pdflink" class="pdflink1">
+					 <a herf="javascript:void(0);" id="_clickImg0pdf" ><img src="pages/images/Topic01/T01P44/pdficon.png"> Interpreting the platelet count</a>
+				</div> -->
+				<div style="margin-left: -5px;">
+				<div id="box1" class="box1">
+					<strong>Less than 100,000 per microliter</strong>
+					<p>A platelet count less than 100,000 per microliter is considered abnormal, especially if there is a downward trend. The infant should be examined for signs of bleeding, which includes oozing from puncture sites, bruising, <a href="javascript:void(0)" class="glossarytag"
+                textDesc="Capillaries (small blood vessels) that burst under the skin and form reddish or purplish spots on the skin that appear similar to a rash. Petechiae may be a sign of an underlying hemorrhagic disorder, including infection. Petechiae are commonly present following a breech or precipitous delivery, or if the infant had a tight nuchal cord (face/neck area).">petechiae</a>, and gastrointestinal bleeding.</p>
+				</div>	
+				<div id="box2" class="box1" >
+					<strong>Less than 50,000 per microliter</strong>
+					<p>Severe thrombocytopenia is when the platelet count is less than 50,000 per microliter.</p>
+				</div>
+				<div id="box3" class="box1">
+					<strong>Less than 25,000 per microliter</strong>
+					<p>Platelet counts less than 25,000 per microliter are dangerously low. Monitor closely for signs of bleeding and be prepared to administer a platelet transfusion if necessary.</p>
+				</div>
+				</div>
+			</div>
+			
+			
+        </div>
+		<div class="modal poupdiv" id="popup1">
+			<div class="modalContent" unselectable="on">
+				<div class="popupclose modalclose" ><div class="modalcloseicon"></div></div>
+				<div class="heading">Petechiae</div>
+				<div class="linenew"></div>
+				<div class="desc">Capillaries (small blood vessels) that burst under the skin and form reddish or purplish spots on the skin that appear similar to a rash. Petechiae may be a sign of an underlying hemorrhagic disorder, including infection. Petechiae are commonly present following a breech or precipitous delivery, or if the infant had a tight nuchal cord (face/neck area).</div>
+			</div>
+		</div>
+
+		<div id="pageClsResourcesPopup">
+			<div id="pageid_ReferencesBG">
+				<div id="pageRefTitleBar_id">
+					<div id="pageRefTitleBar_id" unselectable="on" style="display: block;">
+						<div id="pageReftitleText_id" unselectable="on">Interpreting the platelet count</div>
+						<div class="pageclose_txt" unselectable="on"><span id="pageClsText">Click to Close</span></div>
+						<div id="pageRefCloseBtn_id" title="Close" unselectable="on"></div>
+						<embed class="pdflink" alt="pdf" src="pages/Topic01/pdf/Interpreting the platelet count.pdf" internalinstanceid="70">
+					</div>
+				</div>
+			</div>
+		</div>		
+		
+    </div>
+    <!--- Main Container--->
+    <div class="boxInst">
+        <div class="instNextClick"></div>
+        <div class="next_click"><em> Click Next to continue.</em></div>
+    </div>
+
+    <script>
+	 manifest = [{
+            src: 'pages/images/Topic01/T01P02/img1.png',
+            id: '1'
+        }, {
+            src: 'pages/images/Topic01/T01P02/image_01_small.png',
+            id: '2'
+        }, ];
+
+var audioPath = "pages/audio/Topic01/T01P45/T01P45_3";
+var gItemAudioPath = ["pages/audio/Topic01/T01P45/T01P45_1", "pages/audio/Topic01/T01P45/T01P45_2", "pages/audio/Topic01/T01P45/T01P45_3"];
+clickViewMoreInfo();
+var currCue = 0;
+var idd = 0;
+var __curState = 0;
+var clickTabCount = 0;
+var clickTabCount1 = 0;
+
+var updateContentArray = [
+	{
+	time: "0",carry: "",event: "",show: "",hide: "",
+	transcript: "Platelet counts less than 25,000 are dangerously low. Monitor closely for signs of bleeding and be prepared to administer a platelet transfusion if necessary."
+	}
+	
+];
+var updateContentArray0 = [{
+time: "0",carry: "",event: "",show: "",hide: "",
+transcript: "A platelet count less than 100,000 is considered abnormal, especially if there is a downward trend. The infant should be examined for signs of bleeding, which includes oozing from puncture sites, bruising, petechiae, and gastrointestinal bleeding."
+}];
+
+var updateContentArray1 = [{
+time: "0",carry: "",event: "",show: "",hide: "",
+transcript: "Severe thrombocytopenia is when the platelet count is less than 50,000."
+}];
+var updateContentArray2 = [{
+time: "0",carry: "",event: "",show: "",hide: "",
+transcript: "Platelet counts less than 25,000 are dangerously low. Monitor closely for signs of bleeding and be prepared to administer a platelet transfusion if necessary."
+}];
+
+function fnAudioFinishItemComp() {
+    fnAudioFinishPageComp();
+}
+
+var __dataXml;
+
+var audplayer = document.getElementById('audioplayer');
+
+$(document).ready(function() {
+	$(".clickToEnlarge").show();
+    $(".small_expand").show();
+    $(".small_expand1").show();
+    disableNextBtn();
+	$(".clickToEnlarge").show();
+    $(".small_expand").show();
+    $(".small_expand1").show();
+    var ele = document.getElementsByTagName('div');
+    for (var i = 0; i < ele.length; i++) {
+        ele[i].setAttribute("unselectable", "on");
+    }
+    var n = isInArray("M1L0T1P45_3", gCompPageArr);
+    if (n == true) {
+        enableNextBtn();
+        fnDesiableNext(false)
+    }
+	/* default ticked*/
+
+	if (gCompPageArr.indexOf("M1L0T1P45_1") > -1) {
+		$("#checked1").show();
+	}
+	if (gCompPageArr.indexOf("M1L0T1P45_2") > -1) {
+		$("#checked2").show();
+	}
+	$("#listboxitem3 .listboxitem_desc").addClass('active');
+	$("#checked3").show();
+	// /* disabled next button*/
+	// if (gCompPageArr.indexOf("M1L0T1P45_1") > -1 && gCompPageArr.indexOf("M1L0T1P45_2") > -1) {
+	// 	$("#clsNxtBtn").css({ "pointer-events": "auto" }) 
+	// } else {
+	// 	$("#clsNxtBtn").css({ "pointer-events": "none" }) 
+	// }	
+});
+
+
+
+function audioReset() {
+    gAudioId = "";
+    onTimelineEnd();
+}
+
+
+function isInArray(value, array) {
+    return array.indexOf(value) > -1;
+}
+
+function fnPlaySectionAudio(gCurrentIndex) {
+    indexAudio = (gCurrentIndex);
+    audioId = "audio_" + gCurrentIndex;
+    gAudioId = audioId;
+    fnHideShowAudioPlayer(false);
+    updateContentArray = eval("updateContentArray" + (gCurrentIndex));
+    initAudioPlayer(gItemAudioPath[gCurrentIndex])
+}
+var visited = [];
+var total_count = 3;
+function fnCompletion() {
+    console.log("end");
+    var _getCount1 = clickTabCount + clickTabCount1;
+    console.log("start new");
+    
+	var tab1=$("#tab1").val();
+	var tab2=$("#tab2").val();
+	var tab3=$("#tab3").val();
+	if(tab1 !='' && tab2 !='' && tab3 !=''){
+	enableNextBtn();
+	$('.boxInst').show()
+	}
+	visited = visited.filter(onlyUnique);
+	if (visited.length == total_count) {
+	 fnAudioFinishItemComp();
+	}
+}
+
+function fnOnAudioComplete() {
+    if (gAudioId == "startAudio") {
+        console.log("start audio");
+        audplayer.pause();
+        audplayer.currentTime = 0;
+        $(".clickToEnlarge").show();
+        $(".small_expand").show();
+        $(".small_expand1").show();
+		var tab1=$("#tab1").val();
+		var tab2=$("#tab2").val();
+		var tab3=$("#tab3").val();
+		
+		if(tab1 !='' && tab2 !='' && tab3 !=''){
+		disableNextBtn();
+		fnDesiableNext(false);
+		$('.boxInst').show();
+		}
+        //$('.boxInst').show();
+    } else {
+        fnCompletion();
+		disableNextBtn();
+        //enableNextBtn();
+        //$('.boxInst').show();
+        $(".clickToEnlarge").show();
+        $(".small_expand").show();
+        $(".small_expand1").show();
+		if (visited.length == total_count) {
+			fnAudioFinishItemComp();
+		}
+        audplayer.pause();
+        audplayer.currentTime = 0;
+    }
+}
+
+$(".linklist").on("click", function() {
+	var linkid=$(this).attr('link_id');
+	visited.push(linkid);
+	visited = visited.filter(onlyUnique);
+	if (visited.length == total_count) {
+		gCompPageArr.push("M1L0T1P45_3");
+		fnCompletion();
+		enableNextBtn();
+	}	
+	if (linkid == 1) {
+		fnJumpToPageByID("M1L0T1P45_1");
+	} else if (linkid == 2) {
+		fnJumpToPageByID("M1L0T1P45_2");
+	} else if (linkid == 3) {
+		fnJumpToPageByID("M1L0T1P45_3");                    
+	} else {
+		enableNextBtn();
+		enableNextBtn();
+		fnCompletion();
+		fnDesiableNext(false);
+	}	
+	// $(".listboxitem .listboxitem_desc").removeClass('active');
+	// $("#listboxitem"+linkid+" .listboxitem_desc").addClass('active');
+	// $(".pdflink1").hide();
+	// $(".box1").hide();
+	// $("#box"+linkid).show();
+	// $("#checked"+linkid).show();
+	// $("#tab"+linkid).val('yes');
+	// fnPlaySectionAudio(linkid-1);
+});
+function onlyUnique(value, index, self) {
+	return self.indexOf(value) === index;
+}
+$(".small_expand").off().on("click", function() {
+    pauseAudio();
+    $("#TabPopup5 #case_study_popup.modal").show();
+    $("#TabPopup5 .sectionTop").addClass("blur");
+    $("#TabPopup5 .sectionContent").addClass("blur");
+    $(".modalTxtImg").attr('id', 'imgPopup' + $(this).attr('click_id'));
+});
+
+$(".small_expand1").off().on("click", function() {
+    pauseAudio();
+    $("#TabPopup5 .modal").show();
+    $("#TabPopup5 .sectionTop").addClass("blur");
+    $("#TabPopup5 .sectionContent").addClass("blur");
+    //$('.boxInst').addClass("blur");
+    $(".modalTxtImg").attr('id', 'imgPopup' + $(this).attr('click_id'));
+    $('.modalTextBottom').hide();
+    $('#ModalTextBottom' + $(this).attr('click_id')).show();
+    $('.modalContent').addClass('maxBot');
+    $('.modalContent').removeClass('maxBot0');
+});
+
+$(".closepopup, .modalclose").off().on("click", function() {
+    playAudio();
+    $(".modal").removeAttr("style");
+    $("#TabPopup5 #content1").removeClass("blur");
+    $("#TabPopup5 .sectionContent").removeClass("blur");
+    //$('.boxInst').removeClass("blur");
+});
+
+$(".popup").on("click", function() {
+	var popid=$(this).attr('popup_id');
+	//alert(popid);
+	pauseAudio();
+	$(" #popup"+popid).show();
+	$("#content1").addClass("blur");
+	$("#TabPopup5 .sectionContent").addClass("blur");
+
+});
+$(".popupclose").on("click", function() {
+	playAudio();
+	var popid=$(this).attr('popup_id');
+	$("#popup"+popid).removeAttr("style");
+	$("#content1").removeClass("blur");
+	$("#TabPopup5 .sectionContent").removeClass("blur");
+});
+function pauseAudio() {
+    if (!fnPauseAudio()) {
+        console.log(true);
+        fnPauseAudio()
+    } else {
+        playPauseAudio();
+        console.log(false);
+    }
+}
+
+function playAudio() {
+    if (!fnPauseAudio()) {
+        console.log(true);
+        playPauseAudio();
+    }
+}
+$("#_clickImg0pdf").on("click", function () {
+            console.log("hello")
+            // $('#pageClsResourcesPopup .pdflink').attr('src', 'pages/Topic01/pdf/Page17.pdf');
+            fnPauseAudio();
+            // $('#pageReftitleText_id').html('Case Presentation - Neonatologist from Sweden');
+            disabledAllButtons();
+            $("#pageClsResourcesPopup").show();
+
+        });
+		 $('#pageClsResourcesPopup').hide();
+        $("#pageRefCloseBtn_id").click(function () {
+            enabledAllButtons();
+            fnPlayAudio();
+            //$("#pageClsResourcesPopup").hide();
+            $("#pageClsResourcesPopup").hide();
+            //$("#pageid_RefTitleBar").show()
+        });
+		$(".glossarytag").on("click", function() {
+			glossaryFuncPageLevel();
+			});
+</script>
+<link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+
+    <script src="jsfiles/libs/jquery.mCustomScrollbar.concat.min.js"></script>
+</body>
+
+
+
+</html>

@@ -1,0 +1,806 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title></title>
+<style>
+	 /* Sliding entrances */
+@-webkit-keyframes slideInDown {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInDown {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__slideInDown {
+  -webkit-animation-name: slideInDown;
+  animation-name: slideInDown;
+}
+@-webkit-keyframes slideInLeft {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInLeft {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__slideInLeft {
+  -webkit-animation-name: slideInLeft;
+  animation-name: slideInLeft;
+}
+@-webkit-keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(50%, 0, 0);
+    transform: translate3d(50%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(50%, 0, 0);
+    transform: translate3d(50%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__slideInRight {
+  -webkit-animation-name: slideInRight;
+  animation-name: slideInRight;
+}
+@-webkit-keyframes slideInUp {
+  from {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInUp {
+  from {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__slideInUp {
+  -webkit-animation-name: slideInUp;
+  animation-name: slideInUp;
+}
+
+.rightCnt{width:35%;position:absolute;right:0;padding-left:15px;top:116px;display:none;}
+.informationRight{display:block}
+.information span{font-weight:400}
+.marginTop{top:40px}
+.bottomTxt{position:absolute;bottom:57px;right:15px}
+.cSubmitBtn{background:#ACACAC;font-family:OpenSansRegular;font-size:18px;padding:5px 15px;text-transform:lowercase;color:#fff;border-radius:5px;border-radius:5px;-webkit-border-radius:5px;-moz-border-radius:5px;text-transform:capitalize;line-height:21px;border:2px solid transparent}
+.cSubmitBtn.enable:hover{border:2px solid #707070;background:transparent;color:#5B5B5B}
+.cSubmitBtn.active{background:#5B5B5B;color:#fff;cursor:pointer}
+.cSubmitBtn.active:hover{border:2px solid #707070;background:#fff;color:#000}
+.QuestionPanel1_2{position:absolute;left:25px;top:48px;width:655px;font-size:16px;opacity:1;}
+.leftBottom{position:relative;height:257px}
+.leftBottom h3{padding:0;margin:0;position:relative;top:12px;text-align:center;font-family:OpenSansSemiBold;font-size:20px;color:#000;padding-bottom:26px}
+.headingBlue{padding-left:20px;color:#3A5569;font-family:OpenSansSemiBold;font-size:16px;padding-bottom:0;margin-bottom:0}
+.sectiontxt{font-family:OpenSansSemiBold;padding-left:20px;padding-bottom:10px;font-size:18px;color:#000}
+	.mainContainer {position: absolute;width: 100%;height: 545px;left: 0px;top: 0px;opacity: 1;}
+    .titleText img {
+    position: relative;
+    top: 6px;
+    left: -12px;
+    width: 34px;
+}
+
+
+    .titleText {
+    position: absolute;
+    font-size: 23px;
+    font-family: OpenSansSemiBold;
+    line-height: 25px;
+    color: #5B5B5B;
+    top: 10px;
+    left: 0px;
+    width: 101%;
+    opacity: 1;
+    text-align: center;
+    font-weight: bold;
+}
+	.clsTabPopup{position:absolute;width:1085px;height:540px;top:0;left:0}
+	.sectionTop{position:absolute;top:0;height:30px;width:100%;padding:16px 0}
+	.sectionContent{position:absolute;top:63px;height:507px;width:1055px;left:15px;right:15px; color:#000}
+	.topImgCnt{position:relative}
+	.small_expand{	
+        background: url(pages/images/Topic01/T01P22/small_expand.svg) !important;	
+            position: absolute;	
+            cursor: pointer;	
+            width: 29px;	
+            height: 29px;	
+            bottom: 22px;	
+            right: 17px;	
+            background-position: 0px 0;	
+            transition: all 0.2s;    	
+            background-size: cover !important;	
+            background-repeat:no-repeat ;	
+            display:none;
+            opacity: .6;	
+    }
+    .small_expand:hover{
+        opacity: 1;
+    }	
+    .closepopup{	
+    position: absolute;	
+            width: 41px;	
+            height: 41px;	
+            background: url(pages/images/Topic01/T01P22/close_expand.svg) no-repeat;	
+            bottom:39px;
+            right: 16px;
+            cursor: pointer;	
+            z-index: 1000;       	
+           	opacity: .6;
+            background-position: 0px 0;	
+            transition: all 0.2s;    	
+            background-size: cover !important;	
+            background-repeat:no-repeat ;	
+   }
+   .closepopup:hover{
+    opacity: 1;
+   }
+    .open_map{background:url(pages/images/Topic01/T01P57/small_expand.png) no-repeat!important;width:28px;height:28px!important;position:absolute!important;bottom:24px;right:10px;display:none;left:inherit!important;top:inherit!important;float:inherit!important;text-decoration:none!important;border-radius:inherit!important;margin-left:0!important;background-color:inherit!important;padding:0!important}
+	/* .small_expand:hover, */
+    .open_map:hover{background:url(pages/images/Topic01/T01P57/small_expand_hover.png) no-repeat!important}
+	.small_expand1{background:url(pages/images/Topic01/T01P57/small_expand.png) no-repeat!important;width:28px;height:28px!important;position:absolute!important;bottom:7px;right:10px;display:none;left:inherit!important;top:inherit!important;float:inherit!important;text-decoration:none!important;border-radius:inherit!important;margin-left:0!important;background-color:inherit!important;padding:0!important}
+	.small_expand1:hover{background:url(pages/images/Topic01/T01P57/small_expand_hover.png) no-repeat!important}
+	.open_map{right:33px;margin-top:2px}
+	.sectionLeft{height:85.6%;width:264px;background:#E0F6FB;box-shadow:0 1px 9px -4px rgba(0,0,0,0.75);-webkit-box-shadow:0 1px 9px -4px rgba(0,0,0,0.75);-moz-box-shadow:0 1px 9px -4px rgba(0,0,0,0.75);border-bottom-left-radius:7px;-webkit-border-bottom-left-radius:7px;-moz-border-bottom-left-radius:7px}
+	.sectionRight{width:698px;height:507px;top:0;position:absolute;left:352px}
+    .sectionletter{width:60px;height:255px;top:0;position:absolute;left:257px}
+	.rightTop{height:42px;left:5px;position:relative}
+	.rightTop a{left:0;top:0;padding:0 65px;background:#fff;margin:0;position:relative;float:left;margin-left:-5px;font-family:OpenSansSemiBold;text-decoration:none;color:#000;height:42px;line-height:42px;border-top-right-radius:5px;-webkit-border-top-right-radius:5px;-moz-border-top-right-radius:5px;font-size:16px;cursor:default}
+	.sectionRight .assessmentShow a{cursor:default}
+	.rightTop a.active{border-top-right-radius:5px;-webkit-border-top-right-radius:5px;-moz-border-top-right-radius:5px;background:#3A5569;margin-right:0;z-index:10;color:#fff}
+	.rightTop a.active.cdefault{cursor:default}
+	.rightTop a.active:after,.rightTop a.active:before,.rightTop a.active:hover:before{top:98%;left:45%;border:solid transparent;content:" ";height:0;width:0;position:absolute;pointer-events:none}
+	.rightTop a.active:after,.rightTop a.active:hover:after{border-top-color:#3A5569;border-width:10px;margin-left:0}
+	.rightTop a.active:before,.rightTop a.active:hover:before{border-top-color:#3A5569;border-width:10px;margin-left:0}
+	.rightTop a.active:nth-child(2),.rightTop a.active:hover:nth-child(2){-webkit-border-top-left-radius:5px;border-top-left-radius:5px;-moz-border-top-left-radius:5px}
+	.rightTop a:nth-child(2){-webkit-border-top-left-radius:5px;border-top-left-radius:5px}
+	.sectionContentArea{background:#fff;height:374px;border-top-right-radius:5px;-webkit-border-top-right-radius:5px;-moz-border-top-right-radius:5px;border-bottom-right-radius:5px;-webkit-bottom-top-right-radius:5px;-moz-border-bottom-right-radius:5px}
+	.info, .overlay {
+    display: none;
+}
+	#topImgCnt1{background: url(pages/images/Topic01/T01P56/Jazmine_small.png) no-repeat top left; background-size:cover; height:255px; width:264px;}
+	#imgPopup1 {background: url(pages/images/Topic01/T01P56/Jazmine_large.png) no-repeat; background-size:cover;}
+	
+	
+	.sectionContentArea{ padding:30px; font-size:16px; line-height:22px;}
+	.information{ margin-top:10px}
+	.information, .qtext, .bullet li, .instructions{font-size:16px !important; line-height:22px;}
+	.instructions{font-size:16px !important;}
+	.options-radio{ margin-top:20px}
+	.iconlist{ margin:0px; padding:0px; list-style:none; width:90%}
+	.iconlist li{ position:relative; margin-bottom:3px; font-size:16px; line-height:22px; display: flex; flex-direction: row; align-items: center; padding-left:20px}
+	.iconlist li:before{ background:url(pages/images/Topic01/T01P57/bullet.png) no-repeat; left:0px; width:13px; height:13px; position:absolute; content:""; top:5px}
+	.iconlist li a{ color:#D7722C; cursor:pointer}
+	.error1{ margin:15px auto 0px; border:solid 2px #F6A87A; border-radius:5px; width:94%; position:relative}
+	.error1 .error1_inner{ position:relative; padding:10px; color:#000; font-size:12px; line-height:18px; font-weight:bold; padding-left:60px;display: flex; flex-direction: row; align-items: center;}
+	.error1 .error1_inner img{ position:absolute; width:35px; height:34px; left:10px; top:10px;}
+	.topImgtxt{ background:rgba(0, 0, 0, 0.1); position:absolute; bottom:0px; padding:10px; color:#000;font-size:14px; line-height:22px;}
+	ul.bullet{ padding:0px; padding-left:15px; margin-top:0px}
+	
+	.txt1{ font-size:16px; line-height:22px; margin:10px 0px}
+	
+	.sectionLeftBox{ position:relative; height:100%; padding:5px;width: 274px;}
+	.topImgboxinner{  border:double 6px #ccc; position:relative; height:100%}
+	.content2 .sectionRight .sectionContentArea{height: 265px; margin-top:100px}
+    .buttonBox {background: transparent; border: 0; width: 69px; height: 62px; position: relative;
+    top: -4px;
+    right: -15px; margin-bottom: 13px;}
+    
+	.sectionContentAreainner{ width:80%; margin:20px 0px 0px 50px}
+	.sectionContentAreainner .contenttext{font-size:14px; line-height:20px; position:relative}
+	.sectionContentAreainner .contenttext2{ margin-top:30px}
+	#content1{ visibility:visible}
+	#list1, #list2, #list3, #list4, #list5, #error1, #txt1, #listd1,#listd2,#listd3, #listd4, #listd5,#listd6{visibility:hidden; opacity: 0;}
+	/*.small_expand{ display:block}*/
+	.poupdiv .modalContent{width:455px;  height:auto !important; padding:20px 18px; top:17%}
+		.poupdiv  .modalContent .heading{ color:#D7722C; font-size:18px; text-align:center}
+		.poupdiv  .modalContent .linenew{ height:2px; background:#D7722C; margin:5px auto;width:77%}
+	.poupdiv  .modalContent .desc{ color:#000; font-size:14px; text-align:left}
+	.poupdiv  .modalContent .desc ul{ text-align:left; padding:0px}
+	.poupdiv  .modalContent .desc ul li{ margin-bottom:5px}
+	.poupdiv .popupclose{ position: absolute; top:10px; right:10px}
+	.poupdiv .popupclose img{ width:24px; height:24px; cursor:pointer}
+	.poupdiv .modalclose{ position:absolute; top:5px; right:0px; width:30px; height:30px }
+	.poupdiv .modalclose .modalcloseicon{background:url(pages/images/Topic01/T01P57/close-icon.png) no-repeat; background-size:24px 24px; width:24px; height:24px ; cursor:pointer}
+	.poupdiv .modalclose .modalcloseicon:hover{background:url(pages/images/Topic01/T01P57/close-hover-icon.png) no-repeat; background-size:24px 24px; width:24px; height:24px }
+	.link{ position:absolute; bottom:-30px}
+	.link a{font-size:14px; line-height:18px; color:#000; text-decoration:underline}
+	.link a:hover{ color:#D7722C}
+	.option [type="radio"]:checked + label, .option [type="radio"]:not(:checked) + label{font-size:14px;}
+	.table1{ background-size:100% 100%; margin:10px 0px}
+
+	.table1 tr th{font-weight: normal; padding:10px; text-align: center; width:70px; color:#fff; font-size:14px; vertical-align: top; background: #d7722c;}
+	.table1 tr td{ padding:10px; text-align: center; width:70px; font-size:16px; font-weight:500; background: #d8915d;}
+	.table2{background:url(pages/images/Topic01/T01P57/strip2.png) no-repeat; background-size:100% 100%; margin:10px 0px}
+	.table2 tr{ height:40px;}
+	.table2 tr th{ padding:2px 5px; text-align: center; width:80px; color:#fff; font-size:16px; font-weight:700}
+	.table2 tr td{ padding:2px 5px; text-align: center; width:80px; font-size:16px; font-weight:500}
+	/*.popover.clickToEnlarge{ display:block}*/
+    .popover.clickToEnlarge {
+            display: none
+        }
+	 /* .closepopup, */
+        .open_map_close {
+            position: absolute;
+            width: 92px;
+            height: 47px;
+            background: url(pages/images/Topic01/T01P22/close_expand_hover.png) no-repeat;
+            bottom: 30px;
+            right: -47px;
+            cursor: pointer;
+            z-index: 1000;
+            text-decoration: none;
+        }
+        .assementDesc {
+            font-style: italic;
+    color: #4D667B;
+    font-family: OpenSansRegular !important;
+    font-size: 16px !important;
+    font-weight: normal !important; position: absolute;
+    top: 15px;
+    left: 22px;
+}
+        /* .closepopup:hover, */
+        .open_map_close:hover {
+            background: url(pages/images/Topic01/T01P02/close_expand_hover.png) no-repeat;
+        }
+		.s-text {background:url(pages/images/Topic01/T01P57/s_text.svg) no-repeat!important;width:57px;height:57px!important;position: relative; background-size:57px 57px!important}
+		.t-text {background:url(pages/images/Topic01/T01P57/t_text.svg) no-repeat!important;width:57px;height:57px!important;position: relative; background-size:57px 57px!important}
+		.a-text {background:url(pages/images/Topic01/T01P57/a_text.svg) no-repeat!important;width:57px;height:57px!important;position: relative; background-size:57px 57px!important}
+		.b-text {background:url(pages/images/Topic01/T01P57/b_text.svg) no-repeat!important;width:57px;height:57px!important;position: relative; background-size:57px 57px!important}
+		.l-text {background:url(pages/images/Topic01/T01P57/l_text.svg) no-repeat!important;width:57px;height:57px!important;position: relative; background-size:57px 57px!important}
+		.e-text {background:url(pages/images/Topic01/T01P57/e_text.svg) no-repeat!important;width:57px;height:57px!important;position: relative; background-size:57px 57px!important}
+		.buttonBox{cursor:pointer}
+		.buttonBox:focus{ border:0px !important; border-radius:0px !important; outline:none !important}
+		.buttonBox div{border: solid 2px transparent; border-radius:50%}
+		.selected .buttonBox div{border: solid 2px #BD7C4D; border-radius:50%}
+        .s-text-selected{background:url(pages/images/Topic01/T01P57/s_text-selected.svg) no-repeat!important;width:57px;height:57px!important;position: relative; background-size:57px 57px!important}
+        .t-text-selected{background:url(pages/images/Topic01/T01P57/t_text-selected.svg) no-repeat!important;width:57px;height:57px!important;position: relative; background-size:57px 57px!important}
+        .a-text-selected{background:url(pages/images/Topic01/T01P57/a_text-selected.svg) no-repeat!important;width:57px;height:57px!important;position: relative; background-size:57px 57px!important}
+        .b-text-selected{background:url(pages/images/Topic01/T01P57/b_text-selected.svg) no-repeat!important;width:57px;height:57px!important;position: relative; background-size:57px 57px!important}
+        .l-text-selected{background:url(pages/images/Topic01/T01P57/l_text-selected.svg) no-repeat!important;width:57px;height:57px!important;position: relative; background-size:57px 57px!important}
+        .e-text-selected{background:url(pages/images/Topic01/T01P57/e_text-selected.svg) no-repeat!important;width:57px;height:57px!important;position: relative; background-size:57px 57px!important}
+
+		.qtext{ font-size:20px !important; line-height:28px; font-weight:bold}
+		#sugar .qtext{ color:#EEC44E;} 
+		#temperture .qtext{ color:#558A6E;} 
+		#airway .qtext{ color:#5183AE;} 
+		#bloodpressure .qtext{ color:#A4402D;} 
+		#labwork .qtext{ color:#BD7C4D;} 
+		#emotional .qtext{ color:#6A486D;}
+        #case_study_popup .modalContent {
+            width: 585px;
+            height: 420px;
+            top:33px;
+        }
+        .checked img {
+            display:none;
+        }
+        .completed .checked img {
+            position: absolute;
+            left: 65px;
+            z-index: 999;
+            width: 28px;
+            height: 28px;
+            display:block;
+        }
+        .boxInst { top: 489px;  left: 905px;}
+	</style>
+
+</head>
+
+
+
+<body>
+
+
+    <div class="pg-pageContent" UNSELECTABLE="on">
+        
+        <div id="TabPopup5" class="clsTabPopup">
+            <div class="sectionTop" unselectable="on">
+                <!--<div class="idBackbtn"></div>-->
+                <div class="titleText" unselectable="on"><img src="pages/images/Topic01/T01P02/case_icon.svg" alt="case icon">Case
+                    Information
+                    
+                </div>
+            </div>
+            <div class="sectionContent">
+              
+                <div class="sectionLeft">
+                    <div class="topImgCnt" id="topImgCnt1">
+                        <!-- <div class="clickToContinue expandImgTxtRight clickToEnlarge">Click to enlarge image.</div> -->
+                        <div class="popover left-arrow clickToEnlarge">
+                            <div class="arrow" style="top: 50%;"></div>
+                            <div class="popover-content">Click to enlarge image.</div>
+                        </div>
+                        <a href="javascript:void(0);" title="Click to enlarge image" class="small_expand zoom_btn" click_id="1">&nbsp;</a>
+                    </div>
+
+                    <div class="leftBottom">
+                        <h3>Baby Jazmine</h3>
+                        <div class="headingBlue">BORN AT</div>
+                        <div class="sectiontxt">36 weeks gestation</div><br>
+                        <div class="headingBlue">WEIGHT</div>
+                        <div class="sectiontxt">2.8 kg</div>
+                    </div>
+                </div>
+                
+                <div class="sectionletter">
+                    <div class="button_wrapper head  completed" data-target="sugar">
+                        <div class="checked"><img src="pages/images/Topic01/T01P16/tick.png"></div>
+                        <button class="buttonBox"> <div  id="s-text" class="s-text-selected"></div></button>
+                    </div>
+                    
+                    <div class="button_wrapper " data-target="temperture">
+                        <div class="checked"><img src="pages/images/Topic01/T01P16/tick.png"></div>
+                        <button class="buttonBox"> <div id="t-text" class="t-text"></div></button>
+                    </div>
+                    <div class="button_wrapper" data-target="airway">
+                        <div class="checked"><img src="pages/images/Topic01/T01P16/tick.png"></div>
+                        <button class="buttonBox"> <div id="a-text" class="a-text"></div></button>
+                    </div>
+                    <div class="button_wrapper" data-target="bloodpressure">
+                        <div class="checked"><img src="pages/images/Topic01/T01P16/tick.png"></div>
+                        <button class="buttonBox"> <div id="b-text" class="b-text"></div></button>
+                    </div>
+                    <div class="button_wrapper" data-target="labwork">
+                        <div class="checked"><img src="pages/images/Topic01/T01P16/tick.png"></div>
+                        <button class="buttonBox"> <div id="l-text" class="l-text"></div></button>
+                    </div>
+                    <div class="button_wrapper" data-target="emotional">
+                        <div class="checked"><img src="pages/images/Topic01/T01P16/tick.png"></div>
+                        <button class="buttonBox"> <div id="e-text" class="e-text"></div></button>
+                    </div>
+                    
+                </div>
+                <div class="sectionRight">
+                    <div class="firstShow">
+                       <!----<div class="rightTop">
+                            <a href="javascript:void(0);" class="tabClick active" title="Case Information" rel="Case">Case Information</a>
+                        </div>-->
+
+                        <div class="sectionContentArea">
+
+                            <div class="assementDesc" unselectable="on"><span>Click each letter of the S.T.A.B.L.E. program to learn more.</span></div>
+                            <section class="QuestionPanel1_2 clsPanel" >
+                                <div  id="sugar" class="info" style="display: block;">                               
+                                    <div class="qtext">Sugar and Safe Care</div>
+									<div class="leftCnt">
+										<div class="information">
+										   <p>Because of respiratory distress, hypotension and an abnormal neurologic exam, Baby Jazmine's feedings were withheld. An IV was placed in her right arm. The hypoglycemia was treated with a 2 mL/kg D<SUB>10</SUB>W bolus, given at a rate of 1 mL per minute. A D<SUB>10</SUB>W IV infusion was started at 80 mL/kg/day. Her blood sugar was repeated 30 minutes after the D<SUB>10</SUB>W bolus.</p>
+										   <p>The repeat blood sugar is 58 mg/dL (3.2 mmol/L).</p>                                   
+										</div>
+									</div>
+								</div>
+
+								<div  id="temperture" class="info">                               
+									<div class="qtext">Temperature</div>
+									<div class="leftCnt">
+										<div class="information">
+											<p>Baby Jazmine was placed on a radiant warmer on servo control. Her axillary temperature was repeated.</p>
+											<p>The axillary temperature is 36.7°C.</p>
+										</div>
+									</div>
+								</div>
+
+								<div  id="airway" class="info">                               
+									<div class="qtext">Airway</div>
+									<div class="leftCnt">
+										<div class="information">
+											<p>When Baby Jazmine was admitted to the Special Care Nursery, she was experiencing moderate respiratory distress. She was placed on high-flow nasal cannula, 6 liters per minute (LPM) and 40% oxygen.  </p>
+                                            <p>Her work of breathing improved and grunting stopped. She remained tachypneic (respiratory rate 72 per minute).</p>
+                                            <p>At 6 hours of age, she developed a left-sided pneumothorax. 60 mL of air was removed by needle aspiration. Her respiratory status stabilized.</p>
+                                            <p>Her follow-up blood gas reveals a mild respiratory acidosis. She remains on high-flow nasal cannula, 30% oxygen. Her O<sub>2</sub> saturation is 94%.</p>
+										</div>
+									</div>
+								</div>
+
+								<div  id="bloodpressure" class="info">                               
+									<div class="qtext">Blood Pressure</div>
+									<div class="leftCnt">
+										<div class="information">
+											<p>Baby Jazmine’s exam was consistent with poor perfusion, and her blood pressure was below normal. She was treated with a 10 mL/kg normal saline bolus. Her blood pressure was repeated.</p>
+											<p>The capillary refill time is 4 seconds. Diffuse mottling is still apparent, and her neurologic status is unchanged (sleepy, but responds to stimuli). Her feet are cool to touch, and her heart rate is 170 beats per minute. Her blood pressure is now 60/44 (mean 34).</p>
+										</div>
+									</div>
+								</div>
+
+								<div  id="labwork" class="info">                               
+									<div class="qtext">Lab Work </div>
+									<div class="leftCnt">
+										<div class="information">
+											<p>Baby Jazmine's maternal history and clinical exam were concerning for neonatal sepsis. Her CBC was abnormal. A blood culture was obtained, and antibiotics were started.</p>
+											<!--<p>Her CBC results are now available for review. </p>-->
+										</div>
+									</div>
+								</div>
+
+								<div  id="emotional" class="info">                               
+									<div class="qtext">Emotional Support</div>
+									<div class="leftCnt">
+										<div class="information">
+											<p>Baby Jazmine’s mother expressed feeling overwhelmed by her current situation. Her husband is undergoing chemotherapy treatment for cancer. She is especially concerned about who will take care of her children while she is in the hospital. Asia identified her sister as her main support for the past few months.</p>
+											<p>You offer to help Baby Jazmine's mother, Asia, by contacting her sister at work. You ask for your unit social worker to come assist Asia, too.</p>
+										</div>
+									</div>
+								</div>
+								
+                            </section>
+							
+                           
+							
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+ <div class="modal" id="case_study_popup">
+
+                <div class="modalContent" unselectable="on">
+					<div class="modalinner">
+						<div class="modalTxtImg" unselectable="on" id="imgPopup0"></div>
+						<div class="modalTextBottom" unselectable="on">Baby Jazmine</div>
+						<a class="closepopup zoom_close_btn" href="javascript:void(0)" title="Click to Close"></a>
+						<!-- <div class="clickToContinue expandImgTxtRight clickToClose">Click to Close</div> -->
+						<div class="popover left-arrow">
+							<div class="arrow" style="top: 50%;"></div>
+							<div class="popover-content">Click to close image.</div>
+						</div>
+					</div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--- Main Container--->
+
+    <div class="boxInst">
+        <div class="instNextClick"></div>
+        <div class="next_click"><em> Click Next to continue.</em></div>
+    </div>
+    </div>
+
+    <script>
+	manifest = [{
+        src: 'pages/images/Topic01/T01P02/img2.png',
+        id: '1'
+    },
+
+    {
+        src: 'pages/images/Topic01/T01P02/image_02_small.png',
+        id: '2'
+    },
+
+    {
+        src: 'pages/images/Topic01/T01P02/small_graph.png',
+        id: '3'
+    },
+];
+
+
+
+var audioPath = "pages/audio/Topic01/T01P57/T01P57_1";
+var gItemAudioPath = ["pages/audio/Topic01/T01P57/T01P57_1"];
+clickViewMoreInfo();
+var currCue = 0;
+var idd = 0;
+var __curState = 0;
+var clickTabCount = 0;
+var clickTabCount1 = 0;
+
+var updateContentArray = [
+
+    { time: "0.0", carry: "", event: "", show: "", hide: "", transcript: "Finally, review the next steps of stabilization taken for Baby Jazmine.<br> Click Next to continue." },
+    {
+        time: "0.0", carry: "", event: "",   show: "",  hide: "",    
+		transcript: "",
+        animation: [{ target: ".topImgCnt", duration: "0.5", activity: { 'opacity': '1', 'display': 'block' } }]
+    },
+    {
+        time: "0.0",   carry: "", event: "",   show: "",  hide: "",
+        transcript: "",
+        animation: [{ target: ".rightCnt", duration: "0.5", activity: { 'opacity': '1', 'display': 'block' } }]
+    }
+];
+
+var updateContentArray0 = [{ time: "0.0", carry: "", event: "", show: "", hide: "" }];
+var updateContentArray1 = [{ time: "0.0", carry: "", event: "", show: "", hide: ""}];
+
+function fnAudioFinishItemComp() {
+    fnAudioFinishPageComp();
+}
+
+var __dataXml;
+
+var audplayer = document.getElementById('audioplayer');
+
+$(document).ready(function() {7
+    bindClickableHotspot();
+    disableNextBtn();
+    var ele = document.getElementsByTagName('div');
+    for (var i = 0; i < ele.length; i++) {
+        ele[i].setAttribute("unselectable", "on");
+    }
+    var n = isInArray("M1L0T1P57", gCompPageArr);
+    if (n == true) {
+        enableNextBtn();
+        fnDesiableNext(false)
+    }
+});
+
+function audioReset() {
+    gAudioId = "";
+    onTimelineEnd();
+}
+
+function isInArray(value, array) {
+    return array.indexOf(value) > -1;
+}
+
+
+function fnPlaySectionAudio(gCurrentIndex) {
+    indexAudio = (gCurrentIndex);
+    audioId = "audio_" + gCurrentIndex;
+    gAudioId = audioId;
+    fnHideShowAudioPlayer(false);
+    updateContentArray = eval("updateContentArray" + (gCurrentIndex));
+    initAudioPlayer(gItemAudioPath[gCurrentIndex])
+}
+
+function fnCompletion() {
+    console.log("end");
+    var _getCount1 = clickTabCount + clickTabCount1;
+    console.log("start new");
+    enableNextBtn();
+    $('.boxInst').show()
+    fnAudioFinishItemComp();
+
+}
+
+function fnOnAudioComplete() {
+    if (gAudioId == "startAudio") {
+        console.log("start audio");
+        audplayer.pause();
+        audplayer.currentTime = 0;
+        $(".clickToEnlarge").show();
+        $(".small_expand").show();
+        $(".small_expand1").show();
+    } else {
+        // fnCompletion();
+        // enableNextBtn();
+        $('.boxInst').show();
+        $(".clickToEnlarge").show();
+        $(".small_expand").show();
+        $(".small_expand1").show();
+        gCompPageArr.push("M1L0T1P57");
+        fnAudioFinishItemComp();
+        audplayer.pause();
+        audplayer.currentTime = 0;
+    }
+
+}
+function onlyUnique(value, index, self) {
+    return self.indexOf(value) === index;
+}
+
+var correctOptions = [0];
+
+function bindClickableHotspot() {
+    console.log("clicked");
+    $('.option').addClass('aactive'); //.css({ 'cursor': 'pointer' });
+    $('.option').off().on('click', function() {
+		$('.option').removeClass('clicked');
+		$(this).addClass('clicked');
+		if ($('.option.clicked').length >= 1) {
+			$('.cSubmitBtn').addClass('active');
+			$('.cSubmitBtn.active').off().on('click', function() {
+				submitClick();
+			});
+		} else {
+			$('.cSubmitBtn').removeClass('active');
+		}
+    });
+}
+$('.thumbnails a').on('click', function () {
+    var eq = $(this).index();
+
+    $('.main .big').removeClass('show');
+    $('.main .big').eq(eq).addClass('show');
+});
+$('#topImgCnt2').hide();
+function submitClick() {
+    tinCanWrapper.sendStatementData("answered", "baby-conrad-postnatal-course", "Baby Conrad - Postnatal Course - Now take a look at Baby Conrad's vital signs shortly after birth. Are they normal or abnormal?");
+    $('.cSubmitBtn.active').hide();
+    console.log("clicked");
+    enableNextBtn();
+    fnDesiableNext(false);
+    gCompPageArr.push("M1L0T1P57");
+    var incorrectCount = 0; //, correctCount = 0;
+    $('.option').each(function() {
+        if ($(this).hasClass('clicked') && ($.inArray($(this).index(), correctOptions) == -1)) {
+            $(this).addClass('wrong');
+            incorrectCount++;
+        }
+        $(this).off(); //.removeClass('clicked');
+    });
+
+    $(correctOptions).each(function(i, val) {
+        $('.option').eq(val).addClass('correct');
+    });
+
+    if (incorrectCount == 0) {
+        fnPlaySectionAudio(0);
+    } else {
+        fnPlaySectionAudio(1);
+    }
+    $('.option').off().removeClass('aactive'); //.css({'cursor':'default'});
+    $('.cSubmitBtn').removeClass('active');
+    $('.informationRight').show();
+}
+
+var visited = ['sugar'];
+var total_count = 6;
+$('.button_wrapper[data-target] .buttonBox').on('click', function () {
+    id = $(this).parents('.button_wrapper').data('target');
+    switch(id){
+     
+        case 'sugar':
+
+            $('#s-text').removeClass('s-text').addClass('s-text-selected');
+            break;
+        case 'temperture':
+        $('#t-text').removeClass('t-text').addClass('t-text-selected');
+            break;
+        case 'airway':
+        $('#a-text').removeClass('a-text').addClass('a-text-selected');
+            break;
+        case 'bloodpressure':
+        $('#b-text').removeClass('b-text').addClass('b-text-selected');
+            break;
+        case 'labwork':
+        $('#l-text').removeClass('l-text').addClass('l-text-selected');
+            break;
+        case 'emotional':
+        $('#e-text').removeClass('e-text').addClass('e-text-selected');
+            break;
+      default:
+            break;
+    }
+  
+    $(this).parents('.button_wrapper').addClass('completed');
+    visited.push(id);
+    visited = visited.filter(onlyUnique);
+    if (visited.length == total_count) {
+        fnCompletion();
+        enableNextBtn();
+        gCompPageArr.push("M1L0T1P57");
+    }        
+    $('.info').hide();
+    $('#' + id).show();
+});
+
+$(".small_expand").off().on("click", function() {
+    pauseAudio();
+    $("#TabPopup5 #case_study_popup.modal").show();
+    $("#TabPopup5 .sectionTop").addClass("blur");
+    $("#TabPopup5 .sectionContent").addClass("blur");
+    $(".modalTxtImg").attr('id', 'imgPopup' + $(this).attr('click_id'));
+});
+
+$(".small_expand1").off().on("click", function() {
+    pauseAudio();
+    $("#TabPopup5 #case_study_popup.modal").show();
+    $("#TabPopup5 .sectionTop").addClass("blur");
+    $("#TabPopup5 .sectionContent").addClass("blur");
+    $('.boxInst').addClass("blur");
+    $(".modalTxtImg").attr('id', 'imgPopup' + $(this).attr('click_id'));
+    $('.modalTextBottom').hide();
+    $('#ModalTextBottom' + $(this).attr('click_id')).show();
+    $('.modalContent').addClass('maxBot');
+    $('.modalContent').removeClass('maxBot0');
+});
+
+$(".closepopup, .modalclose").off().on("click", function() {
+    playAudio();
+    $("#TabPopup5 .modal").removeAttr("style");
+    $("#TabPopup5 .sectionTop").removeClass("blur");
+    $("#TabPopup5 .sectionContent").removeClass("blur");
+    $('.boxInst').removeClass("blur");
+});
+
+$(".popup").on("click", function() {
+	pauseAudio();
+	$("#TabPopup5 #popup").show();
+	$("#TabPopup5 .sectionTop").addClass("blur");
+	$("#TabPopup5 .sectionContent").addClass("blur");
+});
+$(".popupclose").on("click", function() {
+	playAudio();
+	$("#TabPopup5 #popup").removeAttr("style");
+	$("#TabPopup5 .sectionTop").removeClass("blur");
+	$("#TabPopup5 .sectionContent").removeClass("blur");
+});
+function pauseAudio() {
+    if (!fnPauseAudio()) {
+        console.log(true);
+        fnPauseAudio()
+    } else {
+        playPauseAudio();
+        console.log(false);
+    }
+}
+
+function playAudio() {
+    if (!fnPauseAudio()) {
+        console.log(true);
+        playPauseAudio();
+    }
+}
+</script>
+
+</body>
+
+
+
+</html>

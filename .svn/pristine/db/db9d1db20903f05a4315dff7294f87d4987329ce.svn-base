@@ -1,0 +1,412 @@
+/********************************* CaseInfo Css ***********************************/
+.hospitalContainer {
+    position: relative !important;
+    width: 1065px !important;
+    /* height: 527px !important;
+    top: 56px !important; */
+    background: none !important;
+    background-repeat: no-repeat !important;
+    left: 10px !important;
+    overflow: hidden !important;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.34) !important;
+    border-radius: 3px !important;
+}
+
+#helptopbar {
+    position: absolute;
+    background-color: #ffffff!important;
+    border-radius: 0!important;
+    border-top-left-radius: 3px!important;
+    border-top-right-radius: 3px!important;
+    font-family: OpenSansRegular;
+    font-size: 36px;
+    left: 0!important;
+    border-bottom: 0 !important;
+    /* -webkit-box-shadow:0px -4px 6px rgba(0, 0, 0, 0.34)!important;
+    -moz-box-shadow:0px -4px 6px rgba(0, 0, 0, 0.34)!important;
+    box-shadow:0px -4px 6px rgba(0, 0, 0, 0.34)!important; */
+}
+
+.ModalTextBottom {
+    color: #F6A87A  !important;
+    background: none !important;
+    font-family: OpenSansBold !important;
+}
+
+.modalContent {
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.34) !important;
+}
+
+#id_glosCloseBtn, #id_glosCloseBtnGlsr {  
+    position: absolute !important;
+    width: 21px !important;
+    height: 21px !important;
+    top: 11px !important;
+    right: 18px !important;  
+    cursor: pointer !important;
+    background: url(../media/images/new/closebtn.svg) !important;
+    /* background-position: -49px 0px; */
+    -webkit-transition: all 0.3s !important;
+    -o-transition: all 0.3s !important;
+    transition: all 0.3s !important;
+    background-size: cover !important;
+    background-position: 0px 0px !important;
+    background-repeat:  no-repeat;
+}
+
+/* #id_RefCloseBtn,
+#id_glosCloseBtnGlsr,
+#RefCloseBtn_id{
+    width: 34px !important;
+    height: 33px !important;
+} */
+#pageRefCloseBtn_id {
+    width: 21px !important;
+    height: 21px !important;
+    background: url(../media/images/new/closebtn.svg) !important; 
+    position: absolute !important;   
+    top: 11px !important;
+    right: 18px !important;    
+    background-size: cover !important;
+    background-repeat:  no-repeat;
+    background-position: 0px 0px !important;
+}
+#id_RefCloseBtn:hover,
+#id_glosCloseBtnGlsr:hover,
+#RefCloseBtn_id:hover {
+    position: absolute !important;   
+    top: 11px !important;
+    right: 18px !important;
+    width: 21px !important;
+    height: 21px !important;   
+    cursor: pointer !important;
+     background: url(../media/images/new/closebtn-hover.svg) !important; 
+    /* background-position: -49px 0px; */  
+    background-size: cover !important;
+    background-position: 0px 0px !important;
+    background-repeat:  no-repeat;
+}
+ #pageRefCloseBtn_id:hover  {
+    position: absolute !important;   
+    top: 11px !important;
+    right: 19px !important;
+    width: 21px !important;
+    height: 21px !important;   
+    cursor: pointer !important;
+     background: url(../media/images/new/closebtn-hover.svg) !important; 
+    /* background-position: -49px 0px; */  
+    background-size: cover !important;
+    background-position: 0px 0px !important;
+    background-repeat:  no-repeat;
+} 
+.no-touch #id_glosCloseBtn:hover {
+    background: url(../media/images/new/closebtn-hover.svg) !important ;
+    background-position:0px 0px !important;
+    
+    background-size: cover !important;
+    background-repeat:  no-repeat;
+    position: absolute !important;
+width: 21px !important;
+height: 21px !important;
+top: 11px !important;
+right: 18px !important;
+}
+
+#id_glosTitleText {
+    color: #F6A87A !important;
+    text-align: center;
+    
+}
+.glossaryHeading{
+    top:-3px !important;
+}
+#case_study_popup {
+    background: rgba(255, 255, 255, 0.6) !important;
+}
+
+.concord#case_study_popup {
+    background: rgba(255, 255, 255, 0.9) !important;
+}
+
+
+/********************************* Glossery Css ***********************************/
+
+.gloassaryContainer {
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.34) !important;
+}
+
+.medicineClass:hover,
+.medicineClass.active {
+    background: #F6A87A   !important;
+    color: #ffffff;
+}
+
+.glossaryPopup {
+    background: none repeat rgba(248, 248, 248, 0.9);
+}
+
+.content {
+    width: 100% !important;
+    top: 48px !important;
+}
+
+/********************************* PDF Resource Css ***********************************/
+#id_RefTitleBar {
+    background-color: #ffffff !important;
+    border-top-left-radius: 5px !important;
+    border-top-right-radius: 5px !important;
+    left: 0;
+    width: 100% !important;
+    font-family: OpenSansSemiBold !important;
+}
+/* 
+#id_RefCloseBtn:hover {
+    background-position: 0px 0px !important;
+} */
+
+
+
+/********************************* Glossery Css ***********************************/
+/* .gloassaryContainer #id_glosTitleText {
+    border-bottom: 2px solid #d7722c ;
+    width: 100% !important;
+    left: 0;
+} */
+#helptopbar:after,
+#id_RefTitleBar:after,
+#RefTitleBar_id:after {
+    content: "";
+    width: 89%;
+    height: 2px;
+    background: #F6A87A;
+    position: absolute;
+    margin: 0 auto;
+    display: block;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 46px;
+}
+
+#RefTitleBar_id:after {
+    top: 48px;
+}
+
+#helptopbar:after {
+    width: 96%;
+}
+
+.gloassaryContainer {
+    height: 526px !important;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.34) !important;
+}
+
+.medicineClass:hover,
+.medicineClass.active {
+    background: #F6A87A  !important;
+    color: #ffffff;
+}
+
+/********************************* PDF Resource Css ***********************************/
+
+
+#id_ReftitleText {
+    width: 100% !important;
+    color: #F6A87A  !important;
+    left: 0 !important;
+    border-bottom: 0;
+    padding-bottom: 15px;
+}
+
+
+#clsResourcesPopup {
+    width: 1000px !important;
+}
+
+#id_ReferencesBG {
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.34) !important;
+}
+
+#references {
+    min-height: 440px !important;
+    border-bottom-left-radius: 6px !important;
+    border-bottom-right-radius: 6px !important;
+    top: 5px !important;
+}
+
+#id_ReferencesBG {
+    height: 81% !important;
+}
+
+/******************** popup pdf css ****************************************/
+
+#RefTitleBar_id {
+    background-color: #fff !important;
+    border-top-left-radius: 5px !important;
+    border-top-right-radius: 5px !important;
+    width: 100% !important;
+}
+
+#ReftitleText_id {
+    color: #d7722c  !important;
+}
+
+.clsVideoCnt {
+    height: 440px !important;
+}
+
+
+.glossaryCntTxt {
+    top: 49px;
+    width: 475px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 12px 18px 12px 18px;
+    font-size: 16px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height:100px;
+    /* -webkit-box-shadow:0px 6px 6px rgba(0, 0, 0, 0.34);
+    -moz-box-shadow:0px 6px 6px rgba(0, 0, 0, 0.34) ;
+    box-shadow:0px 6px 6px rgba(0, 0, 0, 0.34) ; */
+}
+
+/* .popupglossasryCnt #id_glosCloseBtn {
+    top: 6px !important;
+} */
+
+.popupglossasryCnt {
+    width: 511px !important;
+    overflow: inherit;
+    height: auto;
+    min-height: 175px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.34);
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+
+#pageClsResourcesPopup {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+}
+
+#pageClsResourcesPopup #pageid_ReferencesBG {
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.34);
+    border-radius: 5px !important;
+    height: 463px!important;
+}
+
+#pageClsResourcesPopup #pageReftitleText_id {
+    position: relative !important;
+    color: #F6A87A  !important;
+    text-align: center !important;
+    top: 15px !important;
+    left: 0!important;
+}
+
+#pageClsResourcesPopup #pageRefTitleBar_id {
+    background-color: white !important;
+}
+
+#pageClsResourcesPopup .pageclose_txt {
+    background: none;
+}
+
+#pageClsResourcesPopup .id_glosCloseBtn {
+    top: 15px;
+}
+
+#pageClsResourcesPopup .close_txt {
+    display: none;
+}
+
+#pageClsResourcesPopup #pageRefTitleBar_id:after {
+    content: "";
+    width: 96%;
+    height: 2px;
+    position: absolute;
+    background-color: #F6A87A  !important;
+    top:48px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+
+.pdflink {
+    /* border-radius: 5px !important; */
+    top: 50px !important;
+}
+#pageRefTitleBar_id{
+    height: 47px!important;
+}
+.transcripttext::-webkit-scrollbar-track {
+    /* box-shadow: inset 0 0 5px rgba(65, 65, 65, 0.4);; */
+    border-radius: 10px;
+    background-color: rgba(65, 65, 65, 0.4);
+}
+
+.transcripttext::-ms-scrollbar-track {
+    /* box-shadow: inset 0 0 5px rgba(65, 65, 65, 0.4); */
+    border-radius: 10px;
+    background-color: rgba(65, 65, 65, 0.4);
+}
+
+.transcripttext::-moz-scrollbar-track {
+    /* box-shadow: inset 0 0 5px rgba(65, 65, 65, 0.4); */
+    border-radius: 10px;
+    background-color: rgba(65, 65, 65, 0.4);
+}
+/* Handle */
+
+.glossaryCntTxt::-webkit-scrollbar {
+    width: 8px;
+}
+
+.glossaryCntTxt::-ms-scrollbar {
+    width: 8px;
+}
+
+.glossaryCntTxt::-moz-scrollbar {
+    width: 8px;
+}
+/* Handle on hover */
+.glossaryCntTxt::-webkit-scrollbar-thumb {
+    background: #F6A87A;
+    border-radius: 10px;
+}
+
+.glossaryCntTxt::-ms-scrollbar-thumb {
+    background: #F6A87A;
+    border-radius: 10px;
+}
+
+.glossaryCntTxt::-moz-scrollbar-thumb {
+    background:#F6A87A;
+    border-radius: 10px;
+}
+.glossaryCntTxt::-webkit-scrollbar-track {
+    /* box-shadow: inset 0 0 5px rgba(65, 65, 65, 0.4);; */
+    border-radius: 10px;
+    background-color: rgba(65, 65, 65, 0.4);
+}
+
+.glossaryCntTxt::-ms-scrollbar-track {
+    /* box-shadow: inset 0 0 5px rgba(65, 65, 65, 0.4); */
+    border-radius: 10px;
+    background-color: rgba(65, 65, 65, 0.4);
+}
+
+.glossaryCntTxt::-moz-scrollbar-track {
+    /* box-shadow: inset 0 0 5px rgba(65, 65, 65, 0.4); */
+    border-radius: 10px;
+    background-color: rgba(65, 65, 65, 0.4);
+}
+.modalContent.medium, .modalContent.none, .custom-modalContent, .modalContent.md_medium, .modalContent.height_auto, .modalContent.small, .modalContent.xs_small {
+    background: none!important;
+    box-shadow: none!important;
+}
+.modalContent.medium .modalTxtImg, .modalContent.md_medium .modalTxtImg, .modalContent.height_auto, .modalContent.small .modalTxtImg, .modalContent.xs_small .modalTxtImg {
+    border-radius: 5px;
+}
+

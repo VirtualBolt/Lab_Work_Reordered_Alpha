@@ -1,0 +1,3405 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+
+    <title></title>
+
+    <script>
+        manifest = [{
+            src: 'pages/images/Topic01/T01P32/layer6.png',
+            id: '1'
+        },
+
+        {
+            src: 'pages/images/Topic01/T01P32/small_expand.png',
+            id: '2'
+        },
+
+        {
+            src: 'pages/images/Topic01/T01P32/small_expand_hover.png',
+            id: '3'
+        },
+
+        {
+            src: 'pages/images/Topic01/T01P32/layer6_large.png',
+            id: '4'
+        }
+
+        ];
+    </script>
+
+    <style type="text/css">
+        .mainContainer {
+            position: absolute;
+            width: 1085px;
+            height: 540px;
+            left: 0px;
+            top: 0px;
+            opacity: 1;
+        }
+
+        .clsPatch {
+            position: absolute;
+            width: 0px;
+            height: 236px;
+        }
+
+        .clsCircle {
+            position: absolute;
+            /* -ms-transform: matrix(0, 0, 0, 0, 0, 0);
+
+	-wbkit-transform: matrix(0, 0, 0, 0, 0, 0);
+
+	transform: matrix(0, 0, 0, 0, 0, 0); */
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+
+        @-webkit-keyframes pulse {
+            0% {
+                -webkit-transform: scale(1);
+            }
+
+            50% {
+                -webkit-transform: scale(1.1);
+            }
+
+            100% {
+                -webkit-transform: scale(1);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                top: 150px;
+                left: 220px;
+                width: 0px;
+                height: 0px;
+                transform: scale(1);
+            }
+
+            50% {
+                left: 105px;
+                top: 10px;
+                width: 235px;
+                height: 235px;
+                transform: scale(1.1);
+            }
+
+            100% {
+                left: 105px;
+                top: 10px;
+                width: 228px;
+                height: 228px;
+                transform: scale(1);
+            }
+        }
+
+        .pulse {
+            -webkit-animation-name: pulse;
+            animation-name: pulse;
+        }
+
+        #idPatchMain {
+            top: 55px;
+            left: 70px;
+            background-position: left;
+            height: 65px;
+            background: #FFFFFF;
+            border-radius: 6px;
+            width: 905px;
+            -webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            border-radius: 5px;
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            padding: 10px 15px;
+            display: none;
+        }
+
+        .clsText {
+            position: relative;
+            font-size: 16px;
+            font-family: OpenSansRegular;
+            line-height: 25px;
+            color: #000000;
+            opacity: 0;
+        }
+
+        .csection .clsText {
+            font-size: 16px;
+        }
+
+        #idText1 {
+            top: 3px;
+            left: 0px;
+            width: 100%;
+            text-align: left;
+            font-family: OpenSansRegular;
+            font-size: 16px;
+            opacity: 1;
+        }
+
+        #idText2 {
+            top: 12px;
+            left: 0px;
+            width: 100%;
+            opacity: 1;
+            display: none;
+            font-style: italic;
+            font-family: OpenSansSemiBold;
+        }
+
+        .clsBullet {
+            position: absolute;
+            width: 8px;
+            height: 15px;
+            background: url("pages/images/Topic01/T01P03/bullet01.png") no-repeat;
+            opacity: 0;
+        }
+
+        #idBullet_2 {
+            top: 35px;
+            left: 140px;
+        }
+
+        #idBullet_3 {
+            top: 60px;
+            left: 140px;
+        }
+
+        #idBullet_4 {
+            top: 105px;
+            left: 140px;
+        }
+
+        #idBullet_5 {
+            top: 130px;
+            left: 177px;
+        }
+
+        #idBullet_6 {
+            top: 156px;
+            left: 177px;
+        }
+
+        #idBullet_7 {
+            top: 179px;
+            left: 177px;
+        }
+
+        #idText3 {
+            top: 55px;
+            left: 160px;
+            width: 480px;
+        }
+
+        #idText4 {
+            top: 100px;
+            left: 160px;
+            width: 520px;
+        }
+
+        #idText5 {
+            top: 125px;
+            left: 195px;
+            width: 480px;
+        }
+
+        #idText6 {
+            top: 150px;
+            left: 195px;
+            width: 480px;
+        }
+
+        #idText7 {
+            top: 175px;
+            left: 195px;
+            width: 480px;
+        }
+
+        #idText8,
+        #idText9 {
+            top: 73px;
+            left: 150px;
+            width: 510px;
+        }
+
+        #idText9 {
+            display: none;
+            top: 41px;
+        }
+
+        .expText {
+            position: absolute;
+            font-size: 14px;
+            line-height: 46px;
+            font-style: italic;
+            color: #000;
+            top: 0px;
+            left: 0px;
+            width: 178px;
+            color: #4D667B;
+            text-align: center;
+            opacity: 1;
+            font-style: italic;
+        }
+
+        /* .ClsTab{
+
+    position: absolute;
+
+		width: 135px;
+
+    height: 135px;
+
+    top: 40px;
+
+		opacity: 0;
+
+
+
+} */
+
+        .ClsTab {
+            position: absolute;
+            width: 0px;
+            height: 0px;
+            /* -webkit-animation-duration: 1s;
+
+	 	animation-duration: 1s;
+
+	 	-webkit-animation-fill-mode: both;
+
+	 	animation-fill-mode: both; */
+            transform: scale(0);
+            -webkit-transform: scale(0);
+            cursor: pointer;
+        }
+
+        @-webkit-keyframes pulse_tab {
+            0% {
+                -webkit-transform: scale(1);
+            }
+
+            50% {
+                -webkit-transform: scale(1.1);
+            }
+
+            100% {
+                -webkit-transform: scale(1);
+            }
+        }
+
+        @keyframes pulse_tab {
+            0% {
+                top: 50px;
+                left: 210px;
+                width: 0px;
+                height: 0px;
+                transform: scale(1);
+            }
+
+            50% {
+                left: 140px;
+                top: 30px;
+                width: 140px;
+                height: 140px;
+                transform: scale(1.1);
+            }
+
+            100% {
+                left: 135px;
+                top: 40px;
+                width: 135px;
+                height: 135px;
+                transform: scale(1);
+            }
+        }
+
+        /* .pulse_tab {
+
+						 -webkit-animation-name: pulse_tab;
+
+						 animation-name: pulse_tab;
+
+					} */
+        /* @keyframes pulse_tab_2 {
+
+		 0% {
+
+			 top: 50px;
+
+			 left: 360px;
+
+			 width: 0px;
+
+			 height: 0px;
+
+			 transform: scale(1);
+
+		 }
+
+		 50% {
+
+			 left: 290px;
+
+			 top: 30px;
+
+			 width: 140px;
+
+			height: 140px;
+
+			 transform: scale(1.1);
+
+		 }
+
+		 100% {
+
+			 left: 300px;
+
+			 top: 40px;
+
+			 width: 135px;
+
+			height: 135px;
+
+			 transform: scale(1); }
+
+	} */
+        /* .pulse_tab_2 {
+
+					 -webkit-animation-name: pulse_tab_2;
+
+					 animation-name: pulse_tab_2;
+
+				}
+
+
+
+				@keyframes pulse_tab_3 {
+
+					 0% {
+
+						 top: 50px;
+
+						 left: 510px;
+
+						 width: 0px;
+
+						 height: 0px;
+
+						 transform: scale(1);
+
+					 }
+
+					 50% {
+
+						 left: 460px;
+
+						 top: 30px;
+
+						 width: 140px;
+
+						height: 140px;
+
+						 transform: scale(1.1);
+
+					 }
+
+					 100% {
+
+						 left: 465px;
+
+						 top: 40px;
+
+						 width: 135px;
+
+						height: 135px;
+
+						 transform: scale(1); }
+
+				}
+
+			.pulse_tab_3 {
+
+							 -webkit-animation-name: pulse_tab_3;
+
+							 animation-name: pulse_tab_3;
+
+						}
+
+						@keyframes pulse_tab_4 {
+
+							 0% {
+
+								 top: 50px;
+
+								 left: 690px;
+
+								 width: 0px;
+
+								 height: 0px;
+
+								 transform: scale(1);
+
+							 }
+
+							 50% {
+
+								 left: 625px;
+
+								 top: 30px;
+
+								 width: 140px;
+
+								height: 140px;
+
+								 transform: scale(1.1);
+
+							 }
+
+							 100% {
+
+								 left: 630px;
+
+								 top: 40px;
+
+								 width: 135px;
+
+								height: 135px;
+
+								 transform: scale(1); }
+
+						}
+
+					.pulse_tab_4 {
+
+									 -webkit-animation-name: pulse_tab_4;
+
+									 animation-name: pulse_tab_4;
+
+								}
+
+
+
+											@keyframes pulse_tab_5 {
+
+												 0% {
+
+													 top: 100px;
+
+													 left: 840px;
+
+													 width: 0px;
+
+													 height: 0px;
+
+													 transform: scale(1);
+
+												 }
+
+												 50% {
+
+													 left: 795px;
+
+													 top: 30px;
+
+													 width: 140px;
+
+													height: 140px;
+
+													 transform: scale(1.1);
+
+												 }
+
+												 100% {
+
+													 left: 800px;
+
+													 top: 40px;
+
+													 width: 135px;
+
+													height: 135px;
+
+													 transform: scale(1); }
+
+											}
+
+										.pulse_tab_5 {
+
+														 -webkit-animation-name: pulse_tab_5;
+
+														 animation-name: pulse_tab_5;
+
+													} */
+
+        .ClsTabInside {
+            position: absolute;
+            width: 110px;
+            height: 110px;
+            top: 9px;
+            border-radius: 50%;
+            background-size: contain;
+            opacity: 0;
+        }
+
+        .ClsTabHover {
+            position: absolute;
+            top: -11px;
+            left: -11px;
+            width: 147px;
+            height: 147px;
+            border-radius: 50%;
+            transform: scale(0);
+            transition: all 0.3s;
+        }
+
+        .clsTabTxt {
+            position: absolute;
+            width: 160px;
+            height: 25px;
+            top: 100px;
+            left: -6px;
+            font-size: 16px;
+            color: #000000;
+            text-align: center;
+            font-family: OpenSansRegular;
+            opacity: 0;
+        }
+
+        #clsTabTxt1 {
+            left: 296px;
+        }
+
+        #clsTabTxt2 {
+            left: 767px;
+        }
+
+        #clsTabTxt3 {
+            left: 510px;
+            height: 47px;
+        }
+
+        #clsTabTxt4 {
+            left: 253px;
+        }
+
+        #clsTabTxt5 {
+            left: 0px;
+        }
+
+
+        .ClsTab {
+            background-position: 100% 100%;
+        }
+
+
+        .clsDisable {
+            cursor: default !important;
+        }
+
+        .ClsInsDiv {
+            position: absolute;
+            top: 235px;
+            left: 360px;
+            background: url('pages/images/Topic01/T01P32/instText.png') no-repeat !important;
+            width: 274px;
+            font-size: 16px;
+            height: 75px;
+            opacity: 0;
+        }
+
+        .custom-modalContent {
+            width: 650px;
+            height: 429px;
+        }
+
+        .ClsInsText {
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            font-size: 16px;
+            color: #536b80;
+            font-family: OpenSansRegular;
+            font-style: italic;
+        }
+
+        .PopupText1 {
+            position: absolute;
+            top: 250px;
+            left: 30px;
+            width: 675px;
+            font-size: 14px;
+            height: 140px;
+            color: #000000;
+            font-family: OpenSansRegular;
+            opacity: 0;
+        }
+
+        .PopupText2 {
+            position: absolute;
+            top: 250px;
+            left: 30px;
+            width: 675px;
+            font-size: 14px;
+            height: 140px;
+            color: #000000;
+            font-family: OpenSansRegular;
+            opacity: 0;
+        }
+
+        .clsTabPopup {
+            position: absolute;
+            width: 100%;
+            height: 538px;
+            top: 0px;
+            left: 0px;
+            background: #ffffff;
+            padding: 4px;
+        }
+
+        #TabPopup1 {}
+
+        #TabPopup2 {}
+
+        #TabPopup3 {}
+
+        #TabPopup4 {}
+
+        .clsBold {
+            font-family: OpenSansSemiBold;
+        }
+
+        .clsReg {
+            font-family: OpenSansSemiBold;
+        }
+
+        .clsAllTabs {
+            position: absolute;
+            height: 170px;
+            width: 935px;
+            top: 195px;
+            left: 70px;
+        }
+
+        .clsTick {
+            position: absolute;
+            width: 31px;
+            height: 31px;
+            background-size: contain;
+            top: -5px;
+            right: -10px;
+            cursor: default;
+            display: none;
+        }
+
+        .clsTick.end {
+            background: url("pages/images/Topic01/T01P32/tick.png") no-repeat;
+        }
+
+        /*--------------------- Case Study 1 -----------------------*/
+        .classPatchLeft {
+            position: absolute;
+            top: 10px;
+            left: 12px;
+            border-radius: 10px;
+            height: 408px;
+            width: 375px;
+            opacity: 1;
+        }
+
+        .classPatchRight {
+            position: absolute;
+            top: 10px;
+            left: 395px;
+            height: 406px;
+            width: 670px;
+            background: #fff;
+            opacity: 1;
+        }
+
+        #idPatch1 {
+            position: absolute;
+            top: 10px;
+            left: 32px;
+            border-radius: 10px;
+            height: 408px;
+            width: 275px;
+            opacity: 1;
+        }
+
+        /* .classPatchleft {
+            position: absolute;
+            top: 10px;
+            left: 325px;
+            height: 406px;
+            width: 700px;
+            background: #fff;
+            opacity: 1;
+        } */
+
+        #idPatch5 {
+            position: absolute;
+            top: 13px;
+            left: 160px;
+            border-radius: 10px;
+            height: 236px;
+            width: 150px;
+            opacity: 0;
+            z-index: -1;
+        }
+
+        #idPatch3 {
+            position: absolute;
+            height: 47px;
+            width: 100%;
+            left: 0px;
+            opacity: 1;
+            background: #707070;
+            text-align: center;
+            display: none;
+        }
+
+        .titleText {
+            position: absolute;
+            font-size: 16px;
+            font-family: OpenSansSemiBold;
+            line-height: 25px;
+            color: #ffffff;
+            top: 10px;
+            left: 0px;
+            width: 100%;
+            opacity: 1;
+            text-transform: capitalize;
+        }
+
+        .titleText span {
+            position: absolute;
+            right: 15px;
+            font-size: 14px;
+            top: 2px;
+        }
+
+        .expandImgTxt {
+            position: absolute;
+            background: url("pages/images/Topic01/T01P32/arrow_return.png") no-repeat;
+            width: 320px;
+            height: 52px;
+            top: 385px;
+            left: 690px;
+            font-size: 15px;
+            text-align: center;
+            font-style: italic;
+            line-height: 45px;
+            display: none;
+            font-weight: bold;
+        }
+
+        .clsImage {
+            position: absolute;
+            top: 0px;
+            opacity: 1;
+            left: 0px;
+            width: 375px;
+            height: 407px;
+            background-size: cover;
+        }
+
+        #image0 {
+            background: url("pages/images/Topic01/T01P32/layer6.png") no-repeat;
+            background-size: cover;
+        }
+
+        #image1 {
+            background: url("pages/images/Topic01/T01P32/blood_gas.png") no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        #image2 {
+            background: url("pages/images/Topic01/T01P32/venipuncture.png") no-repeat;
+            background-size: cover;
+            background-position: 15%;
+        }
+
+        #image3 {
+            background: url("pages/images/Topic01/T01P32/heel_stick.png") no-repeat;
+            background-size: cover;
+            /* background-position: 40%; */
+        }
+        span.no-audio {
+            display: inline-block;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.47);
+            position: absolute;
+            border-radius: 0 0 5px 0;
+            color: #000;
+            /* right: 0; */
+            top: -55px;
+        }
+        .OptionTxtCLSS {
+            position: relative;
+            left: 3px;
+            top: 1px;
+            color: #000000;
+        }
+
+        .OptionTxtCLSS a {
+            color: #000000;
+            text-decoration: underline;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .clsIconImgExpand {
+            position: absolute;
+            width: 178px;
+            height: 42px;
+            line-height: 43px;
+            font-style: italic;
+            font-size: 14px;
+            color: #4D667B;
+            line-height: 43px;
+            padding: 0px 10px;
+        }
+
+        #icon00 {
+            background: url("pages/images/Topic01/T01P32/enlarge_text.png") no-repeat;
+            bottom: 25px;
+            left: 26px;
+            opacity: 1;
+            display: none;
+        }
+
+        .clsIconImg {
+            position: absolute;
+            width: 28px;
+            height: 28px;
+            top: 440px;
+        }
+
+        #csection_0 #icon01 {
+            /* bottom: 31px; */
+            bottom: 24px;
+            left: 240px;
+        }
+
+        #csection_0 #icon00 {
+            left: 25px;
+        }
+
+        #icon01 {
+            right: 10px;
+            opacity: 1;
+            z-index: 1000;           
+            bottom: 10px;           
+            background: url(pages/images/Topic01/T01P22/small_expand.svg) !important;
+            position: absolute;
+            cursor: pointer;
+            width: 29px;
+            height: 29px;          
+            background-position: 0px 0;
+       
+            background-size: cover !important;
+            background-repeat:no-repeat ;
+            display:none;
+            opacity: .6;
+        }
+        #icon01:hover{
+            opacity: 1;
+        }
+
+        /*  {
+            background: url(pages/images/Topic01/T01P32/small_expand_hover.png);
+        } */
+
+        #csection_1 #icon01 {
+            left: 260px;
+        }
+
+        #icon02 {
+            background: url("pages/images/Topic01/T01P32/icon01.png") no-repeat;
+            top: 393px;
+            right: 10px;
+            transform: rotate(180deg);
+            opacity: 0;
+            z-index: 1000;
+            background-position: -11px -7px;
+        }
+
+        #icon02:hover {
+            cursor: pointer;
+        }
+
+        .boxInst {
+            position: absolute;
+            top: 489px;
+            left: 905px;
+        }
+
+        .line {
+            position: absolute;
+            height: 370px;
+            width: 0px;
+            border-left: 2px solid #848583;
+            left: 480px;
+            top: 60px;
+            opacity: 1;
+        }
+
+        .OptionPanel,
+        .OptionPanel2 {
+            position: absolute;
+            height: auto;
+            left: 25px;
+            float: left;
+            /* top: 20px; */
+            width: 630px;
+            font-size: 16px;
+        }
+
+        h4 {
+            margin-top: 0px;
+            padding-top: 0px;
+        }
+
+        .OptionCLSS {
+            width: 93%;
+            padding-bottom: 15px;
+            border-radius: 10px;
+            left: 15px;
+            position: relative;
+        }
+
+        .list-cnt {
+            position: relative;
+            top: 0px;
+            display: none;
+        }
+
+        .list-cnt ol {
+            margin: 0px;
+            padding: 5px 0px 0px 25px
+        }
+
+        .list-cnt ol li {
+            list-style-type: circle;
+            font-size: 16px;
+            opacity: 1;
+        }
+
+        .list-cnt ol li span {
+            top: 10px;
+            position: relative;
+            left: 0px;
+            border: 2px solid #5B5B5B;
+            background: #fff;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .arrowHolder {
+            position: absolute;
+            top: 6px;
+            width: 13px;
+            height: 15px;
+            background: #5B5B5B;
+            -khtml-border-radius: 50%;
+            background: url(pages/images/Topic01/T01P32/bullet.png) no-repeat;
+        }
+
+        .idBackbtn {
+            background: url('pages/images/Topic01/T01P03/back_arrow.png') no-repeat;
+            width: 33px;
+            height: 24px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            cursor: pointer;
+        }
+
+        /* Zoom in Keyframes */
+
+        @-webkit-keyframes zoomin {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.2);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes zoomin {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.2);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /*End of Zoom in Keyframes */
+        /* Zoom out Keyframes */
+
+        @-webkit-keyframes zoomout {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(0.67);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes zoomout {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(0.67);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /*End of Zoom out Keyframes */
+
+        .CaseStudy {
+            position: absolute;
+            left: 0px;
+            top: 25px;
+            width: 1085px;
+            height: 480px;
+            background: rgba(255, 255, 255, 0.99);
+            /*IE: ;*/
+            /*background: rgba(255,255,255,0.98);*/
+            transform: scale(1.1);
+            transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+            z-index: 100000;
+            /* disable: none; */
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -mz-border-radius: 5px;
+            display: none;
+        }
+
+        #TabPopup .caseStudyContent {
+            height: 429px;
+            width: 650px;
+            top: 30px;
+        }
+
+        #TabPopup .caseStudyContent .expandImgTxtRight {
+            top: 378px;
+        }
+
+        .caseStudyContent {
+            position: relative;
+            left: 0px;
+            top: 58px;
+            width: 833px;
+            height: 386px;
+            transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+            z-index: 1000;
+            /* disable: none; */
+            border-radius: 10px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -mz-border-radius: 10px;
+            margin: 0px auto;
+        }
+
+        #imgd3 {
+            height: 429px;
+            TOP: 30PX;
+        }
+
+        #imgd3 .expandImgTxtRight {
+            TOP: 377PX;
+        }
+
+        .ModalTxtImg {
+            position: absolute;
+            top: 0px;
+            left: 0;
+            width: 100%;
+            font-size: 16px;
+            height: 385px;
+            background-size: cover;
+            z-index: 100;
+            border-radius: 10px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+        }
+
+
+        #imgPopup0 {
+            background: url(pages/images/Topic01/T01P32/layer6_large.png) no-repeat;
+            background-size: contain;
+            height: 100%;
+        }
+
+        #imgPopup1 {
+            background: url(pages/images/Topic01/T01P32/blood_gas_large.png) no-repeat;
+            background-size: contain;
+            height: 100%;
+        }
+
+        #imgPopup2 {
+            background: url(pages/images/Topic01/T01P32/venipuncture_large.png) no-repeat;
+            background-size: contain;
+            height: 100%;
+        }
+
+        #imgPopup3 {
+            background: url(pages/images/Topic01/T01P32/heel_stick_large.png) no-repeat;
+            background-size: contain;
+            height: 100%;
+        }
+
+        .closepopup{
+            position: absolute;
+            width: 41px;
+            height: 41px;
+            background: url(pages/images/Topic01/T01P22/close_expand.svg) no-repeat;
+            bottom: 9px;
+            right: 16px;
+            cursor: pointer;
+            z-index: 1000;          
+            background-position: 0px 0;
+          
+            background-size: cover !important;
+            background-repeat:no-repeat ;
+            opacity: .6;
+        }
+        .closeVideo {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background: url(pages/images/Topic01/T01P32/close_expand.png);
+            bottom: 12px;
+            right: 10px;
+            cursor: pointer;
+            z-index: 1000;
+            text-decoration: none;
+            background-size: contain;
+        }
+        .closepopup:hover{
+            opacity: 1;
+        }
+      
+        /* , */
+        .closeVideo:hover {
+            background: url(pages/images/Topic01/T01P32/close_expand_hover.png);
+            background-size: contain;
+        }
+
+        .clickToClose {
+            width: 136px;
+            top: 337px;
+            left: 630px;
+            position: absolute;
+            z-index: 10000;
+            line-height: 45px;
+            text-align: center;
+            display: block;
+        }
+
+        .expandImgTxtLeft,
+        .expandImgTxtRight {
+            display: inline-block;
+            height: 42px;
+            margin-left: 0px;
+            margin-right: 0px;
+            line-height: 45px;
+            padding-left: 10px;
+            padding-right: 10px;
+            background: #ffffff;
+            color: #4D667B;
+            background: url(pages/images/Topic01/T01P32/arrow_left_right.png);
+            font-size: 14px;
+            font-style: italic;
+        }
+
+        .blur {
+            -webkit-backface-visibility: hidden;
+            -moz-backface-visibility: hidden;
+            -ms-backface-visibility: hidden;
+            -O-backface-visibility: hidden;
+            -webkit-filter: blur(3px);
+            -moz-filter: blur(3px);
+            -ms-filter: blur(3px);
+            -o-filter: blur(3px);
+            filter: blur(3px);
+        }
+
+        #clsText {
+            position: absolute;
+            width: 115px;
+            height: 29px;
+            top: 15px;
+            left: 16px;
+            font-family: OpenSansRegular;
+            font-size: 16px;
+            font-style: italic;
+            color: #172430;
+        }
+
+        .bottomMenu {
+            position: absolute;
+            top: 476px;
+            width: 380px;
+            height: 40px;
+            left: 840px;
+            margin: 0px auto;
+        }
+
+        .bottomMenuLeft {
+            position: absolute;
+            left: 0px;
+            width: 195px;
+            height: 40px;
+        }
+
+        .clickToPrev {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border: 1px solid #cccccc;
+            border-radius: 50%;
+            margin-left: 10px;
+            position: absolute;
+            top: -3px;
+            cursor: pointer;
+            padding: 0px;
+            background: transparent;
+        }
+
+        .cRight.clickToPrev.disabled:after {
+            border-top: 3px solid #a6a6a6;
+            border-right: 3px solid #a6a6a6;
+        }
+
+        .clickToPrev.disabled {
+            border: 1px solid #e5e5e5;
+            background: transparent;
+            cursor: default;
+        }
+
+        .clickToPrev {
+            right: 0px;
+            top: 7px;
+        }
+
+        .expandImgTxtLeft,
+        .expandImgTxtRight {
+            display: inline-block;
+            height: 42px;
+            margin-left: 0px;
+            margin-right: 0px;
+            line-height: 28px;
+            padding-left: 10px;
+            padding-right: 10px;
+            background: #ffffff;
+            color: #4D667B;
+            background: url(pages/images/Topic01/T01P32/arrow_left_right.png);
+            font-size: 14px;
+            font-style: italic;
+        }
+
+        .expandImgTxtRight {
+            right: 48px;
+            width: 135px;
+            BORDER: 18px;
+            line-height: 47px;
+            DISPLAY: BLOCK;
+            left: auto;
+        }
+
+        .expandImgTxtRight span {
+            text-align: center;
+            width: 126px;
+            position: absolute;
+            top: -1px;
+        }
+
+        .cRight:after {
+            content: '';
+            display: inline-block;
+            margin-top: 7px;
+            margin-left: 10px;
+            width: 12px;
+            height: 12px;
+            border-top: 3px solid #5B5B5B;
+            border-right: 3px solid #5B5B5B;
+            -moz-transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            transform: rotate(230deg);
+        }
+
+        #TabPopup4 .mCustomScrollBox {
+            height: 505px;
+        }
+
+        .mainScroll {
+            position: absolute;
+            top: 45px;
+            width: 1085px;
+            height: 490px;
+            margin: 0px;
+        }
+
+        .first {
+            position: relative;
+            top: 3px;
+            left: 0px;
+            height: 465px;
+            width: 1037px;
+            background: #f8f8f8;
+            padding: 0px 20px 30px 20px;
+        }
+
+        .first .boxWithShadow {
+            margin-bottom: 50px;
+        }
+
+        .topSection {
+            top: 1px;
+        }
+
+
+
+        .mainScroll #mCSB_1_scrollbar_vertical {
+            border-radius: 0px;
+            -moz-border-radius: 0px;
+            -webkit-border-radius: 0px;
+            background: #e6e4e4;
+            box-shadow: none;
+            -moz-box-shadow: none;
+            -webkit-box-shadow: none;
+            width: 8px;
+        }
+
+        .mainScroll #mCSB_1_scrollbar_vertical .mCSB_draggerContainer {
+            box-shadow: none;
+            background: none;
+        }
+
+        .mainScroll #mCSB_1_scrollbar_vertical .mCSB_draggerContainer {
+            box-shadow: none;
+            margin-left: 0px;
+            margin-right: 4px;
+            background: none;
+            margin-bottom: 35px;
+        }
+
+        .mainScroll #mCSB_1_scrollbar_vertical .mCSB_draggerContainer .mCSB_dragger_bar {
+            background: #707070;
+            margin: 0px;
+            left: 2px;
+            width: 4px;
+        }
+
+        .mainScroll .mCS-3d-thick.mCSB_scrollTools .mCSB_buttonUp {
+            display: block;
+            box-sizing: border-box;
+            height: 9px;
+            width: 9px;
+            border-style: solid;
+            border-color: #707070;
+            border-width: 0px 2px 2px 0px;
+            transform: rotate(-138deg);
+            -webkit-transform: rotate(-138deg);
+            -moz-transform: rotate(-138deg);
+            -ms-transform: rotate(-138deg);
+            -o-transform: rotate(-138deg);
+            transition: border-width 150ms ease-in-out;
+            margin-left: 3px;
+            opacity: 1;
+            margin-top: 5px;
+            z-index: 10;
+            display: none !important;
+        }
+
+        .mainScroll .mCS-3d-thick.mCSB_scrollTools .mCSB_buttonDown {
+            display: block;
+            box-sizing: border-box;
+            height: 9px;
+            width: 9px;
+            border-style: solid;
+            border-color: #707070;
+            border-width: 0px 2px 2px 0px;
+            transform: rotate(41deg);
+            -webkit-transform: rotate(41deg);
+            -moz-transform: rotate(41deg);
+            -ms-transform: rotate(41deg);
+            -o-transform: rotate(41deg);
+            transition: border-width 150ms ease-in-out;
+            margin-left: 3px;
+            opacity: 1;
+            margin-top: 0px;
+            bottom: 20px;
+            z-index: 10;
+            top: auto;
+            display: none !important;
+        }
+
+        .mainScroll .mCustomScrollbar {
+            /* background: url(media/images/player/common/bg.png) no-repeat; */
+            background: #ffffff;
+        }
+
+        #TabPopup4 #idPatch1 {
+            position: relative;
+            top: 0px;
+        }
+
+        #TabPopup4 .classPatchleft {
+            top: 0px;
+            position: relative;
+        }
+
+        .sectionFirst {
+            position: relative;
+            top: 0px;
+            left: 0px;
+            height: 492px;
+        }
+
+        .sectionFirst .leftCnt {
+            position: relative;
+            top: -1px;
+            left: 0px;
+            border-radius: 10px;
+            height: 495px;
+            opacity: 1;
+            float: left;
+        }
+
+        .sectionFirst .rightCnt {
+            position: relative;
+            top: 0px;
+            left: 270px;
+            height: 491px;
+            width: 815px;
+            background: #fff;
+            opacity: 1;
+            float: left;
+        }
+
+        #TabPopup4 .mCSB_inside>.mCSB_container {
+            margin-right: 0px;
+        }
+
+        #TabPopup4 .img-column .clsIconImg {
+            top: inherit;
+            bottom: 10px;
+            left: auto;
+            right: 8px;
+        }
+
+        .sectionPatch {
+            clear: both;
+            top: 30px;
+            position: relative;
+            left: 0px;
+            background-position: left;
+            height: 72px;
+            background: #FFFFFF;
+            border-radius: 6px;
+            width: 1004px;
+            /* -webkit-box-shadow: 0px 1px 4px -1px rgba(0,0,0,0.75);
+
+    -moz-box-shadow: 0px 1px 4px -1px rgba(0,0,0,0.75);
+
+    box-shadow: 0px 1px 4px -1px rgba(0,0,0,0.75);
+
+    border-radius: 5px;
+
+    -moz-box-shadow: 0px 1px 4px -1px rgba(0,0,0,0.75); */
+            padding: 10px 10px;
+        }
+
+        #csection_3 .sectionPatch {
+            height: 96px;
+            width: 974px;
+            padding: 10px 30px;
+            top: 15px;
+        }
+
+        #csection_1 .sectionPatch {
+            width: 974px;
+            padding: 10px 30px;
+        }
+
+        .sectionPatch .clsText {
+            opacity: 1;
+            top: 0px;
+        }
+
+        .sectionSecond {
+            position: relative;
+            top: 0px;
+            left: 0px;
+            height: 525px;
+            width: 1037px;
+            background: #f3f3f3;
+            padding: 0px 20px 20px 20px;
+            display: inline-block;
+        }
+
+        .sectionSecond .boxWithShadow {
+            margin-bottom: 35px;
+        }
+
+        .sectionLeft {
+            width: 730px;
+            height: 480px;
+            float: left;
+        }
+
+        .sectionRight {
+            width: 283PX;
+            float: left;
+            height: 321px;
+            position: relative;
+            top: 38px;
+            font-size: 16px;
+            padding-left: 15px;
+        }
+
+        .secondTopSection1 {
+            height: 191px;
+        }
+
+        .secondTopSection2 {
+            clear: both;
+            height: 225px;
+            top: 10px;
+            position: relative;
+        }
+
+        .rightSideBox {
+            /* -webkit-box-shadow: 0px 1px 4px -1px rgba(0,0,0,0.75);
+
+    -moz-box-shadow: 0px 1px 4px -1px rgba(0,0,0,0.75);
+
+    box-shadow: 0px 1px 4px -1px rgba(0,0,0,0.75);
+
+    border-radius: 5px;
+
+    -moz-box-shadow: 0px 1px 4px -1px rgba(0,0,0,0.75); */
+            background: #fff;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .sectionThird {
+            position: relative;
+            top: -4px;
+            left: 0px;
+            height: 480px;
+            width: 1037px;
+            background: #F8F8F8;
+            padding: 10px 20px 40px 20px;
+            display: inline-block;
+        }
+
+        .sectionThird .sectionPatch {
+            height: 46px;
+            width: 1004px;
+            top: 25px;
+        }
+
+        .hoverImg {
+            width: 300px;
+            margin: 0px auto;
+            position: relative;
+            top: 50px;
+            height: 405px;
+        }
+
+        .hoverImg .clsIconImgExpand {
+            top: inherit !important;
+            bottom: 5px;
+            left: 61px !important;
+        }
+
+        .boxWithShadow {
+            background: #ececec;
+            height: 20px;
+            width: 1077px;
+            position: relative;
+            clear: both;
+            top: -4px;
+            left: -20px;
+            -webkit-box-shadow: 3px 3px 5px 6px #ececec;
+            -moz-box-shadow: 3px 3px 5px 6px #ececec;
+            box-shadow: 1px 1px 1px 0px #ececec;
+        }
+
+        .boxWithShadow2 {
+            background: #ececec;
+            height: 36px;
+            width: 1078px;
+            position: relative;
+            clear: both;
+            top: -5px;
+            left: 0px;
+            background: url(pages/images/Topic01/T01P32/box-shadow2.png);
+        }
+
+        .sectionFour {
+            position: relative;
+            top: -5px;
+            left: 0px;
+            height: 413px;
+            width: 1037px;
+            background: #f8f8f8;
+            padding: 40px 20px;
+            display: inline-block;
+        }
+
+        .text-column {
+            width: 510px;
+            height: 250px;
+            position: relative;
+            float: left;
+            left: 127px;
+            margin-left: 62px;
+        }
+
+        .text-left {
+            background-color: #f1f1f1;
+            width: 254px;
+            float: left;
+            height: 200px;
+            padding: 15px 20px;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            -moz-border-top-left-radius: 5px;
+            -moz-border-bottom-left-radius: 5px;
+            -webkit-border-top-left-radius: 5px;
+            -webkit-border-bottom-left-radius: 5px;
+        }
+
+        .text-left img {
+            text-align: center;
+            position: relative;
+            left: -11px;
+            max-width: 100%;
+            top: 87px;
+            width: 33px;
+            /* height: 50px; */
+        }
+
+        .img-column2 {}
+
+        .text-column .clsText {
+            opacity: 1;
+            top: 69px;
+            width: 215px;
+            line-height: 24px;
+            left: 33px;
+        }
+
+        .text-column .clsText {
+            line-height: 21px;
+            top: 54px;
+        }
+
+        .fsmallBox {
+            background: #ffffff;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            width: 211px;
+            left: 47px;
+            position: absolute;
+            top: 13px;
+            font-size: 12px;
+            line-height: 14px;
+            padding: 8px 6px;
+            z-index: 10000;
+        }
+
+        .fsmallBox1 {
+            background: #ffffff;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            width: 211px;
+            left: 47px;
+            position: absolute;
+            top: 66px;
+            font-size: 12px;
+            line-height: 14px;
+            padding: 8px 6px;
+            z-index: 10000;
+        }
+
+
+        .sectionFour .sectionPatch {
+            height: 105px;
+        }
+
+        .sectionFive {
+            position: relative;
+            top: -4px;
+            left: 0px;
+            height: 485px;
+            width: 1037px;
+            background: #ffffff;
+            padding: 0px 20px 50px 20px;
+            display: inline-block;
+        }
+
+        .sectionFive .bgwithshadow {
+            margin-bottom: 20px;
+        }
+
+        .bgwithshadow {
+            background: url(pages/images/Topic01/T01P32/bg-repeat.png);
+            height: 18px;
+            width: 1078px;
+            background-position: 0px -2px;
+            position: relative;
+            left: -20px;
+        }
+
+        .sectionfiveLeft {
+            width: 738px;
+            float: right;
+            height: 402px;
+        }
+
+        .sectionfiveRight {
+            width: 299px;
+            float: left;
+            height: 402px;
+            position: relative;
+            top: 0px;
+        }
+
+        .sectionfiveLeft .sectionPatch {
+            width: 688px;
+            height: 151px;
+            top: 5px;
+        }
+
+        .sectionSix {
+            position: relative;
+            top: -4px;
+            left: 0px;
+            height: 450px;
+            width: 1037px;
+            background: #ffffff;
+            padding: 0px 20px 50px 20px;
+            display: inline-block;
+            z-index: 9999;
+        }
+
+        .sectionSix .bgwithshadow {
+            margin-bottom: 0px;
+        }
+
+        .sectionSix .bottomMenu {
+            top: 440px;
+        }
+
+        .sectionSix h2 {
+            font-size: 16px;
+            font-family: OpenSansRegular;
+            text-align: center;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+
+        .clsVideoContainer {
+            width: 660px;
+            margin: 0px auto;
+            background: #ffffff;
+            position: absolute;
+            top: 55px;
+            left: 20%;
+        }
+
+        .fp-section.fp-table,
+        .fp-slide.fp-table {
+            display: table;
+            table-layout: fixed;
+            width: 100%;
+        }
+
+        #TabPopup4 section {
+            transition: all 0.9s ease 0s;
+        }
+
+        #tapSection {
+            position: absolute;
+            top: 10px;
+            width: 100%;
+            height: 55px;
+            margin: 0 12px;
+        }
+
+        #tapSection ul {
+            list-style-type: none;
+            margin: 0px;
+            position: relative;
+            top: 4px;
+            height: 45px;
+            padding: 0px;
+        }
+
+        #tapSection ul li {
+            float: left;
+            margin-right: 3px;
+        }
+
+        #tapSection ul li a {
+            left: 0px;
+            top: 0px;
+            padding: 0px 0px;
+            background: #acacac;
+            margin: 0px;
+            position: relative;
+            float: left;
+            text-decoration: none;
+            color: #000000;
+            text-align: center;
+            height: 38px;
+            line-height: 33px;
+            border-top-right-radius: 5px;
+            -webkit-border-top-right-radius: 5px;
+            -moz-border-top-right-radius: 5px;
+            border-top-left-radius: 5px;
+            -webkit-border-top-left-radius: 5px;
+            -moz-border-top-left-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            font-family: OpenSansSemiBold;
+            width: 261px;
+        }
+
+        #tapSection ul li:last-child {
+            margin-right: 0px;
+        }
+
+        #tapSection ul li a.active,
+        #tapSection ul li a:hover {
+            border-top-right-radius: 5px;
+            -webkit-border-top-right-radius: 5px;
+            -moz-border-top-right-radius: 5px;
+            background: #3A5569;
+            margin-right: 0px;
+            z-index: 10;
+            color: #ffffff;
+        }
+
+        #tapSection ul li a.active:before,
+        #tapSection ul li a.active:hover:before,
+        #tapSection ul li a:hover:before {
+            border-top-color: #3A5569;
+            border-width: 10px;
+            margin-left: 0px;
+        }
+
+        #tapSection ul li a.active:after,
+        #tapSection ul li a.active:before,
+        #tapSection ul li a:hover:after {
+            top: 98%;
+            left: 45%;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+        }
+
+        #tapSection ul li a.active:after,
+        #tapSection ul li a.active:hover:after,
+        #tapSection ul li a:hover:after {
+            border-top-color: #3A5569;
+            border-width: 10px;
+            margin-left: 0px;
+        }
+
+        .pageIntroduction {
+            position: relative;
+            top: 3px;
+            left: 16px;
+            width: 100%;
+            font-style: italic;
+            font-family: OpenSansSemiBold;
+            color: #4D667B;
+            font-size: 14px;
+            margin-bottom: 3px;
+        }
+
+        .csection {
+            position: absolute;
+            top: 85px;
+            height: 425px;
+            width: 100%;
+            display: none;
+            z-index: 100;
+        }
+
+        #csection {
+            display: block;
+            text-align: center;
+            padding-top: 10%;
+        }
+
+        #csection_1 {
+            padding: 25px 24px;
+            height: 367px;
+            width: auto;
+        }
+
+        #csection_2 {
+            padding: 10px 24px;
+            height: 396px;
+            width: auto;
+        }
+
+        #csection_3 {
+            padding: 15px 24px 15px 14px;
+            height: 386px;
+            width: auto;
+        }
+
+        #csection_4 {
+            padding: 10px 24px;
+            height: 387px;
+            width: auto;
+        }
+
+        #TabPopup #imgdd5 {
+            height: 429px;
+            width: 814px;
+            top: 31px;
+        }
+
+        #TabPopup #imgdd11 .expandImgTxtRight {
+            top: 338px;
+        }
+
+        /* #TabPopup #imgdd11 .closepopup {
+            bottom: 52px;
+        } */
+
+        #imgdd14 .expandImgTxtRight {
+            top: 371px !important;
+            /* right: -47px; */
+        }
+
+        #imgdd14 .closepopup {
+            /* right: -74px; */
+            bottom: 11px;
+        }
+
+        #TabPopup #imgdd15 {
+            width: 485px;
+            height: 476px;
+            top: 7px;
+        }
+
+        .customLink {
+            color: #e4bb4d !important;
+        }
+
+        #TabPopup #imgdd15 .expandImgTxtRight {
+            top: 428px;
+            right: 90px;
+        }
+
+        #TabPopup #imgdd14 {
+            width: 348px;
+        }
+
+        #TabPopup #imgdd16 {
+            width: 388px;
+            height: 481px;
+            top: 5px;
+        }
+
+        #TabPopup #imgdd16 .expandImgTxtRight {
+            top: 429px;
+        }
+
+        #TabPopup #imgdd17 {
+            width: 486px;
+            height: 291px;
+            top: 87px;
+        }
+
+        #TabPopup #imgdd18,
+        #TabPopup #imgdd19 {
+            width: 650px;
+            height: 429px;
+            top: 31px;
+        }
+
+        /* #TabPopup #imgdd20 {
+            width: 650px;
+            height: 429px;
+            top: 33px;
+        } */
+
+        #TabPopup #imgdd17 .expandImgTxtRight {
+            top: 240px;
+        }
+
+        #TabPopup #imgdd18 .expandImgTxtRight {
+            top: 378px;
+        }
+
+        #TabPopup #imgdd20 {
+            width: 415px;
+            background: #ffffff;
+            /* top: 10px;
+            height: 469px; */
+        }
+
+        #TabPopup #imgdd20 .expandImgTxtRight {
+            top: 418px;
+        }
+
+        #TabPopup #imgdd11 {
+            top: 48px;
+        }
+
+        .tefeatxt {
+            display: none;
+            color: #000000;
+            position: absolute;
+            z-index: 9999;
+            font-size: 14px;
+            width: 160px;
+            left: -210px;
+            TOP: 44PX;
+            LINE-HEIGHT: 16PX;
+            background: #ffffff;
+            padding: 10px;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+        }
+
+        .tefeatxt1 {
+            display: none;
+            color: #000000;
+            position: absolute;
+            z-index: 9999;
+            font-size: 14px;
+            width: 160px;
+            left: -211px;
+            TOP: 145PX;
+            LINE-HEIGHT: 16PX;
+            background: #ffffff;
+            padding: 10px;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+        }
+
+        #_clickImg0pdf,
+        #_clickImg0pdf1 {
+            /* position: absolute; */
+            color: #707070;
+            font-size: 14px;
+            width: 100%;
+            /* height: 31px; */
+            /* top: 363px; */
+            z-index: 10000000;
+            cursor: pointer;
+            /* left: 327px; */
+            display: none;
+        }
+
+        #_clickImg0pdf1 {
+            top: 377px;
+            left: 53px;
+        }
+
+        #_clickImg0pdf span,
+        #_clickImg0pdf1 span {
+            border-bottom: 1px solid #707070;
+            position: relative;
+            top: -2px;
+        }
+
+        .videolink .video_icon {
+            position: relative;
+            top: 6px;
+            padding-right: 10px;
+        }
+
+        #_clickImg0pdf .pdf_icon,
+        #_clickImg0pdf1 .pdf_icon {
+            position: relative;
+            top: 6px;
+            padding-right: 10px;
+            margin: 0px;
+            width: 25px;
+        }
+
+        #pageClsResourcesPopup {
+            position: absolute;
+            z-index: 1070;
+            top: 0px;
+            height: 99%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: none;
+            /* opacity: 0.5; */
+        }
+
+        #pageid_ReferencesBG {
+            position: absolute;
+            height: 457px;
+            width: 940px;
+            left: 0px;
+            right: 0px;
+            margin: auto;
+            top: 40px;
+            background-color: #FFFFFF;
+            border-radius: 10px;
+        }
+
+        #pageid_RefTitleBar {
+            font-size: 36px;
+            background-color: #4d667b;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            left: 0px;
+            top: 0px;
+            font-family: OpenSansRegular;
+            /* font-weight: bold; */
+            width: 942px;
+            height: 44px;
+            position: absolute;
+        }
+
+        #pageid_ReftitleText {
+            position: absolute;
+            color: #fff;
+            font-size: 18px;
+            left: 11px;
+            top: 10px;
+        }
+
+        #pageid_RefCloseBtn {
+            position: absolute;
+            width: 29px;
+            height: 29px;
+            top: 7px;
+            left: 900px;
+            cursor: pointer;
+            background: url('media/images/player/common/close.png');
+            /* background-position: -49px 0px; */
+            -webkit-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+            /* background-position: 0px 0px; */
+        }
+
+        /* #pageid_RefCloseBtn:hover {
+
+			background: url('media/images/player/common/close.png');
+
+			background-position: 0px 0px;
+
+		} */
+
+        #pageRefTitleBar_id {
+            font-size: 36px;
+            background-color: #4d667b;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            left: 0px;
+            top: 0px;
+            font-family: OpenSansRegular;
+            /* font-weight: bold; */
+            width: 942px;
+            height: 44px;
+            position: absolute;
+        }
+
+        #pageReftitleText_id {
+            position: absolute;
+            color: #fff;
+            font-size: 18px;
+            left: 11px;
+            top: 10px;
+        }
+
+        .pageclose_txt {
+            position: absolute;
+            width: 135px;
+            height: 44px;
+            top: 48px;
+            left: 800px;
+            background: url('media/images/player/common/pdf_close_inst.png');
+        }
+
+        #pageClsText {
+            position: absolute;
+            width: 115px;
+            height: 29px;
+            top: 15px;
+            left: 16px;
+            font-family: OpenSansRegular;
+            font-size: 16px;
+            font-style: italic;
+            color: #172430;
+        }
+
+        /* .showList_1,
+        .showList_2,
+        .showList_3 {
+            display: block !important;
+        } */
+
+        #pageRefCloseBtn_id {
+            position: absolute;
+            width: 29px;
+            height: 29px;
+            top: 7px;
+            left: 900px;
+            cursor: pointer;
+            background: url('media/images/player/common/close.png');
+            /* background-position: -49px 0px; */
+            -webkit-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+
+        #pageid_RefCloseBtn:hover #pageclose_txt {
+            background: url('media/images/player/common/pdf_close_inst.png');
+            /* background-position: 0px 0px; */
+        }
+
+        #pagereferences {
+            margin-left: 0%;
+            margin-top: 45px;
+            color: #333;
+            width: 800px;
+            min-height: 412px;
+            overflow-y: auto;
+            position: absolute;
+            height: 412px;
+        }
+
+        #pagereferences ul {
+            padding-top: 0%;
+            padding-bottom: 0%;
+            padding-left: 1%;
+            margin: 0px;
+            margin-top: 10px;
+        }
+
+        .clickOpen {
+            left: 173px !important;
+        }
+
+        /* #references ul li a{
+
+				outline: none;
+
+				color: #0000ff;
+
+				font-family: OpenSansRegular;
+
+				text-decoration: underline;
+
+				font-size: 18px;
+
+		}
+
+		#references ul li a:hover{
+
+			color: #009cff;
+
+		}
+
+		#references ul li a:active {
+
+			outline: none; 
+        } */
+
+        #pagereferences ul li {
+            border: 0 none;
+            margin-left: -4px;
+            margin-right: 5px;
+            vertical-align: bottom;
+            width: 4%;
+        }
+
+        .pdflink {
+            position: absolute;
+            top: 44px;
+            width: 100%;
+            height: 413px;
+            /* z-index: 999; */
+
+            border-radius: 0 0 10px 10px;
+        }
+
+        .introLink {
+            margin-left: 269px;
+            margin-top: -26px;
+        }
+
+        #TabPopup #imgdd21 {
+            width: 360px;
+        }
+
+        .modalContent {
+            top: 20px;
+        }
+
+        div#imgdd0,
+        div#imgdd1,
+        div#imgdd2,
+        div#imgdd3 {
+            width: 400px;
+        }
+        .tabSection.viewed {
+            background-image: url(pages/images/Topic01/T01P16/tick.png) !important;
+            background-repeat: no-repeat !important;
+            background-position: 98% !important;
+        }
+        #TabPopup .csection .clsIconImg {
+            left: 340px;
+            top: 372px !important
+        }
+
+        .clsVideoContainer video {
+            width: 90%;
+            height: auto;
+        }
+
+        .videolink {
+            position: relative;
+            top: 0px;
+            left: 0px;
+            width: auto;
+            font-size: 14px;
+            font-family: OpenSansSemiBold !important;
+            color: #000000;
+            text-decoration: none;
+            font-weight: normal;
+            cursor: pointer;
+            font-style: normal;
+            display: none;
+            float: left;
+            margin-right: 60px;
+        }
+
+        .videolink:before {
+            content: '';
+            background: #000;
+            height: 1px;
+            width: 67%;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+        #case_study_popup1 .modalContent {
+            
+            height: 445px;
+            width: 581px;
+        }
+
+        .closing {
+            position: relative;
+            top: -385px;
+        }
+        video{
+            max-width: 100%;
+            width: 580px;
+        }
+        #case_study_popup1 .modalContent:hover .closing {
+            display: block;
+        }
+        .tagline{
+            margin-top:2px;
+            /* font-size:14px; */
+        }
+        .modalTxtImg {
+            border-radius: 5px;
+        }
+        .popover.clickToEnlarge, .popover.icon00 {
+            bottom: 5px;
+        }
+        #csection_3 #icon01 {
+  left: 330px; 
+ 
+}
+    </style>
+
+    <script>
+        glossaryFuncPageLevel();
+        var audioPath = "pages/audio/Topic01/T01P32/T01P32_4";
+
+        var gItemAudioPath = [
+            "pages/audio/Topic01/T01P32/T01P32_1",
+            "pages/audio/Topic01/T01P32/T01P32_2",
+            "pages/audio/Topic01/T01P32/T01P32_3",
+            "pages/audio/Topic01/T01P32/T01P32_4"
+        ];
+
+        var currCue = 0;
+
+        var idd = 0;
+
+        //if(__indexClick == 1 || __indexClick == 2){
+        //__indexClick = 2;
+        //}else{
+        //__indexClick = 1;
+        //}
+
+        var __questionArray = [];
+
+
+
+        var popupContentArray0 = [{
+            time: "0.0",
+            carry: "",
+            event: "",
+            show: "",
+            hide: "",
+            transcript: "The first is a blood sugar. As you learned previously, sick infants have increased energy demands and are therefore at an increased risk for hypoglycemia. Check the blood sugar at appropriate intervals relevant to the infant’s condition and risk factors, and maintain the blood sugar within a normal range, which is between 50 and 110 milligrams per deciliter (2.8 to 6.1 mmol/L)."
+        },
+
+        {
+            time: "4",
+            animation: [{
+                target: "#csection_0 .classPatchRight .OptionPanel .showList_1",
+                activity: {
+                    'display': 'block'
+                }
+            }]
+        },
+        {
+            time: "10",
+            animation: [{
+                target: "#csection_0 .classPatchRight .OptionPanel .showList_2",
+                activity: {
+                    'display': 'block'
+                }
+            }]
+        }, {
+            time: "15.2",
+            animation: [{
+                target: "#csection_0 .classPatchRight .OptionPanel .showList_3",
+                activity: {
+                    'display': 'block'
+                }
+            }]
+        }
+        ];
+        var popupContentArray1 = [
+            {
+                time: "0.0", carry: "", event: "", show: "", hide: "",
+                transcript: "A blood gas should be obtained if the infant is experiencing respiratory distress or if there is concern for shock."
+            },
+
+            {
+                time: "0.8",
+                animation: [{
+                    target: "#csection_1 .classPatchRight .OptionPanel .showList_1",
+                    activity: {
+                        'display': 'block'
+                    }
+                }]
+            },
+        ];
+        var popupContentArray2 = [
+            { time: "0.0", carry: "", event: "", show: "", hide: "", transcript: "If concerned about infection, then a blood culture should be obtained before starting antibiotics. <br>It is very important to obtain at least 1 milliliter of blood for each culture bottle. This minimum volume of blood will increase the likelihood that the microorganism will grow, especially if a low-colony-count bacterial sepsis is present. <br>If concerned about late-onset sepsis, then it’s important to send both aerobic <em>and</em> anaerobic blood cultures, each with a minimum of 1 milliliter of blood per bottle. <br>Use sterile technique when drawing the blood and when transferring blood to the culture bottle.<br>Click on the play button to watch a video of a blood culture being obtained on a newly born late preterm infant with suspected infection." },
+            {
+                time: "2",
+                animation: [{
+                    target: "#csection_2 .classPatchRight .OptionPanel .showList_1",
+                    activity: {
+                        'display': 'block'
+                    }
+                }]
+            },
+            {
+                time: "7",
+                animation: [{
+                    target: "#csection_2 .classPatchRight .OptionPanel .showList_2",
+                    activity: {
+                        'display': 'block'
+                    }
+                }]
+            },
+            {
+                time: "21",
+                animation: [{
+                    target: "#csection_2 .classPatchRight .OptionPanel .showList_3",
+                    activity: {
+                        'display': 'block'
+                    }
+                }]
+            },
+            {
+                time: "31",
+                animation: [{
+                    target: "#csection_2 .classPatchRight .OptionPanel .showList_4",
+                    activity: {
+                        'display': 'block'
+                    }
+                }]
+            },
+            {
+                time: "36",
+                animation: [{
+                    target: ".videolink",
+                    activity: {
+                        'display': 'block'
+                    }
+                }]
+            }
+        ];
+        var popupContentArray3 = [
+            { time: "0.0", carry: "", event: "", show: "", hide: "", transcript: "The complete blood count, or CBC, is a useful test to evaluate the white blood cell count, white blood cell differential, the hemoglobin and hematocrit, red blood cell indices, and the platelet count." },
+
+            {
+                time: "3",
+                animation: [{
+                    target: "#csection_3 .classPatchRight .OptionPanel .showList_1",
+                    activity: {
+                        'display': 'block'
+                    }
+                }]
+            },
+            {
+                time: "10",
+                animation: [{
+                    target: "#_clickImg0pdf1",
+                    activity: {
+                        'display': 'block'
+                    }
+                }]
+            }
+        ];
+
+        var updateContentArray = popupContentArray3;
+
+        // var popupContentArray4 = [
+        // 	{time:"0.0", carry:"", event:"", show:"", hide:"", transcript:"The images here show bilious or green-colored emesis, which is one important sign that might alert you to the presence of a bowel obstruction. Never assume bilious emesis to be normal. It should be reported immediately to the medical staff so that the infant can receive a thorough exam to evaluate for potential bowel obstruction. In fact, bilious emesis is a classic presenting sign of a life-threatening surgical problem called malrotation, which is shown in the image on the left."},
+
+        // ];
+
+
+        function fnAudioFinishItemComp() {
+            console.log("end");
+            fnAudioFinishPageComp();
+            fnUpdatePageCompletionCounter(0);
+            //fnUpdatePageCompletionCounter(7);
+        }
+
+        var __dataXml;
+
+
+
+        $(document).ready(function () {
+
+            //disableBackBtn();
+            //disableNextBtn();
+            var ele = document.getElementsByTagName('div');
+            for (var i = 0; i < ele.length; i++) {
+                ele[i].setAttribute("unselectable", "on");
+            }
+            fStartPage();
+            tapClick();
+            var n = isInArray("M1L0T1P32_4", gCompPageArr);
+            if (n == true) {
+                enableNextBtn();
+                fnGlowNextBtn();
+                fnDesiableNext(false);
+            }
+
+
+            // if (gCompPageArr.indexOf("M1L0T1P32_1") > -1 && gCompPageArr.indexOf("M1L0T1P32_2") > -1 && gCompPageArr.indexOf("M1L0T1P32_3") > -1) {
+            //     $("#clsNxtBtn").css({ "pointer-events": "auto" }) 
+            // } else {
+            //     $("#clsNxtBtn").css({ "pointer-events": "none" }) 
+            // }
+        });
+
+        var visitedArr = [];
+        var totalTabs = 4;
+        __indexClick = 1;
+
+        function checkReviewFunc(aCurId) {
+            //console.log(aCurId,assessmentObj.getUserReviewType());
+            if (aCurId == 4) {
+                if (assessmentObj.getUserReviewType() == true) {
+                    enableNextBtn();
+                    //fnGlowNextBtn();
+                    gCompPageArr.push("M1L0T1P32_4");
+                    enableNextBtn();
+                    fnCompletion();
+                    fnDesiableNext(false);
+                }
+            }
+        }
+        function tapClick() {
+            if (gCompPageArr.indexOf("M1L0T1P32_1") > -1) {
+                $('.tabSection[id=1]').addClass("viewed");
+            }
+            if (gCompPageArr.indexOf("M1L0T1P32_2") > -1) {
+                $('.tabSection[id=0]').addClass("viewed");
+            }
+            if (gCompPageArr.indexOf("M1L0T1P32_3") > -1) {
+                $('.tabSection[id=2]').addClass("viewed");
+            }
+            if (gCompPageArr.indexOf("M1L0T1P32_4") > -1) {
+                $('.tabSection[id=3]').addClass("viewed");
+            }               
+            $("#csection_3").show();
+            $(".tabSection").on("click", function () {
+                $(".popover").hide();
+                $(".clsIconImg").hide();
+                $("#_clickImg0pdf, #_clickImg0pdf1").removeAttr("style");
+                var _getId = $(this).attr("id");
+                checkReviewFunc(_getId);
+                $(".tabSection").removeClass("active");
+                $(this).addClass("active");
+                $(this).removeClass("viewed").addClass("viewed");
+                $(".csection").hide();
+
+                if (visitedArr.indexOf(_getId) == -1) {
+                    visitedArr.push(_getId);
+                }
+                if (totalTabs == visitedArr.length) {
+                    gCompPageArr.push("M1L0T1P32_4");
+                    enableNextBtn();
+                    fnCompletion();
+                    fnDesiableNext(false);
+                }
+                if (_getId == 1) {
+                    fnJumpToPageByID("M1L0T1P32_1");
+                    // $("#csection_0").show();
+                    // fnPlayItemAudio(0);
+                } else if (_getId == 0) {
+                    // $("#csection_1").show();
+                    // fnPlayItemAudio(1);
+                    fnJumpToPageByID("M1L0T1P32_2");
+                } else if (_getId == 2) {
+                    // $("#csection_2").show();
+                    // fnPlayItemAudio(2);
+                    fnJumpToPageByID("M1L0T1P32_3");                    
+                } else if (_getId == 3) {
+                    // $("#csection_3").show();
+                    // fnPlayItemAudio(3);
+                    // $("#_clickImg0pdf").show();
+                    fnJumpToPageByID("M1L0T1P32_4");
+                } else {
+                    enableNextBtn();
+                    enableNextBtn();
+                    fnCompletion();
+                    fnDesiableNext(false);
+                }
+
+            });
+        }
+
+        function isInArray(value, array) {
+
+            return array.indexOf(value) > -1;
+
+        }
+
+
+
+        function audioStop() {
+            var audio = document.getElementById("audioplayer");
+            audio.pause();
+            audio.currentTime = 0;
+        }
+
+
+
+
+
+
+        function fnPlayItemAudio(gCurrentIndex) {
+
+            //console.log(gItemAudioPath);
+            audioindex = (gCurrentIndex);
+            gAudioId = "audio_" + gCurrentIndex;
+            fnHideShowAudioPlayer(false);
+            updateContentArray = eval("popupContentArray" + (gCurrentIndex));
+            //console.log(gItemAudioPath[gCurrentIndex])
+            initAudioPlayer(gItemAudioPath[gCurrentIndex])
+            initAudioPlayer(gItemAudioPath[gCurrentIndex]);
+        }
+
+
+        /* 
+        	function fnPlaySectionAudio(gCurrentIndex){
+
+        		indexAudio=(gCurrentIndex);
+
+        		audioId = "audio_"+gCurrentIndex;
+
+        		fnHideShowAudioPlayer( false );
+
+        		updateContentArray = eval("popupSectionArray"+(gCurrentIndex));
+
+        		initAudioPlayer(gItemAudioPath[gCurrentIndex])
+
+        	}
+        	*/
+
+        function audioReset() {
+
+            gAudioId = "";
+
+            //onTimelineEnd();
+
+        }
+
+
+
+
+
+
+
+        var gTotalPopups = 2;
+
+        var temp = "";
+
+
+
+        var succRefFunc = function fnInitPage(oXML) {
+
+            gPageXMLObj = oXML;
+
+        }
+
+        var errRefFunc = function fnXMLLoadError() {
+
+            alert("Error loading XML file.");
+
+        }
+
+
+
+        /*  function fStartPage() {
+ 
+             fnLoadXMLFile(gModuleArr[gCurrMod].Lessons[gCurrLess].Topics[gCurrTop].Pages[gCurrPage].attr("XMLSRC"), succRefFunc, errRefFunc);
+ 
+             gPageXMLObj.find("question").each(function (index, aQues) {
+ 
+                 __questionArray.push(aQues);
+ 
+             });
+ 
+         }
+ 
+         */
+
+        function fStartPage() {
+
+            loadScreenData(gModuleArr[gCurrMod].Lessons[gCurrLess].Topics[gCurrTop].Pages[gCurrPage].attr("XMLSRC"))
+
+        }
+
+
+
+        /*--------------------------- load screen content -------------------------------*/
+
+        function loadScreenContent(aScreenData) {
+
+
+
+            $(aScreenData).find("question").each(function (index, aQues) {
+
+                //console.log(aQues);
+
+                __questionArray.push(aQues);
+
+                //fGenerateOptionPanel();
+
+            });
+
+        }
+
+
+
+        function loadScreenData(aFileVal) {
+
+            $.ajax({
+
+                type: "GET",
+
+                url: aFileVal,
+
+                datatype: "xml",
+
+                success: loadScreenContent
+
+            });
+
+        }
+
+
+
+
+        function updatePageContent(aTarget, aCurId) {
+
+
+        }
+
+
+
+        $(".clsIconImg").on("click", function () {
+
+            pauseAudio();
+
+
+            var _getCurId = $(this).attr("curid");
+            if (_getCurId == 15) {
+                $(".tefeatxt").show();
+                $(".tefeatxt1").show();
+                $(".FlargeImg").show();
+
+            }
+            $(".modalTxtImg").hide();
+
+            $(".modalTxtImg").attr("id", "");
+            $("#TabPopup #idPatch3").addClass("blur");
+            $("#TabPopup #tapSection").addClass("blur");
+            $("#TabPopup .csection").addClass("blur");
+
+            $("#TabPopup .modalContent .modalTxtImg").attr("id", "imgPopup" + _getCurId);
+
+            $("#TabPopup .modalContent").attr("id", "imgdd" + _getCurId);
+
+            $("#TabPopup .modal").show();
+            $(".boxInst").hide();
+            $(".modalTxtImg").show();
+        });
+
+
+
+        $(".closepopup").on("click", function () {
+            $(".modalTxtImg").attr("id", "");
+            $(".modalContent .tefeatxt").removeAttr("style");
+            $(".modalContent .tefeatxt1").removeAttr("style");
+            $(".modalContent .FlargeImg").hide();
+
+            playAudio();
+
+            $("#TabPopup .modal").hide()
+
+            //$("#TabPopup #idPatch3").removeClass("blur");
+            $("#TabPopup #idPatch3").removeClass("blur");
+            $("#TabPopup #tapSection").removeClass("blur");
+            $("#TabPopup .csection").removeClass("blur");
+
+            $("#TabPopup .modal .modalTxtImg").removeAttr("id");
+            // $(".boxInst").show();
+
+        });
+        $(".closeVideo").on("click", function () {
+
+            $(".modalContent .FlargeImg").hide();
+
+            playAudio();
+
+            $(".modal").hide()
+
+            //$("#TabPopup #idPatch3").removeClass("blur");
+            $("#TabPopup #idPatch3").removeClass("blur");
+            $("#TabPopup #tapSection").removeClass("blur");
+            $("#TabPopup .csection").removeClass("blur");
+
+            $(".modal .modalTxtImg").removeAttr("id");
+            // $(".boxInst").show();
+            vid = document.getElementById("myVideo");
+            vid.load()
+            vid.pause();
+
+        });
+
+
+
+        function fnCompletion() {
+            //console.log($(".viewed").length+":::"+$(".ClsTabItem").length);
+
+            console.log($(".viewed").length + ":::" + $(".tabSection").length);
+            __indexClick = 1;
+            if ($(".viewed").length == $(".tabSection").length) {
+
+                //$('.boxInst').show();
+
+                enableNextBtn();
+
+                fnAudioFinishItemComp();
+                __indexClick = 1;
+            }
+        }
+
+        function fnOnAudioComplete() {
+            $(".popover").show();
+            $(".clsIconImg").show();
+            if ($(".viewed").length == $(".tabSection").length) {
+                $('.boxInst').show();
+            }
+            if (gAudioId == "startAudio") {
+                console.log("complete first");
+                $(".csection .classPatchleft #icon01, .img-column #icon01").show();
+                $(".csection .classPatchleft .icon00, .img-column #icon01").show();
+                // fnClick();
+
+                //fnGlowNextBtn();
+
+                //enableNextBtn();
+
+                /* $(".clsEnaNxtBtn").on("click",function(){
+
+                	fnJumpToPageByID("M1L0T1P16_5");
+
+                }); */
+
+                //gCompPageArr.push("M1L0T1P32");
+
+
+
+
+
+
+
+
+                //fnAudioFinishItemComp();
+
+            } else {
+                console.log("complete second");
+                $(".csection .classPatchleft #icon01, .img-column #icon01").show();
+                $(".csection .classPatchleft .icon00, .img-column #icon01").show();
+                /* $("#idTick0"+selectedIndex).css({"opacity":"1"});
+
+                $("#clsTabTxt"+selectedIndex).css({'color':'#80848b'});
+
+                $(".ClsTab").removeClass("clsDisable");
+
+                $("#TabImage"+selectedIndex).addClass("clsDisable"); */
+
+                fnCompletion();
+
+                //if($(".clsVisited").length === 2){
+
+                //$('.boxInst').css('opacity','1');
+
+                //}
+
+            }
+
+        }
+
+
+
+        function pauseAudio() {
+
+            if (!fnPauseAudio()) {
+
+                fnPauseAudio()
+
+            } else {
+
+                playPauseAudio();
+
+            }
+
+        }
+
+        function playAudio() {
+
+            if (!fnPauseAudio()) {
+
+                playPauseAudio();
+
+            }
+
+        }
+
+        $("#_clickImg0pdf, #_clickImg0pdf1").on("click", function () {
+            disabledAllButtons();
+            $("#pageClsResourcesPopup").show();
+            fnPauseAudio();
+        });
+
+        $("#pageRefCloseBtn_id").click(function () {
+            enabledAllButtons();
+            //$("#pageClsResourcesPopup").hide();
+            $("#pageClsResourcesPopup").hide();
+            //$("#pageid_RefTitleBar").show()
+            fnPlayAudio();
+        });
+
+
+
+        $(".videolink").on("click", function () {
+            vid = document.getElementById("myVideo");
+            vid.load()
+            vid.play()
+
+            if (!fnPauseAudio()) {
+
+                fnPauseAudio()
+
+            } else {
+
+                playPauseAudio();
+
+            }
+            $('#secseven').show();
+
+            $('#case_study_popup1').show();
+
+            // __player = document.querySelector("video");
+
+            $(".modalTxtImg").hide();
+            $("#TabPopup #idPatch3").addClass("blur");
+            $("#TabPopup #tapSection").addClass("blur");
+            $("#TabPopup .csection").addClass("blur");
+
+
+        });
+
+    </script>
+
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+
+    <script src="jsfiles/libs/jquery.mCustomScrollbar.concat.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="pg-pageContent" UNSELECTABLE="on">
+
+        <div class="mainContainer">
+
+            <div id="TabPopup" class="clsTabPopup">
+                <div id="idPatch3">
+                    <div class="titleText">Initial </div>
+                </div>
+                <div id="tapSection">
+                    <div class="tagline">Click on each tab to learn more about 4 tab tests.</div>
+                    <ul>
+                        <li><a href="javascript:void(0);" class="tabSection active viewed" title="Blood Sugar" id="3">Blood Count</a>
+                        </li>
+                        <li><a href="javascript:void(0);" class="tabSection" title="Blood Gas" id="2">Blood Culture</a></li>
+                        <li><a href="javascript:void(0);" class="tabSection" title="Blood Culture" id="1">Blood Glucose</a>
+                        </li>
+                        <li><a href="javascript:void(0);" class="tabSection" title="Blood Count" id="0">Blood
+                            Gas</a>
+                        </li>
+                    </ul>
+                </div>
+                <section class="csection" id="csection">
+                    <!-- <div class="pageIntroduction">Click on each tab to learn more about 4 tab tests.</div> -->
+
+                </section>
+                <section class="csection" id="csection_0">
+                    <div class="classPatchLeft">
+
+                        <div class="clsImage" id="image0"></div>
+                        <!-- <div class="clsIconImgExpand" id="icon00">
+                            <div class="expText">Click to enlarge image.</div>
+                        </div> -->
+                        <div class="popover left-arrow icon00">
+                            <div class="arrow" style="top: 50%;"></div>
+                            <div class="popover-content">Click to enlarge image.</div>
+                        </div>
+                        <div class="clsIconImg zoom-btn" id="icon01" curid="0" title="Click to enlarge image"></div>
+                    </div>
+
+                    <div class="classPatchRight">
+                        <div class="OptionPanel disabled" unselectable="on">
+                            <div class="list-cnt showList_1">
+                                <div id="arrow1" class="arrowHolder"></div>
+                                <div id="option1" curid="1" class="OptionCLSS"><span id="opt1"
+                                        class="OptionTxtCLSS">Sick infants have increased energy demands and are
+                                        therefore at increased risk <br>for hypoglycemia.
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="list-cnt showList_2">
+                                <div id="arrow2" class="arrowHolder"></div>
+                                <div id="option2" curid="2" class="OptionCLSS"><span id="opt1"
+                                        class="OptionTxtCLSS">Check blood sugar at appropriate intervals relevant to the
+                                        infant’s condition and <br>risk factors.
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="list-cnt showList_3">
+                                <div id="arrow3" class="arrowHolder"></div>
+                                <div id="option3" curid="3" class="OptionCLSS"><span id="opt1"
+                                        class="OptionTxtCLSS">Maintain the blood sugar within a normal range: 50 to 110
+                                        mg/dL <br>(2.8 to 6.1 mmol/L).
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </section>
+
+                <section class="csection" id="csection_1">
+                    <div class="classPatchLeft">
+                        <div class="clsImage" id="image1"></div>
+                        <!-- <div class="clsIconImgExpand" id="icon00">
+                                <div class="expText">Click to enlarge image.</div>
+                            </div> -->
+                        <div class="popover left-arrow icon00">
+                            <div class="arrow" style="top: 50%;"></div>
+                            <div class="popover-content">Click to enlarge image.</div>
+                        </div>
+                        <div class="clsIconImg zoom-btn" id="icon01" curid="1" title="Click to enlarge image"></div>
+
+
+                    </div>
+                    <div class="classPatchRight">
+                        <div class="OptionPanel disabled">
+                            <div class="list-cnt showList_1">
+                                <div id="arrow1" class="arrowHolder"></div>
+                                <div id="option1" curid="1" class="OptionCLSS"><span id="opt1"
+                                        class="OptionTxtCLSS">Obtain if the infant is experiencing respiratory distress
+                                        or if there is concern <br>for shock.
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="csection" id="csection_2">
+
+                    <div class="classPatchLeft">
+                        <div class="clsImage" id="image2"></div>
+                        <!-- <div class="clsIconImgExpand" id="icon00">
+                                        <div class="expText">Click to enlarge image.</div>
+                                    </div> -->
+                        <div class="popover left-arrow icon00">
+                            <div class="arrow" style="top: 50%;"></div>
+                            <div class="popover-content">Click to enlarge image.</div>
+                        </div>
+                        <div class="clsIconImg zoom-btn" id="icon01" curid="2" title="Click to enlarge image"></div>
+
+
+                    </div>
+                    <div class="classPatchRight">
+                        <div class="OptionPanel disabled">
+                            <div class="list-cnt showList_1">
+                                <div id="arrow1" class="arrowHolder"></div>
+                                <div id="option1" curid="1" class="OptionCLSS"><span id="opt1"
+                                        class="OptionTxtCLSS">Obtain the culture before starting antibiotics.
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="list-cnt showList_2">
+                                <div id="arrow2" class="arrowHolder"></div>
+                                <div id="option2" curid="2" class="OptionCLSS"><span id="opt1"
+                                        class="OptionTxtCLSS">Obtain at least 1 mL of blood for each culture bottle
+                                        <ol>
+                                            <li>Increases the likelihood that the microorganism will grow</li>
+                                        </ol>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="list-cnt showList_3">
+                                <div id="arrow3" class="arrowHolder"></div>
+                                <div id="option3" curid="3" class="OptionCLSS"><span id="opt1" class="OptionTxtCLSS">If
+                                        late-onset sepsis suspected<br>
+                                        <ol>
+                                            <li>Obtain both aerobic and anaerobic cultures</li>
+                                            <li>Minimum 1 mL per culture bottle</li>
+                                        </ol>
+
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="list-cnt showList_4">
+                                <div id="arrow4" class="arrowHolder"></div>
+                                <div id="option4" curid="3" class="OptionCLSS"><span id="opt1" class="OptionTxtCLSS">Use sterile technique when drawing the blood and transferring blood to the <br>culture bottle.</span>
+                                </div>
+                            </div>
+                            <a class="videolink" href="javascript:void(0);" id="clickImg3" title="Blood Culture">​<img
+                                    class="video_icon" src="pages/images/Topic01/T01P20/video_icon.svg"
+                                    alt="Watch video Blood Culture" /><span>Blood Culture</span></a>
+                        </div>
+                    </div>
+
+
+                </section>
+
+                <section class="csection" id="csection_3">
+                    <div class="classPatchLeft">
+                        <div class="clsImage" id="image3"></div>
+                        <!-- <div class="clsIconImgExpand" id="icon00">
+                                        <div class="expText">Click to enlarge image.</div>
+                                    </div> -->
+                        <div class="popover left-arrow icon00">
+                            <div class="arrow" style="top: 50%;"></div>
+                            <div class="popover-content">Click to enlarge image.</div>
+                        </div>
+                        <div class="clsIconImg zoom-btn" id="icon01" curid="3" title="Click to enlarge image"></div>
+
+
+                    </div>
+                    <div class="classPatchRight">
+                        <div class="OptionPanel disabled">
+                            <h4>Complete Blood Count (CBC) </h4>
+
+
+                            <div class="list-cnt showList_1">
+                                <div id="arrow1" class="arrowHolder"></div>
+                                <div id="option1" curid="1" class="OptionCLSS"><span id="opt1" class="OptionTxtCLSS">
+                                        Useful test to evaluate:<br>
+                                        <ol>
+                                            <li>White blood cell count and composition</li>
+                                            <li>Hemoglobin and hematocrit</li>
+                                            <li>Platelet count</li>
+                                            <li>A CBC provides helpful information to assess
+the infants’ response to an infection and
+identify other treatable causes of deterioration,
+such as severe anemia.</li>
+                                        </ol>
+                                    </span>
+                                </div>
+                            </div>
+
+
+                            <div class="_link" id="_clickImg0pdf1"><img class="pdf_icon introLink"
+                                    src="pages/images/Topic01/T01P20/pdf_icon.svg" alt="" /><span>Complete Blood Count
+                                    (CBC) interpretation</span></div>
+                        </div>
+
+                    </div>
+
+
+
+                </section>
+
+
+                <div class="modal height_100" id="case_study_popup">
+                    <div class="modalContent custom-modalContent" unselectable="on">
+                        <div class="modalTxtImg" unselectable="on"></div>
+                        <div class="FlargeImg"></div>
+                        <a class="closepopup zoom_close_btn" href="javascript:void(0)" title="Click to Close"></a>
+                        <!-- <div class="clickToContinue expandImgTxtRight clickToClose">Click to Close</div> -->
+                        <div class="tefeatxt">Gastric tube<br /> stops at site <br />of esophageal atresia</div>
+                        <div class="tefeatxt1">Stomach overdistension</div>
+                        <div class="popover left-arrow btm-adj">
+                            <div class="arrow" style="top: 50%;"></div>
+                            <div class="popover-content">Click to close image.</div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <!--- Main Container--->
+
+        <div class="boxInst">
+
+            <div class="instNextClick"></div>
+
+            <div class="next_click"><em> Click Next to continue.</em></div>
+
+        </div>
+        <div class="modal height_100 opacity-5" id="case_study_popup1">
+            <div class="modalContent medium custom-modal" unselectable="on">
+                <video oncontextmenu="return false;" id="myVideo" poster="pages/images/Topic01/T01P32/video.png"
+                    disablepictureinpicture controls controlsList="nodownload noremoteplayback">
+                    <source src="pages/video/T01P32/T01P32.mp4" type="video/mp4">
+                </video>
+                <div class="closing">
+                    <a class="closeVideo zoom_close_btn" href="javascript:void(0)" title="Click to Close"></a>
+                    <span class="no-audio">No Audio</span>
+                    <!-- <div class="clickToContinue expandImgTxtRight clickToClose">Click to close</div> -->
+                    <div class="popover left-arrow btm-adj">
+                        <div class="arrow" style="top: 50%;"></div>
+                        <div class="popover-content">Click to close video.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="pageClsResourcesPopup">
+
+            <div id="pageid_ReferencesBG">
+
+                <div id="pageRefTitleBar_id">
+
+                    <div id="pageRefTitleBar_id" unselectable="on" style="display: block;">
+
+                        <div id="pageReftitleText_id" unselectable="on">Complete Blood Count (CBC) interpretation</div>
+
+                        <div class="pageclose_txt" unselectable="on"><span id="pageClsText">Click to Close</span></div>
+
+                        <div id="pageRefCloseBtn_id" title="Close" unselectable="on"></div>
+
+                        <embed class="pdflink" alt="pdf"
+                            src="pages/Topic01/pdf/T01P32/Complete Blood Count (CBC) interpretation.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                            internalinstanceid="70">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+</body>
+
+</html>

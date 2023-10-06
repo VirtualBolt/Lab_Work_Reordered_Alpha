@@ -1,0 +1,166 @@
+﻿<!doctype html>
+<html class="">
+<!--<![endif]-->
+<head>
+<style>
+#searchContainer{
+	position: absolute;
+	width: 99%;
+	height: 96%;	
+	
+}
+#searchSection{
+	position: absolute;
+	width: 100%;
+	height: 15%;
+	
+}
+#searchTxt{
+	-webkit-user-select: text;
+	position: absolute;
+	left: 61%;
+	top: 78%;
+	width: 26%;
+	height: 39%;
+	background: white;
+	overflow-x: auto;
+	overflow-wrap: normal;
+}
+#searchBtn1{
+	background: url("media/images/search/Search_btn_nr.png") no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	width: 9.5%;
+	height: 44%;
+	cursor: pointer;
+	left: 88%;
+	top: 75%;
+	
+}
+#searchBtn1:active{
+	background:url("media/images/search/Search_btn_dwn.png") no-repeat;
+	background-size:100% 100%;
+	
+}
+
+
+#resultSection{
+	position: absolute;
+	left: 2%;
+	top: 22%;
+	width: 96%;
+	height: 73%;
+	overflow-y: auto;
+	
+}
+.CLSSRESULTROW,.CLSSHEADRESULTROW{
+	width: 100%;
+	height: 6%;
+}
+.CLSSRESULTPAGE,.CLSSHEADRESULTPAGE{
+	width: 14%;
+	/* margin-left: 28%; */
+	/* margin-top: 2%; */
+	text-align: center;
+	display: inline-block;
+}
+.CLSSRESULTTITLE,.CLSSHEADRESULTTITLE{
+	/*width: 64%;*/
+	display: inline-block;
+	cursor: pointer;
+	margin-left: 3%;
+	
+}
+#searchPopupcloseBtn{
+	background: url("media/images/player/menu_close.png") no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	width: 2.6%;
+	height: 5.2%;
+	cursor: pointer;
+	left: 95.8%;
+	top: 3%;
+}
+.CLSSNOTFOUND{
+	margin-left: 32.5%;
+	margin-top: 1%;
+	position: relative;
+	width: 30%;
+}
+#searchBg{
+	background: url("media/images/search/Search_bg.png") no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	width: 92.2%;
+	height: 74.6%;
+	left: 4.5%;
+	top: 18%;
+}
+
+#searcgBgPatch{
+	width: 101%;
+	height: 105%;
+	background: #e6e6e6;
+	opacity: 0.8;
+
+	
+}
+</style>
+
+<script language="javascript" type="text/javascript">
+	var oXML;
+	$(document).ready(function () {
+	if(isAndroid2)
+		jQuery.event.remove(window, "resize", resizeFrame);
+			
+		 fnSearchActivity(searchStr);
+			$('#searchPopupcloseBtn').click(function(){
+					
+					$('#searchTextDiv').text("")
+					disableHelpPopup();
+					hideHelpPopUp();
+			});
+			$('#searchBtn1').click(function(){
+					fnSearchActivity($('#searchTxt').text());
+					if(isAndroid2)
+						jQuery.event.add(window, "resize", resizeFrame);
+			});		
+			
+			$("#searchTxt").keypress(function (e) {	
+				if(e.which == 13)  // the enter key code
+				{
+					e.preventDefault();
+					fnSearchActivity($('#searchTxt').text());
+					if(isAndroid2)
+						jQuery.event.add(window, "resize", resizeFrame);
+			 	}		
+						
+					
+			}); 
+	 });
+	
+</script>
+
+</head>
+<body UNSELECTABLE="on">
+<div id="searchContainer" UNSELECTABLE="on">
+		<div id="searcgBgPatch"></div>
+		<div id="searchBg">
+			<div id="searchSection">
+					<div id="searchTxt" contenteditable="true" ></div>
+					<div id="searchBtn1"></div>
+			</div>
+			<div id="resultSection">
+				<div class="CLSSHEADRESULTROW">
+					<div  class="CLSSHEADRESULTPAGE"><b>Screen Number</b></div>
+					<div  class="CLSSHEADRESULTTITLE"><b>Screen Title</b></div>
+				</div>	
+			
+			</div>
+			<div id="searchPopupcloseBtn"></div>
+		</div>
+</div>
+<!-- <div id="menumock"/> -->
+
+</body>
+</html>

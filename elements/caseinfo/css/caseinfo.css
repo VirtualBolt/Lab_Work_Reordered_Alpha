@@ -1,0 +1,369 @@
+/*-----------------------Common CSS-----------------------*/
+
+body {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    /* overflow: auto; */
+}
+
+@font-face {
+    font-family: "HelveticaNeue-Bold";
+    font-style: normal;
+    font-weight: 400;
+    src: local('HelveticaNeue-Bold'), local('HelveticaNeue-Bold'), url('../fonts/HelveticaNeue-Bold.otf') format('truetype');
+}
+
+@font-face {
+    font-family: "HelveticaNeue-Light";
+    font-style: normal;
+    font-weight: 400;
+    src: local('HelveticaNeue-Light'), local('HelveticaNeue-Light'), url('../fonts/HelveticaNeue-Light.otf') format('truetype');
+}
+
+.mainContainer {
+    width: 1024px;
+    height: 768px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.hospitalContainer {
+    position: relative;
+    width: 1065px;
+    height: 605px;
+    top: 56px;
+    background: none;
+    background-repeat: no-repeat;
+    left: 10px;
+    overflow: hidden;
+}
+
+.gwrapper {
+    position: absolute;
+    width: 1064px;
+    height: 478px;
+    z-index: 2000;
+    background-color: #ffffff;
+    top: 0px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    top: 51px;
+}
+
+.content {
+    position: absolute;
+    width: 1064px;
+    height: 478px;
+    top: 51px;
+    left: 0px;
+    background-repeat: no-repeat;
+    background: #fff;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    overflow: hidden;
+    display: flex;
+}
+
+.wordsList {
+    position: absolute;
+    width: 1065px;
+    height: 50px;
+    top: 44px;
+    left: 0px;
+    line-height: 16px;
+}
+
+table {
+    position: absolute;
+    top: -2px;
+    left: 2px;
+    border-spacing: 19px;
+}
+
+td {
+    color: #5B5B5B;
+    text-align: center;
+    margin-left: 50px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.gloassaryContainer {
+    position: relative;
+    width: 1065px;
+    height: 605px;
+    top: 59px;
+    background: none;
+    background-repeat: no-repeat;
+    left: 10px;
+    overflow: hidden;
+}
+
+#helptopbar {
+    position: absolute;
+    background-color: #5B5B5B;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-family: OpenSansRegular;
+    font-size: 36px;
+    left: -1px;
+    top: 0px;
+    width: 100%;
+    height: 50px;
+}
+
+img,
+object,
+embed,
+video {
+    width: 100%;
+    height: 100%;
+}
+
+#id_glosTitleText {
+    position: absolute;
+    color: #fff;
+    font-size: 23px;
+    left: 441px;
+    top: 10px;
+    width: 288px;
+    line-height: 32px;
+    font-family: OpenSansSemiBold;
+    TEXT-ALIGN: CENTER;
+}
+
+.close_txt {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    top: 29px;
+    right: 11px;
+}
+
+#clsText {
+    position: absolute;
+    width: auto;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    font-family: OpenSansRegular;
+    font-size: 12px;
+    color: #fff;
+}
+
+#id_GlossaryContent {
+    position: absolute;
+    float: left;
+    height: 93%;
+    width: 100%;
+    top: 7.4%;
+}
+
+.tabContent {
+    position: relative;
+    width: 100%;
+    height: 50px;
+}
+
+.tabContent .tab {
+    position: relative;
+    cursor: pointer;
+    width: 190px;
+    height: 36px;
+    text-align: center;
+    line-height: 33px;
+    font-size: 18px;
+    font-family: OpenSansRegular;
+    border-radius: 5px;
+    background: #fcfcfc;
+    margin-left: 60px;
+    float: left;
+    top: 20px;
+    left: 0px;
+    cursor: pointer;
+    -webkit-box-shadow: 1px 2px 3px -1px rgba(0, 0, 0, 0.30);
+    -moz-box-shadow: 1px 2px 3px -1px rgba(0, 0, 0, 0.30);
+    box-shadow: 1px 2px 3px -1px rgba(0, 0, 0, 0.30);
+    border-radius: 5px;
+    -moz-box-shadow: 1px 2px 3px -1px rgba(0, 0, 0, 0.30);
+    border: 1px solid #707070;
+}
+
+.tabContent .tab.active,
+.tabContent .tab:hover {
+    background: #707070;
+    color: #FFFFFF;
+}
+
+.tabLoadContent {
+    width: auto;
+    height: 100%;
+    position: relative;
+}
+
+img.caseinfoimg {
+    width: 36px;
+    height: 31px;
+    position: ABSOLUTE;
+    LEFT: 0px;
+}
+
+#topImgCntImg1 {
+    background: url(../media/mateo.png) no-repeat;
+    width: 265px;
+    height: 235px;
+}
+
+#topImgCntImg2 {
+    background: url(../media/conrad.png) no-repeat;
+    width: 265px;
+    height: 235px;
+}
+
+.clickToEnlarge {
+    top: 180px;
+}
+
+.small_expand,
+.open_map {
+    bottom: 18px;
+}
+
+.tabContent ul.tabs {
+    padding: 0px;
+    list-style: none;
+    margin-top: 0;
+}
+
+.tabContent ul.tabs li {
+    color: #222;
+    display: inline-block;
+    cursor: pointer;
+    width: 200px;
+    text-align: center;
+    float: left;
+    position: relative;
+    /* height: 40px; */
+    line-height: 42px;
+    cursor: default;
+    font-size: 16px;
+    color: #000;
+    cursor: pointer;
+}
+
+.tabContent ul.tabs li:first-child {
+    border-bottom-left-radius: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    -moz-border-bottom-left-radius: 5px;
+    box-shadow: inset 11px -12px 17px -21px #3A5569;
+}
+
+.tabContent ul.tabs li:last-child {
+    box-shadow: inset 0 -12px 17px -20px #3A5569;
+}
+
+.tabContent ul.tabs li.current:after {
+    width: 0;
+    height: 0;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-top: 9px solid #3A5569;
+    content: " ";
+    position: absolute;
+    bottom: -7px;
+    left: 44%;
+}
+
+.tabContent ul.tabs li.current {
+    background: #3A5569;
+    color: #fff;
+}
+
+.tabContent .tab-content {
+    display: none;
+    padding: 0px 20px 25px 0;
+}
+
+.tabContent .tab-content.current {
+    display: flex;
+}
+
+.tabContent h2 {
+    width: 802px;
+    display: inline-block;
+    font-size: 20px;
+    /* margin-right: 70px; */
+    text-align: center;
+    margin: 10px 0px 8px;
+    /* float: left; */
+}
+.hospitalContainer ul.bullet {
+    margin: 0;
+}
+.tabContent .tabs {
+    display: inline-block;
+}
+
+.tab-content ul {
+    flex: 0 1 80%;
+    /* list-style-image: url(../../../pages/images/common/bullet.png); */
+}
+
+.tab-content ul li {
+    padding-bottom: 15px;
+    font-size: 16px;
+    color: #000;
+}
+
+.CaseStudy {
+    background: #fff;
+    height: 465px;
+    /* left: 0px; */
+    width: 1060px;
+    position: absolute;
+    /* left: 44px; */
+    top: 22px;
+    height: 479px;
+}
+
+.caseStudyContent {
+    top: 30px;
+    left: 15px;
+    width: 831px;
+    position: relative;
+}
+
+.ModalTextBottom {
+    left: 0;
+    width: 100%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.ModalTxtImg {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: none;
+}
+
+.cornad-case-info {
+    width: 969px!important;
+    height: 482px;
+    left: 57px;
+    top: 80px;
+}
+
+.cornad-case-info .caseStudyContent {
+    left: 2px;
+}
+
+#case_study_popup {
+    /* width: 1029px; */
+    height: 480px;
+	background:rgba(255,255,255,0.8);
+}
+.concord{
+		
+}

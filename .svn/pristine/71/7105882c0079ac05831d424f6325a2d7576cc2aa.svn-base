@@ -1,0 +1,650 @@
+<!DOCTYPE HTML>
+
+<html>
+
+
+
+<head>
+
+    <title></title>
+
+	<style>
+	 /* Sliding entrances */
+@-webkit-keyframes slideInDown {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInDown {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__slideInDown {
+  -webkit-animation-name: slideInDown;
+  animation-name: slideInDown;
+}
+@-webkit-keyframes slideInLeft {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInLeft {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__slideInLeft {
+  -webkit-animation-name: slideInLeft;
+  animation-name: slideInLeft;
+}
+@-webkit-keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(50%, 0, 0);
+    transform: translate3d(50%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(50%, 0, 0);
+    transform: translate3d(50%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__slideInRight {
+  -webkit-animation-name: slideInRight;
+  animation-name: slideInRight;
+}
+@-webkit-keyframes slideInUp {
+  from {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInUp {
+  from {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__slideInUp {
+  -webkit-animation-name: slideInUp;
+  animation-name: slideInUp;
+}
+	.mainContainer {position: absolute;width: 100%;height: 545px;left: 0px;top: 0px;opacity: 1;}
+	.clsTabPopup{position:absolute;width:1085px;height:540px;top:0;left:0}
+	.sectionTop{position:absolute;top:0;height:30px;width:100%;padding:16px 0}
+	.sectionContent{position:absolute;top:20px;height:495px;width:1055px;left:15px;right:15px; color:#000}
+	.topImgCnt{position:relative}
+	.small_expand,.open_map{background:url(pages/images/Topic01/T01P58/small_expand.png) no-repeat!important;width:28px;height:28px!important;position:absolute!important;bottom:24px;right:10px;display:none;left:inherit!important;top:inherit!important;float:inherit!important;text-decoration:none!important;border-radius:inherit!important;margin-left:0!important;background-color:inherit!important;padding:0!important}
+	.small_expand:hover,.open_map:hover{background:url(pages/images/Topic01/T01P58/small_expand_hover.png) no-repeat!important}
+	.small_expand1{background:url(pages/images/Topic01/T01P58/small_expand.png) no-repeat!important;width:28px;height:28px!important;position:absolute!important;bottom:7px;right:10px;display:none;left:inherit!important;top:inherit!important;float:inherit!important;text-decoration:none!important;border-radius:inherit!important;margin-left:0!important;background-color:inherit!important;padding:0!important}
+	.small_expand1:hover{background:url(pages/images/Topic01/T01P58/small_expand_hover.png) no-repeat!important}
+	.open_map{right:33px;margin-top:2px}
+	.sectionLeft{height:100%;}
+	.sectionRight{width:790px;height:507px;top:20px;position:absolute;left:264px}
+	.rightTop{height:42px;left:5px;position:relative}
+	.rightTop a{left:0;top:0;padding:0 65px;background:#fff;margin:0;position:relative;float:left;margin-left:-5px;font-family:OpenSansSemiBold;text-decoration:none;color:#000;height:42px;line-height:42px;border-top-right-radius:5px;-webkit-border-top-right-radius:5px;-moz-border-top-right-radius:5px;font-size:16px;cursor:default}
+	.sectionRight .assessmentShow a{cursor:default}
+	.rightTop a.active{border-top-right-radius:5px;-webkit-border-top-right-radius:5px;-moz-border-top-right-radius:5px;background:#3A5569;margin-right:0;z-index:10;color:#fff}
+	.rightTop a.active.cdefault{cursor:default}
+	.rightTop a.active:after,.rightTop a.active:before,.rightTop a.active:hover:before{top:98%;left:45%;border:solid transparent;content:" ";height:0;width:0;position:absolute;pointer-events:none}
+	.rightTop a.active:after,.rightTop a.active:hover:after{border-top-color:#3A5569;border-width:10px;margin-left:0}
+	.rightTop a.active:before,.rightTop a.active:hover:before{border-top-color:#3A5569;border-width:10px;margin-left:0}
+	.rightTop a.active:nth-child(2),.rightTop a.active:hover:nth-child(2){-webkit-border-top-left-radius:5px;border-top-left-radius:5px;-moz-border-top-left-radius:5px}
+	.rightTop a:nth-child(2){-webkit-border-top-left-radius:5px;border-top-left-radius:5px}
+	.sectionContentArea{border-top-right-radius:5px;-webkit-border-top-right-radius:5px;-moz-border-top-right-radius:5px;border-bottom-right-radius:5px;-webkit-bottom-top-right-radius:5px;-moz-border-bottom-right-radius:5px}
+	#topImgCnt1{
+    /* background: url(pages/images/Topic01/T01P58/img0.png) no-repeat top center; */
+     background-size:cover; height:100%; width:100%;background-color: rgb(213, 213, 213);}
+     #topImgCnt2{
+    /* background: url(pages/images/Topic01/T01P58/img0.png) no-repeat top center; */
+     background-size:cover; height:100%; width:100%;background-color: rgba(97, 97, 97, 1);}
+	#imgPopup1 {background: url(pages/images/Topic01/T01P58/img1.png) no-repeat center; background-size:cover;}
+	/*#case_study_popup .modalContent {width:55%; height:420px; border-radius:10px}
+	#case_study_popup .modalContent .modalinner{ padding:30px; position:relative}
+	#imgPopup0{ background-size:100% 100%; width:100%; height:360px}
+	#case_study_popup .modalContent .modalinner .modalclose{ position:absolute; top:5px; right:0px; width:30px; height:30px }
+	#case_study_popup .modalContent .modalinner .modalclose .modalcloseicon{background:url(pages/images/Topic01/T01P58/close-icon.png) no-repeat; background-size:24px 24px; width:24px; height:24px ; cursor:pointer}
+	#case_study_popup .modalContent .modalinner .modalclose .modalcloseicon:hover{background:url(pages/images/Topic01/T01P58/close-hover-icon.png) no-repeat; background-size:24px 24px; width:24px; height:24px }
+	#case_study_popup .closepopup{ display:none} 
+	#case_study_popup .modalTextBottom{ display:none}
+	#case_study_popup .popover.left-arrow{ display:none}*/
+	.sectionContent{ padding:0px; background:#fff;  border-radius:5px;box-shadow:0 1px 9px -4px rgba(0,0,0,0.75);  overflow:hidden}
+	.sectionLeft{width: 384px; background:#fff}
+	.sectionRight{width: 515px;left: 504px;}
+	.sectionContentArea{ padding: 0px 10px 0px 19px;}
+	.iconlist{ margin:0px; padding:0px; list-style:none; width:90%}
+	.iconlist li{ position:relative; margin-bottom:3px; font-size:16px; line-height:22px; display: flex; flex-direction: row; align-items: center; padding-left:17px}
+	/*.iconlist li:before{ background:url(pages/images/Topic01/T01P58/bullet.png) no-repeat; left:0px; width:13px; height:13px; position:absolute; content:""; top:5px}*/
+	.iconlist li:before{content: ''; background: #000000; border-radius: 50%; width: 8px; height: 8px; position: absolute; top: 6px; left:0px}
+	.iconlist li a{ color:#D7722C; cursor:pointer}
+	.error1{ margin:15px auto 0px; border:solid 2px #F6A87A; border-radius:5px; width:94%; position:relative}
+	.error1 .error1_inner{ position:relative; padding:10px; color:#000; font-size:12px; line-height:18px; font-weight:bold; padding-left:60px;display: flex; flex-direction: row; align-items: center;}
+	.error1 .error1_inner img{ position:absolute; width:35px; height:34px; left:10px; top:25px;}
+	.topImgtxt{ background:rgba(0, 0, 0, 0.1); position:absolute; bottom:0px; padding:10px; color:#000;font-size:14px; line-height:22px;}
+	
+	.txt1{ font-size:16px; line-height:22px; margin:10px 0px}
+	
+	.sectionLeftBox{ position:relative; height:100%; padding:5px;width: 274px;}
+	.topImgboxinner{  border:double 6px #ccc; position:relative; height:100%}
+	.content2 .sectionRight .sectionContentArea{height: 265px; margin-top:100px}
+	.sectionContentAreainner{ width:80%; margin:20px 0px 0px 50px}
+	.sectionContentAreainner .contenttext{font-size:14px; line-height:20px; position:relative}
+	.sectionContentAreainner .contenttext2{ margin-top:30px}
+	#content1{ visibility:visible}
+	
+	/*.small_expand{ display:block}*/
+	.poupdiv .modalContent{width:455px;  height:auto !important; padding:20px 18px; top:30%}
+		.poupdiv  .modalContent .heading{ color:#D7722C; font-size:18px; text-align:center}
+		.poupdiv  .modalContent .linenew{ height:2px; background:#D7722C; margin:5px auto;width:77%}
+		.poupdiv  .modalContent .desc{ color:#000; font-size:14px; text-align:left}
+	.poupdiv .popupclose{ position: absolute; top:10px; right:10px}
+	.poupdiv .popupclose img{ width:24px; height:24px; cursor:pointer}
+	.poupdiv .modalclose{ position:absolute; top:5px; right:0px; width:30px; height:30px }
+	.poupdiv .modalclose .modalcloseicon{background:url(pages/images/Topic01/T01P58/close-icon.png) no-repeat; background-size:24px 24px; width:24px; height:24px ; cursor:pointer}
+	.poupdiv .modalclose .modalcloseicon:hover{background:url(pages/images/Topic01/T01P44/close-hover-icon.png) no-repeat; background-size:24px 24px; width:24px; height:24px }
+	/*.popover.clickToEnlarge{ display:block}*/
+	.abs{ position:absolute}
+	.box1{ background:#FBE5D6; font-size:14px; line-height:22px; font-weight: bold;padding: 10px 20px;left: 0px;width: 250px;top:50px}
+	.box2{ background:#F4B183; font-size:14px; line-height:22px; font-weight: bold;padding: 10px 20px;left: 0px;width: 250px; top:120px}
+	.box3{ background:#BD7C4D; font-size:14px; line-height:18px; padding: 10px 20px;left: 0px;width: 250px; top:190px; color:#fff}
+	.error1{top:300px;left: 10px; width: 275px;}
+	.error1 .error1_inner{width: 200px;font-size:14px; line-height:18px;}
+	.topImgCntbox{box-shadow:0 1px 9px -4px rgba(0,0,0,0.75); width:384px; height:510px; }
+	.iconlist2{ margin:0px 0px 10px 30px; padding:0px; list-style:none; width:90%}
+	.iconlist2 li{ position:relative; margin-bottom:3px; font-size:14px; line-height:22px; display: flex; flex-direction: row; align-items: center; padding-left:25px}
+	.iconlist2 li:before{ background:url(pages/images/Topic01/T01P44/bullet.png) no-repeat; left:0px; width:13px; height:13px; position:absolute; content:""; top:5px}
+	.iconlist2 li a{ color:#D7722C; cursor:pointer}
+	.pdflink1{position: absolute;top: 488px !important;left: 20px;padding-left: 40px;}
+	.pdflink1 img{ position: absolute;margin-left: -40px; margin-top: -5px;}
+	.pdflink1 a{font-size:14px; line-height:22px; color:#000}
+	.pdflink1 a:hover{color:#D7722C}
+	/*#list1, #list2, #list2_1, #list2_2, #list2_3, #list3, #list3_1, #list3_2, #list3_3, #list4, #list4_1, #list4_2, #list4_3,#list4_4, #list5,#pdflink{visibility:hidden; opacity: 0;}*/
+	
+	.pageclose_txt{position:absolute;width:135px;height:44px;top:48px;left:800px;background:url(media/images/player/common/pdf_close_inst.png)}
+	#pageClsText{position:absolute;width:115px;height:29px;top:15px;left:16px;font-family:OpenSansRegular;font-size:16px;font-style:italic;color:#172430}
+	#pageRefCloseBtn_id{position:absolute;width:29px;height:29px;top:7px;left:900px;cursor:pointer;background:url(media/images/player/common/close.png);-webkit-transition:all .3s;-o-transition:all .3s;transition:all .3s}
+	#pageid_RefCloseBtn:hover #pageclose_txt{background:url(media/images/player/common/pdf_close_inst.png)}
+	#pagereferences{margin-left:0;margin-top:45px;color:#333;width:800px;min-height:412px;overflow-y:auto;position:absolute;height:412px}
+	#pagereferences ul{padding-top:0;padding-bottom:0;padding-left:1%;margin:0;margin-top:10px}
+	#pagereferences ul li{border:0 none;margin-left:-4px;margin-right:5px;vertical-align:bottom;width:4%}
+	#closeMainDiv .glossaryclosetip{margin-left:70%;color:#FFF;font-family:OpenSansRegular;font-size:79.2%}
+	.closepopup,.open_map_close{position:absolute;width:92px;height:47px;background:url(pages/images/Topic01/T01P02/close_expand.png) no-repeat;bottom:30px;right:-47px;cursor:pointer;z-index:1000;text-decoration:none}
+	.closepopup:hover,.open_map_close:hover{background:url(pages/images/Topic01/T01P02/close_expand_hover.png) no-repeat}
+	#case_study_popup .modalContent{box-shadow:initial!important;background:transparent!important}
+	#pageClsResourcesPopup{position:absolute;z-index:1070;top:0;height:99%;width:100%;background-color:rgba(0,0,0,0.8);display:none}
+	#pageid_ReferencesBG{position:absolute;height:457px;width:940px;left:0;right:0;margin:auto;top:40px;background-color:#FFF;border-radius:10px}
+	#pageid_RefTitleBar{font-size:36px;background-color:#4d667b;border-top-left-radius:10px;border-top-right-radius:10px;left:0;top:0;font-family:OpenSansRegular;width:942px;height:44px;position:absolute}
+	#pageid_ReftitleText{position:absolute;color:#fff;font-size:18px;left:11px;top:10px}
+	#pageid_RefCloseBtn{position:absolute;width:29px;height:29px;top:7px;left:900px;cursor:pointer;background:url(media/images/player/common/close.png);-webkit-transition:all .3s;-o-transition:all .3s;transition:all .3s}
+	#pageRefTitleBar_id{font-size:36px;background-color:#4d667b;border-top-left-radius:10px;border-top-right-radius:10px;left:0;top:0;font-family:OpenSansRegular;width:942px;height:44px;position:absolute}
+	#pageReftitleText_id{position:absolute;color:#fff;font-size:18px;left:11px;top:10px}
+	.pageclose_txt{position:absolute;width:135px;height:44px;top:48px;left:800px;background:url(media/images/player/common/pdf_close_inst.png)}
+	.pdflink{position:absolute;top:44px;width:100%;height:413px;border-radius:0 0 10px 10px}
+	._viewed{color:blue}
+	.long-arrow{position:relative;top:-7px}
+#case_study_popup .modalContent{width: 562px;height: auto;border-radius:7px}
+.modalTxtImg{ height:376px}
+#case_study_popup .closepopup{bottom: -2px;}
+#case_study_popup .popover{bottom: 12px;}
+.sectionRight {width: 515px; left: 496px;}
+.sectionLeft,.topImgCntbox{width:484px}
+.clsAllTabs2 {
+	position: absolute;
+    height: 406px;
+
+     width: 965px;
+          top: 40px;
+            background-position: left;
+           
+            background: #FFFFFF;
+            border-radius: 6px;
+           
+            -webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            border-radius: 5px;
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            padding: 5px 40px;
+            display: none;
+            animation: left_to_right 1s ease; 
+        }
+        .clsAllTabs3 {
+	position: absolute;
+    height: 406px;
+
+     width: 985px;
+          top: 40px;
+            background-position: left;
+           
+            background: #FFFFFF;
+            border-radius: 6px;
+           
+            -webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            border-radius: 5px;
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            padding: 5px 30px;
+            display: none;
+            animation: left_to_right 1s ease; 
+        }
+        #content2{
+          display: none;
+        }
+
+        .family-font{
+          font-size: 16px;
+font-family: inherit;
+        }
+        .boxInst {
+  position: absolute;
+  top: 484px;
+  left: 860px;
+  top: 489px;
+  left: 906px;
+  width: 175px;
+  height: 30px;
+  display: none;
+  z-index: 99999;
+}
+.ul-class{
+    margin-left: -5.5%;
+    list-style-image:none;
+    margin-top: 4px;
+  }
+
+  .div-margin{
+    margin-top: -8px;
+  }
+	</style>
+
+</head>
+
+
+
+<body>
+
+    <div class="pg-pageContent" UNSELECTABLE="on">
+        <div id="TabPopup5" class="clsTabPopup">
+			<div id="content1" >
+				<div class="sectionContent">
+					<div class="sectionLeft">
+						<div class="topImgCntbox">
+							<div class="topImgCnt" id="topImgCnt1">
+                <div style="padding: 240px 126px 233px 126px;Font-size: 19px;font-family: inherit;">	Photo Place Holder</div>	
+              </div>
+							
+							</div>
+						</div>
+					</div>
+					<div class="sectionRight">
+						<div class="firstShow">
+							<div class="sectionContentArea">
+								<div class="information" unselectable="on" id="firstContent"><br>
+                  <ul class="bullet">
+                      <li>The terms intraamniotic infection and chorioamnionitis are often used interchangeably however, this is a complicated topic because chorioamnionitis includes inflammation as well as infection. 
+                       </li>
+                      <li>Inflammation leads to tissue edema, swelling, and irritation. Infection includes inflammation and invasion of bacteria, virus, fungus, or other infectious agents. 
+                      </li>                    
+                  </ul>
+                  <div>Signs of chorioamnionitis include:</div>
+                  <ul class="bullet">
+                    <li>Maternal temperature greater than 38°C (100.4°F)  
+                     </li>
+                   
+                </ul>
+                <div>Plus one or more of the following: </div>
+                <ul class="bullet">
+                  <li>Fetal tachycardia > 160 beats per minute, 
+ 
+                   </li>
+                  <li>Uterine tenderness, 
+ 
+                  </li>
+                  <li>Purulent amniotic fluid, or
+
+                  </li>
+                  <li>Purulent discharge from the cervical os
+                  </li>
+              </ul>
+              </div>
+            
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				
+				
+			</div>
+			<div id="content2" >
+				<div class="sectionContent">
+					<div class="sectionLeft">
+						<div class="topImgCntbox">
+							<div class="topImgCnt" id="topImgCnt2" unselectable="on" >
+								
+                <div style="padding: 240px 126px 233px 126px;Font-size: 19px;font-family: inherit;">	Photo Place Holder</div>	
+                    </div>
+						</div>
+					</div>
+					<div class="sectionRight">
+						<div class="firstShow">
+							<div class="sectionContentArea">
+							  <div class="family-font">Some obstetric experts now use the terminology: intrauterine inflammation, or infection or both, abbreviated Triple I (eye) instead of chorioamnionitis.
+                </div>
+                <div class="family-font">Suspected or confirmed Triple I criteria include a maternal fever with one or more of the following:  </div> 
+
+                <div class="information" unselectable="on" id="secondContent"><br>
+                  <ul class="bullet">
+                      <li>Fetal tachycardia, > 160 beats per minute for 10 minutes or longer
+ 
+                       </li>
+                      <li>Maternal white blood cell count greater than 15,000 in the absence of corticosteroids
+
+                      </li> 
+                      <li> Confirmation of microbial invasion of the amniotic cavity by amniotic fluid culture and/or gram stain and biochemical analysis.  
+
+                      </li> 
+                     
+                   
+                  </ul>
+                <div class="family-font">Intrapartum antibiotic prophylaxis can be appropriately started for suspected or confirmed Triple I with reassessment of the necessity to continue antibiotics once the infant is delivered. 
+                </div>
+                  
+              
+              </div>
+  
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				
+				
+			</div>
+			<div class="modal" id="case_study_popup">
+                <div class="modalContent" unselectable="on">
+					<div class="modalinner">
+						<div class="modalTxtImg" unselectable="on"></div>
+						<a class="closepopup zoom_close_btn" href="javascript:void(0)" title="Click to Close"></a>
+						<!-- <div class="clickToContinue expandImgTxtRight clickToClose">Click to Close</div> -->
+						<div class="popover left-arrow">
+							<div class="arrow" style="top: 50%;"></div>
+							<div class="popover-content">Click to close image.</div>
+						</div>
+					</div>
+                </div>
+            </div>
+			
+			
+			
+        </div>
+    </div>
+    <!--- Main Container--->
+    <div class="boxInst">
+        <div class="instNextClick"></div>
+        <div class="next_click"><em> Click Next to continue.</em></div>
+    </div>
+
+    <script>
+	 manifest = [{
+            src: 'pages/images/Topic01/T01P02/img1.png',
+            id: '1'
+        }, {
+            src: 'pages/images/Topic01/T01P02/image_01_small.png',
+            id: '2'
+        }, ];
+
+var audioPath = "pages/audio/Topic01/T01P58/T01P58-1";
+clickViewMoreInfo();
+var currCue = 0;
+var idd = 0;
+var __curState = 0;
+var clickTabCount = 0;
+var clickTabCount1 = 0;
+
+var updateContentArray = [
+    { 
+		time: "0", carry: "", event: "", show: "", hide: "", 
+		transcript: "<ul class='ul-class'><li>The terms intraamniotic infection and chorioamnionitis are often used interchangeably however, this is a complicated topic because chorioamnionitis includes inflammation as well as infection. <li>Inflammation leads to tissue edema, swelling, and irritation. Infection includes inflammation and invasion of bacteria, virus, fungus, or other infectious agents.</ul> <div class='div-margin'>Signs of chorioamnionitis include:</div><ul class='ul-class'><li>Maternal temperature greater than 38°C (100.4°F) </li></ul><div class='div-margin'>Plus one or more of the following:</div><ul class='ul-class'> <li>Fetal tachycardia > 160 beats per minute, </li><li>Uterine tenderness, </li><li>Elevated maternal white blood cell count,</li><li>Purulent amniotic fluid, or</li><li>Purulent discharge from the cervical os</li></ul><div class='div-margin'>Some obstetric experts now use the terminology: intrauterine inflammation, or infection or both, abbreviated Triple I (eye) instead of chorioamnionitis. Suspected or confirmed Triple I criteria include a maternal fever with one or more of the following:</div> <ul class='ul-class'> <li>Fetal tachycardia, > 160 beats per minute for 10 minutes or longer</li><li>Maternal white blood cell count greater than 15,000 in the absence of corticosteroids</li><li>Cloudy or yellowish thick discharge coming from the cervical canal, by speculum exam</li><li>Confirmation of microbial invasion of the amniotic cavity by amniotic fluid culture and/or gram stain and biochemical analysis.</li></ul> <div class='div-margin'>Intrapartum antibiotic prophylaxis can be appropriately started for suspected or confirmed Triple I with reassessment of the necessity to continue antibiotics once the infant is delivered.</div><div>Click Next to continue.<div>" 
+   
+	},
+  { 
+		time: "62", carry: "", event: "", show: "", hide: "#content1", 
+		transcript: "<ul class='ul-class'><li>The terms intraamniotic infection and chorioamnionitis are often used interchangeably however, this is a complicated topic because chorioamnionitis includes inflammation as well as infection. <li>Inflammation leads to tissue edema, swelling, and irritation. Infection includes inflammation and invasion of bacteria, virus, fungus, or other infectious agents.</ul> <div style='margin-top: -10px;'>Signs of chorioamnionitis include:</div><ul class='ul-class'><li>Maternal temperature greater than 38°C (100.4°F) </li></ul><div class='div-margin'>Plus one or more of the following:</div><ul class='ul-class'> <li>Fetal tachycardia > 160 beats per minute, </li><li>Uterine tenderness, </li><li>Elevated maternal white blood cell count,</li><li>Purulent amniotic fluid, or</li><li>Purulent discharge from the cervical os</li></ul><div class='div-margin'>Some obstetric experts now use the terminology: intrauterine inflammation, or infection or both, abbreviated Triple I (eye) instead of chorioamnionitis. Suspected or confirmed Triple I criteria include a maternal fever with one or more of the following:</div> <ul class='ul-class'> <li>Fetal tachycardia, > 160 beats per minute for 10 minutes or longer</li><li>Maternal white blood cell count greater than 15,000 in the absence of corticosteroids</li><li>Cloudy or yellowish thick discharge coming from the cervical canal, by speculum exam</li><li>Confirmation of microbial invasion of the amniotic cavity by amniotic fluid culture and/or gram stain and biochemical analysis.</li></ul> <div class='div-margin'>Intrapartum antibiotic prophylaxis can be appropriately started for suspected or confirmed Triple I with reassessment of the necessity to continue antibiotics once the infant is delivered.</div><div >Click Next to continue.<div>" ,
+    animation: [{
+                    target: "#content2",
+                    duration: "0.5",
+                    activity: {
+						 'display': 'block',
+
+                        
+                    }
+                }]
+	},
+];
+
+
+function fnAudioFinishItemComp() {
+    fnAudioFinishPageComp();
+}
+
+var __dataXml;
+
+var audplayer = document.getElementById('audioplayer');
+
+$(document).ready(function() {
+	//$(".clickToEnlarge").show();
+   // $(".small_expand").show();
+   // $(".small_expand1").show();
+    // disableNextBtn();
+	//$(".clickToEnlarge").show();
+   // $(".small_expand").show();
+   // $(".small_expand1").show();
+    var ele = document.getElementsByTagName('div');
+    for (var i = 0; i < ele.length; i++) {
+        ele[i].setAttribute("unselectable", "on");
+    }
+    var n = isInArray("M1L0T1P58", gCompPageArr);
+    if (n == true) {
+        enableNextBtn();
+        fnDesiableNext(false)
+    }
+});
+
+
+
+function audioReset() {
+    gAudioId = "";
+    onTimelineEnd();
+}
+
+
+function isInArray(value, array) {
+    return array.indexOf(value) > -1;
+}
+
+function fnPlaySectionAudio(gCurrentIndex) {
+    indexAudio = (gCurrentIndex);
+    audioId = "audio_" + gCurrentIndex;
+    gAudioId = audioId;
+    fnHideShowAudioPlayer(false);
+    updateContentArray = eval("updateContentArray" + (gCurrentIndex));
+    initAudioPlayer(gItemAudioPath[gCurrentIndex])
+    
+}
+
+function fnCompletion() {
+    console.log("end");
+    var _getCount1 = clickTabCount + clickTabCount1;
+    console.log("start new");
+    enableNextBtn();
+    $('.boxInst').show()
+    fnAudioFinishItemComp();
+}
+
+function fnOnAudioComplete() {
+    if (gAudioId == "startAudio") {
+        console.log("start audio");
+        audplayer.pause();
+        audplayer.currentTime = 0;
+        $(".clickToEnlarge").show();
+        $(".small_expand").show();
+        $(".small_expand1").show();
+		enableNextBtn();
+		fnDesiableNext(false);
+        $('.boxInst').show();
+    } else {
+        fnCompletion();
+        enableNextBtn();
+        $('.boxInst').show();
+        $(".clickToEnlarge").show();
+        $(".small_expand").show();
+        $(".small_expand1").show();
+        gCompPageArr.push("M1L0T1P58");
+        fnAudioFinishItemComp();
+        audplayer.pause();
+        audplayer.currentTime = 0;
+    }
+}
+$(".glossarytag").on("click", function() {
+			glossaryFuncPageLevel();
+			});
+
+$(".small_expand").off().on("click", function() {
+    pauseAudio();
+    $("#TabPopup5 #case_study_popup.modal").show();
+    $("#TabPopup5 .sectionTop").addClass("blur");
+    $("#TabPopup5 .sectionContent").addClass("blur");
+    $(".modalTxtImg").attr('id', 'imgPopup' + $(this).attr('click_id'));
+});
+
+$(".small_expand1").off().on("click", function() {
+    pauseAudio();
+    $("#TabPopup5 .modal").show();
+    $("#TabPopup5 .sectionTop").addClass("blur");
+    $("#TabPopup5 .sectionContent").addClass("blur");
+    $('.boxInst').addClass("blur");
+    $(".modalTxtImg").attr('id', 'imgPopup' + $(this).attr('click_id'));
+    $('.modalTextBottom').hide();
+    $('#ModalTextBottom' + $(this).attr('click_id')).show();
+    $('.modalContent').addClass('maxBot');
+    $('.modalContent').removeClass('maxBot0');
+});
+
+$(".closepopup, .modalclose").off().on("click", function() {
+    playAudio();
+    $("#TabPopup5 .modal").removeAttr("style");
+    $("#TabPopup5 .sectionTop").removeClass("blur");
+    $("#TabPopup5 .sectionContent").removeClass("blur");
+    $('.boxInst').removeClass("blur");
+});
+
+$(".popup").on("click", function() {
+	var popid=$(this).attr('popup_id');
+	//alert(popid);
+	pauseAudio();
+	$("#TabPopup5 #popup"+popid).show();
+	$("#TabPopup5 .sectionTop").addClass("blur");
+	$("#TabPopup5 .sectionContent").addClass("blur");
+
+});
+$(".popupclose").on("click", function() {
+	playAudio();
+	$("#TabPopup5 #popup").removeAttr("style");
+	$("#TabPopup5 .sectionTop").removeClass("blur");
+	$("#TabPopup5 .sectionContent").removeClass("blur");
+});
+$("#_clickImg0pdf").on("click", function () {
+            console.log("hello")
+            // $('#pageClsResourcesPopup .pdflink').attr('src', 'pages/Topic01/pdf/Page17.pdf');
+            fnPauseAudio();
+            // $('#pageReftitleText_id').html('Case Presentation - Neonatologist from Sweden');
+            disabledAllButtons();
+            $("#pageClsResourcesPopup").show();
+
+        });
+		 $('#pageClsResourcesPopup').hide();
+        $("#pageRefCloseBtn_id").click(function () {
+            enabledAllButtons();
+            fnPlayAudio();
+            //$("#pageClsResourcesPopup").hide();
+            $("#pageClsResourcesPopup").hide();
+            //$("#pageid_RefTitleBar").show()
+        });
+function pauseAudio() {
+    if (!fnPauseAudio()) {
+        console.log(true);
+        fnPauseAudio()
+    } else {
+        playPauseAudio();
+        console.log(false);
+    }
+}
+
+function playAudio() {
+    if (!fnPauseAudio()) {
+        console.log(true);
+        playPauseAudio();
+    }
+}
+</script>
+
+</body>
+
+
+
+</html>

@@ -1,0 +1,870 @@
+<!doctype html>
+<html class="">
+<!--<![endif]-->
+
+<head>
+    <style type="text/css">
+        .HelpPopup {
+            position: absolute;
+            margin-top: 0px;
+            margin-left: 0px;
+            width: 100%;
+            height: 83%;
+            top: 52px !important;
+            left: 0px;
+            background: none !important;
+            z-index: 0;
+        }
+        
+        #helpOpacity {
+            position: absolute;
+            width: 1086px;
+            height: 542px;
+        }
+        
+        #help_popUp {
+            position: absolute;
+            /* top: 62px; */
+            top: 0px;
+            left: 0%;
+            margin: 0px auto;
+            right: 0%;
+            width: 1086px;
+            /* height: 546px; */
+            background: url("media/images/help/bg.png") no-repeat;
+            height: 547px;
+            background-size: 100% 100%;
+            z-index: 0;
+        }
+        
+        ._hideCircle {
+            width: 32px;
+            height: 32px;
+            background: #4d667b;
+            opacity: 1;
+            border-radius: 50%;
+            color: #FFF;
+            display: flex;
+            justify-content: center;
+            line-height: 30px;
+            position: absolute;
+            z-index: 2;
+            cursor: pointer;
+        }
+        
+        #help_popUp #clsMnuBtn {
+            width: 56px;
+            height: 52px;
+            left: 1px;
+            top: 0px;
+            background-position: -1px 1px;
+            background-size: cover;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            cursor: default !important;
+        }
+        
+        span {
+            position: relative;
+            width: auto;
+            height: auto;
+            top: auto;
+            left: auto;
+        }
+        
+        #help_popUp .no-touch #clsMnuBtn:hover:not(.clsMnuBtnDis) {
+            background-position: -1px 1px !important;
+        }
+        
+        #help_popUp .no-touch #clsMnuBtn:hover:not(.clsMnuBtnDis) span {
+            color: #4D667B !important;
+        }
+        
+        #clsMnuBtn:hover span {
+            color: #4D667B !important;
+        }
+        
+        .bluecolor {
+            color: #4D667B !important;
+        }
+        
+        #help_popUp {
+            position: relative;
+        }
+        
+        #help_popUp #clsMnuBtn {
+            position: relative;
+            flex: 0%;
+            /* margin-right: 15.9%; */
+        }
+        
+        #help_popUp #clsMnuBtn span {
+            position: relative;
+            font-size: 12px !important;
+            padding-top: 2px;
+            padding-left: 2px;
+        }
+        /**************************************popup circles******************************************/
+        
+        #clspopUp_00 {
+            left: 15px;
+            top: 2px;
+        }
+        
+        #clspopUp_01 {
+            left: 345px;
+            top: 2px;
+        }
+        
+        #clspopUp_02 {
+            right: 93px;
+            top: 2px;
+        }
+        
+        #clspopUp_03 {
+            right: 25px;
+            top: 2px;
+        }
+        
+        #clspopUp_04 {
+            left: 30px;
+            top: 500px;
+        }
+        
+        #clspopUp_05 {
+            left: 102px;
+            top: 500px;
+        }
+        
+        #clspopUp_06 {
+            left: 171px;
+            top: 500px;
+        }
+        
+        #clspopUp_07 {
+            left: 500px;
+            top: 500px;
+        }
+        
+        #clspopUp_08 {
+            right: 265px;
+            top: 500px;
+        }
+        
+        #clspopUp_09 {
+            right: 195px;
+            top: 500px;
+        }
+        
+        #clspopUp_10 {
+            right: 120px;
+            top: 500px;
+        }
+        
+        #clspopUp_11 {
+            right: 70px;
+            top: 500px;
+        }
+        
+        #clspopUp_12 {
+            right: 25px;
+            top: 500px;
+        }
+        /**************************************popup text******************************************/
+        
+        ._boxClass {
+            z-index: 1;
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.4);
+            display: none;
+        }
+        
+        ._boxClass:before {
+            z-index: 1;
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.4);
+        }
+        
+        .menuButton {
+            flex: 0 30%;
+            padding: 10px;
+            position: absolute;
+            border-radius: 5px;
+            background: #fff;
+            margin-left: 10px;
+            width: 312px;
+            top: 44px;
+            left: 5px;
+        }
+        
+        .menuButton:before {
+            width: 2px;
+            content: "";
+            background: #fff;
+            height: 30px;
+            position: absolute;
+            left: 4.5%;
+            top: -45%;
+        }
+        
+        .pageTitle {
+            flex: 0 1 7%;
+            padding: 5px 8px 5px 8px;
+            /* margin-left: 7%; */
+            background-color: #fff;
+            border-radius: 5px;
+            position: absolute;
+            top: 44px;
+            left: 345px;
+        }
+        
+        .pageTitle:before {
+            width: 2px;
+            content: "";
+            background: #fff;
+            height: 19px;
+            position: absolute;
+            left: 16%;
+            top: -60%;
+        }
+        
+        .helpButton {
+            flex: 0 1 25%;
+            background-color: #fff;
+            border-radius: 5px;
+            position: absolute;
+            padding: 10px 4px 10px 5px;
+            width: 253px;
+            top: 44px;
+            right: 90px;
+        }
+        
+        .helpButton:before {
+            width: 2px;
+            content: "";
+            background: #fff;
+            height: 42px;
+            position: absolute;
+            right: 7%;
+            top: -66%;
+        }
+        
+        .exitButton {
+            flex: 0 1 18%;
+            padding: 10px;
+            margin-left: 2.3%;
+            background-color: #fff;
+            border-radius: 5px;
+            position: absolute;
+            top: 44px;
+            right: 22px;
+            width: 225px;
+        }
+        
+        .exitButton:before {
+            width: 2px;
+            content: "";
+            background: #fff;
+            height: 12px;
+            position: absolute;
+            right: 7%;
+            top: -18%;
+        }
+        
+        .nextButton {
+            margin-right: 10px;
+            padding: 10px;
+            position: absolute;
+            border-radius: 5px;
+            width: 180px;
+            background: #FFF;
+            top: 420px;
+            right: 12px;
+        }
+        
+        .nextButton:after {
+            content: "";
+            background: #fff;
+            width: 2px;
+            height: 35px;
+            position: absolute;
+            right: 10%;
+        }
+        
+        .resourceButton {
+            width: 300px;
+            position: absolute;
+            padding: 10px;
+            border-radius: 5px;
+            margin-left: 10px;
+            background: #FFF;
+            top: 420px;
+            left: 16px;
+        }
+        
+        .resourceButton:after {
+            content: "";
+            background: #fff;
+            width: 2px;
+            height: 55px;
+            position: absolute;
+            left: 6%;
+        }
+        
+        .pageCount {
+            width: 389px;
+            margin-right: 50px;
+            position: absolute;
+            border-radius: 5px;
+            padding: 10px;
+            background: #FFF;
+            top: 420px;
+            right: 16px;
+        }
+        
+        .pageCount:after {
+            content: "";
+            background: #fff;
+            width: 2px;
+            height: 35px;
+            position: absolute;
+            right: 5%;
+        }
+        
+        .pauseButton {
+            width: 332px;
+            padding: 10px;
+            border-radius: 5px;
+            /* height: 70px; */
+            margin-left: 70px;
+            position: absolute;
+            background: #FFF;
+            top: 420px;
+            left: 28px;
+        }
+        
+        .pauseButton:after {
+            content: "";
+            background: #fff;
+            width: 2px;
+            height: 35px;
+            position: absolute;
+            left: 5%;
+        }
+        
+        .progressBar {
+            width: 230px;
+            padding: 10px;
+            border-radius: 5px;
+            position: absolute;
+            margin-left: 15px;
+            background: #FFF;
+            top: 420px;
+            left: 476px;
+        }
+        
+        .progressBar:after {
+            content: "";
+            background: #fff;
+            width: 2px;
+            height: 35px;
+            position: absolute;
+            left: 10%;
+        }
+        
+        .backButton {
+            width: 200px;
+            margin-left: 145px;
+            padding: 10px;
+            border-radius: 5px;
+            /* height: 76px; */
+            position: absolute;
+            top: 420px;
+            right: 116px;
+            background: #FFF;
+        }
+        
+        .backButton:after {
+            content: "";
+            background: #fff;
+            width: 2px;
+            height: 35px;
+            position: absolute;
+            right: 9%;
+        }
+        
+        .replayButton {
+            width: 197px;
+            margin-left: 144px;
+            padding: 10px;
+            border-radius: 5px;
+            /* height: 52px; */
+            position: absolute;
+            background: #FFF;
+            top: 420px;
+            left: 22px;
+        }
+        
+        .replayButton:after {
+            content: "";
+            background: #fff;
+            width: 2px;
+            height: 35px;
+            position: absolute;
+            left: 9%;
+        }
+        
+        .transcript {
+            margin-left: 223px;
+            margin-top: 32px;
+            margin-right: 56px;
+            padding: 10px;
+            border-radius: 5px;
+            position: absolute;
+            background: #FFF;
+            top: 410px;
+            right: 204px;
+        }
+        
+        .transcript:after {
+            content: "";
+            background: #fff;
+            width: 2px;
+            height: 35px;
+            position: absolute;
+            right: 18%;
+        }
+        
+        .audioButton {
+            width: 210px;
+            margin-top: 25px;
+            margin-right: 53px;
+            padding: 10px;
+            border-radius: 5px;
+            /* height: 74px; */
+            position: absolute;
+            background: #FFF;
+            top: 395px;
+            right: 136px;
+        }
+        
+        .audioButton:after {
+            content: "";
+            background: #fff;
+            width: 2px;
+            height: 32px;
+            position: absolute;
+            right: 21px;
+        }
+        
+        span.tooltip.cIcons {
+            font-size: 12px !important;
+        }
+        /********************************for footer buttons*************************************/
+        
+        #ToolBtn .clsLinepop {
+            content: "";
+            background: #fff;
+            width: 2px;
+            height: 18px;
+            position: absolute;
+            right: 36px;
+            top: -8px;
+            z-index: 2;
+            display: none;
+        }
+        
+        #clsPlayPauseBtn .clsLinepop {
+            content: "";
+            background: #fff;
+            width: 2px;
+            height: 20px;
+            position: absolute;
+            right: 34px;
+            top: -10px;
+            z-index: 2;
+            display: none;
+        }
+        
+        #clsReplay .clsLinepop {
+            content: "";
+            background: #fff;
+            width: 2px;
+            height: 20px;
+            position: absolute;
+            right: 35px;
+            top: -10px;
+            z-index: 2;
+            display: none;
+        }
+        
+        #clsAudioOnBtn .clsLinepop {
+            content: "";
+            background: #fff;
+            width: 2px;
+            height: 20px;
+            position: absolute;
+            right: 32px;
+            top: -10px;
+            z-index: 2;
+            display: none;
+        }
+        
+        #clsAudioOffBtn .clsLinepop {
+            content: "";
+            background: #fff;
+            width: 2px;
+            height: 20px;
+            position: absolute;
+            right: 32px;
+            top: -10px;
+            z-index: 2;
+            display: none;
+        }
+        
+        #clsBackBtn .clsLinepop {
+            content: "";
+            background: #fff;
+            width: 2px;
+            height: 20px;
+            position: absolute;
+            right: 25px;
+            top: -10px;
+            z-index: 2;
+            display: none;
+        }
+        
+        #clsPageNumber .clsLinepop {
+            content: "";
+            background: #fff;
+            width: 2px;
+            height: 17px;
+            position: absolute;
+            right: 24px;
+            top: -16px;
+            z-index: 2;
+            display: none;
+        }
+        
+        #clsNxtBtn .clsLinepop {
+            content: "";
+            background: #fff;
+            width: 2px;
+            height: 20px;
+            position: absolute;
+            right: 26px;
+            top: -10px;
+            z-index: 2;
+            display: none;
+        }
+        
+        #id_sliderContainer .clsLinepop {
+            content: "";
+            background: #fff;
+            width: 2px;
+            height: 16px;
+            position: absolute;
+            right: 568px;
+            top: -2px;
+            z-index: 2;
+            display: none;
+        }
+        
+        #transcript_line .clsLinepop {
+            content: "";
+            background: #fff;
+            width: 2px;
+            height: 18px;
+            position: absolute;
+            right: 279px;
+            top: -8px;
+            z-index: 2;
+            display: none;
+        }
+        
+        .videoInstruction {
+            background: #FFFFFF;
+            width: 600px;
+            height: 260px;
+            position: absolute;
+            transform: translate(-50%);
+            top: 125px;
+            left: 50%;
+            border-radius: 5px;
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.4);
+        }
+        
+        .imgIcon {
+            background: url("media/images/help/1.png") no-repeat;
+            width: 117px;
+            height: 96px;
+            position: absolute;
+            transform: translate(-50%);
+            top: 35px;
+            left: 50%;
+        }
+        
+        .imgTxt {
+            position: absolute;
+            font-size: 18px;
+            font-family: OpenSansRegular;
+            color: #5b5b5b;
+            top: 154px;
+            left: 17px;
+            /* font-weight: 500; */
+            font-weight: bold;
+        }
+        
+        .imgTxt_1 {
+            position: absolute;
+            font-size: 18px;
+            font-family: OpenSansRegular;
+            color: #5b5b5b;
+            top: 200px;
+            left: 55px;
+            border-radius: 5px;
+            border: 4px solid #D7722C;
+            padding: 12px 0px;
+            /* font-weight: 500; */
+            font-weight: bold;
+            text-align: center;
+            width: 80%;
+            cursor: pointer;
+        }
+        /* #clsPageNumber {
+            border: 0.1px solid #657a8c38;
+        } */
+        
+        #clsAudioOffBtn,
+        #clsAudioOnBtn {
+            cursor: pointer;
+        }
+    </style>
+
+    <!-- Player and page level .js files to include -->
+    <script language="javascript" type="text/javascript">
+        if (iOS) {
+
+            $("#help_popUp").css({
+                // 'background': 'url(media/images/player/Help.png) no-repeat',
+                "background-size": "100% 100%"
+            });
+
+        } else {
+            $("#help_popUp").css({
+                // 'background': 'url(media/images/player/Help.png) no-repeat',
+                // "background-size": "100% 100%"
+            });
+
+        }
+        //$("#help_popUp").css('background-size','100% 100%');
+        $(document).ready(function() {
+            // $("#help_popUp").hide()
+
+            $(".clsLinepop").hide();
+            $(".pg-pageContent").hide();
+            $("#clsMnuBtn").css({
+                "pointer-events": "none"
+            })
+            $("#clsHelpBtn").css({
+                "pointer-events": "none"
+            })
+            $("#clsExitBtn").css({
+                "pointer-events": "none"
+            })
+            $("#id_sliderContainer").css({
+                "pointer-events": "none"
+            })
+            $("#ToolBtn").css({
+                "pointer-events": "none"
+            })
+            $("#clsPlayPauseBtn").css({
+                "pointer-events": "none"
+            })
+            $("#clsReplay").css({
+                "pointer-events": "none"
+            })
+            $("#transcriptBtn").css({
+                "pointer-events": "none"
+            })
+            $("#clsAudioOffBtn").css({
+                "pointer-events": "none"
+            })
+            $("#clsAudioOnBtn").css({
+                "pointer-events": "none"
+            })
+            $("#clsBackBtn").css({
+                "pointer-events": "none"
+            })
+            $("#clsNxtBtn").css({
+                "pointer-events": "none"
+            })
+            $("#contentContainer").css({
+                    "opacity": "0.3"
+                })
+                // $("#clsHelpBtn").css({ "pointer-events": "inherit", "opacity": "1", "display": "block", "cursor": "pointer" });
+            $("._hideCircle").off("click").on("click", function() {
+                    $("._boxClass").hide();
+                    $(".clsLinepop").hide();
+                    clicked = $(this).attr('id').split("_")[1];
+                    audNum = $(this).attr('value');
+                    $("._boxClass[value='" + clicked + "']").show()
+                    $(".clsLinepop[value='" + clicked + "']").show();
+                    // $(".clsLinepop[value='" + clicked + "']").show()
+
+
+                })
+                // $("#ToolBtn").css({ "opacity": "1", "pointer-events": "inherit" })
+            $(".addBlur").css({
+                "opacity": "1",
+                "pointer-events": "inherit"
+            })
+            $("#clsAudioOffBtn").css({
+                "opacity": "1",
+                "pointer-events": "inherit"
+            });
+
+        });
+        $(".imgTxt_1").on("click", function() {
+            disableHelpPopup();
+            $(".pg-pageContent").show();
+            $("#clsHelpBtn").removeClass("active");
+            $("#clsMnuBtn").css({
+                "pointer-events": "all"
+            })
+            $("#clsHelpBtn").css({
+                "pointer-events": "all"
+            })
+            $("#clsExitBtn").css({
+                "pointer-events": "all"
+            })
+            $("#id_sliderContainer").css({
+                "pointer-events": "all"
+            })
+            $("#ToolBtn").css({
+                "pointer-events": "all"
+            })
+            $("#clsPlayPauseBtn").css({
+                "pointer-events": "all"
+            })
+            $("#clsReplay").css({
+                "pointer-events": "all"
+            })
+            $("#transcriptBtn").css({
+                "pointer-events": "all"
+            })
+            $("#clsAudioOffBtn").css({
+                "pointer-events": "all"
+            })
+            $("#clsAudioOnBtn").css({
+                "pointer-events": "all"
+            })
+            $("#clsBackBtn").css({
+                "pointer-events": "all"
+            })
+            $("#clsNxtBtn").css({
+                "pointer-events": "all"
+            })
+            $("#contentContainer").css({
+                "opacity": "1"
+            })
+        })
+    </script>
+
+</head>
+
+<body>
+    <div id="helpOpacity" class="bluropacity bluropacity-ie">
+        &nbsp;
+    </div>
+    <div id="help_popUp">
+        <div class="videoInstruction" unselectable="on">
+            <span class="imgIcon"></span>
+            <span class="imgTxt">Click on each number to view the navigation features of this course.</span>
+            <span class="imgTxt_1">Click here to exit the help screen.</span></div>
+        <div id="clspopUp_00" class="_hideCircle" value="0" unselectable="on">
+            <span class="cIcons">1</span>
+        </div>
+        <div id="clspopUp_01" class="_hideCircle" value="1" unselectable="on">
+            <span class="cIcons">2</span>
+        </div>
+        <div id="clspopUp_02" class="_hideCircle" value="2" unselectable="on">
+            <span class="cIcons">3</span>
+        </div>
+        <div id="clspopUp_03" class="_hideCircle" value="3" unselectable="on">
+            <span class="cIcons">4</span>
+        </div>
+        <div id="clspopUp_04" class="_hideCircle" value="4" unselectable="on">
+            <span class="cIcons">5</span>
+        </div>
+        <div id="clspopUp_05" class="_hideCircle" value="5" unselectable="on">
+            <span class="cIcons">6</span>
+        </div>
+        <div id="clspopUp_06" class="_hideCircle" value="6" unselectable="on">
+            <span class="cIcons">7</span>
+        </div>
+        <div id="clspopUp_07" class="_hideCircle" value="7" unselectable="on">
+            <span class="cIcons">8</span>
+        </div>
+        <div id="clspopUp_08" class="_hideCircle" value="8" unselectable="on">
+            <span class="cIcons">9</span>
+        </div>
+        <div id="clspopUp_09" class="_hideCircle" value="9" unselectable="on">
+            <span class="cIcons">10</span>
+        </div>
+        <div id="clspopUp_10" class="_hideCircle" value="10" unselectable="on">
+            <span class="cIcons">11</span>
+        </div>
+        <div id="clspopUp_11" class="_hideCircle" value="11" unselectable="on">
+            <span class="cIcons">12</span>
+        </div>
+        <div id="clspopUp_12" class="_hideCircle" value="12" unselectable="on">
+            <span class="cIcons">13</span>
+        </div>
+
+        <div class="menuButton _boxClass" value="00">
+            <span class="cIcons">Menu button: Gives you access to all the different topics in a module</span>
+        </div>
+
+        <div class="pageTitle _boxClass" value="01">
+            <span class="cIcons">Page title</span>
+        </div>
+        <div class="helpButton _boxClass" value="02">
+            <span class="cIcons">Help button: Takes you to the course navigation instructions</span>
+        </div>
+        <div class="exitButton _boxClass" value="03">
+            <span class="cIcons">Exit Module button: Closes the current module</span>
+        </div>
+        <div class="resourceButton _boxClass" value="04">
+            <span class="cIcons">Resources button: Gives you access to additional learning material</span>
+        </div>
+        <div class="pauseButton _boxClass" value="05">
+            <span class="cIcons">Play/Pause button: Pauses or continues to play the content on a page</span>
+        </div>
+        <div class="replayButton _boxClass" value="06">
+            <span class="cIcons">Replay button: Replays the content of the page</span>
+        </div>
+        <div class="progressBar _boxClass" value="07">
+            <span class="cIcons">Progress bar: Displays the progress of a current page</span>
+        </div>
+        <div class="transcript _boxClass" value="08">
+            <span class="cIcons">Transcript</span>
+        </div>
+        <div class="audioButton _boxClass" value="09">
+            <span class="cIcons">Audio button: Turns the audio on or off</span>
+        </div>
+        <div class="backButton _boxClass" value="10">
+            <span class="cIcons">Back button: Takes you to the previous page</span>
+        </div>
+        <div class="pageCount _boxClass" value="11">
+            <span class="cIcons">Page count: Displays the current page number and total number of pages in a
+                module</span>
+        </div>
+        <div class="nextButton _boxClass" value="12">
+            <span class="cIcons">Next button: Takes you to the next page</span>
+        </div>
+    </div>
+    </div>
+    </div>
+</body>
+
+</html>

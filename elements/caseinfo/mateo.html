@@ -1,0 +1,166 @@
+<!Doctype html>
+<html>
+
+<head>
+    <link href="elements/caseinfo/css/caseinfo.css" type="text/css" rel="stylesheet" />
+    <script src="elements/caseinfo/scripts/caseinfo.js" type="text/javascript"></script>
+    <link rel="icon" href="elements/caseinfo/media/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="hospitalContainer">
+        <div class="gwrapper">
+            <div class="spinner" unselectable="on">
+                <div class="rect1" unselectable="on"></div>
+                <div class="rect2" unselectable="on"></div>
+                <div class="rect3" unselectable="on"></div>
+                <div class="rect4" unselectable="on"></div>
+                <div class="rect5" unselectable="on"></div>
+            </div>
+        </div>
+        <div id="helptopbar">
+            <div id="id_glosTitleText"><img src="elements/caseinfo/media/caseinfo.png" alt="case information" class="caseinfoimg" />Case Information</div>
+            <div class="close_txt"><span id="clsText">Close</span></div>
+            <div id="id_glosCloseBtn" class="id_glosCloseBtn" title="Close"></div>
+        </div>
+        <div class="content">
+
+            <div class="tabLoadContent">
+                <div class="sectionLeft" unselectable="on">
+                    <div class="topImgCnt" id="topImgCntImg1" unselectable="on">
+                        <!-- <div class="clickToContinue expandImgTxtRight clickToEnlarge" unselectable="on"
+							style="visibility: inherit; opacity: 1; display: block;">Click to enlarge image.</div> -->
+                        <div class="popover left-arrow">
+                            <div class="arrow" style="top: 50%;"></div>
+                            <div class="popover-content">Click to enlarge image.</div>
+                        </div>
+
+                        <a href="javascript:void(0);" title="Click to enlarge image" class="small_expand zoom_btn" style="visibility: inherit; opacity: 1; display: block;">&nbsp;</a>
+                    </div>
+                    <div class="leftBottom" unselectable="on">
+                        <div class="headingBlue" unselectable="on">BORN AT</div>
+                        <div class="sectiontxt" unselectable="on">34-2/7 weeks gestation</div>
+                        <div class="headingBlue" unselectable="on">WEIGHT</div>
+                        <div class="sectiontxt" unselectable="on">1.75 kg</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tabContent">
+                <h2>Baby Mateo</h2>
+                <ul class="tabs">
+                    <li class="tab-link current" data-tab="tab-1">Maternal History</li>
+                    <li class="tab-link" data-tab="tab-2">Labor/Delivery History </li>
+                </ul>
+
+                <div id="tab-1" class="tab-content current">
+                    <ul class="bullet">
+                        <li>20 years old</li>
+
+                        <li>Single, father of baby involved</lii>
+
+                            <li>Gravida 1, para 0 (first pregnancy)</li>
+
+                            <li>Good prenatal care</li>
+
+                            <li>At 34 weeks gestation, develops right upper quadrant abdominal pain, headache, and visual changes
+                            </li>
+
+                            <li>Blood pressure 185/110</li>
+                    </ul>
+                    <ul class="bullet">
+                        <li>Protein is measured in her urine</li>
+
+                        <li>Admitted to labor/delivery unit with a diagnosis of preeclampsia with severe features</li>
+
+                        <li>Assessment of fetal heart tones and fetal movement reassuring</li>
+
+                        <li>Infusion of magnesium sulfate started</li>
+
+                        <li>Fetal ultrasound shows intrauterine growth restriction (estimated fetal weight
+                            < 10th percentile)</li>
+                    </ul>
+                </div>
+                <div id="tab-2" class="tab-content">
+                    <ul class="bullet">
+                        <li>Two days after admission, maternal symptoms worsen and mother is diagnosed with HELLP (hemolysis, elevated liver enzymes, and low platelets)</li>
+                        <li>Antenatal corticosteroid dosing completed before delivery</li>
+                        <li>Group B streptococcus screening negative</li>
+                        <li>Cesarean section accomplished for maternal indications</li>
+                        <li>Artificial rupture of membranes (AROM) at delivery &ndash; fluid clear</li>
+                    </ul>
+                    <ul class="bullet">
+                        <li>Apgar scores: 3 (at 1 minute), 8 (at 5 minutes)
+                        </li>
+                        <li>Resuscitation: Dried, stimulated, poor respiratory effort so given positive pressure ventilation (PPV) for several minutes in the delivery room, then transitioned to CPAP</li>
+                        <li>On room air with no CPAP required by 10 minutes of age</li>
+                        <li>Held skin-to-skin briefly by the mother </li>
+                        <li>Transferred to the Special Care Nursery at 15 minutes of age</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- <div class="CaseStudy" id="case_study_popup" unselectable="on">
+							<div class="caseStudyContent" unselectable="on">
+								<div class="ModalTextBottom g-modal-textbotom" unselectable="on">Baby Mateo</div>
+								<div class="ModalTxtImg" unselectable="on" id="imgPopup1"></div>
+								<a class="closepopup" href="javascript:void(0)" title="Click to Close"></a>
+								<div class="clickToContinue expandImgTxtRight clickToClose" unselectable="on">Click to close.</div>
+							</div>
+						</div> -->
+        <div class="modal" id="case_study_popup">
+            <div class="modalContent" unselectable="on">
+                <div class="modalTxtImg" unselectable="on" id="imgPopup1"></div>
+                <div class="ModalTextBottom" unselectable="on">Baby Mateo</div>
+                <a class="closepopup zoom_close_btn" href="javascript:void(0)" title="Click to Close"></a>
+                <!-- <div class="clickToContinue expandImgTxtRight clickToClose">Click to Close</div> -->
+                <div class="popover left-arrow">
+                    <div class="arrow" style="top: 50%;"></div>
+                    <div class="popover-content">Click to close image.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    var __$cWrapper = $(".gwrapper");
+    setTimeout(function() {
+        __$cWrapper.hide();
+    }, 100);
+    $(".id_glosCloseBtn").click(function() {
+        disableHelpPopup();
+
+
+    });
+
+    $(".small_expand").on("click", function() {
+
+        pauseAudio();
+
+        //audioReset();
+
+        $(".modal").show();
+
+        $("#helptopbar").addClass("blur");
+
+        $(".content").addClass("blur");
+
+    });
+
+    $(".closepopup").on("click", function() {
+
+        //audioReset();
+
+        $(".modal").removeAttr("style");
+
+        $("#helptopbar").removeClass("blur");
+
+        $(".content").removeClass("blur");
+
+    });
+    //$('.tabLoadContent').load('pages/Topic01/T01P91.html');
+</script>
+
+</html>
